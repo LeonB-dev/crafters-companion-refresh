@@ -1,0 +1,262 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "0fb83270-8751-43be-9d7e-06e58c8ff80e": {
+      "type": "category-hero",
+      "blocks": {
+        "d0b4af24-585e-4488-82d0-7645d952ae9a": {
+          "type": "tag_block",
+          "disabled": true,
+          "settings": {
+            "collection": "spectrum-noir",
+            "tag": "offer_3 for 2"
+          }
+        }
+      },
+      "block_order": [
+        "d0b4af24-585e-4488-82d0-7645d952ae9a"
+      ],
+      "settings": {
+        "menu": "main-menu",
+        "enable_collection_blocks": false,
+        "text_width": "standard"
+      }
+    },
+    "bdc80753-de07-4c03-927c-705916b0439f": {
+      "type": "image-text-slider",
+      "blocks": {
+        "e4656709-e8dd-48a8-8310-a423ed85e04a": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Outlet Sale - Up to 70% off!",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify:\/\/collections\/outlet-sale",
+            "image": "shopify:\/\/shop_images\/400_X_300_Tile_002cb74e-741f-4b0c-a822-f2ba3d501518.jpg"
+          }
+        },
+        "61d6b69d-615d-401a-919c-ec2cb1a3c508": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Gemini II - Now only £199.99!",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify:\/\/products\/gemini-ii-die-cutting-and-embossing-machine",
+            "image": "shopify:\/\/shop_images\/400_X_300_Tile_775de661-ac5d-4355-8e33-7496bbf80a43.jpg"
+          }
+        },
+        "4ccf69b9-ed24-4bdd-aaed-f58908fec405": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Spectrum Noir Pro Sketch Pack - 50% off",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify:\/\/products\/spectrum-noir-jazza-pro-sketch-pack-49pc",
+            "image": "shopify:\/\/shop_images\/400_X_300_Tile_4fdbb773-404d-4192-af0b-05080559246a.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "e4656709-e8dd-48a8-8310-a423ed85e04a",
+        "61d6b69d-615d-401a-919c-ec2cb1a3c508",
+        "4ccf69b9-ed24-4bdd-aaed-f58908fec405"
+      ],
+      "settings": {
+        "heading": "Latest Offers",
+        "heading_size": "sm",
+        "link_style": "main",
+        "link_colour": "primary",
+        "edge_version": "edge-01",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "md"
+      }
+    },
+    "270e3df4-b406-4149-93fd-24947ff33ded": {
+      "type": "featured-promotions",
+      "blocks": {
+        "57ecc840-35f3-4fe6-ac0e-8aac8d4200d1": {
+          "type": "promotion",
+          "settings": {
+            "collection": "",
+            "product": "",
+            "page": "",
+            "page_type": "type_collection",
+            "text": "",
+            "terms": ""
+          }
+        },
+        "e93773cc-d6ab-4bba-9857-b3108fb09573": {
+          "type": "promotion",
+          "settings": {
+            "collection": "star-buy",
+            "product": "",
+            "page": "",
+            "page_type": "type_collection",
+            "text": "",
+            "terms": ""
+          }
+        },
+        "ca9249b9-0b59-4d31-943e-c924ad55f6d3": {
+          "type": "promotion",
+          "settings": {
+            "collection": "craigs-hot-picks",
+            "product": "",
+            "page": "",
+            "page_type": "type_collection",
+            "text": "",
+            "terms": ""
+          }
+        }
+      },
+      "block_order": [
+        "57ecc840-35f3-4fe6-ac0e-8aac8d4200d1",
+        "e93773cc-d6ab-4bba-9857-b3108fb09573",
+        "ca9249b9-0b59-4d31-943e-c924ad55f6d3"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Take a look at our latest papercraft deals",
+        "image": "shopify:\/\/shop_images\/sara_meet_the_experts.webp",
+        "heading_alignment": false,
+        "edge_version": "edge-02",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "4d90ad4e-453e-4717-9df1-6bc5396b40f5": {
+      "type": "featured-products",
+      "blocks": {
+        "53c6d67b-0c01-4589-bef9-e98d12e9d4d2": {
+          "type": "product_list",
+          "settings": {
+            "product_list": [
+              "17th-anniversay-party-bag",
+              "3d-5x7-embossing-folder-country-garden",
+              "crafter-s-companion-3d-embossing-folder-5-x7-in-the-garden",
+              "3d-embossing-folder-5-75-x-2-75-botanical-swirls",
+              "crafter-s-companion-12-x-12-textured-cardstock-brights",
+              "5x7-stamp-pocket-5pk",
+              "card-maker-s-fab-file",
+              "5x7-fab-file",
+              "a-year-of-craft-by-crafter-s-companion-2-12-20",
+              "dovecraft-a4-double-sided-glitter-bumper-pack-festive-300gsm-12pk"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "53c6d67b-0c01-4589-bef9-e98d12e9d4d2"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Shop our best deals!",
+        "heading_alignment": false,
+        "link_url": "",
+        "link_text": "",
+        "grid_size": "sm",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "5d76bce6-96bd-4c82-aa5d-e5d0a961c1a2": {
+      "type": "category-content-spot",
+      "blocks": {
+        "d48c1563-578f-4d55-bd7f-8e7a7246b554": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "gemini",
+            "heading": "",
+            "text": "<p>For all things die cutting, embossing, foiling and paper crafting think Gemini. Browse the latest Gemini dies and accessories, designed to elevate your craft projects.<\/p>"
+          }
+        },
+        "5dadb812-b617-4670-a513-ed68537f7db1": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "card-making",
+            "heading": "",
+            "text": "<p>Ensure your craft kit is topped up for moments when you need to make a quick greetings card. Our range includes everything you need to make unique handmade cards.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d48c1563-578f-4d55-bd7f-8e7a7246b554",
+        "5dadb812-b617-4670-a513-ed68537f7db1"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/360102080_667152978790725_2733822946678225913_n.webp",
+        "heading": "Bring your ideas to life!",
+        "text": "<p>Spark your creativity with our papercraft essentials, designed to inspire and keep your craft kit topped up all year round. Choose from craft kit essentials such as glues & adhesives and paper & card or alternatively check out the latest Gemini machines and accessories.<\/p>",
+        "edge_version": "edge-01",
+        "margin_bottom": "lg"
+      }
+    },
+    "5a632c75-3fa4-4711-8afb-995beeaac659": {
+      "type": "featured-articles",
+      "blocks": {
+        "ea4a9057-1ace-4112-b767-ec38a7c063f3": {
+          "type": "article",
+          "settings": {
+            "article": "inspiration\/how-to-craft-an-embossed-gift-box"
+          }
+        },
+        "02030035-b1f2-45d9-96e3-f4050b28558e": {
+          "type": "article",
+          "settings": {
+            "article": "inspiration\/how-to-make-a-paper-halloween-pumpkin"
+          }
+        },
+        "4d02577c-5079-4bb6-ae08-9f327f6995fb": {
+          "type": "article",
+          "settings": {
+            "article": "inspiration\/how-to-make-paper-flowers"
+          }
+        }
+      },
+      "block_order": [
+        "ea4a9057-1ace-4112-b767-ec38a7c063f3",
+        "02030035-b1f2-45d9-96e3-f4050b28558e",
+        "4d02577c-5079-4bb6-ae08-9f327f6995fb"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Debby_Ben.jpg",
+        "heading": "Papercraft ideas for you",
+        "text": "<p>Discover a range of papercraft projects designed to suit beginners and experts! From wedding invites to birthday cards, home and party decor and much more. Our craft projects offer a handmade and unique touch to both simple and complex creations. <\/p>",
+        "link_url": "shopify:\/\/blogs\/inspiration",
+        "link_text": "Read more",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "0fb83270-8751-43be-9d7e-06e58c8ff80e",
+    "bdc80753-de07-4c03-927c-705916b0439f",
+    "270e3df4-b406-4149-93fd-24947ff33ded",
+    "4d90ad4e-453e-4717-9df1-6bc5396b40f5",
+    "5d76bce6-96bd-4c82-aa5d-e5d0a961c1a2",
+    "5a632c75-3fa4-4711-8afb-995beeaac659"
+  ]
+}

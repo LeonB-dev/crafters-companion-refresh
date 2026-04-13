@@ -1,0 +1,262 @@
+{% schema %}
+{
+  "name": "Crafters TV Hero",
+  "settings": [
+    {
+      "type": "url",
+      "id": "live_show_url",
+      "label": "Live Show URL (Optional)"
+    },
+    {
+      "type": "image_picker",
+      "id": "overlay_desktop",
+      "label": "Overlay Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "overlay_mobile",
+      "label": "Overlay Image (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Your favorite crafting show"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Welcome to Crafters TV!"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content",
+      "default": "Join us every week for live demonstrations, tips, and inspiration."
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "url",
+      "id": "schedule_url",
+      "label": "View Schedule URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_bg",
+      "label": "Desktop Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_bg",
+      "label": "Mobile Background Image"
+    },
+    {
+      "type": "color",
+      "id": "watch_bg",
+      "label": "Watch Now Button Background Color",
+      "default": "#ff6f61"
+    },
+    {
+      "type": "color",
+      "id": "watch_text",
+      "label": "Watch Now Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "schedule_bg",
+      "label": "View Schedule Button Background Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "schedule_text",
+      "label": "View Schedule Button Text Color",
+      "default": "#ffffff"
+    },
+
+    /* Overlay heights */
+    {
+      "type": "number",
+      "id": "desktop_overlay_height",
+      "label": "Desktop Overlay Height (px)",
+      "default": 800
+    },
+    {
+      "type": "number",
+      "id": "mobile_overlay_height",
+      "label": "Mobile Overlay Height (px)",
+      "default": 450
+    },
+
+    /* Mobile text sizes */
+    {
+      "type": "number",
+      "id": "mobile_subtitle_size",
+      "label": "Mobile Subtitle Font Size (px)",
+      "default": 16
+    },
+    {
+      "type": "number",
+      "id": "mobile_title_size",
+      "label": "Mobile Title Font Size (px)",
+      "default": 18
+    },
+    {
+      "type": "number",
+      "id": "mobile_content_size",
+      "label": "Mobile Content Font Size (px)",
+      "default": 14
+    }
+  ],
+  "presets": [
+    {
+      "name": "Crafters TV Hero"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="crafters-tv-hero" style="color: {{ section.settings.text_color }};">
+  <div class="crafters-tv-inner-container">
+
+    <!-- Text + Buttons -->
+    <div class="crafters-tv-text-container">
+      {% if section.settings.subtitle != blank %}
+        <p class="crafters-tv-subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+      {% if section.settings.title != blank %}
+        <h1 class="crafters-tv-title">{{ section.settings.title }}</h1>
+      {% endif %}
+      {% if section.settings.content != blank %}
+        <p class="crafters-tv-text">{{ section.settings.content }}</p>
+      {% endif %}
+
+      <div class="crafters-tv-buttons">
+        {%- assign live_show_url = section.settings.live_show_url -%}
+        {%- if live_show_url == blank -%}
+          {%- assign live_show_url = shop.metafields.ctv.live_show.value -%}
+          {%- if live_show_url == "false" -%}
+            {%- assign live_show_url = blank -%}
+          {%- endif -%}
+        {%- endif -%}
+
+        {% if live_show_url != blank %}
+          <a href="{{ live_show_url }}" class="button watch-now" style="background-color: {{ section.settings.watch_bg }}; color: {{ section.settings.watch_text }};">Watch Now</a>
+        {% endif %}
+
+        {% if section.settings.schedule_url != blank %}
+          <a href="{{ section.settings.schedule_url }}" class="button view-schedule" style="background-color: {{ section.settings.schedule_bg }}; color: {{ section.settings.schedule_text }};">View Our Schedule</a>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Overlay Image -->
+    <div class="crafters-tv-overlay-container"></div>
+
+  </div>
+</div>
+
+<style>
+/* Hero section */
+.crafters-tv-hero {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Inner container aligns text and overlay */
+.crafters-tv-inner-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 120px;
+}
+
+/* Text container */
+.crafters-tv-text-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Overlay container */
+.crafters-tv-overlay-container {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: {{ section.settings.desktop_overlay_height | default: 800 }}px;
+  margin-bottom: 60px;
+}
+
+/* Buttons */
+.crafters-tv-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.crafters-tv-buttons .button {
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+/* Text defaults */
+.crafters-tv-subtitle { font-size: 1.2rem; margin-bottom: 10px; opacity: 0.9; }
+.crafters-tv-title { font-size: 2.5rem; margin-bottom: 15px; font-weight: bold; }
+.crafters-tv-text { font-size: 1rem; margin-bottom: 30px; }
+
+/* Desktop background & overlay */
+@media screen and (min-width: 768px) {
+  .crafters-tv-hero {
+    background-image: url({{ section.settings.desktop_bg | img_url: '2048x2048' }});
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+  }
+
+  .crafters-tv-overlay-container {
+    background-image: url({{ section.settings.overlay_desktop | img_url: '2048x' }});
+    height: {{ section.settings.desktop_overlay_height | default: 800 }}px;
+  }
+}
+
+/* Mobile background & overlay */
+@media screen and (max-width: 767px) {
+  .crafters-tv-hero {
+    background-image: url({{ section.settings.mobile_bg | img_url: '800x' }});
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  .crafters-tv-overlay-container {
+    background-image: url({{ section.settings.overlay_mobile | img_url: '800x' }});
+    height: {{ section.settings.mobile_overlay_height | default: 450 }}px;
+  }
+
+  .crafters-tv-subtitle { font-size: {{ section.settings.mobile_subtitle_size | default: 16 }}px; }
+  .crafters-tv-title { font-size: {{ section.settings.mobile_title_size | default: 18 }}px; }
+  .crafters-tv-text { font-size: {{ section.settings.mobile_content_size | default: 14 }}px; }
+}
+</style>

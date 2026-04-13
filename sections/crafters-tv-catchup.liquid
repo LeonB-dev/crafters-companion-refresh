@@ -1,0 +1,43 @@
+{%- liquid
+  assign template_name = 'section-crafters-tv-catchup'
+%}
+
+{{- 'section-crafters-tv-catchup.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-lg overflow-hidden" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="wrapper">
+    {%- render 'paper-edge', _edge_version: 'edge-03', _bottom_edge_colour: 'white' -%}
+    <div class="container">
+      {%- render 'crafters-tv-heading', _heading: section.settings.title, _title: section.settings.heading, _text: section.settings.text, _text_class: '', _margin_bottom: false -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CTV Catchup",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

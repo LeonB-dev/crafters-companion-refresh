@@ -1,0 +1,98 @@
+{% comment %}
+  Geo Local Tags
+{% endcomment %}
+{%- if settings.geo_place_name != blank -%}
+  <meta property="geo.placename" content="{{ settings.geo_place_name | strip_html }}">
+{%- endif -%}
+{%- if settings.social_og_locale != blank -%}
+  <meta property="geo.region" content="{{ settings.social_og_locale }}">
+{%- endif -%}
+{%- if settings.geo_position != blank -%}
+  <meta property="geo.position" content="{{ settings.geo_position }}">
+  <meta property="ICBM" content="{{ settings.geo_position }}">
+{%- endif -%}
+
+{% comment %}
+  Open Graph tags
+{% endcomment %}
+{%- if template == 'index' -%}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description | strip_html }}">
+  {%- if settings.share_image != blan -%}
+    <meta property="og:image" content="http:{{ settings.share_image.src | image_url }}">
+    <meta property="og:image:secure_url" content="https:{{ settings.share_image.src | image_url }}">
+    <meta property="og:image:width" content="{{ settings.social_image_width }}">
+    <meta property="og:image:height" content="{{ settings.social_image_height }}">
+  {%- endif -%}
+{%- elsif template contains 'product' -%}
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="{{ product.title | strip_html }}">
+  {%- for image in product.images reversed limit: 3 -%}
+    <meta property="og:image" content="http:{{ image | image_url }}">
+    <meta property="og:image:secure_url" content="https:{{ image | image_url }}">
+    <meta property="og:image:width" content="{{ settings.social_image_width }}">
+    <meta property="og:image:height" content="{{ settings.social_image_height }}">
+  {%- endfor -%}
+  <meta property="og:description" content="{{ product.description | strip_html }}">
+  <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}">
+  <meta property="og:price:currency" content="{{ shop.currency }}">
+{%- elsif template contains 'article' -%}
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ article.title | strip_html }}">
+  {%- if article.image.size > 0 -%}
+    <meta property="og:image" content="http:{{ article | image_url: width: 1024, height: 1024 }}">
+    <meta property="og:image:secure_url" content="https:{{ article | image_url: width: 1024, height: 1024 }}">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+  {%- endif -%}
+  <meta property="og:description" content="{{ article.excerpt_or_content | strip_html }}">
+{%- else -%}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page_title | strip_html }}">
+  {%- if settings.share_image != blank -%}
+    <meta property="og:image" content="http:{{ settings.share_image | asset_url }}">
+    <meta property="og:image:secure_url" content="https:{{ settings.share_image | asset_url }}">
+    <meta property="og:image:width" content="{{ settings.social_image_width }}">
+    <meta property="og:image:height" content="{{ settings.social_image_height }}">
+  {%- endif -%}
+{%- endif -%}
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:site_name" content="{{ shop.name }}">
+{%- if settings.geo_position != blank -%}
+  <meta property="og:locale" content="{{ settings.geo_position }}">
+{%- endif -%}
+
+{% comment %}
+  Twitter card
+{% endcomment %}
+{%- if settings.social_twitter_link != blank -%}
+  <meta name="twitter:site" content="@{{ settings.social_twitter_link | split: 'twitter.com/' | last }}">
+  <meta name="twitter:creator" content="@{{ settings.social_twitter_link | split: 'twitter.com/' | last }}">
+{%- endif -%}
+{%- if template contains 'article' and article.image.size > 0 -%}
+  <meta name="twitter:card" content="summary_large_image">
+{%- else -%}
+  <meta name="twitter:card" content="summary">
+{%- endif -%}
+{%- if template == 'index' -%}
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_description | strip_html }}">
+  {%- if settings.share_image.src -%}
+    <meta name="twitter:image" content="https:{{ settings.share_image.src | image_url }}">
+    <meta name="twitter:image:width" content="{{ settings.social_image_width }}">
+    <meta name="twitter:image:height" content="{{ settings.social_image_height }}">
+  {%- endif -%}
+{%- elsif template contains 'product' -%}
+  <meta name="twitter:title" content="{{ product.title | strip_html }}">
+  <meta name="twitter:description" content="{{ product.description | strip_html | truncate: 200, '' }}">
+  <meta name="twitter:image" content="https:{{ product | image_url }}">
+  <meta name="twitter:image:width" content="{{ settings.social_image_width }}">
+  <meta name="twitter:image:height" content="{{ settings.social_image_height }}">
+{%- elsif template contains 'article' -%}
+  <meta name="twitter:title" content="{{ article.title | strip_html }}">
+  <meta name="twitter:description" content="{{ article.excerpt_or_content | strip_html | truncate: 200, '' }}">
+  {%- if article.image.size > 0 -%}
+    <meta property="twitter:image" content="https:{{ article | image_url: width: 1024, height: 1024 }}">
+  {%- endif -%}
+{%- endif -%}

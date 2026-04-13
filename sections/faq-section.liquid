@@ -1,0 +1,191 @@
+{% schema %}
+{
+  "name": "FAQ Section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "question_color",
+      "label": "Question text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "answer_color",
+      "label": "Answer text color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size (px)",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "faq_width",
+      "label": "FAQ Content Width (px)",
+      "min": 200,
+      "max": 1200,
+      "step": 10,
+      "default": 800
+    },
+    {
+      "type": "header",
+      "content": "FAQs"
+    },
+    {
+      "type": "text",
+      "id": "faq_heading",
+      "label": "Section Heading",
+      "default": "Frequently Asked Questions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="faq-section" style="background-color: {{ section.settings.background_color }}; font-family: 'Montserrat', sans-serif;">
+  <div class="faq-container" style="max-width: {{ section.settings.faq_width | append: 'px' }}; margin: 0 auto;">
+    
+    {% if section.settings.faq_heading != blank %}
+      <h2 class="faq-title" style="font-size: {{ section.settings.font_size | append: 'px' }}; color: {{ section.settings.question_color }};">
+        {{ section.settings.faq_heading }}
+      </h2>
+    {% endif %}
+
+    <div class="faq-items">
+      {% for block in section.blocks %}
+        <div class="faq-item" {{ block.shopify_attributes }}>
+          
+          <button class="faq-question" style="color: {{ section.settings.question_color }}; font-size: {{ section.settings.font_size | append: 'px' }};">
+            <span class="faq-question-text">{{ block.settings.question }}</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          
+          <div class="faq-answer" style="color: {{ section.settings.answer_color }}; font-size: {{ section.settings.font_size | append: 'px' }};">
+            {{ block.settings.answer }}
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .faq-section {
+    padding: 2rem;
+  }
+
+  .faq-title {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+  }
+
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: none;
+    padding: 1rem 0;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .faq-question-text {
+    flex: 1;
+  }
+
+  .faq-toggle {
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+
+  .faq-answer {
+    display: none;
+    padding: 0.5rem 0 1rem;
+    line-height: 1.6;
+  }
+
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+
+  /* Ensure rich text inside answers formats nicely */
+  .faq-answer p {
+    margin: 0 0 1rem;
+  }
+  .faq-answer strong {
+    font-weight: 700;
+  }
+</style>
+
+<script>
+  function initFaqSection(scope) {
+    if (!scope) return;
+    
+    const faqItems = scope.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+      const button = item.querySelector(".faq-question");
+      const toggle = item.querySelector(".faq-toggle");
+
+      if (button && !button.dataset.faqInit) {
+        button.dataset.faqInit = true; 
+
+        button.addEventListener("click", function() {
+          item.classList.toggle("active");
+          toggle.textContent = item.classList.contains("active") ? "–" : "+";
+        });
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => initFaqSection(document));
+  document.addEventListener("shopify:section:load", e => initFaqSection(e.target));
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">

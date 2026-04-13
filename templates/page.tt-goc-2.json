@@ -1,0 +1,102 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false
+      }
+    },
+    "f6a6f3f2-0121-43bd-bc4a-c82dfb092ba9": {
+      "type": "text-header",
+      "disabled": true,
+      "settings": {
+        "heading": "Get Organized Challenge",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": true,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "5c91c604-fea0-46eb-b25b-11666c6d9f02": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/GOC-signup-header22_886b0120-1901-46f7-acc3-b6f4e7a6de6a.jpg",
+        "main_heading": "Get Organised Challenge Sign up now!",
+        "main_text": "",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "md",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "dfcbd675-81d6-4e34-a2b3-00091ac56fa1": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Go from Overwhelmed to Organized! Join me for the next <strong>Get Organized Challenge (GOC)<\/strong> and we’ll tackle your crafty mess step by step.<\/p><p>The GOC is <strong>Fun<\/strong>, <strong>Free<\/strong> and you’ll feel <strong>FABULOUS<\/strong> when you’re craft supplies are organized and accessible. No special tools or supplies are required, just sign up and join us for live classes over the internet.<\/p><p>The GOC is a great way to connect with, interact with, and encourage your crafty friends, too! Share a link to this sign up page and get organized together.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "d9f10dad-27de-42d6-9eea-206c9fada8bb": {
+      "type": "form-embed",
+      "settings": {
+        "heading": "",
+        "text": "",
+        "form_embed": "<div class=\"klaviyo-form-V7qgR9\"><\/div>",
+        "enable_h1": false,
+        "margin_top": "md"
+      }
+    },
+    "037fcf1a-43ab-4921-a9ee-20a2761b3012": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Find Out More",
+        "link_url": "shopify:\/\/pages\/get-organized-challenge-find-out-more",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "f6a6f3f2-0121-43bd-bc4a-c82dfb092ba9",
+    "5c91c604-fea0-46eb-b25b-11666c6d9f02",
+    "dfcbd675-81d6-4e34-a2b3-00091ac56fa1",
+    "d9f10dad-27de-42d6-9eea-206c9fada8bb",
+    "037fcf1a-43ab-4921-a9ee-20a2761b3012"
+  ]
+}

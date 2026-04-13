@@ -1,0 +1,40 @@
+{% if section.blocks.size > 0 %}
+  <ul class="product-accordion-new">
+    {% for block in blocks %}
+      {% liquid
+        assign showContent = false
+        if block.settings.text != blank or block.settings.use_description == true
+          assign showContent = true
+        endif
+      %}
+
+      {% if block.settings.title and showContent %}
+        <li class="product-accordion-new__item">
+          <details class="product-accordion-new__details">
+            <summary class="product-accordion-new__summary">
+              {{ block.settings.title }}
+
+              <svg class="product-accordion-new__icon-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                <path d="M7 .5c.2 0 .4.2.5.4v5.6H13a.5.5 0 0 1 0 1H7.5V13a.5.5 0 0 1-1 0V7.5H1a.5.5 0 0 1 0-1h5.5V1c0-.3.2-.5.5-.5Z"/>
+              </svg>
+
+              <svg class="product-accordion-new__icon-minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                <path d="M1 7.5a.5.5 0 0 1 0-1h12a.5.5 0 1 1 0 1Z"/>
+              </svg>
+            </summary>
+
+            <div class="product-accordion-new__text">
+              {% liquid
+                if block.settings.use_description
+                  echo product.description
+                else
+                  echo block.settings.text
+                endif
+              %}
+            </div>
+          </details>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}

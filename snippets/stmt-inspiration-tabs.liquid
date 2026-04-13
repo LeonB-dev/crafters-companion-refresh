@@ -1,0 +1,9 @@
+<div class="inspiration__tabs inspiration__tabs--{{ breakpoint }}">
+  {% for tab in section.blocks %}
+    <button type="button" class="inspiration__tabs-control inspiration__tabs-control--{{ tab.id }} js-inspiration-tab-control {% if block.id == tab.id %}active{% endif %}" data-target-tab="inspirationTab{{ tab.id }}" data-target-banner="inspirationBanner{{ tab.id }}" {{ tab.shopify_attributes }}>
+      {% render 'stmt-icon-eye-open', class: 'inspiration__tabs-control-icon inspiration__tabs-control-icon--show-active' %}
+      {% render 'stmt-icon-eye-closed', class: 'inspiration__tabs-control-icon inspiration__tabs-control-icon--hide-active' %}
+      {{ tab.settings.title }}
+    </button>
+  {% endfor %}
+</div>

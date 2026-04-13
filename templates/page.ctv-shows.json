@@ -1,0 +1,396 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "crafters-tv-deals",
+      "blocks": {
+        "3decacdf-8d7c-4e5c-881d-60153f1bdd99": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "collection": "art-colouring"
+          }
+        },
+        "49a1517d-6966-4e55-917a-53bfe406b34e": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "collection": "quilting-patchwork"
+          }
+        },
+        "25ff0ff0-dea1-4860-acac-0aaf692d0958": {
+          "type": "promotion",
+          "disabled": true,
+          "settings": {
+            "collection": "papercraft"
+          }
+        }
+      },
+      "block_order": [
+        "3decacdf-8d7c-4e5c-881d-60153f1bdd99",
+        "49a1517d-6966-4e55-917a-53bfe406b34e",
+        "25ff0ff0-dea1-4860-acac-0aaf692d0958"
+      ],
+      "settings": {
+        "title": "Crafter's TV Shows",
+        "heading": "Check out all of the fantastic shows we have for you!",
+        "text": "<p>Wake up with Crafter's TV, take a peek at brand new products and join us for exclusive product launches! Here at Crafter's TV, there's a show for everyone!</p>",
+        "featured_promotions_heading": ""
+      }
+    },
+    "dbcf53ac-6954-4d20-a9c7-2cf84ec4c540": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Find out more about Crafter's TV",
+        "link_url": "https://crafters-uk.myshopify.com/pages/crafters-tv",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "a827e08b-0e03-4536-8db6-c737a45b6eb4": {
+      "type": "image-text-slider",
+      "blocks": {
+        "350f6d70-2ca1-4a9e-8efa-2dd774168fc2": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Wake Up Call",
+            "text": "<p>Get your day off to the best start with a Wake Up Call! Take a sneak peek behind the scenes to see what exciting new products and live guests today’s shows have in store! And you never know who might pop in to chat about what’s coming up, so keep your eyes peeled!</p><p><strong>Monday - Friday 12pm - 1pm UK | 7am - 8am EDT</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/CTV_ShowsWake_up_call_780cfc55-6061-4077-a0ff-b0b29c0ce265.jpg"
+          }
+        },
+        "66f1b323-fbfa-4762-99e3-3053d001c1be": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Craft Vault",
+            "text": "<p>Unlock the door to a whole world of unmissable deals in the Craft Vault! Join us to turn the key and step into this treasury of treats to discover all of the offers, deals and bargains you can get your hands on</p><p> </p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/CTV_ShowsThe_craft_vault_0747825e-5656-4872-af25-7d60714631f9.jpg"
+          }
+        },
+        "24072f0b-7fcf-44b9-aabe-21f93572daba": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Craft Along",
+            "text": "<p>You’ve got your hands on the newest crafting must-have… now, all you need is the crafty know how! </p><p>Join us for Craft Along where we'll take you on a step-by-step journey filled with tips and techniques to master your latest purchase!</p><p> <strong>Check our</strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong> weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/CTV_ShowsCraft_along_4800acda-9abe-4b13-aad6-372e3f2be11e.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "350f6d70-2ca1-4a9e-8efa-2dd774168fc2",
+        "66f1b323-fbfa-4762-99e3-3053d001c1be",
+        "24072f0b-7fcf-44b9-aabe-21f93572daba"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "none"
+      }
+    },
+    "0586d236-22fd-4b7c-ba49-e3c7c42f532c": {
+      "type": "image-text-slider",
+      "blocks": {
+        "4992d1a6-089e-4633-b02a-162c3178b629": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Master Class",
+            "text": "<p>Grab some handy hints, tips and amazing demonstrations.</p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p><p> </p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/CTV_ShowsMasterclass_49c09765-b954-45a8-8193-b4b634b03df5.jpg"
+          }
+        },
+        "81e76bef-ed61-4cb1-a936-92e54031dfb5": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Launch Day",
+            "text": "<p>Take one giant leap, watch the show and explore our newest products! This show airs on the morning of a brand new launch day, so you’ll be able to see everything in action, grab brilliant bundles and learn more about the products.</p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/CTV_ShowsLaunch_day_b45cca97-73b3-4ad3-9e60-745f5d9fdce7.jpg"
+          }
+        },
+        "f3c50878-fcce-4aeb-b1ce-0148b58d5078": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Monday Makers",
+            "text": "<p>Make Mondays marvellous with Monday Makers! Watch as we launch the 24 hour deal, meet fellow crafters from around the world and so much more. It's the perfect way to start your week!</p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/CTV_ShowsMonday_makers_a4661338-64e3-4a08-af77-3f42e0c4f624.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "4992d1a6-089e-4633-b02a-162c3178b629",
+        "81e76bef-ed61-4cb1-a936-92e54031dfb5",
+        "f3c50878-fcce-4aeb-b1ce-0148b58d5078"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "none"
+      }
+    },
+    "f2d72eb0-197a-4c37-a3a6-69537a5e38ee": {
+      "type": "image-text-slider",
+      "blocks": {
+        "a61e6a87-a84b-471d-8a3f-1b4d1c60aab3": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Softer Side of Life",
+            "text": "<p>Come sew and explore the softer side of life! Join us to try some new needlecraft fun, grab some amazing deals and find your favourite new hobby!</p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/CTV_ShowsSofter_side_of_life_f2ea1bf9-d82d-4837-af0a-249bb3c2004b.jpg"
+          }
+        },
+        "65e12656-0bee-4093-9edf-420a65999300": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Launch Party",
+            "text": "<p>Tuesdays are going to be a blast! Explore our latest crafting products, get lightyears ahead with sneak peeks at future launches and grab some deals that are out of this world.</p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/CTV_ShowsLaunch_party_0d151736-ec19-4d41-b229-07e2eefba634.jpg"
+          }
+        },
+        "8ba7db86-97c5-48d3-b2c0-34ccb1f2cbdf": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Beautiful Beginnings",
+            "text": "<p>New to Crafter’s TV, and want to jump straight into some crafting and creativity? Welcome to Beautiful Beginnings! This is the first stage of your craft journey, and we’ll be with you every step of the way with beginner craft techniques, introductions to essential crafting tools and so much fun!</p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/CTV_ShowsBeautiful_beginnings_8275f495-9a4f-4dd7-81db-3e53e5bdbd1d.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "a61e6a87-a84b-471d-8a3f-1b4d1c60aab3",
+        "65e12656-0bee-4093-9edf-420a65999300",
+        "8ba7db86-97c5-48d3-b2c0-34ccb1f2cbdf"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "none"
+      }
+    },
+    "532e057b-c211-4f6d-ba13-33a8095ebb1e": {
+      "type": "image-text-slider",
+      "blocks": {
+        "cd640805-a2f9-40d1-8eba-eba89c5d7dd2": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Cartload",
+            "text": "<p>Stop, drop and shop during our weekly Cartload show! With exclusive deals and huge savings, you'll be able to sit back, load up on products and get your next Crafter's fix in the comfort of your own home.</p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/CTV_ShowsCartload_fdf020b1-37be-4342-a035-c6f40948e3c7.jpg"
+          }
+        },
+        "63a186a3-d54d-412f-98dd-f7522c496dc7": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Colour Me Happy",
+            "text": "<p>Tune in for tips, tricks, and techniques. You won't want to miss the amazing deals on your favourite art supplies!</p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/CTV_ShowsColour_me_happy_3c591049-8c62-437f-9913-5976b7501aaa.jpg"
+          }
+        },
+        "000fedb0-f564-49ec-9846-af0d1deb32a0": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "60 Minute Deals",
+            "text": "<p>Ready, set, shop! </p><p> It’s 60 Minute Deals, the ultimate crafting rush where unbeatable bargains won’t last long. Tune in for this quick-fire show and grab jaw-dropping deals and one-off discounts before the hour runs out. </p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/60_Minute_Deals_37999bd5-4bb9-436b-afa3-efc79083a7ba.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "cd640805-a2f9-40d1-8eba-eba89c5d7dd2",
+        "63a186a3-d54d-412f-98dd-f7522c496dc7",
+        "000fedb0-f564-49ec-9846-af0d1deb32a0"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "none"
+      }
+    },
+    "30c801b3-cec8-44fa-8223-26160a56c348": {
+      "type": "image-text-slider",
+      "blocks": {
+        "be996866-a740-448d-9b0d-497d65d97887": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Countdown To Launch",
+            "text": "<p>Each jam-packed show will preview all of the exciting and much-anticipated craft collections coming up in the next month.</p><p>This is your exclusive opportunity to take a first look at our upcoming papercraft, art and sewing goodies, discover something new and reignite your creative imagination. </p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/Countdown_To_Launch_14d47454-a9c0-4cbd-9554-2db05eb1f413.jpg"
+          }
+        },
+        "8048bc5b-d6f2-4cb7-8791-e3ec2a844270": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Friday Night Live",
+            "text": "<p>Join us every Friday for a recap of all the best products and deals from the week. Expect interactive demonstrations, new studio games, and plenty of live surprises, plus all that feel-good Crafter’s TV energy you know and love to take you into the weekend. </p><p><strong>Fridays - 5pm - 7pm UK | 12pm - 2pm EDT</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/Friday_Night_Live_3a726c64-7886-4645-95a0-4ec955d302fd.jpg"
+          }
+        },
+        "b752264a-3961-4373-9d7f-2835e0028262": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Craft Your Stash",
+            "text": "<p>Ready for a fresh creative perspective? </p><p>Take a new look at your crafting collection to make something unique or try a new technique.</p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/CTV_ShowsCraft_your_stash.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "be996866-a740-448d-9b0d-497d65d97887",
+        "8048bc5b-d6f2-4cb7-8791-e3ec2a844270",
+        "b752264a-3961-4373-9d7f-2835e0028262"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "none"
+      }
+    },
+    "ea030542-df51-4d6d-9c31-300f4c1cee62": {
+      "type": "image-text-slider",
+      "blocks": {
+        "08205882-89e1-4f18-bf8a-63e28e05e282": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "First Look",
+            "text": "<p>Unmissable, exclusive, never-seen-before fun! First Look is your invitation to preview a brand-new craft collection or product for the very first time. Each show will explore all of the amazing things you can make and do with an upcoming craft launch, before it goes on sale!</p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/First_Look_WebCategory.jpg"
+          }
+        },
+        "383da9fd-2368-4a3d-830d-5f222ff37ef1": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Creative Cravings",
+            "text": "<p>Craving something creative in your life? Join us for a beginner's look at your crafty options, plus easy demos and essential bundles to get you started and take the guesswork out of your first project. </p><p><strong>Check our </strong><a href=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\" title=\"https://crafters-uk.myshopify.com/pages/crafters-tv-schedule\"><strong>weekly schedule</strong></a><strong> for show times</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify://shop_images/Creative_CravingsSub_Cat_image_1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "08205882-89e1-4f18-bf8a-63e28e05e282",
+        "383da9fd-2368-4a3d-830d-5f222ff37ef1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "edcf4a73-4c20-49e1-89b0-2bcb7ccd2bec": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Check out our full schedule",
+        "link_url": "https://crafters-uk.myshopify.com/pages/crafters-tv-schedule",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "dbcf53ac-6954-4d20-a9c7-2cf84ec4c540",
+    "a827e08b-0e03-4536-8db6-c737a45b6eb4",
+    "0586d236-22fd-4b7c-ba49-e3c7c42f532c",
+    "f2d72eb0-197a-4c37-a3a6-69537a5e38ee",
+    "532e057b-c211-4f6d-ba13-33a8095ebb1e",
+    "30c801b3-cec8-44fa-8223-26160a56c348",
+    "ea030542-df51-4d6d-9c31-300f4c1cee62",
+    "edcf4a73-4c20-49e1-89b0-2bcb7ccd2bec"
+  ]
+}

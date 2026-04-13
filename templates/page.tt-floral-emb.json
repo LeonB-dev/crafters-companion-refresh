@@ -1,0 +1,75 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "024c1931-dc66-44cd-a533-8a22ea32131c": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Organize Floral Embellishments",
+        "text": "<p>Flower embellishments can take your projects from plain to fabulous - if you can remember where you stored them. Keep your flowers organized and visible with these Totally-Tiffany products.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "de003847-8978-4950-b084-e7ccf84e2efc": {
+      "type": "content-block-trio",
+      "blocks": {
+        "78ea9bff-5941-40f7-9608-5e29d92fd20e": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Sue Buddy Bag",
+            "text": "Perfect for keeping all your floral embellishments in one place! Easy to take to a craft event or store on your shelf. You'll love being able to \"see\" all of your flowers.",
+            "image": "shopify:\/\/shop_images\/SNG10_Sue_-loose-flower-embellishments.jpg",
+            "link_text": "View All EZ20 Bags and Totes",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "989e6cf5-96f1-4913-a6e7-d9cf179146c2": {
+          "type": "content_block",
+          "settings": {
+            "heading": "ScrapRack Fantastic Five Page",
+            "text": "This page has 4 large pockets (5x7) - ideal for larger flowers.  Each pocket will hold multiple flowers. ScrapRack pages are perfect for storing flowers of all shapes and sizes.",
+            "image": "shopify:\/\/shop_images\/P72_P44_Flower_Embellishment_Organizer_Storage_ScrapRack_Binder002.jpg",
+            "link_text": "View All ScrapRack Solutions",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany=Scraprack"
+          }
+        },
+        "e8a8feb9-8b69-4f44-870b-9eb0cdb07bb5": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Create a Flower Power Binder ",
+            "text": "Read Tiffany's blog post to learn how.",
+            "image": "shopify:\/\/shop_images\/Pile_of_flowers__bouquet__SQ_36ad4cd5-e42c-4e3d-837e-1d09b3d90abf.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "78ea9bff-5941-40f7-9608-5e29d92fd20e",
+        "989e6cf5-96f1-4913-a6e7-d9cf179146c2",
+        "e8a8feb9-8b69-4f44-870b-9eb0cdb07bb5"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    }
+  },
+  "order": [
+    "024c1931-dc66-44cd-a533-8a22ea32131c",
+    "de003847-8978-4950-b084-e7ccf84e2efc"
+  ]
+}

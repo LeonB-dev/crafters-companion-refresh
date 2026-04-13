@@ -1,0 +1,142 @@
+{%- liquid
+  assign template_name = 'section-club-inspire-tiers'
+
+  assign heading = section.settings.heading
+  assign header_text = section.settings.header_text
+  assign image = section.settings.image
+
+  assign promo_heading = section.settings.promo_heading
+
+  assign margin_bottom = section.settings.margin_bottom
+-%}
+
+{{- 'section-club-inspire-tiers.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    {%-
+      render 'section-header',
+      _heading: heading,
+      _image: image,
+      _offset: true,
+      _text: header_text
+    -%}
+    <div class="tier-blocks u-space-below-md">
+      <div class="tier pearl">
+        <h2 class="u-heading-sm heading"><span>{{- settings.pearl_title -}}</span></h2>
+        <p class="u-text-xl points"><strong>{{- 'template.customers.loyalty.points' | t: points: settings.pearl_points -}}</strong></p>
+        <p class="benefits"><small>{{- 'template.customers.loyalty.benefits' | t -}}</small></p>
+        <ul class="c-check-list red">
+          <li>{{- 'template.customers.loyalty.pearl_discount' | t: discount: settings.first_order_discount -}}</li>
+        </ul>
+      </div>
+      <div class="tier bronze">
+        <h2 class="u-heading-sm heading"><span>{{- settings.bronze_title -}}</span></h2>
+        <p class="u-text-xl points"><strong>{{- 'template.customers.loyalty.points' | t: points: settings.bronze_points -}}</strong></p>
+        <p class="benefits"><small>{{- 'template.customers.loyalty.benefits' | t -}}</small></p>
+        <ul class="c-check-list red">
+          <li>{{- 'template.customers.loyalty.percent_off_orders' | t: discount: settings.bronze_discount -}}</li>
+        </ul>
+      </div>
+      <div class="tier silver">
+        <h2 class="u-heading-sm heading"><span>{{- settings.silver_title -}}</span></h2>
+        <p class="u-text-xl points"><strong>{{- 'template.customers.loyalty.points' | t: points: settings.silver_points -}}</strong></p>
+        <p class="benefits"><small>{{- 'template.customers.loyalty.benefits' | t -}}</small></p>
+        <ul class="c-check-list red">
+          <li>{{- 'template.customers.loyalty.percent_off_orders' | t: discount: settings.silver_discount -}}</li>
+        </ul>
+      </div>
+      <div class="tier gold">
+        <h2 class="u-heading-sm heading"><span>{{- settings.gold_title -}}</span></h2>
+        <p class="u-text-xl points"><strong>{{- 'template.customers.loyalty.points' | t: points: settings.gold_points -}}</strong></p>
+        <p class="benefits"><small>{{- 'template.customers.loyalty.benefits' | t -}}</small></p>
+        <ul class="c-check-list red">
+          <li>{{- 'template.customers.loyalty.percent_off_orders' | t: discount: settings.gold_discount -}}</li>
+        </ul>
+      </div>
+      <div class="tier platinum">
+        <h2 class="u-heading-sm heading"><span>{{- settings.platinum_title -}}</span></h2>
+        <p class="u-text-xl points"><strong>{{- 'template.customers.loyalty.points' | t: points: settings.platinum_points -}}</strong></p>
+        <p class="benefits"><small>{{- 'template.customers.loyalty.benefits' | t -}}</small></p>
+        <ul class="c-check-list red">
+          <li>{{- 'template.customers.loyalty.percent_off_orders' | t: discount: settings.platinum_discount -}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="message">
+      <h2 class="u-heading-sm heading">{{- promo_heading -}}</h2>
+      <div class="actions">
+        <a href="{{- routes.account_register_url -}}" class="c-btn main quinary">
+          {{- 'template.customers.loyalty.sign_up_text' | t -}}
+        </a>
+        <a href="{{- routes.account_login_url -}}" class="c-btn alt primary">
+          {{- 'template.customers.loyalty.sign_in_text' | t -}}
+          {%- render 'icon', _name: 'icon-arrow-right' -%}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Club Inspire - Tiers",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "header_text",
+      "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Promotion Message"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "promo_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+  ]
+}
+{% endschema %}

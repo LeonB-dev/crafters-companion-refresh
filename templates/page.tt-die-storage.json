@@ -1,0 +1,296 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "fd7bf228-39c4-4c09-8aef-1e9952a1fec5": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Die Storage & Organization",
+        "text": "<p>Dies can really make your crafting projects unique and special.  The two biggest problems with die storage & organization; remembering what you have and then finding them.  We've got the perfect organizers to simplify the process.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "e06678b1-9118-4df3-ac45-c5686a61e71a": {
+      "type": "image-text-slider",
+      "blocks": {
+        "a648b3e1-c1c0-4cea-8e60-eb0b3208137a": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Die Storage Cards",
+            "text": "<p>These 5x7 cards are coated with a light tack adhesive.  Stick your dies to them and file them in a Karen Buddy Bag or 5x7 Fab File.  When the sticky stuff gets unsticky - just add a line of repositionable adhesive.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/DC5pk-Stick-Die-Storage-Cards-in-use.jpg"
+          }
+        },
+        "55734836-0395-43b0-81ce-ab2dcfce7c90": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "5x7 Cardmaker's Fab File",
+            "text": "<p>Also available with 5x7 pockets.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Stamp-Die-Storage-by-Totally-Tiffany-5x7-pockets-CMFF-SDSS-1.jpg"
+          }
+        },
+        "140c90de-f2c7-4b48-9da0-0310848e69e2": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "5x7 White Magnetic Sheets",
+            "text": "<p>These work with our 5x7 Fab File and 5x7 Pockets.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Die-Organization-Totally-Tiffany-Magnet-sheets-MAGS5X7-6.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "a648b3e1-c1c0-4cea-8e60-eb0b3208137a",
+        "55734836-0395-43b0-81ce-ab2dcfce7c90",
+        "140c90de-f2c7-4b48-9da0-0310848e69e2"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "5103b0be-72d7-4e9f-839e-b24e618fc83c": {
+      "type": "image-text-slider",
+      "blocks": {
+        "36915893-0460-458e-bed4-2ec133d37df5": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "5x7 Pockets",
+            "text": "<p>These work with the 5x7 Magnets and 5x7 Fab File.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Die-magnets-organization-SP5PK-Mags5x7-Totally-Tiffany-solutions_11abb868-7d0a-413e-9c1c-93e7be39a12b.jpg"
+          }
+        },
+        "343f7c03-78c7-45c7-8c51-069db38d55a0": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Die, Stamp, & Supply Stadium",
+            "text": "<p>Having your dies at your finger tips is extremely convenient and will encourage you to use them more often. This stadium can hold about 100 die sets and stamps too. Use our Die pockets (scroll down) to keep die sets & die and stamp sets together.<\/p>",
+            "link_text": "View All Desk Maid Organizers",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=DeskMaid",
+            "image": "shopify:\/\/shop_images\/DSST-organize-dies-and-cutting-platforms_1_5157199f-053d-42dd-a8cb-44deaa784792.jpg"
+          }
+        },
+        "ef3951f2-74da-44b9-a1ba-75adc746107a": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "3\" Flippin' Storage Binder",
+            "text": "<p>When used with our Die Storage Pockets, the 3\" Flippin' Storage Binde<a href=\"https:\/\/www.totally-tiffany.com\/product\/stamp-storage-binder\/\">r<\/a> is an easy, compact and lightweight (compared to magnetic storage) solution for die storage.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Organize-dies-in-flippin-storage-binder-6.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "36915893-0460-458e-bed4-2ec133d37df5",
+        "343f7c03-78c7-45c7-8c51-069db38d55a0",
+        "ef3951f2-74da-44b9-a1ba-75adc746107a"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "0ca4fe46-4b05-4ef1-a48e-fb438cef1689": {
+      "type": "image-text-slider",
+      "blocks": {
+        "20a9571c-37ed-4b3b-a9df-39578daf9c43": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Denise Buddy Bag",
+            "text": "<p>The Denise Buddy Bag can be purchased alone or with our Die & Stamp Storage pockets and labeling tabs.  Denise has 3 small inserts which allow you to keep your dies stored upright in a \"file\" type system.  The Denise Buddy Bag is a good choice if you like to take your dies with you when you travel.<\/p>",
+            "link_text": "View All Buddy Bags",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize",
+            "image": "shopify:\/\/shop_images\/BSFP-SNG181.jpg"
+          }
+        },
+        "b03f0eb7-eed6-4580-8e8e-580538fa213c": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Karen Buddy Bag",
+            "text": "<p>This bag was designed with dies and stamps in mind.  The bag includes 5 of our sticky die storage cards.  Additional cards can be added separately<\/p>",
+            "link_text": "View All Buddy Bags",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize",
+            "image": "shopify:\/\/shop_images\/SNG13-Karen-Buddy-Bag-Die-and-Stamp-Organizer.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "20a9571c-37ed-4b3b-a9df-39578daf9c43",
+        "b03f0eb7-eed6-4580-8e8e-580538fa213c"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "228283a0-6f0d-488c-8a80-f486f1a5d4c9": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Die Storage Pockets",
+        "text": "<p>These pockets come in a variety of sizes - great for organizing individual dies, die sets or stamp & die sets. Die Storage Pockets fit in our Desk Maid Die, Stamp & Supply Organizer. They also fit in many of our ScrapRack Basic Storage Pages.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "83a7e67a-4570-491a-9f20-b75911b2566d": {
+      "type": "image-text-slider",
+      "blocks": {
+        "d2e8ef12-bf4c-4c0a-9569-3c6c034cd6c2": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Small Die Pockets",
+            "text": "<p>Contains 25 pockets per pack.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/PKSM256710Smalldiestampstencilorganizerpockets.jpg"
+          }
+        },
+        "49c36f39-8ce1-49c7-ba75-fd0b057b634f": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Medium Die Pockets",
+            "text": "<p>Contains 25 pockets per pack.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/PKMD256727mediumdiestampstencilorganizerpockets.jpg"
+          }
+        },
+        "cb298b76-d958-4ff9-a661-4b3e5ae3d1db": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Large Die Pockets",
+            "text": "<p>Contains 25 pockets per pack.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/PKLG256734largediestampstencilorganizerpockets.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "d2e8ef12-bf4c-4c0a-9569-3c6c034cd6c2",
+        "49c36f39-8ce1-49c7-ba75-fd0b057b634f",
+        "cb298b76-d958-4ff9-a661-4b3e5ae3d1db"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "039b49dc-2d29-490d-9817-a160dfd739a7": {
+      "type": "image-text-slider",
+      "blocks": {
+        "1f3c1189-e802-4084-9bdd-d7c49b0b0451": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Variety Pack",
+            "text": "<p>Has 75 pockets, 25 per size.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/PKVP-6703-Variety-pack-stamp-die-pockets-by-Totally-Tiffany-Stencil-and-Stamp-pockets.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "1f3c1189-e802-4084-9bdd-d7c49b0b0451"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "fd429be1-ae82-4d1e-9c09-edbe39763c54": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Shop Die Storage & Organization",
+        "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "fd7bf228-39c4-4c09-8aef-1e9952a1fec5",
+    "e06678b1-9118-4df3-ac45-c5686a61e71a",
+    "5103b0be-72d7-4e9f-839e-b24e618fc83c",
+    "0ca4fe46-4b05-4ef1-a48e-fb438cef1689",
+    "228283a0-6f0d-488c-8a80-f486f1a5d4c9",
+    "83a7e67a-4570-491a-9f20-b75911b2566d",
+    "039b49dc-2d29-490d-9817-a160dfd739a7",
+    "fd429be1-ae82-4d1e-9c09-edbe39763c54"
+  ]
+}

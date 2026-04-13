@@ -1,0 +1,182 @@
+{%- liquid
+  assign template_name = 'section-category-content-spot'
+
+  assign image = section.settings.image
+  assign heading = section.settings.heading | strip_html
+  assign text = section.settings.text
+
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-category-content-spot.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="image">
+    {%-
+      render 'paper-edge',
+      _top_edge_colour: 'white',
+      _bottom_edge_colour: 'white',
+      _section: section
+    -%}
+    <picture>
+      <source media="(min-width:1500px)" srcset="{{- image | image_url: width: 1920 -}}">
+      <source media="(min-width:1100px)" srcset="{{- image | image_url: width: 1500 -}}">
+      <source media="(min-width:800px)" srcset="{{- image | image_url: width: 1024 -}}">
+      <source media="(min-width:551px)" srcset="{{- image | image_url: width: 800 -}}">
+      <source media="(max-width: 550.8px)" srcset="{{- image | image_url: width: 600 -}}">
+      <img src="{{- image | image_url: width: 600 -}}" alt="{{- image.alt | default: _heaidng -}}" height="390" width="320">
+    </picture>
+  </div>
+  <div class="container">
+    <div class="content">
+      <h2 class="u-heading-md">{{- heading -}}</h2>
+      {{- text -}}
+      <div class="blocks">
+        {%- for block in section.blocks -%}
+          {% liquid
+            assign collection = collections[block.settings.collection]
+            assign block_image = collection.image
+            assign block_heading = collection.title
+            assign block_text = block.settings.text
+
+            assign image = block.settings.image
+            if image != blank
+              assign block_image = image
+            endif
+
+            assign heading = block.settings.heading
+            if heading != blank
+              assign block_heading = heading
+            endif
+          %}
+          <div class="block">
+            <img src="{{- block_image | image_url: width: 152 -}}" alt="{{- block_image.alt | default: block_title -}}" height="96" width="96" loading="lazy"/>
+            <p class="u-heading-xs block-heading">{{- block_heading -}}</p>
+            {{- block_text -}}
+            <a href="{{- collection.url -}}" class="c-btn alt primary">
+              {{- 'Shop now' -}}
+              {%- render 'icon', _name: 'icon-arrow-right' -%}
+            </a>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Category Content Spot",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Minimum width: 1920px and 3/1 aspect ratio."
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "edge-01"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_block",
+      "name": "Collection block",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "This will override the default image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "info": "This will override the default page/collection title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category Content Spot",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

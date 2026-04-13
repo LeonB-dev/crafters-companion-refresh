@@ -1,0 +1,433 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "3d21fd79-efbe-42e6-b51b-070bb01888be": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Paper Organization and Storage Products",
+        "text": "<p>Keeping paper organized can be one of the toughest organization challenges in crafting. Organize your paper using Tiffany's 4-Section System and her perfect paper storage tools.  Use the Paper Junkie Boxes for storing 12x12 paper at home, use the 12x12 Fab File or Paper Handlers if you travel to crops and classes with your paper.  Scroll through the products below to find the products that are right for the way you craft.  Need help getting your paper organized? <strong>Read Tiffany's Ultimate Guide to Paper Organization article at the bottom of this page. <\/strong><\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "978784ea-2990-4715-9fc5-eb3517ba24d4": {
+      "type": "content-block-trio",
+      "blocks": {
+        "6d84a1c8-45e3-469c-ac44-7e0f24a94cf2": {
+          "type": "content_block",
+          "settings": {
+            "heading": "6x6 Paper Handler",
+            "text": "220 cardstock sheets, 8 24-sheet paper pads",
+            "image": "shopify:\/\/shop_images\/1_4b4a7b4d-b2d3-411c-8ace-b18560c59fc2.jpg",
+            "link_text": "View All Paper Handlers",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        },
+        "9c28759a-e506-4ed0-bf03-b5a34dd67d7a": {
+          "type": "content_block",
+          "settings": {
+            "heading": "A4 \/ 8.5 x 11 Paper Handler",
+            "text": "220 sheets of cardstock, 350 sheets of paper",
+            "image": "shopify:\/\/shop_images\/2_9c5601a0-35b3-4c56-8251-22f5f069bf9a.jpg",
+            "link_text": "View All Paper Handlers",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        },
+        "7e65268f-f53e-4c2e-a510-b874cfd840b3": {
+          "type": "content_block",
+          "settings": {
+            "heading": "8.5x11 Fab File",
+            "text": "165-180 sheets of cardstock",
+            "image": "shopify:\/\/shop_images\/3_0f593ce6-486b-4f10-aa52-d7d1dd4065c7.jpg",
+            "link_text": "Shop All Fab Files",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        }
+      },
+      "block_order": [
+        "6d84a1c8-45e3-469c-ac44-7e0f24a94cf2",
+        "9c28759a-e506-4ed0-bf03-b5a34dd67d7a",
+        "7e65268f-f53e-4c2e-a510-b874cfd840b3"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "1dedd1d8-a60d-42a8-b31b-08cdf44f2a05": {
+      "type": "text-header",
+      "settings": {
+        "heading": "12x12 Paper Storage Options",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "947a1adc-3582-4516-a51e-cff9535c42b5": {
+      "type": "content-block-trio",
+      "blocks": {
+        "743fe6e2-5ce0-4ede-ae34-eed628dd9f8c": {
+          "type": "content_block",
+          "settings": {
+            "heading": "12x12 Paper Junkie Paper Storage boxes",
+            "text": "500 sheets of paper, 350 sheets of cardstock.",
+            "image": "shopify:\/\/shop_images\/4_7102b222-10a4-49fa-a495-728dafb5bd4c.jpg",
+            "link_text": "View All Totally-Tiffany",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        },
+        "dea68034-b3de-4fff-8685-daf72c401325": {
+          "type": "content_block",
+          "settings": {
+            "heading": "ScrapRack Super Sized Single Page",
+            "text": "Each page will hold 10 Sheets of cardstock, 20 sheets of paper. Great for keeping collections together.",
+            "image": "shopify:\/\/shop_images\/5_d34a64f6-560d-4481-abff-23edc441f53a.jpg",
+            "link_text": "View All ScrapRack",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        },
+        "b37b19c3-d665-454a-81e3-ed7b322e8640": {
+          "type": "content_block",
+          "settings": {
+            "heading": "ScrapRack Sideloader Single Page",
+            "text": "Each pocket page will hold 15 sheets of cardstock or 25 sheets of paper.",
+            "image": "shopify:\/\/shop_images\/6_035b5a32-4827-4db3-9e56-2bc117389710.jpg",
+            "link_text": "View All ScrapRack",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        }
+      },
+      "block_order": [
+        "743fe6e2-5ce0-4ede-ae34-eed628dd9f8c",
+        "dea68034-b3de-4fff-8685-daf72c401325",
+        "b37b19c3-d665-454a-81e3-ed7b322e8640"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "385105c2-3b61-48e8-bd5d-3a3652f68345": {
+      "type": "content-block-trio",
+      "blocks": {
+        "8bc40f30-9b12-45e5-856a-bf54976d8cbc": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Expanding Project Planner Page",
+            "text": "A large center pocket for 12x12 paper, smaller pockets hold scraps. Use with The ScrapRack or a Craft Binder",
+            "image": "shopify:\/\/shop_images\/7_07748842-7019-4048-82bc-e7ea3f2f9734.jpg",
+            "link_text": "View All ScrapRack",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        },
+        "265e6b49-185e-43f5-a880-48633f1bbad9": {
+          "type": "content_block",
+          "settings": {
+            "heading": "12x12 Paper Handler",
+            "text": "200 sheets of cardstock, 275 sheets of paper.",
+            "image": "shopify:\/\/shop_images\/8_f0987acb-590c-4ec0-b3b8-213eadafe86d.jpg",
+            "link_text": "View All Totally-Tiffany",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        },
+        "2c6cefa5-d033-4042-b6d7-3b8b964fe77c": {
+          "type": "content_block",
+          "settings": {
+            "heading": "12x12 Paper Pocket, set of 3",
+            "text": "EACH POCKET:  5 sheets of cardstock, 10 sheets of paper",
+            "image": "shopify:\/\/shop_images\/9_9480cc19-52b9-4e4a-9832-85668b317cae.jpg",
+            "link_text": "View All Totally-Tiffany",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        }
+      },
+      "block_order": [
+        "8bc40f30-9b12-45e5-856a-bf54976d8cbc",
+        "265e6b49-185e-43f5-a880-48633f1bbad9",
+        "2c6cefa5-d033-4042-b6d7-3b8b964fe77c"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "5ded490d-0e82-4578-86a2-b189c0c9ef60": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=e1mQHlzoPgo",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "697f6ef3-33e8-45f0-872c-ffc39bb0a8ed": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Organize your paper in 8 easy steps.",
+        "small_text": "<p>Getting your paper organized can be a real challenge.  My recommendation is to organize all of your paper together by theme, holiday, event, or rainbow.  When I say all of your paper, that includes 12x12, 8.5X11, 8x8, 6x6...even your scraps of paper.<\/p><p>The process is simple and can be done much more quickly than you might think if you follow these easy steps.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "d2660837-7d71-4fc0-ab90-6eda3413ad96": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Step 1 - Choose your organization tools",
+        "small_text": "<p>I always recommend vertical storage for paper.  It's so much easier to \"thumb\" through and find what you need.<br\/>Each of the items above will work for organizing your paper.  Choose the organizer that works best for the way you craft.<\/p><ul><li><strong>Always work from home?<\/strong> Try the Paper Junkie Paper Storage Boxes and\/or a ScrapRack - I use Paper Storage Boxes or Paper Handlers for large categories of paper, but keep smaller categories in my ScrapRack.  (Learn more about this system.)<\/li><li><strong>Carry your paper from a shelf to your workspace?<\/strong> The Paper Handlers will be a good fit for you.<\/li><li><strong>Need to keep a lid on your paper?<\/strong> Try the 12x12 Fab File.<\/li><\/ul>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "779ae3c4-3a73-4574-9971-837852552525": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Step 2 - Make a list of Themes, Sentiments, & Events",
+        "small_text": "<p>This should be a list of all of the things you craft about.  Whether you're a card maker, a scrapbooker, a mixed media artist, or just love to create home décor, you'll find that your supplies fit into a few major categories; - themes, sentiments & events, holidays & seasons, and\/or the rainbow.<\/p><p>Create your themes (outdoors, sports, travel), sentiments (birthday, congratulations, sympathy), and events (family reunion, wedding) list all together as one alphabetical list.  <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "2d3a789b-8522-4e11-bf5f-d81e183a784c": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/11_2f76ccad-40bb-4d47-b6aa-b834a4998ab7.jpg",
+        "main_heading": "Step 3 - Gather your paper.",
+        "main_text": "<p>Your first step is to gather all of your paper together. <\/p><p>Make one large pile of paper. <\/p><p>Just for fun measure your paper pile - set a goal for yourself - \"Today I'm going to sort ____ inches of paper.\" Simple goals will keep you focused and productive.<\/p><p>You should also round up the majority of your scraps in a separate box. We'll organize these later.<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "f94c0155-a742-4a8b-992e-d675e8a96519": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/12_44793e56-ccbd-4ff7-84c3-73e2c70da457.jpg",
+        "main_heading": "Step 4 - Create dividers for sorting",
+        "main_text": "<p>You can easily create your own sorting dividers using 12x12 cardstock and sticky tabs.  I used our Paper Storage Box Dividers and our small Shut Your Flap Tabs.<\/p><p>I created labels for seasons, colors and themes\/sentiments\/events (TSE). For the TSE labels I used just a letter of the alphabet, these will be based on the items on your TSE list - it's unlikely that you'll need a divider for every letter of the alphabet. You may want to create individual dividers for TSE categories where you are confident that you have a lot of paper.  I'm a travel junkie, so I would create a divider just for Travel because I know I have a ton of travel paper.  Once you get sorting, your major categories will reveal themselves.<\/p><p> <\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "843b5fe5-20f1-4335-9fad-f00bfb629634": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Step 5 - Set up your sorting area",
+        "small_text": "<p>This is another reason to use vertical paper storage.  You can set up a small area for sorting (vertical takes up so much less space), and when the sorting is done, the organizing is mostly done too! <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "f7ddecc3-8c2d-4120-8e67-8a60bfc4d8c7": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/13_9192f460-3ab4-4e3e-9806-c0e21c15a7bb.jpg",
+        "main_heading": "Learn from my mistake",
+        "main_text": "<p>I set up 5 Paper Storage boxes on my desk and spread the labeled dividers out between the 5 boxes. <\/p><p>This is not the best idea.  Without the boxes having paper between the dividers, the dividers don’t stand up tall enough. <\/p><p>I would recommend you start with just 2 boxes, once they start to fill up, split the paper and dividers into 3 boxes, then 4 boxes, etc.<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "cef1ffe3-fbce-42f5-b1db-e0a42e2a976a": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/14_c69c92a0-3617-46e3-a40f-9b25643eb5d7.jpg",
+        "main_heading": "Step 6 - Sort your pile",
+        "main_text": "<p>When you're working vertically this is as easy as filing.  As you work through the stack of paper, you'll just drop paper behind the appropriate tab, Baby papers behind \"B\", Christmas papers behind \"Winter,\" colored papers into the rainbow section.<\/p><p> I also recommend that you use some type of sticky note to separate categories, i.e. behind the \"B\" tab you might have Beach, Birthday, and Baby.  I used our small and large Shut Your Flap tabs to subdivide categories between the plastic dividers.  I used the large tabs for major categories, like Halloween, behind the Fall divider.  I used the small SYF tabs to separate “collections” of paper, like Eerie, and Candy Corn, both are Halloween collections.<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "151b712f-9dba-4588-9c87-7613670c0c23": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Step 7 - Relabel your dividers",
+        "small_text": "<p>Some of my dividers - the Rainbow - were permanently labeled.  These don't change.  I used the sticky notes while I was sorting the other categories, but once the sorting is done, you can switch to a more permanent label.  You might want to add more dividers, too.<\/p><p>You can see in the image on the left, I used more dividers, but also continued to use the colored sticky notes for subdividing smaller groups\/collections.  If you're using sticky notes this way, the plastic type are much better than the paper type because they don't \"fold\" over.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "ddde214a-e25c-4f18-a12a-f5ee389c65d0": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Step 8 - Repeat this process with your scraps",
+        "small_text": "<p>We have a tendency to think about scraps differently than we think about other paper.  In reality, you want to see your scrap choices as easily and in the same categories as full sheets of paper.<\/p><p>My suggestion for scraps is to keep them with the main category of paper.  This might mean in a ScrapMaster in your vertical paper storage boxes or in a ScrapRack page in your ScrapRack.<\/p><p>If you're keeping them vertically, stack them up by size and put them into a standard letter sized file folder.  The long ones might stick out the edges.<\/p><p>If you're adding your scraps to your ScrapRack, sort them by size and put them into the appropriate sized storage page.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "ca305a31-2b98-4cf6-8769-24f5aea365cb": {
+      "type": "image-grid",
+      "blocks": {
+        "cdec3864-ad82-45de-a674-ba8a320b790d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/15_e1167294-da6b-4b12-bed7-2042a78a2e6f.jpg"
+          }
+        },
+        "18f42749-20e9-4836-8116-3dc99f92d593": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/16_556bf673-ed90-4674-8c85-0402135d9a41.jpg"
+          }
+        },
+        "e8e1df70-fa14-4ade-8aa4-9ca33f92e197": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20_7471eba8-6d01-4804-9d1b-ae62fa81e99c.png"
+          }
+        },
+        "0fda1d5b-d873-4a38-874c-9712afd9f98a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/21.png"
+          }
+        }
+      },
+      "block_order": [
+        "cdec3864-ad82-45de-a674-ba8a320b790d",
+        "18f42749-20e9-4836-8116-3dc99f92d593",
+        "e8e1df70-fa14-4ade-8aa4-9ca33f92e197",
+        "0fda1d5b-d873-4a38-874c-9712afd9f98a"
+      ],
+      "settings": {
+        "heading": "",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "3854e172-a826-48a7-b1f8-4b7394f26c03": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Working with both a ScrapRack and Paper Handlers\/Paper Storage Boxes.",
+        "small_text": "<p>All of us seem to have \"favorite\" categories for crafting.  We generally collect significantly more paper in these categories. As I mentioned above, Travel is one of my favorites.  I have accumulated WAAAAY too much Travel paper to put it all in my double-base ScrapRack.  When it comes to Travel, these papers fit much better in the Themes section of my paper storage shelf. <\/p><p>For a smaller category, like St. Pat's Day, I might only have a couple of sheets of paper.  It's silly to put these into the paper storage shelf, they will easily fit in a SuperSized Single pocket page in the Spring Section of my ScrapRack.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "3d21fd79-efbe-42e6-b51b-070bb01888be",
+    "978784ea-2990-4715-9fc5-eb3517ba24d4",
+    "1dedd1d8-a60d-42a8-b31b-08cdf44f2a05",
+    "947a1adc-3582-4516-a51e-cff9535c42b5",
+    "385105c2-3b61-48e8-bd5d-3a3652f68345",
+    "5ded490d-0e82-4578-86a2-b189c0c9ef60",
+    "697f6ef3-33e8-45f0-872c-ffc39bb0a8ed",
+    "d2660837-7d71-4fc0-ab90-6eda3413ad96",
+    "779ae3c4-3a73-4574-9971-837852552525",
+    "2d3a789b-8522-4e11-bf5f-d81e183a784c",
+    "f94c0155-a742-4a8b-992e-d675e8a96519",
+    "843b5fe5-20f1-4335-9fad-f00bfb629634",
+    "f7ddecc3-8c2d-4120-8e67-8a60bfc4d8c7",
+    "cef1ffe3-fbce-42f5-b1db-e0a42e2a976a",
+    "151b712f-9dba-4588-9c87-7613670c0c23",
+    "ddde214a-e25c-4f18-a12a-f5ee389c65d0",
+    "ca305a31-2b98-4cf6-8769-24f5aea365cb",
+    "3854e172-a826-48a7-b1f8-4b7394f26c03"
+  ]
+}

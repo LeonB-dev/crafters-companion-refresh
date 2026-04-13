@@ -1,0 +1,44 @@
+{{- 'snippet-pagination.css' | asset_url | stylesheet_tag -}}
+<nav class="snippet-pagination" aria-label="{{ 'pagination.aria_label' | t }}" role="navigation">
+  {%- if paginate.previous -%}
+    <a class="c-btn" href="{{ paginate.previous.url | remove: '?page=1"' }}" title="{{- 'pagination.previous_page' | t -}}">
+      {%- render 'icon', _name: 'icon-arrow-left' -%}
+      <span>{{- 'pagination.previous_page' | t -}}</span>
+    </a>
+  {%- else -%}
+    <span class="c-btn">
+      {%- render 'icon', _name: 'icon-arrow-left' -%}
+      <span>{{- 'pagination.previous_page' | t -}}</span>
+    </span>
+  {%- endif -%}
+
+  <ol class="links">
+    {%- for part in paginate.parts -%}
+      {%- if part.is_link -%}
+        <li>
+          <a href="{{ part.url | remove: '?page=1"' }}" title="{{- 'pagination.page_with_number' | t: number: part.title -}}">
+            {{- part.title -}}
+          </a>
+        </li>
+      {%- else -%}
+        <li>
+          <span aria-current="page">
+            {{- part.title -}}
+          </span>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ol>
+
+  {%- if paginate.next -%}
+    <a class="c-btn" href="{{ paginate.next.url }}" title="{{- 'pagination.next_page' | t -}}">
+      <span>{{- 'pagination.next_page' | t -}}</span>
+      {%- render 'icon', _name: 'icon-arrow-right' -%}
+    </a>
+  {%- else -%}
+    <span class="c-btn">
+      <span>{{- 'pagination.next_page' | t -}}</span>
+      {%- render 'icon', _name: 'icon-arrow-right' -%}
+    </span>
+  {%- endif -%}
+</nav>

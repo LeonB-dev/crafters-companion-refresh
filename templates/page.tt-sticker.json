@@ -1,0 +1,245 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "76e0d221-68cf-445e-a8de-b3dca8938491": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Sticker Storage & Organizers",
+        "text": "<p>Keeping your stickers organized, visible and accessible can be a huge challenge.  At Totally-Tiffany we recommend that you organize your stickers into the 4 Section System and then store them in a ScrapRack, Spinder Binder or Craft Binder.  Any of these products will help you keep your stickers organized, visible, portable and protected.<\/p><p><strong>Step 1<\/strong> - Choose your storage pages. ScrapRack pages are available in several pocket configurations - we've listed the most popular sticker pages below.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "077bfe38-a63b-461f-b717-6f85aad7f6a5": {
+      "type": "content-block-trio",
+      "blocks": {
+        "7e19014a-ab54-48aa-8f50-7f141b1772bf": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Super Sized Single Pocket Page",
+            "text": "12x12 sticker sheets - holds up to 10 sticker sheets",
+            "image": "shopify:\/\/shop_images\/1_4e90bf23-a4f0-4460-aeac-16657bd2c914.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "dab4ed52-db94-4f1f-8664-ecac0a567538": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Vertical Double, 2 pocket page",
+            "text": "12x6 Sticker sheets - 10 per\npocket, 20 sheets total",
+            "image": "shopify:\/\/shop_images\/2_3dd802a8-ed0b-4bd3-b8c9-088c32618822.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "dc09306a-9448-40b1-b5e6-3d5be71e39f4": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Fabulous Four Pocket Page",
+            "text": "6x6 Sticker sheets - 5 sheets per\npocket, 20 sheets total",
+            "image": "shopify:\/\/shop_images\/3_b4cee5db-f1a8-4968-abe7-6051e6329f07.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "7e19014a-ab54-48aa-8f50-7f141b1772bf",
+        "dab4ed52-db94-4f1f-8664-ecac0a567538",
+        "dc09306a-9448-40b1-b5e6-3d5be71e39f4"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "63a32b65-43a6-41ae-ad06-0a5e71067a10": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p><strong>Step 2<\/strong> - Choose a tool to manage your storage pages.  Binders are great if you travel with, or move your supplies around regularly. The ScrapRack is the ultimate organizer for keeping everything at your fingertips at home.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "65f8c1c4-380f-47a7-b978-d58a32772178": {
+      "type": "content-block-trio",
+      "blocks": {
+        "c29aa4a6-4e7c-4e81-a689-7f51c72cbbf7": {
+          "type": "content_block",
+          "settings": {
+            "heading": "The Spinder Binder w\/1 Spinder",
+            "text": "20-30 loaded pages.",
+            "image": "shopify:\/\/shop_images\/4_eb34045b-59ca-46b8-9837-b8940a7d5d4f.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "c2e0ae79-6a45-4cfc-80f9-4e439e66038a": {
+          "type": "content_block",
+          "settings": {
+            "heading": "The Craft Binder",
+            "text": "Up to 3 Spinders, 60 loaded pages.",
+            "image": "shopify:\/\/shop_images\/5_b55b6b42-55ec-43aa-abb1-1df84dbe35fb.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "0d21f572-57f3-49c9-874c-b4915de74e88": {
+          "type": "content_block",
+          "settings": {
+            "heading": "The ScrapRack ",
+            "text": "Up to 7 Spinders, 210 pages.",
+            "image": "shopify:\/\/shop_images\/6_523322c2-4efb-4467-a8f5-2e8737f498fe.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "c29aa4a6-4e7c-4e81-a689-7f51c72cbbf7",
+        "c2e0ae79-6a45-4cfc-80f9-4e439e66038a",
+        "0d21f572-57f3-49c9-874c-b4915de74e88"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "7ceef65b-e4e5-4e5a-96a9-d8dd0b4964a2": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p><strong>Step 3<\/strong> - add label tabs and dividers.  This will make it faster and easier to find the perfect sticker for your page or project.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "4d264f5f-0925-4434-91cd-48e47ef6ba17": {
+      "type": "content-block-trio",
+      "blocks": {
+        "060da4c4-8125-4cf4-a197-1484ddb2237d": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Shut your flap label tabs ",
+            "text": "Available in 2 sizes.",
+            "image": "shopify:\/\/shop_images\/7_a4358155-6aa0-4baa-974e-768a8fd2fb08.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "ab3d918b-4470-44e2-b535-8bd827ab49bc": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Dividers",
+            "text": "Set of 5 or 15",
+            "image": "shopify:\/\/shop_images\/8_14c26271-a222-47ca-9d06-68ddf7b0f6f4.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "060da4c4-8125-4cf4-a197-1484ddb2237d",
+        "ab3d918b-4470-44e2-b535-8bd827ab49bc"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "f3d282b4-24fa-4c09-a94f-a9aff8d6df59": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Other options for Sticker Storage",
+        "small_text": "<p>As you may already know we do offer a line of plastic boxes, called Fab Files.  While it is difficult to store stickers in these boxes using the 4 Section System, it is possible to store them together by size.  The best options for sticker storage would be the 4x6, 5x7, and 12x12 Fab Files.  If you're looking for a desk top organizer, try the Desk Maid 15\" Die, Stamp & Supply organizer.  You'll be able to \"file\" most sizes of stickers easily..<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "f6754bf0-9293-43c9-9a33-0e8d56cbb21d": {
+      "type": "content-block-trio",
+      "blocks": {
+        "d0520761-4a33-498b-a27e-704d064bb08e": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "Desk Maid - Die, Stamp & Supply Organizer for sticker storage.",
+            "image": "shopify:\/\/shop_images\/9_1a94574e-b77d-4bce-857b-1b97cac9175f.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "ada566e3-6e68-4033-bb64-490bdb72ace7": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "4x6 Fab File with 6 file folders",
+            "image": "shopify:\/\/shop_images\/10_138e1a8f-c029-434e-99a9-ee377da1991a.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "fe05d3d0-72a1-44fd-be72-31d02ca21a7f": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "5x7 Fab File with 6 file folders",
+            "image": "shopify:\/\/shop_images\/11_dcfc6de0-6aec-4bdc-a371-2e7e3359b1a9.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "d0520761-4a33-498b-a27e-704d064bb08e",
+        "ada566e3-6e68-4033-bb64-490bdb72ace7",
+        "fe05d3d0-72a1-44fd-be72-31d02ca21a7f"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "3514a98b-9ed1-4b78-a404-fddf5a34ad7a": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=Yrn3OMJiIVI&embeds_referring_euri=https%3A%2F%2Ftotally-tiffany.com%2F&source_ve_path=OTY3MTQ&feature=emb_imp_woyt",
+        "heading": "",
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "76e0d221-68cf-445e-a8de-b3dca8938491",
+    "077bfe38-a63b-461f-b717-6f85aad7f6a5",
+    "63a32b65-43a6-41ae-ad06-0a5e71067a10",
+    "65f8c1c4-380f-47a7-b978-d58a32772178",
+    "7ceef65b-e4e5-4e5a-96a9-d8dd0b4964a2",
+    "4d264f5f-0925-4434-91cd-48e47ef6ba17",
+    "f3d282b4-24fa-4c09-a94f-a9aff8d6df59",
+    "f6754bf0-9293-43c9-9a33-0e8d56cbb21d",
+    "3514a98b-9ed1-4b78-a404-fddf5a34ad7a"
+  ]
+}

@@ -1,0 +1,166 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "df2bfea6-1315-4d32-aa6e-1a8870e5bfe0": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – The Gift of Giving: Downloads",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "0be7ec01-0834-4534-b6d0-5629082c0a60": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Here you can download and print the templates used for some of the projects from issue 2. You can also select and print more of the patterned papers an solid colours of cardstock included in A Year of Craft – The Gift of Giving. Simply click on the patterned or solid papers to access them.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "07885ca4-b49a-4f43-9bf4-14bfbe397a71": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/PatternedImage-ayoc-gog.png",
+        "main_heading": "Patterned Papers",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-the-gift-of-giving-patterned-papers",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "7049c3dd-25f8-411f-a2c2-4ab0524160d3": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SolidImage-ayoc-gog.png",
+        "main_heading": "Solid Colour Papers",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-the-gift-of-giving-solid-colour-papers",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "6a3a53c6-f704-4ad4-87b4-395a203c6f68": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/AYOC-AS2-TemplateImage.jpg",
+        "main_heading": "Templates - UK",
+        "main_text": "",
+        "main_link_url": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/AYOC%20AS2%20Templates%20UK.pdf",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "3710aec5-060f-441a-a0a4-f8b2acb5cd59": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/AYOC-AS2-TemplateImage.jpg",
+        "main_heading": "Templates - US",
+        "main_text": "",
+        "main_link_url": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/AYOC%20AS2%20Templates%20US.pdf",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "41220603-6bd1-4c1e-aaec-1e0ec23c4009": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to Homepage",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "df2bfea6-1315-4d32-aa6e-1a8870e5bfe0",
+    "0be7ec01-0834-4534-b6d0-5629082c0a60",
+    "07885ca4-b49a-4f43-9bf4-14bfbe397a71",
+    "7049c3dd-25f8-411f-a2c2-4ab0524160d3",
+    "6a3a53c6-f704-4ad4-87b4-395a203c6f68",
+    "3710aec5-060f-441a-a0a4-f8b2acb5cd59",
+    "41220603-6bd1-4c1e-aaec-1e0ec23c4009"
+  ]
+}

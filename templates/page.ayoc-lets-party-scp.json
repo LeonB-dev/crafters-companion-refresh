@@ -1,0 +1,165 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Let’s Party : Solid Colour Papers",
+        "text": "<p>Click on the image of your choice to save and print as desired.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "bc3a3e6f-0b33-4269-b56b-8d035f31869e": {
+      "type": "downloads",
+      "blocks": {
+        "7594e1af-b4e6-4508-bb77-e3b9585173a3": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%281%29.png",
+            "image": "shopify:\/\/shop_images\/aa1.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%281%29.png"
+          }
+        },
+        "06979276-603c-4ccf-8937-4c4ddfd7836f": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%282%29.png",
+            "image": "shopify:\/\/shop_images\/aa2.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%282%29.png"
+          }
+        },
+        "02586605-e1ed-42be-9784-80215a389f93": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%283%29.png",
+            "image": "shopify:\/\/shop_images\/aa3.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%283%29.png"
+          }
+        },
+        "d890f924-0db2-46a5-a2a9-a0408df25860": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%284%29.png",
+            "image": "shopify:\/\/shop_images\/aa4.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%284%29.png"
+          }
+        },
+        "f43ab1b3-3ddc-45f7-9bd6-c1f956edb993": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%285%29.png",
+            "image": "shopify:\/\/shop_images\/aa5.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%285%29.png"
+          }
+        },
+        "306b7828-9f7a-406b-98b2-136054d439e2": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%286%29.png",
+            "image": "shopify:\/\/shop_images\/aa6.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%286%29.png"
+          }
+        },
+        "323b9f62-4528-443f-a7a9-022fc86d76c4": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%287%29.png",
+            "image": "shopify:\/\/shop_images\/aa7.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%287%29.png"
+          }
+        },
+        "f286a526-64c5-4595-bbd5-37183fb8664e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%288%29.png",
+            "image": "shopify:\/\/shop_images\/aa8.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%288%29.png"
+          }
+        },
+        "b154190a-12ef-4d9d-9f37-afa442421dc2": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%289%29.png",
+            "image": "shopify:\/\/shop_images\/aa9.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Coloured%20Cardstock\/ayoc_lp_cc%20%289%29.png"
+          }
+        }
+      },
+      "block_order": [
+        "7594e1af-b4e6-4508-bb77-e3b9585173a3",
+        "06979276-603c-4ccf-8937-4c4ddfd7836f",
+        "02586605-e1ed-42be-9784-80215a389f93",
+        "d890f924-0db2-46a5-a2a9-a0408df25860",
+        "f43ab1b3-3ddc-45f7-9bd6-c1f956edb993",
+        "306b7828-9f7a-406b-98b2-136054d439e2",
+        "323b9f62-4528-443f-a7a9-022fc86d76c4",
+        "f286a526-64c5-4595-bbd5-37183fb8664e",
+        "b154190a-12ef-4d9d-9f37-afa442421dc2"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "lg"
+      }
+    },
+    "5b6757f1-6f63-4e45-af57-2b3ed3c65f30": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to Downloads.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft-let-s-party-downloads",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "fdfd4929-d1cc-428f-a0fb-2fb28a0d550c": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to A Year Of Craft.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    }
+  },
+  "order": [
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef",
+    "bc3a3e6f-0b33-4269-b56b-8d035f31869e",
+    "5b6757f1-6f63-4e45-af57-2b3ed3c65f30",
+    "fdfd4929-d1cc-428f-a0fb-2fb28a0d550c"
+  ]
+}

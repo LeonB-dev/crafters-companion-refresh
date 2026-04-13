@@ -1,0 +1,25 @@
+{% assign start_time_seconds = _article.metafields.custom.start_time | date: '%s' | plus: 0 %}
+{%- assign day_as_int = start_time_seconds | date: '%u' | minus: 1 -%}
+
+<li class="broadcast {% if _current_day == day_as_int %}is-active{% endif %}" data-start-date="{{ day_as_int }}">
+  {%- if _article.image != blank -%}
+    <img
+      src="{{- _article.image | image_url: width: 300 -}}"
+      height="270"
+      width="358"
+      alt="{{- _article.image.alt -}}"
+      loading="lazy"
+    >
+  {%- else -%}
+    {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+  {%- endif -%}
+  <div class="details">
+    <a class="u-heading-xs show-heading stretched-link" href="{{ _article.url }}" >{{ _article.title | split: '-' | first }}</a>
+    {%- if _article.excerpt != blank -%}
+      <p class="excerpt">{{ _article.excerpt }}</p>
+    {%- endif -%}
+    <span class="showtime">
+      {{ _article.metafields.custom.start_time | date: '%l:%M %p' }} - {{ _article.metafields.custom.end_time | date: '%l:%M %p' }}
+    </span>
+  </div>
+</li>

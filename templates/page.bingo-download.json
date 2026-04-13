@@ -1,0 +1,70 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "256030f7-8541-4244-b2b3-f0f60347f202": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Bingo Cards",
+        "small_text": "<p>Download your Bingo Cards here. <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "downloads_DdFDQj": {
+      "type": "downloads",
+      "blocks": {
+        "download_block_LAHhHG": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0761\/7619\/5858\/files\/Bingo_Card_Halloween_Version-1.jpg?v=1724232930",
+            "image": "shopify:\/\/shop_images\/Bingo_Card_Halloween_Version-1_c7266c8d-d23d-4c77-b340-9836377d4629.jpg",
+            "file_name": "Download Bingo Card 1",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "download_block_ghRUiT": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0761\/7619\/5858\/files\/Bingo_Card_Halloween_Version-2.jpg?v=1724232930",
+            "image": "shopify:\/\/shop_images\/Bingo_Card_Halloween_Version-2_19f88753-1062-4c89-be48-1b90100b7740.jpg",
+            "file_name": "Download Bingo Card 2",
+            "text": "",
+            "download_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "download_block_LAHhHG",
+        "download_block_ghRUiT"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "sm"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "256030f7-8541-4244-b2b3-f0f60347f202",
+    "downloads_DdFDQj"
+  ]
+}

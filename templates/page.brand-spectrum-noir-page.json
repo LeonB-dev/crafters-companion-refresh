@@ -1,0 +1,325 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "header": {
+      "type": "brand-landing-header",
+      "settings": {
+        "edge_version": "none",
+        "margin_bottom": "md"
+      }
+    },
+    "42233aa3-11a8-447d-a330-730d88671d29": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "\"We make premium art materials that are designed and developed to perform.\"",
+        "small_text": "",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1": {
+      "type": "image-feature",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/IMG_9024.jpg",
+        "heading": "Your Creative Journey Starts Here...",
+        "text": "<p>Our premium art and design range includes art markers, sketch pens, coloured pencils, accessories and more. We also offer professional quality art kits in various themes to help unlock your creative potential.<\/p>",
+        "link_text": "Shop now",
+        "link_url": "shopify:\/\/collections\/spectrum-noir",
+        "disable_height": false,
+        "content_placement": "left",
+        "margin_bottom": "lg"
+      }
+    },
+    "735fd655-afd2-4a0f-9589-fc87d882c588": {
+      "type": "image-text-slider",
+      "blocks": {
+        "2e758eb7-a839-4495-80fa-b15e21af92a8": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Fan-Art Like a Pro Art Kits - DC",
+            "text": "<p>Featuring officially licensed artwork straight from the DC archive, ready to combine with carefully handpicked colours. Everything you need to recreate fan-favourite characters and scenes, just like the pros!<\/p>",
+            "link_text": "Shop Now",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/pages\/dc",
+            "image": "shopify:\/\/shop_images\/Batman_7b54a4ba-a4d7-4522-aab2-479207f909f7.webp"
+          }
+        },
+        "c87d590a-16af-400d-b741-ff3f923893e3": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Fan-Art Like a Pro Art Kits –Wizarding World",
+            "text": "<p>Featuring officially licensed artwork straight from the Wizarding World archive, ready to combine with carefully hand-picked colours. Everything you need to recreate fan-favourite characters and scenes, just<br\/>like the pros!<\/p>",
+            "link_text": "Shop Now",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/pages\/wizarding-world",
+            "image": "shopify:\/\/shop_images\/Dobby_-_Wizarding_World_24fa8d8c-5323-411b-b40b-ed5f193a3611.webp"
+          }
+        },
+        "2435fcfb-7f07-4760-89df-d75cefb188d2": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Colour Like a Pro Art Kits",
+            "text": "<p>Featuring specially commissioned<br\/>original artwork, ready to combine<br\/>with a selection of carefully handpicked colours. Everything you need to faithfully recreate all your favourite characters and scenes, just like the pros!<\/p><p><\/p><p><\/p>",
+            "link_text": "Shop Now",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/spectrum-noir?filter.p.m.custom.spectrum_noir=Colour+Like+a+Pro+Art+Kits",
+            "image": "shopify:\/\/shop_images\/IMG_12531.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "2e758eb7-a839-4495-80fa-b15e21af92a8",
+        "c87d590a-16af-400d-b741-ff3f923893e3",
+        "2435fcfb-7f07-4760-89df-d75cefb188d2"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "main",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "203f6aae-f593-4a56-85e3-40775f9b0cce": {
+      "type": "image-text-slider",
+      "blocks": {
+        "32389e99-7e97-4f35-9965-7c7ced8ace0a": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Classique Art Markers",
+            "text": "<p>Your everyday go to for colouring and sketching through to professional design. Classique's dual broad chisel and fine bullet nibs are perfect for bold, purposeful strokes and fine detail in vibrant streak free colour you can overlay and blend.<\/p>",
+            "link_text": "Shop now",
+            "link_url": "\/collections\/spectrum-noir?filter.p.m.custom.spectrum_noir=Classique+Dual-Tip+Markers",
+            "image": "shopify:\/\/shop_images\/IMG_4898.jpg"
+          }
+        },
+        "cb029cf1-90e3-4e49-bf57-33957aa1f970": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Illustrator Art Markers",
+            "text": "<p>Combining an accurate super fine nib with a flexible yet accurate premium brush, Illustrators are great for controlled lines and expressive curved strokes. With flawless streak fee coverage and seamless blended effects.<\/p>",
+            "link_text": "Shop now",
+            "link_url": "\/collections\/spectrum-noir?filter.p.m.custom.spectrum_noir=Illustrator+Dual-Tip+Markers",
+            "image": "shopify:\/\/shop_images\/IMG_4597.jpg"
+          }
+        },
+        "be9e79df-d8d9-4e9e-8fdb-dc81d6deb95a": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "TriBlend 3-in-1 Markers",
+            "text": "<p>Featuring a unique 3-in-1 design that puts effortless, smooth blending at your fingertips. Three  related shades produce stunning depth and dimension - the perfect introduction to the super smooth, blendable performance of art markers!<\/p>",
+            "link_text": "Shop now",
+            "link_url": "\/collections\/spectrum-noir?filter.p.m.custom.spectrum_noir=TriBlend+3-in-1+Markers",
+            "image": "shopify:\/\/shop_images\/IMG_4973-1024x683.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "32389e99-7e97-4f35-9965-7c7ced8ace0a",
+        "cb029cf1-90e3-4e49-bf57-33957aa1f970",
+        "be9e79df-d8d9-4e9e-8fdb-dc81d6deb95a"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "main",
+        "link_colour": "quinary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "md"
+      }
+    },
+    "4ad484b2-207b-4fc7-b776-34114fe4e0b6": {
+      "type": "image-text-slider",
+      "blocks": {
+        "e0b0feac-0b91-40e8-b8bf-6ee7d468359e": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Acrylic Paint Markers",
+            "text": "<p>For rich, opaque coverage on a wide range of surfaces. Ideal for lettering and decorative work or for layering to create striking graphic designs. They will work on paper, card, ceramic, stone, glass, plastic, fabric, wood and more...<\/p>",
+            "link_text": "Shop now",
+            "link_url": "\/collections\/spectrum-noir?filter.p.m.custom.spectrum_noir=Acrylic+Paint+Markers",
+            "image": "shopify:\/\/shop_images\/SN_Pen_1.jpg"
+          }
+        },
+        "51ce79fd-7ae1-4d15-9889-1e5217ee906f": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Aqua Watercolour Markers",
+            "text": "<p>For clean, vivid colour that will blend away effortlessly with water. Combining an ultra-fine nib for detailed sketching with a flexible brush for more expressive, painterly strokes. Perfect for recreating watercolour-like effects!<\/p>",
+            "link_text": "Shop now",
+            "link_url": "\/collections\/spectrum-noir?filter.p.m.custom.spectrum_noir=Aqua+Watercolour+Markers",
+            "image": "shopify:\/\/shop_images\/SN_Pens.jpg"
+          }
+        },
+        "4e0d52ff-c231-454a-887e-af0cb2223977": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Artliner Fine Liners",
+            "text": "<p>Precision points delivering smooth, accurate lines. Featuring premium fast-drying pigment ink that is waterproof and marker proof, so you can confidently sketch and outline without fear of smudges. Great for sketching and linework.<\/p>",
+            "link_text": "Shop now",
+            "link_url": "\/collections\/spectrum-noir?filter.p.m.custom.spectrum_noir=Artliner+Fine+Line+Pens",
+            "image": "shopify:\/\/shop_images\/SN_Pen_2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "e0b0feac-0b91-40e8-b8bf-6ee7d468359e",
+        "51ce79fd-7ae1-4d15-9889-1e5217ee906f",
+        "4e0d52ff-c231-454a-887e-af0cb2223977"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "main",
+        "link_colour": "quinary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "md"
+      }
+    },
+    "7f1b80ab-4512-4161-aac0-311449435749": {
+      "type": "text-header",
+      "settings": {
+        "heading": "\"We want everyone to enjoy the professional results that are only unlocked when using quality supplies.\"",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "link_colour": "primary",
+        "margin_bottom": "lg",
+        "margin_top": "sm"
+      }
+    },
+    "c269af08-934d-48bf-85af-3051de7334e6": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_heading": "Unleash Your Inner Creative!",
+        "main_text": "<p>The Spectrum Noir line-up includes a range of carefully curated premium art kits developed exclusively with talented artists and designers.<\/p><p>Each features specially commissioned original artwork on high-grade art paper, ready to combine with hand-picked art markers, sketch-pens and accessories. <\/p><p>With creative tips included in the box and online - everything you need to get creative and colour like a pro!<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": false,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "af145e73-6fad-4088-b457-7bee8a284b14": {
+      "type": "featured-products",
+      "blocks": {
+        "2fa6601e-5b19-44f8-8661-aa5d113a067e": {
+          "type": "collection",
+          "settings": {
+            "collection": "spectrum-noir"
+          }
+        }
+      },
+      "block_order": [
+        "2fa6601e-5b19-44f8-8661-aa5d113a067e"
+      ],
+      "settings": {
+        "heading": "Best selling Spectrum Noir products",
+        "heading_alignment": false,
+        "link_url": "",
+        "link_text": "",
+        "grid_size": "lg",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "10866631-1751-4ff8-9048-89ee6e00a8fa": {
+      "type": "featured-articles",
+      "blocks": {
+        "6bd1603f-c5ef-4188-b85f-3d291d520f5a": {
+          "type": "article",
+          "settings": {
+            "article": "inspiration\/the-beginners-guide-to-spectrum-noir-markers"
+          }
+        },
+        "ce23bef2-b33f-48c2-98ee-4c56eed749ea": {
+          "type": "article",
+          "settings": {
+            "article": "inspiration\/how-to-use-spectrum-noir-gilding-flakes"
+          }
+        },
+        "13cb3615-3455-41ef-839f-33c271c4919b": {
+          "type": "article",
+          "settings": {
+            "article": "inspiration\/colour-and-blend-a-beautiful-water-lily-with-alcohol-markers"
+          }
+        }
+      },
+      "block_order": [
+        "6bd1603f-c5ef-4188-b85f-3d291d520f5a",
+        "ce23bef2-b33f-48c2-98ee-4c56eed749ea",
+        "13cb3615-3455-41ef-839f-33c271c4919b"
+      ],
+      "settings": {
+        "heading": "Related articles for you",
+        "text": "<p>Looking for ideas or want to learn a new colouring technique? Find our tutorials, step-by-step guides and more!<\/p>",
+        "link_url": "shopify:\/\/blogs\/inspiration",
+        "link_text": "Read more",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "42233aa3-11a8-447d-a330-730d88671d29",
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1",
+    "735fd655-afd2-4a0f-9589-fc87d882c588",
+    "203f6aae-f593-4a56-85e3-40775f9b0cce",
+    "4ad484b2-207b-4fc7-b776-34114fe4e0b6",
+    "7f1b80ab-4512-4161-aac0-311449435749",
+    "c269af08-934d-48bf-85af-3051de7334e6",
+    "af145e73-6fad-4088-b457-7bee8a284b14",
+    "10866631-1751-4ff8-9048-89ee6e00a8fa"
+  ]
+}

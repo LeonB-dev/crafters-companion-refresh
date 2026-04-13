@@ -1,0 +1,317 @@
+{% comment %}
+  If storefront filtering required, set tag filtering to false. If tag filtering required set to true.
+{% endcomment %}
+{% assign tag_filtering_on = false %}
+
+{%- liquid
+  assign template_name = 'section-collection'
+  assign products_per_page = section.settings.products_per_page
+  assign enable_sorting = section.settings.enable_sorting
+  assign enable_filters = section.settings.enable_filters
+  assign enable_count = section.settings.enable_count
+  assign enable_ajax = section.settings.enable_ajax
+  assign margin_bottom = section.settings.margin_bottom
+
+  if tag_filtering_on
+    assign seo_override = blank
+
+    if collection.metafields.filter.seo_overrides
+      if current_tags.size > 0
+        assign current_tag = current_tags | first | downcase | handleize
+        assign seo_override = collection.metafields.filter.seo_overrides.data | where: 'match_tag', current_tag | first
+      endif
+    endif
+
+    if seo_override.h1 != blank
+      assign collection_h1 = seo_override.h1
+    elsif current_tags.size >= 1
+      assign first_tag_value = current_tags[0] | replace: settings.tags_filter_prefix, '' | split: '_' | last
+      assign collection_h1 = collection.title | append: ' ' | append: first_tag_value
+    else
+      assign collection_h1 = collection.title
+    endif
+
+    if seo_override.content != blank
+      assign collection_content = seo_override.content
+    else
+      assign collection_content = collection.description
+    endif
+  else
+    assign seo_override = blank
+    assign active_values = ''
+
+    for filter in collection.filters
+      if filter.active_values.size > 0
+        for active_value in filter.active_values
+          assign active_values = active_values | append: active_value.label | append: ', '
+
+          if forloop.first == true
+            assign tag_key = active_value.param_name | split: '.' | last
+            assign current_tag = tag_key | append: '_' | append: active_value.label | downcase | strip
+          endif
+        endfor
+      endif
+
+      assign lowercase_filter_label = filter.label | downcase | handleize
+      assign lowercase_tags_filter_name = settings.tags_filter_name | downcase | handleize
+      if lowercase_filter_label == lowercase_tags_filter_name
+        assign offers_filter = filter
+      endif
+    endfor
+    assign active_values_array = active_values | split: ', ' | uniq
+
+    if collection.metafields.filter.seo_overrides
+      if active_values_array.size > 0
+        assign seo_override = collection.metafields.filter.seo_overrides.value | where: 'match_tag', current_tag | first
+      endif
+    endif
+
+    if seo_override.h1 != blank
+      assign collection_h1 = seo_override.h1
+      if active_values_array.size > 1
+        assign second_tag_value = active_values_array[1] | replace: settings.tags_filter_prefix, '' | replace: '-', ' ' | replace: '_', ' '
+        assign collection_h1 = collection_h1 | append: ': ' | append: second_tag_value
+      endif
+    elsif active_values_array.size >= 1
+      assign first_tag_value = active_values_array[0] | replace: settings.tags_filter_prefix, '' | replace: '-', ' ' | replace: '_', ' '
+      assign collection_h1 = collection.title | append: ': ' | append: first_tag_value
+    else
+      assign collection_h1 = collection.title
+    endif
+
+    if seo_override.content != blank
+      assign collection_content = seo_override.content
+    elsif active_values_array.size == 0
+      assign collection_content = collection.description
+    endif
+  endif
+
+  if enable_ajax
+    capture collection_title
+      if seo_override.title.size > 0
+        echo seo_override.title
+      elsif current_tags.size > 0
+        assign tag_value = current_tags[0] | split: '_' | last
+        assign title_tags = ' & ' | append: title_tags | append: tag_value
+        assign title_tags = title_tags | remove_first: ' & ' | append: ' ' | append: collection.title
+        echo 'general.meta.tags' | t: tags: title_tags | trim
+      elsif active_values_array.size > 0
+        assign tag_value = active_values_array[0] | replace: '-', ' ' | replace: '_', ' '
+        assign title_tags = ' & ' | append: title_tags | append: tag_value
+        assign title_tags = title_tags | remove_first: ' & ' | append: ' ' | append: collection.title
+        echo 'general.meta.tags' | t: tags: title_tags | trim
+      else
+        echo page_title
+      endif
+
+      echo ' &ndash; ' | append: shop.name
+    endcapture
+  endif
+
+  assign brand_metaobject = collection.metafields.custom.brand.value
+  if brand_metaobject != blank
+    assign brand_name = brand_metaobject.name
+    assign sticker_logo = brand_metaobject.sticker_logo
+    assign sticker_logo_alt = sticker_logo.alt | default: brand_name
+  endif
+-%}
+
+{{- 'section-collection.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-collection-filters.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-product-item.css' | asset_url | stylesheet_tag -}}
+{%- if paginate.pages > 1 -%}
+  {{- 'snippet-pagination.css' | asset_url | stylesheet_tag -}}
+{%- endif -%}
+<script src="{{- 'section-collection.js' | asset_url -}}" defer="defer"></script>
+
+<div
+  class="{{- template_name }} u-space-below-{{- margin_bottom }}"
+  data-section-type="{{- template_name }}"
+  data-section-id="{{ section.id }}"
+  aria-labelledby="collection-title"
+  {%- if collection.description != blank -%}
+    aria-describedby="collection-description"
+  {%- endif -%}
+  {% if enable_ajax %}
+    data-collection-ajax
+  {% endif %}
+>
+  <div class="container">
+    {%- paginate collection.products by 24 -%}
+      {% if section.settings.enable_heading %}
+        <header>
+          {%- render 'section-header', _image: collection.image, _heading: collection_h1, _text: collection_content, _offers_filter: offers_filter, _offset: false, _heading_class: 'u-heading-lg' -%}
+        </header>
+      {% endif %}
+      <div class="wrapper">
+        {%- if collection.products.size > 0 -%}
+          {%- if template contains 'shop-the-show' -%}
+            <div class="shop-the-show-heading">
+              <h3 class="u-heading-xs">{{- 'ctv.shop_the_show' | t -}}</h3>
+            </div>
+          {%- endif -%}
+          <button
+            class="filters-open c-btn main tertiary has-icon fw"
+            type="button"
+            aria-controls="collection-filters"
+            aria-expanded="false"
+            data-collection-filters-open
+          >
+            {%- render 'icon', _name: 'icon-filters' -%}
+            {{ 'template.collection.filters' | t }}
+            {{ paginate.items }}
+            {{ 'template.collection.products' | t }}
+          </button>
+          {%- render 'storefront-filters', results: collection, _total_items: paginate.items, _enable_sorting: section.settings.enable_sorting, _enable_ajax: section.settings.enable_ajax -%}
+          <div class="grid-wrapper" id="results-container">
+            {% if section.settings.enable_infinite_results %}
+              <div class="pagination prev" data-collection-pagination-less>
+                {%- if paginate.previous -%}
+                  {%- assign previous_url = paginate.previous.url | default: '#' -%}
+                  <a
+                    class="c-btn main tertiary center"
+                    href="{{ previous_url | url }}"
+                    data-collection-pagination-less-btn
+                  >
+                    {{- 'Load previous' | escape -}}
+                  </a>
+                {%- endif -%}
+              </div>
+            {% endif %}
+            <div class="grid" data-collection-products>
+              {%- for product in collection.products -%}
+                {% render 'stmt-product-card', product: product, collection: collection, _sticker_logo: sticker_logo, _sticker_logo_alt: sticker_logo_alt -%}
+              {%- endfor -%}
+            </div>
+            {% if section.settings.enable_infinite_results %}
+              <div class="pagination next" data-collection-pagination-more>
+                {%- if paginate.next -%}
+                  {%- assign next_url = paginate.next.url | default: '#' -%}
+                  <a
+                    class="c-btn main tertiary center"
+                    href="{{ next_url | url }}"
+                    data-collection-pagination-more-btn
+                  >
+                    {{- 'Load more' | escape -}}
+                  </a>
+                {%- endif -%}
+              </div>
+            {% else %}
+              <div data-collection-pagination>
+                {%- if paginate.pages > 1 -%}
+                  {%- render 'pagination', paginate: paginate -%}
+                {%- endif -%}
+              </div>
+            {% endif %}
+          </div>
+        {%- else -%}
+          <div data-collection-empty>
+            <p class="u-heading-sm">{{- 'template.collection.empty' | t -}}</p>
+            <p>
+              <a href="{{ routes.root_url }}" data-collection-empty-back>{{- 'template.collection.go_back' | t -}}</a>
+              or
+              <a href="{{ collection.url }}" data-clear-filter-link>
+                {{- 'template.collection.clear_filters' | t -}}
+              </a>
+            </p>
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endpaginate -%}
+  </div>
+</div>
+<script type="text/javascript">
+  window.theme = { ...window.theme };
+  window.theme.enableInfiniteResults = {{ section.settings.enable_infinite_results }};
+  window.theme.paginateValue = {{ products_per_page }};
+</script>
+
+{% schema %}
+{
+  "name": {
+    "de": "Sammlung",
+    "en": "Collection",
+    "es": "Colección",
+    "fr": "Collection",
+    "it": "Collezione",
+    "ja": "コレクション",
+    "pt-BR": "Coleção"
+  },
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_heading",
+      "default": true,
+      "label": "Enable Heading Snippet"
+    },
+    {
+      "type": "header",
+      "content": "Filters & Sorting"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_ajax",
+      "default": true,
+      "label": "Enable AJAX",
+      "info": "Enables real-time filtering, sorting and pagination using AJAX."
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_count",
+      "default": true,
+      "label": "Enable Count"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "default": true,
+      "label": "Enable Sorting"
+    },
+    {
+      "type": "header",
+      "content": "Products"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 12,
+      "max": 48,
+      "step": 12,
+      "label": "Products per Page",
+      "default": 24
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_infinite_results",
+      "default": true,
+      "label": "Enable Infinite Load More",
+      "info": "Loads more results on same page with Load More/Load Less buttons instead of page numbers"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "md"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,97 @@
+{% liquid
+  assign have_cards_meta = false
+
+  if collection
+    assign quick_collection_cards_meta = collection.metafields.custom.quick_collection_cards.value
+    if quick_collection_cards_meta and quick_collection_cards_meta.count > 0
+      assign have_cards_meta = true
+    endif
+  endif
+
+  assign have_blocks = false
+  if section.blocks.size > 0
+    assign have_blocks = true
+  endif
+
+  assign have_cards = false
+  if have_cards_meta or have_blocks
+    assign have_cards = true
+  endif
+%}
+
+{% if have_cards %}
+  {{ 'section-quick-collection-links.css' | asset_url | stylesheet_tag }}
+
+  <div class="container">
+    <div class="quick-collection-links">
+      <quick-links-slider>
+        <ul class="quick-links-slider quick-collection-links__cards">
+          {% if have_cards_meta %}
+
+            {% for card in quick_collection_cards_meta %}
+              <li>
+                {% render 'quick-collection-card', card: card %}
+              </li>
+            {% endfor %}
+
+          {% elsif have_blocks %}
+
+            {% for card in section.blocks %}
+              <li>
+                {% render 'quick-collection-card', card: card.settings %}
+              </li>
+            {% endfor %}
+
+          {% endif %}
+        </ul>
+        {% render 'simple-slider-ui', _items: section.blocks %}
+      </quick-links-slider>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Quick collection links",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Displays the list of quick collection links chosen in the collection metafield 'Quick Collection Cards'. Displays the blocks below when not the metafield is empty or the section is not used on a collection page."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quick collection links"
+    }
+  ]
+}
+{% endschema %}

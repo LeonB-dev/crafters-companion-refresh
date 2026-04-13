@@ -1,0 +1,123 @@
+{% schema %}
+{
+  "name": "Text with Map",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Location"
+    },
+    {
+      "type": "richtext",
+      "id": "text_content",
+      "label": "Text Content",
+      "default": "<p>Come visit us at our store location. We look forward to seeing you!</p>"
+    },
+    {
+      "type": "text",
+      "id": "map_address",
+      "label": "Map Address",
+      "default": "1600 Amphitheatre Parkway, Mountain View, CA"
+    },
+    {
+      "type": "range",
+      "id": "map_height",
+      "label": "Map Height (px)",
+      "default": 400,
+      "min": 200,
+      "max": 800,
+      "step": 20
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Colour",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Colour",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "side_padding",
+      "label": "Side Padding (px)",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text with Map"
+    }
+  ]
+}
+{% endschema %}
+
+<!-- Load Montserrat font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<div class="text-map-section" style="background-color: {{ section.settings.background_color }}; padding-left: {{ section.settings.side_padding }}px; padding-right: {{ section.settings.side_padding }}px;">
+  <div class="text-map-wrapper">
+    <div class="text-map-left" style="color: {{ section.settings.text_color }};">
+      {% if section.settings.heading != blank %}
+        <h2 class="text-map-heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="text-map-content">
+        {{ section.settings.text_content }}
+      </div>
+    </div>
+    <div class="text-map-right">
+      <iframe
+        height="{{ section.settings.map_height }}"
+        style="border:0; width:100%;"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q={{ section.settings.map_address | url_encode }}&output=embed">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<style>
+.text-map-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.text-map-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* 60% text / 40% map */
+  gap: 30px;
+  align-items: start;
+}
+
+.text-map-heading {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.text-map-content {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.text-map-right iframe {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .text-map-wrapper {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+}
+</style>

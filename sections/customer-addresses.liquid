@@ -1,0 +1,82 @@
+{% liquid
+  assign template_name = 'section-customer-addresses'
+  assign title = 'template.customers.account.welcome' | t: name: customer.first_name
+%}
+
+{{- 'section-customer.css' | asset_url | stylesheet_tag -}}
+{{- 'section-customer-addresses.css' | asset_url | stylesheet_tag -}}
+{{- 'shopify_common.js' | shopify_asset_url | script_tag -}}
+<script src="{{- 'section-customer-addresses.js' | asset_url -}}"></script>
+
+<div class="section-customer {{ template_name -}}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    {%- render 'customer-header', _title: 'Addresses' -%}
+    {%- render 'customer-aside', customer: customer, _account_link: true -%}
+    <div class="content">
+      {%- for address in customer.addresses -%}
+        <div class="main-address">
+          {%- if address == customer.default_address -%}
+            <p class="u-text-lg">Default Address</p>
+          {%- endif -%}
+          <address>
+            {{- address | format_address | remove: '<p>' | remove: '</p>' -}}
+          </address>
+          <div class="actions">
+            <button class="c-btn main quinary" type="button" data-address-toggle="{{ address.id }}">Edit Address</button>
+            <button class="c-btn alt" type="button" data-address-delete="{{ address.id }}" data-confirm-message="">Delete Address</button>
+          </div>
+        </div>
+        {%- form 'customer_address', address, class: 'c-form add-spacing', aria-label: 'Edit Address form', data-address-form: address.id -%}
+          <div
+            data-address-form-content
+            {% unless form.errors %}
+              hidden
+            {% endunless %}
+          >
+            <h2 class="u-text-lg form-heading">{{ 'forms.edit_address' | t }}</h2>
+            {{- form.errors | default_errors | replace: 'class="c-alert error" role="alert"' -}}
+            <div class="form-fields" data-address-form-fields>
+              {% render 'customer-address-inputs', _form_id: form.id %}
+            </div>
+            <div class="form-field has-checkbox">
+              <label class="form-label">
+                {{ form.set_as_default_checkbox }}
+                <span>{{ 'forms.default_address' | t }}</span>
+              </label>
+            </div>
+            <div class="form-actions">
+              <button class="c-btn main quaternary" type="submit">{{ 'forms.save' | t }}</button>
+              <button class="c-btn alt" type="button" data-address-toggle="{{- address.id -}}">{{ 'forms.cancel' | t }}</button>
+            </div>
+          </div>
+        {%- endform -%}
+      {%- endfor -%}
+      <hr class="whisper">
+      <button class="c-btn main quinary add-new" type="button" data-address-toggle="new">{{ 'forms.add_new_address' | t }}</button>
+      {%- form 'customer_address', customer.new_address, aria-label: 'New Address form', class: 'c-form add-spacing', data-address-form: 'new' -%}
+        <div
+          data-address-form-content
+          {% unless form.errors %}
+            hidden
+          {% endunless %}
+        >
+          <h2 class="u-text-lg form-heading">New Address</h2>
+          {{- form.errors | default_errors | replace: 'class="c-alert error" role="alert"' -}}
+          <div data-address-form-fields>
+            {% render 'customer-address-inputs', _form_id: 'new' %}
+          </div>
+          <div class="form-field has-checkbox">
+            <label class="form-label">
+              {{ form.set_as_default_checkbox }}
+              <span>Set as your default address?</span>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button class="c-btn main quinary" type="submit">Save</button>
+            <button class="c-btn alt" type="button" data-address-toggle="new">Cancel</button>
+          </div>
+        </div>
+      {%- endform -%}
+    </div>
+  </div>
+</div>

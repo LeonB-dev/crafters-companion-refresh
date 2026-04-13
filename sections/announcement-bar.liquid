@@ -1,0 +1,147 @@
+{% unless section.settings.index_only == true and template.name != 'index' %}
+ 
+  {{- 'section-announcement-bar.css' | asset_url | stylesheet_tag -}}
+
+  {% assign numberOfAnnoucements = 0 %}
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'announcement' -%}
+        {%- if block.settings.text != blank -%}
+          {% assign numberOfAnnoucements = numberOfAnnoucements | plus: 1 %}
+        {%- endif -%}
+    {%- endcase -%}
+  {%- endfor -%}
+
+  {% assign timePerAnnouncement = 5  %}
+  {% assign animationTotalDuration = numberOfAnnoucements | times: timePerAnnouncement %}
+
+  {%  style %}
+
+    .announcement-items__container > .announcement-item {
+      width: 100%;
+      position: absolute  ;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      {% if numberOfAnnoucements > 1 %}
+        animation: rotate-slides {{ animationTotalDuration }}s ease-in-out infinite;
+      {% endif %}
+    }
+
+    {% assign percentageForEachSlide =  100.00 | divided_by: numberOfAnnoucements %}
+    {% assign transitionPercentageForEachSlide = percentageForEachSlide | times: 0.15 %}
+
+@keyframes rotate-slides {
+{%- liquid
+  assign step1End = percentageForEachSlide
+  assign transitionStart = step1End | minus: transitionPercentageForEachSlide
+  assign step2End = percentageForEachSlide | plus: percentageForEachSlide
+  assign transition2Start = step2End | minus: transitionPercentageForEachSlide
+-%}
+0%                      { transform: translateX(100%);}
+{{ transitionStart }}%  { transform: translateX(100%);}
+{{ step1End }}%         { transform: translateX(0%); z-index: 1;}
+{{ transition2Start }}% { transform: translateX(0%);}
+{{ step2End }}%         { transform: translateX(-100%);}
+100%                    { transform: translateX(-100%);}
+}
+
+{% for i in (1..numberOfAnnoucements) %}
+  {% assign offset = forloop.index0 | minus: 1%}
+  {% assign delay = offset | times: 5 %}
+  .announcement-items__container > .announcement-item:nth-child({{ i }}) {
+    animation-delay: {{ delay }}s
+  }
+{% endfor %}
+
+  {% endstyle  %}
+
+  <div class="announcement-bar ge-hide-display-none
+    {{ section.settings.section_margin_top }}
+    {{ section.settings.section_margin_bottom }}
+    " role="region" aria-label="Announcement">
+  <div class="announcement-items__container  slides-{{ numberOfAnnoucements }}">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'announcement' -%}
+          {% assign text_desktop = block.settings.text %}
+          {% assign text_mobile = block.settings.text_mobile %}
+          {% if text_mobile == blank %}
+            {% assign text_mobile = text_desktop %}
+          {%  endif %}
+          <div class="announcement-item" style="background-color: {{ block.settings.announcement_bg }};">
+            {%- if block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
+            {%- endif -%}
+              <span class="announcement-bar__message" style="color: {{ block.settings.announcement_text }};">
+                {{ text_desktop }}
+              </span>
+              <span class="announcement-bar__message_mobile" style="color: {{ block.settings.announcement_text }};">
+                {{ text_mobile }}
+              </span>
+            {%- if block.settings.link != blank -%}
+              </a>
+            {%- endif -%}
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+    </div>
+  </div>
+{% endunless %}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "class": "announcement-bar-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "index_only",
+      "label": "Limit to homepage?",
+      "info": "The announcement bar will only render on the homepage."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_mobile",
+          "label": "Text (mobile)",
+          "info": "Desktop text will be shown when blank"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+                {
+          "type": "color",
+          "id": "announcement_bg",
+          "label": "Background Colour",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "announcement_text",
+          "label": "Text Colour",
+          "default": "#ffffff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement Bar",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

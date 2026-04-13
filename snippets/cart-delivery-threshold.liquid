@@ -1,0 +1,63 @@
+{% liquid
+  assign cart_total = cart.total_price
+  assign loyalty_total = 0
+  assign free_delivery_threshold = settings.free_delivery_threshold
+
+  if customer
+    for tag in customer.tags
+      assign tag_lower = tag | downcase
+      assign tag_split = tag_lower | split: '_' | last
+      if tag_split == 'pearl'
+        assign loyalty_discount = settings.first_order_discount
+      elsif tag_split == 'bronze'
+        assign loyalty_discount = settings.bronze_discount
+        assign free_delivery_threshold = settings.bronze_shipping
+      elsif tag_split == 'silver'
+        assign loyalty_discount = settings.silver_discount
+        assign free_delivery_threshold = settings.silver_shipping
+      elsif tag_split == 'gold'
+        assign loyalty_discount = settings.gold_discount
+        assign free_delivery_threshold = settings.gold_shipping
+      elsif tag_split == 'platiunum'
+        assign loyalty_discount = settings.platinum_discount
+        assign free_delivery_threshold = settings.platinum_shipping
+      endif
+    endfor
+
+    assign aiod_discount = true
+
+    if loyalty_discount != blank
+      assign loyalty_total = cart.total_price | times: loyalty_discount | divided_by: 100
+    endif
+  endif
+
+  assign delivery_threshold_pence = free_delivery_threshold | times: 100
+  assign delivery_threshold_diff = delivery_threshold_pence | minus: cart.total_price
+  assign delivery_threshold = false
+  assign delivery_threshold_diff_money = delivery_threshold_diff | money
+
+  if cart_total >= delivery_threshold_pence
+    assign delivery_threshold = true
+  endif
+
+  assign threshold_percentage = cart_total | divided_by: free_delivery_threshold
+%}
+
+{{ 'snippet-delivery-threshold.css' | asset_url | stylesheet_tag }}
+
+<div class="cart-delivery-threshold">
+  {% render 'stmt-icon-delivery', class: 'cart-delivery-threshold__icon'  %}
+  <div>
+    {% if delivery_threshold %}
+      {{- 'template.cart.free_delivery_html' | t -}}
+    {% else %}
+      {% capture deliveryThreshold %}
+        {{ delivery_threshold_diff | money }}
+      {% endcapture %}
+      {{- 'template.cart.delivery_qualify_html' | t: deliveryThreshold: deliveryThreshold -}}
+    {% endif %}
+    <span class="free-delivery-bar">
+      <span class="free-delivery-bar-over" style="width: {{ threshold_percentage }}%;"></span>
+    </span>
+  </div>
+</div>

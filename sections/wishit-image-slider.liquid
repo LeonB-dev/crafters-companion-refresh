@@ -1,0 +1,275 @@
+<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+<div class="wishit-image-slider section-{{ section.id }}-padding" style="background-color:{{ section.settings.background-color }};">
+  {% if section.settings['main-heading'] != blank %}
+      <h2 style="margin: 20px;text-align: center; color:{{ section.settings.main-heading-color }}; font-size:{{ section.settings.heading-size }}px;">
+        {{ section.settings['main-heading'] }}
+      </h2>
+    {% endif %}
+  <div class="swiffy-slider slider-item-ratio slider-item-ratio-{{ section.settings.slide-ratio }} slider-item-show{{ section.settings.show-slide }} slider-item-show{{ section.settings.show-slide-mobile }}-sm {% if section.settings.autoplay == true %}slider-nav-autoplay slider-nav-autopause {% endif %}" slider-item-nosnap slider-nav-scrollbar slider-item-ratio slider-item-ratio-1x1 slider-nav-animation slider-nav-animation-fadein">
+    
+    
+      <ul class="slider-container">
+        {% assign image_width = 3000 | divided_by: section.settings.show-slide %}
+        {% for block in section.blocks %}
+          <li><img src="{{ block.settings.image | image_url: width: image_width, crop: 'center'  }}" style="max-width: 100%;height: auto;"></li>
+        {% endfor %}
+      </ul>
+    
+    
+    {% if section.settings.arrow_enable == true %}
+      <button type="button" class="slider-nav"></button>
+      <button type="button" class="slider-nav slider-nav-next"></button>
+    {% endif %}
+
+    {% if section.settings.dots_enable == true %}
+      <div class="slider-indicators">
+            {% for block in section.blocks %}
+              <button id="dots_point"></button>
+            {% endfor %}
+      </div>
+    {% endif %}
+    
+  </div>
+</div>
+
+
+
+
+<style>
+.section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+    background-color: {{ section.settings.background_color }};
+}
+
+@media screen and (min-width: 750px) {
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+}
+#shopify-section-{{ section.id }} .slider-nav.slider-nav-next::after, #shopify-section-{{ section.id }} .slider-nav::after, #shopify-section-{{ section.id }} .slider-indicators>.active {
+    background-color: {{ section.settings.dots_color }};
+    opacity: 1 !important;
+}
+.slider-nav:hover{
+  opacity: 1 !important;
+}  
+ul.slider-container li img {
+    width: 100%;
+    object-fit: cover;
+    height: 100% !important;
+}
+ul.slider-container {
+    font-size: 0;
+}
+.slider-nav {
+    visibility: visible;
+    opacity: 1;
+}  
+
+/* @media only screen and (max-width: 600px) {
+  ul.slider-container li img {
+    height: 350px !important;
+  }
+  ul.slider-container {
+      height: 350px;
+  }
+} 
+ */
+
+@media only screen and (max-width: 62rem) {
+.slider-item-show2-sm {
+    --swiffy-slider-item-count: 2;
+}  
+
+}
+</style>
+{% schema %}
+  {
+    "name": "Wishit Image Slider",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Wishit Customization Support",
+        "info": "For any customizations required in this section, feel free to write to us at contact@adevole.com"
+      },
+      {
+        "type": "color",
+        "id": "background-color",
+        "label": "Section Background Color"
+      },
+      {
+        "type": "header",
+        "content": "Slider Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "arrow_enable",
+        "label": "Enable Arrows",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "dots_enable",
+        "label": "Enable Dots",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Autoplay",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "dots_color",
+        "label": "Dots & Arrows Color"
+      },
+      {
+        "type": "range",
+        "id": "heading-size",
+        "label": "Heading Size",
+        "min": 14,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "default": 32
+      },
+      {
+        "type": "text",
+        "id": "main-heading",
+        "label": "Heading"
+      },
+      {
+        "type": "color",
+        "id": "main-heading-color",
+        "label": "Heading Color"
+      },
+      {
+        "type": "select",
+        "id": "slide-ratio",
+        "label": "Image Aspect Ratio",
+        "options": [
+          {
+            "value": "3x4",
+            "label": "3x4"
+          },
+          {
+            "value": "1x1",
+            "label": "1x1"
+          },
+          {
+            "value": "4x3",
+            "label": "4x3"
+          },
+          {
+            "value": "2x1",
+            "label": "2x1"
+          },
+          {
+            "value": "16x9",
+            "label": "16x9"
+          },
+          {
+            "value": "21x9",
+            "label": "21x9"
+          },
+          {
+            "value": "32x9",
+            "label": "32x9"
+          }
+        ],
+        "default": "1x1"
+      },
+      {
+        "type": "header",
+        "content": "Desktop Slides Settings"
+      },
+      {
+        "type": "select",
+        "id": "show-slide",
+        "label": "Count",
+        "options": [
+          {
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default": "4"
+      },
+      {
+        "type": "header",
+        "content": "Mobile Slides Settings"
+      },
+      {
+        "type": "select",
+        "id": "show-slide-mobile",
+        "label": "Count",
+        "options": [
+          {
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          }
+        ],
+        "default": "2"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 50
+      }
+    ],
+    "blocks": [
+       {
+         "name": "Slide",
+         "type": "slide",
+         "settings": [
+           {
+             "type": "image_picker",
+             "id": "image",
+             "label": "Image"
+           }
+         ]
+       }
+     ],
+    "presets": [
+      {
+        "name": "WishIt Image Slider"
+      }
+    ]
+  }
+{% endschema %}

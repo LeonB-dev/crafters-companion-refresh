@@ -1,0 +1,23 @@
+.section-text-only {
+  position: relative;
+}
+.section-text-only .container {
+  margin: var(--container-alignment);
+  text-align: var(--text-align);
+  display: flex;
+  flex-direction: column;
+  align-items: var(--align-items);
+}
+@media (min-width: 768px) {
+  .section-text-only .container {
+    max-width: var(--content-tablet-width);
+  }
+}
+@media (min-width: 1280px) {
+  .section-text-only .container {
+    max-width: var(--rte-max-width);
+  }
+}
+.section-text-only .container p:last-of-type {
+  margin: 0;
+}

@@ -1,0 +1,223 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "6d20a85e-eb10-4e73-be16-f42e64ded896": {
+      "type": "brand-landing-header",
+      "settings": {
+        "edge_version": "none"
+      }
+    },
+    "0f087cb9-fc44-4b23-8ed0-2f08a38f073b": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "STEP INTO A WORLD OF MAGICAL FAN-ART…",
+        "small_text": "<p>Get creative, express your fandom and achieve incredible artistic results you never<br\/>thought possible... Get ready to fan-art like a pro!<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "33a3ccf7-b705-43e1-9e97-645bbcc364df": {
+      "type": "image-feature",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/WW_Banner_e34aa1a8-76a5-4f65-bc70-c7449a149e87.jpg",
+        "heading": "ALL THE ESSENTIAL KNOW-HOW YOU NEED…",
+        "text": "<p>You’ve got the right tools, now you just need the right know-how! All the basics are covered here along with useful downloadable content. We’ll be making regular updates so be sure to check back soon.  <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "disable_height": false,
+        "content_placement": "left"
+      }
+    },
+    "9ddb0bcd-9c5a-4644-8c0c-d6a02eccf4a8": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "COLOUR REFERENCE SHEETS",
+        "small_text": "<p>These handy download packs include fully coloured-up examples in each character design, showing you where to leave highlights or add shade and which colours our artist used where. Remember these are just meant as a guide - part of the fun of fan-art is expressing yourself, so feel free to explore and try things out!<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "2819ddb4-5a7f-4fc0-9fb0-9a7b38d8148d": {
+      "type": "downloads",
+      "blocks": {
+        "d4f7874e-aa24-4bf7-867f-603bca80200f": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/HP_Harry_Potter.pdf?v=1697802798",
+            "image": "shopify:\/\/shop_images\/Harry_PotterPNG.png",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – HARRY",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "d422f681-79b6-4c2f-b4f8-0de437a0d2ea": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/HP_COMPANIONS_Buckbeak.pdf?v=1697802796",
+            "image": "shopify:\/\/shop_images\/Buckbeak_bda49836-f709-4d3b-ae74-dee62146cd90.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – BUCK BEAK",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "7acb94c4-d89c-423e-ab8a-ce37b09b0293": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/HP_COMPANIONS_Fawkes.pdf?v=1697802801",
+            "image": "shopify:\/\/shop_images\/Fawkes_9f86365b-9f4b-4218-836f-d66bd166d2ec.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – FAWKES",
+            "text": "",
+            "download_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "d4f7874e-aa24-4bf7-867f-603bca80200f",
+        "d422f681-79b6-4c2f-b4f8-0de437a0d2ea",
+        "7acb94c4-d89c-423e-ab8a-ce37b09b0293"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "md"
+      }
+    },
+    "88197f2a-1a84-40af-97b0-b5462f2f0d5d": {
+      "type": "downloads",
+      "blocks": {
+        "89053d6d-7bd1-43ab-ad21-6ee4d4a8767e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/HP_COMPANIONS_Hedwig.pdf?v=1697802796",
+            "image": "shopify:\/\/shop_images\/Hedwig_5102dc7f-0dbe-403f-b5cb-a1ad30087355.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – HEDWIG",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "1c90bf64-d3b5-41af-a228-b6ad0786c40d": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/HP_COMPANIONS_Dobby.pdf?v=1697802801",
+            "image": "shopify:\/\/shop_images\/Dobby_969216d0-c5c0-4525-ac6d-3b3efaf3b95b.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – DOBBY",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "77b88c79-dcbc-48fa-98cf-3918ecbf4b5b": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/HP_CREATURES_Pixie.pdf?v=1697802796",
+            "image": "shopify:\/\/shop_images\/Pixie_96f3a6a1-fa4e-4a99-bf86-d5c79f3bb644.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – PIXIE",
+            "text": "",
+            "download_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "89053d6d-7bd1-43ab-ad21-6ee4d4a8767e",
+        "1c90bf64-d3b5-41af-a228-b6ad0786c40d",
+        "77b88c79-dcbc-48fa-98cf-3918ecbf4b5b"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "md"
+      }
+    },
+    "2c8056c5-7fb3-482e-b73b-c1ef110d8fc6": {
+      "type": "downloads",
+      "blocks": {
+        "4567cbbc-e5c7-4c52-b5b9-c79131175e38": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/HP_CREATURES_Mermaid.pdf?v=1697802800",
+            "image": "shopify:\/\/shop_images\/Mermaid_642ed09f-ffca-4a45-b497-55645a2e2be6.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – MERMAID",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "8effdcbc-9387-4097-b4ba-9da0bc4dfc7e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/HP_CREATURES_Basalisk.pdf?v=1697802796",
+            "image": "shopify:\/\/shop_images\/Basalisk_9ac4ec17-d7b9-432c-b2c6-3246a137f2c9.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – BASILISK",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "ad73476e-64e4-474f-8b7d-d124ac966c43": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/HP_CREATURES_Grindylow.pdf?v=1697802796",
+            "image": "shopify:\/\/shop_images\/Grindylow_e526747c-c7e8-4ad3-b747-35a7bdca941c.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – GRINDYLOW",
+            "text": "",
+            "download_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "4567cbbc-e5c7-4c52-b5b9-c79131175e38",
+        "8effdcbc-9387-4097-b4ba-9da0bc4dfc7e",
+        "ad73476e-64e4-474f-8b7d-d124ac966c43"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "lg"
+      }
+    },
+    "6b7cb000-a710-4e1c-8139-40c8f780d721": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/IMG_9366-2-Enhanced-NR.jpg",
+        "main_heading": "Start with the basics…",
+        "main_text": "<p>The short video opposite shows all the techniques from the Quick-Start Guide included with your kit. Master these and you’ll be well on your way to creating fan-art like a pro!<\/p>",
+        "main_link_url": "https:\/\/www.youtube.com\/watch?v=dE85t5Zys8k",
+        "main_link_text": "Watch Now",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "quinary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    }
+  },
+  "order": [
+    "6d20a85e-eb10-4e73-be16-f42e64ded896",
+    "0f087cb9-fc44-4b23-8ed0-2f08a38f073b",
+    "33a3ccf7-b705-43e1-9e97-645bbcc364df",
+    "9ddb0bcd-9c5a-4644-8c0c-d6a02eccf4a8",
+    "2819ddb4-5a7f-4fc0-9fb0-9a7b38d8148d",
+    "88197f2a-1a84-40af-97b0-b5462f2f0d5d",
+    "2c8056c5-7fb3-482e-b73b-c1ef110d8fc6",
+    "6b7cb000-a710-4e1c-8139-40c8f780d721"
+  ]
+}

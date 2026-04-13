@@ -1,0 +1,53 @@
+{%- liquid
+  assign snippet_name = 'snippet-ctv-navigation'
+
+  assign live_show_url = shop.metafields.ctv.live_show.value
+
+  if live_show_url == "false"
+    assign live_show_url = blank
+  endif
+%}
+
+{{- 'snippet-ctv-navigation.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'snippet-ctv-navigation.js' | asset_url -}}"></script>
+<div class="{{ snippet_name }}" data-ctv-nav-container>
+  <div class="container">
+    <nav class="nav">
+      <div class="logo">
+        {%- capture ctv_logo -%}
+          {%- render 'icon', _name: 'icon-crafters-tv-logo' -%}
+        {%- endcapture -%}
+        {%- if template contains 'page-ctv-landing' -%}
+          {{- ctv_logo -}}
+        {%- else -%}
+          <a href="{{- settings.ctv_header_link -}}">
+            {{- ctv_logo -}}
+          </a>
+        {%- endif -%}
+      </div>
+      {% if live_show_url != blank %}
+        <a href="{{ live_show_url }}" title="{{ 'ctv.watch_live' | t }}" class="watch-live">
+          {{ 'ctv.watch_live' | t }}
+        </a>
+      {% endif %}
+      <ul data-ctv-nav>
+        {%- for link in linklists[settings.ctv_navigation].links -%}
+          <li
+            {% if link.url == page.url or link.url == collection.url or link.url == blog.url %}
+              class="current"
+            {% endif %}
+            data-name-{{- link.title | handleize }}
+          >
+            <a href="{{ link.url }}" title="{{ link.title | escape }}">
+              {{- link.title | escape -}}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+      <button type="button" class="c-btn ctv-nav-open" data-ctv-nav-open>
+        Menu
+        {%- render 'icon', _name: 'icon-chevron-down' -%}
+      </button>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,603 @@
+{% liquid
+  assign template_name = 'section-header'
+
+  assign clearance_link_url = section.settings.clearance_link_url
+  assign clearance_link_text = section.settings.clearance_link_text
+
+  assign nav_promo_blocks = section.blocks | where: 'type', 'promo_blocks'
+  assign nav_highlighter_blocks = section.blocks | where: 'type', 'nav_highlighters'
+  assign nav_label_blocks = section.blocks | where: 'type', 'nav_labels'
+%}
+
+{%- if nav_highlighter_blocks.size > 0 -%}
+  <style data-header-styles>
+    {%- liquid
+      for nav_highlighter_block in nav_highlighter_blocks
+        assign title_handelized = nav_highlighter_block.settings.title | handleize
+        echo '#wrapper [data-name-' | append: title_handelized | append: '] > a'
+        echo '{'
+        echo 'color: ' | append: nav_highlighter_block.settings.text_colour | append: ' !important;'
+        echo 'background-color: ' | append: nav_highlighter_block.settings.background_colour | append: ';'
+        echo '}'
+      endfor
+    -%}
+  </style>
+{%- endif -%}
+
+{%- if settings.predictive_search_enabled -%}
+  <link rel="stylesheet" href="{{ 'snippet-predictive-search.css' | asset_url }}">
+{%- endif -%}
+
+{{- 'section-header.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-header.js' | asset_url -}}"></script>
+
+{% if settings.theme_logo %}
+  {%- capture logo_image -%}
+  {{- settings.theme_logo | image_url: width: 112 | image_tag: alt: shop.name, loading: 'eager' -}}
+{%- endcapture -%}
+{% endif %}
+
+{%- capture logo -%}
+  {%- if template == 'index' -%}
+    {{- logo_image -}}
+  {%- else -%}
+    <a href="{{ routes.root_url }}" aria-label="Home">
+      {{- logo_image -}}
+    </a>
+  {%- endif -%}
+{%- endcapture -%}
+
+{% capture action_ctv %}
+  <li>
+    <a href="{{ settings.ctv_header_link.url }}">
+      {% render 'icon', _name: 'icon-crafters-tv' -%}
+      <span>Crafters TV</span>
+    </a>
+  </li>
+{% endcapture %}
+
+{% capture action_inspire %}
+  <li>
+    <a href="{{ settings.loyalty_header_link.url }}">
+      {% render 'icon', _name: 'icon-club-inspire' -%}
+      <span>Club Inspire</span>
+    </a>
+  </li>
+{% endcapture %}
+
+<div class="{{- template_name -}}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="wrapper">
+      <div class="logo">
+        {{- logo -}}
+      </div>
+      {%- if settings.predictive_search_enabled -%}
+        {% render 'predictive-search-bar' %}
+      {% else %}
+        <div class="search">
+          <form action="/search" method="get" role="search" id="search-form" class="c-form" data-search-form>
+            <input type="hidden" name="type" value="product">
+            <div class="search-form-field">
+              <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'template.search.placeholder' | t }}" class="header-search-input" aria-label="{{ 'template.search.placeholder' | t }}" data-search-input>
+              <button class="c-btn submit" type="submit" aria-label="Search" data-search-submit>
+                <span class="sr-only">{{ 'template.search.placeholder' | t }}</span>
+                {%- render 'icon', _name: 'icon-search' -%}
+              </button>
+            </div>
+          </form>
+        </div>
+      {% endif %}
+      <div class="actions">
+        <ol class="customer">
+          {{ action_ctv }}
+          {{ action_inspire }}
+        </ol>
+        <ol class="ecomm">
+          <li>
+            <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if menu != blank %} small-hide{% endif %}">
+              {% render 'icon', _name: 'icon-account' -%}
+              <span class="visually-hidden">
+                {%- liquid
+                  echo 'template.customers.account.my_account' | t
+                -%}
+              </span>
+            </a>
+          </li>
+
+          <li class="wishlist-open">
+            <a href="#swym-wishlist">
+              {% render 'icon', _name: 'icon-wishlist-2' -%}
+              <span>Wishlist</span>
+              <span class="swym-wishlist-header-counter count">0</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{- routes.cart_url -}}" class="basket" data-quick-cart-button-toggle>
+              <div class="icon-wrapper">
+                <span
+                  class="count"
+                  aria-hidden="true"
+                  data-quick-cart-count
+                  {% unless cart.item_count and cart.item_count > 0 %}
+                    hidden
+                  {% endunless %}
+                >
+                  {{- cart.item_count | default: 0 -}}
+                </span>
+                {% render 'icon', _name: 'icon-bag' -%}
+              </div>
+              <span>{{- 'template.cart.title' | t -}}</span>
+            </a>
+          </li>
+          <li class="nav-open">
+            <button class="c-btn" type="button" aria-label="Open Menu" data-nav-open>
+              {%- render 'icon', _name: 'icon-hamburger' -%}
+            </button>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="nav-container" data-nav-container>
+      <div class="nav-actions">
+        <button class="c-btn nav-close" type="button" aria-label="Close" data-nav-close>
+          {%- render 'icon', _name: 'icon-close-2' -%}
+        </button>
+      </div>
+      <nav class="nav" aria-label="navigation">
+        <ul class="tier-1">
+          <li class="tier-1-title">
+            <span class="u-text-sm">Main Menu</span>
+          </li>
+          {%- for link in linklists[section.settings.menu].links -%}
+            {% liquid
+              assign promo_blocks = nav_promo_blocks | map: 'settings' | where: 'title', link.title
+              assign highlighter_blocks = nav_highlighter_blocks | map: 'settings' | where: 'title', link.title
+              assign label_blocks = nav_label_blocks | map: 'settings' | where: 'title', link.title
+              assign promo_section_label = ""
+              if label_blocks.size > 0
+                assign promo_section_label = label_blocks[0].promo_label
+                if promo_section_label == blank
+                  assign promo_section_label = ""
+                endif
+              endif
+            %}
+            <li
+              data-name-{{- link.title | handleize }}
+              {% if link.links != blank %}
+                data-nav-tier-one-item
+              {% endif %}
+              {% if highlighter_blocks.size > 0 %}
+                class="highlighter-nav-item"
+              {% endif %}
+            >
+              <a
+                href="{{ link.url }}"
+                title="{{ link.title | escape }}"
+                {%- if link.links != blank %}
+                  data-nav-item
+                {% endif %}
+              >
+                {{- link.title | escape -}}
+                {% if link.links != blank %}
+                  <span class="nav-icon-desktop">
+                    {%- render 'icon', _name: 'icon-chevron-down' -%}
+                  </span>
+                {% endif %}
+                {% if link.links != blank %}
+                  <span class="nav-icon-mobile">
+                    {%- render 'icon', _name: 'icon-arrow-right-2' -%}
+                  </span>
+                {% endif %}
+              </a>
+              {%- if link.links != blank -%}
+                {% liquid
+                  assign tier_2_grid = ''
+                  if link.links.size > 8
+                    assign tier_2_grid = 'is-grid'
+                  endif
+                %}
+                <div class="dropdown{% if promo_blocks.size > 0 %} has-promos{% endif %}">
+                  <div class="nav-back-bar">
+                    <button class="c-btn nav-back" type="button" data-nav-back>
+                      {%- render 'icon', _name: 'icon-prev' -%}
+                      <span>Back</span>
+                    </button>
+                  </div>
+                  <a href="{{- link.url -}}" class="dropdown-title">Shop {{ link.title }}</a>
+                  <ul class="tier-2 {{ tier_2_grid }}">
+                    {%- for childlink in link.links -%}
+                      {%- liquid
+                        assign childlink_title_downcase = childlink.title | downcase
+                      -%}
+                      <li
+                        {% if childlink_title_downcase contains 'shop all' -%}
+                          class="shop-all"
+                        {% endif %}
+                      >
+                        <a
+                          href="{{ childlink.url }}"
+                          title="{{ childlink.title | escape }}"
+
+                          {% if childlink.links != blank %}
+                            data-nav-item
+                          {% endif %}
+                        >
+                          {{- childlink.title | escape -}}
+
+                          {% if childlink_title_downcase contains 'shop all' -%}
+                            {%- render 'icon', _name: 'icon-arrow-right-2' -%}
+                          {% endif %}
+                        </a>
+                        {%- if childlink.links != blank -%}
+                          <div class="inner-dropdown">
+                            <button class="c-btn nav-back inner" type="button" data-nav-inner-back>
+                              {%- render 'icon', _name: 'icon-arrow-left' -%}
+                              <span class="u-text-sm">Back to {{ childlink.title }}</span>
+                            </button>
+                            <span class="dropdown-title inner text-xl">Shop {{ childlink.title }}</span>
+                            <ul class="tier-3">
+                              {%- for grandchildlink in childlink.links -%}
+                                <li>
+                                  <a href="{{ grandchildlink.url }}" title="{{ grandchildlink.title | escape }}">
+                                    {{- grandchildlink.title | escape -}}
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          </div>
+                        {%- endif -%}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                  {%- if promo_blocks.size > 0 -%}
+                    {%- liquid
+                      assign valid_promo_count = 0
+                      for promo_block in promo_blocks limit: 3
+                        assign pb_url = promo_block.page_url
+                        assign pb_heading = promo_block.heading
+                        assign pb_url_split = pb_url | split: '/' | last
+                        if pb_url contains 'collection'
+                          assign pb_col = collections[pb_url_split]
+                          unless pb_heading != blank
+                            assign pb_heading = pb_col.title
+                          endunless
+                        elsif pb_url contains 'blogs'
+                          assign pb_art = articles[pb_url_split]
+                          unless pb_heading != blank
+                            assign pb_heading = pb_art.title
+                          endunless
+                        elsif pb_url contains 'pages'
+                          assign pb_pg = pages[pb_url_split]
+                          unless pb_heading != blank
+                            assign pb_heading = pb_pg.title
+                          endunless
+                        endif
+                        if pb_url != blank and pb_heading != blank
+                          assign valid_promo_count = valid_promo_count | plus: 1
+                        endif
+                      endfor
+                    -%}
+                    <div class="promotions">
+                      <span class="dropdown-title u-text-xl promo">{{ promo_section_label }}</span>
+                      <div class="promotions-grid promotions-grid--count-{{ valid_promo_count }}">
+                        {%- for promo_block in promo_blocks limit: 3 -%}
+                          {% liquid
+                            assign page_url = promo_block.page_url
+                            assign image = promo_block.image
+                            assign heading = promo_block.heading
+                            assign page_url_split = page_url | split: '/' | last
+                            if page_url contains 'collection'
+                              assign collection = collections[page_url_split]
+                              assign block_image = collection.image
+                              assign block_heading = collection.title
+                            elsif page_url contains 'blogs'
+                              assign article = articles[page_url_split]
+                              assign block_image = article.image
+                              assign block_heading = article.title
+                            elsif page_url contains 'pages'
+                              assign page = pages[page_url_split]
+                              assign block_image = page.metafields.custom.featured_image
+                              assign block_heading = page.title
+                            endif
+                            if image != blank
+                              assign block_image = image
+                            endif
+                            if heading != blank
+                              assign block_heading = heading
+                            endif
+                          %}
+                          {%- if page_url != blank and block_heading != blank -%}
+                            {% render 'collection-item', _url: page_url, _image: block_image, _heading: block_heading, _loading: 'eager', _index: forloop.index, _background_color: promo_block.background_color, _heading_color: promo_block.heading_color, _button_text_color: promo_block.button_text_color, _button_background_color: promo_block.button_background_color, _button_text: promo_block.button_text, _style: promo_block.style, _show_label: promo_block.show_label, _show_overlay_button: promo_block.show_overlay_button, _show_text_button: promo_block.show_text_button, _text_button_text: promo_block.text_button_text, _text_button_font_size: promo_block.text_button_font_size, _text_button_font_weight: promo_block.text_button_font_weight, _text_button_align: promo_block.text_button_align, _text_button_color: promo_block.text_button_color, _text_button_underline: promo_block.text_button_underline, _text_button_font_family: promo_block.text_button_font_family, _lozenge_text: promo_block.lozenge_text, _lozenge_color: promo_block.lozenge_color -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+                      </div>
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+          {%- if clearance_link_url != blank and clearance_link_text != blank -%}
+            <li class="clearance">
+              <a href="{{- section.settings.clearance_link_url -}}">{{- section.settings.clearance_link_text -}}</a>
+            </li>
+          {%- endif -%}
+        </ul>
+        <ul class="crafters">
+          <li class="tier-1-title">
+            <span class=" text-sm">Your Crafters</span>
+          </li>
+          {{ action_ctv }}
+          {{ action_inspire }}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<div class="overlay-nav" data-nav-mobile-overlay></div>
+{% schema %}
+{
+  "name": "Header",
+  "class": "site-header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "url",
+      "id": "clearance_link_url",
+      "label": "Clearance URL"
+    },
+    {
+      "type": "text",
+      "id": "clearance_link_text",
+      "label": "Clearance URL Link Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "promo_blocks",
+      "name": "Promotion Block",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Settings"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Position",
+          "info": "The exact name from level 1 of the navigation."
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "select",
+          "id": "style",
+          "label": "Style",
+          "options": [
+            { "value": "", "label": "Default" },
+            { "value": "alt", "label": "Alt" }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "info": "This will override the default title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "This will override the default image"
+        },
+        {
+          "type": "header",
+          "content": "Alt Style Options"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_label",
+          "label": "Show top-left label",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "lozenge_text",
+          "label": "Lozenge text",
+          "info": "Overrides the heading text shown in the lozenge label. Leave blank to use the heading."
+        },
+        {
+          "type": "color",
+          "id": "lozenge_color",
+          "label": "Lozenge background colour",
+          "default": "#603C8E"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_overlay_button",
+          "label": "Show overlay button",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_text_button",
+          "label": "Show text button below image",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "text_button_text",
+          "label": "Text button label",
+          "info": "Text shown below the image (only used when 'Show text button below image' is enabled)"
+        },
+        {
+          "type": "select",
+          "id": "text_button_font_size",
+          "label": "Text button font size",
+          "options": [
+            { "value": "var(--font-size-xxs)", "label": "Extra Extra Small" },
+            { "value": "var(--font-size-xs)", "label": "Extra Small" },
+            { "value": "var(--font-size-s)", "label": "Small" },
+            { "value": "var(--font-size-m)", "label": "Medium" },
+            { "value": "var(--font-size-l)", "label": "Large" }
+          ],
+          "default": "var(--font-size-s)"
+        },
+        {
+          "type": "select",
+          "id": "text_button_font_weight",
+          "label": "Text button font weight",
+          "options": [
+            { "value": "300", "label": "Light" },
+            { "value": "400", "label": "Regular" },
+            { "value": "600", "label": "Semi Bold" },
+            { "value": "700", "label": "Bold" }
+          ],
+          "default": "400"
+        },
+        {
+          "type": "select",
+          "id": "text_button_align",
+          "label": "Text button alignment",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Centre" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "color",
+          "id": "text_button_color",
+          "label": "Text button colour",
+          "default": "#1F1300"
+        },
+        {
+          "type": "checkbox",
+          "id": "text_button_underline",
+          "label": "Show underline",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "text_button_font_family",
+          "label": "Text button font",
+          "options": [
+            { "value": "inherit", "label": "Site default (JosefinSans)" },
+            { "value": "var(--font-family-base)", "label": "Base font (JosefinSans)" },
+            { "value": "var(--font-family-heading)", "label": "Heading font (JosefinSans)" },
+            { "value": "'Inter', sans-serif", "label": "Inter" },
+            { "value": "Georgia, serif", "label": "Georgia (serif)" },
+            { "value": "Arial, sans-serif", "label": "Arial (sans-serif)" }
+          ],
+          "default": "inherit"
+        },
+        {
+          "type": "header",
+          "content": "Overlay Button"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "info": "Enter text to show a button",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "page_url",
+          "label": "URL"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#dddddd"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button Text Color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "button_background_color",
+          "label": "Button Background Color",
+          "default": "#eeeeee"
+        }
+      ]
+    },
+    {
+      "type": "nav_labels",
+      "name": "Promo Section Label",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Settings"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Position",
+          "info": "The exact name from level 1 of the navigation."
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "promo_label",
+          "label": "Promo section heading",
+          "info": "The heading shown above the promotion blocks for this nav item. Defaults to \"Sara's picks\" if left blank.",
+          "default": "Add Label"
+        }
+      ]
+    },
+    {
+      "type": "nav_highlighters",
+      "name": "Nav Highlighter Block",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Settings"
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Position",
+          "info": "You must specify the exact text from level 1 of the navigation."
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "id": "background_colour",
+          "type": "color",
+          "label": "Background Colour"
+        },
+        {
+          "id": "text_colour",
+          "type": "color",
+          "label": "Text Colour"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

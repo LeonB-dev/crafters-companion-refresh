@@ -1,0 +1,31 @@
+<picture>
+  <source media="(min-width:1100px)" srcset="{{- _image | image_url: width: 1500 -}}">
+  <source media="(min-width:800px)" srcset="{{- _image | image_url: width: 1024 -}}">
+  <source media="(min-width:551px)" srcset="{{- _image | image_url: width: 800 -}}">
+  <source media="(max-width: 550.8px)" srcset="{{- _image | image_url: width: 600 -}}">
+  <img src="{{- _image | image_url: height: 600 -}}" alt="{{- _image.alt | default: _heading -}}" height="600" width="390">
+</picture>
+<div class="content" data-cha-content>
+  <h1 class="u-heading-lg">{{- _heading -}}</h1>
+  {{- _description -}}
+  <button class="c-btn alt quaternary" data-cha-read-more>Read more</button>
+  {{ _header_items }}
+</div>
+
+<script>
+  window.onload = (event) => {
+    let readMoreButton = document.querySelector('[data-cha-read-more]');
+    let readMoreContent = document.querySelector('[data-cha-content]');
+
+    if(readMoreButton){
+      readMoreButton.addEventListener('click', function(){
+        readMoreContent.classList.toggle('text-is-visible');
+        if(readMoreContent.classList.contains('text-is-visible')){
+          readMoreButton.innerHTML = 'Read less'
+        } else {
+          readMoreButton.innerHTML = 'Read more'
+        }
+      });
+    }
+  };
+</script>

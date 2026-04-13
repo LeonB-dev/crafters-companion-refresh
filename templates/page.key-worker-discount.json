@@ -1,0 +1,63 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "75f5dfbc-0748-44d1-8e10-ad2b44c78a82": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Crafter’s Companion Key Worker & NHS Discount",
+        "text": "<p>Enjoy exclusive discounts using these Crafter’s Companion NHS & Key Worker Discount codes listed below!<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "link_colour": "primary",
+        "margin_bottom": "sm",
+        "margin_top": "none"
+      }
+    },
+    "c6f62775-29f9-4816-b06b-8762a568a132": {
+      "type": "form-embed",
+      "settings": {
+        "heading": "",
+        "text": "",
+        "form_embed": "<script src=\"https:\/\/assets.gocertify.me\/assets\/embed.js\" data-location=\"\/at\/crafters-companion\/essential-worker\"><\/script>",
+        "enable_h1": false,
+        "margin_top": "sm"
+      }
+    },
+    "70b5c509-4468-4ae0-b65f-6d93ff2d6057": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Frequently Asked Questions",
+        "small_text": "<p><strong>How do I redeem my discount code online?<\/strong><\/p><p>Simply add the products that you want to purchase to your basket. Once you are happy, view your basket and enter your code in the discount code field on the right hand side of the page. If your code is valid, you should see your discount come off your subtotal when you click 'apply'. <br\/><\/p><p><strong>What if the code doesn't work?<\/strong><\/p><p>If your discount code does not apply to your order, the code may have been entered incorrectly or the items in your basket may not match the valid criteria. Please check your basket and try again before getting in touch with our customer service team.<\/p><p> <strong>Please note: promotional codes exclude Gemini machines, third party brands, the current months launches and gift vouchers.<\/strong><\/p><p><strong>What if I forget to add a discount code?<\/strong><\/p><p>Promotional codes must be used at the time of ordering, and cannot be used retrospectively. Unfortunately, once an order has been placed, you will not be able to add the discount code. <\/p><p><strong>Can I use my discount code more than once?<\/strong><\/p><p>No. These discount codes can only be used once per customer. <\/p><p><strong>Can I use more than one discount code at a time?<\/strong><\/p><p>Promotional codes cannot be used in conjunction with other offers, unless otherwise stated. They will however work in conjunction with your Club Inspire discount if applicable.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "75f5dfbc-0748-44d1-8e10-ad2b44c78a82",
+    "c6f62775-29f9-4816-b06b-8762a568a132",
+    "70b5c509-4468-4ae0-b65f-6d93ff2d6057"
+  ]
+}

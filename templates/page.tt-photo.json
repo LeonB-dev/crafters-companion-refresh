@@ -1,0 +1,171 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "af8e8751-f7fd-425e-bbfd-336cbccb4152": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Photo Storage",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "ffaa87db-b3a7-49e6-953a-6f955daafe3c": {
+      "type": "image-text-slider",
+      "blocks": {
+        "44f31109-9baf-43d3-a70e-b19219def5d7": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "4x6 Fab File ",
+            "text": "",
+            "link_text": "View All Fab Files",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/Organize-and-label-4x6-photos-4x6-Fab-File-from-Totally-Tiffany.jpg"
+          }
+        },
+        "0a121957-e0e0-4606-9fbc-4c184af13ada": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "ScrapRack Perfect Six Storage Page",
+            "text": "",
+            "link_text": "View All ScrapRack",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/P43-Perfect-Six-Photos-by-layout_2de375d5-f7a1-4c49-a151-c5aa4d851cbd.jpg"
+          }
+        },
+        "d53f14ab-79bf-4b5e-b38d-0091c5bd71a9": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "5x7 Fab File",
+            "text": "",
+            "link_text": "View All Fab Files",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/md29-FF-photo-organization-5x7.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "44f31109-9baf-43d3-a70e-b19219def5d7",
+        "0a121957-e0e0-4606-9fbc-4c184af13ada",
+        "d53f14ab-79bf-4b5e-b38d-0091c5bd71a9"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "7c198457-4e08-4471-a758-823fbd5e2faa": {
+      "type": "image-text-slider",
+      "blocks": {
+        "c784c62f-8ece-4c61-bed0-b5c644332a5b": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "ScrapRack Fantastic Five Page",
+            "text": "",
+            "link_text": "View All ScrapRack",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/P72-30.jpg"
+          }
+        },
+        "7e2edcfa-c63c-432f-80d4-f698fec1aa9b": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Monica Buddy Bag - 4x6",
+            "text": "",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/BSFP-SNG041.jpg"
+          }
+        },
+        "0305991e-1b5f-471f-92e0-9336393ed02e": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "ScrapRack Expanding Project Planner",
+            "text": "",
+            "link_text": "View All ScrapRack",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/P71-Maxs-Senior-Year-002.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "c784c62f-8ece-4c61-bed0-b5c644332a5b",
+        "7e2edcfa-c63c-432f-80d4-f698fec1aa9b",
+        "0305991e-1b5f-471f-92e0-9336393ed02e"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "dbfa53f0-20aa-41b5-bee6-d24b4f2c64cb": {
+      "type": "image-text-slider",
+      "blocks": {
+        "64ee5c08-75ba-4d00-9c93-28619aa1ef19": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Flippin' Storage Binder",
+            "text": "<p>The Flippin' Storage Binder is perfect for organizing photos for scrapbooking and album planning.  Each Flippin' Storage Page as 4x6 pockerts on the front and 5x7 pockets on the back. Store up to 6 photos per pocket.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/3IN-FSB-Flippin-Storage-Binder-Embossing-Folder-Binder_1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "64ee5c08-75ba-4d00-9c93-28619aa1ef19"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "af8e8751-f7fd-425e-bbfd-336cbccb4152",
+    "ffaa87db-b3a7-49e6-953a-6f955daafe3c",
+    "7c198457-4e08-4471-a758-823fbd5e2faa",
+    "dbfa53f0-20aa-41b5-bee6-d24b4f2c64cb"
+  ]
+}

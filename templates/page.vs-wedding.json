@@ -1,0 +1,111 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "featured_image_ND44z3": {
+      "type": "featured-image",
+      "settings": {
+        "url": "",
+        "image": "shopify:\/\/shop_images\/Wedding_1_41eb3f94-7a98-4d3e-b3b7-c4ff83b514c1.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "content_block_trio_qTjUXD": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_FjaACm": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/wedding_2.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "content_block_Fw9eLj": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/wedding4.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "content_block_hJR7qC": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/wedding3.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_FjaACm",
+        "content_block_Fw9eLj",
+        "content_block_hJR7qC"
+      ],
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "text_and_image_MreR7F": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Wedding_1_41eb3f94-7a98-4d3e-b3b7-c4ff83b514c1.jpg",
+        "main_heading": "Lorem ipsum dolor sit",
+        "main_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "sm",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "featured_image_ND44z3",
+    "content_block_trio_qTjUXD",
+    "text_and_image_MreR7F"
+  ]
+}

@@ -1,0 +1,183 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "af8e8751-f7fd-425e-bbfd-336cbccb4152": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Punch Storage",
+        "text": "<p>Get your punches organized and accessible.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "ffaa87db-b3a7-49e6-953a-6f955daafe3c": {
+      "type": "image-text-slider",
+      "blocks": {
+        "44f31109-9baf-43d3-a70e-b19219def5d7": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "1\" Punch Pack",
+            "text": "",
+            "link_text": "View All EZ2Organize ",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/1_6e9d26bf-1175-4a8b-9a7d-0db797804fdb.jpg"
+          }
+        },
+        "0a121957-e0e0-4606-9fbc-4c184af13ada": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "1.5\" Punch Pack ",
+            "text": "",
+            "link_text": "View All EZ2Organize ",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/2_ad8dc3cb-aed9-47bd-9593-fbc4aa3cb99f.jpg"
+          }
+        },
+        "d53f14ab-79bf-4b5e-b38d-0091c5bd71a9": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Barbara Buddy Bag -",
+            "text": "",
+            "link_text": "View All EZ2Organize ",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/3_dc8e8fe3-19c0-4acf-829b-944e8db97df0.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "44f31109-9baf-43d3-a70e-b19219def5d7",
+        "0a121957-e0e0-4606-9fbc-4c184af13ada",
+        "d53f14ab-79bf-4b5e-b38d-0091c5bd71a9"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "7c198457-4e08-4471-a758-823fbd5e2faa": {
+      "type": "image-text-slider",
+      "blocks": {
+        "c784c62f-8ece-4c61-bed0-b5c644332a5b": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "2\" Punch Pack",
+            "text": "",
+            "link_text": "View All EZ2Organize ",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/4_c92b6eea-86ce-47d5-9cdc-729e05bc6409.jpg"
+          }
+        },
+        "7e2edcfa-c63c-432f-80d4-f698fec1aa9b": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Stadium Arranger",
+            "text": "",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/5_bec80ffc-630e-45b2-a658-95d99c966b12.jpg"
+          }
+        },
+        "0305991e-1b5f-471f-92e0-9336393ed02e": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Double-Sided Tabletop Tool Organizer",
+            "text": "",
+            "link_text": "View All EZ2Organize ",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/6_43853c4f-c59d-45d4-acfe-9e20bcc3ca27.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "c784c62f-8ece-4c61-bed0-b5c644332a5b",
+        "7e2edcfa-c63c-432f-80d4-f698fec1aa9b",
+        "0305991e-1b5f-471f-92e0-9336393ed02e"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "dbfa53f0-20aa-41b5-bee6-d24b4f2c64cb": {
+      "type": "image-text-slider",
+      "blocks": {
+        "e381eb3d-2370-4e4e-91b3-f600dff3fbda": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Stamp & Supply Stadium",
+            "text": "",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/7_ebb4da4e-4479-4299-9573-72b5cb4dde45.jpg"
+          }
+        },
+        "5ee4cd9b-087d-4318-ad7e-eb8fa72c64a3": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "4 Level Supply Stadium",
+            "text": "",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/8_7f78c1ec-64af-46bb-b604-31ce731817b9.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "e381eb3d-2370-4e4e-91b3-f600dff3fbda",
+        "5ee4cd9b-087d-4318-ad7e-eb8fa72c64a3"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "af8e8751-f7fd-425e-bbfd-336cbccb4152",
+    "ffaa87db-b3a7-49e6-953a-6f955daafe3c",
+    "7c198457-4e08-4471-a758-823fbd5e2faa",
+    "dbfa53f0-20aa-41b5-bee6-d24b4f2c64cb"
+  ]
+}

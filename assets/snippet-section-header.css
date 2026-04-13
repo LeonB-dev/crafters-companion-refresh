@@ -1,0 +1,96 @@
+.snippet-section-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 1023.98px) {
+  .snippet-section-header {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .snippet-section-header.center {
+    justify-content: center;
+  }
+}
+.snippet-section-header .image {
+  position: relative;
+  border: 1px dashed var(--colour-emperor);
+  border-radius: 100%;
+  padding: 0.5rem;
+}
+.snippet-section-header .image img {
+  height: 5rem;
+  width: 5rem;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.snippet-section-header * {
+  margin: 0;
+}
+.snippet-section-header.has-image {
+  padding-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 1280px) {
+  .snippet-section-header.has-link {
+    padding-right: var(--content-offset);
+  }
+}
+.snippet-section-header.has-link > a {
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .snippet-section-header.has-link > a {
+    margin-left: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .snippet-section-header.has-text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .snippet-section-header.has-text.has-image {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    align-items: start;
+    grid-template-rows: 6rem auto;
+    gap: 0 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .snippet-section-header.has-text .image {
+    grid-column: 1;
+    grid-row: 1/span 3;
+  }
+}
+@media (min-width: 1024px) {
+  .snippet-section-header.has-text.has-image .heading {
+    align-self: center;
+  }
+}
+.snippet-section-header.has-text .description {
+  max-width: 80ch;
+  font-weight: 500;
+  font-size: var(--font-size-base) !important;
+  line-height: var(--line-height-base) !important;
+}
+@media (min-width: 1024px) {
+  .snippet-section-header.has-text > a {
+    margin: 1rem 0 0;
+  }
+}
+.snippet-section-header ul.filter-blocks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}

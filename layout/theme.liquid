@@ -1,0 +1,377 @@
+{% liquid
+  assign collection_canonical = ''
+  if collection
+    for filter in collection.filters
+      if filter.active_values.size > 0
+        unless url_queries_for_content contains '?'
+          assign url_queries_for_content = '?'
+        endunless
+        for active_value in filter.active_values
+          capture apos_escaped_filter_value
+            render 'apostrophe-escape', string: active_value.value
+          endcapture
+          capture amp_escaped_filter_value
+            render 'ampersand-escape', string: apos_escaped_filter_value
+          endcapture
+          assign escaped_active_value = amp_escaped_filter_value | url_encode | replace: '%26%2339%3B', '%27'
+          assign url_queries_for_content = url_queries_for_content | append: active_value.param_name | append: '=' | append: escaped_active_value | append: '&'
+        endfor
+      endif
+    endfor
+  endif
+
+  assign breadcrumb_title = null
+  if collection
+    assign breadcrumb_title = collection.title
+  elsif page
+    assign breadcrumb_title = page.title
+  elsif article
+    assign breadcrumb_title = article.title
+  elsif blog
+    assign breadcrumb_title = blog.title
+  elsif product
+    assign breadcrumb_title = product.title
+  endif
+%}
+<!doctype html>
+<html class="no-js" lang="{{ shop.locale }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
+
+    {% liquid
+      if template.name == 'collection'
+        assign page_url = content_for_header | split: '"pageurl":"' | last | split: '"' | first | split: request.host | last | replace: '\/', '/' | replace: '%20', ' ' | replace: '\u0026', '&'
+
+        if page_url contains '?'
+          assign current_query_array = page_url | split: '?' | last | split: '&'
+        endif
+
+        assign current_query_string = ''
+        for query in current_query_array
+          if query contains 'page=1'
+            continue
+          elsif query contains 'sort_by='
+            continue
+          endif
+
+          assign current_query_string = query | prepend: '?'
+          break
+        endfor
+
+        assign collection_canonical = canonical_url
+        if current_query_string != blank
+          assign collection_canonical = canonical_url | append: current_query_string
+        endif
+      endif
+    %}
+
+    {% if settings.accessibility_code != blank %}
+      {{ settings.accessibility_code }}
+    {% endif %}
+
+    <link
+      rel="canonical"
+      href="{% if collection_canonical != blank %}{{ collection_canonical }}{% else %}{{ canonical_url }}{% endif %}"
+    >
+    {% render 'hreflang-tags', _current_query_string: current_query_string %}
+    <link rel="preload" href="{{- 'theme.css' | asset_url -}}" as="style">
+    <link rel="preload" href="{{- 'theme.js' | asset_url -}}" as="script">
+    {% liquid
+      render 'theme-page-title', collection: collection
+      render 'theme-meta-description', collection: collection
+      render 'favicon'
+      render 'css-settings'
+      render 'animation-script'
+    %}
+    {%- if template.suffix == 'no-index-no-follow' or current_tags.size >= 2 -%}
+      <meta name="robots" content="none">
+    {%- endif -%}
+
+    <script
+      type="text/javascript"
+      id="herd-scripts"
+    >
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      window.routes = {
+        root_url: '{{ routes.root_url }}',
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}',
+        cart_url: '{{ routes.cart_url }}',
+        predictive_search_url: '{{ routes.predictive_search_url }}',
+        search_url: '{{ routes.search_url }}'
+      };
+
+      var theme = {
+        strings: {
+        addToCart: {{ 'products.product.add_to_cart' | t | json }},
+        soldOut: {{ 'products.product.sold_out' | t | json }},
+        unavailable: {{ 'products.product.unavailable' | t | json }}
+      },
+      moneyFormat: {{ shop.money_format | json }},
+      url: {{ shop.url | json }},
+      template: '{{ template }}',
+      search: {
+        predictive_search_enabled: '{{ settings.predictive_search_enabled }}',
+        suggested_content_enabled: '{{ settings.suggested_content_enabled }}'
+      },
+      enableTerritorySwitcher: {{ settings.enable_switcher }},
+      cookiePolicyLink: {{ settings.privacy_policy_link | json }}
+      };
+
+      // Set the breakpoints -  these must match the same rules set in the CSS
+      theme.breakpoints = {
+        xs: 0,
+        sm: 576,
+        md: 767,
+        lg: 1024,
+        xl: 1280,
+        hd: 1600,
+      };
+
+      theme.predictiveSearchSettings = {
+        resourceTypes: "{% if settings.resource_query %}query,{% endif %}{% if settings.resource_product %}product,{% endif %}{% if settings.resource_collection %}collection,{% endif %}{% if settings.resource_article %}article,{% endif %}{% if settings.resource_page %}page{% endif %}",
+        resourceLimitAll: '{{ settings.resource_limit_all }}',
+        resourceLimitEach: '{{ settings.resource_limit }}',
+        showUnavailable: '{{ settings.show_unavailable }}',
+        additionalFieldsToSearch: false,
+      };
+
+      {% if template == 'index' or template == 'cart' %}
+        theme.history = false;
+      {% elsif breadcrumb_title != null %}
+        theme.history = {
+          url: window.location.href,
+          title: '{{ breadcrumb_title | truncate: 25 | escape }}'
+        };
+      {% else %}
+        theme.history = {
+          url: window.location.href,
+          title: null
+        };
+      {% endif %}
+
+      theme.tiers = {
+        pearl: '{{ settings.pearl_title }}',
+        bronze: '{{ settings.bronze_title }}',
+        silver: '{{ settings.silver_title }}',
+        gold: '{{ settings.gold_title }}',
+        platinum: '{{ settings.platinum_title }}',
+      }
+
+      // create sections to be registered
+      theme.sections = new Array();
+
+      // Bind the updated `theme` object back onto the window
+      window.theme = {
+        ...theme,
+        ...window.theme
+      };
+
+      {%- if template.directory == 'customers' -%}
+        theme.allCountryOptionTags = {{ all_country_option_tags | json }};
+      {%- endif -%}
+    </script>
+    {% comment %}
+      script injection happening without the below
+      <script src="//connect.nosto.com/include/shopify-67256156478" async></script>
+    {% endcomment %}
+    <script src="{{- 'theme.js' | asset_url -}}" defer></script>
+    {%- render 'social-meta-tags', product, page, article -%}
+    {%- render 'microdata', product, collection, article, blog, page -%}
+
+    {% if settings.enable_hotjar == true %}
+      {{ settings.hotjar_script }}
+    {% endif %}
+
+    {%- if template contains 'gift_card' -%}
+      {{ 'vendor/qrcode.js' | shopify_asset_url | script_tag }}
+    {%- endif -%}
+
+    {%- render 'tracking-scripts' -%}
+
+    {%- capture header_content -%}
+      {{ content_for_header }}{% endcapture %}
+    {{- header_content | replace: '?page=1">', '">' -}}
+    <script>
+      var ignore_csapp_cart_reload = true;
+    </script>
+    {%- if content_for_header contains 'aiodstag' -%}
+      {%- render 'cscode_discount' -%}
+    {%- endif -%}
+
+        <!-- Montserrat full weights fix -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    {% render 'fonts' %}
+
+    {% if shop.locale == 'en-US' %}
+      <meta name="google-site-verification" content="QMsD2B5uPUIPzXcFy5Y2p_Jbzw-una-dmBKj7i-P0Ws">
+    {% endif %}
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function subscribeCookieListener(dataLayer) {
+          // Step to process information already existing in the datalayer
+          dataLayer.forEach(processDatalayerEvent)
+
+          // Set-up a "listener"
+          const originalPush = dataLayer.push;
+          dataLayer.push = function() {
+              originalPush.apply(dataLayer, arguments);
+              Array.from(arguments).forEach(processDatalayerEvent);
+          };
+
+        }
+      subscribeCookieListener(window.dataLayer);
+
+      function processDatalayerEvent(event){
+        if(event.event === "bre.cookie"){
+          Shopify.analytics.publish("bre.cookie",event);
+        }
+      }
+    </script>
+    <script>
+            !function(e,n,t,i,r,o){function s(e){if("number"!=typeof e)return e;var n=new Date;return new Date(n.getTime()+1e3*e)}var a=4e3,c="xnpe_async_hide";function p(e){return e.reduce((function(e,n){return e[n]=function(){e._.push([n.toString(),arguments])},e}),{_:[]})}function m(e,n,t){var i=t.createElement(n);i.src=e;var r=t.getElementsByTagName(n)[0];return r.parentNode.insertBefore(i,r),i}function u(e){return"[object Date]"===Object.prototype.toString.call(e)}o.target=o.target||"https://api.exponea.com",o.file_path=o.file_path||o.target+"/js/exponea.min.js",r[n]=p(["anonymize","initialize","identify","getSegments","update","track","trackLink","trackEnhancedEcommerce","getHtml","showHtml","showBanner","showWebLayer","ping","getAbTest","loadDependency","getRecommendation","reloadWebLayers","_preInitialize","_initializeConfig"]),r[n].notifications=p(["isAvailable","isSubscribed","subscribe","unsubscribe"]),r[n].segments=p(["subscribe"]),r[n]["snippetVersion"]="v2.7.0",function(e,n,t){e[n]["_"+t]={},e[n]["_"+t].nowFn=Date.now,e[n]["_"+t].snippetStartTime=e[n]["_"+t].nowFn()}(r,n,"performance"),function(e,n,t,i,r,o){e[r]={sdk:e[i],sdkObjectName:i,skipExperiments:!!t.new_experiments,sign:t.token+"/"+(o.exec(n.cookie)||["","new"])[1],path:t.target}}(r,e,o,n,i,RegExp("__exponea_etc__"+"=([\\w-]+)")),function(e,n,t){m(e.file_path,n,t)}(o,t,e),function(e,n,t,i,r,o,p){if(e.new_experiments){!0===e.new_experiments&&(e.new_experiments={});var l,f=e.new_experiments.hide_class||c,_=e.new_experiments.timeout||a,g=encodeURIComponent(o.location.href.split("#")[0]);e.cookies&&e.cookies.expires&&("number"==typeof e.cookies.expires||u(e.cookies.expires)?l=s(e.cookies.expires):e.cookies.expires.tracking&&("number"==typeof e.cookies.expires.tracking||u(e.cookies.expires.tracking))&&(l=s(e.cookies.expires.tracking))),l&&l<new Date&&(l=void 0);var d=e.target+"/webxp/"+n+"/"+o[t].sign+"/modifications.min.js?http-referer="+g+"&timeout="+_+"ms"+(l?"&cookie-expires="+Math.floor(l.getTime()/1e3):"");"sync"===e.new_experiments.mode&&o.localStorage.getItem("__exponea__sync_modifications__")?function(e,n,t,i,r){t[r][n]="<"+n+' src="'+e+'"></'+n+">",i.writeln(t[r][n]),i.writeln("<"+n+">!"+r+".init && document.writeln("+r+"."+n+'.replace("/'+n+'/", "/'+n+'-async/").replace("><", " async><"))</'+n+">")}(d,n,o,p,t):function(e,n,t,i,r,o,s,a){o.documentElement.classList.add(e);var c=m(t,i,o);function p(){r[a].init||m(t.replace("/"+i+"/","/"+i+"-async/"),i,o)}function u(){o.documentElement.classList.remove(e)}c.onload=p,c.onerror=p,r.setTimeout(u,n),r[s]._revealPage=u}(f,_,d,n,o,p,r,t)}}(o,t,i,0,n,r,e),function(e,n,t){var i;e[n]._initializeConfig(t),(null===(i=t.experimental)||void 0===i?void 0:i.non_personalized_weblayers)&&e[n]._preInitialize(t),e[n].start=function(i){i&&Object.keys(i).forEach((function(e){return t[e]=i[e]})),e[n].initialize(t)}}(r,n,o)}(document,"exponea","script","webxpClient",window,{
+            target: "https://uk1-api.eng.bloomreach.com",
+            token: "b14edda8-d34b-11ef-b3a8-4a9663c60931",
+            data_layer: true,
+            experimental: {
+                non_personalized_weblayers: true
+            },
+            track: {
+                visits: true,
+                google_analytics: false,
+            },
+        });
+        function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          var cookie = undefined;
+          for (var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) == ' ') {
+                  c = c.substring(1);
+              }
+              if (c.indexOf(name) == 0) {
+                  cookie = c.substring(name.length, c.length);
+                  break;
+              }
+          }
+          cookie = decodeURIComponent(cookie);
+          cookie = cookie.split('?')[0];
+          return cookie;
+      }
+      var customer = {};
+      var cart_id = getCookie('cart');
+      if (cart_id) customer.cart_id = cart_id;
+      {% if customer and customer.email %}
+      customer.email_id = {{ customer.email | json }};
+      customer.shopify_id = {{ customer.id | json }};
+      {% endif %}
+      exponea.start({
+          "customer": customer
+      });
+    </script>
+  </head>
+
+  <body
+    id="wrapper"
+    class="template-{{ template.name | handleize }}{% if template.suffix %} template-{{ template | handleize }}{% endif %} {% if template.directory == 'customers' %} customer {% endif %} {% if template.name == 'collection' and settings.hide_additional_filters %}hide-additional-filters{% endif %}"
+  >
+    <div class="quick-cart-overlay" data-overlay-quickcart></div>
+    {% sections 'header-group' %}
+    <div class="overlay-nav" data-nav-desktop-overlay></div>
+    <main class="site-main">
+      {%- section 'header-usps' -%}
+      {%- if template contains 'ctv'
+        or template contains 'crafters-tv'
+        or template contains 'shop-the-show'
+        or template contains 'shop-the-day'
+      -%}
+        {% render 'ctv-navigation' %}
+      {%- endif -%}
+      {{ content_for_layout }}
+      {%- section 'footer' -%}
+      {%- section 'quick-cart' -%}
+      <section class="section-quick-cart-focus" data-quick-cart-modal></section>
+      {% capture svg_render %}
+        <section>
+          <div style="height: 0; overflow: hidden;">
+            {%- render 'svg-spritesheet.svg' -%}
+          </div>
+        </section>
+      {%- endcapture -%}
+      {{ svg_render | replace: '  ', '' | strip_newlines }}
+
+      <div class="overlay-search" data-search-overlay></div>
+    </main>
+
+    {% liquid
+      render 'tracking-google-tag-manager' with type: 'body'
+      comment
+        If using attributes to delay load to theme script loader, uncomment the below render
+        render 'theme-script-loader'
+      endcomment
+      if product
+        render 'product-media-videos', product: product
+        render 'clearpay-script'
+      endif
+      render 'nosto-tagging'
+      render 'swymSnippet'
+      render 'swym-header-counter'
+    %}
+    <script type="text/javascript">
+      const checkSwat = setInterval(function () {
+        if (window._swat) {
+          _swat.evtLayer.addEventListener('sw:addedalltocart', function (e) {
+            const updateEvent = new Event('quickcart:updated');
+            window.dispatchEvent(updateEvent);
+          });
+          _swat.evtLayer.addEventListener('sw:addedtocart', function (e) {
+            const updateEvent = new Event('quickcart:updated');
+            window.dispatchEvent(updateEvent);
+          });
+          clearInterval(checkSwat);
+        }
+      }, 300);
+    </script>
+
+    <script>
+      document.addEventListener('swell:setup', function (e) {
+        console.log('swell:setup initialised');
+      });
+
+      document.addEventListener('DOMContentLoaded', function (e) {
+        console.log('DOMContentLoaded');
+        document.addEventListener('swell:setup', function (setupEvent) {
+          console.log('swell:setup initialised');
+        });
+      });
+    </script>
+
+    <script
+      src="//parcelintelligence.sfo3.digitaloceanspaces.com/js/bespokeshipping.min.js"
+      type="text/javascript"
+    ></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const today = new Date();
+  const day = String(today.getDate()).padStart(2, "0");
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const year = today.getFullYear();
+
+  const dailyShopUrl = `/collections/shop-the-day-${day}-${month}-${year}`;
+
+  document
+    .querySelectorAll("a[href='/collections/shop-the-day']")
+    .forEach(link => {
+      link.href = dailyShopUrl;
+    });
+});
+    </script>
+    <script>(function(d,w){var i='stck-global-code';if(w.stckEmbed||w.__stckBoot||d.getElementById(i))return;w.__stckBoot=1;var s=d.createElement('script');s.id=i;s.async=1;s.crossOrigin='anonymous';var c=d.currentScript;if(c&&c.nonce)s.nonce=c.nonce;s.src='https://embed.lndg.page/latest/index.min.js?site=019c9985-ee34-72eb-ad74-2625b048635b';(d.head||d.body).appendChild(s)})(document,window);</script>
+  </body>
+</html>

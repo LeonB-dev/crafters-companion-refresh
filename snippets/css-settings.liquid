@@ -1,0 +1,110 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+   :root{
+   	--colour-bg: {{ settings.colour_bg }};
+   	--colour-text-base: {{ settings.colour_text_base }};
+   	--colour-text-link: {{ settings.colour_text_link }};
+
+   	--colour-black: rgba(0,0,0,1);
+   	--colour-white: rgba(255,255,255,1);
+   	--colour-grey: #E5E5E5;
+   	--colour-grey-mid: #BFBFBF;
+
+   	--colour-purple-x-light: #F5F3F8;
+   	--colour-purple-light: #ECE6F1;
+   	--colour-purple: #A98FC2;
+   	--colour-purple-dark: #603C8E;
+   	--colour-purple-active: #CFC1DD;
+   	--colour-purple-footer: #D8C3EC;
+   	--colour-purple-copyright: #603C8E;
+
+   	--colour-pink: #F3A2AC;
+   	--colour-pink-light: #FEF5F6;
+
+   --colour-coral: #E74163;
+
+   	--colour-sugar-cane: #FDFFFC;
+   	--colour-emperor: #1F1300;
+
+   	--colour-royal-purple: #A98FC2;
+   	--colour-whisper: #ECE6EE;
+   	--colour-carnation: #F25F5C;
+   	--colour-pippin: #FFE4E4;
+   	--colour-persian-green: #00A08D;
+   	--colour-black-squeeze: #E9F7F3;
+
+   --colour-new: {{ settings.new_lozenge_colour }};
+  --colour-new-text: {{ settings.new_lozenge_text_colour }};
+   --colour-on-sale: {{ settings.on_sale_lozenge_colour }};
+  --colour-on-sale-text: {{ settings.on_sale_text_lozenge_colour }};
+   --colour-offer: {{ settings.offer_lozenge_colour }};
+  --colour-offer-text: {{ settings.offer_text_lozenge_colour }};
+   --colour-sold-out: {{ settings.sold_out_text_lozenge_colour }};
+  --colour-sold-out-text: {{ settings.sold_out_lozenge_colour }};
+
+   	--placeholder-colour: #918B82;
+
+
+   	--font-family-base: 'Inter', sans-serif;
+   	--font-family-heading: 'Inter', sans-serif;
+   	--font-size-base: 0.875rem;
+   	--font-weight-base: 400;
+   	--line-height-base: 1.75;
+
+   	--border-radius-xs: 0.5rem;
+   	--border-radius-sm: 0.75rem;
+   	--border-radius-md: 1rem;
+   	--border-radius-lg: 1.25rem;
+   	--border-radius-xl: 1.5rem;
+
+   	--transition-duration: 0.3s;
+   	--transition-timing: ease-in-out;
+
+   	--search-overlay-delay: 0.2s;
+   	--search-wrapper-delay: 0.2s;
+
+   	--gutter: 1rem;
+   	--content-offset: 3rem;
+   	--space-sm: 3rem;
+   	--space-md: 4rem;
+   	--space-lg: 5rem;
+   	--container-max-width: 1368px;
+   	--content-tablet-width: 72vw;
+   	--rte-max-width: 50rem;
+   	--paragraph-max-width: 80ch;
+   	--category-item-width-sm: 16.25rem;
+   	--category-item-width-lg: 21.25rem;
+
+   	--bg-dot-size: 12px 12px;
+   	--bg-dot-container-size: 130px;
+
+   	--trust-points-margin: 1.5rem;
+
+   	--strong-accent-size: 36px;
+   }
+
+   .u-heading-lg strong::before,
+   .u-heading-md strong::before{
+   	content:'';
+   	background-image: url({{- 'test.png' | asset_url -}});
+   	background-repeat: repeat-x;
+   	background-size: var(--strong-accent-size) var(--strong-accent-size);
+   	position: absolute;
+   	bottom: 0;
+   	left: 0;
+   	width: 100%;
+   	height: var(--strong-accent-size);
+   	transform: translateY(calc(var(--strong-accent-size) / 4));
+   }
+</style>
+
+{{- 'theme.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-product-item.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-category-item.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-section-header.css' | asset_url | stylesheet_tag -}}
+{% if template.name == 'index' %}
+	{{ 'section-stmt-inspiration.css' | asset_url | stylesheet_tag }}
+{% endif %}

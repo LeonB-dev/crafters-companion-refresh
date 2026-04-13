@@ -1,0 +1,133 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "294234ac-a1dc-413a-a648-a4021b1809a6": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Our Stores",
+        "text": "<p>Our Crafter’s Companion stores are shopping havens where crafting comes to life! Providing a community hub for crafters to gather, play and learn new skills, inside you’ll find a warm welcome and wall to wall inspiration of exciting project ideas. <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "2dfc99a5-725f-463e-aa26-588888a2774b": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Evesham.jpg",
+        "main_heading": "Evesham",
+        "main_text": "<p><strong>Address: <\/strong>The Valley Shopping Village, Evesham, WR11 4DS<\/p><p><strong>Phone:<\/strong> 01386 446375<\/p>",
+        "main_link_url": "\/pages\/evesham",
+        "main_link_text": "View this store",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "sm",
+        "contain_image": false,
+        "enable_shapes": true,
+        "shape_background": "shopify:\/\/shop_images\/background-noise-02.png",
+        "shape_position": "vertical-centre",
+        "enable_dots": false,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "2dfc99a5-725f-463e-aa26-588888a2774c": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Our_Stores_page_-_Chesterfield.jpg",
+        "main_heading": "Chesterfield",
+        "main_text": "<p><strong>Address: <\/strong>Unit 8, Dobbies Garden Centre, Highwood Way, Barlborough Links, S43 4XN<\/p><p><strong>Phone: <\/strong>01246 811838<\/p>",
+        "main_link_url": "shopify:\/\/pages\/chesterfield",
+        "main_link_text": "View this store",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "sm",
+        "contain_image": false,
+        "enable_shapes": true,
+        "shape_background": "shopify:\/\/shop_images\/background-noise-02.png",
+        "shape_position": "vertical-centre",
+        "enable_dots": false,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "2dfc99a5-725f-463e-aa26-588888a2774d": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Colne-1-500x500.jpg",
+        "main_heading": "Boundary Mill – Colne",
+        "main_text": "<p><strong>Address: <\/strong>Vivary Way, Colne, Lancashire BB8 9NW<\/p><p><strong>Phone: <\/strong>01282 856200<\/p>",
+        "main_link_url": "shopify:\/\/pages\/chesterfield",
+        "main_link_text": "View this store",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "contain_image": false,
+        "enable_shapes": true,
+        "shape_background": "shopify:\/\/shop_images\/background-noise-02.png",
+        "shape_position": "vertical-centre",
+        "enable_dots": false,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "1dccdf10-ad67-4ace-aeb3-8f36cc773a4a": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Pop into our friendly stores to browse beautiful themed areas, each dedicated to a different crafting need. So, from papercraft, art and colouring to sewing and haberdashery you can find exactly what you’re looking for with ease. Alongside demonstration and workshop spaces, there’s everything you need to revisit a favourite hobby or pick up a brand-new skill.<\/p><p>Passionate crafters themselves, our knowledgeable teams are here to lend a helping hand with advice, suggestions and a warm welcome.<\/p><p>In store we have the latest Crafter’s Companion collections alongside the full range of favourites such as Gemini, Sara Signature, Nature’s Garden, Sheena Douglass, Spectrum Noir and much, much more. <\/p><p>There’s even a Crafty Cuppa coffee shop in our Evesham store so you can relax and unwind with a hot drink and something tasty after shopping or creating!<\/p><p>Don’t forget - your Club Loyalty discounts can be used in-store. So, don’t miss out - visit one of our amazing Crafter’s Companion stores today. We can’t wait to see you! <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "sm"
+      }
+    }
+  },
+  "order": [
+    "294234ac-a1dc-413a-a648-a4021b1809a6",
+    "2dfc99a5-725f-463e-aa26-588888a2774b",
+    "2dfc99a5-725f-463e-aa26-588888a2774c",
+    "2dfc99a5-725f-463e-aa26-588888a2774d",
+    "1dccdf10-ad67-4ace-aeb3-8f36cc773a4a"
+  ]
+}

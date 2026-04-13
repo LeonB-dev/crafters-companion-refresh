@@ -1,0 +1,103 @@
+.modal-component {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: grid;
+  place-content: center;
+  transition: all var(--transition-duration) var(--transition-timing) 0s;
+  transition-delay: var(--transition-duration);
+  z-index: 150;
+}
+.modal-component .modal-wrapper {
+  background-color: var(--colour-sugar-cane);
+  border-radius: var(--border-radius-xs);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-duration) var(--transition-timing) 0s;
+  transition-delay: 0s;
+  width: 80vw;
+  max-width: 880px;
+}
+.modal-component .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.modal-component .modal-header p {
+  margin: 0;
+}
+.modal-component .modal-header button {
+  padding: 0;
+}
+.modal-component .modal-header button svg {
+  height: 1rem;
+  width: 1rem;
+}
+.modal-component .modal-content video,
+.modal-component .modal-content iframe {
+  aspect-ratio: 16/9;
+  height: auto;
+  width: 100%;
+  display: block;
+}
+.modal-component .modal-content .ctv {
+  width: 100%;
+  position: relative;
+  background: radial-gradient(95.56% 344.86% at 24.1% 33.77%, #90489c 0%, #4b3ab0 100%);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: auto -webkit-max-content;
+  grid-template-columns: auto max-content;
+  gap: 0 2rem;
+  align-items: center;
+  color: var(--colour-white);
+  margin-top: 2rem;
+  border-radius: var(--border-radius-xs);
+}
+.modal-component .modal-content .ctv::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='1088' height='1522' viewBox='0 0 1088 1522' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.4265 728.477C-4.85938 744.432 -4.85942 777.568 17.4265 793.524L1023.96 1514.17C1050.43 1533.12 1087.25 1514.2 1087.25 1481.64L1087.25 40.3583C1087.25 7.80313 1050.43 -11.1171 1023.96 7.8346L17.4265 728.477Z' fill='%231F1300'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 240%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 40%;
+  opacity: 0.1;
+}
+.modal-component .modal-content .ctv * {
+  z-index: 5;
+}
+.modal-component .modal-content .ctv img {
+  height: 4.5rem;
+  width: 13.125rem;
+  object-fit: contain;
+  grid-column: 2;
+  grid-row: 1/span 2;
+}
+.modal-component .modal-content .ctv a {
+  text-decoration: none;
+  color: inherit;
+}
+.modal-component .modal-content .ctv a, .modal-component .modal-content .ctv p {
+  grid-column: 1;
+  margin: 0;
+}
+.modal-component.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+.modal-component.is-visible .modal-wrapper {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: var(--transition-duration);
+}

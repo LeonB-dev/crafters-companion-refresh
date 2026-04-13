@@ -1,0 +1,223 @@
+.key-features {
+  padding: 2rem 0 2.5rem 0;
+}
+
+.key-features__header,
+.key-features__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.key-features__header {
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.key-features .key-features__subtitle,
+.key-features .key-features__title {
+  margin: 0;
+}
+
+.key-features .key-features__subtitle {
+  font-size: 1.125rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.key-features .key-features__title {
+  font-size: 3rem;
+}
+
+.key-features__slider {
+  display: block;
+  padding: 0;
+}
+
+.key-features__slider .simple-slider {
+  padding: 0 !important;
+  transform: none;
+  margin-bottom: 0;
+  gap: 2.5rem;
+}
+
+.key-features__slider .simple-slider li {
+  width: auto;
+  flex-basis: auto;
+  max-width: none;
+  flex: 1 0;
+  display: flex;
+}
+
+.key-features__slider .simple-slider li:last-child {
+  margin: 0;
+}
+
+.key-features__slider .slider-ui {
+  gap: 1rem;
+  display: none;
+}
+
+.key-features__slider .slider-ui ul {
+  gap: 0.5rem;
+}
+
+.key-features__slider .slider-ui ul li {
+  color: var(--colour-grey-mid);
+  background-color: var(--colour-grey-mid);
+}
+
+.key-features__slider .slider-ui ul li.active {
+  background-color: var(--colour-black);
+  color: var(--colour-black);
+}
+
+.key-features__slider .slider-ui > div {
+  gap: 0.5rem;
+}
+
+.key-features__slider .slider-ui button {
+  color: var(--colour-white);
+  background-color: var(--colour-grey-mid);
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.key-features__slider .slider-ui button.active {
+  background-color: var(--colour-black);
+}
+
+.key-features__slider .slider-ui svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.key-features__blocks {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.key-features__block {
+  flex: 1;
+  padding: 2rem 2rem 2.5rem 2rem;
+  border-radius: 2rem;
+  background-color: var(--colour-pink-light);
+  height: auto;
+  white-space: normal;
+  height: auto;
+}
+
+.key-features__block-image {
+  display: block;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.key-features__block-title {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.key-features .key-features__block-description,
+.key-features .key-features__block-description p,
+.key-features .key-features__block-description.richtext-area {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.key-features__block-description a {
+  color: inherit;
+}
+
+.key-features .key-features__block-description > * {
+  margin-bottom: 1rem;
+}
+
+.key-features .key-features__block-description > *:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1399px) {
+  .key-features__slider .simple-slider,
+.key-features__blocks {
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .key-features__slider {
+    margin-right: calc(var(--gutter) * -1);
+  }
+
+  .key-features__slider .simple-slider {
+    margin-bottom: 1.5rem;
+  }
+
+  .key-features__slider .simple-slider li {
+    width: 60%;
+    max-width: 60%;
+    flex-basis: 60%;
+  }
+
+  .key-features__slider .simple-slider li:last-child {
+    margin-right: var(--gutter);
+  }
+
+  .key-features__slider .slider-ui {
+    display: flex;
+    padding-right: var(--gutter);
+  }
+}
+@media screen and (max-width: 767px) {
+  .key-features {
+    padding: 1.5rem 0;
+  }
+
+  .key-features__header {
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .key-features .key-features__subtitle {
+    font-size: 0.875rem;
+  }
+
+  .key-features .key-features__title {
+    font-size: 2rem;
+  }
+
+  .key-features__slider .simple-slider,
+.key-features__blocks {
+    gap: 0.5rem;
+  }
+
+  .key-features__slider .simple-slider li {
+    width: 80%;
+    max-width: 80%;
+    flex-basis: 80%;
+  }
+
+  .key-features__blocks {
+    flex-direction: column;
+  }
+
+  .key-features__block {
+    padding: 1rem 1rem 1.5rem 1rem;
+    border-radius: 1.25rem;
+  }
+
+  .key-features__block-image {
+    max-width: 2.5rem;
+  }
+
+  .key-features__block-title {
+    font-size: 1.25rem;
+  }
+
+  .key-features .key-features__block-description,
+.key-features .key-features__block-description p,
+.key-features .key-features__block-description.richtext-area {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,60 @@
+@media (min-width: 768px) {
+  .section-header-usps.swiper-grid .swiper-wrapper {
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .section-header-usps.swiper-grid .swiper-wrapper {
+    gap: 4rem;
+  }
+}
+@media (min-width: 1760px) {
+  .section-header-usps.swiper-grid .swiper-wrapper {
+    gap: 5rem;
+  }
+}
+.section-header-usps .swiper-slide {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.section-header-usps .swiper-slide img {
+  height: 1.5rem;
+  max-width: 5rem;
+}
+.section-header-usps .swiper-slide.no-icon p {
+  padding-top: 4px;
+}
+.section-header-usps .swiper-slide p {
+  margin: 0;
+  font-size: var(--font-size-s);
+}
+@media (min-width: 1760px) {
+  .section-header-usps .swiper-slide p {
+    font-size: var(--font-size-m);
+  }
+}
+@media (min-width: 1280px) {
+  .section-header-usps .swiper-button-prev,
+.section-header-usps .swiper-button-next {
+    display: none;
+  }
+}
+.section-header-usps .swiper-pagination {
+  margin-top: 8px;
+  gap: 0.2rem;
+}
+.section-header-usps .swiper-pagination .swiper-pagination-bullet {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+@media (min-width: 1280px) {
+  .section-header-usps .swiper-pagination {
+    display: none;
+  }
+}

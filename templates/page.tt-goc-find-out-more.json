@@ -1,0 +1,96 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false
+      }
+    },
+    "f6a6f3f2-0121-43bd-bc4a-c82dfb092ba9": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Get Organized Challenge - Find out more!",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": true,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "26c1b39c-7565-4b18-b6d3-7c946da94e7c": {
+      "type": "image-feature",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/TT-GOC.jpg",
+        "heading": "",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "content_placement": "left"
+      }
+    },
+    "cf8463df-9770-40df-a445-edf45414238d": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/FlSJeZyqsg4",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "dfcbd675-81d6-4e34-a2b3-00091ac56fa1": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Challenge Details and Information: ",
+        "small_text": "<p>The Get Organized Challenge is a series of 8 classes. Challenge classes are <strong>FREE<\/strong>. You don't need any particular tools or equipment to participate. My goal is to help you establish good organizational systems and strategies. Each week we'll talk about one major category or idea. The week following the Challenge class you'll spend as much time as possible completing the Challenge homework. I hope you'll sign up to join us! We get a lot done AND have fun, too.<\/p>",
+        "link_text": "Sign Me Up!",
+        "link_url": "shopify:\/\/pages\/get-organized-challenge-sign-up",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "315260e3-ae74-430f-8830-87ac4d05c92c": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Classes are taught live over the internet in a dedicated Facebook group - for FREE!",
+        "small_text": "",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "e4c57d61-6f57-48a1-8407-6dfb9aa0e6d2": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>All classes are taught live and include question\/answer sessions at the end. Missed the class? Recorded classes will be available to watch later in the day.<\/p><p>When you're signed up, each week during the live series you'll get a reminder email before the class. This reminder email will include a link to the weekly handout and checklist.<\/p><p>There will also be a follow-up email sent after each class with new homework, additional tips concerning what was discussed in class, and exclusive GOC group specials.<\/p><p>So what are you waiting for? Sign up to my completely FREE Challenge now!<\/p>",
+        "link_text": "Sign Me Up!",
+        "link_url": "shopify:\/\/pages\/get-organized-challenge-sign-up",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "f6a6f3f2-0121-43bd-bc4a-c82dfb092ba9",
+    "26c1b39c-7565-4b18-b6d3-7c946da94e7c",
+    "cf8463df-9770-40df-a445-edf45414238d",
+    "dfcbd675-81d6-4e34-a2b3-00091ac56fa1",
+    "315260e3-ae74-430f-8830-87ac4d05c92c",
+    "e4c57d61-6f57-48a1-8407-6dfb9aa0e6d2"
+  ]
+}

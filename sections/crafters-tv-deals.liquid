@@ -1,0 +1,83 @@
+{%- liquid
+  assign template_name = 'section-crafters-tv-deals'
+%}
+
+{{- 'section-crafters-tv-deals.css' | asset_url | stylesheet_tag -}}
+{{- 'section-featured-promotions.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-promotion-item.css' | asset_url | stylesheet_tag -}}
+<script defer src="{{- 'section-crafters-tv-deals.js' | asset_url -}}"></script>
+
+<div class="{{- template_name }} u-space-below-lg overflow-hidden" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="wrapper">
+    {%- render 'paper-edge', _edge_version: 'edge-03', _bottom_edge_colour: 'white', _section: section -%}
+    <div class="container">
+      {%-
+        render 'crafters-tv-heading',
+        _heading: section.settings.title,
+        _title: section.settings.heading,
+        _text: section.settings.text,
+        _text_class: ''
+      -%}
+      <div class="section-featured-promotions">
+        <h2 class="u-heading-xs centre">{{ section.settings.featured_promotions_heading }}</h2>
+        {% render 'featured-promotions-blocks', _section_blocks: section.blocks %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CTV Deals",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Featured Promotions"
+    },
+    {
+      "type": "text",
+      "id": "featured_promotions_heading",
+      "label": "Featured Promotions Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "promotion",
+      "name": "Promotion",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "This will override the default image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

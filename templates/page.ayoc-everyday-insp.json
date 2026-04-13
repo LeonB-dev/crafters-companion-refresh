@@ -1,0 +1,84 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "d404a13b-50e5-4aca-96aa-d6bc5a481b39": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Everyday Inspiration : Downloads",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "margin_bottom": "md"
+      }
+    },
+    "3a3b6a8f-a5d1-4210-b53c-d704818068f0": {
+      "type": "campaign-blocks",
+      "blocks": {
+        "570b57f5-2152-4c28-b40c-ca339cbe5774": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/PatternedImage_ayoc_ei_pp.png",
+            "heading": "Patterned Papers"
+          }
+        },
+        "ebd56991-916e-4152-997c-bdf6892420b8": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/SolidImage_ayoc_ei.png",
+            "heading": "Solid Colour Papers"
+          }
+        },
+        "d5f4eb88-026f-47c2-a6f8-dcc8aab3cedc": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_templateImage.png",
+            "heading": "Templates - UK"
+          }
+        },
+        "8a632bf1-8cc8-4eec-86d6-18ed3d02cc16": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_templateImage_1.png",
+            "heading": "Templates - US"
+          }
+        }
+      },
+      "block_order": [
+        "570b57f5-2152-4c28-b40c-ca339cbe5774",
+        "ebd56991-916e-4152-997c-bdf6892420b8",
+        "d5f4eb88-026f-47c2-a6f8-dcc8aab3cedc",
+        "8a632bf1-8cc8-4eec-86d6-18ed3d02cc16"
+      ],
+      "settings": {
+        "heading": "",
+        "text": "<p>Here you can download and print the templates used for some of the projects from issue 6.<\/p><p>You can also select and print more of the patterned papers an solid colours of cardstock included in A Year of Craft – Everyday Inspiration. Simply click on the patterned or solid papers to access them.<\/p><p>Looking for more downloads from A Year of Craft? Head back to our main page.<\/p>",
+        "link_url": "",
+        "link_text": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d404a13b-50e5-4aca-96aa-d6bc5a481b39",
+    "3a3b6a8f-a5d1-4210-b53c-d704818068f0"
+  ]
+}

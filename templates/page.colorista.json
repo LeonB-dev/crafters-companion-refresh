@@ -1,0 +1,283 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "a4d8c22d-cf05-43f5-854e-e9d90925610b": {
+      "type": "crafters-tv-schedule",
+      "disabled": true,
+      "settings": {
+        "heading": "Schedule",
+        "title": "What's on this week",
+        "text": "<p>Don’t miss out on our live Crafter’s TV shows! All week, you’ll be able to view our programmes on this page or catch up on any of the action that you’ve missed!<\/p>"
+      }
+    },
+    "87d63b3f-f0a3-4969-b8e6-0282516d09fc": {
+      "type": "featured-products",
+      "blocks": {
+        "3834cb45-a3a6-456e-b539-24dde750ebf1": {
+          "type": "collection",
+          "settings": {
+            "collection": "spectrum-noir"
+          }
+        }
+      },
+      "block_order": [
+        "3834cb45-a3a6-456e-b539-24dde750ebf1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "This week’s top selling products",
+        "heading_alignment": false,
+        "link_url": "shopify:\/\/collections\/spectrum-noir",
+        "link_text": "Shop more",
+        "grid_size": "lg",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "4600bcb3-b41a-483c-ac33-788d86172890": {
+      "type": "latest-articles",
+      "disabled": true,
+      "settings": {
+        "heading": "Available on catchup",
+        "text": "<p>At semper risus netus eu sit elementum commodo. Erat nisi nibh sociis sed egestas et. Urna ut nam id integer interdum ut odio et magna. <\/p>",
+        "link_url": "shopify:\/\/blogs\/crafters-tv",
+        "link_text": "Visit out Crafter's TV archive",
+        "blog": "inspiration"
+      }
+    },
+    "3b714e7c-bf43-42bc-9355-c779ae1f3c6f": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/YAMtUQxH5mM",
+        "heading": "",
+        "text": "<p>Adhesive Sprays<\/p>"
+      }
+    },
+    "b1cb8ebe-7f44-4632-bfb3-224282dd766c": {
+      "type": "content-block-trio",
+      "blocks": {
+        "d7139040-e28c-4cd7-a9e5-666f231e2303": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Craft Away",
+            "text": "Craft Adhesives",
+            "image": "shopify:\/\/shop_images\/sharon-callis---garden-florals---embossing-folders_divine-blooms_5.jpg",
+            "link_text": "Shop Adhesives now",
+            "link_url": "shopify:\/\/collections\/bag-making"
+          }
+        },
+        "a8540fd5-42dd-4c87-b177-317850617808": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Read about Crafting",
+            "text": "Happy Crafting Blog available now",
+            "image": "shopify:\/\/shop_images\/140922-kit-7.jpg",
+            "link_text": "Read the best blog ever",
+            "link_url": "shopify:\/\/blogs\/inspiration"
+          }
+        },
+        "7e7b2913-e964-407a-b19a-ff7b2923b1ef": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Crafting Made Easier",
+            "text": "Get in the habit this summer",
+            "image": "shopify:\/\/shop_images\/balloon-sentiments---stamp-_-die-packaging-birthday_9.jpg",
+            "link_text": "Watch Sara Craft",
+            "link_url": "shopify:\/\/collections\/art-storage"
+          }
+        }
+      },
+      "block_order": [
+        "d7139040-e28c-4cd7-a9e5-666f231e2303",
+        "a8540fd5-42dd-4c87-b177-317850617808",
+        "7e7b2913-e964-407a-b19a-ff7b2923b1ef"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "871464b9-2b10-4c2f-beda-5a0fa91cd8bd": {
+      "type": "text-only",
+      "disabled": true,
+      "settings": {
+        "large_text": "Watch our great videos in CTV",
+        "small_text": "<p>Crafting ideas for every one<\/p>",
+        "link_text": "",
+        "link_url": "shopify:\/\/collections\/card-making",
+        "left_align": false
+      }
+    },
+    "8949e6f5-274a-4d81-9792-2acf246b440b": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "header_title": "",
+        "header_image": "shopify:\/\/shop_images\/about-intro_480x480_9bf1e68e-110c-43d5-8125-e180193d5b05.webp",
+        "main_heading": "",
+        "main_text": "<p>“Big dream in Sara Davies’ university bedroom”<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "02bf3435-8a25-48be-af12-40562eae1312": {
+      "type": "image-feature",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "content_placement": "content-bottom-left"
+      }
+    },
+    "b032bc16-e0b8-4cae-a811-25e017d1a7ff": {
+      "type": "quote-slider",
+      "blocks": {
+        "b3f599d3-1c80-4c93-8ddd-37faa42b1dfb": {
+          "type": "quote_slide",
+          "settings": {
+            "quote": "<h1><strong>“Big dream in Sara Davies’ university bedroom”<\/strong><\/h1>",
+            "author_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "b3f599d3-1c80-4c93-8ddd-37faa42b1dfb"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "65487060-6d7a-4da8-9f68-f0a87e94adf1": {
+      "type": "quote-and-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about-intro_480x480_9bf1e68e-110c-43d5-8125-e180193d5b05.webp",
+        "quote": "<h1><strong>“Big dream in Sara Davies’<\/strong><\/h1><h1><strong>university bedroom”<\/strong><\/h1>",
+        "author_text": ""
+      }
+    },
+    "95fd7dd5-6e0c-4ff0-b13e-91d7f2177108": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Our Story",
+        "small_text": "<p>Crafter’s Companion started life as a big dream in Sara Davies’ university bedroom. It was here that she had a light bulb moment, about a ground-breaking product which could create envelopes for handmade cards, and The Enveloper was born!<\/p><p>Sixteen years (and lots of hard work) later, we’ve grown our product range from one exciting papercraft tool to thousands of crafting must-haves including stamps, dies and die-cutting machines, embossing folders, card and more to enhance your creative journey and bolster stashes across the world!<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": true
+      }
+    },
+    "77c4b1c3-498e-45ca-afef-dcc459321e94": {
+      "type": "media-slider",
+      "blocks": {
+        "5cf33e32-44f9-4fd2-bfde-5f7c2d065a34": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_0012-2-e1608651484489_480x480_1f92e432-a4b1-4ccf-847c-74f88ff2621d.webp"
+          }
+        },
+        "f9117587-e5d9-495d-8c3c-93dffa76d4a7": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/memory2_480x480_664fa88b-8405-495d-91e5-fc5d827da7f1.webp"
+          }
+        },
+        "0b124e59-f134-4e9f-b0d4-53d32575ff57": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/untitled-3504-12_480x480_0b9f32a6-ee03-4313-86e4-a876a6292a82.webp"
+          }
+        }
+      },
+      "block_order": [
+        "5cf33e32-44f9-4fd2-bfde-5f7c2d065a34",
+        "f9117587-e5d9-495d-8c3c-93dffa76d4a7",
+        "0b124e59-f134-4e9f-b0d4-53d32575ff57"
+      ],
+      "settings": {
+        "large": false
+      }
+    },
+    "5fbdec2b-945a-48c4-9d91-6b95e50dff95": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Since 2012, we’ve ventured into art materials, with our brilliant Spectrum Noir colouring and drawing supplies, as well as the sewing market with beautiful fabrics and sewing tools from our Threaders range.<\/p><p>In 2020, the hugely popular organisational solution company, Totally Tiffany, joined our family of brands and, in 2021, we launched the chic, fashion-forward craft and stationery brand, Violet Studio.<\/p><p>We have head offices and warehouses in the North East of England and Corona, California, and opened our first bricks-and-mortar stores in Chesterfield and Evesham, as well as a concession in Colne, where we meet hundreds of our loyal customers every year.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": true
+      }
+    },
+    "e0731374-e631-4e2e-a533-b11dec9d0487": {
+      "type": "text-only",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "large_text": "Totalling more than 200 staff around the UK and overseas!",
+        "small_text": "<p>Now totalling more than 200 staff around the UK and overseas, we’re a friendly lot who like to put the customer at the heart of everything we do.<\/p><p>Whatever hobby or interest, take a look around our site to find ideas and inspiration to get you started, or maybe even a little treat or two for your craft room!<\/p><p><strong>Take a peak inside our world!<\/strong><\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": true
+      }
+    },
+    "87139521-7c72-4cea-b4b3-b56a08b9d689": {
+      "type": "featured-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about-us_1024x1024_466314f7-28c0-49b6-bc78-d15add25795a.webp"
+      }
+    },
+    "f3d5299f-dbc7-41b4-a5e9-f71664f067d1": {
+      "type": "image-grid",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "text": "",
+        "link_text": "",
+        "link_url": ""
+      }
+    }
+  },
+  "order": [
+    "a4d8c22d-cf05-43f5-854e-e9d90925610b",
+    "87d63b3f-f0a3-4969-b8e6-0282516d09fc",
+    "4600bcb3-b41a-483c-ac33-788d86172890",
+    "3b714e7c-bf43-42bc-9355-c779ae1f3c6f",
+    "b1cb8ebe-7f44-4632-bfb3-224282dd766c",
+    "871464b9-2b10-4c2f-beda-5a0fa91cd8bd",
+    "8949e6f5-274a-4d81-9792-2acf246b440b",
+    "02bf3435-8a25-48be-af12-40562eae1312",
+    "b032bc16-e0b8-4cae-a811-25e017d1a7ff",
+    "65487060-6d7a-4da8-9f68-f0a87e94adf1",
+    "95fd7dd5-6e0c-4ff0-b13e-91d7f2177108",
+    "77c4b1c3-498e-45ca-afef-dcc459321e94",
+    "5fbdec2b-945a-48c4-9d91-6b95e50dff95",
+    "e0731374-e631-4e2e-a533-b11dec9d0487",
+    "87139521-7c72-4cea-b4b3-b56a08b9d689",
+    "f3d5299f-dbc7-41b4-a5e9-f71664f067d1"
+  ]
+}

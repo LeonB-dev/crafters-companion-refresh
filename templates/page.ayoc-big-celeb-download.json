@@ -1,0 +1,166 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Big Celebrations: Downloads",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "ae35d94d-aaf7-4bff-aac1-5e1fe8dc3e76": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Here you can download and print the templates used for some of the projects from issue 3. You can also select and print more of the patterned papers an solid colours of cardstock included in A Year of Craft – Big Celebrations. Simply click on the patterned or solid papers to access them.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "4272ae76-1d40-473c-ac6e-3ed86b7e9bd8": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/PatternedImage-ayoc-bigcel_ade3b418-ef69-43eb-92c5-97d73b577580.png",
+        "main_heading": "Patterned Papers",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-big-celebrations-patterned-papers",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "41188dfc-aca5-42c4-bdc2-45955a6a01da": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SolidImage-ayoc-bigcel_5489f081-7077-49a7-a7e3-5c3b35481a84.png",
+        "main_heading": "Solid Colour Papers",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-big-celebrations-solid-colour-papers",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "8babcbba-2de4-461a-878e-501ff907cfe9": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/AYOC-AS3-TemplateImage_683ea224-74f3-4bce-836e-21ef6b8df623.jpg",
+        "main_heading": "Templates - UK",
+        "main_text": "",
+        "main_link_url": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/AYOC%20AS3%20Templates%20UK.pdf",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "0809cc47-85ee-4783-b88b-912396bf5e5a": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/AYOC-AS3-TemplateImage_683ea224-74f3-4bce-836e-21ef6b8df623.jpg",
+        "main_heading": "Templates - US",
+        "main_text": "",
+        "main_link_url": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/AYOC%20AS3%20Templates%20US.pdf",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "5e16e702-de12-4d73-8758-a6e147642f1b": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to homepage",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef",
+    "ae35d94d-aaf7-4bff-aac1-5e1fe8dc3e76",
+    "4272ae76-1d40-473c-ac6e-3ed86b7e9bd8",
+    "41188dfc-aca5-42c4-bdc2-45955a6a01da",
+    "8babcbba-2de4-461a-878e-501ff907cfe9",
+    "0809cc47-85ee-4783-b88b-912396bf5e5a",
+    "5e16e702-de12-4d73-8758-a6e147642f1b"
+  ]
+}

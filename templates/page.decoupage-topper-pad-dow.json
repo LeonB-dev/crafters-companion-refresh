@@ -1,0 +1,174 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Decoupage Topper Pad Downloads",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "bc3a3e6f-0b33-4269-b56b-8d035f31869e": {
+      "type": "downloads",
+      "blocks": {
+        "7594e1af-b4e6-4508-bb77-e3b9585173a3": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Beautiful%20Lilies.pdf",
+            "image": "shopify:\/\/shop_images\/Beautiful-Lilies_1.webp",
+            "file_name": "Beautiful Lilies",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Beautiful%20Lilies.pdf"
+          }
+        },
+        "06979276-603c-4ccf-8937-4c4ddfd7836f": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/Floral%20Decoupage%20Topper%20Pads%20Artwork.pdf",
+            "image": "shopify:\/\/shop_images\/Floral-Decoupage-Topper-Pads-Artwork-1.webp",
+            "file_name": "Floral Decoupage",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/Floral%20Decoupage%20Topper%20Pads%20Artwork.pdf"
+          }
+        },
+        "02586605-e1ed-42be-9784-80215a389f93": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/Floral%20Decoupage%20download.pdf",
+            "image": "shopify:\/\/shop_images\/Floral-Decoupage-download_thumb_7bb02f1e-1392-4524-9566-12195dd3ae19.webp",
+            "file_name": "Floral Decoupage",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/Floral%20Decoupage%20download.pdf"
+          }
+        },
+        "d890f924-0db2-46a5-a2a9-a0408df25860": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/sara-sig\/Sara%20Sig%20Caring%20Thoughts%20-%20Floral%20Decoupage%20Pad%20-%20WEB%20DOWNLOAD.pdf",
+            "image": "shopify:\/\/shop_images\/Caring_thoughts.png",
+            "file_name": "Caring Thoughts",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/sara-sig\/Sara%20Sig%20Caring%20Thoughts%20-%20Floral%20Decoupage%20Pad%20-%20WEB%20DOWNLOAD.pdf"
+          }
+        },
+        "f43ab1b3-3ddc-45f7-9bd6-c1f956edb993": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Elegant%20Orchid.pdf",
+            "image": "shopify:\/\/shop_images\/Elegant_Orchid.png",
+            "file_name": "Elegant Orchid",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Elegant%20Orchid.pdf"
+          }
+        },
+        "306b7828-9f7a-406b-98b2-136054d439e2": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Precious%20Poppies.pdf",
+            "image": "shopify:\/\/shop_images\/Precious_Poppies.png",
+            "file_name": "Precious Poppies",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Precious%20Poppies.pdf"
+          }
+        },
+        "323b9f62-4528-443f-a7a9-022fc86d76c4": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Roses%20in%20Bloom.pdf",
+            "image": "shopify:\/\/shop_images\/Roses_in_bloom.png",
+            "file_name": "Roses in Bloom",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Roses%20in%20Bloom.pdf"
+          }
+        },
+        "f286a526-64c5-4595-bbd5-37183fb8664e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Spring%20is%20Here.pdf",
+            "image": "shopify:\/\/shop_images\/Spring_is_here.png",
+            "file_name": "Spring is Here",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Spring%20is%20Here.pdf"
+          }
+        },
+        "cc4b4f17-0784-4fba-b6ea-b09f0dfbca72": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/decoupage-topper-pads\/Winter%20Floral%20Decoupage%206%20x%206__Pads%20-%20Printable%20download.pdf",
+            "image": "shopify:\/\/shop_images\/Winter-Floral-Decoupage-6-x-6__Pads-Printable-download-1.webp",
+            "file_name": "Winter Floral Decoupage",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/decoupage-topper-pads\/Winter%20Floral%20Decoupage%206%20x%206__Pads%20-%20Printable%20download.pdf"
+          }
+        },
+        "b154190a-12ef-4d9d-9f37-afa442421dc2": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/decoupage-topper-pads\/CherishedMoments.pdf",
+            "image": "shopify:\/\/shop_images\/CherishedMomentsNew.webp",
+            "file_name": "Cherished Moments",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/decoupage-topper-pads\/CherishedMoments.pdf"
+          }
+        },
+        "a7dffe22-44f4-4661-a557-30c24c809216": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Watercolour%20Anemones.pdf",
+            "image": "shopify:\/\/shop_images\/Watercolour-Anemones.webp",
+            "file_name": "Watercolour Anemones",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Watercolour%20Anemones.pdf"
+          }
+        },
+        "43ccbc1b-5c21-4c41-a003-4d5d473b5523": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Sunflower%20Bouquet.pdf",
+            "image": "shopify:\/\/shop_images\/Sunflower-Bouquet.webp",
+            "file_name": "Sunflower Bouquet",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/other-downloads\/decoupage_downloads\/Sunflower%20Bouquet.pdf"
+          }
+        }
+      },
+      "block_order": [
+        "7594e1af-b4e6-4508-bb77-e3b9585173a3",
+        "06979276-603c-4ccf-8937-4c4ddfd7836f",
+        "02586605-e1ed-42be-9784-80215a389f93",
+        "d890f924-0db2-46a5-a2a9-a0408df25860",
+        "f43ab1b3-3ddc-45f7-9bd6-c1f956edb993",
+        "306b7828-9f7a-406b-98b2-136054d439e2",
+        "323b9f62-4528-443f-a7a9-022fc86d76c4",
+        "f286a526-64c5-4595-bbd5-37183fb8664e",
+        "cc4b4f17-0784-4fba-b6ea-b09f0dfbca72",
+        "b154190a-12ef-4d9d-9f37-afa442421dc2",
+        "a7dffe22-44f4-4661-a557-30c24c809216",
+        "43ccbc1b-5c21-4c41-a003-4d5d473b5523"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef",
+    "bc3a3e6f-0b33-4269-b56b-8d035f31869e"
+  ]
+}

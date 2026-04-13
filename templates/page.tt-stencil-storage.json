@@ -1,0 +1,164 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "af8e8751-f7fd-425e-bbfd-336cbccb4152": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Organize Stencils",
+        "text": "<p>Stencils come in all shapes and sizes.  They're great for scrapbooking, card making and mixed media projects, but they are difficult to store.  At Totally-Tiffany we offer several options for getting your stencils organized.<\/p><p>The ScrapRack is a great option for stencil storage.  The most common sizes in stencils are 3x4, 6x6, and 12x12.  You'll see each of those sizes displayed in ScrapRack pages below.  Other storage options include Fab Files, the Desk Maid Die, Stamp & Supply organizer and 12x12 craft binders too.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "f321eeb4-f55e-4b05-9825-68f4ded9ddc7": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Templates_and_stencils_Organized_in__Fab_File_With_Totally_Tiffany_SM28ff_2-1.jpg",
+        "main_heading": "4x6 Fab File",
+        "main_text": "<p>This Fab File is perfect for organizing small stencils, ATC stencils and Kiwi Lane Accent templates.  Store each in one of our small Die, Stamp & Stencil pockets for a perfect mini-stencil file.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All Fab Files",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "8d867ed7-17a9-454a-a06b-0c1fc7e28243": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/DSST-Stencil-and-template-organizer.jpg",
+        "main_heading": "Die, Stamp & Supply Organizer",
+        "main_text": "<p>Organize stencils of all sizes using the Die, Stamp & Supply Organizer. Keep all your stencils and dies in plain view to easily grab what you need without having to dig around in drawers or boxes.  <\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All Desk Maid",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "a0adb2a1-7327-462e-ac77-a7edc50fa5ea": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Stencil-Org-12x12-Clear-Scraps-white_1.jpg",
+        "main_heading": "12x12 ScrapRack SuperSized Single Storage",
+        "main_text": "<p>Easy storage for 12x12 stencils. Use our large Shut Your Flap Tabs to label each stencil. This 12.5\" x 12.5\" pocket page will hold up to 5 - 12x12 Stencils. Use these pages on a ScrapRack or in our 12x12 Craft Supply Binder.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All ScrapRack ",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "1715a89c-5a9a-44ac-b416-7ccd5413c5d5": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/P42-Stencils-with-SYFLG-out-of-pocket-white_eadc2e8a-4050-4237-9a9f-09acf85476ba.jpg",
+        "main_heading": "Fabulous Four ScrapRack Page",
+        "main_text": "<p>Perfect for 6x6 stencils. Each of the 4 pocket on this page can hold up to 5 stencils, up to 20 per page. These pages fit on a ScrapRack or in our 12x12 Craft Supply Binder.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All ScrapRack ",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "7b04586f-ba86-4420-82f9-2b6e41240e95": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Shop All Stencil Organizations Options",
+        "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "f33c13b3-cef1-49db-aae7-d7189bc5bc88": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=AyAfMYylhD4",
+        "heading": "",
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "af8e8751-f7fd-425e-bbfd-336cbccb4152",
+    "f321eeb4-f55e-4b05-9825-68f4ded9ddc7",
+    "8d867ed7-17a9-454a-a06b-0c1fc7e28243",
+    "a0adb2a1-7327-462e-ac77-a7edc50fa5ea",
+    "1715a89c-5a9a-44ac-b416-7ccd5413c5d5",
+    "7b04586f-ba86-4420-82f9-2b6e41240e95",
+    "f33c13b3-cef1-49db-aae7-d7189bc5bc88"
+  ]
+}

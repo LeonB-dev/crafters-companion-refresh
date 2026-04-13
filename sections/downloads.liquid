@@ -1,0 +1,148 @@
+{% liquid
+  assign template_name = 'section-downloads'
+
+  assign grid_layout = section.settings.grid_layout
+  assign downloads = section.blocks | map: 'settings'
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-downloads.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }}{% if grid_layout %} grid-layout{% endif %} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="wrapper">
+      {% if grid_layout %}
+        <div class="grid">
+          {% for download in downloads %}
+            {% liquid
+              assign image = download.image
+              assign file = download.file
+              assign file_name = download.file_name
+            %}
+            <div class="download">
+              {%- if image != blank -%}
+                {{- image | image_url: width: 280 | image_tag: alt: image.alt, loading: 'lazy' -}}
+              {%- endif -%}
+              <div class="content">
+                <a class="c-btn alt primary" href="{{ file }}" target="_blank" download="{{ file_name }}">
+                  <span>{{ file_name }}</span>
+                  {%- render 'icon', _name: 'icon-arrow-down' -%}
+                </a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="list">
+          {% for download in downloads %}
+            {% liquid
+              assign image = download.image
+              assign file = download.file
+              assign file_name = download.file_name
+              assign text = download.text
+              assign download_text = download.download_text
+            %}
+            <div class="download">
+              {%- if image != blank -%}
+                {{- image | image_url: width: 280 | image_tag: alt: image.alt, loading: 'lazy' -}}
+              {%- endif -%}
+              <div class="content">
+                <span class="file-name">{{ file_name }}</span>
+                {{ text }}
+                <a class="c-btn alt primary" href="{{ file }}" target="_blank" download="{{ file_name }}">
+                  {{ download_text }}
+                  {%- render 'icon', _name: 'icon-arrow-down' -%}
+                </a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Downloads",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "grid_layout",
+      "label": "Grid Layout?"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "download_block",
+      "name": "Download Block",
+      "settings": [
+        {
+          "type": "url",
+          "id": "file",
+          "label": "File URL",
+          "info": "Please supply the URL of the downloadable file, a Shopify CDN link works best"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Minimum width: 200px and 1/1 aspect ratio."
+        },
+        {
+          "type": "text",
+          "id": "file_name",
+          "label": "File name"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "info": "Doesn't show in grid layout"
+        },
+        {
+          "type": "text",
+          "id": "download_text",
+          "label": "Download Text Link",
+          "info": "Doesn't show in grid layout"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Downloads",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

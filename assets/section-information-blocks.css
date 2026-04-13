@@ -1,0 +1,80 @@
+@media (min-width: 1024px) {
+  .section-information-blocks .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+.section-information-blocks .swiper-wrapper .swiper-slide {
+  height: auto;
+}
+@media (max-width: 767.98px) {
+  .section-information-blocks .swiper-wrapper .swiper-slide {
+    text-align: center;
+  }
+}
+.section-information-blocks .swiper-wrapper .swiper-slide .category {
+  color: var(--colour-persian-green);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.section-information-blocks .swiper-wrapper .swiper-slide.has-icon {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "icon" "content";
+  gap: 1.5rem;
+}
+@media (max-width: 1023.98px) {
+  .section-information-blocks .swiper-wrapper .swiper-slide.has-icon {
+    background-color: var(--block-colour);
+    border-radius: var(--border-radius-sm);
+    padding: 1.5rem;
+    justify-items: center;
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .section-information-blocks .swiper-wrapper .swiper-slide.has-icon {
+    grid-template-columns: 5rem 1fr;
+    grid-template-areas: "icon content";
+    align-items: start;
+  }
+}
+.section-information-blocks .swiper-wrapper .swiper-slide.has-icon .content {
+  grid-area: content;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+@media (min-width: 1024px) {
+  .section-information-blocks .swiper-wrapper .swiper-slide.has-icon .content {
+    justify-items: start;
+  }
+}
+.section-information-blocks .swiper-wrapper .swiper-slide.has-icon p:last-of-type {
+  margin: 0;
+}
+.section-information-blocks .swiper-wrapper .swiper-slide.has-icon .icon {
+  grid-area: icon;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 100%;
+  display: grid;
+  place-content: center;
+  background-color: var(--colour-white);
+}
+@media (min-width: 1024px) {
+  .section-information-blocks .swiper-wrapper .swiper-slide.has-icon .icon {
+    background-color: var(--block-colour);
+  }
+}
+.section-information-blocks .swiper-wrapper .swiper-slide.has-icon img {
+  height: 2rem;
+  width: 2rem;
+  object-fit: contain;
+}
+@media (max-width: 1023.98px) {
+  .section-information-blocks .swiper-pagination {
+    margin-top: 2.5rem;
+  }
+}

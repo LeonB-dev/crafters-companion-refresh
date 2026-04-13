@@ -1,0 +1,253 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "47918638-c2c5-426e-9403-26ad489a72ab": {
+      "type": "featured-image",
+      "settings": {
+        "url": "shopify:\/\/products\/gemini-ii-die-cutting-and-embossing-machine",
+        "image": "shopify:\/\/shop_images\/Campaign_Page_Banner_UK.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "md"
+      }
+    },
+    "0e8c6412-dd25-4e9f-be30-3f35c5dc867c": {
+      "type": "text-only",
+      "disabled": true,
+      "settings": {
+        "large_text": "Cutting Edge Creativity.",
+        "small_text": "<p>Innovative design features. Unparalleled cutting power. Infinite possibilities. Smarter and faster, meet our new die cutting and embossing machine! The Gemini II has all of the power, precision and performance of the original Gemini, with unique new features and updated functions.<\/p>",
+        "link_text": "Shop Now",
+        "link_url": "shopify:\/\/products\/gemini-ii-die-cutting-and-embossing-machine",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "f6aa5463-7258-4276-baf1-78456d01f8aa": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/gemiilanding.png",
+        "main_heading": "Cutting edge creativity. ",
+        "main_text": "<p>Innovative design features. Unparalleled cutting power. Infinite possibilities. Smarter and faster, meet our new die cutting and embossing machine! The Gemini II has all of the power, precision and performance of the original Gemini, with unique new features and updated functions.<\/p>",
+        "main_link_url": "shopify:\/\/products\/gemini-ii-die-cutting-and-embossing-machine",
+        "main_link_text": "Shop Now",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "secondary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "36536948-f0d5-4c8f-a85e-44f1d6629039": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/gemlandingpage3.png",
+        "main_heading": "Features.",
+        "main_text": "",
+        "main_link_url": "",
+        "main_link_text": "Learn More",
+        "list_heading": "",
+        "list_text": "<p>Faster & quieter than ever<\/p><p>Media stand and USB ports<\/p><p>Recognises cutting plates of any size<\/p><p>Built-in storage<\/p><p>Optical sensor<\/p><p>Easy to manouvre<\/p>",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "secondary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "5335c32d-1b4f-4ad6-ad80-b2a3c221ceed": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/9x12platecol_fc01644a-ff20-42e1-96ea-02448a84c35d.jpg",
+        "main_heading": "Accessories",
+        "main_text": "<p>Take your crafts to the next level with our new range of Gemini ll accessories. Choose from an exciting selection of products including a 360° Turn Table that attaches to the base of your machine, so you can enjoy crafting from any angle, a Magnetic Die Storage Stand that keeps your metal dies together and in one place, extra resilient White Cutting Plates that last even longer than before and more.<\/p>",
+        "main_link_url": "shopify:\/\/collections\/accessories",
+        "main_link_text": "Shop Now",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "secondary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "0da69147-8336-480d-bd90-6a5d5e63dbcb": {
+      "type": "featured-products",
+      "blocks": {
+        "fae75126-a3f1-4518-b435-d43c14d9a3f1": {
+          "type": "product_list",
+          "settings": {
+            "product_list": [
+              "gemini-ii-accessories-360-turn-table",
+              "gemini-ii-accessories-9x6-cutting-plates-for-double-sided-dies",
+              "gemini-ii-accessories-9x6-cutting-plates-for-fabric",
+              "gemini-ii-accessories-9x6-metal-cutting-plate",
+              "gemini-ii-accessories-cutting-plates-for-fabric",
+              "gemini-ii-accessories-white-cutting-plate"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "fae75126-a3f1-4518-b435-d43c14d9a3f1"
+      ],
+      "settings": {
+        "heading": "Shop Gemini II Accessories",
+        "heading_alignment": true,
+        "link_url": "shopify:\/\/collections\/accessories",
+        "link_text": "Shop more",
+        "grid_size": "sm",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "md"
+      }
+    },
+    "025456b5-93d8-4e0f-82a1-2c93c870ca27": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/gemfamily2.png",
+        "main_heading": "The Gemini Family.",
+        "main_text": "<p>Compare the features of all of our Gemini machines here. <\/p>",
+        "main_link_url": "shopify:\/\/pages\/gemini-machine-features",
+        "main_link_text": "Learn More",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "secondary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "b6d3e8a8-343e-4745-93d5-ed4d0285cc47": {
+      "type": "image-text-slider",
+      "blocks": {
+        "7196c499-b5f0-470f-ab6e-c9fd85f2f8ff": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Create crafts in seconds with the Gemini II",
+            "text": "",
+            "link_text": "Learn More",
+            "link_url": "shopify:\/\/blogs\/inspiration\/create-your-favourite-crafts-in-seconds-with-the-gemini-ll",
+            "image": "shopify:\/\/shop_images\/Inspiration_Image_1.jpg"
+          }
+        },
+        "d6dd2b37-c7b2-4cd4-b12f-e27203d24c94": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "The beginner's guide to die-cutting",
+            "text": "",
+            "link_text": "Learn More",
+            "link_url": "shopify:\/\/blogs\/inspiration\/the-beginners-guide-to-die-cutting",
+            "image": "shopify:\/\/shop_images\/Inspiration_Image_2.jpg"
+          }
+        },
+        "3028d952-1f2d-4bd2-9161-ffa0e312ddcc": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Everything you need to know about die cutting",
+            "text": "",
+            "link_text": "Learn More",
+            "link_url": "shopify:\/\/blogs\/inspiration\/ultimate-guide-to-die-cutting-machines",
+            "image": "shopify:\/\/shop_images\/Inspiration_Image_3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "7196c499-b5f0-470f-ab6e-c9fd85f2f8ff",
+        "d6dd2b37-c7b2-4cd4-b12f-e27203d24c94",
+        "3028d952-1f2d-4bd2-9161-ffa0e312ddcc"
+      ],
+      "settings": {
+        "heading": "Inspiration",
+        "heading_size": "sm",
+        "link_style": "main",
+        "link_colour": "secondary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "pippin",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "47918638-c2c5-426e-9403-26ad489a72ab",
+    "0e8c6412-dd25-4e9f-be30-3f35c5dc867c",
+    "f6aa5463-7258-4276-baf1-78456d01f8aa",
+    "36536948-f0d5-4c8f-a85e-44f1d6629039",
+    "5335c32d-1b4f-4ad6-ad80-b2a3c221ceed",
+    "0da69147-8336-480d-bd90-6a5d5e63dbcb",
+    "025456b5-93d8-4e0f-82a1-2c93c870ca27",
+    "b6d3e8a8-343e-4745-93d5-ed4d0285cc47"
+  ]
+}

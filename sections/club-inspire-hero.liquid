@@ -1,0 +1,158 @@
+{%- liquid
+  assign template_name = 'section-club-inspire-hero'
+
+  assign edge_version = section.settings.edge_version
+
+  assign image = section.settings.image
+  assign heading = section.settings.heading
+  assign text = section.settings.text
+  assign cta_text = section.settings.cta_text
+  assign message_one = section.settings.message_one
+  assign message_two = section.settings.message_two
+
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-club-inspire-hero.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {%-
+    render 'paper-edge',
+    _bottom_edge_colour: 'white',
+    _section: section
+  -%}
+  <div class="container">
+    <div class="content">
+      <h1 class="u-heading-xl">{{- heading -}}</h1>
+      <p class="u-text-xl">
+        {{- text -}}
+      </p>
+      <div class="actions">
+        <a href="{{- routes.account_register_url -}}" class="c-btn main quinary">
+          {{- 'template.customers.loyalty.sign_up_text' | t -}}
+        </a>
+        <a href="{{- routes.account_login_url -}}" class="c-btn alt quaternary">
+          {{- 'template.customers.loyalty.sign_in_text' | t -}}
+          {%- render 'icon', _name: 'icon-arrow-right' -%}
+        </a>
+      </div>
+      <p class="u-text-lg">{{- cta_text -}}</p>
+    </div>
+    <div class="image">
+      <div class="cta-block one">
+        <p class="u-text-lg">{{- message_one -}}</p>
+      </div>
+      <div class="cta-block two">
+        <p class="u-text-lg">{{- message_two -}}</p>
+      </div>
+      <picture>
+        <source media="(min-width:800px)" srcset="{{- image | image_url: width: 1024 -}}">
+        <source media="(min-width:551px)" srcset="{{- image | image_url: width: 800 -}}">
+        <source media="(max-width: 550.8px)" srcset="{{- image | image_url: width: 600 -}}">
+        <img src="{{- image | image_url: height: 600 -}}" alt="{{- image.alt | default: _heading -}}" height="600" width="390">
+      </picture>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Club Inspire - Hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Minimum width: 1024px and on a transparent background with white outline as per the design in Figma."
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "cta_text",
+      "label": "CTA Text"
+    },
+    {
+      "type": "header",
+      "content": "Promotion Messages"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "message_one",
+      "label": "Message - One"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "message_two",
+      "label": "Message - Two"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "edge-03"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+  ]
+}
+{% endschema %}

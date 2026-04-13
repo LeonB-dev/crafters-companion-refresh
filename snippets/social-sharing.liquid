@@ -1,0 +1,61 @@
+{% liquid
+  assign social_facebook_link = settings.social_facebook_link
+  assign social_facebook_title = 'template.social.facebook_title' | t
+
+  assign social_instagram_link = settings.social_instagram_link
+  assign social_instagram_title = 'template.social.instagram_title' | t
+
+  assign social_tiktok_link = settings.social_tiktok_link
+  assign social_tiktok_title = 'template.social.tiktok_title' | t
+
+  assign social_twitter_link = settings.social_twitter_link
+  assign social_twitter_title = 'template.social.twitter_title' | t
+
+  assign social_youtube_link = settings.social_youtube_link
+  assign social_youtube_title = 'template.social.youtube_title' | t
+%}
+{%- if social_facebook_link != blank -%}
+  <li>
+    <a href="{{ social_facebook_link }}" target="_blank" rel="noopener noreferrer" aria-label="{{- social_facebook_title -}}">
+      <svg >
+        <use xlink:href="#sprite-icon-facebook-f"></use>
+      </svg>
+    </a>
+  </li>
+{%- endif -%}
+{%- if social_instagram_link != blank -%}
+  <li>
+    <a href="{{ social_instagram_link }}" target="_blank" rel="noopener noreferrer" aria-label="{{- social_instagram_title -}}">
+      <svg >
+        <use xlink:href="#sprite-icon-instagram"></use>
+      </svg>
+    </a>
+  </li>
+{%- endif -%}
+{%- if social_tiktok_link != blank -%}
+  <li>
+    <a href="{{ social_tiktok_link }}" target="_blank" rel="noopener noreferrer" aria-label="{{- social_tiktok_title -}}">
+      <svg >
+        <use xlink:href="#sprite-icon-tiktok"></use>
+      </svg>
+    </a>
+  </li>
+{%- endif -%}
+{%- if social_twitter_link != blank -%}
+  <li>
+    <a href="{{ social_twitter_link }}" target="_blank" rel="noopener noreferrer" aria-label="{{- social_twitter_title -}}">
+      <svg >
+        <use xlink:href="#sprite-icon-twitter"></use>
+      </svg>
+    </a>
+  </li>
+{%- endif -%}
+{%- if social_youtube_link != blank -%}
+  <li>
+    <a href="{{ social_youtube_link }}" target="_blank" rel="noopener noreferrer" aria-label="{{- social_youtube_title -}}">
+      <svg >
+        <use xlink:href="#sprite-icon-youtube"></use>
+      </svg>
+    </a>
+  </li>
+{%- endif -%}

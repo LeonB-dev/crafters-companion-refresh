@@ -1,0 +1,241 @@
+{%- liquid
+  assign template_name = 'section-crafters-tv-experts'
+
+  assign edge_version = section.settings.edge_version
+  assign margin_bottom = section.settings.margin_bottom
+  assign background_colour = section.settings.background_colour
+  assign top_edge_colour = section.settings.top_edge_colour
+  assign bottom_edge_colour = section.settings.bottom_edge_colour
+-%}
+
+{{- 'section-crafters-tv-experts.css' | asset_url | stylesheet_tag -}}
+
+<div
+  class="{{- template_name }} u-space-below-{{- margin_bottom }}"
+  data-section-type="{{- template_name -}}"
+  data-section-id="{{ section.id }}">
+  {%- render 'paper-edge', _section: section -%}
+  <div class="container">
+    <h2 class="u-heading-md">{{ section.settings.title }}</h2>
+    <p>{{ section.settings.text }}</p>
+
+    <div class="experts">
+      {% for block in section.blocks %}
+        {% liquid
+          assign name = block.settings.name
+          assign image = block.settings.image
+          assign main_quote = block.settings.main_quote
+          assign craft_speciality = block.settings.craft_speciality
+          assign craft_technique = block.settings.craft_technique
+        %}
+        <div class="craft-expert-block">
+          <div class="image">
+            {%- if image != blank -%}
+              <img
+                src="{{- image | image_url: width: 600 -}}"
+                height="270"
+                width="358"
+                alt="{{- image.alt -}}"
+                loading="lazy"
+                class=""
+              >
+            {%- else -%}
+              {{ 'lifestyle-1' | placeholder_svg_tag }}
+            {%- endif -%}
+          </div>
+          <h3 class="u-heading-xs">{{ name }}</h3>
+          <p class="u-text-lg">{{- main_quote -}}</p>
+          <ol class="presenter-details">
+            <li>
+              {%- render 'icon', _name: 'icon-brush-pen' -%}
+              <dl>
+                <dt><small>{{- 'ctv.craft_speciality' | t -}}</small></dt>
+                <dd class="u-text-lg">{{- craft_speciality -}}</dd>
+              </dl>
+            </li>
+            <li>
+              {%- render 'icon', _name: 'icon-draw-technique' -%}
+              <dl>
+                <dt><small>{{- 'ctv.craft_technique' | t -}}</small></dt>
+                <dd class="u-text-lg">{{- craft_speciality -}}</dd>
+              </dl>
+            </li>
+          </ol>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "CTV Craft Experts",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Content"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text"
+      },
+      {
+        "type": "header",
+        "content": "Settings"
+      }, {
+        "type": "select",
+        "id": "edge_version",
+        "label": "Edge version",
+        "options": [
+          {
+            "value": "edge-01",
+            "label": "One"
+          }, {
+            "value": "edge-02",
+            "label": "Two"
+          }, {
+            "value": "edge-03",
+            "label": "Three"
+          }, {
+            "value": "none",
+            "label": "None"
+          }
+        ],
+        "default": "none"
+      }, {
+        "type": "select",
+        "id": "top_edge_colour",
+        "label": "Top edge colour",
+        "options": [
+          {
+            "value": "green",
+            "label": "Green"
+          },
+          {
+            "value": "pink",
+            "label": "Pink"
+          },
+          {
+            "value": "purple",
+            "label": "Purple"
+          },
+          {
+            "value": "white",
+            "label": "White"
+          }, {
+            "value": "is-hidden",
+            "label": "None"
+          }
+        ],
+        "default": "white"
+      }, {
+        "type": "select",
+        "id": "bottom_edge_colour",
+        "label": "Bottom edge colour",
+        "options": [
+          {
+            "value": "green",
+            "label": "Green"
+          },
+          {
+            "value": "pink",
+            "label": "Pink"
+          },
+          {
+            "value": "purple",
+            "label": "Purple"
+          },
+          {
+            "value": "white",
+            "label": "White"
+          }, {
+            "value": "is-hidden",
+            "label": "None"
+          }
+        ],
+        "default": "white"
+      }, {
+        "type": "select",
+        "id": "background_colour",
+        "label": "Background colour",
+        "info": "This can only be applied if a edge version is selected",
+        "options": [
+          {
+            "value": "black-squeeze",
+            "label": "Green"
+          }, {
+            "value": "pippin",
+            "label": "Pink"
+          }, {
+            "value": "whisper",
+            "label": "Purple"
+          }
+        ],
+        "default": "whisper"
+      }, {
+        "type": "select",
+        "id": "margin_bottom",
+        "label": "Add margin below",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "md",
+            "label": "Medium"
+          }, {
+            "value": "lg",
+            "label": "Large"
+          }
+        ],
+        "default": "lg"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "expert",
+        "name": "Craft Expert",
+        "settings": [
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          }, {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "main_quote",
+            "label": "Quote"
+          },
+          {
+            "type": "text",
+            "id": "craft_speciality",
+            "label": "Craft Speciality"
+          },
+          {
+            "type": "text",
+            "id": "craft_technique",
+            "label": "Craft Technique"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "CTV Craft Experts",
+        "category": "Content"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,91 @@
+{%- liquid
+  assign template_name = 'section-quote-slider'
+
+  assign slides = section.blocks | map: 'settings'
+
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-quote-slider.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-quote-slider.js' | asset_url -}}" defer></script>
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="wrapper">
+      <div class="swiper-container" data-quote-slider>
+        <div class="swiper-wrapper">
+          {%- for block in slides -%}
+            {% liquid
+              assign quote = block.quote
+              assign author_text = block.author_text
+            %}
+            <div class="swiper-slide" data-quote-slide>
+              {%- render 'icon', _name: 'icon-close-quote' -%}
+              {{ quote }}
+              <span class="author-text">{{ author_text }}</span>
+            </div>
+          {%- endfor -%}
+        </div>
+        <div class="swiper-pagination" data-quote-slider-pagination></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Quote Slider",
+  "tag": "section",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quote_slide",
+      "name": "Quote",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": "Quote"
+        },
+        {
+          "type": "text",
+          "id": "author_text",
+          "label": "Author Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quote Slider",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,207 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "featured_image_4kQAyj": {
+      "type": "featured-image",
+      "settings": {
+        "url": "https:\/\/donation.comicrelief.com\/",
+        "image": "shopify:\/\/shop_images\/unnamed_1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/unnamed_2.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "text_only_gGKctC": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "\"It’s been an epic adventure for an unbelievable cause\"",
+        "small_text": "<p>Comic Relief is something we sit down and watch as a family every year and last year I followed Emma Willis, Oti Mabuse and Rylan on the trek in Scotland and my son said to me, ‘Mammy that’s so amazing, why didn’t you go and help?’. It really hit home to me that I know I’m in a privileged position where I can go and do something to help raise funds, to do my bit, so this year that’s exactly what I’m doing. Every snowy step was captured for a special BBC One and iPlayer documentary which will air on <strong>Friday, 15th March<\/strong>.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "text_and_image_qKEnTb": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Sara_Comic_Relief_1.jpg",
+        "main_heading": "\"Those three lasses became my family. With cuddles, pep talks when the going got tough, and a shoulder to cry on when those moments hit\"",
+        "main_text": "",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "sm",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "featured_image_Je7PKw": {
+      "type": "featured-image",
+      "settings": {
+        "url": "http:\/\/comicrelief.com\/sara",
+        "image": "shopify:\/\/shop_images\/Banner_Desktop_D.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Banner_Mobile_B.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "content_block_trio_3TK4Vj": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_bekhhH": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Sara_Comic_Relief_2.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "content_block_mPRYki": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/SGB-20022024-BH-016.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "content_block_6cPpHL": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Sara_Comic_Relief.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_bekhhH",
+        "content_block_mPRYki",
+        "content_block_6cPpHL"
+      ],
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "text_only_TcFbCh": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "\"The one thing that’s kept us going is what we’re doing it for, to raise vital funds for people who need it.\"",
+        "small_text": "",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "content_block_trio_wBQWUR": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_kNL7TX": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Sara Davies Socials",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/SGB-22022024-BH-00428.jpg",
+            "link_text": "Follow Sara",
+            "link_url": "https:\/\/www.instagram.com\/saradaviescc"
+          }
+        },
+        "content_block_RVYLMf": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Comic Relief Donations",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/SGB-08022024-1.jpg",
+            "link_text": "Donate Now",
+            "link_url": "http:\/\/comicrelief.com\/sara"
+          }
+        },
+        "content_block_MnGDbF": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Comic Relief Socials",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/SGB-22022024-BH-00374.jpg",
+            "link_text": "Follow Now",
+            "link_url": "https:\/\/www.instagram.com\/comicrelief\/"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_kNL7TX",
+        "content_block_RVYLMf",
+        "content_block_MnGDbF"
+      ],
+      "settings": {
+        "use_image_only": false,
+        "link_style": "main",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "text_only_YxWLLK": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Founder of Crafter's Companion, Sara Davies joined forces with Vicky Pattison, Alex Scott & Laura Whitmore to take on the Arctic for Comic Relief 2024. The team of four took on gruelling conditions and plummeting temperatures to complete the trek in aid of tackling poverty around the world. <\/p><p>To read more about Sara's experience and discover why this charity is so close to her heart head on over to <a href=\"https:\/\/sara-davies.com\/on-tv\/comic-relief\/\" target=\"_blank\" title=\"https:\/\/sara-davies.com\/on-tv\/comic-relief\/\">Sara Davies<\/a> website.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "featured_image_4kQAyj",
+    "text_only_gGKctC",
+    "text_and_image_qKEnTb",
+    "featured_image_Je7PKw",
+    "content_block_trio_3TK4Vj",
+    "text_only_TcFbCh",
+    "content_block_trio_wBQWUR",
+    "text_only_YxWLLK"
+  ]
+}

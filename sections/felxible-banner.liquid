@@ -1,0 +1,253 @@
+<section id="flexible-banner-{{ section.id }}" class="flexible-banner"
+  style="background-color: {{ section.settings.background_color }};
+         max-width: {{ section.settings.banner_width }}%;
+         margin: 0 auto;">
+
+  <!-- DESKTOP VIDEO -->
+  {% if section.settings.desktop_video != blank %}
+    <video autoplay muted loop playsinline class="banner-video desktop-video">
+      <source src="{{ section.settings.desktop_video }}" type="video/mp4">
+      <img src="{{ section.settings.desktop_image | img_url: '2000x' }}"
+           alt="{{ section.settings.image_alt_text }}"
+           class="banner-image">
+    </video>
+  {% endif %}
+
+  <!-- MOBILE VIDEO -->
+  {% if section.settings.mobile_video != blank %}
+    <video autoplay muted loop playsinline class="banner-video mobile-video">
+      <source src="{{ section.settings.mobile_video }}" type="video/mp4">
+      <img src="{{ section.settings.mobile_image | img_url: '900x' }}"
+           alt="{{ section.settings.image_alt_text }}"
+           class="banner-image">
+    </video>
+  {% endif %}
+
+  <!-- Fallback Images if no video -->
+  {% if section.settings.desktop_video == blank and section.settings.mobile_video == blank %}
+    <picture>
+      <source media="(max-width: 768px)" srcset="{{ section.settings.mobile_image | img_url: '900x' }}">
+      <img src="{{ section.settings.desktop_image | img_url: '2000x' }}"
+           alt="{{ section.settings.image_alt_text }}"
+           class="banner-image">
+    </picture>
+  {% endif %}
+
+  <!-- DESKTOP CONTENT -->
+  <div class="desktop-content"
+       style="top: {{ section.settings.content_top }}%;
+              left: {{ section.settings.content_left }}%;">
+    <h1 class="desktop-heading">{{ section.settings.heading_text }}</h1>
+    <p class="desktop-subheading">{{ section.settings.subheading_text }}</p>
+    {% if section.settings.button_text != blank %}
+      <a href="{{ section.settings.button_link }}" class="desktop-button">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+  </div>
+
+  <!-- MOBILE CONTENT -->
+  <div class="mobile-content"
+       style="top: {{ section.settings.mobile_block_top }}%;
+              left: {{ section.settings.mobile_block_left }}%;">
+    <h1 class="mobile-heading">{{ section.settings.heading_text }}</h1>
+    <p class="mobile-subheading">{{ section.settings.subheading_text }}</p>
+    {% if section.settings.button_text != blank %}
+      <a href="{{ section.settings.button_link }}" class="mobile-button">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+  </div>
+
+</section>
+
+<style>
+/* Scope all styles to this section instance */
+#flexible-banner-{{ section.id }} {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Banner Video / Image */
+#flexible-banner-{{ section.id }} .banner-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+#flexible-banner-{{ section.id }} .desktop-video { display: block; }
+#flexible-banner-{{ section.id }} .mobile-video { display: none; }
+
+#flexible-banner-{{ section.id }} .banner-image {
+  width: 100%;
+  display: block;
+}
+
+/* ================= DESKTOP ================= */
+#flexible-banner-{{ section.id }} .desktop-content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 40%;
+}
+
+#flexible-banner-{{ section.id }} .desktop-heading {
+  color: {{ section.settings.heading_color }};
+  font-size: {{ section.settings.heading_size }}px;
+  font-weight: {{ section.settings.heading_weight }};
+  margin: 0;
+}
+
+#flexible-banner-{{ section.id }} .desktop-subheading {
+  color: {{ section.settings.subheading_color }};
+  font-size: {{ section.settings.subheading_size }}px;
+  font-weight: {{ section.settings.subheading_weight }};
+  margin: 6px 0 0;
+}
+
+#flexible-banner-{{ section.id }} .desktop-button {
+  display: inline-block;
+  margin-top: 12px;
+  width: {{ section.settings.button_width }}px;
+  height: {{ section.settings.button_height }}px;
+  line-height: {{ section.settings.button_height }}px;
+  background: {{ section.settings.button_bg_color }};
+  color: {{ section.settings.button_text_color }};
+  font-size: {{ section.settings.button_size }}px;
+  font-weight: {{ section.settings.button_weight }};
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+#flexible-banner-{{ section.id }} .desktop-button:hover {
+  background: {{ section.settings.button_hover_bg_color }};
+  color: {{ section.settings.button_hover_text_color }};
+}
+
+/* ================= MOBILE ================= */
+#flexible-banner-{{ section.id }} .mobile-content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 100%;
+  padding: 0 8px;
+}
+
+#flexible-banner-{{ section.id }} .mobile-heading {
+  color: {{ section.settings.heading_color_mobile }};
+  font-size: {{ section.settings.heading_size_mobile }}px;
+  font-weight: {{ section.settings.heading_weight_mobile }};
+  margin: 0;
+  line-height: 1.2;
+
+  /* Ensure ALL text shows */
+  white-space: normal;
+  overflow: visible;
+}
+
+#flexible-banner-{{ section.id }} .mobile-subheading {
+  color: {{ section.settings.subheading_color_mobile }};
+  font-size: {{ section.settings.subheading_size_mobile }}px;
+  font-weight: {{ section.settings.subheading_weight_mobile }};
+  margin-top: 6px;
+}
+
+#flexible-banner-{{ section.id }} .mobile-button {
+  display: inline-block;
+  margin-top: {{ section.settings.mobile_button_spacing }}px;
+  width: {{ section.settings.button_width_mobile }}px;
+  height: {{ section.settings.button_height_mobile }}px;
+  line-height: {{ section.settings.button_height_mobile }}px;
+  background: {{ section.settings.button_bg_color_mobile }};
+  color: {{ section.settings.button_text_color_mobile }};
+  font-size: {{ section.settings.button_size_mobile }}px;
+  font-weight: {{ section.settings.button_weight_mobile }};
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+#flexible-banner-{{ section.id }} .mobile-button:hover {
+  background: {{ section.settings.button_hover_bg_color }};
+  color: {{ section.settings.button_hover_text_color }};
+}
+
+/* VISIBILITY */
+@media (max-width: 768px) {
+  #flexible-banner-{{ section.id }} .desktop-video { display: none; }
+  #flexible-banner-{{ section.id }} .mobile-video { display: block; }
+  #flexible-banner-{{ section.id }} .desktop-content { display: none; }
+}
+
+@media (min-width: 769px) {
+  #flexible-banner-{{ section.id }} .mobile-video { display: none; }
+  #flexible-banner-{{ section.id }} .desktop-video { display: block; }
+  #flexible-banner-{{ section.id }} .mobile-content { display: none; }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Flexible Banner",
+  "settings": [
+    { "type": "url", "id": "desktop_video", "label": "Desktop Video URL (MP4)" },
+    { "type": "url", "id": "mobile_video", "label": "Mobile Video URL (MP4)" },
+
+    { "type": "image_picker", "id": "desktop_image", "label": "Desktop Image" },
+    { "type": "image_picker", "id": "mobile_image", "label": "Mobile Image" },
+    { "type": "text", "id": "image_alt_text", "label": "Image Alt Text" },
+
+    { "type": "text", "id": "heading_text", "label": "Heading" },
+    { "type": "color", "id": "heading_color", "label": "Heading Color (Desktop)" },
+    { "type": "number", "id": "heading_size", "label": "Heading Size (Desktop)", "default": 36 },
+    { "type": "number", "id": "heading_weight", "label": "Heading Weight (Desktop)", "default": 700 },
+
+    { "type": "text", "id": "subheading_text", "label": "Subheading" },
+    { "type": "color", "id": "subheading_color", "label": "Subheading Color (Desktop)" },
+    { "type": "number", "id": "subheading_size", "label": "Subheading Size (Desktop)", "default": 18 },
+    { "type": "number", "id": "subheading_weight", "label": "Subheading Weight (Desktop)", "default": 400 },
+
+    { "type": "text", "id": "button_text", "label": "Button Text" },
+    { "type": "url", "id": "button_link", "label": "Button Link" },
+    { "type": "color", "id": "button_bg_color", "label": "Button Background (Desktop)" },
+    { "type": "color", "id": "button_text_color", "label": "Button Text (Desktop)" },
+    { "type": "color", "id": "button_hover_bg_color", "label": "Button Hover Background" },
+    { "type": "color", "id": "button_hover_text_color", "label": "Button Hover Text" },
+    { "type": "number", "id": "button_width", "label": "Button Width (Desktop)", "default": 150 },
+    { "type": "number", "id": "button_height", "label": "Button Height (Desktop)", "default": 40 },
+    { "type": "number", "id": "button_size", "label": "Button Font Size (Desktop)", "default": 16 },
+    { "type": "number", "id": "button_weight", "label": "Button Font Weight (Desktop)", "default": 600 },
+
+    { "type": "range", "id": "content_top", "label": "Desktop Content Top (%)", "min": 0, "max": 100, "default": 50 },
+    { "type": "range", "id": "content_left", "label": "Desktop Content Left (%)", "min": 0, "max": 100, "default": 50 },
+
+    { "type": "number", "id": "heading_size_mobile", "label": "Heading Size (Mobile)", "default": 26 },
+    { "type": "number", "id": "heading_weight_mobile", "label": "Heading Weight (Mobile)", "default": 700 },
+    { "type": "color", "id": "heading_color_mobile", "label": "Heading Color (Mobile)" },
+
+    { "type": "number", "id": "subheading_size_mobile", "label": "Subheading Size (Mobile)", "default": 16 },
+    { "type": "number", "id": "subheading_weight_mobile", "label": "Subheading Weight (Mobile)", "default": 400 },
+    { "type": "color", "id": "subheading_color_mobile", "label": "Subheading Color (Mobile)" },
+
+    { "type": "number", "id": "button_width_mobile", "label": "Button Width (Mobile)", "default": 120 },
+    { "type": "number", "id": "button_height_mobile", "label": "Button Height (Mobile)", "default": 36 },
+    { "type": "number", "id": "button_size_mobile", "label": "Button Font Size (Mobile)", "default": 14 },
+    { "type": "number", "id": "button_weight_mobile", "label": "Button Font Weight (Mobile)", "default": 600 },
+    { "type": "color", "id": "button_bg_color_mobile", "label": "Button Background (Mobile)" },
+    { "type": "color", "id": "button_text_color_mobile", "label": "Button Text (Mobile)" },
+
+    { "type": "range", "id": "mobile_block_top", "label": "Mobile Content Top (%)", "min": 0, "max": 100, "default": 35 },
+    { "type": "range", "id": "mobile_block_left", "label": "Mobile Content Left (%)", "min": 0, "max": 100, "default": 50 },
+
+    { "type": "range", "id": "mobile_button_spacing", "label": "Mobile Space Above Button (px)", "min": 0, "max": 60, "step": 2, "default": 12 },
+
+    { "type": "range", "id": "banner_width", "label": "Banner Width (%)", "min": 50, "max": 100, "default": 100 },
+    { "type": "color", "id": "background_color", "label": "Background Color" }
+  ],
+  "presets": [
+    { "name": "Flexible Banner" }
+  ]
+}
+{% endschema %}

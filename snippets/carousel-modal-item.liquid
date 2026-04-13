@@ -1,0 +1,13 @@
+<div class="modal" data-modal-container="{{ _index }}">
+  <div class="modal-wrapper">
+    <div class="modal-header">
+      <p class="u-text-xl">{{- _media.settings.heading -}}</p>
+      <button class="c-btn modal-close" type="button" aria-label="Close" data-modal-close="{{ _index }}">
+        {%- render 'icon', _name: 'icon-close' -%}
+      </button>
+    </div>
+    <div class="modal-content">
+      {{- _media.settings.video | video_tag: controls: true -}}
+    </div>
+  </div>
+</div>

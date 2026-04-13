@@ -1,0 +1,218 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "store-hero",
+      "blocks": {
+        "c6c5669c-d316-45e2-997f-e3735f18cbaa": {
+          "type": "block",
+          "settings": {
+            "day": "Monday",
+            "opening_time": "9",
+            "closing_time": "4:30"
+          }
+        },
+        "929282cd-9911-4a05-96ba-5a0151586407": {
+          "type": "block",
+          "settings": {
+            "day": "Tuesday",
+            "opening_time": "9",
+            "closing_time": "4:30"
+          }
+        },
+        "7ddd6bdb-2d7c-4d8b-b69c-fd578fde6302": {
+          "type": "block",
+          "settings": {
+            "day": "Wednesday",
+            "opening_time": "9",
+            "closing_time": "4:30"
+          }
+        },
+        "df5320c4-be26-4415-872e-68be268efa04": {
+          "type": "block",
+          "settings": {
+            "day": "Thursday",
+            "opening_time": "9",
+            "closing_time": "4:30"
+          }
+        },
+        "24bbb0b5-d146-4757-a142-e10933802144": {
+          "type": "block",
+          "settings": {
+            "day": "Friday",
+            "opening_time": "9",
+            "closing_time": "4:30"
+          }
+        },
+        "9fe9a1d5-5519-489c-9f7a-5e9fc9f5f1e9": {
+          "type": "block",
+          "settings": {
+            "day": "Saturday",
+            "opening_time": "9",
+            "closing_time": "4:30"
+          }
+        },
+        "0464509c-c0ef-41c8-920c-83782e2644d1": {
+          "type": "block",
+          "settings": {
+            "day": "Sunday",
+            "opening_time": "10",
+            "closing_time": "4"
+          }
+        }
+      },
+      "block_order": [
+        "c6c5669c-d316-45e2-997f-e3735f18cbaa",
+        "929282cd-9911-4a05-96ba-5a0151586407",
+        "7ddd6bdb-2d7c-4d8b-b69c-fd578fde6302",
+        "df5320c4-be26-4415-872e-68be268efa04",
+        "24bbb0b5-d146-4757-a142-e10933802144",
+        "9fe9a1d5-5519-489c-9f7a-5e9fc9f5f1e9",
+        "0464509c-c0ef-41c8-920c-83782e2644d1"
+      ],
+      "settings": {
+        "address": "Unit 8, \nDobbies Garden Centre, \nHighwood Way, \nBarlborough Links, \nS43 4XN",
+        "telephone": "01246 811838",
+        "email": "chesterfieldstore@crafterscompanion.co.uk",
+        "bh_opening_time": "10",
+        "bh_closing_time": "4",
+        "map_embed": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d2385.5513738142827!2d-1.2826370866811199!3d53.2796574795944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487999768130bbd9%3A0x896664bca29d368e!2sCrafter's%20Companion%20Chesterfield!5e0!3m2!1sen!2suk!4v1690445723310!5m2!1sen!2suk\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>"
+      }
+    },
+    "8bb0d60a-081e-4484-ad69-2758891a066e": {
+      "type": "media-slider",
+      "blocks": {
+        "6f4e4706-3514-489f-b6a3-ef8415ca4e41": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_202_6.png"
+          }
+        },
+        "72c4ee01-bacb-4d20-9367-a3432c5a6bfc": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_202_3.png"
+          }
+        },
+        "6b8d35b2-fe0e-4766-b074-d670e43d05b6": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_202_2_f2928b22-50ac-4437-bf07-703d6618fab7.png"
+          }
+        },
+        "775cc2ec-810b-4cce-8acc-f4e8836d9cc2": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_202_43717af7-5c35-447b-b45d-a275aac83cbd.png"
+          }
+        },
+        "2d35c85e-a99d-439b-ae93-1f1de21da4ae": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_202_3.png"
+          }
+        }
+      },
+      "block_order": [
+        "6f4e4706-3514-489f-b6a3-ef8415ca4e41",
+        "72c4ee01-bacb-4d20-9367-a3432c5a6bfc",
+        "6b8d35b2-fe0e-4766-b074-d670e43d05b6",
+        "775cc2ec-810b-4cce-8acc-f4e8836d9cc2",
+        "2d35c85e-a99d-439b-ae93-1f1de21da4ae"
+      ],
+      "settings": {
+        "large": true,
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "b2d37a0c-ee60-4cb6-9acf-66dfa18dd99b": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/sigmund-TJxotQTUr8o-unsplash.jpg",
+        "main_heading": "Ac fermentum egestas quis.",
+        "main_text": "<p>Adipiscing lacus fermentum vestibulum platea. Integer nulla pharetra mus mauris rutrum lobortis egestas.<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "What’s in store",
+        "list_text": "<p>Home Decor<\/p><p>Haberdashery<\/p><p>Papercraft<\/p><p>Friendly Staff<\/p><p>Art & Colouring<\/p><p>Dedicated Educational Area<\/p><p>Workshops & Demonstrations<\/p>",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": true,
+        "shape_background": "shopify:\/\/shop_images\/background-noise-02.png",
+        "shape_position": "vertical-end",
+        "enable_dots": false,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "fd890282-4688-40ed-8ceb-73293e546d8c": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Craft Along in store",
+        "text": "<p>Integer mauris lacus eget nunc faucibus id. Commodo nullam bibendum nibh vitae natoque suscipit. Tortor mi vitae enim in proin sagittis.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "19549d29-befd-40f1-83e8-a8fe50bb8abf": {
+      "type": "downloads",
+      "blocks": {
+        "71dc08d2-094b-4e5b-a19c-ec0afaf091e1": {
+          "type": "download_block",
+          "settings": {
+            "file": "shopify:\/\/collections\/accessories",
+            "file_name": "June 2023 Schedule",
+            "text": "<p>Sed pellentesque ut nunc id. Tincidunt duis tellus quam lectus suspendisse dolor tempor convallis congue. Scelerisque fermentum aliquet id lacinia ac bibendum pellentesque ac. <\/p>",
+            "download_text": "Download"
+          }
+        },
+        "146d5ade-8c93-44c2-8e4b-87aa39c2a996": {
+          "type": "download_block",
+          "settings": {
+            "file": "shopify:\/\/collections\/all",
+            "file_name": "July 2023 Schedule",
+            "text": "<p>Tincidunt duis tellus quam lectus suspendisse dolor tempor convallis congue. Scelerisque fermentum aliquet id lacinia ac bibendum pellentesque ac. <\/p>",
+            "download_text": "Download"
+          }
+        }
+      },
+      "block_order": [
+        "71dc08d2-094b-4e5b-a19c-ec0afaf091e1",
+        "146d5ade-8c93-44c2-8e4b-87aa39c2a996"
+      ],
+      "settings": {
+        "grid_layout": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "8bb0d60a-081e-4484-ad69-2758891a066e",
+    "b2d37a0c-ee60-4cb6-9acf-66dfa18dd99b",
+    "fd890282-4688-40ed-8ceb-73293e546d8c",
+    "19549d29-befd-40f1-83e8-a8fe50bb8abf"
+  ]
+}

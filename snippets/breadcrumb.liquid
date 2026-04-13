@@ -1,0 +1,126 @@
+{{- 'snippet-breadcrumb.css' | asset_url | stylesheet_tag -}}
+
+<nav aria-label="{{ 'breadcrumb.aria_label' | t }}" role="navigation" class="snippet-breadcrumb">
+  {%- capture separator -%}
+    {%- render 'icon', _name: 'icon-chevron-right' -%}
+  {%- endcapture -%}
+
+  <ol>
+    <li>
+      <a href="{{ routes.root_url }}" title="Home" rel="home">Home</a>
+    </li>
+    {%- if template contains 'page' -%}
+      <li>
+        {{ separator }}
+        <span aria-current="page">{{ page.title | escape }}</span>
+      </li>
+    {%- elsif template contains 'customer' -%}
+      {%- if template != 'customers/account' -%}
+        <li>
+          {{ separator }}
+          <a href="{{ routes.account_url }}" title="{{ 'Account' | escape }}">{{ 'Account' | escape }}</a>
+        </li>
+      {%- endif -%}
+      {%- if template == 'customers/login' -%}
+        <li>
+          {{ separator }}
+          <span aria-current="page">{{ 'Login' | escape }}</span>
+        </li>
+      {%- else -%}
+        <li>
+          {{ separator }}
+          <span aria-current="page">{{ page_title | escape }}</span>
+        </li>
+      {%- endif -%}
+    {%- elsif template contains 'search' -%}
+      <li>
+        {{ separator }}
+        <span aria-current="page">{{ 'Search' | escape }}</span>
+      </li>
+    {%- elsif template contains 'product' -%}
+      {%- if collection.url -%}
+        <li>
+          {{ separator }}
+          <a href="{{ collection.url }}" title="{{ collection.title | escape }}">{{ collection.title | escape }}</a>
+        </li>
+      {%- else -%}
+        <li>
+          {{ separator }}
+          <a href="{{ routes.collections_url | append: '/all' }}" title="{{ 'Products' | escape }}">{{ 'Products' | escape }}</a>
+        </li>
+      {%- endif -%}
+      <li>
+        {{ separator }}
+        <span aria-current="page">{{ product.title | escape }}</span>
+      </li>
+    {%- elsif template contains 'collection' and collection.handle -%}
+      {%- unless current_tags -%}
+        <li>
+          {{ separator }}
+          <span aria-current="page">{{ collection.title | escape }}</span>
+        </li>
+      {%- else -%}
+        <li>
+          {{ separator }}
+          <a href="{{ collection.url }}" title="{{ collection.title | escape }}">{{ collection.title | escape }}</a>
+        </li>
+        {%- assign tag_url = collection.url -%}
+        {%- for tag in current_tags -%}
+          {%- assign tag_parts = tag | split: '_' -%}
+          {%- assign tag_key = tag_parts | first -%}
+          {%- assign tag_value = tag_parts | last -%}
+
+          {%- if tag_url == collection.url -%}
+            {%- assign tag_url = tag_url | append: '/' | append: tag | downcase -%}
+          {%- else -%}
+            {%- assign tag_url = tag_url | append: '+' | append: tag | downcase -%}
+          {%- endif -%}
+
+          <li>
+            {{ separator }}
+            {%- if tag_parts.size > 1 -%}
+              {%- unless forloop.last -%}
+                <a href="{{ tag_url }}" title="{{ tag_key | append: ': ' | append: tag_value | escape }}">{{ tag_key | append: ': ' | append: tag_value | escape }}</a>
+              {%- else -%}
+                <span aria-current="page">{{ tag_key | append: ': ' | append: tag_value | escape }}</span>
+              {%- endunless -%}
+            {%- else -%}
+              <span aria-current="page">{{ tag | escape }}</span>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      {%- endunless -%}
+    {%- elsif template contains 'blog' -%}
+      {%- unless current_tags -%}
+        <li>
+          {{ separator }}
+          <span aria-current="page">{{ blog.title | escape }}</span>
+        </li>
+      {%- else -%}
+        <li>
+          {{ separator }}
+          <a href="{{ blog.url }}" title="{{ blog.title | escape }}">{{ blog.title | escape }}</a>
+        </li>
+        <li>
+          {%- assign first_tag = current_tags | first -%}
+          {{ separator }}
+          <span aria-current="page">{{ first_tag | escape }}</span>
+        </li>
+      {%- endunless -%}
+    {%- elsif template contains 'article' -%}
+      <li>
+        {{ separator }}
+        <a href="{{ blog.url }}" title="{{ blog.title | escape }}">{{ blog.title | escape }}</a>
+      </li>
+      <li>
+        {{ separator }}
+        <span aria-current="page">{{ article.title | escape }}</span>
+      </li>
+    {%- else -%}
+      <li>
+        {{ separator }}
+        <span aria-current="page">{{ page_title | escape }}</span>
+      </li>
+    {%- endif -%}
+  </ol>
+</nav>

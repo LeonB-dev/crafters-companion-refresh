@@ -1,0 +1,99 @@
+{%- liquid
+  assign template_name = 'section-quote-and-image'
+
+  assign image = section.settings.image
+  assign quote = section.settings.quote
+  assign author_text = section.settings.author_text
+
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-quote-and-image.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="wrapper">
+      <div class="image">
+        <picture>
+          <source media="(min-width:551px)" srcset="{{- image | image_url: width: 600 -}}">
+          <source media="(max-width: 550.8px)" srcset="{{- image | image_url: width: 400 -}}">
+          <img src="{{- image | image_url: width: 400 -}}" alt="{{- image.alt | default: quote -}}" height="400" width="600">
+        </picture>
+      </div>
+      <div class="quote">
+        {%- render 'icon', _name: 'icon-close-quote' -%}
+        <div class="quote-content">
+          {% if quote != blank %}
+            {{ quote }}
+          {% endif %}
+          {% if author_text != blank %}
+            <span class="author-text">{{ author_text }}</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Quote and Image",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "richtext",
+      "id": "quote",
+      "label": "Quote"
+    },
+    {
+      "type": "text",
+      "id": "author_text",
+      "label": "Author Text"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Quote and Image",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

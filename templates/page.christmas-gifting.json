@@ -1,0 +1,212 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "text_only_rFc9pA": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "none"
+      }
+    },
+    "featured_image_nMMEpy": {
+      "type": "featured-image",
+      "settings": {
+        "url": "",
+        "image": "shopify://shop_images/Make-Christmas-1600-x-400-B_0808eaad-ecbb-4e88-b428-954f41ead691.gif",
+        "image_mobile": "shopify://shop_images/Make-Christmas-800-x-900.gif",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "c0982768-078f-46d4-a9ca-d896ffc6f0ce": {
+      "type": "image-text-slider",
+      "blocks": {
+        "7960702d-7980-4978-aac0-e75683ce0829": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/gift-tags-gift-wrap",
+            "image": "shopify://shop_images/Gift_Tags_Gift_Wrap_400_x_300.jpg"
+          }
+        },
+        "7047632c-130d-484f-9c90-e7991770d9f2": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/christmas-card-making",
+            "image": "shopify://shop_images/Card_Making_400_x_300_fb00c84c-dd68-4d20-ba7b-c0ce4ed45c38.jpg"
+          }
+        },
+        "e16b8cb4-9478-4a96-b4e9-b5addb7ca1cc": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/christmas-home-decor",
+            "image": "shopify://shop_images/Home_Decor_400_x_300_4e095b66-ba0c-4313-ab78-c3cbf81304d3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "7960702d-7980-4978-aac0-e75683ce0829",
+        "7047632c-130d-484f-9c90-e7991770d9f2",
+        "e16b8cb4-9478-4a96-b4e9-b5addb7ca1cc"
+      ],
+      "settings": {
+        "heading": "Get creative this Christmas!",
+        "heading_size": "sm",
+        "link_style": "main",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "black-squeeze",
+        "margin_bottom": "sm"
+      }
+    },
+    "featured_image_MaWmMz": {
+      "type": "featured-image",
+      "settings": {
+        "url": "shopify://collections/christmas-stamps-dies-stencils",
+        "image": "shopify://shop_images/Stamps_Dies_Stencils_1600_x_400_80444ec8-a68a-4d47-a6d6-d5d23cd8b556.jpg",
+        "image_mobile": "shopify://shop_images/Stamps_Dies_Stencils_800_x_900.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "none"
+      }
+    },
+    "3dd709ff-5406-488b-82b7-d6557ef04c98": {
+      "type": "image-text-slider",
+      "blocks": {
+        "36796bcd-27e6-4bda-9770-2f8be38d6043": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/craftsmas-paper-and-card",
+            "image": "shopify://shop_images/Card_400_x_300_91862e33-5d87-49e8-9cee-c113b2f73229.jpg"
+          }
+        },
+        "7eba44c9-1968-473a-966f-59900b52f3f6": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/christmas-embellishments-1",
+            "image": "shopify://shop_images/Embellishments_400_x_300_8aa6676a-a35d-409c-ae0d-bc501f2d3fe9.jpg"
+          }
+        },
+        "dd813bef-8b89-49fb-87e0-9b6a9ca47eae": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/christmas-gifting",
+            "image": "shopify://shop_images/Gifting_400_x_300_10aab885-0924-45e4-937d-a163300912cc.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "36796bcd-27e6-4bda-9770-2f8be38d6043",
+        "7eba44c9-1968-473a-966f-59900b52f3f6",
+        "dd813bef-8b89-49fb-87e0-9b6a9ca47eae"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "sm",
+        "link_style": "main",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "black-squeeze",
+        "margin_bottom": "sm"
+      }
+    },
+    "7f475e57-3e5d-4845-9969-08ea8c3af3b9": {
+      "type": "featured-products",
+      "blocks": {
+        "3375f709-88fa-443a-b744-c74151df0c31": {
+          "type": "product_list",
+          "settings": {
+            "product_list": [
+              "gemini-ii-machine-north-american-version",
+              "crafter-s-companion-letterpress",
+              "my-special-christmas-papers-box-12-x-12",
+              "glittering-gold",
+              "card-making-kit-home-for-christmas",
+              "crafters-companion-3d-box-die-and-stencil-set-o-christmas-tree",
+              "jingle-all-the-way-paper-pad-6-x-6",
+              "crafters-companion-5-5-x-5-5-pre-cut-layering-pad-christmas",
+              "crafters-companion-6x6-red-green-card-envelopes-100pc",
+              "cc-faux-snow-100g"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "3375f709-88fa-443a-b744-c74151df0c31"
+      ],
+      "settings": {
+        "heading": "Must Have Christmas Gifts",
+        "heading_alignment": true,
+        "link_url": "shopify://collections/must-have-christmas-gifts",
+        "link_text": "Shop All",
+        "grid_size": "lg",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "sm"
+      }
+    },
+    "b2bdb273-ae49-4be9-90bd-cb840aefb4d8": {
+      "type": "featured-image",
+      "disabled": true,
+      "settings": {
+        "url": "shopify://blogs/crafters-tv-schedule",
+        "image": "shopify://shop_images/CTV_1600_x_400.jpg",
+        "image_mobile": "shopify://shop_images/CTV_800_x_900.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": true,
+        "margin_bottom": "none"
+      }
+    }
+  },
+  "order": [
+    "text_only_rFc9pA",
+    "featured_image_nMMEpy",
+    "c0982768-078f-46d4-a9ca-d896ffc6f0ce",
+    "featured_image_MaWmMz",
+    "3dd709ff-5406-488b-82b7-d6557ef04c98",
+    "7f475e57-3e5d-4845-9969-08ea8c3af3b9",
+    "b2bdb273-ae49-4be9-90bd-cb840aefb4d8"
+  ]
+}

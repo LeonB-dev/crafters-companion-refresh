@@ -1,0 +1,66 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "contact",
+      "blocks": {
+        "b249d270-93de-4916-b664-4d2b50570ffd": {
+          "type": "first_last_name",
+          "settings": {
+            "first_name_text": "First name:",
+            "first_name_placeholder": "",
+            "last_name_text": "Last name:",
+            "last_name_placeholder": ""
+          }
+        },
+        "6f18b0f6-dc8c-4192-bb5c-dd3cbef716a4": {
+          "type": "email",
+          "settings": {
+            "heading": "Email address:",
+            "placeholder": ""
+          }
+        },
+        "218e39d8-1ae6-4f0b-9282-bb44030bd226": {
+          "type": "telephone",
+          "settings": {
+            "heading": "Telephone number:",
+            "placeholder": ""
+          }
+        },
+        "df205563-df6d-4ff8-998b-248c2d0bc285": {
+          "type": "message",
+          "settings": {
+            "heading": "Message:",
+            "placeholder": ""
+          }
+        }
+      },
+      "block_order": [
+        "b249d270-93de-4916-b664-4d2b50570ffd",
+        "6f18b0f6-dc8c-4192-bb5c-dd3cbef716a4",
+        "218e39d8-1ae6-4f0b-9282-bb44030bd226",
+        "df205563-df6d-4ff8-998b-248c2d0bc285"
+      ],
+      "settings": {
+        "form_heading": "Contact Us",
+        "form_text": "Send us a message and we’ll get back to you as quickly as possible.",
+        "form_embed": "",
+        "form_subheading": "",
+        "form_image": "shopify:\/\/shop_images\/teacher-and-student-painting.webp",
+        "form_id": "contact-form",
+        "submit_text": "Send message"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

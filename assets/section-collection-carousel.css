@@ -1,0 +1,97 @@
+@media (min-width: 768px) {
+  .section-collection-carousel {
+    padding-top: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .section-collection-carousel .heading {
+    display: grid;
+    grid-template-columns: 10fr 8fr;
+    padding-bottom: 1.5rem;
+  }
+}
+.section-collection-carousel .heading h2 {
+  padding-right: 2rem;
+}
+.section-collection-carousel .heading p {
+  grid-row: 1;
+  grid-column: 2;
+  font-size: var(--font-size-m);
+}
+@media (min-width: 768px) {
+  .section-collection-carousel .heading p {
+    font-size: var(--font-size-xl);
+  }
+}
+.section-collection-carousel simple-slider > ul {
+  gap: 2.5rem;
+  scroll-padding-left: 1rem;
+}
+.section-collection-carousel simple-slider li.list-item .image {
+  aspect-ratio: 1/1;
+  width: 100%;
+}
+.section-collection-carousel simple-slider li.list-item .image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: initial;
+}
+.section-collection-carousel simple-slider .slider-ui button {
+  color: var(--colour-white);
+  background: var(--colour-black);
+  opacity: 0.25;
+}
+.section-collection-carousel simple-slider .slider-ui button.active {
+  color: var(--colour-white);
+  background: var(--colour-black);
+  opacity: 1;
+}
+.section-collection-carousel .slider-ui {
+  margin-top: 2.5rem;
+  gap: 2rem;
+}
+.section-collection-carousel .slider-ui .div:not(.container) {
+  gap: 0.5rem;
+}
+.section-collection-carousel .simple-slider-fixed-output {
+  display: none;
+  gap: 2.5rem;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  justify-content: center;
+}
+.section-collection-carousel .simple-slider-fixed-output > ul {
+  gap: 2.5rem;
+}
+.section-collection-carousel .simple-slider-fixed-output li.list-item .image {
+  aspect-ratio: 1/1;
+}
+.section-collection-carousel .simple-slider-fixed-output li.list-item .image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: initial;
+}
+@media screen and (max-width: 1024px) {
+  .section-collection-carousel simple-slider > ul,
+.section-collection-carousel .simple-slider-fixed-output > ul {
+    gap: 0.5rem;
+  }
+  .section-collection-carousel .slider-ui {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+}
+.section-collection-carousel .simple-slider-fixed-output {
+  display: none;
+}
+@media (min-width: 1600px) {
+  .section-collection-carousel.short-list simple-slider {
+    display: none;
+  }
+  .section-collection-carousel.short-list .simple-slider-fixed-output {
+    display: flex;
+  }
+}

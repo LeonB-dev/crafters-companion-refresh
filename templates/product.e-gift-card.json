@@ -1,0 +1,71 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "settings": {
+      }
+    },
+    "1996b968-4318-4a00-a5fe-a42608965cb8": {
+      "type": "featured-products-pdp",
+      "blocks": {
+        "31be441a-3bcd-42a3-97bb-f2fe4d290a76": {
+          "type": "nosto_placement",
+          "settings": {
+            "nosto_placement": "productpage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "31be441a-3bcd-42a3-97bb-f2fe4d290a76"
+      ],
+      "settings": {
+        "heading": "Frequently bought with",
+        "heading_alignment": false,
+        "grid_size": "sm",
+        "edge_version": "edge-02",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "green",
+        "background_colour": "whisper",
+        "margin_bottom": "none"
+      }
+    },
+    "fc18a451-b0c0-46fd-81cf-f5028542d04e": {
+      "type": "featured-products-pdp",
+      "blocks": {
+        "0b5e0cb2-1aa9-4d07-a6de-5cd96f75757a": {
+          "type": "nosto_placement",
+          "settings": {
+            "nosto_placement": "productpage-nosto-2"
+          }
+        }
+      },
+      "block_order": [
+        "0b5e0cb2-1aa9-4d07-a6de-5cd96f75757a"
+      ],
+      "settings": {
+        "heading": "You might also like",
+        "heading_alignment": false,
+        "grid_size": "sm",
+        "edge_version": "edge-03",
+        "top_edge_colour": "is-hidden",
+        "bottom_edge_colour": "white",
+        "background_colour": "black-squeeze",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1996b968-4318-4a00-a5fe-a42608965cb8",
+    "fc18a451-b0c0-46fd-81cf-f5028542d04e"
+  ]
+}

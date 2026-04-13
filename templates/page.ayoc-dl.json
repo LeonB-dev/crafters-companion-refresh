@@ -1,0 +1,110 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft : Downloads",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "ad1b365e-907c-4e5e-8900-c150b4fc4c28": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Here you can select and print more of the patterned papers and solid colours of cardstock included with A Year of Craft. Simply click on the patterned or solid papers to access them.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "4fe10de2-c52c-4250-87e8-18486be2e2c5": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/PatternedImage.png",
+        "main_heading": "Patterned Papers",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-patterned-papers-1",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "ce5feb3a-8fd4-4a66-9fb7-62ad94ef1cf8": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SolidImage.png",
+        "main_heading": "Solid Colour Papers",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-solid-colour-papers-1",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "8777fd34-dda2-4b70-b418-75d41daabe7e": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to Homepage",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef",
+    "ad1b365e-907c-4e5e-8900-c150b4fc4c28",
+    "4fe10de2-c52c-4250-87e8-18486be2e2c5",
+    "ce5feb3a-8fd4-4a66-9fb7-62ad94ef1cf8",
+    "8777fd34-dda2-4b70-b418-75d41daabe7e"
+  ]
+}

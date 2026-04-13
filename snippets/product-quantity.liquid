@@ -1,0 +1,33 @@
+<div class="product-form-new__quantity" data-quantity-new>
+  <label class="sr-only" for="Quantity-{{ section.id }}"> Quantity </label>
+
+  <button class="product-form-new__quantity-button" type="button" data-quantity-new-minus>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
+      <path d="M0 6h6m0 0h6"/>
+    </svg>
+
+    <span class="sr-only"> Decrease </span>
+  </button>
+
+  <input
+    class="product-form-new__quantity-input"
+    type="number"
+    name="quantity"
+    id="Quantity-{{ section.id }}"
+    min="1"
+    value="1"
+    data-product-qty-input
+    data-quantity-new-input
+    {% if isDupe %}
+      data-quantity-dupe
+    {% endif %}
+  >
+
+  <button class="product-form-new__quantity-button" type="button" data-quantity-new-plus>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
+      <path d="M0 6h6m0 0h6"/><path d="M6 6V0m0 6v6"/>
+    </svg>
+
+    <span class="sr-only"> Increase </span>
+  </button>
+</div>

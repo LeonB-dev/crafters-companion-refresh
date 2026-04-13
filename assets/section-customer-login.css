@@ -1,0 +1,20 @@
+.section-customer-login .content .reset-message {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--colour-whisper);
+}
+.section-customer-login .content .reset-message p {
+  margin: 0;
+}
+.section-customer-login .content .sign-up {
+  --sign-up-margin: 2rem;
+  margin-top: var(--sign-up-margin);
+  padding-top: var(--sign-up-margin);
+  border-top: 1px solid var(--colour-whisper);
+  align-items: center;
+}
+.section-customer-login .content .sign-up p a {
+  text-decoration: none;
+  color: var(--colour-royal-purple);
+  max-width: 40ch;
+}

@@ -1,0 +1,22 @@
+{% liquid 
+  assign url = territory | split: ':' | last | strip
+  if product
+    assign url_suffix = product.url
+  elsif article
+    assign url_suffix = article.url
+  else
+    assign url_suffix = request.path
+  endif
+  assign tag_url = 'href="https://' | append: url | append: url_suffix | append: _query_string | append: '">'
+
+  if name == settings.x_default
+    assign tag = '<link rel="alternate" hreflang="x-default"' | append: tag_url 
+    echo tag
+  endif 
+
+  if name === 'UK'
+    assign name = 'gb'
+  endif
+  assign tag = '<link rel="alternate" hreflang="en-' | append: name | append: '" ' | append: tag_url
+  echo tag 
+%}

@@ -1,0 +1,21 @@
+{% assign features = product.metafields.custom.features.value %}
+
+{%- if features != blank or description != blank -%}
+  <div class="product-content product-content-new">
+    {%- if features != blank -%}
+      <p class="product-content-new__features-text">
+        Key Features
+      </p>
+
+      <ul class="product-content-new__features-list c-check-list purple">
+        {%- for feature in features -%}
+          <li class="product-content-new__features-list-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><path d="M11 .5a10.5 10.5 0 1 1 0 21 10.5 10.5 0 0 1 0-21Zm0 1a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm4.6 5.6a.5.5 0 0 1 .8.8l-7 7c-.2.1-.6.1-.8 0l-3-3a.5.5 0 0 1 .8-.8L9 13.8Z"/></svg>
+
+            {{ feature }}
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+{%- endif -%}

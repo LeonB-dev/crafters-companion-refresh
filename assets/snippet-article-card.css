@@ -1,0 +1,36 @@
+.snippet-article-card .category {
+  display: none;
+  visibility: hidden;
+}
+.snippet-article-card .image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/1;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+}
+.snippet-article-card .image img {
+  width: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+.snippet-article-card a {
+  text-decoration: none;
+  color: inherit;
+}
+.snippet-article-card a .title {
+  font-weight: 600;
+  line-height: 1.25;
+  display: block;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+.snippet-article-card a p {
+  margin-bottom: 0.5rem;
+}
+.snippet-article-card .date {
+  font-size: 0.75rem;
+  color: var(--colour-royal-purple);
+}

@@ -1,0 +1,114 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "aa01b178-5661-4668-8c2b-ed9b10148396": {
+      "type": "promotion-hero",
+      "settings": {
+      }
+    },
+    "270e3df4-b406-4149-93fd-24947ff33ded": {
+      "type": "featured-promotions",
+      "blocks": {
+        "57ecc840-35f3-4fe6-ac0e-8aac8d4200d1": {
+          "type": "promotion",
+          "settings": {
+            "collection": "international-quilting-day",
+            "image": "shopify:\/\/shop_images\/Rectangle_119.png"
+          }
+        },
+        "e93773cc-d6ab-4bba-9857-b3108fb09573": {
+          "type": "promotion",
+          "settings": {
+            "collection": "national-craft-month"
+          }
+        },
+        "ca9249b9-0b59-4d31-943e-c924ad55f6d3": {
+          "type": "promotion",
+          "settings": {
+            "collection": "spring-sale"
+          }
+        },
+        "cfe32840-60f6-4316-bb9c-27e157521281": {
+          "type": "promotion",
+          "settings": {
+            "collection": "international-quilting-day"
+          }
+        }
+      },
+      "block_order": [
+        "57ecc840-35f3-4fe6-ac0e-8aac8d4200d1",
+        "e93773cc-d6ab-4bba-9857-b3108fb09573",
+        "ca9249b9-0b59-4d31-943e-c924ad55f6d3",
+        "cfe32840-60f6-4316-bb9c-27e157521281"
+      ],
+      "settings": {
+        "heading": "Take a look at our latest deals",
+        "heading_alignment": true,
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "white",
+        "margin_bottom": "lg"
+      }
+    },
+    "d3bd7086-aca6-48fd-a59d-5eb67e86aaf2": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "Sara's favourite deal",
+        "header_image": "shopify:\/\/shop_images\/Ellipse_32.png",
+        "main_image": "shopify:\/\/shop_images\/papercraft.jpg",
+        "main_heading": "Enim massa sed quis quam amet pretium",
+        "main_text": "<p>Curabitur orci tempor scelerisque bibendum mauris molestie in egestas nec. Sit tempor ut eu turpis sed. Eros sapien congue non odio cursus sed tortor auctor fermentum. Aliquet penatibus vitae senectus sit eget sagittis viverra.<\/p>",
+        "main_link_url": "shopify:\/\/pages\/papercraft",
+        "main_link_text": "Shop this deal",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "edge-02",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "8a990e0b-ebad-40ec-9064-182de0de7098": {
+      "type": "featured-products",
+      "blocks": {
+        "92dc26bc-18ff-4672-bb20-355ace3016a9": {
+          "type": "collection",
+          "settings": {
+            "collection": "spectrum-noir"
+          }
+        }
+      },
+      "block_order": [
+        "92dc26bc-18ff-4672-bb20-355ace3016a9"
+      ],
+      "settings": {
+        "heading": "Top selling products",
+        "heading_alignment": true,
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "aa01b178-5661-4668-8c2b-ed9b10148396",
+    "270e3df4-b406-4149-93fd-24947ff33ded",
+    "d3bd7086-aca6-48fd-a59d-5eb67e86aaf2",
+    "8a990e0b-ebad-40ec-9064-182de0de7098"
+  ]
+}

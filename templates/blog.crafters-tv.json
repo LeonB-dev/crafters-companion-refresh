@@ -1,0 +1,31 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "header": {
+      "type": "crafters-tv-catchup",
+      "settings": {
+        "title": "",
+        "heading": "Watch Crafter’s TV",
+        "text": "<p>Don’t miss out on our live Crafter’s TV shows! All week, you’ll be able to view our programmes on this page or catch up on any of the action that you’ve missed!<\/p><p><a href=\"\/pages\/crafters-tv-schedule\" title=\"Crafter's TV Schedule\">Click here<\/a> to see the Crafter’s TV Live Schedule.<\/p>"
+      }
+    },
+    "main": {
+      "type": "blog",
+      "settings": {
+        "collection": "spectrum-noir"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "main"
+  ]
+}

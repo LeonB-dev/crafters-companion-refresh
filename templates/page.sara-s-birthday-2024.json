@@ -1,0 +1,97 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "featured_image_CkDFYP": {
+      "type": "featured-image",
+      "settings": {
+        "url": "shopify:\/\/collections\/promo-inclusions-uk",
+        "image": "shopify:\/\/shop_images\/Banner_Desktop_Inspiration_-_No_CTA.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Banner_Mobile_Home_Page_-_No_CTA.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "none"
+      }
+    },
+    "text_header_wdqCeg": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Sara's Birthday Event",
+        "text": "<p>Forty and fabulous! Everyone’s invited to Sara’s birthday extravaganza!<\/p><p>Our queen of craft is celebrating a big birthday so we're going all out with an even bigger Crafter’s Companion party. <\/p><p>Join us for five days of fun, fizz, free gifts and so many treats! On April 23rd, the birthday girl is sharing the love on her big day. <\/p><p>It may be her birthday, but Sara has a crafty free gift for you when you spend £10 or more!* And, every day from the 22nd to the 26th of April there’s a brand new craft collection to unwrap. Each launch has been handpicked by Sara herself to make her birthday week even more special!<\/p><p>Treat yourself to something from any of the new collections to enjoy 25% off Sara’s books**, Craft Your Year or We Can All Make It. And end the week on a high by tuning in to Crafter’s TV on Friday, 26th April for a Sara Cartload special! You’re all on the guest list for Sara’s 40th birthday so head to the Crafter’s Companion website and join the party on Crafter’s TV!<\/p><p>*Free gift automatically added to online baskets with orders of £10 or more. One per customer. While stocks last. Offer valid on 23rd April 2024, ending at 11.59BST on that day.<\/p><p><strong>**Offer valid from 22nd April - 11.59pm BST 26th April 2024.<\/strong><\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": true,
+        "enable_page_title": false,
+        "link_colour": "primary",
+        "margin_bottom": "none",
+        "margin_top": "none"
+      }
+    },
+    "featured_collections_T4bxV7": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_block_GE3r7M": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "saras-book-offer",
+            "image": "shopify:\/\/shop_images\/Banner_Mobile_Home_Page_879bc286-66a5-4003-9017-ab1cd07b5b51.jpg",
+            "heading": "Get 25% Off Sara's Books"
+          }
+        },
+        "collection_block_TCeRpX": {
+          "type": "collection_block",
+          "disabled": true,
+          "settings": {
+            "collection": "promo-inclusions-uk",
+            "image": "shopify:\/\/shop_images\/Banner_Mobile_Home_Page_UK_b04dc7c3-5cdb-4ecc-bf4b-7b397c1a8285.jpg",
+            "heading": "Claim your FREE GIFT today"
+          }
+        },
+        "collection_block_E4xKdF": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/Offer_Coming_Soon.jpg",
+            "heading": "New offer is on its way on 26\/04\/24"
+          }
+        },
+        "collection_block_Xaa9rw": {
+          "type": "collection_block",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/Mystery_Bag_Product_Image.jpg",
+            "heading": "Sara's Mystery Bag"
+          }
+        }
+      },
+      "block_order": [
+        "collection_block_GE3r7M",
+        "collection_block_TCeRpX",
+        "collection_block_E4xKdF",
+        "collection_block_Xaa9rw"
+      ],
+      "settings": {
+        "heading": "",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "none"
+      }
+    }
+  },
+  "order": [
+    "featured_image_CkDFYP",
+    "text_header_wdqCeg",
+    "featured_collections_T4bxV7"
+  ]
+}

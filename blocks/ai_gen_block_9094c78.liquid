@@ -1,0 +1,386 @@
+{% doc %}
+  @prompt
+    2 image row both have seperate titles above and below, margin 1500px, top and bottle titles different sizes, weight adjustable, images link to other pages
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-two-image-row-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-two-image-row__container-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.gap }}px;
+  }
+
+  .ai-two-image-row__item-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ai-two-image-row__top-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.top_title_size }}px;
+    font-weight: {{ block.settings.top_title_weight }};
+    margin-bottom: {{ block.settings.top_title_spacing }}px;
+    color: {{ block.settings.top_title_color }};
+    text-align: {{ block.settings.title_alignment }};
+  }
+
+  .ai-two-image-row__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-two-image-row__image-wrapper-{{ ai_gen_id }} img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-two-image-row__image-wrapper-{{ ai_gen_id }}:hover img {
+    transform: scale(1.05);
+  }
+
+  .ai-two-image-row__placeholder-{{ ai_gen_id }} {
+    background-color: #f4f4f4;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-two-image-row__placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .ai-two-image-row__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-two-image-row__bottom-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.bottom_title_size }}px;
+    font-weight: {{ block.settings.bottom_title_weight }};
+    margin-top: {{ block.settings.bottom_title_spacing }}px;
+    color: {{ block.settings.bottom_title_color }};
+    text-align: {{ block.settings.title_alignment }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-two-image-row__container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.mobile_gap }}px;
+    }
+
+    .ai-two-image-row__top-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.top_title_size | times: 0.8 }}px;
+    }
+
+    .ai-two-image-row__bottom-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.bottom_title_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-two-image-row-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-two-image-row__container-{{ ai_gen_id }}">
+    <div class="ai-two-image-row__item-{{ ai_gen_id }}">
+      {% if block.settings.image_1_top_title != blank %}
+        <h3 class="ai-two-image-row__top-title-{{ ai_gen_id }}">
+          {{ block.settings.image_1_top_title }}
+        </h3>
+      {% endif %}
+
+      <a
+        href="{{ block.settings.image_1_link }}"
+        class="ai-two-image-row__image-wrapper-{{ ai_gen_id }}"
+        {% if block.settings.image_1_link == blank %}aria-disabled="true" style="pointer-events: none;"{% endif %}
+      >
+        {% if block.settings.image_1 %}
+          <img
+            src="{{ block.settings.image_1 | image_url: width: 1000 }}"
+            alt="{{ block.settings.image_1.alt | escape }}"
+            loading="lazy"
+            width="{{ block.settings.image_1.width }}"
+            height="{{ block.settings.image_1.height }}"
+          >
+        {% else %}
+          <div class="ai-two-image-row__placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-two-image-row__empty-state-{{ ai_gen_id }}">
+              Add image 1
+            </div>
+          </div>
+        {% endif %}
+      </a>
+
+      {% if block.settings.image_1_bottom_title != blank %}
+        <h4 class="ai-two-image-row__bottom-title-{{ ai_gen_id }}">
+          {{ block.settings.image_1_bottom_title }}
+        </h4>
+      {% endif %}
+    </div>
+
+    <div class="ai-two-image-row__item-{{ ai_gen_id }}">
+      {% if block.settings.image_2_top_title != blank %}
+        <h3 class="ai-two-image-row__top-title-{{ ai_gen_id }}">
+          {{ block.settings.image_2_top_title }}
+        </h3>
+      {% endif %}
+
+      <a
+        href="{{ block.settings.image_2_link }}"
+        class="ai-two-image-row__image-wrapper-{{ ai_gen_id }}"
+        {% if block.settings.image_2_link == blank %}aria-disabled="true" style="pointer-events: none;"{% endif %}
+      >
+        {% if block.settings.image_2 %}
+          <img
+            src="{{ block.settings.image_2 | image_url: width: 1000 }}"
+            alt="{{ block.settings.image_2.alt | escape }}"
+            loading="lazy"
+            width="{{ block.settings.image_2.width }}"
+            height="{{ block.settings.image_2.height }}"
+          >
+        {% else %}
+          <div class="ai-two-image-row__placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-two-image-row__empty-state-{{ ai_gen_id }}">
+              Add image 2
+            </div>
+          </div>
+        {% endif %}
+      </a>
+
+      {% if block.settings.image_2_bottom_title != blank %}
+        <h4 class="ai-two-image-row__bottom-title-{{ ai_gen_id }}">
+          {{ block.settings.image_2_bottom_title }}
+        </h4>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Two image row",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 500,
+      "max": 1500,
+      "step": 50,
+      "unit": "px",
+      "label": "Maximum width",
+      "default": 1500
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Gap between images",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile gap",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Top titles"
+    },
+    {
+      "type": "range",
+      "id": "top_title_size",
+      "min": 12,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size",
+      "default": 28
+    },
+    {
+      "type": "select",
+      "id": "top_title_weight",
+      "label": "Font weight",
+      "options": [
+        { "value": "300", "label": "Light" },
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi bold" },
+        { "value": "700", "label": "Bold" },
+        { "value": "800", "label": "Extra bold" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "top_title_color",
+      "label": "Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "top_title_spacing",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Spacing below",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Bottom titles"
+    },
+    {
+      "type": "range",
+      "id": "bottom_title_size",
+      "min": 12,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "bottom_title_weight",
+      "label": "Font weight",
+      "options": [
+        { "value": "300", "label": "Light" },
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi bold" },
+        { "value": "700", "label": "Bold" },
+        { "value": "800", "label": "Extra bold" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "color",
+      "id": "bottom_title_color",
+      "label": "Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "bottom_title_spacing",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Spacing above",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "Title alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_1_top_title",
+      "label": "Top title"
+    },
+    {
+      "type": "text",
+      "id": "image_1_bottom_title",
+      "label": "Bottom title"
+    },
+    {
+      "type": "url",
+      "id": "image_1_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_2_top_title",
+      "label": "Top title"
+    },
+    {
+      "type": "text",
+      "id": "image_2_bottom_title",
+      "label": "Bottom title"
+    },
+    {
+      "type": "url",
+      "id": "image_2_link",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two image row"
+    }
+  ]
+}
+{% endschema %}

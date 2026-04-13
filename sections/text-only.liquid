@@ -1,0 +1,119 @@
+{%- liquid
+  assign template_name = 'section-text-only'
+  assign large_text = section.settings.large_text
+  assign small_text = section.settings.small_text
+  assign link_url = section.settings.link_url
+  assign link_text = section.settings.link_text
+
+  assign left_align = section.settings.left_align
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-text-only.css' | asset_url | stylesheet_tag -}}
+
+<style>
+  div[data-section-id="{{ section.id }}"]{
+    --text-align: center;
+    --align-items: center;
+    --container-alignment: 0 auto;
+    {%- if left_align == true -%}
+      --text-align: left;
+      --align-items: flex-start;
+      --container-alignment: 0;
+    {%- endif -%}
+  }
+  {% if left_align == false %}
+    div[data-section-id="{{ section.id }}"] p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  {% endif %}
+</style>
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="wrapper">
+      {% if large_text %}
+        <h2 class="u-heading-md">{{ large_text }}</h2>
+      {% endif %}
+        {{ small_text }}
+      {% if link_url and link_text %}
+        <a href="{{ link_url }}" class="c-btn main primary">{{ link_text }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text Only",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "large_text",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "small_text",
+      "label": "Smaller Text"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "left_align",
+      "label": "Align content left?",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Text Only",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

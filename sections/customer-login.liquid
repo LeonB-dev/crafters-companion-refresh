@@ -1,0 +1,132 @@
+{% liquid
+  assign template_name = 'section-customer-login'
+  assign image = settings.customer_login_image
+%}
+
+{{- 'section-customer-access.css' | asset_url | stylesheet_tag -}}
+{{- 'section-customer-login.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-customer-login.js' | asset_url -}}"></script>
+
+<div class="section-customer-access {{ template_name }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="image">
+    <a href="{{- shop.url -}}" aria-label="Go to Crafter's Companion homepage">
+      <img src="{{- 'logo-main-tertiary.svg' | asset_url -}}" class="logo">
+    </a>
+    {%- if image != blank -%}
+      <picture class="background">
+        <source media="(min-width:1500px)" srcset="{{- image | image_url: width: 1920 -}}">
+        <source media="(min-width:1100px)" srcset="{{- image | image_url: width: 1500 -}}">
+        <source media="(min-width:800px)" srcset="{{- image | image_url: width: 1024 -}}">
+        <source media="(min-width:551px)" srcset="{{- image | image_url: width: 800 -}}">
+        <source media="(max-width: 550.8px)" srcset="{{- image | image_url: width: 600 -}}">
+        <img src="{{- image | image_url: height: 512 -}}" alt="{{- image.alt | default: _heading -}}" height="412" width="390" loading="eager"/>
+      </picture>
+    {%- endif -%}
+    {%- render 'paper-edge', _edge_version: 'edge-01', _bottom_edge_colour: 'white' -%}
+    {%- render 'paper-edge-vertical' -%}
+  </div>
+  <div class="wrapper">
+    <div class="content">
+      <a href="{{ shop.url }}" class="c-btn alt primary continue" data-continue-shopping>
+        {%- render 'icon', _name: 'icon-arrow-left' -%}
+        {{- 'template.customers.login.continue_shopping' | t -}}
+      </a>
+      <h1 class="u-heading-sm heading" id="page-title">{{- 'template.customers.login.heading' | t -}}</h1>
+      {% if settings.show_reset_message == true %}
+        <div class="reset-message">
+          {% comment %} <h2 class="heading">
+            {% render 'icon', _name: 'icon-user' %}
+            A message for existing customers
+          </h2> {% endcomment %}
+          <p>{{- 'template.customers.login.create_account_instructions' | t -}}</p>
+        </div>
+      {% endif %}
+      {%- comment -%}
+        Login form
+      {%- endcomment -%}
+      <div data-login>
+        {%- form 'customer_login', class: 'c-form add-spacing', aria-label: 'Login form', data-login-form: '' -%}
+          {{- form.errors | default_errors | replace: 'class="errors"', 'class="c-alert error" role="alert"' -}}
+
+          <input type="hidden" name="checkout_url" value="{{- routes.account_url -}}">
+          <div class="form-field ">
+            <label class="form-label" for="email">{{- 'forms.email_label' | t -}}</label>
+            <input class="form-input{% if show_errors == true and form.errors contains 'email' %} form-input--error{% endif %}" id="email" name="customer[email]" type="email" placeholder="{{- 'forms.email_placeholder' | t -}}" autocorrect="off" autocapitalize="off" autocomplete="email">
+          </div>
+
+          {%- if form.password_needed -%}
+            <div class="form-field">
+              <label class="form-label" for="password">{{- 'forms.password_label' | t -}}</label>
+              <input class="form-input{% if show_errors == true and form.errors contains 'password' %} form-input--error{% endif %}" id="password" name="customer[password]" placeholder="{{- 'forms.password_placeholder' | t -}}" type="password">
+            </div>
+          {%- endif -%}
+
+          <div class="form-field main-action">
+            <button class="c-btn main quaternary submit" type="submit">
+              {{- 'template.customers.login.submit_text' | t -}}
+            </button>
+            {% if form.password_needed %}
+              <button type="button" class="c-btn alt primary" data-login-form-toggle>{{- 'template.customers.login.forgotton_password_text' | t -}}</button>
+            {% endif %}
+          </div>
+
+          <div class="sign-up">
+            <p class="u-text-xl">{{- 'template.customers.login.create_account_upsell_html' | t: signup_url: routes.account_register_url -}}</p>
+            <a href="{{- section.settings.register_url | default: routes.account_register_url -}}" class="c-btn main quinary">{{- 'template.customers.login.signup_submit_text' | t -}}</a>
+          </div>
+        {%- endform -%}
+      </div>
+
+      {%- comment -%}
+        Recover Password form
+      {%- endcomment -%}
+      <div data-recover-password hidden>
+        {%- form 'recover_customer_password', class: 'c-form add-spacing', aria-label: 'Recover Account form', data-recover-password-form: '' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="c-alert success" role="alert">{{- 'template.customers.reset_password.success_message' | t -}}</p>
+          {%- endif -%}
+
+          {{- form.errors | default_errors | replace: 'class="errors"', 'class="c-alert error" role="alert"' -}}
+          <p class="u-text-xl">{{- 'template.customers.login.forgotton_password_text' | t -}}</p>
+          <p>{{- 'template.customers.reset_password.reset_password_info_text' | t -}}</p>
+
+          <div class="form-field">
+            <label class="form-label" for="recover-email">{{- 'forms.email_label' | t -}}</label>
+            <input class="form-input{% if show_errors == true and form.errors contains 'email' %} form-input--error{% endif %}" id="recover-email" name="email" type="email" placeholder="{{- 'forms.email_placeholder' | t -}}" autocorrect="off" autocapitalize="off" autocomplete="email">
+          </div>
+
+          <div class="form-field main-action">
+            <button class="c-btn main quaternary submit" type="submit">{{- 'template.customers.reset_password.reset_submit_text' | t -}}</button>
+            <button class="c-btn alt primary" data-login-form-toggle>{{- 'template.customers.reset_password.cancel_reset_password_text' | t -}}</button>
+          </div>
+        {%- endform -%}
+
+        {%- comment -%}
+          Guest Login form
+        {%- endcomment -%}
+        {%- if shop.checkout.guest_login -%}
+          <div data-guest-login>
+            {%- form 'guest_login', aria-label: 'Guest Login form', data-guest-login-form: '' -%}
+              <button class="c-btn alt primary" type="submit">{{- 'template.customers.guest.guest_submit_text' | t -}}</button>
+            {%- endform -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Customer - Login",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "url",
+      "id": "register_url",
+      "label": "Sign Up Link"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

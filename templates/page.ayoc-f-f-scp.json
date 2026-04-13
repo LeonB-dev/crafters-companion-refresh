@@ -1,0 +1,154 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "091fa3b1-15d2-4c7a-ba7b-c15d35806983": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Family & Friends: Solid Colour Papers",
+        "text": "<p>Click on the image of your choice to save and print as desired.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "56b519ec-1ad8-4a0f-ab83-40ae1207eefd": {
+      "type": "downloads",
+      "blocks": {
+        "96107e3e-bef7-42d6-b563-41aeb5028a12": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%281%29.jpg",
+            "image": "shopify:\/\/shop_images\/ff1.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%281%29.jpg"
+          }
+        },
+        "426f4096-69a7-4456-a06a-a4f8ab9ec5c1": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%281%29.jpg",
+            "image": "shopify:\/\/shop_images\/ff2.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%281%29.jpg"
+          }
+        },
+        "35d58f74-aa9d-40b6-819e-8ef86d9e4dd7": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%283%29.jpg",
+            "image": "shopify:\/\/shop_images\/ff3.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%283%29.jpg"
+          }
+        },
+        "0903790f-d135-4411-bb7c-74f3c3287d03": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%284%29.jpg",
+            "image": "shopify:\/\/shop_images\/ff4.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%284%29.jpg"
+          }
+        },
+        "8c8318d9-e12e-4f28-8455-5526cde6d76c": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%285%29.jpg",
+            "image": "shopify:\/\/shop_images\/ff5.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%285%29.jpg"
+          }
+        },
+        "2f47577b-066b-46bb-b3bc-76fecea00cf4": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%286%29.jpg",
+            "image": "shopify:\/\/shop_images\/ff6.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%286%29.jpg"
+          }
+        },
+        "8bdf01c0-1272-412f-aa4f-754f7a99541d": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%287%29.jpg",
+            "image": "shopify:\/\/shop_images\/ff7.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%287%29.jpg"
+          }
+        },
+        "7a94868d-8ed5-49e6-9980-51510c54069a": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%288%29.jpg",
+            "image": "shopify:\/\/shop_images\/ff8.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Solid%20Colour%20Papers\/ayoc_solid_2nd%20%288%29.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "96107e3e-bef7-42d6-b563-41aeb5028a12",
+        "426f4096-69a7-4456-a06a-a4f8ab9ec5c1",
+        "35d58f74-aa9d-40b6-819e-8ef86d9e4dd7",
+        "0903790f-d135-4411-bb7c-74f3c3287d03",
+        "8c8318d9-e12e-4f28-8455-5526cde6d76c",
+        "2f47577b-066b-46bb-b3bc-76fecea00cf4",
+        "8bdf01c0-1272-412f-aa4f-754f7a99541d",
+        "7a94868d-8ed5-49e6-9980-51510c54069a"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "lg"
+      }
+    },
+    "bae27d76-4b59-4b8c-b5df-af869484fd54": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to Downloads.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft-family-friends-downloads",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "9bfee02d-9c8b-4b80-9288-4958159f4e1b": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to A Year Of Craft.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "091fa3b1-15d2-4c7a-ba7b-c15d35806983",
+    "56b519ec-1ad8-4a0f-ab83-40ae1207eefd",
+    "bae27d76-4b59-4b8c-b5df-af869484fd54",
+    "9bfee02d-9c8b-4b80-9288-4958159f4e1b"
+  ]
+}

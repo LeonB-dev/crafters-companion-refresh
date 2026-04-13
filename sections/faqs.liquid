@@ -1,0 +1,299 @@
+{% liquid
+  assign template_name = 'section-faqs'
+  assign heading = section.settings.heading
+  assign text = section.settings.text
+  assign enable_search = section.settings.enable_search
+  assign faq_footer_text = section.settings.faq_footer_text
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-faqs.css' | asset_url | stylesheet_tag -}}
+<script src="{{ 'section-faqs.js' | asset_url }}" async></script>
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {%- render 'paper-edge', _section: section -%}
+  <div class="container">
+    <div class="wrapper">
+      {%- if heading != blank -%}
+        <h2 class="u-heading-lg">{{ heading }}</h2>
+      {%- endif -%}
+
+      {%- if text != blank -%}
+        <div class="c-rte">{{ text }}</div>
+      {%- endif -%}
+
+      {%- if enable_search == true -%}
+        <div class="search">
+          <label for="search_faqs" class="visually-hidden">Search our FAQs</label>
+          <div>
+            <input type="text" class="form-input" id="search_faqs" placeholder="Search our FAQs" data-accordion-search/>
+            {%- render 'icon', _name: 'icon-arrow-search' -%}
+          </div>
+          <p hidden data-accordion-results>No results found</p>
+        </div>
+      {%- endif -%}
+
+      <!-- ✅ Always one accordion wrapper -->
+      <div class="accordion" data-accordion data-accordion-multiple="true">
+        {% for block in section.blocks %}
+          {% if block.type == 'faq-heading' %}
+            <h2 class="u-heading-sm">{{ block.settings.heading }}</h2>
+          {% else %}
+            <div class="group" data-accordion-group>
+              <button class="toggle c-btn u-text-xl" 
+                id="btn_{{ block.id }}" 
+                role="button" 
+                aria-expanded="{% if section.settings.expand_all %}true{% else %}false{% endif %}" 
+                aria-controls="content_{{ block.id }}" 
+                data-accordion-toggle>
+                {{ block.settings.title }}
+                {%- render 'icon', _name: 'icon-plus', _class: 'plus' -%}
+                {%- render 'icon', _name: 'icon-minus', _class: 'minus' -%}
+              </button>
+              <div id="content_{{ block.id }}" aria-labelledby="btn_{{ block.id }}" class="content" {% if section.settings.expand_all %}data-open{% endif %}>
+                {{ block.settings.content }}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <!-- /accordion -->
+
+      {%- if faq_footer_text != blank -%}
+        <div class="footer">{{- faq_footer_text -}}</div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+<!-- Fix script load order -->
+<script src="{{ 'section-faqs.js' | asset_url }}" defer></script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'faq' -%}
+          {
+            "@type": "Question",
+            "name": "{{ block.settings.title | strip_html | replace: '"', '\"' }}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{{ block.settings.content | strip_html | replace: '"', '\"' }}"
+            }
+          }{%- if forloop.last != true -%},{%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+    ]
+  }
+</script>
+
+{% schema %}
+{
+  "name": "FAQs",
+  "tag": "section",
+  "settings": [
+    {
+        "type": "header",
+        "content": "Content"
+    },
+    {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+    },
+    {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+    },
+    {
+      "type": "richtext",
+      "id": "faq_footer_text",
+      "label": "Footer Text"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+        "type": "checkbox",
+        "id": "expand_all",
+        "label": "Expanded by default"
+    },
+    {
+        "type": "checkbox",
+        "id": "enable_search",
+        "label": "Enable quick search",
+        "default": false
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "top_edge_colour",
+      "label": "Top edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "bottom_edge_colour",
+      "label": "Bottom edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "background_colour",
+      "label": "Background colour",
+      "info": "This can only be applied if a edge version is selected",
+      "options": [
+        {
+          "value": "black-squeeze",
+          "label": "Green"
+        },
+        {
+          "value": "pippin",
+          "label": "Pink"
+        },
+        {
+          "value": "whisper",
+          "label": "Purple"
+        }
+      ],
+      "default": "whisper"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "settings":
+      [
+        {
+          "type": "header",
+          "content": "page-faqs"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "FAQ Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "FAQ Content"
+        }
+      ]
+    },
+    {
+      "type": "faq-heading",
+      "name": "FAQ Group Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQs",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

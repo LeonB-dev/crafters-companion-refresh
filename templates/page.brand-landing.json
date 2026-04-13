@@ -1,0 +1,98 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "header": {
+      "type": "brand-landing-header",
+      "settings": {
+        "edge_version": "none"
+      }
+    },
+    "42233aa3-11a8-447d-a330-730d88671d29": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Let’s make it together",
+        "small_text": "<p>From perfectly portable, manual options to state-of-the-art, electronic machines - there’s a Gemini for every type of craft and every type of crafter. From scrapbooking and home decor to handmade cards, quilting and everything in between, you can make more with Gemini.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1": {
+      "type": "image-feature",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_168.png",
+        "heading": "Innovation to make more with the Gemini II",
+        "text": "<p>Set your creative sights higher and aim for the stars with the Gemini II. Our newest electronic cutting machine has all of the power, precision and performance of the original Gemini, but with updated functions and unique innovations. So you can cut, emboss and create with unmatched precision and intricacy.<\/p>",
+        "link_text": "Shop the Gemini II",
+        "link_url": "shopify:\/\/collections\/gemini",
+        "content_placement": "content-bottom-left"
+      }
+    },
+    "5494c7bb-d720-48a5-a3e5-5139d82add99": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Tortor aliquam eu lectus convallis vitae amet augue. Eget facilisis in convallis magna vel vel mattis eget vestibulum. Dignissim dictum urna volutpat feugiat.",
+        "small_text": "",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "bab7aec5-01db-4922-bd5b-0478e45a8027": {
+      "type": "content-block-trio",
+      "blocks": {
+        "14acaefe-5109-4c27-85f4-d14fd25b4134": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "a051e613-e924-4938-9d54-328216b7a319": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "91ab9fd6-aa4a-4f21-aa52-64bd50397598": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "14acaefe-5109-4c27-85f4-d14fd25b4134",
+        "a051e613-e924-4938-9d54-328216b7a319",
+        "91ab9fd6-aa4a-4f21-aa52-64bd50397598"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "header",
+    "42233aa3-11a8-447d-a330-730d88671d29",
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1",
+    "5494c7bb-d720-48a5-a3e5-5139d82add99",
+    "bab7aec5-01db-4922-bd5b-0478e45a8027"
+  ]
+}

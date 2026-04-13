@@ -1,0 +1,90 @@
+{%- liquid
+  assign template_name = 'section-form-embed'
+  assign heading = section.settings.heading
+  assign text = section.settings.text
+
+  assign form_embed = section.settings.form_embed
+  assign enable_h1 = section.settings.enable_h1
+  assign margin_top = section.settings.margin_top
+%}
+
+{% if form_embed != blank %}
+  {{- 'section-form-embed.css' | asset_url | stylesheet_tag -}}
+
+  <div class="{{- template_name }} u-space-above-{{- margin_top }} u-space-below-md" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+    <div class="container" style="margin:auto;">
+      {% if heading != blank %}
+        {% if enable_h1 == true %}
+          <h1 class="u-heading-md">{{ heading }}</h1>
+        {% else %}
+          <h2 class="u-heading-md">{{ heading }}</h2>
+        {% endif %}
+      {% endif %}
+      {{ text }}
+      {{ form_embed }}
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+{
+  "name": "Form Embed",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "html",
+      "id": "form_embed",
+      "label": "Form Embed Code"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_h1",
+      "label": "Enable h1 tag for heading."
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "label": "Add margin above",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "md"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Form Embed",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

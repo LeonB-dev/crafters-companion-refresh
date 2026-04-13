@@ -1,0 +1,99 @@
+{% schema %}
+{
+  "name": "Responsive Video Section",
+  "settings": [
+    {
+      "type": "url",
+      "id": "video_link",
+      "label": "Video Clickthrough Link"
+    },
+    {
+      "type": "url",
+      "id": "desktop_video",
+      "label": "Desktop Video URL (MP4 from Files)"
+    },
+    {
+      "type": "url",
+      "id": "mobile_video",
+      "label": "Mobile Video URL (MP4 from Files)"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Fallback Mobile Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Responsive Video"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="custom-video-section">
+  {% assign video_link = section.settings.video_link | default: "" %}
+  {% if video_link != "" %}
+    <a href="{{ video_link }}" class="video-link">
+  {% endif %}
+
+    {% if section.settings.desktop_video %}
+      <video
+        class="video-desktop"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="{{ section.settings.desktop_video }}" type="video/mp4">
+      </video>
+    {% endif %}
+
+    {% comment %}
+      Mobile fallback logic:
+      1. Show mobile video if exists
+      2. If not, show mobile image if exists
+    {% endcomment %}
+    {% if section.settings.mobile_video %}
+      <video
+        class="video-mobile"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="{{ section.settings.mobile_video }}" type="video/mp4">
+      </video>
+    {% elsif section.settings.mobile_image %}
+      <img src="{{ section.settings.mobile_image | img_url: 'master' }}" class="video-mobile" alt="Mobile fallback image">
+    {% endif %}
+
+  {% if video_link != "" %}
+    </a>
+  {% endif %}
+</div>
+
+<style>
+.custom-video-section {
+  position: relative;
+  width: 100%;
+}
+.custom-video-section video,
+.custom-video-section img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+.custom-video-section .video-desktop {
+  display: block;
+}
+@media (max-width: 767px) {
+  .custom-video-section .video-desktop {
+    display: none;
+  }
+  .custom-video-section .video-mobile {
+    display: block;
+  }
+}
+</style>
+

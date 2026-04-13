@@ -1,0 +1,118 @@
+.section-club-inspire-feature .container {
+  display: grid;
+  gap: 4.5rem;
+  grid-template-areas: "image" "content";
+}
+@media (min-width: 1024px) {
+  .section-club-inspire-feature .container {
+    grid-template-columns: 1fr 50%;
+    grid-template-areas: "content image";
+    gap: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .section-club-inspire-feature .container {
+    grid-template-columns: 1fr 46%;
+    gap: 9.5rem;
+  }
+}
+.section-club-inspire-feature .content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+}
+@media (max-width: 767.98px) {
+  .section-club-inspire-feature .content {
+    text-align: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .section-club-inspire-feature .content {
+    max-width: var(--content-tablet-width);
+    margin: 0 auto;
+  }
+}
+.section-club-inspire-feature .content > * {
+  z-index: 5;
+}
+.section-club-inspire-feature .content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32rem;
+  width: 32rem;
+  transform: translate(-32%, -1rem);
+  z-index: 1;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg width='557' height='546' viewBox='0 0 557 546' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.0178677 272.946C1.71839 420.487 122.041 539.552 270.213 539.552C333.963 539.552 392.519 517.484 438.716 480.6C451.016 470.785 468.916 482.809 464.418 497.875C460.374 511.42 455.244 524.716 449.013 537.632C446.308 543.211 453.13 548.587 457.931 544.647C466.027 537.979 473.829 530.754 481.249 523.005C558.119 442.705 572.678 322.268 542.018 217.449C532.148 183.717 517.589 151.572 498.913 122.934C472.174 81.9059 433.818 47.5128 389.426 26.5981C353.683 9.76187 314.434 0.682105 274.928 0.0393381C273.47 0.0133757 272 1.08824e-06 270.542 1.08824e-06C121.128 -0.0133735 -1.70315 123.256 0.0178677 272.946Z' fill='%2300A08D'/%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .section-club-inspire-feature .content::before {
+    height: 40rem;
+    width: 40rem;
+    transform: translate(-32%, -32%);
+  }
+}
+@media (min-width: 1024px) {
+  .section-club-inspire-feature .content::before {
+    top: 50%;
+    transform: translate(-24%, -56%);
+  }
+}
+.section-club-inspire-feature .content .subheading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--colour-persian-green);
+  margin-bottom: 0.5rem;
+}
+.section-club-inspire-feature .content .points-text {
+  border-radius: var(--border-radius-md);
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.32);
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%23733089FF' stroke-width='3' stroke-dasharray='4%2c 12' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+  font-size: 1rem;
+  font-weight: 500;
+}
+.section-club-inspire-feature .content .c-btn {
+  margin-bottom: 1.5rem;
+}
+.section-club-inspire-feature .image {
+  grid-area: image;
+  z-index: 1;
+}
+.section-club-inspire-feature .image::before {
+  bottom: 0;
+  left: 0;
+  transform: translate(-16px, 16px);
+}
+@media (min-width: 1024px) {
+  .section-club-inspire-feature .image::before {
+    transform: translate(-36px, 36px);
+  }
+}
+.section-club-inspire-feature .image::after {
+  top: 0;
+  right: 0;
+  transform: translate(8px, -22px);
+}
+@media (min-width: 1024px) {
+  .section-club-inspire-feature .image::after {
+    top: 64px;
+    transform: translateX(24px);
+  }
+}
+.section-club-inspire-feature .image, .section-club-inspire-feature .image img {
+  aspect-ratio: 3/2;
+}
+.section-club-inspire-feature .image img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+}

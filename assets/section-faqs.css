@@ -1,0 +1,58 @@
+.section-faqs .wrapper {
+  max-width: 50rem;
+}
+@media (min-width: 1024px) {
+  .template-page-club-inspire .section-faqs .wrapper {
+    padding-left: 7.5rem;
+    box-sizing: content-box;
+  }
+}
+@media (min-width: 1280px) {
+  .template-page-club-inspire .section-faqs .wrapper {
+    padding-left: 10.5rem;
+  }
+}
+
+.section-faqs .accordion {
+  display: flex;
+  flex-direction: column;
+}
+.section-faqs .toggle {
+  position: relative;
+  padding: 1rem 2.5rem 1rem 0;
+  width: 100%;
+  text-align: start;
+}
+.section-faqs .toggle svg {
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  transition: opacity var(--transition-duration) var(--transition-timing) 0s;
+}
+.section-faqs .toggle svg.plus {
+  opacity: 1;
+}
+.section-faqs .toggle svg.minus {
+  opacity: 0;
+}
+.section-faqs .toggle[aria-expanded=true] svg.plus {
+  opacity: 0;
+}
+.section-faqs .toggle[aria-expanded=true] svg.minus {
+  opacity: 1;
+}
+.section-faqs .group {
+  border-bottom: 1px solid var(--colour-emperor);
+}
+.section-faqs .content {
+  display: none;
+}
+.section-faqs .content[data-open] {
+  display: block;
+}
+.section-faqs .footer {
+  margin-top: 2.5rem;
+}

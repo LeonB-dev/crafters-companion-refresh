@@ -1,0 +1,150 @@
+{% schema %}
+{
+  "name": "Custom Text Box",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom_text",
+      "label": "Text Content",
+      "default": "This is a responsive and customizable Montserrat text box."
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font Size (px)",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "default": 18
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font Weight",
+      "default": "400",
+      "options": [
+        { "value": "300", "label": "Light (300)" },
+        { "value": "400", "label": "Regular (400)" },
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi-Bold (600)" },
+        { "value": "700", "label": "Bold (700)" }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "font_color",
+      "label": "Font Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text Alignment",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Padding (px)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Corner Rounding (px)",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "default": 8
+    },
+    {
+      "type": "checkbox",
+      "id": "add_border",
+      "label": "Add Border",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color",
+      "default": "#dddddd"
+    },
+    {
+      "type": "range",
+      "id": "border_size",
+      "label": "Border Size (px)",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "text",
+      "id": "custom_width",
+      "label": "Custom Width (e.g. 100%, 300px)",
+      "default": "100%"
+    },
+    {
+      "type": "text",
+      "id": "custom_height",
+      "label": "Custom Height (e.g. auto, 200px)",
+      "default": "auto"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Responsive Montserrat Text Box",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .custom-text-box {
+    box-sizing: border-box;
+    margin: 0px auto;
+    word-wrap: break-word;
+  }
+
+  @media (max-width: 768px) {
+    .custom-text-box {
+      width: 100% !important;
+      padding: 16px !important;
+      font-size: 16px !important;
+    }
+  }
+</style>
+
+<div class="custom-text-box" style="
+  font-family: 'Montserrat', sans-serif;
+  font-size: {{ section.settings.font_size }}px;
+  font-weight: {{ section.settings.font_weight }};
+  color: {{ section.settings.font_color }};
+  background-color: {{ section.settings.background_color }};
+  text-align: {{ section.settings.text_align }};
+  padding: {{ section.settings.padding }}px;
+  border-radius: {{ section.settings.border_radius }}px;
+  width: {{ section.settings.custom_width }};
+  height: {{ section.settings.custom_height }};
+  {% if section.settings.add_border %}
+    border: {{ section.settings.border_size }}px solid {{ section.settings.border_color }};
+  {% endif %}
+">
+  {{ section.settings.custom_text }}
+</div>

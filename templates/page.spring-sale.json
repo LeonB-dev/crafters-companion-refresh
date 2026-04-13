@@ -1,0 +1,119 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "featured_image_Gx6EqF": {
+      "type": "featured-image",
+      "settings": {
+        "url": "shopify:\/\/collections\/spring-sale",
+        "image": "shopify:\/\/shop_images\/Banner_Deskop_Landing_Page_ef8f1b68-617b-4f05-b11a-78013c2a062c.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Banner_Mobile_Landing_Page_af2bea4f-1102-407e-910b-f2a8b936fd25.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "text_only_mhEbTc": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Spring Sale Offers",
+        "small_text": "",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "none"
+      }
+    },
+    "content_block_trio_k939GY": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_KgwBPP": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Papercraft Sale",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/400_X_300_Tile_Left.jpg",
+            "link_text": "Shop Now",
+            "link_url": "shopify:\/\/collections\/papercraft-sale"
+          }
+        },
+        "content_block_qDHDhT": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Christmas Sale",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/400_X_300_Tile_Middle.jpg",
+            "link_text": "Shop Now",
+            "link_url": "shopify:\/\/collections\/christmas-sale"
+          }
+        },
+        "content_block_dTFf3A": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Soft Craft Sale",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/400_X_300_Tile_Right.jpg",
+            "link_text": "Shop Now",
+            "link_url": "shopify:\/\/collections\/soft-craft-sale"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_KgwBPP",
+        "content_block_qDHDhT",
+        "content_block_dTFf3A"
+      ],
+      "settings": {
+        "use_image_only": false,
+        "link_style": "main",
+        "link_colour": "secondary",
+        "margin_bottom": "none"
+      }
+    },
+    "featured_image_3Nn9RH": {
+      "type": "featured-image",
+      "settings": {
+        "url": "shopify:\/\/blogs\/inspiration",
+        "image": "shopify:\/\/shop_images\/Banner_Desktop_Inspiration.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Banner_Mobile_Inspiration_1ee81811-6445-400b-8e4b-4a598033f0f5.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "featured_image_HJbaXq": {
+      "type": "featured-image",
+      "settings": {
+        "url": "shopify:\/\/blogs\/crafters-tv-schedule",
+        "image": "shopify:\/\/shop_images\/Banner_Desktop_CTV.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Banner_Mobile_CTV.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "featured_image_Gx6EqF",
+    "text_only_mhEbTc",
+    "content_block_trio_k939GY",
+    "featured_image_3Nn9RH",
+    "featured_image_HJbaXq"
+  ]
+}

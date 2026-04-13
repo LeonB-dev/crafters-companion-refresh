@@ -1,0 +1,153 @@
+{% schema %}
+{
+  "name": "Crafters TV Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Your favorite crafting show"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Welcome to Crafters TV!"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content",
+      "default": "Join us every week for live demonstrations, tips, and inspiration."
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "url",
+      "id": "live_show_url",
+      "label": "Live Show URL (Optional)"
+    },
+    {
+      "type": "url",
+      "id": "schedule_url",
+      "label": "View Schedule URL"
+    },
+    {
+      "type": "color",
+      "id": "watch_bg",
+      "label": "Watch Now Button Background Color",
+      "default": "#ff6f61"
+    },
+    {
+      "type": "color",
+      "id": "watch_text",
+      "label": "Watch Now Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "schedule_bg",
+      "label": "View Schedule Button Background Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "schedule_text",
+      "label": "View Schedule Button Text Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Crafters TV Text + Buttons"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="crafters-tv-text-only" style="color: {{ section.settings.text_color }};">
+  <div class="crafters-tv-inner-container">
+    {% if section.settings.subtitle != blank %}
+      <p class="crafters-tv-subtitle">{{ section.settings.subtitle }}</p>
+    {% endif %}
+
+    {% if section.settings.title != blank %}
+      <h1 class="crafters-tv-title">{{ section.settings.title }}</h1>
+    {% endif %}
+
+    {% if section.settings.content != blank %}
+      <p class="crafters-tv-text">{{ section.settings.content }}</p>
+    {% endif %}
+
+    <div class="crafters-tv-buttons">
+      {%- assign live_show_url = section.settings.live_show_url -%}
+      {%- if live_show_url == blank -%}
+        {%- assign live_show_url = shop.metafields.ctv.live_show.value -%}
+        {%- if live_show_url == "false" -%}
+          {%- assign live_show_url = blank -%}
+        {%- endif -%}
+      {%- endif -%}
+
+      {% if live_show_url != blank %}
+        <a href="{{ live_show_url }}" class="button watch-now" style="background-color: {{ section.settings.watch_bg }}; color: {{ section.settings.watch_text }};">Watch Now</a>
+      {% endif %}
+
+      {% if section.settings.schedule_url != blank %}
+        <a href="{{ section.settings.schedule_url }}" class="button view-schedule" style="background-color: {{ section.settings.schedule_bg }}; color: {{ section.settings.schedule_text }};">View Our Schedule</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+.crafters-tv-text-only {
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.crafters-tv-inner-container {
+  max-width: 800px;
+}
+
+.crafters-tv-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.crafters-tv-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.crafters-tv-text {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.crafters-tv-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.crafters-tv-buttons .button {
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.crafters-tv-buttons .button:hover {
+  opacity: 0.85;
+}
+</style>

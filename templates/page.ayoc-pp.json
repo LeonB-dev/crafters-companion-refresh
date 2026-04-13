@@ -1,0 +1,330 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "091fa3b1-15d2-4c7a-ba7b-c15d35806983": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft : Patterned Papers",
+        "text": "<p>Click on the image of your choice to save and print as desired.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "56b519ec-1ad8-4a0f-ab83-40ae1207eefd": {
+      "type": "downloads",
+      "blocks": {
+        "96107e3e-bef7-42d6-b563-41aeb5028a12": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-01.jpg",
+            "image": "shopify:\/\/shop_images\/Year-of-Crafts-Main-Box-Artwork-Papersx24-01.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-01.jpg"
+          }
+        },
+        "426f4096-69a7-4456-a06a-a4f8ab9ec5c1": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-02.jpg",
+            "image": "shopify:\/\/shop_images\/Year-of-Crafts-Main-Box-Artwork-Papersx24-02.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-02.jpg"
+          }
+        },
+        "35d58f74-aa9d-40b6-819e-8ef86d9e4dd7": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-03.jpg",
+            "image": "shopify:\/\/shop_images\/Year-of-Crafts-Main-Box-Artwork-Papersx24-03.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-03.jpg"
+          }
+        },
+        "0903790f-d135-4411-bb7c-74f3c3287d03": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-04.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-04.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-04.jpg"
+          }
+        },
+        "8c8318d9-e12e-4f28-8455-5526cde6d76c": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-05.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-05.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-05.jpg"
+          }
+        },
+        "2f47577b-066b-46bb-b3bc-76fecea00cf4": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-06.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-06.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-06.jpg"
+          }
+        },
+        "8bdf01c0-1272-412f-aa4f-754f7a99541d": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-07.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-07.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-07.jpg"
+          }
+        },
+        "7a94868d-8ed5-49e6-9980-51510c54069a": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-07.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-08.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-07.jpg"
+          }
+        },
+        "df8dcc5d-9691-4cfe-a9e0-7d221b0e7032": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-09.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-09.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-09.jpg"
+          }
+        },
+        "8632441f-4270-4d3b-aa21-6f605d187c75": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-10.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-10.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-10.jpg"
+          }
+        },
+        "d8f646aa-1989-4a26-88a6-2f1e872edbbc": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-11.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-11.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-11.jpg"
+          }
+        },
+        "8af7ad11-9d6b-4a09-aaed-0ceea895cdd5": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-12.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-12.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-12.jpg"
+          }
+        },
+        "c49325df-e0bb-4b56-8977-1aa9e984e87c": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-13.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-13.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-13.jpg"
+          }
+        },
+        "dacbb422-c50e-46ee-bc07-aafce66671a3": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-14.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-14.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-14.jpg"
+          }
+        },
+        "881aff0a-b879-46e3-98f3-24eced56f647": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-15.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-15.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-15.jpg"
+          }
+        },
+        "0e44c2d1-e12d-4446-a070-69028b351c48": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-16.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-16.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-16.jpg"
+          }
+        },
+        "58bf3404-0ed9-43e1-ab27-bf338e31b758": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-17.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-17.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-17.jpg"
+          }
+        },
+        "2bf88a8c-6274-453a-a31e-d467e2392d14": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-18.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-18.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-18.jpg"
+          }
+        },
+        "07eeb98b-cf62-42f2-9ada-4c990af848e8": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-19.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-19.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-19.jpg"
+          }
+        },
+        "01ed020e-dbbf-45a9-bb1e-53070486c6b8": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-20.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-20.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-20.jpg"
+          }
+        },
+        "3a0c28b9-53fb-49fd-ae51-16acabbc7f47": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-21.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-21.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-21.jpg"
+          }
+        },
+        "0ad174a7-c6b0-4c1d-b38f-1f58c38fab03": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-22.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-22.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-22.jpg"
+          }
+        },
+        "86febe67-4a18-420b-85b9-0677574a4f5f": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-23.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-23.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-23.jpg"
+          }
+        },
+        "9acac25f-ab90-4380-a015-b4487599a126": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-24.jpg",
+            "image": "shopify:\/\/shop_images\/Year_of_Crafts_-_Main_Box_Artwork_-_Papersx24-24.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft\/Patterned%20Papers\/Year%20of%20Crafts%20-%20Main%20Box%20Artwork%20-%20Papersx24-24.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "96107e3e-bef7-42d6-b563-41aeb5028a12",
+        "426f4096-69a7-4456-a06a-a4f8ab9ec5c1",
+        "35d58f74-aa9d-40b6-819e-8ef86d9e4dd7",
+        "0903790f-d135-4411-bb7c-74f3c3287d03",
+        "8c8318d9-e12e-4f28-8455-5526cde6d76c",
+        "2f47577b-066b-46bb-b3bc-76fecea00cf4",
+        "8bdf01c0-1272-412f-aa4f-754f7a99541d",
+        "7a94868d-8ed5-49e6-9980-51510c54069a",
+        "df8dcc5d-9691-4cfe-a9e0-7d221b0e7032",
+        "8632441f-4270-4d3b-aa21-6f605d187c75",
+        "d8f646aa-1989-4a26-88a6-2f1e872edbbc",
+        "8af7ad11-9d6b-4a09-aaed-0ceea895cdd5",
+        "c49325df-e0bb-4b56-8977-1aa9e984e87c",
+        "dacbb422-c50e-46ee-bc07-aafce66671a3",
+        "881aff0a-b879-46e3-98f3-24eced56f647",
+        "0e44c2d1-e12d-4446-a070-69028b351c48",
+        "58bf3404-0ed9-43e1-ab27-bf338e31b758",
+        "2bf88a8c-6274-453a-a31e-d467e2392d14",
+        "07eeb98b-cf62-42f2-9ada-4c990af848e8",
+        "01ed020e-dbbf-45a9-bb1e-53070486c6b8",
+        "3a0c28b9-53fb-49fd-ae51-16acabbc7f47",
+        "0ad174a7-c6b0-4c1d-b38f-1f58c38fab03",
+        "86febe67-4a18-420b-85b9-0677574a4f5f",
+        "9acac25f-ab90-4380-a015-b4487599a126"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "lg"
+      }
+    },
+    "bae27d76-4b59-4b8c-b5df-af869484fd54": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to Downloads.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft-downloads-1",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "0de6a463-a40a-43ab-a5df-848a3be9767f": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to A Year Of Craft.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    }
+  },
+  "order": [
+    "091fa3b1-15d2-4c7a-ba7b-c15d35806983",
+    "56b519ec-1ad8-4a0f-ab83-40ae1207eefd",
+    "bae27d76-4b59-4b8c-b5df-af869484fd54",
+    "0de6a463-a40a-43ab-a5df-848a3be9767f"
+  ]
+}

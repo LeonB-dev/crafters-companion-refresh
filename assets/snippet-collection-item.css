@@ -1,0 +1,124 @@
+.snippet-collection-item {
+  position: relative;
+  border-radius: 20px;
+  padding: 2rem 2.5rem .5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 1024px) {
+  .snippet-collection-item {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+.snippet-collection-item a.button {
+  font-size: var(--font-size-l);
+  display: block;
+  margin: 1rem 0 0 0;
+  width: 100%;
+  max-width: 240px;
+  border: none;
+  padding: 17px;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.125rem;
+}
+.snippet-collection-item .snippet-collection-item__heading {
+  margin: 0 0 1rem 0;
+  text-align: center;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  line-height: 1.2;
+}
+@media (max-width: 1023.98px) {
+  .snippet-collection-item .snippet-collection-item__heading {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .snippet-collection-item {
+    padding: 1.5rem;
+  }
+}
+
+/* Alt style */
+.snippet-collection-item-style--alt {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 1/1;
+}
+.snippet-collection-item-style--alt .image {
+  height: 100%;
+  width: 100%;
+}
+.snippet-collection-item-style--alt .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.snippet-collection-item-style--alt .button[class] {
+  position: relative;
+  margin-top: auto;
+}
+.snippet-collection-item-style--alt .snippet-collection-item__heading {
+  color: #ffffff;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 1.0rem;
+  margin: 0;
+  font-size: 14px;
+  font-weight: inherit;
+  padding: 6px 10px;
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  width: auto;
+}
+
+/* Wrapper — sits in the promotions-grid cell, fills height and stacks text button below */
+.snippet-collection-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* The wrapper must stretch to fill the grid cell so the card keeps its aspect ratio */
+.snippet-collection-item-wrapper .snippet-collection-item {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+/* Text button below image */
+.snippet-collection-item__text-button {
+  display: block;
+  flex-shrink: 0;
+  margin-top: 0.6rem;
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-s);
+  color: var(--colour-text-base);
+  text-underline-offset: 3px;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity var(--transition-duration) var(--transition-timing);
+}
+.snippet-collection-item__text-button:hover {
+  opacity: 0.65;
+  color: var(--colour-text-base);
+}

@@ -1,0 +1,166 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Everyday Inspiration Downloads",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "653b3957-04c6-49f4-97e2-fa8b9c37e320": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Here you can download and print the templates used for some of the projects from issue 6. You can also select and print more of the patterned papers an solid colours of cardstock included in A Year of Craft – Everyday Inspiration. Simply click on the patterned or solid papers to access them.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "10a8c664-8722-4049-b5c0-78a1f3d67cae": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/PatternedImage_ayoc_ei_pp_ff6d596f-c9b3-42b9-905f-74a384a9b806.png",
+        "main_heading": "Patterned Papers",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-everyday-inspiration-patterned-papers",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "8b000a2c-3aa7-441a-845e-d13ab87da894": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SolidImage_ayoc_ei_21178a68-9597-4e53-8e3c-66a4e304b556.png",
+        "main_heading": "Solid Colour Papers",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-everyday-inspiration-solid-colour-papers",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "04e1daf9-229a-4b75-888b-023161a0992f": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/ayoc_ei_templateImage_64eef615-323f-4dd4-98dd-965cc79aa57d.png",
+        "main_heading": "Templates - UK",
+        "main_text": "",
+        "main_link_url": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/AYOC%20AS6%20Templates%20UK.pdf",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "4b85e2f8-a850-4934-992a-75aefa4af5ff": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/ayoc_ei_templateImage_64eef615-323f-4dd4-98dd-965cc79aa57d.png",
+        "main_heading": "Templates - US",
+        "main_text": "",
+        "main_link_url": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/AYOC%20AS6%20Templates%20US.pdf",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "41b796a1-9a90-4327-96a6-0eb2d740cc27": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to Homepage",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef",
+    "653b3957-04c6-49f4-97e2-fa8b9c37e320",
+    "10a8c664-8722-4049-b5c0-78a1f3d67cae",
+    "8b000a2c-3aa7-441a-845e-d13ab87da894",
+    "04e1daf9-229a-4b75-888b-023161a0992f",
+    "4b85e2f8-a850-4934-992a-75aefa4af5ff",
+    "41b796a1-9a90-4327-96a6-0eb2d740cc27"
+  ]
+}

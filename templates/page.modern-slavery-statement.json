@@ -1,0 +1,37 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "e4b409ea-2d39-4196-94b5-3b73537c3ec3": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Modern Slavery Statement",
+        "text": "<h4><strong>Introduction<\/strong><\/h4><p>This statement is published in accordance with section 54 of the Modern Slavery Act 2015 and, with regard to the Home Office’s Guidance on Slavery and human trafficking in supply chains 2021.  It describes the steps Crafter’s Companion Limited (‘Crafter’s Companion’) has taken to prevent, identify and respond to the risk of modern slavery in our business and supply chain for the year ending 31 March 2022.<\/p><p>Modern slavery and human trafficking are abhorrent practices that, unfortunately, still exist in many parts of the world, including the UK.  It includes the recruitment, movement, harbouring or receiving of people through the use of force, coercion, abuse of vulnerability, deception or other means of exploitation.  It is a criminal offence and includes holding a person in a position of slavery, servitude, forced or compulsory labour, or facilitating their travel with the intention of exploiting them soon after.<\/p><h4><strong>Crafter’s Companion Commitment<\/strong><\/h4><p>Crafter’s Companion is committed to addressing the risk of modern slavery and human trafficking.  Crafter’s Companion do not enter business with any other organisation, in the United Kingdom or abroad, which knowingly supports, or is found to involve itself in modern slavery and\/or human trafficking. <\/p><p>Crafter’s Companion will review their existing policies and processes throughout the next financial year to address the risk of modern slavery and human trafficking and make amendments where required.<\/p><p>Crafter’s Companion is committed to visiting their contracting businesses and suppliers around the world to build better working relationships and ensure those that work with us, understand our commitment to reduce the risk of modern slavery and human trafficking.<\/p><h4><strong>Crafter’s Companion<\/strong><\/h4><p>Crafter’s Companion (Company number 05734881) was founded in 2006, offering art and craft supplies via its website.  Since then, the business has grown and now operates two stores and one concession.  Our website sells internationally.<\/p><p>Crafter’s Companion’s head office is in the Northeast of England.  Our warehouses are in the North East and, California, USA.  Our suppliers are primarily based in the UK, Europe, the Middle East, USA and China.<\/p><h4><strong>Crafter’s Companion’s Policies in relation to slavery and human trafficking<\/strong><\/h4><p>Crafter’s Companion require all contracting businesses to certify they will comply with a Code of Conduct when entering a business relationship with us.  That Code of Conduct makes clear that Crafter’s Companion will not tolerate any unlawful child labour, any forced labour or any exploitation of workers.<\/p><h4><strong>Due diligence process<\/strong><\/h4><p>Whilst the restrictions imposed by Covid-19 impacted our ability to visit our primary suppliers and factories to conduct an audit, we engaged local third-party support where possible, who understand the seriousness of modern slavery and human trafficking, to visit our primary suppliers and factories on our behalf.<\/p><p>It is a requirement of our Code of Conduct that Crafter’s Companion reserve the right to conduct an audit to ensure compliance.  Where Crafter’s Companion consider that any supplier violates our Code of Conduct, or does not cooperate with our auditors, we can terminate our business relationship.<\/p><h4><strong>Risk assessment and management<\/strong><\/h4><p>Crafter’s Companion contract with several suppliers around the world where custom, law and practice are different to that in the UK.  Crafter’s Companion recognise that there is a risk that, in some countries, where the laws, customs or practices differ to those in the UK that there may be a greater risk of modern slavery and human trafficking from taking place.<\/p><p>We manage that risk by visiting our business partners and engaging independent third-party support, where possible, to visit those business to make clear that we have a zero-tolerance to modern slavery and human trafficking.<\/p><p>Crafter’s Companion recognise that several of our suppliers work with a number of other organisations (our ‘second-tier suppliers’).  Where possible, we engage with our second-tier suppliers to ensure they understand our zero-tolerance approach.<\/p><h4><strong>Training and Key Performance Indicators<\/strong><\/h4><p>Crafter’s Companion is committed to better understand the risks of modern slavery and human trafficking arising in our supply chain. <\/p><p>Throughout the year, we are continuing to develop appropriate key performance indicators to measure and report on our progress in managing slavery risks within Crafter’s Companion and our supply chains.<\/p><p>Crafter’s Companion will also ensure that staff who are responsible for managing the business relationships with our partners are provided with the appropriate training about modern slavery and human trafficking so that they can identify the risk and take the necessary action to address that risk.<\/p><h4><strong>Approval<\/strong><\/h4><p>Approved by the Board on 4th January 2022.<\/p><p>Simon Davies<br\/>Chief Executive Officer<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": true,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "e4b409ea-2d39-4196-94b5-3b73537c3ec3"
+  ]
+}

@@ -1,0 +1,242 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Happy Holidays : Patterned Papers",
+        "text": "<p>Click on the image of your choice to save and print as desired.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "bc3a3e6f-0b33-4269-b56b-8d035f31869e": {
+      "type": "downloads",
+      "blocks": {
+        "7594e1af-b4e6-4508-bb77-e3b9585173a3": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%281%29.png",
+            "image": "shopify:\/\/shop_images\/hp1.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%281%29.png"
+          }
+        },
+        "06979276-603c-4ccf-8937-4c4ddfd7836f": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%282%29.png",
+            "image": "shopify:\/\/shop_images\/hp2.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%282%29.png"
+          }
+        },
+        "02586605-e1ed-42be-9784-80215a389f93": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%283%29.png",
+            "image": "shopify:\/\/shop_images\/fp3.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%283%29.png"
+          }
+        },
+        "d890f924-0db2-46a5-a2a9-a0408df25860": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%284%29.png",
+            "image": "shopify:\/\/shop_images\/hp4.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%284%29.png"
+          }
+        },
+        "f43ab1b3-3ddc-45f7-9bd6-c1f956edb993": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%285%29.png",
+            "image": "shopify:\/\/shop_images\/hp5.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%285%29.png"
+          }
+        },
+        "306b7828-9f7a-406b-98b2-136054d439e2": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%286%29.png",
+            "image": "shopify:\/\/shop_images\/hp6.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%286%29.png"
+          }
+        },
+        "323b9f62-4528-443f-a7a9-022fc86d76c4": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%287%29.png",
+            "image": "shopify:\/\/shop_images\/hp7.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%287%29.png"
+          }
+        },
+        "f286a526-64c5-4595-bbd5-37183fb8664e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%288%29.png",
+            "image": "shopify:\/\/shop_images\/hp8.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%288%29.png"
+          }
+        },
+        "cc4b4f17-0784-4fba-b6ea-b09f0dfbca72": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%289%29.png",
+            "image": "shopify:\/\/shop_images\/hp9.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%289%29.png"
+          }
+        },
+        "b154190a-12ef-4d9d-9f37-afa442421dc2": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%2810%29.png",
+            "image": "shopify:\/\/shop_images\/hp10.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%2810%29.png"
+          }
+        },
+        "a7dffe22-44f4-4661-a557-30c24c809216": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%2811%29.png",
+            "image": "shopify:\/\/shop_images\/hp11.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%2811%29.png"
+          }
+        },
+        "43ccbc1b-5c21-4c41-a003-4d5d473b5523": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%2812%29.png",
+            "image": "shopify:\/\/shop_images\/hp12.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%2812%29.png"
+          }
+        },
+        "5c9b7f1e-a68a-42b8-b2d8-468c14e0bdda": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%2813%29.png",
+            "image": "shopify:\/\/shop_images\/hp13.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%2813%29.png"
+          }
+        },
+        "c3e5dc3d-b004-4b64-a9a1-2d67c8d03f53": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%2814%29.png",
+            "image": "shopify:\/\/shop_images\/hp14.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%2814%29.png"
+          }
+        },
+        "e9685133-3fad-4e23-b833-001ea98a0c30": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%2815%29.png",
+            "image": "shopify:\/\/shop_images\/hp15_9a3e2213-72f9-4a3c-8667-876c405adf7e.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Pattern%20Papers\/ayoc_pp_hh%20%2815%29.png"
+          }
+        },
+        "702056f4-9252-4a6e-9d94-6febd2319e6f": {
+          "type": "download_block",
+          "settings": {
+            "file": "",
+            "image": "shopify:\/\/shop_images\/hp16.png",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "7594e1af-b4e6-4508-bb77-e3b9585173a3",
+        "06979276-603c-4ccf-8937-4c4ddfd7836f",
+        "02586605-e1ed-42be-9784-80215a389f93",
+        "d890f924-0db2-46a5-a2a9-a0408df25860",
+        "f43ab1b3-3ddc-45f7-9bd6-c1f956edb993",
+        "306b7828-9f7a-406b-98b2-136054d439e2",
+        "323b9f62-4528-443f-a7a9-022fc86d76c4",
+        "f286a526-64c5-4595-bbd5-37183fb8664e",
+        "cc4b4f17-0784-4fba-b6ea-b09f0dfbca72",
+        "b154190a-12ef-4d9d-9f37-afa442421dc2",
+        "a7dffe22-44f4-4661-a557-30c24c809216",
+        "43ccbc1b-5c21-4c41-a003-4d5d473b5523",
+        "5c9b7f1e-a68a-42b8-b2d8-468c14e0bdda",
+        "c3e5dc3d-b004-4b64-a9a1-2d67c8d03f53",
+        "e9685133-3fad-4e23-b833-001ea98a0c30",
+        "702056f4-9252-4a6e-9d94-6febd2319e6f"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "lg"
+      }
+    },
+    "5b6757f1-6f63-4e45-af57-2b3ed3c65f30": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to Downloads.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft-happy-holidays-downloads",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "9c59aa03-6e8b-48ad-90d6-bbb786bc2705": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to A Year Of Craft.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef",
+    "bc3a3e6f-0b33-4269-b56b-8d035f31869e",
+    "5b6757f1-6f63-4e45-af57-2b3ed3c65f30",
+    "9c59aa03-6e8b-48ad-90d6-bbb786bc2705"
+  ]
+}

@@ -1,0 +1,212 @@
+{% liquid 
+  assign current_variant = product.selected_or_first_available_variant
+
+  assign product_title = product.title
+  assign product_title_length = product_title | size
+  assign product_title_class = 'u-heading-md'
+  if product_title_length > 40
+    assign product_title_class = 'u-heading-sm'
+  endif
+
+  assign product_sku = current_variant.sku
+
+  assign product_price = current_variant.price
+  assign product_compare_at_price = current_variant.compare_at_price
+  assign product_price_saving = product_price | minus: product_compare_at_price | money_without_trailing_zeros | remove: '-'
+  assign clearpay_amount = settings.clearpay_threshold
+  assign clearpay_threshold = clearpay_amount | times: 1.0
+
+  assign product_price_int = product_price | money_without_currency | plus: 0
+
+  assign parent_brand = product.metafields.custom.parent_brand.value
+
+  if parent_brand != blank
+    assign brand_metaobject = parent_brand
+    assign link_background_colour = brand_metaobject.link_background_colour
+    assign link_colour = brand_metaobject.link_colour
+  endif
+
+  assign freeDeliveryThreshold = settings.free_delivery_threshold | times: 100
+
+  assign lowStockThreshold = section.settings.low_stock_threshold
+%}
+
+{% if parent_brand != blank %}
+  <style>
+    div[data-section-id="{{ _section_id }}"] .add-to-basket{
+      background: {{ link_background_colour }};
+      color: {{ link_colour }};
+    }
+  </style>
+{% endif %}
+
+<div data-pf-container>
+  {%- form 'product', product, data-productid: product.id, class: 'c-form', data-product-form: '', data-product-handle: product.handle, data-product-variant: current_variant.id -%}
+    <input name="id" data-productid="{{ product.id }}" type="hidden" value="{{ current_variant.id }}" data-product-form-variant-id>
+
+    {% if settings.show_product_item_lozenges == true %}
+      {%- render 'output_lozenge', product: product, class_name: 'product-form-new__offer' -%}
+    {% endif %}
+
+    <h1 class="{{- product_title_class }} title product-form-new__title">
+      {{- product.title -}}
+    </h1>
+
+    {% if product.metafields.custom.experience_level.value.title != blank %}
+      <p class="product-form-new__subtitle">
+        {{ product.metafields.custom.experience_level.value.title }}
+      </p>
+    {% endif %}
+
+    {% if product_sku != blank and settings.pdp_use_sku == true %}
+      <p class="u-text-sm sku product-form-new__sku">
+        {{ 'products.product.sku' | t }}
+        <span data-product-sku>{{ product_sku }}</span>
+      </p>
+    {% endif %}
+
+    <div class="product-form-new__pricing pricing b2bridge-b2c-component">
+      <div class="prices">
+        <span class="current u-text-xl" data-product-price>{{ product_price | money }}</span>
+        {%- if product_compare_at_price != blank -%}
+          <span class="was u-text-md">{{ product_compare_at_price | money }}</span>
+        {%- endif -%}
+      </div>
+
+      {%- if product_compare_at_price > 0 -%}
+        <span class="product-form-new__pricing-tag c-ribbon red">
+          <span class="product-form-new__pricing-tag-inner">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13">
+              <path d="M12.5 5.1 12 .8c0-.2-.2-.4-.4-.5L7.3 0C7.2 0 7 0 7 .2L.2 6.9c-.2.2-.3.6 0 .8l4.6 4.6c.2.2.6.2.8 0l6.7-6.7.2-.5ZM9.5 3a.8.8 0 0 1 .1-1.1c.3-.4.8-.4 1.1 0 .3.2.3.8 0 1-.3.4-.8.4-1.1 0Z"/>
+            </svg>
+            <span>
+              {{- 'products.product.save' | t -}}
+            </span>
+
+            {{ product_price_saving }}
+          </span>
+        </span>
+      {%- endif -%}
+    </div>
+
+    <div class="product-form-new__loyalty">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 21.5c.2 0 .4.2.5.4V23a.5.5 0 0 1-1 0v-1c0-.3.2-.5.5-.5Zm7.3-3v.1l1 1a.5.5 0 0 1-.6.8l-1-1a.5.5 0 0 1 .6-.8Zm-14 .1c.2.2.2.5.1.7l-1 1a.5.5 0 0 1-.8-.6l1-1c.2-.2.6-.2.8 0ZM13 6.1l1.5 3 3.2.6c.9 0 1.2 1.2.6 1.8l-2.4 2.4.6 3.4c.1.8-.7 1.5-1.5 1L12 16.9l-2.9 1.6c-.8.4-1.6-.3-1.5-1.1l.6-3.4-2.4-2.4c-.6-.6-.3-1.7.6-1.8l3.2-.5L11.1 6a1 1 0 0 1 1.8 0Zm9.1 5.4h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1 0-1h1Zm-21 0h1a.5.5 0 0 1 0 1H1a.5.5 0 0 1 0-1h1Zm19.4-7.9v.7l-1 1a.5.5 0 0 1-.8-.6l1-1c.2-.2.6-.2.8 0Zm-16.1 0 1 1a.5.5 0 0 1-.6.8l-1-1a.5.5 0 0 1 .6-.8ZM12 .5c.2 0 .4.2.5.4V2a.5.5 0 0 1-1 0V1c0-.3.2-.5.5-.5Z"/>
+      </svg>
+
+      {% assign points = product.price | money_without_currency | split: '.' | first | times: settings.points_per_pound %}
+
+      <p>{{- 'products.product.points_html' | t: points: points }}</p>
+    </div>
+
+       {% comment %} B2BRIDGE PRODUCT TABLE {% endcomment %}
+     <b2bridge-product-table productId="{{ product.id }}"></b2bridge-product-table>
+     {% comment %} B2BRIDGE PRODUCT TABLE {% endcomment %}
+
+    {%- render 'product-media-grid-new', product: product, is_mobile: true -%}
+
+    <div class="product-form-new__content b2bridge-b2c-component">
+      <div class="product-form-new__content-links">
+        {% if product.price > freeDeliveryThreshold %}
+          <div class="product-form-new__content-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 19">
+              <path d="M10.7 18.8a3.2 3.2 0 0 1-3.2-2.6H4.8c-.7 0-1.3-.6-1.3-1.3V8.3a.5.5 0 0 1 1 0V15c0 .1.1.3.3.3h2.7a3.2 3.2 0 0 1 6.3 0h5.7V1.8c0-.2-.1-.3-.3-.3H1.3a.5.5 0 0 1 0-1h17.9c.7 0 1.3.6 1.3 1.3v2.7h7c.4 0 .9.3 1.1.6v.2l2.5 5.3V15c0 .7-.5 1.3-1.2 1.3H27a3.2 3.2 0 0 1-6.2 0h-7.1a3.2 3.2 0 0 1-3.1 2.6Zm0-5.3a2.2 2.2 0 1 0 0 4.3 2.2 2.2 0 0 0 0-4.3Zm13.3 0a2.2 2.2 0 1 0 0 4.3 2.2 2.2 0 0 0 0-4.3Zm3.5-8h-7v9.7h.4a3.2 3.2 0 0 1 6.2 0H30l.3-.3V11l-2.4-5.3-.3-.2ZM8 4.5a.5.5 0 0 1 0 1H2.7a.5.5 0 0 1 0-1Z"/>
+            </svg>
+            {{ 'products.product.free_delivery_html' | t }}
+          </div>
+        {% endif %}
+
+        <div class="product-form-new__content-link">
+          <div class="swym-wishlist-button-bar"></div>
+        </div>
+      </div>
+
+      {%- if product.has_only_default_variant -%}
+        <input name="id" data-productid="{{ product.id }}" type="hidden" value="{{ current_variant.id }}">
+      {% else -%}
+        {%- for option in product.options_with_values -%}
+          <div class="form-field option js">
+            <label class="form-label" for="productOption{{ option.position }}">
+              {{- option.name | escape -}}
+            </label>
+            <select class="form-input {{ option.name | downcase -}}" id="productOption{{ option.position }}" name="options[{{ option.name | escape }}]" data-product-form-variant-id>
+              {%- for value in option.values -%}
+                <option
+                  value="{{ value | escape }}"
+                  {% if option.selected_value == value %} selected="selected" {% endif %}
+                >
+                  {%- if product.handle == 'gift-card' -%}
+                    {{- cart.currency.symbol | append: value -}}
+                  {%- else -%}
+                    {{- value -}}
+                  {%- endif -%}
+                </option>
+              {%- endfor -%}
+            </select>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- render 'product-media-slider', product: product, _product_price: product_price, _product_compare_at_price: product_compare_at_price -%}
+
+      <div class="product-form-new__actions actions" data-product-actions>
+        {% render 'product-quantity', section: section %}
+
+        {% comment %}
+          Determine button text based on lozenge rules:
+          - Coming Soon tag
+          - Sold Out variant
+          - Add to Cart by default
+        {% endcomment %}
+        {% if product.tags contains 'offer_Waiting list' %}
+  {% assign button_text = 'Waitlist' %}
+  {% assign button_disabled = true %}
+{% elsif product.tags contains 'offer_Coming Soon' %}
+  {% assign button_text = 'Coming Soon' %}
+  {% assign button_disabled = true %}
+  {% elsif product.tags contains 'offer_Back in Stock Soon' %}
+  {% assign button_text = 'Back in Stock Soon' %}
+  {% assign button_disabled = true %}
+{% elsif current_variant.available == false %}
+  {% assign button_text = 'products.product.sold_out' | t %}
+  {% assign button_disabled = true %}
+{% else %}
+  {% assign button_text = 'products.product.add_to_cart' | t %}
+  {% assign button_disabled = false %}
+{% endif %}
+
+        <button
+          class="c-btn main has-icon add-to-basket product-form-new__submit
+            {% if current_variant.available == true %} primary {% else %} quinary {% endif %}"
+          {% if current_variant.available == true %} type="submit" data-product-submit-button {% else %} disabled {% endif %}
+        >
+          {%- render 'icon', _name: 'icon-basket' -%}
+          <span data-product-submit-button-text>
+            {{ button_text }}
+            {% if current_variant.available == true and current_variant.inventory_quantity < lowStockThreshold %}
+              | {{ 'products.product.low_stock_html' | t: lowStockThreshold: lowStockThreshold }}
+            {% endif %}
+          </span>
+        </button>
+      </div>
+
+      <div class="product-form-new__content-footer">
+        <div class="product-form-new__payment-methods">
+          <p class="product-form-new__payment-methods-list-text">Pay Securely with</p>
+
+          <ul class="product-form-new__payment-methods-list">
+            {% for type in shop.enabled_payment_types %}
+              <li class="product-form-new__payment-methods-list-item">
+                {{ type | payment_type_svg_tag }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        {%- if product_price_int >= clearpay_threshold -%}
+          <div id="clearpay-message"></div>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endform -%}
+</div>

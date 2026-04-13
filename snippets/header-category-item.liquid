@@ -1,0 +1,20 @@
+<div class="snippet-collection-item" style="background-color: {{ _background_color }}">
+  {%- if _lozenge != blank -%}
+    <span class="c-lozenge carnation">{{- _lozenge -}}</span>
+  {%- endif -%}
+  
+  <div class="snippet-collection-item__heading" style="color: {{ _heading_color }};">{{ _heading }}</div>
+
+  <div class="image">
+    {%- if _image != blank -%}
+      <img src="{{ _image | image_url: width: 400 }}" alt="{{ _heading }}" height="332" width="295" loading="{{- _loading -}}">
+    {%- else -%}
+      {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+    {%- endif -%}
+  </div>
+  <a href="{{ _url }}" class="button stretched-link" title="{{- _heading -}}" 
+      style="color: {{ _button_text_color }}; background-color: {{ _button_background_color }};">
+    {{ _button_text }}
+  </a>
+  
+</div>

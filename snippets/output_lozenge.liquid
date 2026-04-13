@@ -1,0 +1,103 @@
+{% liquid
+  assign tag_text = ''
+  assign tag_text_color = ''
+  assign tag_background_color = ''
+  assign offer_tag = ''
+  assign priority_offer_tag = ''
+
+  # Priority Tags: Showstopper and Pick of the Week
+  for tag in product.tags
+    if tag == 'offer_Showstopper'
+      assign priority_offer_tag = 'Showstopper'
+      break
+    elsif tag == 'offer_Pick of the Week'
+      assign priority_offer_tag = 'Pick of the Week'
+      break
+    elsif tag == 'offer_Weekly Wonder'
+      assign priority_offer_tag = 'Weekly Wonder'
+      break
+   elsif tag == 'offer_Double Discount'
+      assign priority_offer_tag = 'Double Discount'
+      break
+    endif
+  endfor
+
+    if product.tags contains 'offer_Coming Soon'
+    # Coming Soon Lozenge
+    assign tag_text             = 'Coming Soon'
+    assign tag_text_color       = settings.coming_soon_text_lozenge_colour
+    assign tag_background_color = settings.coming_soon_lozenge_colour
+
+      elsif product.tags contains 'offer_Waiting list'
+  # Waitlist Lozenge
+  assign tag_text             = 'Waitlist'
+  assign tag_text_color       = settings.waitlist_text_lozenge_colour
+  assign tag_background_color = settings.waitlist_lozenge_colour
+
+elsif product.tags contains 'offer_Back in Stock Soon'
+  # Back in Stock Soon Lozenge
+  assign tag_text             = 'Back in Stock Soon'
+  assign tag_text_color       = settings.back_in_stock_soon_text_lozenge_colour
+  assign tag_background_color = settings.back_in_stock_soon_lozenge_colour
+
+elsif product.available == false
+  # Sold Out Lozenge
+  assign tag_text             = 'products.product.sold_out' | t
+  assign tag_text_color       = settings.sold_out_text_lozenge_colour
+  assign tag_background_color = settings.sold_out_lozenge_colour
+
+  elsif priority_offer_tag != ''
+    # Priority Offer Lozenge (Showstopper or Pick of the Week)
+    assign tag_text             = priority_offer_tag
+    assign tag_text_color       = settings.offer_text_lozenge_colour
+    assign tag_background_color = settings.offer_lozenge_colour
+  elsif product.selected_or_first_available_variant.compare_at_price > product.price
+    # Sale Lozenge
+    assign tag_text             = 'products.product.on_sale' | t
+    assign tag_text_color       = settings.on_sale_text_lozenge_colour
+    assign tag_background_color = settings.on_sale_lozenge_colour
+  else
+    # Check for other offer tags (with prefix)
+    for tag in product.tags
+      if tag contains settings.tags_filter_prefix and tag != 'offer_Tariff Free'
+        assign full_tag = tag | handleize | replace: '_', '-'
+        assign offer_tag = tag | split: '_' | last
+      endif
+    endfor
+
+    if offer_tag != blank
+      # Offer Tag Lozenge
+      assign tag_text             = offer_tag
+      assign tag_text_color       = settings.offer_text_lozenge_colour
+      assign tag_background_color = settings.offer_lozenge_colour
+    else
+      # Check if the product is new
+      assign date_now = 'now' | date: '%s'
+      assign limit = 3600 | times: 24 | times: settings.new_lozenge_days_threshold
+      assign date_published = product.created_at | date: '%s'
+      assign date_difference = date_now | minus: date_published
+      if date_difference < limit
+        # New Product Lozenge
+        assign tag_text             = 'products.product.new' | t
+        assign tag_text_color       = settings.new_lozenge_text_colour
+        assign tag_background_color = settings.new_lozenge_colour
+      endif
+    endif
+  endif
+
+  # Check if the lozenge type exists in metaobjects
+  assign lozenger = shop.metaobjects['lozenge_types'][full_tag]
+
+  if lozenger
+    assign tag_text_color = lozenger.text_colour
+    assign tag_background_color = lozenger.background_colour
+  endif
+%}
+
+{% if tag_text != blank and tag_text_color != blank and tag_background_color != blank and tag_text != 'Tariff Free' %}
+  <div class="{{ class_name }}" 
+      style="background-color: {{ tag_background_color }};
+              color:            {{ tag_text_color }}">
+    {{ tag_text }}
+  </div>
+{% endif %}

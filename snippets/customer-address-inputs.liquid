@@ -1,0 +1,40 @@
+<div class="form-field ">
+  <label class="form-label" for="first-name-{{ _form_id }}">{{ 'forms.first_name_label' | t }}</label>
+  <input id="first-name-{{ _form_id }}" class="form-input{% if show_errors == true and form.errors contains 'first_name' %} form-input--error{% endif %}" name="address[first_name]" type="text" placeholder="{{ 'forms.first_name_label' | t }}" value="{{ form.first_name }}" autocapitalize="words">
+</div>
+<div class="form-field ">
+  <label class="form-label" for="last-name-{{ _form_id }}">{{ 'forms.last_name_label' | t }}</label>
+  <input id="last-name-{{ _form_id }}" class="form-input{% if show_errors == true and form.errors contains 'last_name' %} form-input--error{% endif %}" name="address[last_name]" type="text" placeholder="{{ 'forms.last_name_label' | t }}" value="{{ form.last_name }}" autocapitalize="words">
+</div>
+<div class="form-field ">
+  <label class="form-label" for="company-{{ _form_id }}">{{ 'forms.company' | t }}</label>
+  <input id="company-{{ _form_id }}" class="form-input{% if show_errors == true and form.errors contains 'company' %} form-input--error{% endif %}" name="address[company]" type="text" placeholder="{{ 'forms.company' | t }}" value="{{ form.company }}" autocapitalize="words">
+</div>
+<div class="form-field ">
+  <label class="form-label" for="address1-{{ _form_id }}">{{ 'forms.address_one' | t }}</label>
+  <input id="address1-{{ _form_id }}" class="form-input{% if show_errors == true and form.errors contains 'address1' %} form-input--error{% endif %}" name="address[address1]" type="text" placeholder="{{ 'forms.address_one' | t }}" value="{{ form.address1 }}" autocapitalize="words" required>
+</div>
+<div class="form-field ">
+  <label class="form-label" for="address2-{{ _form_id }}">{{ 'forms.address_two' | t }}</label>
+  <input id="address2-{{ _form_id }}" class="form-input{% if show_errors == true and form.errors contains 'address2' %} form-input--error{% endif %}" name="address[address2]" type="text" placeholder="{{ 'forms.address_two' | t }}" value="{{ form.address2 }}" autocapitalize="words">
+</div>
+<div class="form-field ">
+  <label class="form-label" for="city-{{ _form_id }}">{{ 'forms.city' | t }}</label>
+  <input id="city-{{ _form_id }}" class="form-input{% if show_errors == true and form.errors contains 'city' %} form-input--error{% endif %}" name="address[city]" type="text" placeholder="{{ 'forms.city' | t }}" value="{{ form.city }}" autocapitalize="words" required>
+</div>
+<div class="form-field ">
+  <label class="form-label" for="country-{{ _form_id }}">{{ 'forms.country' | t }}</label>
+  <select id="country-{{ _form_id }}" class="form-input{% if show_errors == true and form.errors contains 'country' %} form-input--error{% endif %}" name="address[country]" data-default="{{ form.country }}" required></select>
+</div>
+<div class="form-field ">
+  <label class="form-label" for="province-{{ _form_id }}">{{ 'forms.province' | t }}</label>
+  <select id="province-{{ _form_id }}" class="form-input{% if show_errors == true and form.errors contains 'province' %} form-input--error{% endif %}" name="address[province]" data-default="{{ form.province }}"></select>
+</div>
+<div class="form-field ">
+  <label class="form-label" for="zip-{{ _form_id }}">{{ 'forms.postcode' | t }}</label>
+  <input id="zip-{{ _form_id }}" class="zip-input form-input{% if show_errors == true and form.errors contains 'zip' %} form-input--error{% endif %}" name="address[zip]" type="text" placeholder="{{ 'forms.postcode' | t }}" value="{{ form.zip }}" autocapitalize="characters" required>
+</div>
+<div class="form-field ">
+  <label class="form-label" for="phone-number-{{ _form_id }}">{{ 'forms.phone_number' | t }}</label>
+  <input id="phone-number-{{ _form_id }}" class="form-input{% if show_errors == true and form.errors contains 'phone' %} form-input--error{% endif %}" name="address[phone]" type="tel" placeholder="{{ 'forms.phone_number' | t }}" value="{{ form.phone }}">
+</div>

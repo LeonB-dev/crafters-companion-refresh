@@ -1,0 +1,51 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false
+      }
+    },
+    "396d59c0-656e-4412-aec7-d764711f0d3b": {
+      "type": "featured-image",
+      "settings": {
+        "url": "",
+        "image": "shopify:\/\/shop_images\/HypeBANNER_Join_Us_B.jpg",
+        "margin_bottom": "lg"
+      }
+    },
+    "0bef7981-11bf-47ed-ad24-ba9314749ea3": {
+      "type": "featured-image",
+      "settings": {
+        "url": "https:\/\/online.flippingbook.com\/view\/373137245\/",
+        "image": "shopify:\/\/shop_images\/HypeBANNER_View_Booklet.jpg",
+        "margin_bottom": "lg"
+      }
+    },
+    "3afce16c-375d-49e7-94b9-e1829bfcc59e": {
+      "type": "video",
+      "settings": {
+        "external": false,
+        "external_video": "",
+        "heading": "",
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "396d59c0-656e-4412-aec7-d764711f0d3b",
+    "0bef7981-11bf-47ed-ad24-ba9314749ea3",
+    "3afce16c-375d-49e7-94b9-e1829bfcc59e"
+  ]
+}

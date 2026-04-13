@@ -1,0 +1,37 @@
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+
+{%- assign pageUrl = contentForQuerystring | split: '"pageurl":"' | last | split: '"' | first | split: '.myshopify.com' | last | replace: '\/', '/' | replace: '%20', ' ' | replace: '\u0026', '&' -%}
+{% assign querystring = pageUrl | split: '?' | last %}
+{% assign paginate_value = querystring | split: 'paginateby=' | last | slice: 0, 2 | replace: '&', '' %}
+
+{%- paginate search.results by paginate_value -%}
+  {% if search.results_count > 0 %}
+    <div class="pagination prev" data-search-pagination-less>
+      {%- if paginate.previous -%}
+        {%- assign previous_url = paginate.previous.url | default: '#' -%}
+        <a class="c-btn main tertiary center" href="{{ previous_url | url }}" data-search-pagination-less-btn>{{ 'Load previous' | escape }}</a>
+      {%- endif -%}
+    </div>
+    <div hidden data-split></div>
+    {%- for search_item in search.results -%}
+      {% if search_item.object_type == 'product' %}
+        {% render 'stmt-product-card', product: search_item -%}
+      {% elsif search_item.object_type == 'article' -%}
+        {%- render 'article-item', _article: search_item -%}
+      {%- elsif search_item.object_type == 'page' -%}
+        {%- render 'search-item', search: search_item -%}
+      {%- endif -%}
+    {%- endfor -%}
+    <div hidden data-split></div>
+    <div class="pagination next" data-search-pagination-more>
+      {%- if paginate.next -%}
+        {%- assign next_url = paginate.next.url | default: '#' -%}
+        <a class="c-btn main tertiary center" href="{{ next_url | url }}" data-search-pagination-more-btn>{{ 'Load more' | escape }}</a>
+      {%- endif -%}
+    </div>
+  {%- else -%}
+    <div class="s-collection__empty">
+      <p>{{ 'templates.search.no_results' | t }}</p>
+    </div>
+  {%- endif -%}
+{%- endpaginate -%}

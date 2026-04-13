@@ -1,0 +1,281 @@
+{% schema %}
+{
+  "name": "Banner with Buttons",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Desktop Header Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image_mobile",
+      "label": "Mobile Header Image"
+    },
+    {
+      "type": "url",
+      "id": "banner_link",
+      "label": "Banner Image Link"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Button Section Background Color",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Corner Radius (px)",
+      "min": 0,
+      "max": 50,
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Button Hover Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Button Hover Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "button_padding",
+      "label": "Button Size",
+      "default": "medium",
+      "options": [
+        { "label": "Small", "value": "small" },
+        { "label": "Medium", "value": "medium" },
+        { "label": "Large", "value": "large" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "Button Font Size (px)",
+      "min": 10,
+      "max": 24,
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "label": "Button Font Weight",
+      "default": "bold",
+      "options": [
+        { "label": "Normal", "value": "normal" },
+        { "label": "Bold", "value": "bold" },
+        { "label": "Bolder", "value": "bolder" },
+        { "label": "Light", "value": "300" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Banner with Buttons",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+{% assign padding_value = '' %}
+{% case section.settings.button_padding %}
+  {% when 'small' %}
+    {% assign padding_value = '8px 16px' %}
+  {% when 'large' %}
+    {% assign padding_value = '16px 32px' %}
+  {% else %}
+    {% assign padding_value = '12px 24px' %}
+{% endcase %}
+
+<style>
+  .custom-banner-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .custom-banner-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: {{ section.settings.border_radius }}px;
+    border-top-right-radius: {{ section.settings.border_radius }}px;
+  }
+
+  .custom-banner-wrapper img.desktop-banner {
+    display: block;
+  }
+
+  .custom-banner-wrapper img.mobile-banner {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .custom-banner-wrapper img.desktop-banner {
+      display: none;
+    }
+    .custom-banner-wrapper img.mobile-banner {
+      display: block;
+    }
+  }
+
+  .button-section {
+    background-color: {{ section.settings.background_color }};
+    padding: 20px 20px;
+    border-bottom-left-radius: {{ section.settings.border_radius }}px;
+    border-bottom-right-radius: {{ section.settings.border_radius }}px;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .custom-button {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    padding: var(--padding);
+    border-radius: {{ section.settings.border_radius }}px;
+  }
+
+  .custom-button:hover {
+    background-color: var(--hover-bg);
+    color: var(--hover-text);
+  }
+
+  @media (max-width: 768px) {
+    .button-container {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 10px;
+      margin-left: -10px;
+      margin-right: -10px;
+      padding-left: 10px;
+    }
+
+    .button-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .custom-button {
+      flex: 0 0 auto;
+    }
+  }
+</style>
+
+<section class="custom-banner-section" style="padding: 40px 20px;">
+  <div class="custom-banner-wrapper">
+
+    {% if section.settings.banner_image or section.settings.banner_image_mobile %}
+      {% if section.settings.banner_link %}
+        <a href="{{ section.settings.banner_link }}">
+          {% if section.settings.banner_image %}
+            <img 
+              src="{{ section.settings.banner_image | image_url: width: 1240 }}" 
+              alt="Banner" 
+              class="desktop-banner"
+            >
+          {% endif %}
+          {% if section.settings.banner_image_mobile %}
+            <img 
+              src="{{ section.settings.banner_image_mobile | image_url: width: 768 }}" 
+              alt="Banner Mobile" 
+              class="mobile-banner"
+            >
+          {% endif %}
+        </a>
+      {% else %}
+        {% if section.settings.banner_image %}
+          <img 
+            src="{{ section.settings.banner_image | image_url: width: 1240 }}" 
+            alt="Banner" 
+            class="desktop-banner"
+          >
+        {% endif %}
+        {% if section.settings.banner_image_mobile %}
+          <img 
+            src="{{ section.settings.banner_image_mobile | image_url: width: 768 }}" 
+            alt="Banner Mobile" 
+            class="mobile-banner"
+          >
+        {% endif %}
+      {% endif %}
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="button-section">
+        <div class="button-container">
+          {% for block in section.blocks %}
+            {% if block.type == "button" %}
+              <a 
+                href="{{ block.settings.button_link }}" 
+                class="custom-button"
+                style="
+                  --button-bg: {{ section.settings.button_bg_color }};
+                  --button-text: {{ section.settings.button_text_color }};
+                  --hover-bg: {{ section.settings.button_hover_bg_color }};
+                  --hover-text: {{ section.settings.button_hover_text_color }};
+                  --font-size: {{ section.settings.button_font_size }}px;
+                  --font-weight: {{ section.settings.button_font_weight }};
+                  --padding: {{ padding_value }};
+                ">
+                {{ block.settings.button_text }}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+  </div>
+</section>

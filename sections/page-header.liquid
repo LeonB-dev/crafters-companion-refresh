@@ -1,0 +1,277 @@
+{%- liquid
+  assign template_name = 'section-page-header'
+
+  assign image = section.settings.image
+  assign image_mobile = section.settings.image_mobile
+  assign logo = section.settings.logo
+
+  assign heading = section.settings.heading
+  assign text = section.settings.text
+
+  assign colour_bg = section.settings.colour_bg
+  assign colour_bg_opacity = section.settings.colour_bg_opacity
+  assign colour_text = section.settings.colour_text
+  assign item_for_h1 = section.settings.item_for_h1
+
+  assign text_alignment = section.settings.text_alignment
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-page-header.css' | asset_url | stylesheet_tag -}}
+
+<style>
+  div[data-section-id="{{ section.id }}"] {
+    --colour-text: {{- colour_text -}};
+    {% if text_alignment == true %}
+      text-align: center;
+    {% endif %}
+  }
+
+  div[data-section-id="{{ section.id }}"]::before{
+    background-color: {{ colour_bg }};
+    opacity: {{ colour_bg_opacity | divided_by: '100.00' -}};
+  }
+</style>
+
+{% capture logo_img %}
+  {{ logo | image_url: height: 80 | image_tag: alt: logo.alt, class: 'logo', loading: 'eager' }}
+{% endcapture %}
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {% if image != blank and image_mobile != blank %}
+    <picture>
+      <source media="(min-width:1500px)" srcset="{{- image | image_url: width: 1920 -}}">
+      <source media="(min-width:1100px)" srcset="{{- image | image_url: width: 1500 -}}">
+      <source media="(min-width:800px)" srcset="{{- image | image_url: width: 1024 -}}">
+      <source media="(min-width:551px)" srcset="{{- image_mobile | image_url: width: 800 -}}">
+      <source media="(max-width: 550.8px)" srcset="{{- image_mobile | image_url: width: 600 -}}">
+      <img src="{{- image | image_url: height: 512 -}}" alt="{{- image.alt -}}" height="412" width="390" loading="eager" class="image">
+    </picture>
+  {% elsif image != blank -%}
+    {{- image | image_url: width: 1920 | image_tag: widths: '600, 800, 1024, 1500', loading: 'eager', alt: image.alt, class: 'image' -}}
+  {%- endif -%}
+  <div class="container">
+    <div class="heading">
+      {% if item_for_h1 == 'logo' and logo != blank %}
+        <h1>{{- logo_img -}}</h1>
+        {% if heading != blank %}
+          <h2 class="u-heading-md {% if text_alignment == true %} centre {% endif %}">{{- heading -}}</h2>
+        {% endif %}
+      {% elsif item_for_h1 == 'heading' and heading != blank %}
+        {% if logo != blank %}
+          {{ logo_img }}
+        {% endif %}
+        <h1 class="u-heading-md">{{- heading -}}</h1>
+      {% else %}
+        {% if logo != blank %}
+          {{ logo_img }}
+        {% endif %}
+      {% endif %}
+    </div>
+    {{- text -}}
+    <div class="actions">
+      {% for block in section.blocks %}
+        {% liquid
+          assign link_text = block.settings.link_text
+          assign link_url = block.settings.link_url
+          assign link_colour = block.settings.link_colour
+        %}
+        {% if link_text != blank and link_url != blank %}
+          <a href="{{ link_url }}" class="c-btn main {{ link_colour }}">
+            <span>{{ link_text }}</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {%- render 'paper-edge', _section: section, _bottom_edge_colour: 'white' -%}
+</div>
+
+{% schema %}
+{
+  "name": "Page Header",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Minimum width: 1920px and recommended 2/1 aspect ratio."
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image - Mobile",
+      "info": "This is optional. Minimum width: 800px and recommended 4/3 aspect ratio."
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "color",
+      "id": "colour_bg",
+      "label": "Background image colour overlay."
+    },
+    {
+      "type": "range",
+      "id": "colour_bg_opacity",
+      "label": "Opacity for coloyr overlay",
+      "default": 64,
+      "min": 10,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "type": "color",
+      "id": "colour_text",
+      "label": "Text colour."
+    },
+    {
+      "type": "select",
+      "id": "item_for_h1",
+      "label": "Select item for h1 tag.",
+      "options": [
+        {
+          "value": "logo",
+          "label": "Logo"
+        },
+        {
+          "value": "heading",
+          "label": "Heading"
+        }
+      ],
+      "default": "heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_alignment",
+      "label": "Align text centrally"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "sm"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "edge-01"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Link",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link Url"
+        },
+        {
+          "type": "select",
+          "id": "link_colour",
+          "label": "Link colour",
+          "options": [
+            {
+              "value": "primary",
+              "label": "Purple / Green Gradient"
+            },
+            {
+              "value": "secondary",
+              "label": "Purple / Red Gradient"
+            },
+            {
+              "value": "tertiary",
+              "label": "White"
+            },
+            {
+              "value": "quaternary",
+              "label": "Purple"
+            },
+            {
+              "value": "quinary",
+              "label": "Black"
+            }
+          ],
+          "default": "primary"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page Header",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

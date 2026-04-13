@@ -1,0 +1,117 @@
+{% liquid
+  assign title = collection.title
+  assign description = collection.description
+  assign color = ''
+  assign background_color = ''
+  assign transparent_colors = 'rgba(0,0,0,0)|rgba(0, 0, 0, 0)|transparent' | split: '|'
+
+  if section.settings.title != blank
+    assign title = section.settings.title
+  endif
+
+  if section.settings.description != blank
+    assign description = section.settings.description
+  endif
+
+  assign word_count = description | strip_html | split: ' ' | size
+
+  assign trimmed_description = description | strip_html | truncatewords: 36 | prepend: '<p>' | append: '</p>'
+
+  unless description contains '<p>'
+    assign description = description | prepend: '<p>' | append: '</p>'
+  endunless
+
+  if section.settings.color != blank
+    unless transparent_colors contains section.settings.color
+      assign color = section.settings.color
+    endunless
+  endif
+
+  if section.settings.background_color != blank
+    unless transparent_colors contains section.settings.background_color
+      assign background_color = section.settings.background_color
+    endunless
+  endif
+%}
+
+<link href="{{ 'section-stmt-collection-seo.css' | asset_url }}" rel="preload" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ 'section-stmt-collection-seo.css' | asset_url }}"></noscript>
+
+{% style %}
+  .collection-seo--{{ section.id }} {
+    {% if color != blank %}
+      color: {{ section.settings.color }};
+    {% endif %}
+    {% if background_color != blank %}
+      background-color: {{ section.settings.background_color }};
+    {% endif %}
+  }
+{% endstyle %}
+
+<div class="collection-seo collection-seo--{{ section.id }}">
+  <div class="container">
+    <div class="collection-seo__content">
+      {% if title != blank %}
+        <h2 class="collection-seo__title">{{ title }}</h2>
+      {% endif %}
+  
+      {% if description != blank %}
+        {% if word_count > 48 %}
+          <read-more class="collection-seo__read-more-container read-more read-more--clipped">
+            <div class="collection-seo__description read-more__excerpt">
+              {{ description }}
+            </div>
+
+  
+            <button type="button" class="collection-seo__read-more read-more__toggle js-read-more-toggle">
+              <span class="read-more__toggle-label read-more__toggle-label--more">{{ 'accessibility.read_more' | t }}</span>
+              <span class="read-more__toggle-label read-more__toggle-label--less">{{ 'accessibility.read_less' | t }}</span>
+            </button>
+          </read-more>
+        {% else %}
+          <div class="collection-seo__description">
+            {{ description }}
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection SEO",
+  "templates": [
+    "collection"
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "info": "Will use collection title if not set or if dynamic source is blank"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "info": "Will use collection description if not set or if dynamic source is blank"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Colour"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background colour"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection SEO"
+    }   
+  ]
+}
+{% endschema %}

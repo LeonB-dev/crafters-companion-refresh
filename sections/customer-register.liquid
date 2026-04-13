@@ -1,0 +1,128 @@
+{% liquid
+  assign template_name = 'section-customer-register'
+
+  assign image = settings.customer_register_image
+%}
+
+{{- 'section-customer-access.css' | asset_url | stylesheet_tag -}}
+{{- 'section-customer-register.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-customer-register.js' | asset_url -}}"></script>
+
+<div class="section-customer-access {{ template_name }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="image">
+    <a href="{{- shop.url -}}" aria-label="Go to Crafter's Companion homepage">
+      <img src="{{- 'logo-main-tertiary.svg' | asset_url -}}" class="logo">
+    </a>
+    {%- if image != blank -%}
+      <picture class="background">
+        <source media="(min-width:1500px)" srcset="{{- image | image_url: width: 1920 -}}">
+        <source media="(min-width:1100px)" srcset="{{- image | image_url: width: 1500 -}}">
+        <source media="(min-width:800px)" srcset="{{- image | image_url: width: 1024 -}}">
+        <source media="(min-width:551px)" srcset="{{- image | image_url: width: 800 -}}">
+        <source media="(max-width: 550.8px)" srcset="{{- image | image_url: width: 600 -}}">
+        <img src="{{- image | image_url: height: 512 -}}" alt="{{- image.alt | default: _heading -}}" height="412" width="390" loading="eager"/>
+      </picture>
+    {%- endif -%}
+    {%- render 'paper-edge', _edge_version: 'edge-01', _bottom_edge_colour: 'white' -%}
+    {%- render 'paper-edge-vertical' -%}
+    <div class="swiper-container" data-cr-slider>
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          {% liquid
+            assign heading = block.settings.heading
+            assign text = block.settings.text
+          %}
+          <div class="swiper-slide">
+            <p class="u-heading-lg">{{- heading -}}</p>
+            <p>{{- text -}}</p>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="content">
+      <a href="{{ shop.url }}" class="c-btn alt primary continue" data-continue-shopping>
+        {%- render 'icon', _name: 'icon-arrow-left' -%}
+        {{- 'template.customers.login.continue_shopping' | t -}}
+      </a>
+      <h1 class="u-heading-sm heading" id="page-title">{{- 'template.customers.register.heading' | t -}}</h1>
+
+      {%- comment -%}
+        Login form
+      {%- endcomment -%}
+      <div data-login>
+        {%- form 'create_customer', class: 'c-form add-spacing', id: 'register-form', aria-label: 'Register form', data-register-form: '', return_to: routes.account_url -%}
+          {{- form.errors | default_errors | replace: 'class="errors"', 'class="c-alert error" role="alert"' -}}
+       
+          <div class="form-field">
+            <label class="form-label" for="first-name">{{- 'forms.first_name_label' | t -}}</label>
+            <input class="form-input{% if show_errors == true and form.errors contains 'first_name' %} form-input--error{% endif %}" id="first-name" name="customer[first_name]" type="text" placeholder="{{- 'forms.first_name_placeholder' | t -}}" required>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="last-name">{{- 'forms.last_name_label' | t -}}</label>
+            <input class="form-input{% if show_errors == true and form.errors contains 'last_name' %} form-input--error{% endif %}" id="last-name" name="customer[last_name]" type="text" placeholder="{{- 'forms.last_name_placeholder' | t -}}" required>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="email">{{- 'forms.email_label' | t -}}</label>
+            <input class="form-input{% if show_errors == true and form.errors contains 'email' %} form-input--error{% endif %}" id="email" name="customer[email]" type="email" placeholder="{{- 'forms.email_placeholder' | t -}}" autocorrect="off" autocapitalize="off" autocomplete="email" required>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="password">{{- 'forms.password_label' | t -}}</label>
+            <input class="form-input{% if show_errors == true and form.errors contains 'password' %} form-input--error{% endif %}" id="password" name="customer[password]" placeholder="{{- 'forms.password_placeholder' | t -}}" type="password" required>
+          </div>
+
+          {% comment %} <div class="form-field">
+            <label class="form-label" for="password">{{- 'forms.password_confirm_label' | t -}}</label>
+            <input class="form-input" id="confirm_password" name="customer[password_confirmation]" placeholder="{{- 'forms.password_confirm_placeholder' | t -}}" type="password">
+          </div> {% endcomment %}
+
+          <div class="form-field has-checkbox">
+            <input type="hidden" name="customer[accepts_marketing]" value="">
+            <input id="marketing" class="form-input" type="checkbox" name="customer[accepts_marketing]">
+            <label for="marketing" class="form-label marketing">{{- 'forms.marketing_signup_label' | t -}}</label>
+          </div>
+
+          <div class="form-field main-action">
+            <button class="c-btn main quaternary submit" type="submit"  data-register-submit>
+              {{- 'template.customers.register.submit_text' | t -}}
+            </button>
+            <a href="{{- routes.account_login_url -}}" class="c-btn alt primary">
+              {{- 'template.customers.register.login_text' | t -}}
+            </a>
+          </div>
+        {%- endform -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Customer - Register",
+  "tag": "section",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "promotion_message",
+      "name": "Promotion Message",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

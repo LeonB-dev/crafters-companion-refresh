@@ -1,0 +1,190 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "af8e8751-f7fd-425e-bbfd-336cbccb4152": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Planner Supply Organizers",
+        "text": "<p>Keeping your planner supplies organized is easy when you have the right tools. <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "f83098fc-9b6b-42af-967c-8d926312cfe1": {
+      "type": "content-block-trio",
+      "blocks": {
+        "3bdb9c74-ada9-498a-90f7-ade98b0e442a": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Ditto Tool Tote",
+            "text": "If you take your planner supplies from room to room, or to work each day, this is the perfect solution",
+            "image": "shopify:\/\/shop_images\/1_0b34b608-3304-4d0d-b985-babd9084abbe.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        },
+        "a032f469-12fb-4038-8a5a-48cc8076567f": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Die, Stamp & Supply Organizer ",
+            "text": "urned on its back - this compact, staggered organizer reduces space and maximizes visibility",
+            "image": "shopify:\/\/shop_images\/2_ce01ff76-22d4-4c97-a0c5-fce63999f50d.jpg",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        },
+        "60e5a3f6-a17f-4019-8cbd-c9292c539f0f": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Pen & Ink Palace ",
+            "text": "Turned on its back - this compact, staggered organizer reduces space and maximizes visibility",
+            "image": "shopify:\/\/shop_images\/3_23558061-eb36-4414-b580-591a0c7d98e4.jpg",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        }
+      },
+      "block_order": [
+        "3bdb9c74-ada9-498a-90f7-ade98b0e442a",
+        "a032f469-12fb-4038-8a5a-48cc8076567f",
+        "60e5a3f6-a17f-4019-8cbd-c9292c539f0f"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "ea13e019-8053-4919-940a-32d3b84138ce": {
+      "type": "content-block-trio",
+      "blocks": {
+        "99fde233-8ca6-4ec8-8f80-0b4c2ffba743": {
+          "type": "content_block",
+          "settings": {
+            "heading": "8.5 x 11 Fab File ",
+            "text": "Ideal for storing your refill sheets and note sheets for standard size planners.",
+            "image": "shopify:\/\/shop_images\/4_83791dca-dffe-4988-b237-f0d60bc51351.jpg",
+            "link_text": "View All Fab Files",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        },
+        "3ee0cc64-f9b4-492e-bc60-c32617844612": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Debra Pen Holder Buddy Bag",
+            "text": "Traveling with your planner supplies? The 1.5\" Punch Pack or the 2\" Punch Pack both work well when traveling with planner supplies. The Debra Pen Holder Buddy Bag, will easily fit inside the 2\" Punch Pack.",
+            "image": "shopify:\/\/shop_images\/5_54cdd4ad-244f-42e7-9e7f-51d21c39d0f6.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        },
+        "16c94fd0-b3c5-4f8b-8144-346b785ad631": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Sue Buddy Bag",
+            "text": "Have a WeR Planner Punch, but not sure how to keep it all together? Try the Sue Buddy Bag.  Roomy enough for the base, punches and instruction sheet.",
+            "image": "shopify:\/\/shop_images\/6_5bbf9a77-ccea-4326-a07e-69493e6febfe.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        }
+      },
+      "block_order": [
+        "99fde233-8ca6-4ec8-8f80-0b4c2ffba743",
+        "3ee0cc64-f9b4-492e-bc60-c32617844612",
+        "16c94fd0-b3c5-4f8b-8144-346b785ad631"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "fc3d27c4-28da-476f-ab5c-dfb8d57f0c0f": {
+      "type": "content-block-trio",
+      "blocks": {
+        "7dbd0b43-bdc6-4aea-b497-f5c4112d49d2": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Debra Buddy Bag",
+            "text": "The Debra Buddy Bag is perfect for keeping your planner pens & markers with the rest of your supplies.  The Debra will tuck into a Ditto Tool bag, a Die, Stamp & Supply Organizer or the 2\" Punch Pack.",
+            "image": "shopify:\/\/shop_images\/7_dbbed830-1b94-451f-9487-df0deb47d8f0.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        },
+        "a8fe7e19-8163-4d95-a4f9-f48ec965a07b": {
+          "type": "content_block",
+          "settings": {
+            "heading": " Shelly Buddy Bag",
+            "text": "Do you have washi tape you only use with your planner?  Keep things together you use together - put your planner washi  tape in a Shelly Buddy Bag - you'll love being able to see it easily.",
+            "image": "shopify:\/\/shop_images\/8_eec95cf8-2288-436a-8181-d0c14a3de619.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany"
+          }
+        },
+        "c9fef1b1-c094-4bf2-93df-52f5ca27c137": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Desk Maid Tool Tower",
+            "text": "The Desk Maid Tool Tower is the perfect place to contain your pens, pencils, markers, Gelattos...all of the small tools you want to have at your fingertips when you're planning.",
+            "image": "shopify:\/\/shop_images\/9_a2370d5d-2545-4e94-b8c5-1979273651be.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "7dbd0b43-bdc6-4aea-b497-f5c4112d49d2",
+        "a8fe7e19-8163-4d95-a4f9-f48ec965a07b",
+        "c9fef1b1-c094-4bf2-93df-52f5ca27c137"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "9a37ad82-c9b9-4b6d-8a88-4d575f6a8362": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Tips & Tricks",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "d58b13f2-f83b-4980-abeb-e18bb6d3ee0f": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=Ncp3XFTvJNA",
+        "heading": "",
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "af8e8751-f7fd-425e-bbfd-336cbccb4152",
+    "f83098fc-9b6b-42af-967c-8d926312cfe1",
+    "ea13e019-8053-4919-940a-32d3b84138ce",
+    "fc3d27c4-28da-476f-ab5c-dfb8d57f0c0f",
+    "9a37ad82-c9b9-4b6d-8a88-4d575f6a8362",
+    "d58b13f2-f83b-4980-abeb-e18bb6d3ee0f"
+  ]
+}

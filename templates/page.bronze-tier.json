@@ -1,0 +1,135 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "4f23468a-c87f-4f6d-a818-ad9f809d4171": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Bronze Membership",
+        "text": "<h3><strong>Welcome to Club Inspire. The place where craft fans unite and save, save, save! As a BRONZE member, take advantage of member-only discounts, special offers, a sneak peek into brand-new products and more!<\/strong><\/h3>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "link_colour": "primary",
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "1eed20e2-4c60-43a8-a8b5-73295e002033": {
+      "type": "featured-image",
+      "settings": {
+        "url": "",
+        "disable_aspect_ratio": false,
+        "enable_full_width": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "8daa9408-a53b-4efa-af38-c49727a9a2f4": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/IMG_2100.jpg",
+        "main_heading": "Offers & Discounts",
+        "main_text": "<p>As a Club Inspire member signed up to our mailing list, you’ll automatically receive regular voucher codes via email giving you discounts on some of our top products, however as a <strong>bronze<\/strong> member, you’ll also receive the following:<\/p><p><\/p><ul><li>Exclusive offers and bundles<\/li><li>Special early access to new products<\/li><li>Bonus points opportunities <\/li><li>5% discount on every order <\/li><li>FREE shipping on orders over  £20<\/li><\/ul>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "edge-01",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "pippin",
+        "content_position": "vertical-centre",
+        "margin_bottom": "md",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "2859a787-bcf9-40c2-93fc-0d414c47d724": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Earning Points",
+        "small_text": "<p>Earn points every time you order, with 1 loyalty point rewarded for every £1 that you spend on the Crafter’s Companion website or in one of our stores. The more points you earn, the more you’ll save and move up Club Inspire tiers, offering even more benefits and greater discounts!<\/p><p>All year round, we give all members the chance to earn bonuses and double loyalty points on particular products, so keep an eye on emails from Crafter’s Companion giving you the heads up!<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "25d33339-e8c7-4cfd-9be4-c41c1ae1d792": {
+      "type": "text-header",
+      "settings": {
+        "heading": "What’s next for your membership?",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "link_colour": "primary",
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "5f08d7b4-46f6-4038-a77a-79a32a1b1eaa": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_heading": "Your next tier at Club Inspire is Silver!",
+        "main_text": "<p>Silver memberships give you the same discounts, offers and exclusives as before plus a 10% discount on ALL orders with free shipping on orders over £20. <\/p><p>To reach silver from a bronze membership, simply collect 500 loyalty points within one calendar year. <\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/pages\/club-inspire",
+        "main_link_text": "Join now",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "secondary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "is-hidden",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4f23468a-c87f-4f6d-a818-ad9f809d4171",
+    "1eed20e2-4c60-43a8-a8b5-73295e002033",
+    "8daa9408-a53b-4efa-af38-c49727a9a2f4",
+    "2859a787-bcf9-40c2-93fc-0d414c47d724",
+    "25d33339-e8c7-4cfd-9be4-c41c1ae1d792",
+    "5f08d7b4-46f6-4038-a77a-79a32a1b1eaa"
+  ]
+}

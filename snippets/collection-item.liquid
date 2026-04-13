@@ -1,0 +1,63 @@
+{{- 'snippet-collection-item.css' | asset_url | stylesheet_tag -}}
+
+<div class="snippet-collection-item-wrapper">
+  <div
+    class="snippet-collection-item snippet-collection-item-style--{{ _style }}"
+    style="
+      background-image:url({{ _image | image_url: width: 600 }});
+      background-position: center;
+      background-size: cover;
+      "
+  >
+    {%- if _heading != blank and _show_label != false -%}
+      {%- assign lozenge_display_text = _lozenge_text | default: _heading -%}
+      {%- assign lozenge_bg = _lozenge_color | default: '#603C8E' -%}
+      <div class="snippet-collection-item__heading" style="color: {{ _heading_color }}; background: {{ lozenge_bg }};">
+        {{- lozenge_display_text -}}
+      </div>
+    {%- endif -%}
+
+    <!---<div class="image">
+      {%- if _image != blank -%}
+        <img
+          src="{{ _image | image_url: width: 600 }}"
+          alt="{{ _heading }}"
+          height="332"
+          width="295"
+          loading="{{- _loading -}}"
+        >
+      {%- else -%}
+        {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+      {%- endif -%}
+    </div>-->
+
+    {%- if _show_overlay_button != false -%}
+      <a
+        href="{{ _url }}"
+        class="button stretched-link"
+        title="{{- _heading -}}"
+        style="color: {{ _button_text_color }}; background-color: {{ _button_background_color }};"
+      >
+        {{ _button_text }}
+      </a>
+    {%- endif -%}
+  </div>
+
+  {%- if _show_text_button != false and _text_button_text != blank -%}
+    {%- liquid
+      assign tb_decoration = 'underline'
+      if _text_button_underline == false
+        assign tb_decoration = 'none'
+      endif
+      assign tb_font = _text_button_font_family | default: 'inherit'
+    -%}
+    <a
+      href="{{ _url }}"
+      class="snippet-collection-item__text-button"
+      title="{{- _heading -}}"
+      style="font-size: {{ _text_button_font_size | default: 'var(--font-size-s)' }}; font-weight: {{ _text_button_font_weight | default: '400' }}; text-align: {{ _text_button_align | default: 'center' }}; color: {{ _text_button_color | default: 'var(--colour-text-base)' }}; text-decoration: {{ tb_decoration }}; font-family: {{ tb_font }};"
+    >
+      {{- _text_button_text -}}
+    </a>
+  {%- endif -%}
+</div>

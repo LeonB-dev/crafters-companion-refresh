@@ -1,0 +1,309 @@
+{%- liquid
+  assign template_name = 'section-crafters-tv-presenter'
+
+  assign layout_direction = section.settings.layout_direction
+  assign margin_bottom = section.settings.margin_bottom
+-%}
+
+{{- 'section-crafters-tv-presenter.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {%- render 'paper-edge', _section: section -%}
+  {%- render 'text-and-image', _section: section, _enable_shapes: true, _ctvp: true -%}
+</div>
+
+{% schema %}
+{
+  "name": "Crafter's TV Presenter",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Image",
+      "info": "Minimum width: 800px and 3/2 aspect ratio."
+    },
+    {
+      "type": "inline_richtext",
+      "id": "main_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "main_quote",
+      "label": "Quote"
+    },
+    {
+      "type": "richtext",
+      "id": "main_text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "craft_speciality",
+      "label": "Craft Speciality"
+    },
+    {
+      "type": "text",
+      "id": "craft_technique",
+      "label": "Craft Technique"
+    },
+    {
+      "type": "url",
+      "id": "main_link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "main_link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Maing heading size",
+      "options": [
+        {
+          "value": "xs",
+          "label": "Extra Small"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        }
+      ],
+      "default": "md"
+    },
+    {
+      "type": "select",
+      "id": "layout_direction",
+      "label": "Layout direction",
+      "info": "This only applies to large devices when the content is side by side.",
+      "options": [
+        {
+          "value": "image-left",
+          "label": "Image left"
+        },
+        {
+          "value": "image-right",
+          "label": "Image right"
+        }
+      ],
+      "default": "image-right"
+    },
+    {
+      "type": "select",
+      "id": "link_colour",
+      "label": "Link colour",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Purple / Green Gradient"
+        },
+        {
+          "value": "secondary",
+          "label": "Purple / Red Gradient"
+        },
+        {
+          "value": "tertiary",
+          "label": "White"
+        },
+        {
+          "value": "quaternary",
+          "label": "Purple"
+        },
+        {
+          "value": "quinary",
+          "label": "Black"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "top_edge_colour",
+      "label": "Top edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "bottom_edge_colour",
+      "label": "Bottom edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "background_colour",
+      "label": "Background colour",
+      "info": "This can only be applied if a edge version is selected",
+      "options": [
+        {
+          "value": "black-squeeze",
+          "label": "Green"
+        },
+        {
+          "value": "pippin",
+          "label": "Pink"
+        },
+        {
+          "value": "whisper",
+          "label": "Purple"
+        }
+      ],
+      "default": "whisper"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Content Positioning - Desktop",
+      "options": [
+        {
+          "value": "vertical-start",
+          "label": "Upper Vertical Alignment"
+        },
+        {
+          "value": "vertical-centre",
+          "label": "Central Vertical Alignment"
+        },
+        {
+          "value": "vertical-end",
+          "label": "Lower Vertical Alignment"
+        }
+      ],
+      "default": "vertical-centre"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    },
+    {
+      "type": "image_picker",
+      "id": "shape_background",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "shape_position",
+      "label": "Shape Positioning",
+      "options": [
+        {
+          "value": "vertical-start",
+          "label": "Upper Vertical Alignment"
+        },
+        {
+          "value": "vertical-centre",
+          "label": "Central Vertical Alignment"
+        },
+        {
+          "value": "vertical-end",
+          "label": "Lower Vertical Alignment"
+        }
+      ],
+      "default": "vertical-centre"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Crafter's TV Presenter",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

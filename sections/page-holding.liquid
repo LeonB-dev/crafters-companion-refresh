@@ -1,0 +1,81 @@
+{% liquid
+  assign template_name = 'section-page'
+%}
+
+{{- 'section-page.css' | asset_url | stylesheet_tag -}}
+<script src="{{ 'section-faqs.js' | asset_url }}" async></script>
+
+<div
+  class="{{- template_name }} u-space-above-sm u-space-below-lg"
+  data-section-type="{{- template_name -}}"
+  data-section-id="{{ section.id }}">
+  <header class="header">
+    {%- if settings.theme_logo != blank -%}
+      <div class="logo u-space-below-sm" style="display:flex;justify-content:center;">
+        <img src="{{ settings.theme_logo | image_url: width: 512 }}" alt="{{ shop.name | append: ' logo' }}">
+        <h1 class="u-heading-md sr-only">{{ shop.name }}</h1>
+      </div>
+    {%- else -%}
+      <h1 class="u-heading-md">{{ shop.name }}</h1>
+    {%- endif -%}
+  </header>
+  <div
+    class="container u-space-below-lg"
+    data-accordion
+    data-accordion-multiple="true">
+    <div class="c-rte" style="text-align:center;">
+      <h2 class="u-heading-lg centre" id="page-title">We're working on it!</h2>
+      <p>
+        Our brand new website is coming soon!
+      </p>
+      <p>
+        Our website will be offline for a few hours today as we bring you our shiny new website! Please bear with us - we will be back up and running really soon.
+      </p>
+    </div>
+
+    {%- form 'storefront_password', class: 'c-form u-space-above-lg', id: 'password-form', aria-label: form_aria_label -%}
+      {{- form.errors | default_errors | replace: 'class="errors"', 'class="c-alert c-alert--error" role="alert"' -}}
+
+      <div class="form-field">
+        <label class="form-label" for="password">{{ 'template.password.form_password_label' | t }}</label>
+        <div style="display:flex;">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            {% if form.errors %}
+            aria-invalid="true"
+            aria-describedby="PasswordLoginForm-password-error"
+            {%- endif -%}
+            autocomplete="current-password"
+            class="form-input {% if show_errors == true and form.errors contains 'password' %} form-input--error{% endif %}"
+            placeholder="{{ 'template.password.form_password_placeholder' | t }}">
+          <button class="c-btn main primary" type="submit">
+            {{- 'template.password.form_submit' | t -}}
+          </button>
+        </div>
+      </div>
+
+    {%- endform -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Page",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Settings"
+      }
+    ],
+    "blocks": [],
+    "presets": [
+      {
+        "name": "Holding Page",
+        "category": "Content"
+      }
+    ]
+  }
+{% endschema %}

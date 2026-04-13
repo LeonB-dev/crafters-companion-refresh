@@ -1,0 +1,250 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false
+      }
+    },
+    "d404a13b-50e5-4aca-96aa-d6bc5a481b39": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Big Celebrations : Patterned Papers",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "b55ae979-1a20-469c-8e4f-2db21cdb1522": {
+      "type": "downloads",
+      "blocks": {
+        "2c8ce616-8af1-4792-a510-90913c468861": {
+          "type": "download_block",
+          "settings": {
+            "file": "",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-1.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "ee41f4d6-2008-4b36-8a17-83123eb98968": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%282%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-2.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "6b5ae597-cd80-460e-8ee2-f641edb7e3b6": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%283%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-3.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "ed99aee1-4cdd-4ba5-a634-05a68227c7a1": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%284%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-4.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "ba4b5f32-1b08-4a68-a559-afe4e8eec8a5": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%285%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-5.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "8f1df068-70c2-4035-919b-ba14f4a1b129": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%286%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-6.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "d00afcd8-8199-47df-b359-38a96c32e25d": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%287%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-7.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "de7a61e1-c78c-48c1-bb97-5d289a14f10e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%288%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-8.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "1eed5271-5c1c-47fe-a699-10365d0da69f": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%289%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-9.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "72346e24-3417-4155-a815-24d74ae825f1": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%2810%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-10.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "34c572b9-08b6-425a-8637-5cacf5d73e77": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%2811%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-11.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "3b56f02e-c3e8-4058-aed7-2b03627e2c5f": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%2812%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-12.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "e22f3cad-1884-44b1-aa8a-098103f1f78e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%2813%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-13.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "060888ab-bb9a-4867-87e7-39a9a6fc03d5": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%2814%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-14.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "621d22a6-e2d0-4394-9b9e-82fdc578e990": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%2815%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-15.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "a6c26f70-5f0a-47d3-b154-f864452b5900": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Patterned%20Papers\/ayoc_bigcel_patterned%20%2816%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_patterned-16.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "2c8ce616-8af1-4792-a510-90913c468861",
+        "ee41f4d6-2008-4b36-8a17-83123eb98968",
+        "6b5ae597-cd80-460e-8ee2-f641edb7e3b6",
+        "ed99aee1-4cdd-4ba5-a634-05a68227c7a1",
+        "ba4b5f32-1b08-4a68-a559-afe4e8eec8a5",
+        "8f1df068-70c2-4035-919b-ba14f4a1b129",
+        "d00afcd8-8199-47df-b359-38a96c32e25d",
+        "de7a61e1-c78c-48c1-bb97-5d289a14f10e",
+        "1eed5271-5c1c-47fe-a699-10365d0da69f",
+        "72346e24-3417-4155-a815-24d74ae825f1",
+        "34c572b9-08b6-425a-8637-5cacf5d73e77",
+        "3b56f02e-c3e8-4058-aed7-2b03627e2c5f",
+        "e22f3cad-1884-44b1-aa8a-098103f1f78e",
+        "060888ab-bb9a-4867-87e7-39a9a6fc03d5",
+        "621d22a6-e2d0-4394-9b9e-82fdc578e990",
+        "a6c26f70-5f0a-47d3-b154-f864452b5900"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "lg"
+      }
+    },
+    "f6ab093b-7502-4bd1-a4aa-cc06e9e3f09b": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p><strong><br\/><\/strong><\/p>",
+        "link_text": "Back to Downloads.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft-downloads-1",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "e635ea23-2422-4eb3-9cfa-b9beac3fbca1": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p><strong><br\/><\/strong><\/p>",
+        "link_text": "Back to A Year of Craft.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d404a13b-50e5-4aca-96aa-d6bc5a481b39",
+    "b55ae979-1a20-469c-8e4f-2db21cdb1522",
+    "f6ab093b-7502-4bd1-a4aa-cc06e9e3f09b",
+    "e635ea23-2422-4eb3-9cfa-b9beac3fbca1"
+  ]
+}

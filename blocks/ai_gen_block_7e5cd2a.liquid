@@ -1,0 +1,535 @@
+{% doc %}
+  @prompt
+    5 images in a row, the images link to other pages and have a title, can the section have a changeable background image only with a title and text all in monserrat font, font weight adjustable, mobile layout - 1&2 on 1 row, 3&4 on next row, hide 5th image, border radius adjustable, shop all button colour adjustable with border, Image title separate from image, 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-image-row-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    {% if block.settings.background_image %}
+      background-image: url('{{ block.settings.background_image | image_url: width: 2000 }}');
+      background-size: cover;
+      background-position: center;
+    {% else %}
+      background-color: #f4f4f4;
+    {% endif %}
+    padding: 60px 20px;
+  }
+
+  .ai-image-row-container-{{ ai_gen_id }} {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .ai-image-row-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .ai-image-row-title-{{ ai_gen_id }} {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: {{ block.settings.title_font_weight }};
+    font-size: {{ block.settings.title_font_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0 0 16px;
+  }
+
+  .ai-image-row-text-{{ ai_gen_id }} {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: {{ block.settings.text_font_weight }};
+    font-size: {{ block.settings.text_font_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+  }
+
+  .ai-image-row-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: {{ block.settings.grid_gap }}px;
+    margin-bottom: 40px;
+  }
+
+  .ai-image-row-item-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ai-image-row-link-{{ ai_gen_id }} {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: {{ block.settings.border_radius }}px;
+    aspect-ratio: 1;
+  }
+
+  .ai-image-row-link-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-image-row-link-{{ ai_gen_id }}:hover img {
+    transform: scale(1.05);
+  }
+
+  .ai-image-row-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-image-row-image-placeholder-{{ ai_gen_id }} svg {
+    width: 50%;
+    height: 50%;
+    opacity: 0.3;
+  }
+
+  .ai-image-row-item-title-{{ ai_gen_id }} {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: {{ block.settings.image_title_font_weight }};
+    font-size: {{ block.settings.image_title_font_size }}px;
+    color: {{ block.settings.text_color }};
+    text-align: center;
+    margin: 0;
+  }
+
+  .ai-image-row-button-wrapper-{{ ai_gen_id }} {
+    text-align: center;
+  }
+
+  .ai-image-row-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 14px 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: {{ block.settings.button_font_weight }};
+    font-size: {{ block.settings.button_font_size }}px;
+    color: {{ block.settings.button_text_color }};
+    background-color: {{ block.settings.button_color }};
+    border: 2px solid {{ block.settings.button_border_color }};
+    border-radius: {{ block.settings.button_border_radius }}px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .ai-image-row-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+    color: {{ block.settings.button_hover_text_color }};
+    border-color: {{ block.settings.button_hover_border_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-image-row-{{ ai_gen_id }} {
+      padding: 40px 16px;
+    }
+
+    .ai-image-row-grid-{{ ai_gen_id }} {
+      grid-template-columns: repeat(2, 1fr);
+      gap: {{ block.settings.grid_gap_mobile }}px;
+    }
+
+    .ai-image-row-item-{{ ai_gen_id }}:nth-child(5) {
+      display: none;
+    }
+
+    .ai-image-row-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_font_size | times: 0.8 }}px;
+    }
+
+    .ai-image-row-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_font_size | times: 0.9 }}px;
+    }
+
+    .ai-image-row-item-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.image_title_font_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<div class="ai-image-row-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-image-row-container-{{ ai_gen_id }}">
+    {% if block.settings.section_title != blank or block.settings.section_text != blank %}
+      <div class="ai-image-row-header-{{ ai_gen_id }}">
+        {% if block.settings.section_title != blank %}
+          <h2 class="ai-image-row-title-{{ ai_gen_id }}">{{ block.settings.section_title }}</h2>
+        {% endif %}
+        {% if block.settings.section_text != blank %}
+          <div class="ai-image-row-text-{{ ai_gen_id }}">{{ block.settings.section_text }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ai-image-row-grid-{{ ai_gen_id }}">
+      {% for i in (1..5) %}
+        {% liquid
+          assign image_key = 'image_' | append: i
+          assign link_key = 'link_' | append: i
+          assign title_key = 'title_' | append: i
+          
+          assign image = block.settings[image_key]
+          assign link = block.settings[link_key]
+          assign title = block.settings[title_key]
+        %}
+
+        <div class="ai-image-row-item-{{ ai_gen_id }}">
+          {% if link != blank %}
+            <a href="{{ link }}" class="ai-image-row-link-{{ ai_gen_id }}">
+          {% else %}
+            <div class="ai-image-row-link-{{ ai_gen_id }}">
+          {% endif %}
+            {% if image %}
+              <img
+                src="{{ image | image_url: width: 600 }}"
+                alt="{{ image.alt | escape }}"
+                loading="lazy"
+                width="600"
+                height="600"
+              >
+            {% else %}
+              <div class="ai-image-row-image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          {% if link != blank %}
+            </a>
+          {% else %}
+            </div>
+          {% endif %}
+
+          {% if title != blank %}
+            <h3 class="ai-image-row-item-title-{{ ai_gen_id }}">{{ title }}</h3>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if block.settings.button_text != blank %}
+      <div class="ai-image-row-button-wrapper-{{ ai_gen_id }}">
+        <a href="{{ block.settings.button_link }}" class="ai-image-row-button-{{ ai_gen_id }}">
+          {{ block.settings.button_text }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image row with links",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "header",
+      "content": "Section content"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Title",
+      "default": "Shop by Category"
+    },
+    {
+      "type": "textarea",
+      "id": "section_text",
+      "label": "Text",
+      "default": "Discover our curated collections"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Title font size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "title_font_weight",
+      "min": 300,
+      "max": 700,
+      "step": 100,
+      "label": "Title font weight",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "text_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text font size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_font_weight",
+      "min": 300,
+      "max": 700,
+      "step": 100,
+      "label": "Text font weight",
+      "default": 400
+    },
+    {
+      "type": "header",
+      "content": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "link_3",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "title_3",
+      "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Image 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "link_4",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "title_4",
+      "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Image 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_5",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "link_5",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "title_5",
+      "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Image style"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_title_font_size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Image title font size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "image_title_font_weight",
+      "min": 300,
+      "max": 700,
+      "step": 100,
+      "label": "Image title font weight",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Gap between images",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "grid_gap_mobile",
+      "min": 10,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap on mobile",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Shop all button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop All"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Button border color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Button hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border_color",
+      "label": "Button hover border color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Button font size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_font_weight",
+      "min": 300,
+      "max": 700,
+      "step": 100,
+      "label": "Button font weight",
+      "default": 600
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image row with links"
+    }
+  ]
+}
+{% endschema %}

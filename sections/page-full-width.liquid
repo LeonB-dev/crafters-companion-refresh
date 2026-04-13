@@ -1,0 +1,56 @@
+{% liquid
+  assign template_name = 'section-page-full-width'
+
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-page-full-width.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }} u-space-above-sm" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <header class="header">
+    <div class="container">
+      <h1 class="u-heading-lg" id="page-title">{{- page.title | escape }}</h1>
+    </div>
+  </header>
+  {%- if page.content != blank -%}
+    <div class="container">
+      <div class="c-rte">
+        {{- page.content | replace: '<table', '<div class="c-table"><table' | replace: '</table>', '</table></div>' -}}
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Page - Full Width",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

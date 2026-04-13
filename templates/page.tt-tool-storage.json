@@ -1,0 +1,170 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "af8e8751-f7fd-425e-bbfd-336cbccb4152": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Tool Organizers",
+        "text": "<p>Stamp blocks, bone folders, utility knives, rulers, paper trimmers, tweezers...the list is nearly endless.  How do you organize your tools so they are easy to find, easy to use AND easy to put away?  At Totally-Tiffany we've got organizers for every type of crafter.  Most of our organizers have multiple uses.  The images below show the organizers in use with tools<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "f321eeb4-f55e-4b05-9825-68f4ded9ddc7": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Screenshot_2023-09-21_213431.png",
+        "main_heading": "Ditto Tool Tote",
+        "main_text": "<p>Best tool bag in the industry.  Our Ditto Tool Tote is a customer favorite. Opens up on your workspace, folds closed to carry.  Pockets hold everything from a small paper trimmer to tweezers, rulers and your favorite scissors.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All EZ2Organize",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "8d867ed7-17a9-454a-a06b-0c1fc7e28243": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/How_to_Organize_tool_Totally-Tiffany-WD-TT13-1_1_2c622d20-aab6-480f-beb7-d44e557727ac.jpg",
+        "main_heading": "Tool Tower",
+        "main_text": "<p>Need to take control of small tools? Try the Tool Tower. Eight divided sections for everything from rulers to corner punches.  The graduated sections help to separate tools by height so they are visible and accessible.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All Desk Maid",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "a0adb2a1-7327-462e-ac77-a7edc50fa5ea": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/How_to_Organize_tool_Totally-Tiffany_PHA4_Punch_Boards_Organized.jpg",
+        "main_heading": "8.5x11 Paper Handler",
+        "main_text": "<p>The 8.5x11 Paper Handlers eems like an unlikely candidate for tool storage, but it's ideal for things like WeR Punch Boards and Cutting platform for your die machine.  <\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All Paper Handlers",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "1715a89c-5a9a-44ac-b416-7ccd5413c5d5": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/BSFP-SNG163.jpg",
+        "main_heading": " Brandy Buddy Bag",
+        "main_text": "<p>Do you have lots of long skinny tools? Rulers, rippin' rulers, journaling guides, centering rulers, mat tools, or Kiwi Lane Border templates? The Brandy Buddy Bag is great for keeping these products organized.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All EZ2Organize",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "f2a2444e-8d68-4dea-82bc-8021d9c2248c": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/How_to_Organize_tool_Totally-Tiffany_DSST_Die_Stamp_Supply_Organizer.jpg",
+        "main_heading": "Die, Stamp & Supply Organizer.  ",
+        "main_text": "<p>Punch boards to heat tools, hammers to paint brushes - you'll be able to see them and access them in the Die, Stamp & Supply Organizer.  <\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All Desk Maid",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    }
+  },
+  "order": [
+    "af8e8751-f7fd-425e-bbfd-336cbccb4152",
+    "f321eeb4-f55e-4b05-9825-68f4ded9ddc7",
+    "8d867ed7-17a9-454a-a06b-0c1fc7e28243",
+    "a0adb2a1-7327-462e-ac77-a7edc50fa5ea",
+    "1715a89c-5a9a-44ac-b416-7ccd5413c5d5",
+    "f2a2444e-8d68-4dea-82bc-8021d9c2248c"
+  ]
+}

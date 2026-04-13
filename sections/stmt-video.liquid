@@ -1,0 +1,235 @@
+{%- liquid
+  assign template_name = 'section-stmt-video'
+  assign internal_video = section.settings.internal_video
+  assign external = section.settings.external
+  assign external_video = section.settings.external_video
+  assign heading = section.settings.heading
+  assign text = section.settings.text
+
+  assign content_title = section.settings.content_title
+  assign content_subtitle = section.settings.content_subtitle
+  assign content_description = section.settings.content_description
+
+  assign cta_url = section.settings.cta_url
+  assign cta_background_colour = section.settings.cta_background_colour
+  assign cta_icon = section.settings.cta_icon
+  assign cta_text = section.settings.cta_text
+  assign cta_text_colour = section.settings.cta_text_colour
+  assign cta_background_colour = section.settings.cta_background_colour
+
+  if cta_url == blank
+    assign cta_url = product.metafields.custom.video_section_cta_url
+  endif
+
+  if external_video == blank
+    assign external_video_from_metafield = true
+    assign external_video = product.metafields.custom.external_video
+  endif
+%}
+
+{{- 'section-stmt-video.css' | asset_url | stylesheet_tag -}}
+{% if section.index > 2 %}
+  <link rel="stylesheet" href="{{ 'section-stmt-video.css' | asset_url }}" media="print" onload="this.media='all'">
+  <noscript>{{ 'section-stmt-video.css' | asset_url | stylesheet_tag }}</noscript>
+{% else %}
+  {{ 'section-stmt-video.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+{% style %}
+  .section-stmt-video-{{ section.id }} {
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media (min-width: 990px) {
+    .section-stmt-video-{{ section.id }} {
+      margin-top: calc(4 * {{ section.settings.margin_top }}px);
+      margin-bottom: calc(4 * {{ section.settings.margin_bottom }}px);
+      padding-top: calc(4 * {{ section.settings.padding_top }}px);
+      padding-bottom: calc(4 * {{ section.settings.padding_bottom }}px);
+    }
+  }
+{% endstyle %}
+
+{% capture content_output %}
+  <div class="section-video-section__content">
+    {% if content_subtitle %}
+      <p class="section-video-section__content-subtitle">{{ content_subtitle }}</p>
+    {% endif %}
+
+    {% if content_title %}
+      <h2 class="section-video-section__content-title">{{ content_title }}</h2>
+    {% endif %}
+
+    {% if content_description %}
+      <div class="section-video-section__content-description richtext-area">
+        {{ content_description }}
+      </div>
+    {% endif %}
+
+    {% if cta_text != blank and cta_url != blank %}
+      <a href="{{ cta_url }}" class="button" style="background-color: {{ cta_background_colour }}; color: {{ cta_text_colour }};">
+        {%- if cta_icon != blank -%}
+          <img src="{{ cta_icon | image_url }}" width="16" height="16"/>
+        {% endif %}
+        {{ cta_text }}
+      </a>
+    {% endif %}
+  </div>
+{% endcapture %}
+
+{% capture video_output %}
+  {% if external %}
+    {% if external_video_from_metafield %}
+      {% if external_video contains 'youtube' %}
+        <iframe class="video" src="https://www.youtube.com/embed/{{- external_video | split: '?v=' | last -}}" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      {% elsif external_video contains 'vimeo' %}
+        <iframe class="video" src="https://player.vimeo.com/video/{{- external_video | split: '/' | last -}}" loading="lazy" title="Vimeo video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      {% endif %}
+    {% else %}
+      {% if external_video.type == 'youtube' %}
+      <iframe class="video" src="https://www.youtube.com/embed/{{- external_video.id -}}" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      {%  elsif external_video.type == 'vimeo' %}
+        <iframe class="video" src="https://player.vimeo.com/video/{{- external_video.id -}}" loading="lazy" title="Vimeo video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      {% else %}
+        This section does not support this type of video link
+      {% endif %}
+    {% endif %}
+  {% else %}
+    {{- internal_video | video_tag: controls: true, width: 800, height: 450, image_size: '800x450' -}}
+  {% endif %}
+{% endcapture %}
+
+{% unless external_video == blank and internal_video == blank %}
+  <div id="{{ section.id }}" class="section-stmt-video section-stmt-video-{{ section.id }}">
+    <div class="container">
+      <div class="wrapper">
+        {{ content_output }}
+        <div class="section-stmt-video__video-output">
+          <div>
+            {{ video_output }}
+            <div></div>
+          </div>
+        </div>
+      </div>
+{% endunless %}
+
+{% schema %}
+{
+  "name": "Video",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "range",
+      "label": "Margin Top",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "label": "Margin Bottom",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "label": "Padding Top",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "label": "Padding Bottom",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "video",
+      "id": "internal_video",
+      "label": "Internal video"
+    },
+    {
+      "type": "checkbox",
+      "id": "external",
+      "label": "Use external URL instead",
+      "default": false
+    },
+    {
+      "type": "video_url",
+      "id": "external_video",
+      "label": "External video",
+      "accept": ["youtube", "vimeo"],
+      "info": "Will use the Video Section External Video from product metafields if not set"
+    },
+    {
+      "type": "text",
+      "label": "Subtitle",
+      "id": "content_subtitle"
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "content_title"
+    },
+    {
+      "type": "richtext",
+      "label": "Description",
+      "id": "content_description"
+    },
+    {
+      "type": "color",
+      "label": "Call to action - Colour",
+      "id": "cta_background_colour",
+      "default": "#603C8E"
+    },
+    {
+      "type": "color",
+      "label": "Call to action - Text Colour",
+      "id": "cta_text_colour",
+      "default": "#ffffff"
+    },
+    {
+      "type": "url",
+      "label": "Call to action - URL",
+      "id": "cta_url",
+      "info": "Will use the Video Section CTA URL from product metafields if not set"
+    },
+    {
+      "type": "text",
+      "label": "Call to action - Text",
+      "id": "cta_text"
+    },
+    {
+      "type": "image_picker",
+      "label": "Call to action - Icon",
+      "id": "cta_icon",
+      "info": "SVG is the preference, however png images are accepted. The icon must be on a transparent background."
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Video Section",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,171 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "78cb73e0-6ae7-4abc-a8bd-9d2a8f84c7a3": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Washi Tape Organizers",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "c277010c-4905-4b1a-a8df-002c07cfdc5e": {
+      "type": "image-text-slider",
+      "blocks": {
+        "f35b2949-b7ed-4502-9056-57565ac73d31": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Shelly Buddy Bag ",
+            "text": "<p>About 20 rolls of washi tape.<\/p>",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/BSFP-SNG081.jpg"
+          }
+        },
+        "5642b65b-290a-463b-91f1-4833eb3730c2": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Irene Buddy Bag",
+            "text": "<p>About 50 rolls of washi tape<\/p>",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/SNG12-Irene-Washi-Tape-Organizer.jpg"
+          }
+        },
+        "be8ba2da-e3a2-4875-8fde-2f2f0718368b": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Stash and Store 5 Drawer Supply Case",
+            "text": "<p> 375 rolls of washi tape.<\/p>",
+            "link_text": "View All Stash & Store",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/SNS2-Washi-Tape-drawer-oaded-inset-box-2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "f35b2949-b7ed-4502-9056-57565ac73d31",
+        "5642b65b-290a-463b-91f1-4833eb3730c2",
+        "be8ba2da-e3a2-4875-8fde-2f2f0718368b"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "f56a1f84-be3e-4538-8038-f734f1b6a58a": {
+      "type": "image-text-slider",
+      "blocks": {
+        "638b0979-bbf3-4adb-aa3b-86a0b8c66aac": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "6 Level Stamp & Supply Stadium ",
+            "text": "<p>Over 100 of rolls of washi.  The smaller rolls sit better in this organizer.<\/p>",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/ss6l-Washi-tape-loaded-front-view-2_fadc4841-561c-4137-9330-e4e12a5ebfce.jpg"
+          }
+        },
+        "03137090-8bc7-4f68-9e8b-5c075a1d1494": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "1.5\" Punch Pack",
+            "text": "<p>Up to 90 rolls of washi tape.2\" Punch Pack - larger rolls, up 75 rolls.<\/p>",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/Washi_Tape_Organization__PupkSSG14_2.jpg"
+          }
+        },
+        "0b017f76-f258-4264-87f3-3e6d9ca3c22c": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Stash and Store 5 Drawer Supply Case",
+            "text": "<p> 375 rolls of washi tape.<\/p>",
+            "link_text": "View All Stash & Store",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/SNS2-Washi-Tape-drawer-oaded-inset-box-2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "638b0979-bbf3-4adb-aa3b-86a0b8c66aac",
+        "03137090-8bc7-4f68-9e8b-5c075a1d1494",
+        "0b017f76-f258-4264-87f3-3e6d9ca3c22c"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "60c0c1ad-8684-49b1-b5ab-5dda936cd022": {
+      "type": "image-text-slider",
+      "blocks": {
+        "3a4a82ab-195f-4177-b325-dad50b666591": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Embellishment Storage Page ",
+            "text": "<p>Organize and store 24 rolls of washi in this double-sided page.<\/p>",
+            "link_text": "View All ScrapRack ",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/12_49b015bf-5845-4054-afbd-16da8402b5dc.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "3a4a82ab-195f-4177-b325-dad50b666591"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "78cb73e0-6ae7-4abc-a8bd-9d2a8f84c7a3",
+    "c277010c-4905-4b1a-a8df-002c07cfdc5e",
+    "f56a1f84-be3e-4538-8038-f734f1b6a58a",
+    "60c0c1ad-8684-49b1-b5ab-5dda936cd022"
+  ]
+}

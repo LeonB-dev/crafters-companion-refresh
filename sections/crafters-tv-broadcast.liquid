@@ -1,0 +1,232 @@
+{%- liquid
+  assign template_name = 'section-crafters-tv-broadcast'
+
+  assign current_time = 'now' | date: '%s'
+  assign article_start_time = article.metafields.custom.start_time | date: '%s'
+  assign article_end_time = article.metafields.custom.end_time | date: '%s'
+  assign article_video_id = article.metafields.custom.video_id
+  assign show_collection = collections[article.metafields.custom.shop_the_show_collection]
+  assign std_collection = collections[article.metafields.custom.shop_the_day_collection]
+-%}
+
+{{- 'section-crafters-tv-broadcast.css' | asset_url | stylesheet_tag -}}
+<link rel="stylesheet" type="text/css" href="https://cdn.plyr.io/3.7.8/plyr.css"/>
+<script defer src="{{- 'section-crafters-tv-broadcast.js' | asset_url -}}"></script>
+
+<div class="{{- template_name }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {%- if section.settings.edge_version != 'none' -%}
+    {%- render 'paper-edge', _edge_version: section.settings.edge_version, _bottom_edge_colour: 'white', _section: section -%}
+  {%- endif -%}
+
+  <div class="broadcast-wrapper" style="
+    position: relative;
+    color: {{ section.settings.text_color }};
+    {% if section.settings.background_image != blank %}
+      background-image: url('{{ section.settings.background_image | image_url }}');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+      min-height: 600px;
+    {% else %}
+      background: none;
+    {% endif %}
+  ">
+    <div class="container" style="position: relative; z-index: 1;">
+      {%- render 'crafters-tv-heading',
+        _heading: section.settings.heading,
+        _title: section.settings.title,
+        _text: section.settings.text
+      -%}
+
+      <div class="broadcast-content">
+        <div class="content-wrapper">
+          <span class="badge" style="
+            background-color: {{ section.settings.badge_color }};
+            color: {{ section.settings.badge_text_color }};
+          ">
+            {% if article_start_time > current_time and article_end_time < current_time %}
+              Live!
+            {% elsif article_start_time > current_time %}
+              Upcoming!
+            {% else %}
+              Catchup
+            {% endif %}
+          </span>
+
+          <div class="title">
+            <h2 class="u-heading-sm" style="color: {{ section.settings.show_title_color }};">{{ article.title | split: '-' | first }}</h2>
+            <time class="date" style="color: {{ section.settings.show_time_color }};">{{ article_start_time | date: '%e %B, %Y' }}</time>
+          </div>
+
+          <div class="c-rte">
+            {{ article.content }}
+          </div>
+
+          <div class="actions">
+            {%- if show_collection != blank -%}
+              <a href="{{- show_collection.url -}}" class="c-btn main tertiary" style="
+                background-color: {{ section.settings.shop_show_btn_color }};
+                color: {{ section.settings.shop_show_text_color }};
+              ">
+                {{- 'ctv.shop_the_show' | t -}}
+              </a>
+            {%- endif -%}
+            {%- if std_collection != blank -%}
+              <a href="{{- std_collection.url -}}" class="c-btn main std" style="
+                background-color: {{ section.settings.shop_day_btn_color }};
+                color: {{ section.settings.shop_day_text_color }};
+              ">
+                {{- 'ctv.shop_the_day' | t -}}
+              </a>
+            {%- endif -%}
+          </div>
+        </div>
+
+        {% render 'plyr-video-player', _article_video_id: article_video_id %}
+      </div>
+
+      {% assign ctv_article_array = false %}
+      {% for ctv_article in settings.ctv_blog_schedule.articles %}
+        {% if ctv_article.id != article.id %}
+          {% assign ctv_start_time = ctv_article.metafields.custom.start_time | date: '%s' %}
+          {% if ctv_start_time and ctv_start_time > current_time %}
+            {% assign matrix = ctv_start_time | append: '|' | append: forloop.index0 %}
+            {% if ctv_article_array %}
+              {% assign temp_index = matrix | split: ',' %}
+              {% assign ctv_article_array = ctv_article_array | concat: temp_index %}
+            {% else %}
+              {% assign ctv_article_array = matrix | split: ',' %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% if ctv_article_array %}
+        <div class="upcoming-broadcasts-wrapper">
+          {%- render 'section-header',
+              _heading: section.settings.upcoming_heading,
+              _link_url: section.settings.upcoming_link_url,
+              _link_text: section.settings.upcoming_link_text,
+              _link_class: 'quaternary',
+              _heading_style: 'color:' | append: section.settings.next_text_color | append: ';',
+              _link_style: 'color:' | append: section.settings.full_schedule_text_color | append: ';'
+          -%}
+          {% assign ctv_article_array = ctv_article_array | sort %}
+          <div class="swiper-container" data-upcoming-broadcasts-slider>
+            <div class="swiper-wrapper">
+              {% for ctv_item in ctv_article_array limit: 3 %}
+                {% if ctv_item %}
+                  {% assign i = ctv_item | split: '|' | last | times: 1 %}
+                  {% assign article_item = settings.ctv_blog_schedule.articles[i] %}
+                  <div class="swiper-slide">
+                    <div class="upcoming-broadcast">
+                      <div class="img-wrapper">
+                        <img width="100" height="100" src="{{ article_item.image | image_url }}" loading="lazy">
+                      </div>
+                      <div class="details">
+                        <a href="{{ article_item.url }}" class="u-heading-xs stretched-link" style="color: {{ section.settings.upcoming_title_color }};">
+                          {{ article_item.title | split: '-' | first }}
+                        </a>
+                        <div class="date-time" style="color: {{ section.settings.upcoming_time_color }};">
+                          <span class="time" style="border-right: 1px solid {{ section.settings.upcoming_separator_color }};">
+                            {{ article_item.metafields.custom.start_time | date: '%l:%M %p' }}
+                          </span>
+                          <span class="date">
+                            {{ article_item.metafields.custom.start_time | date: '%e %B, %Y' }}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- Mobile background fix -->
+<style>
+  @media (max-width: 767px) {
+    .section-crafters-tv-broadcast .broadcast-wrapper {
+      {% if section.settings.mobile_background_image != blank %}
+        background-image: url('{{ section.settings.mobile_background_image | image_url }}');
+      {% endif %}
+      background-size: contain;
+      background-position: top center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 0;
+      padding-top: 10%;
+      position: relative;
+    }
+
+    .section-crafters-tv-broadcast .broadcast-wrapper > .container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Crafter's TV Broadcast",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "Content" },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "text", "id": "title", "label": "Title" },
+    { "type": "richtext", "id": "text", "label": "Text" },
+
+    { "type": "header", "content": "Upcoming Broadcasts Content" },
+    { "type": "text", "id": "upcoming_heading", "label": "Heading" },
+    { "type": "url", "id": "upcoming_link_url", "label": "Link URL" },
+    { "type": "text", "id": "upcoming_link_text", "label": "Link Text" },
+
+    { "type": "header", "content": "Colours & Background" },
+    { "type": "color", "id": "text_color", "label": "Section text colour", "default": "#ffffff" },
+    { "type": "color", "id": "badge_color", "label": "Badge background colour", "default": "#90489c" },
+    { "type": "color", "id": "badge_text_color", "label": "Badge text colour", "default": "#ffffff" },
+    { "type": "color", "id": "show_title_color", "label": "Show title colour", "default": "#ffffff" },
+    { "type": "color", "id": "show_time_color", "label": "Show date/time colour", "default": "#cccccc" },
+    { "type": "color", "id": "upcoming_title_color", "label": "Upcoming broadcast title colour", "default": "#000000" },
+    { "type": "color", "id": "upcoming_time_color", "label": "Upcoming broadcast date/time colour", "default": "#666666" },
+    { "type": "color", "id": "upcoming_separator_color", "label": "Upcoming broadcast time separator colour", "default": "#cccccc" },
+
+    { "type": "color", "id": "shop_show_btn_color", "label": "Shop the Show button background", "default": "#90489c" },
+    { "type": "color", "id": "shop_show_text_color", "label": "Shop the Show button text", "default": "#ffffff" },
+    { "type": "color", "id": "shop_day_btn_color", "label": "Shop the Day button background", "default": "#ffffff" },
+    { "type": "color", "id": "shop_day_text_color", "label": "Shop the Day button text", "default": "#000000" },
+
+    { "type": "color", "id": "next_text_color", "label": "‘What’s on next’ text colour", "default": "#000000" },
+    { "type": "color", "id": "full_schedule_text_color", "label": "‘View full schedule’ text colour", "default": "#000000" },
+
+    { "type": "image_picker", "id": "background_image", "label": "Desktop background image" },
+    { "type": "image_picker", "id": "mobile_background_image", "label": "Mobile background image" },
+
+    { "type": "header", "content": "Settings" },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        { "value": "edge-01", "label": "One" },
+        { "value": "edge-02", "label": "Two" },
+        { "value": "edge-03", "label": "Three" },
+        { "value": "none", "label": "None" }
+      ],
+      "default": "edge-01"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    { "name": "Crafter's TV Broadcast", "category": "Content" }
+  ]
+}
+{% endschema %}

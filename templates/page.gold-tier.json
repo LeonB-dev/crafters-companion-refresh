@@ -1,0 +1,136 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "4f23468a-c87f-4f6d-a818-ad9f809d4171": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Gold Membership",
+        "text": "<p>Welcome to Club Inspire, your hub for the best offers, exclusives, sneak peeks and more! If you LOVE crafting and Crafter’s Companion, this is the place for you!<\/p><p>As a <strong>GOLD<\/strong> loyalty member, you’ll get exclusive access to brand new product launches before the general public, extra discounts on specific products, vouchers and so much more.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "link_colour": "primary",
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "1eed20e2-4c60-43a8-a8b5-73295e002033": {
+      "type": "featured-image",
+      "settings": {
+        "url": "",
+        "disable_aspect_ratio": false,
+        "enable_full_width": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "8daa9408-a53b-4efa-af38-c49727a9a2f4": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/IMG_2122.jpg",
+        "main_heading": "Offers & Discounts",
+        "main_text": "<p>If you’re a Crafter’s Companion fan who’s already signed up to our mailing list, you’ll be familiar with our regular emails that contain exclusive offers and vouchers that give you huge discounts, but as a Club Inspire gold member, you’ll receive even more<br\/><\/p><h4><strong>You will receive:<\/strong><\/h4><ul><li>Early access to product launches<\/li><li>15% off every order you place<\/li><li>Regular offers and additional discounts<\/li><li>FREE shipping on all orders over £20<\/li><li>“Double reward” opportunities<\/li><\/ul>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "edge-01",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "pippin",
+        "content_position": "vertical-centre",
+        "margin_bottom": "md",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "2859a787-bcf9-40c2-93fc-0d414c47d724": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Earning Points",
+        "small_text": "<h3><strong>Earn as you spend with Club Inspire!<\/strong><\/h3><p>Earning points has never been easier with Crafter’s Companion. All you need to do is place an order and for every £1 that you spend, you’ll earn 1 loyalty point towards your balance and the more points that you earn, the more you save!<\/p><p>We regularly give members extra opportunities to receive double points when purchasing particular products, so keep an eye on your emails!<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "25d33339-e8c7-4cfd-9be4-c41c1ae1d792": {
+      "type": "text-header",
+      "settings": {
+        "heading": "What’s next for your membership?",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "link_colour": "primary",
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "5f08d7b4-46f6-4038-a77a-79a32a1b1eaa": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Platmobile_V3mobile_V4.png",
+        "main_heading": "Your next tier at Club Inspire is Platinum!",
+        "main_text": "<p>Platinum membership gives you access to all the amazing goodies like before, but you’ll also receive a huge 20% discount on every order AND free shipping on orders over £20!<\/p><p>To achieve Platinum membership, you’ll need to collect 1500 points within one year.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/pages\/club-inspire",
+        "main_link_text": "Join now",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "secondary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "is-hidden",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4f23468a-c87f-4f6d-a818-ad9f809d4171",
+    "1eed20e2-4c60-43a8-a8b5-73295e002033",
+    "8daa9408-a53b-4efa-af38-c49727a9a2f4",
+    "2859a787-bcf9-40c2-93fc-0d414c47d724",
+    "25d33339-e8c7-4cfd-9be4-c41c1ae1d792",
+    "5f08d7b4-46f6-4038-a77a-79a32a1b1eaa"
+  ]
+}

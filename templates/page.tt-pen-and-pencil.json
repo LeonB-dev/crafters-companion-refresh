@@ -1,0 +1,170 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "0c449853-ee5e-4849-9c38-482104931561": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Pen, Pencil & Marker Organizers",
+        "text": "<p>Need your pens handy at your desk? Prefer them packed to go? We offer a variety of organizers to suit your crafting needs<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "35787813-71bd-4655-81e3-dba74151e930": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/1_ea2f0395-9ad2-43c2-bf88-3a1e0b677ba9.jpg",
+        "main_heading": "15\" Pen & Ink Palace",
+        "main_text": "<p>Holds over 100 markers,  Get more details on the product page.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All Desk Maid",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "3137b951-08c5-40e9-8309-0649d2c1ae70": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/2_591c19d4-78f5-4e55-a1c4-57c777d35714.jpg",
+        "main_heading": "Denise Buddy Bag",
+        "main_text": "<p>84 Spectrum Noir, 120 Copic, 84 Colorista<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All EZ2 Organize Buddy Bags",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "edge-01",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "black-squeeze",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "67dc0b41-807a-48bd-bcbb-540fb408acf2": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/3_8e439add-e728-422b-b1d8-9e7b3b24f154.jpg",
+        "main_heading": "Debra Buddy Bag",
+        "main_text": "",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All EZ2 Organize Buddy Bags",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "1d8b467e-5c00-4e5d-b301-cec61849a6ee": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/4_253198fe-8e6b-43ed-afc0-406ce21d4489.jpg",
+        "main_heading": "Terri Buddy Bag",
+        "main_text": "<p>Perfect for longer markers like TomBow or Artist Loft.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All EZ2 Organize Buddy Bags",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "edge-01",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "black-squeeze",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "d5002502-687a-46be-81e7-21bb018737ad": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/MD29-ff-Pen-Marker-Organizer_1.jpg",
+        "main_heading": "5x7 Fab File",
+        "main_text": "<p>Great for Spectrum Noir, Colorista, & Copic<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All Fab Files",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    }
+  },
+  "order": [
+    "0c449853-ee5e-4849-9c38-482104931561",
+    "35787813-71bd-4655-81e3-dba74151e930",
+    "3137b951-08c5-40e9-8309-0649d2c1ae70",
+    "67dc0b41-807a-48bd-bcbb-540fb408acf2",
+    "1d8b467e-5c00-4e5d-b301-cec61849a6ee",
+    "d5002502-687a-46be-81e7-21bb018737ad"
+  ]
+}

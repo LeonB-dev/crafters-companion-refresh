@@ -1,0 +1,52 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "text_header_H6LNPC": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Redirecting Your Creativity",
+        "text": "<p>Sorry, Crafters! The show you're looking for is no longer available. You can catch up on current shows by clicking the link below or subscribing to us on <a href=\"https://www.youtube.com/@CraftersCompanionTV\" target=\"_blank\" title=\"https://www.youtube.com/@CraftersCompanionTV\">YouTube</a>. See you there!</p>",
+        "link_text": "CTV Schedule",
+        "link_url": "shopify://blogs/crafters-tv-schedule",
+        "text_alignment": true,
+        "enable_h1": true,
+        "enable_page_title": false,
+        "link_colour": "primary",
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "featured_image_mgwb7E": {
+      "type": "featured-image",
+      "settings": {
+        "url": "",
+        "image": "shopify://shop_images/1500_x_500.jpg",
+        "image_mobile": "shopify://shop_images/800_x_800.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    }
+  },
+  "order": [
+    "text_header_H6LNPC",
+    "main",
+    "featured_image_mgwb7E"
+  ]
+}

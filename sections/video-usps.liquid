@@ -1,0 +1,298 @@
+<section class="video-usps-section">
+  <div class="video-usps-wrapper">
+
+    <!-- Left: Media -->
+    <div class="video-usps-media">
+      {% if section.settings.media_type == 'video' and section.settings.video != blank %}
+        {{
+          section.settings.video
+          | video_tag:
+            autoplay: true,
+            loop: true,
+            muted: true,
+            playsinline: true,
+            controls: false
+        }}
+      {% elsif section.settings.media_type == 'image' and section.settings.image != blank %}
+        <img
+          src="{{ section.settings.image | image_url: width: 2000 }}"
+          alt="{{ section.settings.image.alt | escape }}"
+          loading="lazy"
+        >
+      {% endif %}
+    </div>
+
+    <!-- Right: Content -->
+    <div
+      class="video-usps-content"
+      style="background-color: {{ section.settings.right_bg_color }};"
+    >
+      <div
+        class="video-usps-panel"
+        style="
+          background-color: {{ section.settings.panel_bg_color }};
+          border-color: {{ section.settings.panel_border_color }};
+          --heading-color: {{ section.settings.heading_color }};
+          --heading-size-desktop: {{ section.settings.heading_font_size_desktop }}px;
+          --heading-size-mobile: {{ section.settings.heading_font_size_mobile }}px;
+          --heading-weight: {{ section.settings.heading_font_weight }};
+          --usp-color: {{ section.settings.usp_color }};
+          --usp-size-desktop: {{ section.settings.usp_font_size_desktop }}px;
+          --usp-size-mobile: {{ section.settings.usp_font_size_mobile }}px;
+          --usp-weight: {{ section.settings.usp_font_weight }};
+          --tick-color: {{ section.settings.tick_color }};
+        "
+      >
+        {% if section.settings.heading != blank %}
+          <h2 class="video-usps-heading">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+
+        {% if section.blocks.size > 0 %}
+          <ul class="usp-list">
+            {% for block in section.blocks %}
+              <li class="usp-item">
+                {{ block.settings.usp_text }}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* Section */
+.video-usps-section {
+  width: 100%;
+  background: #ffffff;
+}
+
+/* Grid */
+.video-usps-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+}
+
+/* Media */
+.video-usps-media video,
+.video-usps-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right column */
+.video-usps-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+
+/* Panel */
+.video-usps-panel {
+  border: 1px solid;
+  padding: 40px;
+  max-width: 480px;
+  width: 100%;
+}
+
+/* Heading */
+.video-usps-heading {
+  margin-bottom: 24px;
+  color: var(--heading-color);
+  font-size: var(--heading-size-desktop);
+  font-weight: var(--heading-weight);
+}
+
+/* USP List */
+.usp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.usp-item {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 16px;
+  color: var(--usp-color);
+  font-size: var(--usp-size-desktop);
+  font-weight: var(--usp-weight);
+}
+
+.usp-item::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: var(--tick-color);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .video-usps-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .video-usps-content {
+    padding: 32px 20px;
+  }
+
+  .video-usps-panel {
+    padding: 32px 24px;
+  }
+
+  .video-usps-heading {
+    font-size: var(--heading-size-mobile);
+  }
+
+  .usp-item {
+    font-size: var(--usp-size-mobile);
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Media with USP Panel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why you will love it:"
+    },
+    {
+      "type": "select",
+      "id": "media_type",
+      "label": "Left media type",
+      "default": "video",
+      "options": [
+        { "value": "video", "label": "Video" },
+        { "value": "image", "label": "Image" }
+      ]
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "color",
+      "id": "right_bg_color",
+      "label": "Right background colour",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "panel_bg_color",
+      "label": "Panel background colour",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "panel_border_color",
+      "label": "Panel border colour",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading colour",
+      "default": "#000000"
+    },
+    {
+      "type": "number",
+      "id": "heading_font_size_desktop",
+      "label": "Heading size (desktop)",
+      "default": 26
+    },
+    {
+      "type": "number",
+      "id": "heading_font_size_mobile",
+      "label": "Heading size (mobile)",
+      "default": 22
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Heading weight",
+      "default": "bold",
+      "options": [
+        { "value": "normal", "label": "Normal" },
+        { "value": "bold", "label": "Bold" },
+        { "value": "600", "label": "Semi-bold" },
+        { "value": "700", "label": "Heavy" }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "usp_color",
+      "label": "USP text colour",
+      "default": "#000000"
+    },
+    {
+      "type": "number",
+      "id": "usp_font_size_desktop",
+      "label": "USP size (desktop)",
+      "default": 16
+    },
+    {
+      "type": "number",
+      "id": "usp_font_size_mobile",
+      "label": "USP size (mobile)",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "usp_font_weight",
+      "label": "USP weight",
+      "default": "normal",
+      "options": [
+        { "value": "normal", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-bold" }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "tick_color",
+      "label": "Tick colour",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "USP",
+      "settings": [
+        {
+          "type": "text",
+          "id": "usp_text",
+          "label": "USP text",
+          "default": "Add your USP here"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Media with USP Panel"
+    }
+  ]
+}
+{% endschema %}

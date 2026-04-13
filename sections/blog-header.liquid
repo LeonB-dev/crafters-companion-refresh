@@ -1,0 +1,76 @@
+{%- liquid
+  assign template_name = 'section-blog-header'
+
+  assign blog_title = blog.title
+  assign description = blog.metafields.custom.description
+  assign featured_image = blog.metafields.custom.featured_image
+%}
+
+{{- 'section-blog-header.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name -}}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <picture>
+    <source media="(min-width:1500px)" srcset="{{- featured_image | image_url: width: 1920 -}}">
+    <source media="(min-width:1100px)" srcset="{{- featured_image | image_url: width: 1500 -}}">
+    <source media="(min-width:800px)" srcset="{{- featured_image | image_url: width: 1024 -}}">
+    <source media="(min-width:551px)" srcset="{{- featured_image | image_url: width: 800 -}}">
+    <source media="(max-width: 550.8px)" srcset="{{- featured_image | image_url: width: 600 -}}">
+    <img src="{{- featured_image | image_url: height: 512 -}}" alt="{{- featured_image.alt | default: blog_title -}}" height="412" width="390" loading="eager"/>
+  </picture>
+  <div class="content">
+    <h1 class="u-heading-xl">{{- blog_title -}}</h1>
+    <p>{{- description | metafield_tag -}}</p>
+  </div>
+  {%-
+    render 'paper-edge',
+    _section: section,
+    _bottom_edge_colour: 'white'
+  -%}
+</div>
+
+{% schema %}
+{
+  "name": "Blog Header",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "edge-03"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Blog Header",
+      "category": "Content"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["blog"]
+  }
+}
+{% endschema %}

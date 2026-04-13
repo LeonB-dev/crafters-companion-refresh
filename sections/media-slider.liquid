@@ -1,0 +1,209 @@
+{%- liquid
+  assign template_name = 'section-media-slider'
+
+  assign large = section.settings.large
+
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-media-slider.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-media-slider.js' | asset_url -}}" defer></script>
+
+<div class="{{- template_name }}{% if large %} large{% endif %} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {%- render 'paper-edge', _section: section -%}
+  <div class="container">
+    <div class="swiper-container" data-media-slider>
+      <div
+        class="swiper-wrapper"
+        {% if large %}
+          data-media-slider-large
+        {% endif %}
+      >
+        {%- for block in section.blocks -%}
+          {% liquid
+            assign image = block.settings.image
+          %}
+          {%- if image != blank -%}
+            <div class="swiper-slide" data-media-slide>
+              <picture>
+                <source media="(min-width:551px)" srcset="{{- image | image_url: width: 1000 -}}">
+                <source media="(max-width: 550.8px)" srcset="{{- image | image_url: width: 600 -}}">
+                <img src="{{- image | image_url: width: 600 -}}" alt="{{- image.alt -}}" height="500" width="500" loading="lazy">
+              </picture>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <button class=" c-btn swiper-button prev" aria-label="Previous" data-media-slider-navigation-prev>
+        {%- render 'icon', _name: 'icon-arrow-left' -%}
+      </button>
+      <button class="c-btn swiper-button next" aria-label="Next" data-media-slider-navigation-next>
+        {%- render 'icon', _name: 'icon-arrow-right' -%}
+      </button>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image Slider",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "large",
+      "label": "Large view?",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "top_edge_colour",
+      "label": "Top edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "bottom_edge_colour",
+      "label": "Bottom edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "background_colour",
+      "label": "Background colour",
+      "info": "This can only be applied if a edge version is selected",
+      "options": [
+        {
+          "value": "black-squeeze",
+          "label": "Green"
+        },
+        {
+          "value": "pippin",
+          "label": "Pink"
+        },
+        {
+          "value": "whisper",
+          "label": "Purple"
+        }
+      ],
+      "default": "whisper"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "media_slide",
+      "name": "Media",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Minimum width: 800px"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Slider",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

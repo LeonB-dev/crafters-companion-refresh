@@ -1,0 +1,141 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "0fb83270-8751-43be-9d7e-06e58c8ff80e": {
+      "type": "category-hero",
+      "blocks": {
+        "d0b4af24-585e-4488-82d0-7645d952ae9a": {
+          "type": "tag_block",
+          "disabled": true,
+          "settings": {
+            "collection": "spectrum-noir",
+            "tag": "offer_3 for 2"
+          }
+        }
+      },
+      "block_order": [
+        "d0b4af24-585e-4488-82d0-7645d952ae9a"
+      ],
+      "settings": {
+        "menu": "main-menu",
+        "enable_collection_blocks": false,
+        "enable_blocks": true,
+        "text_width": "full",
+        "margin_bottom": "sm"
+      }
+    },
+    "stmt_inspiration_KUDD7L": {
+      "type": "stmt-inspiration",
+      "blocks": {
+        "tab_qeWfdf": {
+          "type": "tab",
+          "settings": {
+            "title": "Papercraft",
+            "content_subtitle": "Get Inspired",
+            "content_title": "Discover card making",
+            "content_description": "<p>Handmade cards are the perfect way to show your love and appreciation and add a personal touch to any occasion.<\/p>",
+            "featured_collection": "papercraft",
+            "featured_collection_image_desktop": "shopify:\/\/shop_images\/papercraft_700_700_073d7916-2f9a-4eac-b221-b8f5c0fa1c51.png",
+            "featured_collection_image_mobile": "shopify:\/\/shop_images\/papercraft_700_700_c51f9e2f-0aa2-4fd9-903d-4fa558f817e8.png",
+            "primary_color": "#f3a2ac",
+            "secondary_color": "#e5d0d0",
+            "footer_title": "Explore our papercraft guides and inspiration on the blog.",
+            "featured_product": "",
+            "featured_article_one": "inspiration\/5-bridgerton-inspired-crafting-ideas",
+            "featured_article_two": "",
+            "featured_article_three": "",
+            "featured_article_four": ""
+          }
+        },
+        "tab_F4neNP": {
+          "type": "tab",
+          "settings": {
+            "title": "Soft Crafts",
+            "content_subtitle": "Get Inspired",
+            "content_title": "Learn to sew",
+            "content_description": "<p>Whether you’re an experienced sewer or picking up a needle for the first time, we’re here to help you get started on your next masterpiece.<\/p>",
+            "featured_collection": "sewing-essentials",
+            "primary_color": "#f5a119",
+            "secondary_color": "#fef1dc",
+            "footer_title": "Explore our soft craft guides and inspiration on the blog.",
+            "featured_product": "",
+            "featured_article_one": "inspiration\/sewing-for-beginners-with-threaders",
+            "featured_article_two": "inspiration\/learn-more-about-sewing-and-needlecraft",
+            "featured_article_three": "",
+            "featured_article_four": ""
+          }
+        },
+        "tab_NeVciN": {
+          "type": "tab",
+          "settings": {
+            "title": "Art & Colouring",
+            "content_subtitle": "Get Inspired",
+            "content_title": "Discover Art & Colouring",
+            "content_description": "<p>Unleash your inner artist and bring your ideas to life with new techniques, expert tips, and endless creative possibilities. <\/p>",
+            "featured_collection": "art-colouring",
+            "featured_collection_image_desktop": "shopify:\/\/shop_images\/art_colouring_700_700_d96c8cf6-215a-44ab-8326-8f55e806ff31.png",
+            "featured_collection_image_mobile": "shopify:\/\/shop_images\/art_colouring_700_700_d17bb217-5fb2-4642-a92c-7a37e8c8c903.png",
+            "primary_color": "#145628",
+            "secondary_color": "#b8dac2",
+            "footer_title": "",
+            "featured_product": "",
+            "featured_article_one": "",
+            "featured_article_two": "",
+            "featured_article_three": "",
+            "featured_article_four": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_qeWfdf",
+        "tab_F4neNP",
+        "tab_NeVciN"
+      ],
+      "settings": {
+        "margin_top": 10,
+        "margin_bottom": 20,
+        "padding_top": 10,
+        "padding_bottom": 20
+      }
+    },
+    "4d90ad4e-453e-4717-9df1-6bc5396b40f5": {
+      "type": "featured-products",
+      "blocks": {
+        "dc6fb30e-c61d-4861-9f03-e170dc78ecd1": {
+          "type": "collection",
+          "settings": {
+            "collection": "craft-storage"
+          }
+        }
+      },
+      "block_order": [
+        "dc6fb30e-c61d-4861-9f03-e170dc78ecd1"
+      ],
+      "settings": {
+        "heading": "Shop our best-selling products",
+        "heading_alignment": false,
+        "link_url": "",
+        "link_text": "",
+        "grid_size": "lg",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "0fb83270-8751-43be-9d7e-06e58c8ff80e",
+    "stmt_inspiration_KUDD7L",
+    "4d90ad4e-453e-4717-9df1-6bc5396b40f5"
+  ]
+}

@@ -1,0 +1,33 @@
+{% liquid
+  capture content_for_query_string
+    echo content_for_header
+  endcapture
+
+  assign brand_metaobject = collection.metafields.custom.brand.value
+
+  if brand_metaobject != blank
+    assign brand_name = brand_metaobject.name
+    assign sticker_logo = brand_metaobject.sticker_logo
+    assign sticker_logo_alt = sticker_logo.alt | default: brand_name
+  endif
+
+  assign per_page_options = '12,24,36,48' | split: ','
+  assign page_url = content_for_query_string | split: '"pageurl":"' | last | split: '"' | first | split: '.myshopify.com' | last | replace: '\/', '/' |  replace: '%20', ' ' |  replace: '\u0026', '&'
+  assign page_url_parts = page_url | split: 'per_page='
+  assign page_url_part = page_url_parts.last
+  assign per_page = page_url_part | slice: 0, 2
+  
+  if per_page != blank and per_page_options contains per_page
+    assign per_page = per_page
+  else
+    assign per_page = settings.products_per_page
+  endif
+%}
+
+{%- paginate collection.products by per_page -%}
+  <stmt-collection id="collectionSection" class="collection js-collection">
+    {% render 'stmt-collection-filters', collection: collection, products: collection.products, paginate: paginate %}
+    {% render 'stmt-collection-products', collection: collection, products: collection.products, _sticker_logo: sticker_logo, _sticker_logo_alt: sticker_logo_alt %}
+    {% render 'stmt-pagination', collection: collection, products: collection.products, paginate: paginate %}
+  </stmt-collection>
+{% endpaginate %}

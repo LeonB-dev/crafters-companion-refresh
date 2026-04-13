@@ -1,0 +1,242 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "091fa3b1-15d2-4c7a-ba7b-c15d35806983": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Family & Friends: Patterned Papers",
+        "text": "<p>Click on the image of your choice to save and print as desired.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "56b519ec-1ad8-4a0f-ab83-40ae1207eefd": {
+      "type": "downloads",
+      "blocks": {
+        "96107e3e-bef7-42d6-b563-41aeb5028a12": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/www.crafterscompanion.co.uk\/page\/\/content\/uploads\/2021\/01\/AS1-Patterned-Papers-01.jpg",
+            "image": "shopify:\/\/shop_images\/f1.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/www.crafterscompanion.co.uk\/page\/\/content\/uploads\/2021\/01\/AS1-Patterned-Papers-01.jpg"
+          }
+        },
+        "426f4096-69a7-4456-a06a-a4f8ab9ec5c1": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-02.jpg",
+            "image": "shopify:\/\/shop_images\/f2.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-02.jpg"
+          }
+        },
+        "35d58f74-aa9d-40b6-819e-8ef86d9e4dd7": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-03.jpg",
+            "image": "shopify:\/\/shop_images\/f3.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-03.jpg"
+          }
+        },
+        "0903790f-d135-4411-bb7c-74f3c3287d03": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%204.png",
+            "image": "shopify:\/\/shop_images\/f4.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%204.png"
+          }
+        },
+        "8c8318d9-e12e-4f28-8455-5526cde6d76c": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-04.jpg",
+            "image": "shopify:\/\/shop_images\/f5.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-04.jpg"
+          }
+        },
+        "2f47577b-066b-46bb-b3bc-76fecea00cf4": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-05.jpg",
+            "image": "shopify:\/\/shop_images\/f6.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-05.jpg"
+          }
+        },
+        "8bdf01c0-1272-412f-aa4f-754f7a99541d": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-06.jpg",
+            "image": "shopify:\/\/shop_images\/f7.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-06.jpg"
+          }
+        },
+        "7a94868d-8ed5-49e6-9980-51510c54069a": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-07.jpg",
+            "image": "shopify:\/\/shop_images\/f8.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-07.jpg"
+          }
+        },
+        "df8dcc5d-9691-4cfe-a9e0-7d221b0e7032": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-12.jpg",
+            "image": "shopify:\/\/shop_images\/f9.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-12.jpg"
+          }
+        },
+        "8632441f-4270-4d3b-aa21-6f605d187c75": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-13.jpg",
+            "image": "shopify:\/\/shop_images\/f10.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-13.jpg"
+          }
+        },
+        "13e753d0-b614-4a74-b1db-8c247a92bee7": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-14.jpg",
+            "image": "shopify:\/\/shop_images\/f11.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-14.jpg"
+          }
+        },
+        "1b593089-78ba-447a-8a20-ec9e69a65305": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-15.jpg",
+            "image": "shopify:\/\/shop_images\/f12.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-15.jpg"
+          }
+        },
+        "ee510ec6-2502-424b-8260-cdb4858ef73e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-16.jpg",
+            "image": "shopify:\/\/shop_images\/f13.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-16.jpg"
+          }
+        },
+        "e5fd5c36-dbb8-4e3a-80bc-7322535f2c7c": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-14.jpg",
+            "image": "shopify:\/\/shop_images\/f14.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "65f7b35e-bba8-4f55-87fd-414f2b004c08": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-15.jpg",
+            "image": "shopify:\/\/shop_images\/f15.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "88d07c04-4af2-4018-b401-5ce637c1a846": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-faf\/Patterned%20Papers\/AS1%20-%20Patterned%20Papers-16.jpg",
+            "image": "shopify:\/\/shop_images\/f16.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "96107e3e-bef7-42d6-b563-41aeb5028a12",
+        "426f4096-69a7-4456-a06a-a4f8ab9ec5c1",
+        "35d58f74-aa9d-40b6-819e-8ef86d9e4dd7",
+        "0903790f-d135-4411-bb7c-74f3c3287d03",
+        "8c8318d9-e12e-4f28-8455-5526cde6d76c",
+        "2f47577b-066b-46bb-b3bc-76fecea00cf4",
+        "8bdf01c0-1272-412f-aa4f-754f7a99541d",
+        "7a94868d-8ed5-49e6-9980-51510c54069a",
+        "df8dcc5d-9691-4cfe-a9e0-7d221b0e7032",
+        "8632441f-4270-4d3b-aa21-6f605d187c75",
+        "13e753d0-b614-4a74-b1db-8c247a92bee7",
+        "1b593089-78ba-447a-8a20-ec9e69a65305",
+        "ee510ec6-2502-424b-8260-cdb4858ef73e",
+        "e5fd5c36-dbb8-4e3a-80bc-7322535f2c7c",
+        "65f7b35e-bba8-4f55-87fd-414f2b004c08",
+        "88d07c04-4af2-4018-b401-5ce637c1a846"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "lg"
+      }
+    },
+    "bae27d76-4b59-4b8c-b5df-af869484fd54": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p><\/p><p><\/p>",
+        "link_text": "Back to Downloads.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft-family-friends-downloads",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "18fe7623-4f8d-4f25-8d90-46d596323b46": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to A Year Of Craft.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "091fa3b1-15d2-4c7a-ba7b-c15d35806983",
+    "56b519ec-1ad8-4a0f-ab83-40ae1207eefd",
+    "bae27d76-4b59-4b8c-b5df-af869484fd54",
+    "18fe7623-4f8d-4f25-8d90-46d596323b46"
+  ]
+}

@@ -1,0 +1,66 @@
+{% liquid
+  comment 
+    card_title
+    card_image
+    card_url
+  endcomment
+
+  assign show_add_to_bag = false
+
+  assign loading = 'eager'
+
+  if forloop.index > 4
+    assign loading = 'lazy'
+  endif
+%}
+
+<div class="product-card">
+  <div class="product-card__image-container">
+    {% if card_image != blank %}
+      <a href="{{ card_url }}" class="product-card__image-link">
+        {{ card_image | image_url: width: 410, height: 310 | image_tag: class: 'product-card__image', loading: loading }}
+      </a>
+    {% endif %}
+
+    {% if show_add_to_bag %}
+      <button
+        class="product-card__add-to-bag-desktop product-add"
+        type="button"
+        data-product-item-variant-id="{{ current_variant.id }}"
+        data-product-item-quantity="1"
+        data-product-item-add
+      >
+        <span class="sr-only">
+          {{- 'products.product.add_to_cart' | t -}}
+        </span>
+        {% render 'stmt-icon-add-to-bag', class: 'product-card__add-to-bag-icon' %}
+      </button>
+    {% endif %}
+  </div>
+
+  <h3 class="product-card__title">
+    <a href="{{ card_url }}" class="product-card__title-link">{{ card_title }}</a>
+  </h3>
+
+  <div class="product-card__footer">
+    <div class="product-card__price">
+      {% if price_compare_at > price %}
+        <span class="product-card__compare-at-price">{{ price_compare_at | money }}</span>
+      {% endif %}
+      {{ price | money }}
+    </div>
+
+    {% if show_add_to_bag %}
+      <button
+        class="product-card__add-to-bag-mobile product-add"
+        type="button"
+        data-product-item-variant-id="{{ current_variant.id }}"
+        data-product-item-quantity="1"
+        data-product-item-add
+      >
+        {% render 'stmt-icon-add-to-bag', class: 'product-card__add-to-bag-icon' %}
+        {{- 'products.product.add_to_cart' | t -}}
+      </button>
+    {% endif %}
+  </div>
+</div>

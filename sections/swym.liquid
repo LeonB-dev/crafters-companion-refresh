@@ -1,0 +1,9 @@
+{%- liquid
+  assign template_name = 'section-swym'
+%}
+
+{{- 'section-swym.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name -}}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">{{ page.content }}</div>
+</div>

@@ -1,0 +1,425 @@
+{%- liquid
+  assign template_name = 'section-promotion-cards'
+  assign margin_top = section.settings.margin_top
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-promotion-cards.css' | asset_url | stylesheet_tag -}}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    margin-top: {{ margin_top }}px;
+    margin-bottom: {{ margin_bottom }}px;
+  }
+</style>
+
+<div
+  class="{{ template_name }} container"
+  data-section-type="{{- template_name -}}"
+  data-section-id="{{ section.id }}"
+>
+  {% for block in section.blocks limit:3 %}
+    {% liquid
+      # Layout
+      assign content_style = block.type
+
+      # Colours
+      assign content_text_colour = block.settings.content_text_colour
+      assign content_background_colour = block.settings.content_background_colour
+      assign cta_text_colour = block.settings.cta_text_colour
+      assign cta_background_colour = block.settings.cta_background_colour
+      assign sticker_background_colour = block.settings.sticker_background_colour
+
+      # Content
+      assign title = block.settings.title | replace: '<h1>', '<span class="h1">' | replace: '</h1>', '</span>'
+      assign title = title | replace: '<h2>', '<span class="h2">' | replace: '</h2>', '</span>'
+      assign title = title | replace: '<h3>', '<span class="h3">' | replace: '</h3>', '</span>'
+      assign title = title | replace: '&lt;br&gt;', '<br>'
+      assign content = block.settings.content
+      assign cta_text = block.settings.cta_text
+      assign link_url = block.settings.link_url
+      assign sticker_text = block.settings.sticker_text | replace: '<h1>', '<span class="h1">' | replace: '</h1>', '</span>'
+      assign sticker_text = sticker_text | replace: '<h2>', '<span class="h2">' | replace: '</h2>', '</span>'
+
+      # Images
+      assign image_desktop = block.settings.image_desktop
+      assign image_mobile = block.settings.image_mobile | default: image_desktop
+      assign image_alt = image_desktop.alt
+      assign image_desktop_sizes = '33vw'
+      if section.blocks.size < 3
+        assign image_desktop_sizes = '50vw'
+      endif
+
+      if image_mobile == blank
+        assign image_mobile = image_desktop
+      endif
+
+      if image_desktop == blank
+        assign image_desktop = image_mobile
+      endif
+    %}
+      <div class="promotion-card promotion-card--{{ content_style }}">
+        {% if sticker_text != blank %}
+          <div class="promotion-card__sticker promotion-card__sticker--{{ block.settings.sticker_position }}"
+                style="color: {{ content_text_colour }}; background-color: {{ sticker_background_colour }};">
+            {{ sticker_text }}
+          </div>
+        {% endif %}
+        <div class="promotion-card__container" style="color: {{ content_text_colour }}; background-color: {{ content_background_colour }};">
+          {% if image_mobile or image_desktop %}
+            <div class="promotion-card__media">
+              {% if image_mobile %}
+                {{ image_mobile | image_url: width: 1946 | image_tag:
+                  loading: 'lazy',
+                  sizes: '100vw',
+                  widths: '1, 380, 798, 1074, 1446',
+                  class: 'image-mobile',
+                  width: image_mobile.width,
+                  height: image_mobile.height
+                }}
+              {% endif %}
+              {% if image_desktop %}
+                {{ image_desktop | image_url: width: 1946 | image_tag:
+                  loading: 'lazy',
+                  sizes: image_desktop_sizes,
+                  widths: '1, 380, 798, 1074, 1446, 2618, 3526, 4096',
+                  class: 'image-desktop',
+                  width: image_mobile.width,
+                  height: image_mobile.height
+                }}
+              {% endif %}
+            </div>
+          {% endif %}
+          <div class="promotion-card__content container"
+                style="color: {{ content_text_colour }}; background-color: {{ content_background_colour }};">
+            <div>
+              <div class="promotion-card__title">
+                {{ title }}
+              </div>
+              <div class="promotion-card__text">
+                {{ content }}
+              </div>
+            </div>
+            {% if content_style == "base" %}
+              <div class="promotion-card__buttons">
+                <a class="c-btn button lozenge-l" href="{{- link_url -}}" class="c-btn" style="color: {{ cta_text_colour }}; background: {{ cta_background_colour }}">{{ cta_text }}</a>
+              </div>
+            {% endif %}
+          </div>
+          {% if content_style != "base" %}
+            <div class="promotion-card__buttons container">
+              <a class="c-btn button lozenge-l" href="{{- link_url -}}" class="c-btn" style="color: {{ cta_text_colour }}; background: {{ cta_background_colour }}">{{ cta_text }}</a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Promotion cards",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Up to three blocks will be displayed. You can drag and drop other blocks into the top 3 to be displayed. You can also hide blocks to show less than 3 blocks."
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "top_left",
+      "name": "Content - Top Left",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+          "type": "header",
+          "content": "Colours"
+        },
+        {
+          "type": "color",
+          "id": "content_text_colour",
+          "label": "Content Text Colour",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "content_background_colour",
+          "label": "Content Background Colour",
+          "default": "#DCD4E6"
+        },
+        {
+          "type": "color",
+          "id": "cta_text_colour",
+          "label": "CTA Text Colour",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "color",
+          "id": "cta_background_colour",
+          "label": "CTA Background Colour",
+          "default": "#603C8E"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "<p>Title</p>",
+          "info": "Use h3,h2,h1 for larger text. Force a newline by adding <br>"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Content</p>"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "CTA Text",
+          "default": "Shop now"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "CTA URL"
+        },
+        {
+          "type": "header",
+          "content": "Images and video"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_desktop",
+          "label": "Image (Desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image (Mobile)"
+        }
+      ]
+    },
+    {
+      "type": "bottom_left",
+      "name": "Content - Bottom Left",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+          "type": "header",
+          "content": "Colours"
+        },
+        {
+          "type": "color",
+          "id": "content_text_colour",
+          "label": "Content Text Colour",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "content_background_colour",
+          "label": "Content Background Colour",
+          "default": "#add3d2"
+        },
+        {
+          "type": "color",
+          "id": "cta_text_colour",
+          "label": "CTA Text Colour",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "cta_background_colour",
+          "label": "CTA Background Colour",
+          "default": "#479c99"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "<p>Title</p>",
+          "info": "Use h3,h2,h1 for larger text. Force a newline by adding <br>"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "CTA Text",
+          "default": "Shop now"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "CTA URL"
+        },
+        {
+          "type": "header",
+          "content": "Images and video"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_desktop",
+          "label": "Image (Desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image (Mobile)"
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "name": "Content - Base",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+          "type": "header",
+          "content": "Colours"
+        },
+        {
+          "type": "color",
+          "id": "content_text_colour",
+          "label": "Content Text Colour",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "content_background_colour",
+          "label": "Content Background Colour",
+          "default": "#f5a119"
+        },
+        {
+          "type": "color",
+          "id": "cta_text_colour",
+          "label": "CTA Text Colour",
+          "default": "#fdfffc"
+        },
+        {
+          "type": "color",
+          "id": "cta_background_colour",
+          "label": "CTA Background Colour",
+          "default": "#1f1300"
+        },
+        {
+          "type": "color",
+          "id": "sticker_background_colour",
+          "label": "Sticker Background Colour",
+          "default": "#fbd69b"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "<p>Title</p>",
+          "info": "Use h3,h2,h1 for larger text. Force a newline by adding <br>"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Content</p>"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "CTA Text",
+          "default": "Shop now"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "CTA URL"
+        },
+        {
+          "type": "richtext",
+          "id": "sticker_text",
+          "label": "Sticker Text",
+          "info": "Use h2,h1 for larger text."
+        },
+        {
+          "type": "select",
+          "id": "sticker_position",
+          "label": "Sticker position",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "right"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "header",
+          "content": "Images and video"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_desktop",
+          "label": "Image (Desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image (Mobile)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promotion cards",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

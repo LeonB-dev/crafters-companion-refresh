@@ -1,0 +1,632 @@
+{% doc %}
+  @prompt
+    2 images/vidoes full width, image on left with text overlay and shopable button, button has border, font weight adjustable, image sizes 1623x1138, text wrap on title and subtitle, vertical position adjustable, horizontal position adjustable, button and text on left size only, sections flipable, font size different for mobile and desktop, Text max width adjustable, Content max width for mobile and desktop, subtitle and button central
+    
+    
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-dual-media-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+  }
+
+  .ai-dual-media-container-{{ ai_gen_id }} {
+    display: flex;
+    width: 100%;
+    gap: 0;
+  }
+
+  .ai-dual-media-container-{{ ai_gen_id }}.ai-dual-media-flipped-{{ ai_gen_id }} {
+    flex-direction: row-reverse;
+  }
+
+  .ai-dual-media-item-{{ ai_gen_id }} {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+  }
+
+  .ai-dual-media-media-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ai-dual-media-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 1623 / 1138;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-dual-media-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .ai-dual-media-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-dual-media-overlay-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: {{ block.settings.vertical_position }};
+    justify-content: {{ block.settings.horizontal_position }};
+    padding: 40px;
+  }
+
+  .ai-dual-media-content-{{ ai_gen_id }} {
+    max-width: {{ block.settings.content_max_width_desktop }}px;
+    text-align: center;
+  }
+
+  .ai-dual-media-title-{{ ai_gen_id }} {
+    color: {{ block.settings.title_color }};
+    font-size: {{ block.settings.title_size_desktop }}px;
+    font-weight: {{ block.settings.title_font_weight }};
+    margin: 0 0 16px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .ai-dual-media-subtitle-{{ ai_gen_id }} {
+    color: {{ block.settings.subtitle_color }};
+    font-size: {{ block.settings.subtitle_size_desktop }}px;
+    margin: 0 0 24px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .ai-dual-media-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_size_desktop }}px;
+    font-weight: {{ block.settings.button_font_weight }};
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .ai-dual-media-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_bg_hover_color }};
+    color: {{ block.settings.button_text_hover_color }};
+    border-color: {{ block.settings.button_border_hover_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-dual-media-container-{{ ai_gen_id }} {
+      flex-direction: column;
+    }
+
+    .ai-dual-media-container-{{ ai_gen_id }}.ai-dual-media-flipped-{{ ai_gen_id }} {
+      flex-direction: column;
+    }
+
+    .ai-dual-media-item-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-dual-media-overlay-{{ ai_gen_id }} {
+      padding: 20px;
+    }
+
+    .ai-dual-media-content-{{ ai_gen_id }} {
+      max-width: {{ block.settings.content_max_width_mobile }}px;
+    }
+
+    .ai-dual-media-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size_mobile }}px;
+    }
+
+    .ai-dual-media-subtitle-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subtitle_size_mobile }}px;
+    }
+
+    .ai-dual-media-button-{{ ai_gen_id }} {
+      font-size: {{ block.settings.button_size_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<dual-media-{{ ai_gen_id }}
+  class="ai-dual-media-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-dual-media-container-{{ ai_gen_id }} {% if block.settings.flip_sections %}ai-dual-media-flipped-{{ ai_gen_id }}{% endif %}">
+    <div class="ai-dual-media-item-{{ ai_gen_id }}">
+      {% if block.settings.media_left_type == 'image' %}
+        {% if block.settings.image_left %}
+          <img
+            src="{{ block.settings.image_left | image_url: width: 1623 }}"
+            alt="{{ block.settings.image_left.alt | escape }}"
+            loading="lazy"
+            width="1623"
+            height="1138"
+            class="ai-dual-media-media-{{ ai_gen_id }}"
+          >
+        {% else %}
+          <div class="ai-dual-media-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-dual-media-empty-state-{{ ai_gen_id }}">
+              Add an image
+            </div>
+          </div>
+        {% endif %}
+      {% else %}
+        {% if block.settings.video_left %}
+          <video
+            class="ai-dual-media-media-{{ ai_gen_id }}"
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            <source src="{{ block.settings.video_left }}" type="video/mp4">
+          </video>
+        {% else %}
+          <div class="ai-dual-media-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-dual-media-empty-state-{{ ai_gen_id }}">
+              Add a video
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+
+      <div class="ai-dual-media-overlay-{{ ai_gen_id }}">
+        <div class="ai-dual-media-content-{{ ai_gen_id }}">
+          {% if block.settings.title != blank %}
+            <h2 class="ai-dual-media-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+          {% endif %}
+
+          {% if block.settings.subtitle != blank %}
+            <div class="ai-dual-media-subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</div>
+          {% endif %}
+
+          {% if block.settings.button_text != blank %}
+            <a
+              href="{{ block.settings.button_link }}"
+              class="ai-dual-media-button-{{ ai_gen_id }}"
+            >
+              {{ block.settings.button_text }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-dual-media-item-{{ ai_gen_id }}">
+      {% if block.settings.media_right_type == 'image' %}
+        {% if block.settings.image_right %}
+          <img
+            src="{{ block.settings.image_right | image_url: width: 1623 }}"
+            alt="{{ block.settings.image_right.alt | escape }}"
+            loading="lazy"
+            width="1623"
+            height="1138"
+            class="ai-dual-media-media-{{ ai_gen_id }}"
+          >
+        {% else %}
+          <div class="ai-dual-media-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-dual-media-empty-state-{{ ai_gen_id }}">
+              Add an image
+            </div>
+          </div>
+        {% endif %}
+      {% else %}
+        {% if block.settings.video_right %}
+          <video
+            class="ai-dual-media-media-{{ ai_gen_id }}"
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            <source src="{{ block.settings.video_right }}" type="video/mp4">
+          </video>
+        {% else %}
+          <div class="ai-dual-media-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-dual-media-empty-state-{{ ai_gen_id }}">
+              Add a video
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</dual-media-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class DualMedia{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.videos = this.querySelectorAll('video');
+        this.videos.forEach(video => {
+          video.play().catch(() => {});
+        });
+      }
+    }
+
+    customElements.define('dual-media-{{ ai_gen_id }}', DualMedia{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Dual media with overlay",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "flip_sections",
+      "label": "Flip sections",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Left media"
+    },
+    {
+      "type": "select",
+      "id": "media_left_type",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "video_left",
+      "label": "Video URL"
+    },
+    {
+      "type": "header",
+      "content": "Right media"
+    },
+    {
+      "type": "select",
+      "id": "media_right_type",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "video_right",
+      "label": "Video URL"
+    },
+    {
+      "type": "header",
+      "content": "Text overlay"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Discover our collection"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Explore the latest products"
+    },
+    {
+      "type": "select",
+      "id": "vertical_position",
+      "label": "Vertical position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_position",
+      "label": "Horizontal position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width_desktop",
+      "label": "Content max width desktop",
+      "min": 200,
+      "max": 800,
+      "step": 20,
+      "unit": "px",
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "content_max_width_mobile",
+      "label": "Content max width mobile",
+      "min": 200,
+      "max": 500,
+      "step": 20,
+      "unit": "px",
+      "default": 300
+    },
+    {
+      "type": "header",
+      "content": "Title style"
+    },
+    {
+      "type": "range",
+      "id": "title_size_desktop",
+      "label": "Desktop font size",
+      "min": 16,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "Mobile font size",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "title_font_weight",
+      "label": "Font weight",
+      "min": 100,
+      "max": 900,
+      "step": 100,
+      "default": 700
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Subtitle style"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size_desktop",
+      "label": "Desktop font size",
+      "min": 12,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size_mobile",
+      "label": "Mobile font size",
+      "min": 12,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "range",
+      "id": "button_size_desktop",
+      "label": "Desktop font size",
+      "min": 12,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_size_mobile",
+      "label": "Mobile font size",
+      "min": 12,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "button_font_weight",
+      "label": "Font weight",
+      "min": 100,
+      "max": 900,
+      "step": 100,
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "label": "Vertical padding",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 10,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "label": "Border width",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Border color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_hover_color",
+      "label": "Hover background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_text_hover_color",
+      "label": "Hover text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_border_hover_color",
+      "label": "Hover border color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dual media with overlay"
+    }
+  ]
+}
+{% endschema %}

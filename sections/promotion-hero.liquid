@@ -1,0 +1,115 @@
+{%- liquid
+  assign template_name = 'section-promotion-hero'
+  assign heading = section.settings.heading
+  assign text = section.settings.text
+  assign anchor_text = section.settings.anchor_text
+%}
+
+{{- 'section-promotion-hero.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-lg" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {%- for block in section.blocks -%}
+    {% liquid
+      assign collection = block.settings.collection
+      assign image = block.settings.image | default: collection.image
+      assign heading = block.settings.heading | default: collection.title
+      assign url = collection.url
+      assign link_text = block.settings.link_text
+
+    %}
+    <div class="promotion _0{{- forloop.index -}}">
+      {{- image | image_url: width: 960 | image_tag: widths: '400, 600, 800', alt: image.alt, loading: 'eager' -}}
+      <div class="content">
+        <p class="u-text-xl">{{- heading -}}</p>
+        <a href="{{- url -}}" class="c-btn alt primary stretched-link">
+          {{- link_text -}}
+          {%- render 'icon', _name: 'icon-arrow-right' -%}
+        </a>
+      </div>
+    </div>
+  {%- endfor -%}
+  <div class="main-content">
+    <h1 class="u-heading-lg">{{- heading -}}</h1>
+    {{- text -}}
+    <button class="c-btn alt primary" data-ph-anchor>
+      {{- anchor_text -}}
+      {%- render 'icon', _name: 'icon-arrow-down' -%}
+    </button>
+  </div>
+</div>
+
+
+<script>
+  let button = document.querySelector('[data-ph-anchor]');
+
+  button.addEventListener('click', function() {
+    window.scrollBy(0, 600);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Promotion Hero",
+  "tag": "section",
+  "max_blocks": 2,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "anchor_text",
+      "label": "Anchor text",
+      "default": "VIew offers"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "offer",
+      "name": "Offer",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "info": "This will override the default heading."
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text",
+          "default": "Shop Now"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "This will override the default image. Image msut be minimum 800px wide and 1/1 aspect ratio."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Promotion Hero",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

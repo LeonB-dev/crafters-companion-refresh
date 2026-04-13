@@ -1,0 +1,300 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "120fdb19-2eee-4711-8d6f-fe4a1e50a770": {
+      "type": "image-feature",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/IMG_4597_6515b4ed-c784-43ef-8ed9-ed1f94684db2.jpg",
+        "heading": "Downloadable Resources",
+        "text": "<p> For best results, print downloads onto premium paper for alcohol markers, watercolour paper for Aqua markers and black paper for metallic markers.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "content_placement": "left"
+      }
+    },
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false
+      }
+    },
+    "604af699-e694-4ef5-9b71-a40cadd9c8cc": {
+      "type": "downloads",
+      "blocks": {
+        "0e6c0571-fb72-4c78-9001-30e8e575e428": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/TricColour%20Brush%20Hues%20Colouring%20Sheet%20A4.zip",
+            "image": "shopify:\/\/shop_images\/Tricolour_Brush_Brush-Pen_copy.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/TricColour%20Brush%20Hues%20Colouring%20Sheet%20A4.zip"
+          }
+        },
+        "be49c650-910b-4451-ad2b-5a863446fd81": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Muris.pdf",
+            "image": "shopify:\/\/shop_images\/Meet_The_Artist_-_Graffiti.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Muris.pdf"
+          }
+        },
+        "959ba763-5b74-45d1-9b0e-67ec5acc457b": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/It%27s%20Knock.pdf",
+            "image": "shopify:\/\/shop_images\/Meet_The_Artist_-_Graffiti_2.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/It%27s%20Knock.pdf"
+          }
+        },
+        "b7152f4b-1cc6-4bf1-8a7d-bb4dc69cd5b5": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Downloadable%20Art%20Sheet%20A.pdf",
+            "image": "shopify:\/\/shop_images\/Printable_Blank_Line-Art_1.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Downloadable%20Art%20Sheet%20A.pdf"
+          }
+        },
+        "169482d0-0078-4294-9078-135e26329167": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Downloadable%20Art%20Sheets%20Toothrag%202.pdf",
+            "image": "shopify:\/\/shop_images\/Toothrag_-_Meet_the_Artist_2.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Downloadable%20Art%20Sheets%20Toothrag%202.pdf"
+          }
+        },
+        "2262fff5-5ce8-4d43-bc5d-2eb700245ecc": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Downloadable%20Art%20Sheets%20Toothrag%201.pdf",
+            "image": "shopify:\/\/shop_images\/Toothrag_-_Meet_the_Artist.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Downloadable%20Art%20Sheets%20Toothrag%201.pdf"
+          }
+        },
+        "83ae1c2c-9389-4835-b7c2-43b920fefd78": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Gmail%20-%20astro%20chimp%20line%20art%20whole%20picture.jpg%281%29.PDF",
+            "image": "shopify:\/\/shop_images\/Meet_the_Artist_1.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Gmail%20-%20astro%20chimp%20line%20art%20whole%20picture.jpg%281%29.PDF"
+          }
+        },
+        "ce7fde44-fca5-40bf-bd8f-f1581628d59e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/A4%20Jazza%20Colouring%20Sheet.pdf",
+            "image": "shopify:\/\/shop_images\/Jazza_s_Colouring_Page.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/A4%20Jazza%20Colouring%20Sheet.pdf"
+          }
+        },
+        "4ae14cb6-2aa5-456e-84d7-2b588f92b7f5": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/CLASSIQUE%20&%20ILLUSTRATOR%20DUAL-TIP%20COLOUR%20CHART.pdf",
+            "image": "shopify:\/\/shop_images\/Illustrator_Dual-Tip.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/CLASSIQUE%20&%20ILLUSTRATOR%20DUAL-TIP%20COLOUR%20CHART.pdf"
+          }
+        },
+        "f918bf47-8ece-43be-8f96-4e848d30d5d8": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/CLASSIQUE%20&%20ILLUSTRATOR%20DUAL-TIP%20COLOUR%20CHART.pdf",
+            "image": "shopify:\/\/shop_images\/Classique_Dual-Tip.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/CLASSIQUE%20&%20ILLUSTRATOR%20DUAL-TIP%20COLOUR%20CHART.pdf"
+          }
+        },
+        "93f9a931-8d50-452d-a5b7-c54ec2ccc795": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/TRIBLEND%203-IN-1%20COLOUR%20CHART.pdf",
+            "image": "shopify:\/\/shop_images\/Triblend_3-In-1.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/TRIBLEND%203-IN-1%20COLOUR%20CHART.pdf"
+          }
+        },
+        "2db1dd03-a098-40f1-ae27-a278e0ee6e2c": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/TRIBLEND%20BRUSH%203-IN-1%20COLOUR%20CHART.pdf",
+            "image": "shopify:\/\/shop_images\/Triblend_Brush_3-in-1.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/TRIBLEND%20BRUSH%203-IN-1%20COLOUR%20CHART.pdf"
+          }
+        },
+        "2d36667a-c1d1-45d4-ab16-75872e81b93e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/SPARKLE%20BRUSH-PEN%20COLOUR%20CHART.pdf",
+            "image": "shopify:\/\/shop_images\/Sparkle_Brush-Pen.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/SPARKLE%20BRUSH-PEN%20COLOUR%20CHART.pdf"
+          }
+        },
+        "b6c89c19-eca4-4a72-8759-2714460cedf9": {
+          "type": "download_block",
+          "settings": {
+            "file": "",
+            "image": "shopify:\/\/shop_images\/Acrylic_Paint_Marker.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/ACRYLIC%20PAINT%20MARKER%20COLOUR%20CHART.pdf"
+          }
+        },
+        "0311b34d-a0cf-4946-b920-a57f9d8bc766": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/METALLIC%20DUAL-TIP%20COLOUR%20CHART.pdf",
+            "image": "shopify:\/\/shop_images\/Metallic_Dual-Tip.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/METALLIC%20DUAL-TIP%20COLOUR%20CHART.pdf"
+          }
+        },
+        "35fb03e3-bd85-4e15-90e1-6948afed37cd": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/TRICOLOUR%20AQUA%203-IN-1%20COLOUR%20CHART.pdf",
+            "image": "shopify:\/\/shop_images\/Tricolour_Aqua_3-In-1.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/TRICOLOUR%20AQUA%203-IN-1%20COLOUR%20CHART.pdf"
+          }
+        },
+        "ef5b6160-2da0-43d1-9379-2e1f37f0bedb": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Adventures%20in%20Colour.pdf",
+            "image": "shopify:\/\/shop_images\/Adventures_In_Colour.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Adventures%20in%20Colour.pdf"
+          }
+        },
+        "aaafd3cb-1cf4-462e-bad0-90fb237f72b9": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/AQUA%20DUAL-TIP%20COLOUR%20CHART.pdf",
+            "image": "shopify:\/\/shop_images\/Aqua_Dual-Tip.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/AQUA%20DUAL-TIP%20COLOUR%20CHART.pdf"
+          }
+        },
+        "7606a8ff-d3d2-43f8-9db0-1d7b638af734": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Blended%20Mandalas.pdf",
+            "image": "shopify:\/\/shop_images\/Blended_Mandalas.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Blended%20Mandalas.pdf"
+          }
+        },
+        "0d2ee71b-37b1-456a-8c8a-b3139c1f4ad9": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Masterful%20Mandalas.pdf",
+            "image": "shopify:\/\/shop_images\/Masterful_Mandalas.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Masterful%20Mandalas.pdf"
+          }
+        },
+        "df1ccc19-1d4c-4dc2-9af2-c62f440678c4": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Art%20of%20Illustration.pdf",
+            "image": "shopify:\/\/shop_images\/Art_of_Illustration.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Art%20of%20Illustration.pdf"
+          }
+        },
+        "f65f0f42-4a69-4610-9ca8-e8b7f0e97e55": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Comic%20book%20heros.pdf",
+            "image": "shopify:\/\/shop_images\/Comic_Book_Heroes.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Comic%20book%20heros.pdf"
+          }
+        },
+        "e592e256-0aab-4d3c-81b6-5304e6fff727": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Manga%20&%20Comic.pdf",
+            "image": "shopify:\/\/shop_images\/Manga_Comic.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/Spectrum-Noir-Downloads\/Spectrum-Noir-Downloads\/Manga%20&%20Comic.pdf"
+          }
+        }
+      },
+      "block_order": [
+        "0e6c0571-fb72-4c78-9001-30e8e575e428",
+        "be49c650-910b-4451-ad2b-5a863446fd81",
+        "959ba763-5b74-45d1-9b0e-67ec5acc457b",
+        "b7152f4b-1cc6-4bf1-8a7d-bb4dc69cd5b5",
+        "169482d0-0078-4294-9078-135e26329167",
+        "2262fff5-5ce8-4d43-bc5d-2eb700245ecc",
+        "83ae1c2c-9389-4835-b7c2-43b920fefd78",
+        "ce7fde44-fca5-40bf-bd8f-f1581628d59e",
+        "4ae14cb6-2aa5-456e-84d7-2b588f92b7f5",
+        "f918bf47-8ece-43be-8f96-4e848d30d5d8",
+        "93f9a931-8d50-452d-a5b7-c54ec2ccc795",
+        "2db1dd03-a098-40f1-ae27-a278e0ee6e2c",
+        "2d36667a-c1d1-45d4-ab16-75872e81b93e",
+        "b6c89c19-eca4-4a72-8759-2714460cedf9",
+        "0311b34d-a0cf-4946-b920-a57f9d8bc766",
+        "35fb03e3-bd85-4e15-90e1-6948afed37cd",
+        "ef5b6160-2da0-43d1-9379-2e1f37f0bedb",
+        "aaafd3cb-1cf4-462e-bad0-90fb237f72b9",
+        "7606a8ff-d3d2-43f8-9db0-1d7b638af734",
+        "0d2ee71b-37b1-456a-8c8a-b3139c1f4ad9",
+        "df1ccc19-1d4c-4dc2-9af2-c62f440678c4",
+        "f65f0f42-4a69-4610-9ca8-e8b7f0e97e55",
+        "e592e256-0aab-4d3c-81b6-5304e6fff727"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "md"
+      }
+    }
+  },
+  "order": [
+    "120fdb19-2eee-4711-8d6f-fe4a1e50a770",
+    "main",
+    "604af699-e694-4ef5-9b71-a40cadd9c8cc"
+  ]
+}

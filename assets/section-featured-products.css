@@ -1,0 +1,17 @@
+.section-featured-products {
+  position: relative;
+}
+
+.section-featured-products--cart .subheading {
+  margin-bottom: 0.6rem;
+  font-weight: 400;
+  font-size: var(--font-size-s);
+}
+@media (min-width: 768px) {
+  .section-featured-products--cart .subheading {
+    font-size: var(--font-size-l);
+  }
+}
+.section-featured-products--cart .snippet-section-header {
+  align-items: start;
+}

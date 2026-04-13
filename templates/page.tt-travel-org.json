@@ -1,0 +1,198 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "ca3888df-450f-4911-9037-7bac55e5fcfe": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Travel Organizers",
+        "text": "<p>As traveling crafters ourselves, we know how important it is to be able to travel easily with your craft supplies. You'll find that a majority of our products are designed to work in your craft room and on the road too. Please visit our \"Hints and Tips!\" page to view travel organizers grouped by the type of products they will hold.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "a7938c9c-9d44-4a6d-bf36-c8f3ba33453e": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=dfEMDrlMyDc",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "3aface21-d132-43f5-92a1-1585948c8eff": {
+      "type": "image-text-slider",
+      "blocks": {
+        "6f6d941b-b048-49d1-8f3f-9b5aee32000d": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "EZ2Organize Buddy Bag Line ",
+            "text": "<p>The EZ2Organize Buddy Bag Line is great for packing up little things like glitter glue, stamps, washi tape, ink pads, adhesive runners, baker's twine, re-inkers...the list is almost endless.<\/p><p>There are currently 14 Buddy Bag Designs, so you're sure to find the perfect bag for your supplies.  Please visit our \"Hints and Tips\" page to look for organizers by type of product you want to organize for travel - glitter glues, ink pads, rulers, markers...etc.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/EZ2Organize-Buddy-Bags-Craft-Supply-Organizers-by-Totally-Tiffany.jpg"
+          }
+        },
+        "1aa23087-fc92-45d6-b877-ad0c6878aad1": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Portable tool storage",
+            "text": "<p>The Ditto bag is one of our most popular items because it is so easy to use at home and when you travel. This bag will help you organize everything from tape runners to embossing folders. There's even a secret pocket for your small paper trimmer.<\/p><p>The Ditto bag will open up across your workspace for easy access to your tools and supplies, but folds in half to carry to event or just to put it away on your shelf.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/SDTT45BLK-Ditto-Tool-Bag-loaded-6_908c6b01-9176-4b18-8cef-427013a9bb4a.jpg"
+          }
+        },
+        "5a597e89-52f4-417d-8f3e-a2a19add93e8": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "The perfect travel tote",
+            "text": "<p>Lois is a versatile travel tote designed with paper crafting supplies in mind. Available in all clear vinyl and in your favorite Totally-Tiffany colors too!<\/p><p>Lois can carry 12x12 Paper Handlers, Punch and Supply Packs, Rotating Design Boards and more than a dozen buddy bags.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/CLR_PNK_Pink_Lois_2.0_Loaded_with_12x12_Fab-File_XL31-ff-2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "6f6d941b-b048-49d1-8f3f-9b5aee32000d",
+        "1aa23087-fc92-45d6-b877-ad0c6878aad1",
+        "5a597e89-52f4-417d-8f3e-a2a19add93e8"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "1719817f-7618-4645-a2af-251c3e829692": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Lois and the Ditto - a well-organized team",
+        "text": "<p>Want to be able to carry your Ditto bag over your shoulder? Lois is your girl!  A fully loaded Ditto Bag will fit perfectly into our Lois Tote.<\/p><p>I live in the Pacific Northwest where rain is a common occurrence.  I use my Lois tote like a rain jacket for my Ditto bag.<\/p><p>Both the Ditto Tool Tote and the Lois Tote are part of the EZ2Organize product line.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "8b9415e3-c113-4a16-9243-3c6594e5dbe0": {
+      "type": "image-grid",
+      "blocks": {
+        "54096414-05e2-40d8-ae17-692880346bbc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SDTT_-649_CLRTOTE_2_Combo_Ditto_Tool_Bag_Lois_Tote-12.jpg"
+          }
+        },
+        "48f76408-811e-44ea-b8ba-c6f8a410fd74": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Lois-2.0-with-loaded-Ditto-tool-tote-Totally-Tiffany-CLRTOTE-SDTT.jpg"
+          }
+        },
+        "2b91bf14-6049-4000-8be0-463c66e361ea": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Lois-2.0-with-loaded-Ditto-tool-tote-Totally-Tiffany-CLRTOTE-SDTT-001.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "54096414-05e2-40d8-ae17-692880346bbc",
+        "48f76408-811e-44ea-b8ba-c6f8a410fd74",
+        "2b91bf14-6049-4000-8be0-463c66e361ea"
+      ],
+      "settings": {
+        "heading": "",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "3c28155d-7d1b-4cf7-9a15-acdeac5b0e04": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Travel with your cosmetics",
+        "text": "<p>Our 7 piece cosmetic travel set will simplify your travel experience.  The set includes a total of 7 pieces.  The 4 smaller bags are designed with the same lightweight inner tray as is used with our Buddy Bags.  Fold back the tops and your cosmetics are organized and accessible.  The 6 smaller pieces pack into the large carrying bag.  Learn more.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "4df5f790-8025-4cb6-a711-3122e644cef6": {
+      "type": "image-grid",
+      "blocks": {
+        "c1e3c246-5ca3-41b2-8328-5b02ba1d1091": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cosmetic-travel-organizer-set-loaded-for-travel-cse.jpg"
+          }
+        },
+        "15a8ace2-3f5f-4ea8-aa21-f338808a800e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cosmetic-travel-organizer-open-loaded-CSE.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "c1e3c246-5ca3-41b2-8328-5b02ba1d1091",
+        "15a8ace2-3f5f-4ea8-aa21-f338808a800e"
+      ],
+      "settings": {
+        "heading": "",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "ca3888df-450f-4911-9037-7bac55e5fcfe",
+    "a7938c9c-9d44-4a6d-bf36-c8f3ba33453e",
+    "3aface21-d132-43f5-92a1-1585948c8eff",
+    "1719817f-7618-4645-a2af-251c3e829692",
+    "8b9415e3-c113-4a16-9243-3c6594e5dbe0",
+    "3c28155d-7d1b-4cf7-9a15-acdeac5b0e04",
+    "4df5f790-8025-4cb6-a711-3122e644cef6"
+  ]
+}

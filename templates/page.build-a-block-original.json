@@ -1,0 +1,268 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "a4d8c22d-cf05-43f5-854e-e9d90925610b": {
+      "type": "crafters-tv-schedule",
+      "disabled": true,
+      "settings": {
+        "heading": "Schedule",
+        "title": "What's on this week",
+        "text": "<p>Don’t miss out on our live Crafter’s TV shows! All week, you’ll be able to view our programmes on this page or catch up on any of the action that you’ve missed!<\/p>"
+      }
+    },
+    "29149043-7b9b-44fd-b7c6-516ca246ee88": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "header_image": "shopify:\/\/shop_images\/BAB--500x500.jpg",
+        "main_heading": "Build-A Block TM",
+        "main_text": "",
+        "main_link_url": "",
+        "main_link_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "03c6f91b-3ad5-46a9-be33-08936ac6ec19": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/4ENsL3VcZJ0",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "95fd7dd5-6e0c-4ff0-b13e-91d7f2177108": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p><strong>Welcome to the wonderful world of the revolutionary Gemini Build-A-Block™ Patchwork System. Whether you’re new to quilting and patchwork or a seasoned pro, Build-A-Block™ dies make it easy to design, cut and create a whole variety of quilt block designs in a range of sizes! Our time-saving dies feature a 1.5mm-thick cutting blade capable of cutting multiple layers of fabric with accuracy so you can focus on the fun parts of your quilting and patchwork projects.<\/strong><\/p>",
+        "link_text": "Click here to purchase the Build-A-Block TM System",
+        "link_url": "shopify:\/\/products\/gemini-build-a-block-patchwork-system",
+        "left_align": false
+      }
+    },
+    "ba624c2c-ac43-4ea7-ba10-b3007da3e9d4": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Video Guides",
+        "small_text": "<p>Our video guides provide easy-to-follow walkthroughs, top tips and expert advice from Lizzy Curtis. Videos feature an introduction to the Build-A-Block™ Patchwork System, how to construct a quilt block and inspirational project ideas.<\/p>",
+        "link_text": "Click here to access the Video Guides",
+        "link_url": "https:\/\/www.crafterscompanion.co.uk\/page\/build-a-block-videos\/",
+        "left_align": false
+      }
+    },
+    "806d3da7-96f1-4f3d-94e3-a936676c22f3": {
+      "type": "media-slider",
+      "blocks": {
+        "0e32cfad-7929-42a5-b68a-3a3d88e7906b": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BAB_Original_Page_Video_Image_1.jpg"
+          }
+        },
+        "029a9ff7-12d4-4bde-bf70-5470936f9c69": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BAB_Original_Page_Video_Image_2.jpg"
+          }
+        },
+        "5c068510-b920-4439-bf83-7d8a1df0bc5f": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BAB_Original_Page_Video_Image_3.jpg"
+          }
+        },
+        "ea8a73c5-5ee4-40d7-aac3-59164279fa24": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BAB_Original_Page_Video_Image_4.jpg"
+          }
+        },
+        "84265ec4-b0f7-4d77-a6ad-04f4074f8107": {
+          "type": "media_slide",
+          "disabled": true,
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "0e32cfad-7929-42a5-b68a-3a3d88e7906b",
+        "029a9ff7-12d4-4bde-bf70-5470936f9c69",
+        "5c068510-b920-4439-bf83-7d8a1df0bc5f",
+        "ea8a73c5-5ee4-40d7-aac3-59164279fa24",
+        "84265ec4-b0f7-4d77-a6ad-04f4074f8107"
+      ],
+      "settings": {
+        "large": false
+      }
+    },
+    "af4b1e2f-ee71-4191-bdcd-a5cdc56c71ec": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Block Patterns",
+        "small_text": "<p>In addition to the 20 block patterns you receive with your Build-A-Block Patchwork System, you’ll find a bonus 60 block patterns here to use with dies. Each quilt block pattern includes instruction to tell you exactly what you need to cut and how to put each block together. The hardest part is picking which block to try first!<\/p>",
+        "link_text": "Click here to access Block Patterns",
+        "link_url": "https:\/\/www.crafterscompanion.co.uk\/page\/build-a-block-blockpatterns\/",
+        "left_align": false
+      }
+    },
+    "88b0bc72-41ea-4d35-931c-6ca5ca50afbb": {
+      "type": "media-slider",
+      "blocks": {
+        "4051fc60-8734-4283-ab52-fdb6a8fdde53": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BAB-_Block_Patterns_Image_1.jpg"
+          }
+        },
+        "2ca3fd52-e56a-4347-b78a-680bd3b76494": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BAB-_Block_Patterns_Image_2.jpg"
+          }
+        },
+        "fdde1622-e843-4a91-9595-45c88c5f64e5": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BAB-_Block_Patterns_Image_3.jpg"
+          }
+        },
+        "558c7241-d522-4f88-8dc9-7d19ba51532c": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BAB-_Block_Patterns_Image_4.jpg"
+          }
+        },
+        "8a0b28e1-4b90-4cb1-bd41-20a328832937": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BAB-_Block_Patterns_Image_5.jpg"
+          }
+        },
+        "bbc7faec-ee01-4bc2-8504-577f5fe73463": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BAB-_Block_Patterns_Image_6.jpg"
+          }
+        },
+        "d051dc79-0d5d-4182-af52-0c88f2506aff": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BAB-_Block_Patterns_Image_7.jpg"
+          }
+        },
+        "fb5a8b53-e65e-4ec0-a2f5-2ddf0b9624fd": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BAB-_Block_Patterns_Image_8.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "4051fc60-8734-4283-ab52-fdb6a8fdde53",
+        "2ca3fd52-e56a-4347-b78a-680bd3b76494",
+        "fdde1622-e843-4a91-9595-45c88c5f64e5",
+        "558c7241-d522-4f88-8dc9-7d19ba51532c",
+        "8a0b28e1-4b90-4cb1-bd41-20a328832937",
+        "bbc7faec-ee01-4bc2-8504-577f5fe73463",
+        "d051dc79-0d5d-4182-af52-0c88f2506aff",
+        "fb5a8b53-e65e-4ec0-a2f5-2ddf0b9624fd"
+      ],
+      "settings": {
+        "large": false
+      }
+    },
+    "2a6981b2-c943-4f33-aacb-93f955226657": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Projects",
+        "small_text": "<p>If you’re looking for project inspiration, then click here to see a whole range of stunning quilts and patchwork projects created using the Build-A-Block™ Patchwork System. From coasters, to cot quilts and cushions, take inspiration from these fabulous ideas and use your Build-A-Block™ dies to put your own creative spin on the ideas featured.<\/p>",
+        "link_text": "Click here to access Projects",
+        "link_url": "https:\/\/www.crafterscompanion.co.uk\/page\/build-a-block-projects\/",
+        "left_align": false
+      }
+    },
+    "dd384a2d-3125-4e5b-92d5-2baac21a9006": {
+      "type": "media-slider",
+      "blocks": {
+        "beddcb3c-e090-4f17-9f21-b49ffa9f9109": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_5-400x400.jpg"
+          }
+        },
+        "d53d28a4-2329-425b-ab02-9cf532a3803f": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_8.jpg"
+          }
+        },
+        "359b5318-2747-4f24-ba82-69e4149a2a63": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_9.jpg"
+          }
+        },
+        "764416b9-96fe-4f95-9816-e361eb5adaba": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_7.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "beddcb3c-e090-4f17-9f21-b49ffa9f9109",
+        "d53d28a4-2329-425b-ab02-9cf532a3803f",
+        "359b5318-2747-4f24-ba82-69e4149a2a63",
+        "764416b9-96fe-4f95-9816-e361eb5adaba"
+      ],
+      "settings": {
+        "large": false
+      }
+    },
+    "67bdb38d-41b4-4bd0-ab61-236f84d7a327": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Click here to return to the main Build-A-Block TM page",
+        "link_url": "shopify:\/\/pages\/build-a-block-tm-system",
+        "left_align": false
+      }
+    }
+  },
+  "order": [
+    "a4d8c22d-cf05-43f5-854e-e9d90925610b",
+    "29149043-7b9b-44fd-b7c6-516ca246ee88",
+    "03c6f91b-3ad5-46a9-be33-08936ac6ec19",
+    "95fd7dd5-6e0c-4ff0-b13e-91d7f2177108",
+    "ba624c2c-ac43-4ea7-ba10-b3007da3e9d4",
+    "806d3da7-96f1-4f3d-94e3-a936676c22f3",
+    "af4b1e2f-ee71-4191-bdcd-a5cdc56c71ec",
+    "88b0bc72-41ea-4d35-931c-6ca5ca50afbb",
+    "2a6981b2-c943-4f33-aacb-93f955226657",
+    "dd384a2d-3125-4e5b-92d5-2baac21a9006",
+    "67bdb38d-41b4-4bd0-ab61-236f84d7a327"
+  ]
+}

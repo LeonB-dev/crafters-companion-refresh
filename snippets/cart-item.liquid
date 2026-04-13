@@ -1,0 +1,109 @@
+<li
+  class="cart-item {{ _quick-cart-class }} aiod-cart-item"
+  {% if _quick-cart-class == 'quick-cart-item' %}
+    data-quick-cart-item
+  {% elsif _quick-cart-class == 'quick-cart-focus-item' %}
+    data-quick-cart-focus-item
+  {% endif %}
+  data-item-id="{{ item.id }}"
+  data-csapp_line_index
+>
+  <a href="{{ item.url | within: collections.all }}" class="image" aria-labelledby="{{ item.product.title | handleize }}">
+    {%- if item.product.images.size > 0 -%}
+      {%- assign item_image = item.variant.featured_image | default: item.product.featured_image -%}
+      {{ item_image | image_url: width: 152 | image_tag }}
+    {%- else -%}
+      {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+    {%- endif -%}
+  </a>
+  <a
+    href="{{ item.url }}"
+    class="title"
+    title="{{ item.product.title }}"
+    id="{{- item.product.title | handleize -}}"
+  >
+    <button
+      data-with-epi="true"
+      class="cart-item__wishlist wishlist-add product_{{ item.product.id }}"
+      data-swaction="addToWishlist"
+      data-product-id="{{ item.product.id }}"
+      data-variant-id="{{ item.variant.id }}"
+      data-product-url="{{ shop.url }}{{ item.product.url }}"
+      aria-label="Add to wishlist"
+    >
+      {% render 'stmt-icon-wishlist' %}
+    </button>
+    {{- item.product.title -}}
+
+    {% if item.product.metafields.custom.experience_level.value.title != blank %}
+      <div class="cart-item__experience-level">
+        {{ item.product.metafields.custom.experience_level.value.title }}
+      </div>
+    {% endif %}
+  </a>
+
+  <div class="price">
+    <div data-csapp_line_price data-csapp_discount_summery>
+      <span class="aiod-unit-price" hidden>{{ item.original_price | money }}</span>
+      <span class="aoid-summary-discount" hidden></span>
+      <span class="aoid-volume-summary" hidden></span>
+      <span class="aiod-line-subtotal {% if item.variant.compare_at_price > 0 %}price-sale{% endif %}">{{ item.original_line_price | money }}</span>
+      {% if item.variant.compare_at_price > 0 %}
+        <span>
+          <s>{{ item.variant.compare_at_price | times: item.quantity | money }}</s>
+        </span>
+      {% endif %}
+    </div>
+    {%- if item.quantity > 1 -%}
+      <small class="u-text-sm">({{ item.original_price | money }} each)</small>
+    {%- endif -%}
+  </div>
+  <div class="actions">
+    <div class="qty">
+      <div class="c-qty" data-product-qty>
+        <label class="sr-only" for="updates_{{ item.key }}">{{ 'template.cart.label.quantity' | t }}</label>
+        <button
+          class="btn minus"
+          type="button"
+          data-product-qty-minus
+        >
+          <span class="sr-only">{{ 'Minus' }}</span>
+          {% render 'stmt-icon-minus', class: 'cart-item__minus-icon' %}
+        </button>
+        <input
+          type="number"
+          id="updates_{{ item.key }}"
+          name="updates[]"
+          value="{{ item.quantity }}"
+          min="1"
+          step="1"
+          aria-label="Item quantity"
+          required
+          data-product-qty-input
+        >
+        <button
+          class="btn plus"
+          type="button"
+          data-product-qty-plus
+        >
+          <span class="sr-only">{{ 'Plus' }}</span>
+          {% render 'stmt-icon-plus', class: 'cart-item__plus-icon' %}
+        </button>
+      </div>
+    </div>
+    <a
+      href="/cart/change?line={{ _forloop_index }}&amp;quantity=0"
+      class="remove"
+      title="Remove {{ item.product.title }}"
+      {% if _quick-cart-class == 'quick-cart-item' or _quick-cart-class == 'quick-cart-focus-item' %}
+        data-quick-cart-remove
+      {% endif %}
+      {% if _quick-cart-class == 'quick-cart-focus-item' %}
+        data-remove-close="true"
+      {% endif %}
+    >
+      {% render 'stmt-icon-bin', class: 'cart-item__remove-icon' %}
+      <span class="sr-only">{{- 'template.cart.remove' | t -}}</span>
+    </a>
+  </div>
+</li>

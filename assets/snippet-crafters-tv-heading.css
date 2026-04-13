@@ -1,0 +1,18 @@
+.snippet-crafters-tv-heading {
+  text-align: center;
+  max-width: 38rem;
+  margin: 0 auto 3rem;
+}
+.snippet-crafters-tv-heading .heading {
+  margin-bottom: 1rem;
+}
+.snippet-crafters-tv-heading .u-text-xl {
+  font-weight: 600;
+}
+.snippet-crafters-tv-heading p {
+  margin-left: auto;
+  margin-right: auto;
+}
+.snippet-crafters-tv-heading p:not(.heading) .snippet-crafters-tv-heading p:last-of-type {
+  margin-bottom: 0;
+}

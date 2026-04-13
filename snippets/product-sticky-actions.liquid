@@ -1,0 +1,72 @@
+{% liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign product_price = current_variant.price
+  assign product_compare_at_price = current_variant.compare_at_price
+  assign product_price_saving = product_price | minus: product_compare_at_price
+%}
+
+<div class="sticky-actions {{ has_flexible }}" data-sticky-actions>
+  <div class="image">
+    {{ product.featured_media | image_url: width: 120 | image_tag: class: 'sticky-actions-image' }}
+  </div>
+
+  <div class="details">
+    <h2 class="title">{{ product.title }}</h2>
+    <div class="pricing">
+      <span class="current" data-product-price>{{ product_price | money }}</span>
+      {% if product_compare_at_price != blank %}
+        <span class="was u-text-md">{{ product_compare_at_price | money }}</span>
+      {% endif %}
+
+      {% if product_compare_at_price > 0 %}
+        <span class="product-form-new__pricing-tag c-ribbon red">
+          <span class="product-form-new__pricing-tag-inner">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13">
+              <path d="M12.5 5.1 12 .8c0-.2-.2-.4-.4-.5L7.3 0C7.2 0 7 0 7 .2L.2 6.9c-.2.2-.3.6 0 .8l4.6 4.6c.2.2.6.2.8 0l6.7-6.7.2-.5ZM9.5 3a.8.8 0 0 1 .1-1.1c.3-.4.8-.4 1.1 0 .3.2.3.8 0 1-.3.4-.8.4-1.1 0Z"/>
+            </svg>
+            {{ 'products.product.save' | t }}
+            {{ product_price_saving | money | remove: '-' }}
+          </span>
+        </span>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="quantity">
+    {% render 'product-quantity', section: section, isDupe: true %}
+  </div>
+
+  <div class="button">
+    {% comment %}
+      Determine button text and state
+    {% endcomment %}
+    {% assign button_text = '' %}
+    {% assign button_disabled = false %}
+
+    {% if product.tags contains 'offer_Coming Soon' %}
+      {% assign button_text = 'Coming Soon' %}
+      {% assign button_disabled = true %}
+      {% elsif product.tags contains 'offer_Back in Stock Soon' %}
+  {% assign button_text = 'Back in Stock Soon' %}
+  {% assign button_disabled = true %}
+    {% elsif current_variant.available == false %}
+      {% assign button_text = 'products.product.sold_out' | t %}
+      {% assign button_disabled = true %}
+    {% else %}
+      {% assign button_text = 'products.product.add_to_cart' | t %}
+      {% assign button_disabled = false %}
+    {% endif %}
+
+    <button
+      class="c-btn main has-icon add-to-basket product-form-new__submit {% if button_disabled == false %}primary{% else %}quinary{% endif %}"
+      {% if button_disabled %}disabled{% else %}type="submit"{% endif %}
+      data-basket-add-dupe
+    >
+      {%- render 'icon', _name: 'icon-basket' -%}
+      <span data-product-submit-button-text>{{ button_text }}</span>
+
+      <div class="mobile-price">|</div>
+      <span class="mobile-price">{{ product_price | money }}</span>
+    </button>
+  </div>
+</div>

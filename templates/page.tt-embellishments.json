@@ -1,0 +1,226 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "878d7ab6-99b9-4acc-a73e-c0728253ec3a": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Embellishments",
+        "text": "<p>Embellishments come in all shapes and sizes, and so do organization products for them.  Our first suggestion, organize your embellishments in the 4 section system, then choose the organizer that is right for you!<\/p><p>Storage pages with pockets are a great way to keep your embellishments visible and accessible. Consider using the following storage pages, and then storing them on a ScrapRack base or in a Spinder Binder.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "7c8cdfb5-ae78-45dd-8691-5bd158e6c6cd": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Organize-embellishments-for-scrapbooking-ScrapRack-Embellishment-pocket-page-P50-1.jpg",
+        "main_heading": "Embellishment Storage page",
+        "main_text": "<p>24 pockets per page.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "Shop all Storage Pages",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "4d215c55-a46b-48fd-baa3-e55b19fc1283": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Red-items-loaded-in-P44-Traders-Twelve-page-3-items-per-pocket.jpg",
+        "main_heading": "12 Pocket storage page",
+        "main_text": "<p>3\" x 4\" pockets.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "Shop all Storage Pages",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "8b620e8e-fc09-4244-b279-f99bf89e098c": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Organize-6x6-scrapbooking-embellishments-with-ScrapRack-4-pocket-page-P42-5.jpg",
+        "main_heading": "4 Square pocket storage page",
+        "main_text": "<p>6\"x 6\".<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "Shop all Storage Pages",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "8dca6cb4-2ab3-4e47-9518-272ef0a760aa": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Organize-and-store-scrapbooking-borders-stickers-ScrapRack-pocket-pages-P59-3.jpg",
+        "main_heading": "4 pocket page",
+        "main_text": "<p>3\" x 12\"<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "Shop all Storage Pages",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "46f5ef13-8e9f-4e60-b8c0-bd635967b47c": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/B11-ScrapRack-Wings-7-Spinders-Totally-Tiffany-Organizer.jpg",
+        "main_heading": "ScrapRack",
+        "main_text": "<p>7 three-ring sections, holds up to 210 pages.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "Shop All ScrapRack products",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "2f255f17-1ad0-41ce-973a-063de853ca2d": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/A24-502-Purple-Craft-Binder-closed-ScrapRack.-totally-Tiffany.jpg",
+        "main_heading": "Craft Binder",
+        "main_text": "<p>12x12<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "656aa4c2-1138-42ac-a2c7-2e2f5fae678e": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SDRBDR-Spinder-Binder-12x12-Craft-Supply-Storage-Binder-ScrapRack-Totally-Tiffany.jpg",
+        "main_heading": "12x12 Binder",
+        "main_text": "<p>1 three-ring section included, holds up to 30 pages.<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    }
+  },
+  "order": [
+    "878d7ab6-99b9-4acc-a73e-c0728253ec3a",
+    "7c8cdfb5-ae78-45dd-8691-5bd158e6c6cd",
+    "4d215c55-a46b-48fd-baa3-e55b19fc1283",
+    "8b620e8e-fc09-4244-b279-f99bf89e098c",
+    "8dca6cb4-2ab3-4e47-9518-272ef0a760aa",
+    "46f5ef13-8e9f-4e60-b8c0-bd635967b47c",
+    "2f255f17-1ad0-41ce-973a-063de853ca2d",
+    "656aa4c2-1138-42ac-a2c7-2e2f5fae678e"
+  ]
+}

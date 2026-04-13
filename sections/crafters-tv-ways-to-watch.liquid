@@ -1,0 +1,76 @@
+{%- liquid
+  assign template_name = 'section-crafters-tv-ways-to-watch'
+%}
+
+{{- 'section-crafters-tv-ways-to-watch.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-lg overflow-hidden" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="wrapper">
+    {%- render 'paper-edge', _edge_version: 'edge-03', _bottom_edge_colour: 'white' -%}
+    <div class="container">
+      {%- render 'crafters-tv-heading', _heading: section.settings.title, _title: section.settings.heading, _text: section.settings.text, _text_class: '' -%}
+      <ul class="crafters-tv-features">
+        {% for block in section.blocks %}
+          <li class="feature-item">
+            {{- block.settings.icon | image_url: width: 64 | image_tag: alt: block.settings.icon.alt, loading: 'lazy' -}}
+            <p class="u-text-xl">{{ block.settings.heading }}</p>
+            {{ block.settings.text }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CTV Ways To Watch",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "promotion",
+      "name": "CTV Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon Image",
+          "info": "SVG is recommended for site performance. Alternatively, upload a PNG with transparent background."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,232 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "header": {
+      "type": "brand-landing-header",
+      "settings": {
+        "edge_version": "none"
+      }
+    },
+    "42233aa3-11a8-447d-a330-730d88671d29": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Let’s make it together",
+        "small_text": "<p>From perfectly portable, manual options to state-of-the-art, electronic machines - there’s a Gemini for every type of craft and every type of crafter. From scrapbooking and home decor to handmade cards, quilting and everything in between, you can make more with Gemini.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1": {
+      "type": "image-feature",
+      "settings": {
+        "heading": "Innovation to make more with the Gemini II",
+        "text": "<p>Set your creative sights higher and aim for the stars with the Gemini II. Our newest electronic cutting machine has all of the power, precision and performance of the original Gemini, but with updated functions and unique innovations. So you can cut, emboss and create with unmatched precision and intricacy.<\/p>",
+        "link_text": "Shop the Gemini II",
+        "link_url": "shopify:\/\/collections\/gemini",
+        "content_placement": "left"
+      }
+    },
+    "203f6aae-f593-4a56-85e3-40775f9b0cce": {
+      "type": "image-text-slider",
+      "blocks": {
+        "be9e79df-d8d9-4e9e-8fdb-dc81d6deb95a": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Lorem ipsum",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan dolor ut ipsum suscipit, nec tempus eros rhoncus.<\/p>",
+            "link_text": "Shop now",
+            "link_url": "shopify:\/\/collections\/art-colouring"
+          }
+        },
+        "cb029cf1-90e3-4e49-bf57-33957aa1f970": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Lorem ipsum",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan dolor ut ipsum suscipit, nec tempus eros rhoncus.<\/p>",
+            "link_text": "Shop now",
+            "link_url": "shopify:\/\/collections\/art-pens-markers"
+          }
+        },
+        "32389e99-7e97-4f35-9965-7c7ced8ace0a": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Lorem ipsum",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan dolor ut ipsum suscipit, nec tempus eros rhoncus.<\/p>",
+            "link_text": "Shop now",
+            "link_url": "shopify:\/\/collections\/drawing-colouring-pencils"
+          }
+        }
+      },
+      "block_order": [
+        "be9e79df-d8d9-4e9e-8fdb-dc81d6deb95a",
+        "cb029cf1-90e3-4e49-bf57-33957aa1f970",
+        "32389e99-7e97-4f35-9965-7c7ced8ace0a"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "main",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "black-squeeze",
+        "margin_bottom": "lg"
+      }
+    },
+    "7f1b80ab-4512-4161-aac0-311449435749": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan dolor ut ipsum suscipit, nec tempus eros rhoncus.",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "lg",
+        "margin_top": "sm"
+      }
+    },
+    "c269af08-934d-48bf-85af-3051de7334e6": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_heading": "Full range available now!",
+        "main_text": "<p>Nullam non tempus elit. Proin et enim non velit pellentesque facilisis sed at nibh. Sed tortor nibh, tincidunt tempus placerat sed, efficitur eu risus. Etiam sagittis nisi at erat lacinia tincidunt. Suspendisse eleifend nulla diam, ut feugiat erat cursus quis. Quisque elementum est in libero mattis, sodales tempor diam varius.<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": false,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "ca91daa6-d825-4676-a697-4a34f94e6286": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_heading": "Marker magic with Jazza",
+        "main_text": "<p><strong>It's easier than you think!<\/strong><\/p><p>Nullam non tempus elit. Proin et enim non velit pellentesque facilisis sed at nibh. Sed tortor nibh, tincidunt tempus placerat sed, efficitur eu risus. Etiam sagittis nisi at erat lacinia tincidunt. Suspendisse eleifend nulla diam, ut feugiat erat cursus quis. Quisque elementum est in libero mattis, sodales tempor diam varius.<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": false,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "af145e73-6fad-4088-b457-7bee8a284b14": {
+      "type": "featured-products",
+      "blocks": {
+        "2fa6601e-5b19-44f8-8661-aa5d113a067e": {
+          "type": "collection",
+          "settings": {
+            "collection": "spectrum-noir"
+          }
+        }
+      },
+      "block_order": [
+        "2fa6601e-5b19-44f8-8661-aa5d113a067e"
+      ],
+      "settings": {
+        "heading": "Top selling products",
+        "heading_alignment": false,
+        "link_url": "",
+        "link_text": "",
+        "grid_size": "lg",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "10866631-1751-4ff8-9048-89ee6e00a8fa": {
+      "type": "featured-articles",
+      "blocks": {
+        "6bd1603f-c5ef-4188-b85f-3d291d520f5a": {
+          "type": "article",
+          "settings": {
+            "article": "inspiration\/the-beginners-guide-to-patchwork"
+          }
+        },
+        "ce23bef2-b33f-48c2-98ee-4c56eed749ea": {
+          "type": "article",
+          "settings": {
+            "article": "inspiration\/the-beginners-guide-to-spectrum-noir-markers"
+          }
+        },
+        "13cb3615-3455-41ef-839f-33c271c4919b": {
+          "type": "article",
+          "settings": {
+            "article": "inspiration\/how-to-craft-an-embossed-gift-box"
+          }
+        }
+      },
+      "block_order": [
+        "6bd1603f-c5ef-4188-b85f-3d291d520f5a",
+        "ce23bef2-b33f-48c2-98ee-4c56eed749ea",
+        "13cb3615-3455-41ef-839f-33c271c4919b"
+      ],
+      "settings": {
+        "heading": "Related articles for you",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan dolor ut ipsum suscipit, nec tempus eros rhoncus.<\/p>",
+        "link_url": "shopify:\/\/blogs\/inspiration",
+        "link_text": "Read more",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "42233aa3-11a8-447d-a330-730d88671d29",
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1",
+    "203f6aae-f593-4a56-85e3-40775f9b0cce",
+    "7f1b80ab-4512-4161-aac0-311449435749",
+    "c269af08-934d-48bf-85af-3051de7334e6",
+    "ca91daa6-d825-4676-a697-4a34f94e6286",
+    "af145e73-6fad-4088-b457-7bee8a284b14",
+    "10866631-1751-4ff8-9048-89ee6e00a8fa"
+  ]
+}

@@ -1,0 +1,2 @@
+{%- comment -%} Replacing unicode version of apostrophe that has been HTML escaped, so it can be correctly url encoded {%- endcomment -%}
+{%- echo string | replace: '&#39;', "'" -%}

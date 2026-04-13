@@ -1,0 +1,58 @@
+{%- liquid
+  assign template_name = 'section-shop-the-day-header'
+
+  assign heading = ''
+  assign title = collection.title | split: '-' | first
+  assign heading = collection.title | remove: title | remove: '- '
+  assign description = collection.description
+
+  assign date_replace = heading | replace: '-', '/'
+  assign date = date_replace | date: '%e %B, %Y'
+
+  assign article_url = collection.metafields.custom.linked_ctv_article_url.value
+  assign shop_the_date = collection.metafields.custom.linked_ctv_collection.value
+  assign url_parts = article_url | split: '/' | reverse
+  assign article_handle = url_parts[0]
+  assign blog_handle = url_parts[1]
+  assign article_handle_template = 'blog_category/article_handle'
+  assign article_handle = article_handle_template | replace: 'blog_category', blog_handle | replace: 'article_handle', article_handle
+  assign article = articles[article_handle]
+%}
+{{- 'section-shop-the-day-header.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-lg overflow-hidden" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="wrapper">
+    {%- render 'paper-edge', _edge_version: 'edge-03', _bottom_edge_colour: 'white' -%}
+    <div class="container">
+      {%- render 'crafters-tv-heading', _title: title, _heading: date, _text: description, _text_class: '' -%}
+      {%- if shop_the_date != blank or article_url != blank -%}
+        <div class="actions">
+          {%- if shop_the_date != blank -%}
+            <a href="{{ shop_the_date.url }}" class="c-btn main quinary" data-page-handle="{{ article.handle }}">
+              {{- 'ctv.shop_the_day' | t -}}
+            </a>
+          {%- endif -%}
+          {%- if article_url != blank -%}
+            <a href="{{ article_url }}" class="c-btn main tertiary" data-page-handle="{{ article.handle }}">
+              {{- 'ctv.watch' | t -}}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Shop the Day",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

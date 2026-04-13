@@ -1,0 +1,27 @@
+{% capture link %}
+  {% if card.link != blank %}
+    <a href="{{ card.link }}">
+  {% endif %} 
+{% endcapture %}
+
+{% capture link_close %}
+  {% if card.link != blank %}
+    </a>
+  {% endif %} 
+{% endcapture %}
+
+<div class="quick-collection-links__card">
+  {{ link }}
+    <div class="quick-collection-links__card-media">
+      {% if card.image %}
+        {{ card.image | image_url: width: 320 | image_tag }}
+      {% endif %}
+      {% if card.label != blank %}
+        <div>
+          <div class="quick-collection-links__card-label">{{ card.label }}</div>
+        </div>
+      {% endif %}
+    </div>
+    <div class="quick-collection-links__card-title">{{ card.title }}</div>
+  {{ link_close }}
+</div>

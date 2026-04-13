@@ -1,0 +1,19 @@
+{%- liquid
+  if collection and current_tags.size == 1
+    assign current_tag = current_tags[0] | handleize
+    assign seo_overrides = collection.metafields.filter.seo_overrides | where: 'match_tag', current_tag | first
+  endif
+  if seo_overrides != blank
+    comment
+      we have an seo override for content
+    endcomment
+    if seo_overrides.description != blank
+      assign seo_override_description = seo_overrides.description
+    endif
+  endif
+-%}
+<meta name="description" content="{{ seo_override_description | default: page_description | escape }}">
+
+{%- if collection and collection.products.size == 0 and current_tags.size > 0 -%}
+  <meta name="robots" content="noindex, nofollow">
+{%- endif -%}

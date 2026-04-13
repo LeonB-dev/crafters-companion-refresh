@@ -1,0 +1,16 @@
+{{ 'section-stmt-collection.css' | asset_url | stylesheet_tag }}
+
+{% render 'stmt-collection' %}
+
+<script src="{{ 'section-stmt-collection.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Collection Section",
+  "presets": [
+    {
+      "name": "Collection Section"
+    }
+  ]
+}
+{% endschema %}

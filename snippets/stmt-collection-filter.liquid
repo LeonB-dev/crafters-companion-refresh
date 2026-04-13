@@ -1,0 +1,165 @@
+{% liquid
+  assign show_filter = true
+  assign expand_dropdown = false
+  assign lowercase_filter_label = filter.label | downcase | handleize
+  assign price_filter_applied = false
+  assign price_value_attribute = 'placeholder'
+
+  for disallowed_filter in disallowed_filter_categories_array
+    if disallowed_filter contains lowercase_filter_label
+      assign show_filter = false
+      break
+    endif
+  endfor
+
+  assign lowercase_tags_filter_name = settings.tags_filter_name | downcase | handleize
+  assign offers_tags = null
+
+  if lowercase_filter_label == lowercase_tags_filter_name
+    assign offers_tags = false
+
+    for value in filter.values
+      if value.label contains settings.tags_filter_prefix
+        assign offers_tags = true
+        break
+      endif
+    endfor
+  endif
+
+  if offers_tags != null and offers_tags == false
+    assign show_filter = false
+  endif
+
+  for value in filter.values
+    if value.active
+      assign expand_dropdown = true
+      break
+    endif
+  endfor
+  
+  if filter.type == 'price_range'
+    if filter.min_value.value != null or filter.max_value.value != null
+      assign expand_dropdown = true
+      assign price_filter_applied = true
+      assign price_value_attribute = 'value'
+    endif
+  endif
+%}
+
+{% if show_filter %}
+  {% capture filter_options %}
+    <div class="collection__filter-options">
+      {%- case filter.type -%}
+      {%- when 'boolean', 'list' -%}
+
+        {%- for value in filter.values -%}
+          {% liquid 
+            if lowercase_filter_label == lowercase_tags_filter_name
+              unless value.label contains settings.tags_filter_prefix
+                continue
+              endunless
+            endif
+          %}
+          
+          <label class="collection__filter-input-label {% if value.count == 0 and value.active == false %}collection__filter-input-label--disabled{% endif %} {% if value.active == true %}collection__filter-input-label--active js-collection-active-filter{% endif %}" {% if value.active == true %}data-url="{{ value.url_to_remove }}"{% endif %}>
+            <input
+              type="checkbox"
+              class="collection__filter-input js-collection-filter-input"
+              name="{{ value.param_name }}"
+              value="{{ value.value }}"
+              id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
+              {% if value.count == 0 and value.active == false %}
+                disabled
+              {% endif %}
+              {% if value.active == true %}checked readonly{% endif %}
+              data-url="{{ url_value }}"
+            >
+            
+            <div class="collection__filter-input-icon-container">
+              {% render 'stmt-icon-check', class: 'collection__filter-input-icon' %}
+            </div>
+            {{ value.label | split: '_' | last }}
+          </label>
+          
+        {%- endfor -%}
+      {%- when 'price_range' -%}
+        <div class="collection__price-range">
+          <label class="collection__price-range-item">
+            <div class="collection__price-range-label">
+              {{ 'template.collection-section.from' | t }}
+            </div>
+            <div class="collection__price-range-input-container">
+              <span class="collection__price-range-currency">{{ cart.currency.symbol }}</span>
+              <input
+                name="{{ filter.min_value.param_name }}"
+                id="Filter-{{ filter.min_value.param_name }}"
+                class="collection__price-range-input js-collection-price-range-input"
+                {% if filter.min_value.value -%}
+                  {{ price_value_attribute }}="{{ filter.min_value.value | money_without_currency | replace: ',', '.' | ceil }}"
+                {% else %}
+                  {{ price_value_attribute }}="0"
+                {%- endif %}
+                type="number"
+                step="1"
+                min="0"
+                max="{{ filter.range_max | money_without_currency | replace: ',', '.' | ceil }}"
+              >
+            </div>
+          </label>
+
+          <label class="collection__price-range-item">
+            <div class="collection__price-range-label">
+              {{ 'template.collection-section.to' | t }}
+            </div>
+            <div class="collection__price-range-input-container">
+              <span class="collection__price-range-currency">{{ cart.currency.symbol }}</span>
+              <input
+                name="{{ filter.max_value.param_name }}"
+                id="Filter-{{ filter.max_value.param_name }}"
+                class="collection__price-range-input js-collection-price-range-input"
+                {% if filter.max_value.value -%}
+                  {{ price_value_attribute }}="{{ filter.max_value.value | money_without_currency | replace: ',', '.' | ceil }}"
+                {% else %}
+                  {{ price_value_attribute }}="{{ filter.range_max | money_without_currency | replace: ',', '.' | ceil }}"
+                {%- endif %}
+                type="number"
+                min="0"
+                step="1"
+                max="{{ filter.range_max | money_without_currency | replace: ',', '.' | ceil }}"
+              >
+            </div>
+          </label>
+        </div>
+        <button type="button" class="collection__price-range-apply js-collection-price-range-apply">
+          {{ 'template.collection-section.apply_filter' | t }}
+        </button>
+      {%- endcase -%}
+    </div>
+  {% endcapture %}
+
+  {% if sidebar %}
+    <collapsible-content class="collection__sidebar-filter">
+      <button
+        type="button"
+        class="collection__sidebar-filter-header"
+        aria-expanded="{% if expand_dropdown %}true{% else %}false{% endif %}"
+      >
+        <span>{{ filter.label }}</span>
+        {% render 'stmt-icon-angle-down', class: 'collection__filter-icon' %}
+      </button>
+      <div class="collapsible__content collection__sidebar-filter-content" aria-hidden="{% if expand_dropdown %}false{% else %}true{% endif %}">
+        {{ filter_options }}        
+      </div>
+    </collapsible-content>
+  {% else %}
+    <div class="collection__filter">
+      <div class="collection__filter-header">
+        <div class="collection__filter-title">{{ filter.label }}</div>
+        {% render 'stmt-icon-angle-down', class: 'collection__filter-header-icon' %}
+      </div>
+      <div class="collection__filter-list">
+        {{ filter_options }}
+      </div>
+    </div>
+  {% endif %}
+{% endif %}

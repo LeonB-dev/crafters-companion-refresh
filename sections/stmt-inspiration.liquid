@@ -1,0 +1,333 @@
+{{ 'section-stmt-inspiration.css' | asset_url | stylesheet_tag }}
+
+
+{% style %}
+  .inspiration-{{ section.id }} {
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  {% for block in section.blocks %}
+    .inspiration__banner--{{ block.id }},
+    .inspiration__article--{{ block.id }} .inspiration__article-footer-type {
+      color: {{ block.settings.primary_color }};
+    }
+
+    .inspiration__tabs-control--{{ block.id }} {
+      border-color: {{ block.settings.primary_color }};
+    }
+
+    .inspiration__tabs-control--{{ block.id }}.active,
+    .inspiration__tab--{{ block.id }} .inspiration__featured-collection-cta {
+      background-color: {{ block.settings.primary_color }};
+    }
+
+    .inspiration__banner--{{ block.id }},
+    .inspiration__article--{{ block.id }} {
+      background-color: {{ block.settings.secondary_color }};
+    }
+  {% endfor %}
+{% endstyle %}
+
+<stmt-inspiration id="{{ section.id }}" class="inspiration inspiration-{{ section.id }}">
+  {% for block in section.blocks %}
+    <div id="inspirationBanner{{ block.id }}" class="inspiration__banner inspiration__banner--{{ block.id }} js-inspiration-banner {% if forloop.first %}active{% endif %}" {{ block.shopify_attributes }}>
+      <div class="inspiration__banner-content">
+        <div class="inspiration__banner-text" aria-hidden="true">
+          {{ block.settings.title }}
+          <span class="inspiration__banner-spacer">&bull;</span>
+        </div>
+        {% for i in (1..30) %}
+          <div class="inspiration__banner-text" aria-hidden="true">
+            {{ block.settings.title }}
+            <span class="inspiration__banner-spacer">&bull;</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+
+  <div class="container">
+    {% for block in section.blocks %}
+      {% liquid
+        assign featured_collection = block.settings.featured_collection
+        assign featured_collection_image_desktop = block.settings.featured_collection_image_desktop
+        assign featured_collection_image_mobile = block.settings.featured_collection_image_mobile
+        assign content_title = block.settings.content_title
+        assign content_subtitle = block.settings.content_subtitle
+        assign content_description = block.settings.content_description
+        assign footer_title = block.settings.footer_title
+        assign featured_product = block.settings.featured_product
+        assign featured_article_one = block.settings.featured_article_one
+        assign featured_article_two = block.settings.featured_article_two
+        assign featured_article_three = block.settings.featured_article_three
+        assign featured_article_four = block.settings.featured_article_four
+        assign featured_articles = ''
+        assign show_footer = false
+
+        if featured_article_one != blank or featured_article_two != blank or featured_article_three != blank or featured_article_four != blank
+          assign show_footer = true
+        endif
+      %}
+
+      <div id="inspirationTab{{ block.id }}" class="inspiration__tab inspiration__tab--{{ block.id }} js-inspiration-tab {% if forloop.first %}active{% endif %}" {{ block.shopify_attributes }}>
+        {% render 'stmt-inspiration-tabs', section: section, block: block, breakpoint: 'mobile' %}
+
+        <div class="inspiration__grid">
+          <div class="inspiration__grid-item">
+            <a href="{{ featured_collection.url }}" class="inspiration__featured-collection">
+              <picture>
+                {% if featured_collection_image_mobile %}
+                  <source media="(max-width: 1024px)" srcset="{{ featured_collection_image_mobile | image_url: width: 980, height: 650 }}">
+                {% endif %}
+
+                {% if featured_collection_image_desktop %}
+                  {{ featured_collection_image_desktop | image_url: width: 780, height: 780 | image_tag }}
+                {% elsif featured_collection.image %}
+                  {{ featured_collection.image | image_url: width: 780, height: 780 | image_tag }}
+                {% endif %}
+              </picture>
+
+              <div class="inspiration__featured-collection-cta">
+                {% render 'stmt-icon-bag', class: 'inspiration__featured-collection-cta-icon' %}
+              </div>
+            </a>
+          </div>
+
+          <div class="inspiration__grid-item">
+            {% render 'stmt-inspiration-tabs', section: section, block: block, breakpoint: 'desktop' %}
+
+            <div class="inspiration__content">
+              {% if content_subtitle %}
+                <p class="inspiration__content-subtitle">{{ content_subtitle }}</p>
+              {% endif %}
+
+              {% if content_title %}
+                <h2 class="inspiration__content-title">{{ content_title }}</h2>
+              {% endif %}
+
+              {% if content_description %}
+                <div class="inspiration__content-description richtext-area">
+                  {{ content_description }}
+                </div>
+              {% endif %}
+
+              {% if show_footer %}
+                {% if footer_title != blank %}
+                  <h3 class="inspiration__articles-title">{{ footer_title }}</h3>
+                {% endif %}
+
+                <div class="inspiration__footer {% if featured_product != blank %}inspiration__footer--grid{% endif %}">
+                  <div class="inspiration__articles">
+                    <simple-slider class="inspiration__articles-slider" data-variable-slide-width="true">
+                      <ul class="simple-slider">
+                        {% if featured_article_one != blank %}
+                          {% assign featured_articles = featured_articles | append: '1' | append: ',' %}
+                          <li class="simple-slider__slide">
+                            {% render 'stmt-inspiration-article-card', article: featured_article_one, block: block %}
+                          </li>
+                        {% endif %}
+
+                        {% if featured_article_two != blank %}
+                          {% assign featured_articles = featured_articles | append: '2' | append: ',' %}
+                          <li class="simple-slider__slide">
+                            {% render 'stmt-inspiration-article-card', article: featured_article_two, block: block %}
+                          </li>
+                        {% endif %}
+
+                        {% if featured_article_three != blank %}
+                          {% assign featured_articles = featured_articles | append: '3' | append: ',' %}
+                          <li class="simple-slider__slide">
+                            {% render 'stmt-inspiration-article-card', article: featured_article_three, block: block %}
+                          </li>
+                        {% endif %}
+
+                        {% if featured_article_four != blank %}
+                          {% assign featured_articles = featured_articles | append: '4' | append: ',' %}
+                          <li class="simple-slider__slide">
+                            {% render 'stmt-inspiration-article-card', article: featured_article_four, block: block %}
+                          </li>
+                        {% endif %}
+                      </ul>
+
+                      {% liquid
+                        assign featured_articles = featured_articles | remove_last: ',' | split: ','
+                      %}
+
+                      {% render 'simple-slider-ui', _items: featured_articles %}
+                    </simple-slider>
+
+                    <div class="inspiration__articles-list">
+                      {% if featured_article_one != blank %}
+                        {% render 'stmt-inspiration-article-card', article: featured_article_one, block: block, article_list_index: 1 %}
+                      {% endif %}
+
+                      {% if featured_article_two != blank %}
+                        {% render 'stmt-inspiration-article-card', article: featured_article_two, block: block, article_list_index: 2 %}
+                      {% endif %}
+
+                      {% if featured_article_three != blank %}
+                        {% render 'stmt-inspiration-article-card', article: featured_article_three, block: block, article_list_index: 3 %}
+                      {% endif %}
+
+                      {% if featured_article_four != blank %}
+                        {% render 'stmt-inspiration-article-card', article: featured_article_four, block: block, article_list_index: 4 %}
+                      {% endif %}
+                    </div>
+                  </div>
+
+                  {% if featured_product != blank %}
+                    <div class="inspiration__featured-product">
+                      {%- render 'stmt-product-card', product: featured_product -%}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</stmt-inspiration>
+
+<script src="{{ 'section-stmt-inspiration.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Inspiration Section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "range",
+      "label": "Margin Top",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "label": "Margin Bottom",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "label": "Padding Top",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "label": "Padding Bottom",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Section Title",
+          "id": "title"
+        },
+        {
+          "type": "text",
+          "label": "Subtitle",
+          "id": "content_subtitle"
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "content_title"
+        },
+        {
+          "type": "richtext",
+          "label": "Description",
+          "id": "content_description"
+        },
+        {
+          "type": "collection",
+          "label": "Featured Collection",
+          "id": "featured_collection"
+        },
+        {
+          "type": "image_picker",
+          "label": "Featured Collection Image Override (Desktop)",
+          "id": "featured_collection_image_desktop"
+        },
+        {
+          "type": "image_picker",
+          "label": "Featured Collection Image Override (Mobile)",
+          "id": "featured_collection_image_mobile"
+        },
+        {
+          "type": "color",
+          "label": "Primary Colour",
+          "id": "primary_color"
+        },
+        {
+          "type": "color",
+          "label": "Secondary Colour",
+          "id": "secondary_color"
+        },
+        {
+          "type": "text",
+          "label": "Footer Title",
+          "id": "footer_title"
+        },
+        {
+          "type": "product",
+          "label": "Featured Product",
+          "id": "featured_product"
+        },
+        {
+          "type": "article",
+          "label": "Featured Article One",
+          "id": "featured_article_one"
+        },
+        {
+          "type": "article",
+          "label": "Featured Article Two",
+          "id": "featured_article_two"
+        },
+        {
+          "type": "article",
+          "label": "Featured Article Three",
+          "id": "featured_article_three"
+        },
+        {
+          "type": "article",
+          "label": "Featured Article Four",
+          "id": "featured_article_four"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Inspiration Section"
+    }
+  ]
+}
+{% endschema %}

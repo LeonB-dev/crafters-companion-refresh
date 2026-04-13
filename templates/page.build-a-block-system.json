@@ -1,0 +1,270 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "a4d8c22d-cf05-43f5-854e-e9d90925610b": {
+      "type": "crafters-tv-schedule",
+      "disabled": true,
+      "settings": {
+        "heading": "Schedule",
+        "title": "What's on this week",
+        "text": "<p>Don’t miss out on our live Crafter’s TV shows! All week, you’ll be able to view our programmes on this page or catch up on any of the action that you’ve missed!<\/p>"
+      }
+    },
+    "4dbd2293-09b4-43ca-8028-b4609e7d3021": {
+      "type": "quote-and-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/BAB-Logo2-1.png",
+        "quote": "<p>Welcome to the wonderful world of the revolutionary Gemini Build-A-Block™ Patchwork System.<\/p>",
+        "author_text": ""
+      }
+    },
+    "03c6f91b-3ad5-46a9-be33-08936ac6ec19": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/L7ylhU-EmhE",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "95fd7dd5-6e0c-4ff0-b13e-91d7f2177108": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p><strong>Whether you’re new to quilting and patchwork or a seasoned pro, Build-A-Block™ dies make it easy to design, cut and create a whole variety of quilt block designs in a range of sizes! Our time-saving dies feature a 1.5mm-thick cutting blade capable of cutting multiple layers of fabric with accuracy so you can focus on the fun parts of your quilting and patchwork projects.<\/strong><\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false
+      }
+    },
+    "77c4b1c3-498e-45ca-afef-dcc459321e94": {
+      "type": "media-slider",
+      "blocks": {
+        "5cf33e32-44f9-4fd2-bfde-5f7c2d065a34": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_1.jpg"
+          }
+        },
+        "f9117587-e5d9-495d-8c3c-93dffa76d4a7": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_2.jpg"
+          }
+        },
+        "0b124e59-f134-4e9f-b0d4-53d32575ff57": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_3.jpg"
+          }
+        },
+        "0d42cf77-2d68-4c2b-ad32-f46bcce4d46b": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_4.jpg"
+          }
+        },
+        "de0e575c-ccec-4254-98a5-21992b4cf4a2": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_5-400x400.jpg"
+          }
+        },
+        "31db3965-8bd1-49da-a128-b18297973c7e": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_6.jpg"
+          }
+        },
+        "cb9b7459-5822-43b6-8bda-21904028e4bc": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_7.jpg"
+          }
+        },
+        "57a0d0ca-5536-46b8-87b9-5513a1890b8a": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_8.jpg"
+          }
+        },
+        "36720915-ebd9-4631-9d3e-ff373ea1ba9f": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_9.jpg"
+          }
+        },
+        "731ff6cb-d3c4-4fb4-94d2-68141d4cb28d": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_10.jpg"
+          }
+        },
+        "685c8727-bdef-4b2a-9f20-0b7664c92ec3": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_11.jpg"
+          }
+        },
+        "ea21d139-8257-44c0-b7c2-7a55ef034ee5": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BABImages_12.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "5cf33e32-44f9-4fd2-bfde-5f7c2d065a34",
+        "f9117587-e5d9-495d-8c3c-93dffa76d4a7",
+        "0b124e59-f134-4e9f-b0d4-53d32575ff57",
+        "0d42cf77-2d68-4c2b-ad32-f46bcce4d46b",
+        "de0e575c-ccec-4254-98a5-21992b4cf4a2",
+        "31db3965-8bd1-49da-a128-b18297973c7e",
+        "cb9b7459-5822-43b6-8bda-21904028e4bc",
+        "57a0d0ca-5536-46b8-87b9-5513a1890b8a",
+        "36720915-ebd9-4631-9d3e-ff373ea1ba9f",
+        "731ff6cb-d3c4-4fb4-94d2-68141d4cb28d",
+        "685c8727-bdef-4b2a-9f20-0b7664c92ec3",
+        "ea21d139-8257-44c0-b7c2-7a55ef034ee5"
+      ],
+      "settings": {
+        "large": false
+      }
+    },
+    "82de33e6-e5e6-49fc-a351-b217e342a43d": {
+      "type": "quote-slider",
+      "blocks": {
+        "d6c69151-113a-4b8e-b964-2d18ae230e83": {
+          "type": "quote_slide",
+          "settings": {
+            "quote": "<p>Fabulous system, very quick and easy to use. My first block was a Hunter Star which I would never had attempted to cut with a rotary cutter.<\/p>",
+            "author_text": "Lynette McLoughlin"
+          }
+        },
+        "62e11e0a-27c6-4aa6-9480-2d401d11f478": {
+          "type": "quote_slide",
+          "settings": {
+            "quote": "<p>I am very new to sewing\/ quilting, so there are no fancy blocks here. I did use the largest Build-A-Block square to cut the pieces for a very simple table runner. The accuracy of the die cutting made a huge difference to accuracy of my sewing... my seams actually matched up for once!<\/p>",
+            "author_text": "Deborah Gill"
+          }
+        },
+        "09494bd2-8221-4557-a00f-801fb16e6653": {
+          "type": "quote_slide",
+          "settings": {
+            "quote": "<p>I adore the Build-A-Block system. It is so easy to use and cuts accurately every time. Not had much time to play yet, but the possibilities seem endless. The extra blocks online were a real bonus too.<\/p>",
+            "author_text": "Bernadette Corner"
+          }
+        },
+        "7bc08e9c-cc87-43ef-a770-ffd5fb43d15b": {
+          "type": "quote_slide",
+          "settings": {
+            "quote": "<p>My first one is a Hunters Star. I'm so excited with all the possibilities and you won't be disappointed!<\/p>",
+            "author_text": "Julie Burns"
+          }
+        }
+      },
+      "block_order": [
+        "d6c69151-113a-4b8e-b964-2d18ae230e83",
+        "62e11e0a-27c6-4aa6-9480-2d401d11f478",
+        "09494bd2-8221-4557-a00f-801fb16e6653",
+        "7bc08e9c-cc87-43ef-a770-ffd5fb43d15b"
+      ],
+      "settings": {
+      }
+    },
+    "2e158e9d-9307-43d9-83ad-1af9622cd2dd": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/JDKoNJA63LY",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "3610a5f4-921a-4bc6-9fb3-f53319d3bc48": {
+      "type": "campaign-blocks",
+      "blocks": {
+        "eabf124c-f4bc-4cfd-898f-d257caae8d2f": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/BAB--500x500.jpg",
+            "heading": "Original"
+          }
+        },
+        "9c993e37-ba01-48e2-8fd4-7afb0fbcf908": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/Build-a-Block-plus-PAGE.jpg",
+            "heading": "PLUS"
+          }
+        },
+        "a518bb92-3234-4a17-ab5b-e31b6116d3fb": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/build-a-block-curve.jpg",
+            "heading": "Curves"
+          }
+        },
+        "c458c714-1f5d-4614-b6d1-a73786c5ec4c": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/Build-A-Block-Alphabet-Front-View.png",
+            "heading": "Alphabet and Numbers"
+          }
+        },
+        "cbc85df1-1cef-4b76-8ac5-0c4b51827edd": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/Build-A-Block-Double-Wedding-Ring2-500x500.jpg",
+            "heading": "Pineapple & Double Wedding Ring"
+          }
+        },
+        "45d80d0c-0bd1-4ba3-a2ff-bb96f34a487c": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/Build-A-Block-Double-kaleidoscope-Front-View-500x500.jpg",
+            "heading": "Kaleidoscope & Nautilus"
+          }
+        }
+      },
+      "block_order": [
+        "eabf124c-f4bc-4cfd-898f-d257caae8d2f",
+        "9c993e37-ba01-48e2-8fd4-7afb0fbcf908",
+        "a518bb92-3234-4a17-ab5b-e31b6116d3fb",
+        "c458c714-1f5d-4614-b6d1-a73786c5ec4c",
+        "cbc85df1-1cef-4b76-8ac5-0c4b51827edd",
+        "45d80d0c-0bd1-4ba3-a2ff-bb96f34a487c"
+      ],
+      "settings": {
+        "heading": "<p>All you need to know about Build-A-Block<\/p>",
+        "text": "<p><strong>Visit our other Build-A-Block Pages to find out more<\/strong><\/p>",
+        "link_url": "",
+        "link_text": ""
+      }
+    }
+  },
+  "order": [
+    "a4d8c22d-cf05-43f5-854e-e9d90925610b",
+    "4dbd2293-09b4-43ca-8028-b4609e7d3021",
+    "03c6f91b-3ad5-46a9-be33-08936ac6ec19",
+    "95fd7dd5-6e0c-4ff0-b13e-91d7f2177108",
+    "77c4b1c3-498e-45ca-afef-dcc459321e94",
+    "82de33e6-e5e6-49fc-a351-b217e342a43d",
+    "2e158e9d-9307-43d9-83ad-1af9622cd2dd",
+    "3610a5f4-921a-4bc6-9fb3-f53319d3bc48"
+  ]
+}

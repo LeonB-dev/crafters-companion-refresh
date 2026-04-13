@@ -1,0 +1,166 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Let’s Party : Downloads",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "b3814f23-b37d-4c7a-b2ad-25820e839168": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Here you can download and print the templates used for some of the projects from issue 5. You can also select and print more of the patterned papers an solid colours of cardstock included in A Year of Craft – Let’s Party. Simply click on the patterned or solid papers to access them.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "72deee0d-144c-4181-95dc-e6647d72a413": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/PatternedImage_ayoc_lp.png",
+        "main_heading": "Patterned Papers",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-let-s-party-patterned-papers",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "86721902-53af-4018-9e6a-3726fb3b24f3": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SolidImage_ayoc_lp.png",
+        "main_heading": "Solid Colour Papers",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-let-s-party-solid-colour-papers",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "e3ad29e0-e340-410f-a261-1f7a1a8f55d1": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/AYOC-AS5-TemplateImage.jpg",
+        "main_heading": "Templates - UK",
+        "main_text": "",
+        "main_link_url": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/AYOC%20AS5%20Templates%20UK.pdf",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "c54dfac7-f471-4c33-b772-dfb48c158ad7": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/AYOC-AS5-TemplateImage.jpg",
+        "main_heading": "Templates - US",
+        "main_text": "",
+        "main_link_url": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/AYOC%20AS5%20Templates%20US.pdf",
+        "main_link_text": "View here",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "83f03dd4-fafb-4bfb-9fe6-d4bb611631de": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to Homepage",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef",
+    "b3814f23-b37d-4c7a-b2ad-25820e839168",
+    "72deee0d-144c-4181-95dc-e6647d72a413",
+    "86721902-53af-4018-9e6a-3726fb3b24f3",
+    "e3ad29e0-e340-410f-a261-1f7a1a8f55d1",
+    "c54dfac7-f471-4c33-b772-dfb48c158ad7",
+    "83f03dd4-fafb-4bfb-9fe6-d4bb611631de"
+  ]
+}

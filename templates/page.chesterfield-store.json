@@ -1,0 +1,275 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "store-hero",
+      "blocks": {
+        "c6c5669c-d316-45e2-997f-e3735f18cbaa": {
+          "type": "block",
+          "settings": {
+            "day": "Monday - Sunday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        },
+        "929282cd-9911-4a05-96ba-5a0151586407": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "day": "Tuesday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        },
+        "7ddd6bdb-2d7c-4d8b-b69c-fd578fde6302": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "day": "Wednesday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        },
+        "df5320c4-be26-4415-872e-68be268efa04": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "day": "Thursday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        },
+        "24bbb0b5-d146-4757-a142-e10933802144": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "day": "Friday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        },
+        "9fe9a1d5-5519-489c-9f7a-5e9fc9f5f1e9": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "day": "Saturday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        },
+        "0464509c-c0ef-41c8-920c-83782e2644d1": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "day": "Sunday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        }
+      },
+      "block_order": [
+        "c6c5669c-d316-45e2-997f-e3735f18cbaa",
+        "929282cd-9911-4a05-96ba-5a0151586407",
+        "7ddd6bdb-2d7c-4d8b-b69c-fd578fde6302",
+        "df5320c4-be26-4415-872e-68be268efa04",
+        "24bbb0b5-d146-4757-a142-e10933802144",
+        "9fe9a1d5-5519-489c-9f7a-5e9fc9f5f1e9",
+        "0464509c-c0ef-41c8-920c-83782e2644d1"
+      ],
+      "settings": {
+        "address": "Unit 8, \nDobbies Garden Centre, \nHighwood Way, \nBarlborough Links, \nS43 4XN",
+        "telephone": "01246 811838",
+        "email": "chesterfieldstore@crafterscompanion.co.uk",
+        "bh_opening_time": "10:00",
+        "bh_closing_time": "4:00",
+        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2385.5513738142827!2d-1.2826370866811199!3d53.2796574795944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487999768130bbd9%3A0x896664bca29d368e!2sCrafter's%20Companion%20Chesterfield!5e0!3m2!1sen!2suk!4v1690445723310!5m2!1sen!2suk\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "f6b82e11-0ce6-4020-8183-c57cac455fee": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Visit our Chesterfield store to explore themed shopping areas for haberdashery, sewing, arts and papercraft, along with dedicated demonstration areas where you can get involved in workshops and group sessions with our friendly in-store team.</p><p>Shop products from the full Crafter’s Companion range, alongside must-have items from Sheena Douglass, Spectrum Noir and so many more!</p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "8bb0d60a-081e-4484-ad69-2758891a066e": {
+      "type": "media-slider",
+      "blocks": {
+        "6f4e4706-3514-489f-b6a3-ef8415ca4e41": {
+          "type": "media_slide",
+          "settings": {
+          }
+        },
+        "media_slide_mz3mqM": {
+          "type": "media_slide",
+          "settings": {
+          }
+        },
+        "72c4ee01-bacb-4d20-9367-a3432c5a6bfc": {
+          "type": "media_slide",
+          "settings": {
+          }
+        },
+        "6b8d35b2-fe0e-4766-b074-d670e43d05b6": {
+          "type": "media_slide",
+          "settings": {
+          }
+        },
+        "775cc2ec-810b-4cce-8acc-f4e8836d9cc2": {
+          "type": "media_slide",
+          "settings": {
+          }
+        },
+        "2d35c85e-a99d-439b-ae93-1f1de21da4ae": {
+          "type": "media_slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "6f4e4706-3514-489f-b6a3-ef8415ca4e41",
+        "media_slide_mz3mqM",
+        "72c4ee01-bacb-4d20-9367-a3432c5a6bfc",
+        "6b8d35b2-fe0e-4766-b074-d670e43d05b6",
+        "775cc2ec-810b-4cce-8acc-f4e8836d9cc2",
+        "2d35c85e-a99d-439b-ae93-1f1de21da4ae"
+      ],
+      "disabled": true,
+      "settings": {
+        "large": true,
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "b2d37a0c-ee60-4cb6-9acf-66dfa18dd99b": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_heading": "What’s in store",
+        "main_text": "",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "What’s in store",
+        "list_text": "<p>Papercraft</p><p>Haberdashery</p><p>Art & Colouring</p><p>Workshops and Demonstrations</p><p>Dedicated Educational Area</p><p>Friendly Staff</p>",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "sm",
+        "contain_image": false,
+        "enable_shapes": true,
+        "shape_position": "vertical-end",
+        "enable_dots": false,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "fd890282-4688-40ed-8ceb-73293e546d8c": {
+      "type": "text-header",
+      "disabled": true,
+      "settings": {
+        "heading": "Craft Along in store",
+        "text": "<p>Integer mauris lacus eget nunc faucibus id. Commodo nullam bibendum nibh vitae natoque suscipit. Tortor mi vitae enim in proin sagittis.</p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "link_colour": "primary",
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "26682834-28c9-410e-8ff9-8b3bc48631d9": {
+      "type": "downloads",
+      "blocks": {
+        "download_block_7i6wMj": {
+          "type": "download_block",
+          "settings": {
+            "file": "https://cdn.shopify.com/s/files/1/0761/7619/5858/files/Chesterfield_Craft_Along_October_A1.pdf?v=1728551934",
+            "file_name": "October Craft Along Schedule",
+            "text": "<p>Call 01246 811838 to book. Limited spaces available!</p>",
+            "download_text": "Download"
+          }
+        },
+        "download_block_3AdHYe": {
+          "type": "download_block",
+          "settings": {
+            "file": "https://cdn.shopify.com/s/files/1/0761/7619/5858/files/Chesterfield_Demo_26_October_Birthday_A1.pdf?v=1728551936",
+            "file_name": "Saturday 26th October : Our 19th Birthday Demo Day",
+            "text": "<p>Vintage Vegas & Gemini LetterPress with Dawn Macfie. Drop in-store anytime <br/>between 10.30am - 3pm</p>",
+            "download_text": "Download"
+          }
+        },
+        "download_block_KtbWwf": {
+          "type": "download_block",
+          "disabled": true,
+          "settings": {
+            "file": "https://cdn.shopify.com/s/files/1/0672/5615/6478/files/Chesterfield_Craft_Along_May_A5.pdf?v=1714137032",
+            "file_name": "Craft Along In-Store May 2024 Schedule",
+            "text": "<p>Call 01246 811838 to book. Limited spaces available!</p>",
+            "download_text": "Download"
+          }
+        },
+        "download_block_433tXx": {
+          "type": "download_block",
+          "disabled": true,
+          "settings": {
+            "file": "https://cdn.shopify.com/s/files/1/0672/5615/6478/files/Chesterfield_Demo_Debby_Saturday_17th_February_A5.pdf?v=1705583881",
+            "file_name": "Demo Day - Saturday 17th February",
+            "text": "<p>Spectrum Noir Day with Debby Robinson. Only £5!</p>",
+            "download_text": "Download"
+          }
+        },
+        "download_block_NCRtDJ": {
+          "type": "download_block",
+          "disabled": true,
+          "settings": {
+            "file": "",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "download_block_7i6wMj",
+        "download_block_3AdHYe",
+        "download_block_KtbWwf",
+        "download_block_433tXx",
+        "download_block_NCRtDJ"
+      ],
+      "settings": {
+        "grid_layout": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "f6b82e11-0ce6-4020-8183-c57cac455fee",
+    "8bb0d60a-081e-4484-ad69-2758891a066e",
+    "b2d37a0c-ee60-4cb6-9acf-66dfa18dd99b",
+    "fd890282-4688-40ed-8ceb-73293e546d8c",
+    "26682834-28c9-410e-8ff9-8b3bc48631d9"
+  ]
+}

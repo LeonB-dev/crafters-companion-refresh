@@ -1,0 +1,102 @@
+{% liquid
+  assign cart_total = cart.total_price
+  assign loyalty_total = 0
+  assign free_delivery_threshold = settings.free_delivery_threshold
+
+  if customer
+    for tag in customer.tags
+      assign tag_lower = tag | downcase
+      assign tag_split = tag_lower | split: '_' | last
+      if tag_split == 'pearl'
+        assign loyalty_discount = settings.first_order_discount
+      elsif tag_split == 'bronze'
+        assign loyalty_discount = settings.bronze_discount
+        assign free_delivery_threshold = settings.bronze_shipping
+      elsif tag_split == 'silver'
+        assign loyalty_discount = settings.silver_discount
+        assign free_delivery_threshold = settings.silver_shipping
+      elsif tag_split == 'gold'
+        assign loyalty_discount = settings.gold_discount
+        assign free_delivery_threshold = settings.gold_shipping
+      elsif tag_split == 'platiunum'
+        assign loyalty_discount = settings.platinum_discount
+        assign free_delivery_threshold = settings.platinum_shipping
+      endif
+    endfor
+
+    assign aiod_discount = true
+
+    if loyalty_discount != blank
+      assign loyalty_total = cart.total_price | times: loyalty_discount | divided_by: 100
+    endif
+  endif
+
+  assign delivery_threshold_pence = free_delivery_threshold | times: 100
+  assign delivery_threshold_diff = delivery_threshold_pence | minus: cart.total_price
+  assign delivery_threshold = false
+  assign delivery_threshold_diff_money = delivery_threshold_diff | money
+  assign standard_delivery_cost = settings.standard_delivery_cost
+
+  assign cart_total_stripped = cart.total_price
+
+  if cart_total_stripped >= delivery_threshold_pence
+    assign delivery_threshold = true
+    assign cart_full_amount = cart_total_stripped
+  else
+    assign cart_full_amount = cart_total_stripped | plus: standard_delivery_cost
+  endif
+%}
+
+<div class="snippet-cart-totals">
+  <dl>
+    <dt>
+      {{ cart.item_count }}
+      {{ cart.item_count | pluralize: 'item', 'items' }}
+    </dt>
+    <dd>{{- cart.total_price | money -}}</dd>
+  </dl>
+
+  <dl class="delivery">
+    <dt>{{- 'template.cart.delivery' | t -}}</dt>
+    {%- if delivery_threshold == true -%}
+      <dd>{{- 'template.cart.free' | t -}}</dd>
+    {%- else -%}
+      <dd>{{- standard_delivery_cost | money -}}</dd>
+    {%- endif -%}
+  </dl>
+
+  {% liquid
+    assign savings = 0
+    for item in cart.items
+      if item.variant.compare_at_price > 0
+        assign variantSavings = item.variant.compare_at_price | minus: item.price
+        assign variantSavings = variantSavings | times: item.quantity
+        assign savings = savings | plus: variantSavings
+      endif
+    endfor
+  %}
+
+  {% if savings > 0 %}
+    <dl>
+      <dt>Savings</dt>
+      <dd>
+        -
+        {{- savings | money -}}
+      </dd>
+    </dl>
+  {% endif %}
+
+  <hr class="whisper">
+  <div class="totals">
+    <span class="total-heading">
+      {{- 'template.cart.subtotal' | t -}}
+      <noscript>
+        <span>{{- cart_full_amount | money -}}</span>
+      </noscript>
+    </span>
+    <div class="bottomsubtotal">
+      <div class="csapps-cart-original-total">{{- cart_full_amount | money -}}</div>
+    </div>
+  </div>
+  <hr class="whisper">
+</div>

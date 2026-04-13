@@ -1,0 +1,111 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "68bc2cf7-85c7-48ad-83f6-f579baf08d76": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Crafting Techniques & Tutorials",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "ca160c5b-f60e-4b93-962b-4e51fb2effd0": {
+      "type": "featured-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Artboard-1_1.png",
+        "margin_bottom": "lg"
+      }
+    },
+    "cc397fa0-8a3f-4906-86c0-3a1fbae55590": {
+      "type": "campaign-blocks",
+      "blocks": {
+        "b336b6f7-9ad5-4275-b636-2ffc7d2b1ed0": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/Cardmaking_2_89a6bba4-c99a-4d3c-993f-6d387c8b3fd1.png",
+            "heading": "Card Making"
+          }
+        },
+        "7737d4dc-03fd-4b76-813f-ab0e446de7f3": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/Craft-Essentials_de20d21f-b279-4a94-9513-c632bd890889.png",
+            "heading": "Craft Essentials"
+          }
+        },
+        "59b3eecf-9eec-4068-aa07-b80abb107df3": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/Gemini-Machines_c521424e-57a0-48ee-9f22-881eeb2752ae.png",
+            "heading": "Gemini Machines"
+          }
+        },
+        "c0c3d574-9fef-437c-a2e7-05e596fcda73": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/Home-Decor_bb52eda1-45c5-41a2-860e-583744571edf.png",
+            "heading": "Home Decor"
+          }
+        },
+        "b45611b5-3679-4832-be37-8a80ce73d292": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/Art-_-Colouring_2_944d22ef-57a4-410d-bdb3-3e17143f14e6.png",
+            "heading": "Art & Colouring"
+          }
+        },
+        "65186a43-f81e-432c-8913-04af32cf397e": {
+          "type": "page_block",
+          "settings": {
+            "page": "",
+            "image": "shopify:\/\/shop_images\/Crafting-Storage-_-organisation_8ddeb0cc-06df-4ce3-b20f-d75e3fd5647f.png",
+            "heading": "Craft Storage & Organisation"
+          }
+        }
+      },
+      "block_order": [
+        "b336b6f7-9ad5-4275-b636-2ffc7d2b1ed0",
+        "7737d4dc-03fd-4b76-813f-ab0e446de7f3",
+        "59b3eecf-9eec-4068-aa07-b80abb107df3",
+        "c0c3d574-9fef-437c-a2e7-05e596fcda73",
+        "b45611b5-3679-4832-be37-8a80ce73d292",
+        "65186a43-f81e-432c-8913-04af32cf397e"
+      ],
+      "settings": {
+        "heading": "",
+        "text": "<p>Learn something new, sharpen up your papercraft skills and brush up on art and colouring with our amazing video guides<\/p><p>Join our team of experts to make fabulous projects and get to grips with a range of techniques and craft styles. Watch and craft along at home, with the option to hit pause and work at your own pace (or just grab a cuppa!). <\/p><p>If you’re just getting started this is a great way to master foundation craft techniques. And, for our experienced makers, we’ll be getting creative with new collections and ranges so there’s always new inspiration to enjoy.<\/p><p>Our video library will be regularly updated with new tutorials, so make sure you check this page to see what’s new! <\/p>",
+        "link_url": "",
+        "link_text": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "68bc2cf7-85c7-48ad-83f6-f579baf08d76",
+    "ca160c5b-f60e-4b93-962b-4e51fb2effd0",
+    "cc397fa0-8a3f-4906-86c0-3a1fbae55590"
+  ]
+}

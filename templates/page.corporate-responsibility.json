@@ -1,0 +1,89 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page-full-width",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "6fdc8092-5da4-496f-a23d-e62ba901f0b7": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Corporate Responsibility",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": true,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "e09e5a89-5500-4c3c-a260-bbe948ce79cb": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/community-intro_corporate_responsibility.png",
+        "main_heading": "How we're helping",
+        "main_text": "<p>Here at Crafter’s Companion we’re committed to <strong>supporting our local community <\/strong>in the North East of England, as well as across the world. We’re proud to support a number of different charities with various <strong>fundraising activities <\/strong>through the year –<strong>take a peek <\/strong>at what we’ve been up to!<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "d510d3a6-64c4-49c4-b7cc-b289013fd511": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "<strong>Charity of the Year<\/strong>",
+        "small_text": "<p>This year, our chosen Charity of the Year is the Bradley Lowery Foundation.<\/p><p><strong>The charity, which is based in the UK,<\/strong> was established in August 2017 after six-year-old Bradley Lowery, lost his fight to Stage 4 High Risk Neuroblastoma, a rare and aggressive form of childhood cancer.<\/p><p>In 2013, his mum, Gemma, started a fundraising campaign to raise funds to get Bradley treatment in the USA. The campaign was hugely successful and with the support of thousands of people, raised over £1.3m, as well as vital awareness for Neuroblastoma and other childhood cancers.  These donations provided the funding base for the charity.<\/p><p>The Bradley Lowery Foundation aims to support families who are fundraising for treatment or equipment, which is not readily available or covered by the NHS. The foundation also supports research into neuroblastoma and childhood cancers, is developing plans to support a £600,000 holiday home in Scarborough and runs a support line for the families of children with cancer in the North East.<\/p><p>In addition to The Bradley Lowery Foundation, Crafter’s Companion regularly backs national and international fundraising campaigns such as Children In Need, Cash For Kids, Save The Children’s Christmas Jumper Day and more.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "620bdb18-7693-4612-93c7-2360c94a2553": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Crafter's Companion and sports teams",
+        "small_text": "<p>Crafter’s Companion also supports a number of schools and sports teams.  We are proud sponsors of <strong>Tudhoe Cricket Club<\/strong> and <strong>Spennymoor Town FC. <\/strong><\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "6fdc8092-5da4-496f-a23d-e62ba901f0b7",
+    "e09e5a89-5500-4c3c-a260-bbe948ce79cb",
+    "d510d3a6-64c4-49c4-b7cc-b289013fd511",
+    "620bdb18-7693-4612-93c7-2360c94a2553"
+  ]
+}

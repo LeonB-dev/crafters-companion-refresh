@@ -1,0 +1,245 @@
+{%- liquid
+  assign template_name = 'section-brand-landing-header'
+
+  if template contains 'page'
+    assign brand_metaobject = page.metafields.custom.brand.value
+    assign collection_mode = false
+    assign description = page.content
+    assign title = page.title
+  elsif template contains 'collection'
+    assign brand_metaobject = collection.metafields.custom.brand.value
+    assign collection_mode = true
+    assign description = collection.description
+    assign title = collection.title
+  endif
+
+  assign collection = collections[brand_metaobject.collection]
+  assign page = pages[brand_metaobject.page]
+
+  assign background_image = brand_metaobject.background_image
+  assign background_image_mobile = brand_metaobject.background_image_mobile
+  assign image_alt = brand_metaobject.alt | default: title
+  assign brand_logo = brand_metaobject.logo
+  assign brand_logo_alt = brand_logo.alt | default: title
+  assign overlay_colour = brand_metaobject.colour_overlay
+  assign text_colour = brand_metaobject.text_colour
+
+  assign description_split = description | split: '</p>'
+
+  if settings.brands_url != blank
+    assign container_class = 'has-breadcrumb'
+  endif
+
+  assign read_more = 'accessibility.read_more' | t
+  assign read_less = 'accessibility.read_less' | t
+
+  assign parent_brand = brand_metaobject.parent_brand
+
+  assign show_parent_brand_nav = false
+
+  if parent_brand != blank
+    assign show_parent_brand_nav = true
+  endif
+
+  if collection_mode == false
+    assign link_background_colour = brand_metaobject.link_background_colour
+    assign link_colour = brand_metaobject.link_colour
+  endif
+
+  assign active_link_background_colour = brand_metaobject.active_link_background_colour
+  assign active_link_foreground_colour = brand_metaobject.active_link_foreground_colour
+
+  assign hide_content = brand_metaobject.hide_content
+
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-brand-landing-header.css' | asset_url | stylesheet_tag -}}
+{% comment %}
+  {{- 'section-brand-landing-header.js' | asset_url | script_tag -}}
+{% endcomment %}
+
+<style>
+  .section-brand-landing-header{
+    color: {{ text_colour }};
+  }
+  .section-brand-landing-header::before {
+    background-color: {{ overlay_colour }};
+  }
+
+  {% if collection_mode == false and link_background_colour != blank and link_colour != blank %}
+    .c-btn.main{
+      background: {{ link_background_colour }} !important;
+      color: {{ link_colour }} !important;
+    }
+  {% endif %}
+
+  {% if active_link_background_colour != blank and active_link_foreground_colour != blank %}
+    #wrapper .section-brand-landing-header .tertiary{
+      background-color: {{- active_link_background_colour -}} !important;
+      color: {{- active_link_foreground_colour -}} !important;
+      border-color: {{- active_link_foreground_colour -}} !important;
+    }
+
+    #wrapper .section-brand-landing-header .quinary{
+      background-color: {{- active_link_foreground_colour -}} !important;
+      color: {{- active_link_background_colour -}} !important;
+      border-color: {{- active_link_background_colour -}} !important;
+    }
+  {% endif %}
+
+
+  .section-brand-landing-header{
+  {% if hide_content == true %}
+    --image-position: relative;
+    --image-height: auto;
+  {% else %}
+    --image-position: absolute;
+    --image-height: 100%;
+    {% endif %}
+  }
+
+  {% if hide_content == true %}
+    .section-brand-landing-header::before{
+      display: none;
+    }
+  {% endif %}
+</style>
+{% if show_parent_brand_nav == true %}
+  {% render 'brand-nav', _parent_brand_metaobject: parent_brand.value %}
+{% endif %}
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {% if background_image_mobile != blank and background_image != blank %}
+    <picture>
+      <source media="(min-width:1500px)" srcset="{{- background_image | image_url: width: 1920 -}}">
+      <source media="(min-width:1100px)" srcset="{{- background_image | image_url: width: 1500 -}}">
+      <source media="(min-width:800px)" srcset="{{- background_image | image_url: width: 1024 -}}">
+      <source media="(min-width:551px)" srcset="{{- background_image_mobile | image_url: width: 800 -}}">
+      <source media="(max-width: 550.8px)" srcset="{{- background_image_mobile | image_url: width: 600 -}}">
+      <img src="{{- background_image | image_url: height: 512 -}}" alt="{{- image_alt -}}" height="412" width="390" loading="eager" class="image">
+    </picture>
+  {% elsif background_image != blank -%}
+    {{- background_image | image_url: width: 1920 | image_tag: widths: '600, 800, 1024, 1500', loading: 'eager', alt: image_alt, class: 'image' -}}
+  {%- endif -%}
+  {% unless hide_content == true %}
+    <div class="container {{ container_class }}">
+      {%- if settings.brands_url != blank -%}
+        {%- render 'breadcrumb-brand', _brand: title -%}
+      {%- endif -%}
+      {% if brand_logo != null %}
+        <h1 class="heading">
+          {{ brand_logo | image_url: height: 80 | image_tag: alt: brand_logo_alt, loading: 'eager', class: 'brand-logo' }}
+        </h1>
+      {% else %}
+        <h1 class="u-heading-xl heading">{{- collection_title -}}</h1>
+      {% endif %}
+      <div class="actions">
+        <a href="{{ collection.url }}" class="c-btn main {% if collection_mode %}quinary disabled{% else %}tertiary{% endif %}" data-collection-handle="{{ collection.handle }}">
+          {{ 'template.collection.products_button' | t }}
+        </a>
+        <a href="{{ page.url }}" class="c-btn main {% if collection_mode %}tertiary{% else %}quinary disabled{% endif %}" data-page-handle="{{ page.handle }}">
+          {{ 'template.collection.info_button' | t }}
+        </a>
+      </div>
+      <div class="content">
+        {% for paragraph in description_split limit: 1 %}
+          {{- paragraph -}}
+        {% endfor %}
+      </div>
+      {%- if description_split.size > 1 -%}
+        <div class="content-ext" hidden data-blh-content>
+          {% for paragraph in description_split offset: 1 %}
+            {{- paragraph -}}
+          {% endfor %}
+        </div>
+        <button class="c-btn" data-blh-toggle>{{- read_more -}}</button>
+      {%- endif -%}
+    </div>
+  {% endunless %}
+  {%- render 'paper-edge', _section: section, _bottom_edge_colour: 'white' -%}
+</div>
+
+{%- if description_split.size > 1 -%}
+  <script>
+    var blh_toggle = document.querySelector('[data-blh-toggle]');
+    var blh_content = document.querySelector('[data-blh-content]');
+
+    if (blh_toggle && blh_content) {
+      blh_toggle.addEventListener('click', function () {
+        blh_content.toggleAttribute('hidden');
+        if (blh_content.hasAttribute('hidden')) {
+          blh_toggle.innerHTML = '{{- read_more -}}';
+        } else {
+          blh_toggle.innerHTML = '{{- read_less -}}';
+        }
+      });
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Brand Landing Header",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "md"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Brand Landing Header",
+      "category": "Content"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["collection", "page"]
+  }
+}
+{% endschema %}

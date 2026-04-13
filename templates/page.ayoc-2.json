@@ -1,0 +1,230 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "settings": {
+        "centre": true
+      }
+    },
+    "194c7d69-4f5b-474f-a703-7d94697bebf9": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/AYOC-Product-Shot-smaller_b0a364a7-f0d0-444a-9ee4-14ac38ca2f49.jpg",
+        "main_heading": "A Year of Craft",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-downloads-1",
+        "main_link_text": "A Year of Craft: Downloads",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "5509692b-8c74-4872-856d-a37c64c5c97c": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/AYOC-AS1-Product-smaller_198c6d74-2b42-4c7a-a311-aab7ed1a6ce3.jpg",
+        "main_heading": "A Year of Craft: Family & Friends",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-family-friends-downloads",
+        "main_link_text": "A Year of Craft: Family & Friends: Downloads",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "2698381c-1d1f-454f-ac8a-7e631939e78a": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/AS2-Product-Shot-smaller_b6ecb5a4-be81-427d-ae82-332f6e002054.jpg",
+        "main_heading": "A Year of Craft: The Gift of Giving",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-the-gift-of-giving-downloads",
+        "main_link_text": "A Year of Craft: The Gift of Giving: Downloads",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "0e50f176-9715-471d-b8e6-32e63ea8f691": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/AYOC-3-Product2_32f3a854-bf09-4e24-bf08-7ad2d9c0ffc7.jpg",
+        "main_heading": "A Year of Craft: Big Celebrations",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-big-celebrations-downloads",
+        "main_link_text": "A Year of Craft: Big Celebrations: Downloads",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "7c23a35c-d8b9-468e-8c0b-81d688c7d254": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/AYOC-4-Product-Shot_smaller_a38a0f3a-e57f-4259-9006-425bf2e5301b.png",
+        "main_heading": "A Year of Craft: Happy Holidays",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-happy-holidays-downloads",
+        "main_link_text": "A Year of Craft: Happy Holidays: Downloads",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "c5fa8015-e6b7-4a69-bc0f-beeefa3bf0e8": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/AYOC-AS5-Product-Shot-smaller_ad7562d0-0fc3-449a-bf13-a331a591c7e8.jpg",
+        "main_heading": "A Year of Craft: Let’s Party",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-let-s-party-downloads",
+        "main_link_text": "A Year of Craft: Let’s Party: Downloads",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "63aca14a-06f2-4c7c-9d50-06415d226840": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/AYOC-AS6-Product_smaller_9970cb34-2115-4eec-a7bb-74cde6fd2ee5.png",
+        "main_heading": "A Year of Craft : Everyday Inspiration",
+        "main_text": "",
+        "main_link_url": "shopify:\/\/pages\/a-year-of-craft-everyday-inspiration-downloads",
+        "main_link_text": "A Year of Craft : Everyday Inspiration",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "2cd7e1fe-5b10-4528-a0e9-3ee0fddf1b3e": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>We’d love to see and share your A Year of Craft projects!<br\/>If you would like to be featured in our inspirational A Year of Craft publications, email us at:<a href=\"mailto:ayoc@crafterscompanion.com\">ayoc@crafterscompanion.com<\/a><\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "194c7d69-4f5b-474f-a703-7d94697bebf9",
+    "5509692b-8c74-4872-856d-a37c64c5c97c",
+    "2698381c-1d1f-454f-ac8a-7e631939e78a",
+    "0e50f176-9715-471d-b8e6-32e63ea8f691",
+    "7c23a35c-d8b9-468e-8c0b-81d688c7d254",
+    "c5fa8015-e6b7-4a69-bc0f-beeefa3bf0e8",
+    "63aca14a-06f2-4c7c-9d50-06415d226840",
+    "2cd7e1fe-5b10-4528-a0e9-3ee0fddf1b3e"
+  ]
+}

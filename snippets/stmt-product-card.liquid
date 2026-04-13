@@ -1,0 +1,120 @@
+{% liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign title = product.title
+  assign price = product.price
+  assign price_compare_at = product.compare_at_price
+  assign url = product.url
+  assign product_image = product.featured_image
+
+  if product.metafields.custom.product_card_image != blank
+    assign product_image = product.metafields.custom.product_card_image
+  endif
+
+  if product.images.size > 1
+    assign image_hover = product.images[1]
+  endif
+
+  for tag in product.tags
+    if tag contains settings.tags_filter_prefix
+      assign offer_tag = tag | split: '_' | last
+    endif
+  endfor
+
+  assign show_add_to_bag = false
+
+  if product.has_only_default_variant and current_variant.available
+    assign show_add_to_bag = true
+  endif
+
+  if product.metafields.custom.experience_level.value.title != blank
+    assign experience_level = product.metafields.custom.experience_level.value.title
+  endif
+
+  assign loading = 'eager'
+
+  if forloop.index > 4
+    assign loading = 'lazy'
+  endif
+%}
+
+<div class="product-card" data-product-item>
+
+  {%  if settings.show_product_item_lozenges == true %}
+    {%- render 'output_lozenge', product: product, class_name: 'product-card__label'-%}
+  {%  endif %}
+  
+  <div class="product-card__image-container">
+    {% if product_image != blank %}
+      <a href="{{ product.url }}" class="product-card__image-link">
+        {{ product_image | image_url: width: 410, height: 310 | image_tag: class: 'product-card__image', loading: loading }}
+
+        {% if image_hover != null %}
+          <div class="product-card__image-hover-container">
+            {{ image_hover | image_url: width: 410, height: 310 | image_tag: class: 'product-card__image', loading: loading }}
+          </div>
+        {% endif %}
+      </a>
+    {% endif %}
+
+    {% render 'swym-product-view', product: product %}
+
+    <button
+      data-with-epi="true"
+      class="product-card__wishlist wishlist-add product_{{ product.id }}"
+      data-swaction="addToWishlist"
+      data-product-id="{{ product.id }}"
+      data-variant-id="{{ product.variants[0].id }}"
+      data-product-url="{{ shop.url }}{{ product.url }}"
+      aria-label="Add to wishlist"
+    >
+      {% render 'stmt-icon-wishlist', class: 'product-card__wishlist-icon' %}
+    </button>
+
+    {% if show_add_to_bag %}
+      <button
+        class="product-card__add-to-bag-desktop product-add"
+        type="button"
+        data-product-item-variant-id="{{ current_variant.id }}"
+        data-product-item-quantity="1"
+        data-product-item-add
+      >
+        <span class="sr-only">
+          {{- 'products.product.add_to_cart' | t -}}
+        </span>
+        {% render 'stmt-icon-add-to-bag', class: 'product-card__add-to-bag-icon' %}
+      </button>
+    {% endif %}
+  </div>
+
+  <h3 class="product-card__title">
+    <a href="{{ product.url }}" class="product-card__title-link">{{ product.title }}</a>
+  </h3>
+
+  {% if experience_level != blank %}
+    <div class="product-card__experience-level">
+      {{ experience_level }}
+    </div>
+  {% endif %}
+
+  <div class="product-card__footer">
+    <div class="product-card__price">
+      {% if price_compare_at > price %}
+        <span class="product-card__compare-at-price">{{ price_compare_at | money }}</span>
+      {% endif %}
+      {{ price | money }}
+    </div>
+
+    {% if show_add_to_bag %}
+      <button
+        class="product-card__add-to-bag-mobile product-add"
+        type="button"
+        data-product-item-variant-id="{{ current_variant.id }}"
+        data-product-item-quantity="1"
+        data-product-item-add
+      >
+        {% render 'stmt-icon-add-to-bag', class: 'product-card__add-to-bag-icon' %}
+        {{- 'products.product.add_to_cart' | t -}}
+      </button> 
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,29 @@
+{% assign video_blocks = _media_blocks | where: 'type', 'video' %}
+
+<div
+  class="swiper-container swiper-container-free-mode"
+  data-slider="inspiration{%- if _offset > 0 -%}-2{%- else -%}-1{%- endif %}"
+  data-autoplay="false"
+  data-vertical="true"
+  data-loop="true"
+  data-slides-visible="4.5/3.1/2">
+  <div class="swiper-wrapper">
+    {% if _offset > 0 %}
+      {% assign offset_loop = true %}
+    {% endif %}
+    {% if offset_loop %}
+      {% for media in _media_blocks offset: _offset %}
+        {% assign offset_index = forloop.index | plus: _offset %}
+        <div class="swiper-slide">
+          {% render 'carousel-item' _media: media, _index: offset_index, _fallback_link: _fallback_link %}
+        </div>
+      {% endfor %}
+    {% else %}
+      {% for media in _media_blocks limit: _col_limit %}
+        <div class="swiper-slide">
+          {% render 'carousel-item' _media: media, _index: forloop.index, _fallback_link: _fallback_link  %}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,85 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false
+      }
+    },
+    "256030f7-8541-4244-b2b3-f0f60347f202": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Website Help",
+        "small_text": "<p>Need some help using our new website? Watch our handy videos below to follow step by step instructions.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "1d7a72ea-2b09-4538-bf0d-92dbca12599f": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=E4tu93dzGOM",
+        "heading": "How to reset your password to access your account for the first time",
+        "text": ""
+      }
+    },
+    "13f492a7-bbff-4288-aaa7-425dbcb676f7": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=LBNq4nxvKL8",
+        "heading": "How to place an order",
+        "text": ""
+      }
+    },
+    "ec313348-a0c8-4208-a6ea-568345689e6f": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=qpdXICzDfyw",
+        "heading": "How to watch and shop Crafter's TV",
+        "text": ""
+      }
+    },
+    "f7a6462b-84cc-4340-a9d0-636f63471133": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=wDt9QEpxMfg&feature=youtu.be",
+        "heading": "How to login to your account",
+        "text": ""
+      }
+    },
+    "ef2fc41d-a5cd-4bdc-83af-10cc6d926d89": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=quL8qepFx-8&feature=youtu.be",
+        "heading": "How to check your Club Inspire points",
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "256030f7-8541-4244-b2b3-f0f60347f202",
+    "1d7a72ea-2b09-4538-bf0d-92dbca12599f",
+    "13f492a7-bbff-4288-aaa7-425dbcb676f7",
+    "ec313348-a0c8-4208-a6ea-568345689e6f",
+    "f7a6462b-84cc-4340-a9d0-636f63471133",
+    "ef2fc41d-a5cd-4bdc-83af-10cc6d926d89"
+  ]
+}

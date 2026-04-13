@@ -1,0 +1,19 @@
+{{- 'snippet-crafters-tv-heading.css' | asset_url | stylesheet_tag -}}
+
+{%- if _margin_bottom == false -%}
+  <style>
+    div.snippet-crafters-tv-heading {
+      margin-bottom: 0;
+    }
+  </style>
+{%- endif -%}
+
+<div class="snippet-crafters-tv-heading">
+  <p class="u-text-xl heading">{{ _heading }}</p>
+  <h1 class="u-heading-lg centre title">{{ _title }}</h1>
+  {% if _text_class == 'u-text-xl' %}
+    {{ _text | replace: '<p>', '<p class="u-text-xl">' }}
+  {%- else -%}
+    {{- _text -}}
+  {%- endif -%}
+</div>

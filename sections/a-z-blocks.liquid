@@ -1,0 +1,202 @@
+{% liquid
+  assign template_name = 'section-a-z-blocks'
+
+  assign blocks = section.blocks | map: 'settings'
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-a-z-blocks.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-a-z-blocks.js' | asset_url -}}"></script>
+
+{% if blocks.size > 0 %}
+  <div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+    {%-
+      render 'paper-edge',
+      _section: section
+    -%}
+    <div class="container">
+      <div class="wrapper">
+        <ul class="nav">
+          {% for block in blocks %}
+            <li class="{% if forloop.first %}is-active{% endif %}">
+              <a href="#letter-{{- block.letter -}}" class="{% if forloop.first %}is-active{% endif %}" data-az-nav-item>
+                {{ block.letter }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <div class="content">
+          {% for block in blocks %}
+            <div id="letter-{{- block.letter -}}">
+              <h3 class="u-heading-lg heading">{{ block.letter }}</h3>
+              {{ block.text }}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "A-Z Blocks",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "top_edge_colour",
+      "label": "Top edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "bottom_edge_colour",
+      "label": "Bottom edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "background_colour",
+      "label": "Background colour",
+      "info": "This can only be applied if a edge version is selected",
+      "options": [
+        {
+          "value": "black-squeeze",
+          "label": "Green"
+        },
+        {
+          "value": "pippin",
+          "label": "Pink"
+        },
+        {
+          "value": "whisper",
+          "label": "Purple"
+        }
+      ],
+      "default": "whisper"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "a-z-block",
+      "name": "Tab",
+      "settings": [
+
+        {
+          "type": "text",
+          "id": "letter",
+          "label": "Letter"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A-Z Blocks",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

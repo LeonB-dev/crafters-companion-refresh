@@ -1,0 +1,36 @@
+{%- assign exclude_frontpage_collection = true -%}
+
+<section aria-labelledby="collection-title" aria-describedby="collection-description">
+  <header>
+    <div class="container">
+      {%- render 'breadcrumb', page, customer, search, product, collection, blog, article -%}
+      <h1 id="collection-title">{{- 'template.list_collections.title' | t }}</h1>
+      <p id="collection-description">
+        {%- assign collections_size = collections.size -%}
+        {%- if exclude_frontpage_collection -%}
+          {%- assign collections_size = collections_size | minus: 1 -%}
+        {%- endif -%}
+        {%- if collections_size == 1 -%}
+          {{- 'template.list_collections.description.one' | t: count: collections_size -}}
+        {%- else -%}
+          {{- 'template.list_collections.description.other' | t: count: collections_size -}}
+        {%- endif -%}
+      </p>
+    </div>
+  </header>
+  <div class="container">
+    {%- for collection in collections -%}
+      {%- if exclude_frontpage_collection -%}
+        {%- unless collection.handle == 'frontpage' -%}
+          <div class="grid">
+            {%- render 'collection-item', collection: collection -%}
+          </div>
+        {%- endunless -%}
+      {%- else -%}
+        <div class="grid">
+          {%- render 'collection-item', collection: collection -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>

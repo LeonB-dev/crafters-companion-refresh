@@ -1,0 +1,195 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "ecae6261-9cd5-4414-bb26-673825c126ab": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Unmounted Stamp Organizers",
+        "text": "<p>You know you've got the perfect stamp for that card or page, but where is it? <\/p><p>Getting your stamps organized will inspire you to use them more often.  At Totally-Tiffany we've got the perfect stamp organizers for your crafting habits.  Do you like to attend crops or classes? Try using a Spinder Binder with Flippin' Storage pages or the Karen Buddy Bag.  Do you have a large craft room and prefer to keep everything out and at your fingertips?  Try the Desk Maid Die, Stamp & Supply Organizer. <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "9e6efc37-d257-4668-b6e2-6b2823cd8563": {
+      "type": "image-text-slider",
+      "blocks": {
+        "2540fbfc-4edc-4b47-935b-786aa7f923ee": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>The 3 Inch Flippin' Storage Binder will hold up to 30 sets of unmounted stamps.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/1_3fec399f-318d-4e21-8c5b-32afb95c8826.jpg"
+          }
+        },
+        "1ee878c5-6169-46b4-b758-27db17c1b9ea": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>The Die, Stamp & Supply Organizer is perfect for all sizes of unmounted stamps. Use it with our Die & Stamp pockets.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/2_401c10f2-274a-41d1-8600-e73cdcd86d0e.jpg"
+          }
+        },
+        "019d1076-3b3b-42d0-9aa5-2ab09f1fc960": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>The 5x7 Card Maker's Fab File is perfect for organizing 5x7 stamps. Use with our 5x7 Stamp Pockets. <\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/3_827bc834-6278-4c13-baa7-639fcdd414e2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "2540fbfc-4edc-4b47-935b-786aa7f923ee",
+        "1ee878c5-6169-46b4-b758-27db17c1b9ea",
+        "019d1076-3b3b-42d0-9aa5-2ab09f1fc960"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "37899467-c3f9-4515-a0f9-f39de448c3d2": {
+      "type": "image-text-slider",
+      "blocks": {
+        "6c00fff1-f20b-4110-9a4f-214937daf970": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>Karen Buddy Bag<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/4_d41d996d-2ba8-44fd-9b89-8187ad4ef1b6.jpg"
+          }
+        },
+        "ac9e41a8-7ae5-406b-b3cc-c6d5eb7ff550": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>Stamp pockets can be used with the Karen Buddy Bag or the 5x7 Fab File.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/5_af3f3a05-ca42-4bfc-80ae-8013e4942c82.jpg"
+          }
+        },
+        "b782e0f0-4b47-49ca-bd10-34dc2602c93f": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>The Denise Buddy Bag is perfect for organizing small stamp sets - use our Medium Stamp Pockets with the Denise Bag.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/6_5025a37c-c958-4c7d-a67a-7115c33e318f.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "6c00fff1-f20b-4110-9a4f-214937daf970",
+        "ac9e41a8-7ae5-406b-b3cc-c6d5eb7ff550",
+        "b782e0f0-4b47-49ca-bd10-34dc2602c93f"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "01cbbff2-e69d-45fe-b14f-bf2c6f6a2bd5": {
+      "type": "image-text-slider",
+      "blocks": {
+        "299fd22d-872a-41aa-a6a4-1d8c294a5eb3": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>The Katya Buddy Bag is ideal for small stamps.  Create a \"filing system\" using our Small Stamp pockets.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/7_6a3ef777-e22c-472d-9efb-5432af4d630d.jpg"
+          }
+        },
+        "4f0d176a-7a1d-411d-b759-65e1986c0ba1": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>The Fabulous Four pocket page is ideal for 6x6 stamps. Works great with a ScrapRack, Craft Binder or Spinder Binder.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/8_550a7933-4300-4edd-94ae-390bc0f3fe57.jpg"
+          }
+        },
+        "d01c6dd4-d9e4-4d9e-aea4-73a1ac1732af": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>The 12x12 Craft Binder or Spinder Binder with ScrapRack storage pages is a perfect, portable storage solution for unmounted acrylic or red rubber stamps.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/10_7ad32114-736b-421e-a0c6-998cc6982599.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "299fd22d-872a-41aa-a6a4-1d8c294a5eb3",
+        "4f0d176a-7a1d-411d-b759-65e1986c0ba1",
+        "d01c6dd4-d9e4-4d9e-aea4-73a1ac1732af"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "ecae6261-9cd5-4414-bb26-673825c126ab",
+    "9e6efc37-d257-4668-b6e2-6b2823cd8563",
+    "37899467-c3f9-4515-a0f9-f39de448c3d2",
+    "01cbbff2-e69d-45fe-b14f-bf2c6f6a2bd5"
+  ]
+}

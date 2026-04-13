@@ -1,0 +1,67 @@
+{%- liquid
+  assign template_name = 'section-trust-points'
+%}
+
+{{- 'section-trust-points.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-trust-points.js' | asset_url -}}" defer></script>
+
+<div class="{{- template_name }} swiper-grid" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="swiper-container" data-stp-slider>
+    <div class="swiper-wrapper">
+      {%- for block in section.blocks -%}
+        {% liquid
+          assign icon = block.settings.icon
+          assign text = block.settings.text
+        %}
+        <div class="swiper-slide" data-stp-slide>
+          <img src="{{- icon | image_url: width: 152 -}}" alt="{{ icon.alt | default: text | strip_html -}}" height="24" width="24" loading="eager">
+          {{ text }}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Trust Points",
+  "tag": "section",
+  "class": "overflow-hidden",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "trust_points",
+      "name": "Trust Point",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon",
+          "info": "SVG is the preference, however images are accepted. The icon must be on a transparent background."
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust Points",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

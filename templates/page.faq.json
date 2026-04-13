@@ -1,0 +1,54 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "d027aca0-956c-43b4-842c-88187259705c": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Frequently Asked Questions",
+        "small_text": "",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false
+      }
+    },
+    "64834316-c8f3-47f1-a531-1b9fa375428c": {
+      "type": "faqs",
+      "blocks": {
+        "57108c93-4c0a-4b6f-83fe-114d3851517a": {
+          "type": "faq",
+          "settings": {
+            "title": "Do you have a shop ?",
+            "content": "<h3>We have two stores in Evesham and<br\/>Chesterfield. <a href=\"https:\/\/www.crafterscompanion.co.uk\/index.php\/page\/stores\">Click<br\/>here<\/a> to find out more about them<\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "57108c93-4c0a-4b6f-83fe-114d3851517a"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "expand_all": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d027aca0-956c-43b4-842c-88187259705c",
+    "64834316-c8f3-47f1-a531-1b9fa375428c"
+  ]
+}

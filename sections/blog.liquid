@@ -1,0 +1,102 @@
+{% liquid
+  assign template_name = 'section-blog'
+  assign blog_title = blog.title | downcase
+  assign tags_active = false
+  for tag in blog.all_tags
+    if current_tags contains tag
+      assign tags_active = true
+    endif
+  endfor
+
+  if blog_title contains 'tv'
+    assign paginate_number = 12
+  else
+    assign paginate_number = 14
+  endif
+
+  assign collection = collections[section.settings.collection].products
+%}
+
+{{- 'section-blog.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-article-item.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-article-block.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-blog.js' | asset_url -}}"></script>
+
+<div class="{{- template_name -}}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {%- paginate blog.articles by paginate_number -%}
+    <div class="container">
+      {%- render 'blog-filters', blog: blog -%}
+      <button class="filters-open c-btn main tertiary has-icon fw" type="button" aria-controls="blog-filters" aria-expanded="false" data-bf-open>
+        {%- render 'icon', _name: 'icon-filters' -%}
+        {{ 'template.blog.filter' | t }}
+        {{ blog.articles_count }}
+        {{ 'template.blog.posts' | t -}}
+      </button>
+      {%- if paginate.pages.size > 1 -%}
+        <div class="grid">
+          {%- if blog_title contains 'tv' -%}
+            {% liquid
+              for article in blog.articles
+                render 'article-item', _article: article, _show_craft_label: false
+              endfor
+            %}
+          {%- else -%}
+            {%- for article in blog.articles -%}
+              {% liquid
+                if forloop.index == 1 or forloop.index == 8
+                  render 'article-block', _article: article, _forloop_index: forloop.index
+                else
+                  render 'article-item', _article: article, _show_craft_label: true
+                endif
+              %}
+            {%- endfor -%}
+            <div class="products">
+              {%- render 'section-header', _heading: 'Popular gifts', _offset: true -%}
+              <div class="c-product-grid grid-sm">
+                {% liquid
+                  for product in collection limit: 6
+                    render 'product-item', product: product
+                  endfor
+                %}
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- else -%}
+        <div class="empty">
+          <p class="u-heading-xs centre">{{- 'template.blog.empty_tagged' | t -}}</p>
+        </div>
+      {%- endif -%}
+      {%- if paginate.pages.size > 1 -%}
+        {%- render 'pagination', paginate: paginate -%}
+      {%- endif -%}
+    </div>
+  {%- endpaginate -%}
+</div>
+
+{% schema %}
+{
+  "name": {
+    "de": "Blog",
+    "en": "Blog",
+    "es": "Blog",
+    "fr": "Blog",
+    "it": "Blog",
+    "ja": "ブログ",
+    "pt-BR": "Blog"
+  },
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

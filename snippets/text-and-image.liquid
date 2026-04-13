@@ -1,0 +1,144 @@
+{% liquid
+  assign header_title = _section.settings.header_title
+  assign header_image = _section.settings.header_image
+
+  assign main_heading = _section.settings.main_heading
+  assign main_text = _section.settings.main_text
+  assign main_link_url = _section.settings.main_link_url
+  assign main_link_text = _section.settings.main_link_text
+  assign main_image = _section.settings.main_image
+
+  assign contain_image = _section.settings.contain_image
+
+  assign link_colour = _section.settings.link_colour
+  assign content_position = _section.settings.content_position
+  assign layout_direction = _section.settings.layout_direction
+
+  assign heading_size = _section.settings.heading_size
+
+  if _enable_dots == true
+    assign dot_colour_top = _section.settings.dot_colour_top
+    assign dot_colour_bottom = _section.settings.dot_colour_bottom
+  endif
+
+  if _enable_shapes == true
+    assign shape_background = _section.settings.shape_background
+    assign shape_position = _section.settings.shape_position
+    assign shape_class = 'bg-shape ' | append: shape_position
+  endif
+
+  if _ctvp == true
+    assign main_quote = _section.settings.main_quote
+    assign craft_speciality = _section.settings.craft_speciality
+    assign craft_technique = _section.settings.craft_technique
+  endif
+
+  assign enable_list = false
+  assign list_heading = _section.settings.list_heading
+  assign list_text = _section.settings.list_text
+
+  if list_text != blank
+    assign enable_list = true
+    assign list_items = list_text | split: '</p>'
+  endif
+%}
+
+{{- 'snippet-text-and-image.css' | asset_url | stylesheet_tag -}}
+
+<style>
+  div[data-section-id="{{ _section.id }}"] .container{
+    {%- if layout_direction == 'image-left' -%}
+      --layout-direction: "image content";
+      --grid-columns: var(--image-width) 1fr;
+    {%- else -%}
+      --layout-direction: "content image";
+      --grid-columns: 1fr var(--image-width);
+    {%- endif -%}
+    {%- if shape_position == 'vertical-start' -%}
+      --shape-position: top;
+    {% elsif shape_position == 'vertical-end' -%}
+      --shape-position: bottom;
+    {%- else -%}
+      --shape-position: center;
+    {%- endif -%}
+
+    {%- if enable_list == true -%}
+      --text-alignment: start;
+      --text-margin: 0;
+    {%- else -%}
+      --text-alignment: center;
+      --text-margin: auto;
+    {%- endif -%}
+    {% if contain_image == true %}
+      --image-fit: contain;
+    {% else %}
+      --image-fit: cover;
+    {% endif %}
+  }
+
+  {%- if enable_dots == true -%}
+    div[data-section-id="{{ _section.id }}"] .image::before{
+      background-image: radial-gradient(var(--colour-{{- dot_colour_bottom -}}) 36%, var(--colour-{{- background_colour -}}) 30%);
+    }
+
+    div[data-section-id="{{ _section.id }}"] .image::after{
+      background-image: radial-gradient(var(--colour-{{- dot_colour_top -}}) 36%, var(--colour-{{- background_colour -}}) 30%);
+    }
+  {%- endif -%}
+</style>
+
+<div class="snippet-text-and-image">
+  <div class="container {{ content_position }}">
+    <div class="image {% if enable_dots %}u-dots {% endif %}">
+      {%- if main_image != blank -%}
+        {{- main_image | image_url: width: 800 | image_tag: widths: '400, 600, 800', alt: image.alt, loading: 'lazy' -}}
+      {%- endif -%}
+      {%- if shape_background != blank -%}
+        {{- shape_background | image_url: width: 800 | image_tag: widths: '400, 600, 800', alt: shape_background.alt, loading: 'lazy', class: shape_class -}}
+      {%- endif -%}
+    </div>
+    <div class="content">
+      {%- if header_title != blank and header_image != blank -%}
+        {%-
+          render 'section-header',
+          _heading: header_title,
+          _image: header_image,
+          _offset: false
+        -%}
+      {%- endif -%}
+      <h2 class="u-heading-{{- heading_size }}">{{- main_heading -}}</h2>
+      {%- if _ctvp == true -%}
+        <p class="u-text-xl">{{- main_quote -}}</p>
+        {{- main_text -}}
+        <ol class="presenter-details">
+          <li>
+            {%- render 'icon', _name: 'icon-brush-pen' -%}
+            <dl>
+              <dt><small>Craft speciality</small></dt>
+              <dd class="u-text-xl">{{- craft_speciality -}}</dd>
+            </dl>
+          </li>
+          <li>
+            {%- render 'icon', _name: 'icon-draw-technique' -%}
+            <dl>
+              <dt><small>Craft technique</small></dt>
+              <dd class="u-text-xl">{{- craft_technique -}}</dd>
+            </dl>
+          </li>
+        </ol>
+      {%- else -%}
+        {{- main_text -}}
+      {%- endif -%}
+      {%- if enable_list == true -%}
+        <ul class="c-check-list purple">
+          {%- for list_item in list_items -%}
+            <li>{{- list_item -}}</li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+      {%- if main_link_url != blank and main_link_text != blank -%}
+        <a href="{{- main_link_url -}}" class="c-btn main {{ link_colour }}">{{- main_link_text -}}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+{%- unless request.design_mode -%}
+<style>
+  .territory-switcher .modal-wrapper::before{
+    background-image: url('{{- 'background-noise-02.png' | asset_img_url: '500x' -}}');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: left center;
+  }
+</style>
+
+<div class="snippet-modal-component territory-switcher" data-territory-modal>
+  <div class="modal-wrapper">
+    <div class="modal-header">
+      <p class="u-text-lg heading">{{ 'territory_selector.heading' | t }}</p>
+      <button class="c-btn  modal-close is-svg" aria-label="Close" data-country-switcher-close>
+        {% render 'icon', _name: "icon-close" %}
+      </button>
+    </div>
+    <p class="u-text-xl">{{ 'territory_selector.browsing_from_html' | t }}</p>
+    <form class="c-form add-spacing" id="territory-form">
+      <div class="form-field">
+        <label class="form-label" for="territory-dropdown">{{ 'territory_selector.confirm' | t }}</label>
+        <select class="form-input" id="territory-dropdown">
+          {% for territory in _blocks %}
+            <option name="{{ territory.settings.name }}" value="{{ territory.settings.url }}">
+              {{ territory.settings.name }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+      <button class="c-btn main quaternary" type="submit">{{ 'territory_selector.submit' | t }}</button>
+    </form>
+  </div>
+</div>
+{%- endunless -%}

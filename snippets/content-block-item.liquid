@@ -1,0 +1,41 @@
+{% liquid
+  assign default_link_text = "Shop " | append: _block_settings.collection.title
+  assign image = _block_settings.image | default: _block_settings.collection.image
+  assign heading = _block_settings.heading | default: _block_settings.collection.title
+  assign text = _block_settings.text | default: _block_settings.collection.description
+  assign link_url = _block_settings.link_url | default: _block_settings.collection.url
+  assign link_text = _block_settings.link_text | default: default_link_text
+  assign image_alt = image.alt | default: heading
+%}
+
+{% capture image_content %}
+  {%- if image != black -%}
+    <img src="{{ image | image_url: width: 512 -}}" alt="{{- image_alt -}}" height="286" width="258" loading="lazy">
+  {%- else -%}
+    {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+  {%- endif -%}
+{% endcapture %}
+<div class="snippet-content-block-item">
+  {% if _use_image_only == true and link_url != blank %}
+    <div class="image">
+      <a href="{{ link_url }}" aria-label="{{ image_alt }}">
+        {{ image_content }}
+      </a>
+    </div>
+  {% else %}
+    <div class="image">
+      {{ image_content }}
+    </div>
+  {% endif%}
+  {% if _use_image_only == false %}
+    <div class="block-content">
+      <a href="{{- link_url -}}" class="u-heading-sm heading">{{ heading }}</a>
+        <div class="description">
+          {{- text | truncate: 175 -}}
+        </div>
+      {% if link_url != blank and link_text != blank %}
+        <a href="{{ link_url }}" class="c-btn {{ _link_style }} {{ _link_colour }}">{{ link_text }}</a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

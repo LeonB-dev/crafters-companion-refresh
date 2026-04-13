@@ -1,0 +1,103 @@
+{{ 'section-instagram.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  #section--{{ section.id }}{
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{% endstyle %}
+
+<div id="section--{{ section.id }}" class="instagram">
+  <div class="container">
+    <div class="instagram__header">
+      <div>
+        <h2>{{ section.settings.title }}</h2>
+        <div>{{ section.settings.content }}</div>
+      </div>
+      {% if section.settings.instagram_link %}
+        <a class="c-btn main has-icon" href="{{ section.settings.instagram_link }}">
+          <svg>
+            <use xlink:href="#sprite-icon-instagram"></use>
+          </svg>
+          {{ 'sections.instagram.button' | t }}
+        </a>
+      {% endif %}
+    </div>
+    <div class="instagram__embed">
+      {{ section.settings.instagram_embed }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Instagram Section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title",
+      "default": "Enter title here"
+    },
+    {
+      "type": "richtext",
+      "label": "Content",
+      "id": "content"
+    },
+    {
+      "type": "textarea",
+      "label": "Instagram Embed",
+      "id": "instagram_embed"
+    },
+    {
+      "type": "url",
+      "label": "Instagram Link",
+      "id": "instagram_link"
+    },
+    {
+      "type": "range",
+      "label": "Margin Top",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "label": "Margin Bottom",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "label": "Padding Top",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "label": "Padding Bottom",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Instagram",
+      "category": "Apps"
+    }
+  ]
+}
+{% endschema %}

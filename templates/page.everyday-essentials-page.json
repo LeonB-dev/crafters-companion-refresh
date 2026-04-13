@@ -1,0 +1,176 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false
+      }
+    },
+    "804fd2a7-c0dc-45ba-815d-132272910477": {
+      "type": "featured-image",
+      "settings": {
+        "url": "shopify:\/\/collections\/everyday-essentials",
+        "image": "shopify:\/\/shop_images\/1600_x_400_Everyday_Essentials_d05c7d36-7a41-48e2-8330-ffb1f65f3615.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/1350_x_1080_Everyday_Essentials_079b911d-4c08-4a61-9c30-14e4774d9ab3.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "4b76b20f-3c10-4660-921e-2f86760ff473": {
+      "type": "content-block-trio",
+      "blocks": {
+        "b071d554-f931-4e5a-be8c-ed3a85e76ab0": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Cardstock & Envelopes",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/unnamed_ce6cf1bd-9807-4fb3-807b-03165bcc90bd.jpg",
+            "link_text": "Shop Now",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/everyday-essentials?filter.p.m.custom.everyday_essentials=Card+%26+Envelopes"
+          }
+        },
+        "d79ffca5-922f-4d9a-993d-f328937efea6": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Adhesives & Tapes",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/unnamed_f9494f7a-560e-410c-b117-2a2f9caed60d.jpg",
+            "link_text": "Shop Now",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/everyday-essentials?filter.p.m.custom.everyday_essentials=Adhesive%2Ftapes"
+          }
+        },
+        "a8938ac4-b4f8-4fa7-854e-23d911a3d0a6": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Craft Tools",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/unnamed_c6eb9f9e-a804-4a39-830c-fff6ecbb99aa.jpg",
+            "link_text": "Shop Now",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/everyday-essentials?filter.p.m.custom.everyday_essentials=Tools"
+          }
+        }
+      },
+      "block_order": [
+        "b071d554-f931-4e5a-be8c-ed3a85e76ab0",
+        "d79ffca5-922f-4d9a-993d-f328937efea6",
+        "a8938ac4-b4f8-4fa7-854e-23d911a3d0a6"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "primary"
+      }
+    },
+    "66429881-16cd-4893-87e0-c1641543bc83": {
+      "type": "featured-image",
+      "settings": {
+        "url": "shopify:\/\/blogs\/inspiration",
+        "image": "shopify:\/\/shop_images\/1600_x_400_Get_Inspired_3ee7f494-0b1a-4afd-b5b3-9e0846fa1802.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/1350_x_1080_Get_Inspired_2c33f392-48bc-479a-8396-c3dabff4a77f.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "9fffac15-5441-4ad5-9ca3-e830b4eb4a1b": {
+      "type": "content-block-trio",
+      "blocks": {
+        "deef0536-dc62-48de-970c-7af594175947": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Inkpads",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/unnamed_4a5847f8-45ed-43f7-8cb2-1754e6aaad50.jpg",
+            "link_text": "Shop Now",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/everyday-essentials?filter.p.m.custom.everyday_essentials=Inkpads"
+          }
+        },
+        "57055061-7c43-4850-a117-b16b3481b3f4": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Centura Pearl",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/unnamed_feb4c169-bc84-453f-b642-9681d2986b19.jpg",
+            "link_text": "Shop Now",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/everyday-essentials?filter.p.m.custom.everyday_essentials=Centura+Pearl"
+          }
+        },
+        "53a11ca4-f189-4ea8-a693-569ba4d51e10": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Essential Storage",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/unnamed_6023b3f2-b731-44af-9616-b12e01fbc27b.jpg",
+            "link_text": "Shop Now",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/everyday-essentials?filter.p.m.custom.everyday_essentials=Storage"
+          }
+        }
+      },
+      "block_order": [
+        "deef0536-dc62-48de-970c-7af594175947",
+        "57055061-7c43-4850-a117-b16b3481b3f4",
+        "53a11ca4-f189-4ea8-a693-569ba4d51e10"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "primary"
+      }
+    },
+    "a5104f03-4d51-4d97-ba11-9c3986903fba": {
+      "type": "featured-image",
+      "settings": {
+        "url": "shopify:\/\/pages\/crafters-tv-schedule",
+        "image": "shopify:\/\/shop_images\/1600_x_400_CTV_9cc9c25f-82cc-4344-a4ed-e91fca4fba04.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/1350_x_1080_CTV_9a57ed99-0cc2-4be9-a1f9-15ea48631bc5.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "4aaa8856-9ffa-4019-9910-ebc9211f7de3": {
+      "type": "featured-products",
+      "blocks": {
+        "1f09b91f-2a22-478a-b199-74258246b048": {
+          "type": "collection",
+          "settings": {
+            "collection": "everyday-essentials"
+          }
+        }
+      },
+      "block_order": [
+        "1f09b91f-2a22-478a-b199-74258246b048"
+      ],
+      "settings": {
+        "heading": "Top Selling Craft Essentials",
+        "heading_alignment": false,
+        "link_url": "",
+        "link_text": "",
+        "grid_size": "sm",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "804fd2a7-c0dc-45ba-815d-132272910477",
+    "4b76b20f-3c10-4660-921e-2f86760ff473",
+    "66429881-16cd-4893-87e0-c1641543bc83",
+    "9fffac15-5441-4ad5-9ca3-e830b4eb4a1b",
+    "a5104f03-4d51-4d97-ba11-9c3986903fba",
+    "4aaa8856-9ffa-4019-9910-ebc9211f7de3"
+  ]
+}

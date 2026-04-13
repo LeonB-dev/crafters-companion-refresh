@@ -1,0 +1,217 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "8c3b4c34-c6bf-42aa-afc3-e5299e365cf8": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Embossing Folder Storage",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "4c0507f6-98a0-45fc-ae95-e6adac3b41e2": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Choosing the right Embossing Folder Storage",
+        "small_text": "<p>Embossing folders are an important part of every crafters stash of tools. Because they are almost all made of the same clear plastic, they can be a pain to recognize when they're all just dumped into a box, bin or drawer.  Watch the video below for a couple of quick tips on how to organize and store your embossing folders.<\/p><p>At Totally-Tiffany we offer a variety of options for embossing folder storage.  If you craft at home, you may want to add an embossing folder section to your ScrapRack.  You can also use our Flippin' Storage Pages to organize embossing folders in our Spinder Binder.  This is a great option if you travel with your embossing folders.<\/p><p>If you're looking for embossing folder storage on a shelf, the 4x6 or 5x7 Fab Files are an inexpensive and versatile options.If you've got shelf space, don't over look the Desk Maid Die, Stamp, & Supply organizer.  This handy file box will keep your embossing folders visible and accessible.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "f821a4cb-8435-4a4f-9ad1-3049b565ebae": {
+      "type": "image-text-slider",
+      "blocks": {
+        "7fcfb0d7-7c56-4058-b49f-95c198335179": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "4x6 Fab File  or  5x7 Fab File",
+            "text": "<p>Each box will hold up to 25 embossing folders.<\/p><p>Use our <a href=\"https:\/\/totally-tiffany.com\/shut-your-flap-small.html\">Shut Your Flap tabs <\/a>to label your embossing folders.<\/p>",
+            "link_text": "View All Fab Files",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Fab+Files",
+            "image": "shopify:\/\/shop_images\/SM28-MD29-FF-Organize-Embossing-Folders5x7-or-4x6-Fab-File.jpg"
+          }
+        },
+        "cb431bfd-96f7-451a-b5e9-ec772cce5963": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Fantastic 5 Basic Storage page",
+            "text": "<p>Holds 4 to 8,  5x7 embossing folders.<\/p>",
+            "link_text": "View All ScrapRack",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Scraprack",
+            "image": "shopify:\/\/shop_images\/Organize-5x7-Embossing-Folders-in-P72-5-pocket-ScrapRack-page-from-Totally-Tiffany.jpg"
+          }
+        },
+        "0168f180-a9c7-4b8c-82da-e2985e3cf2e1": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Fabulous Four ScrapRack Pages",
+            "text": "<p>Perfect for border embossing folders, up to 12\" long.<\/p>",
+            "link_text": "View All ScrapRack",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Scraprack",
+            "image": "shopify:\/\/shop_images\/TT_P42.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "7fcfb0d7-7c56-4058-b49f-95c198335179",
+        "cb431bfd-96f7-451a-b5e9-ec772cce5963",
+        "0168f180-a9c7-4b8c-82da-e2985e3cf2e1"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "b1f8ec4d-bfbf-49c7-a33f-d0685bb9828b": {
+      "type": "image-text-slider",
+      "blocks": {
+        "7421b4ab-6084-4484-a05e-fca225dcb132": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Irene Buddy Bag or Karen Buddy Bag",
+            "text": "<p>Will hold up to 25 embossing folders - multiple sizes.<\/p><p>Handy to take to events. Stores easily on a shelf.<\/p>",
+            "link_text": "View All EZ2 Organizers",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize",
+            "image": "shopify:\/\/shop_images\/BSFP-SNG123.jpg"
+          }
+        },
+        "5c5b1696-d3b4-4f62-bd3c-9ec48077b229": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "12X12 Craft Binder",
+            "text": "<p>Customize with ScrapRack storage pages.<\/p>",
+            "link_text": "View All ScrapRack",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Scraprack",
+            "image": "shopify:\/\/shop_images\/Organize-Embossing-Folders-12x12-binder-Pocket-pages-SDRBDR-SYF-P66-P72-SQ.jpg"
+          }
+        },
+        "8401ec01-e42d-471c-9944-cfc940df827a": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Die, Stamp, & Supply Organizer",
+            "text": "<p>Customize the divider sections to organize Embossing Folders in all sizes. Each section will hold up to 12 embossing folders - over 100 total.<\/p>",
+            "link_text": "View All DeskMaid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=DeskMaid",
+            "image": "shopify:\/\/shop_images\/DSST-organize-embossing-folders_6cad7171-36dd-442a-8403-04e5991e32ed.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "7421b4ab-6084-4484-a05e-fca225dcb132",
+        "5c5b1696-d3b4-4f62-bd3c-9ec48077b229",
+        "8401ec01-e42d-471c-9944-cfc940df827a"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "b17bd2a5-acc6-429c-9495-5a799b58a415": {
+      "type": "image-text-slider",
+      "blocks": {
+        "326e750f-38ce-42cf-bc9d-50c1265fb004": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Shut Your Flap Tabs - Small",
+            "text": "<p>Our Shut Your Flap Small tabs are the perfect labeling solution for embossing folders. Use the me with all of the storage items.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/SYFSM.jpg"
+          }
+        },
+        "51095cc3-34a2-47a2-aa0d-82337c2ce1bb": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Shut Your Flap Tabs - Large",
+            "text": "<p>Our Shut Your Flap Large tabs are perfect for keeping your ScrapRack page pocket flaps from bending or wrinkling.<\/p>",
+            "link_text": "",
+            "link_url": "",
+            "image": "shopify:\/\/shop_images\/Organize-Embossing-Folders-12x12-binder-Pocket-pages-SDRBDR-SYF-P66-P72-SQ.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "326e750f-38ce-42cf-bc9d-50c1265fb004",
+        "51095cc3-34a2-47a2-aa0d-82337c2ce1bb"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "d86d4d4d-e618-4fcf-ac92-5daff5bf59d6": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Tips & Tricks",
+        "small_text": "",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "b3df87ff-a533-48f7-bc82-13a877d20515": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=eGrvZUS2ObI&embeds_referring_euri=https%3A%2F%2Ftotally-tiffany.com%2F&source_ve_path=OTY3MTQ&feature=emb_imp_woyt",
+        "heading": "",
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "8c3b4c34-c6bf-42aa-afc3-e5299e365cf8",
+    "4c0507f6-98a0-45fc-ae95-e6adac3b41e2",
+    "f821a4cb-8435-4a4f-9ad1-3049b565ebae",
+    "b1f8ec4d-bfbf-49c7-a33f-d0685bb9828b",
+    "b17bd2a5-acc6-429c-9495-5a799b58a415",
+    "d86d4d4d-e618-4fcf-ac92-5daff5bf59d6",
+    "b3df87ff-a533-48f7-bc82-13a877d20515"
+  ]
+}

@@ -1,0 +1,200 @@
+{%- liquid
+  assign template_name = 'section-search'
+  assign products_per_page = section.settings.products_per_page
+  assign enable_sorting = section.settings.enable_sorting
+  assign enable_filters = section.settings.enable_filters
+  assign enable_count = section.settings.enable_count
+
+  assign terms = search.terms | escape
+  assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+-%}
+
+{{- 'section-search.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-collection-filters.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-product-item.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-article-item.css' | asset_url | stylesheet_tag -}}
+{%- if paginate.pages > 1 -%}
+  {{- 'snippet-pagination.css' | asset_url | stylesheet_tag -}}
+{%- endif -%}
+{%- if enable_filters -%}
+  <script src="{{- 'section-search.js' | asset_url -}}" defer="defer"></script>
+{% endif %}
+
+<div class="filters-overlay" data-filters-overlay></div>
+{% comment %}
+  <pre>
+    search.results_count: {{ search.results_count  }}
+    terms: {{ terms }}
+    search_url: {{ search_url }}
+  </pre>
+{% endcomment %}
+<div
+  class="{{- template_name }} u-space-above-sm u-space-below-lg"
+  data-section-type="{{- template_name }}"
+  data-section-id="{{ section.id }}"
+  aria-labelledby="search-title"
+  {% if section.settings.enable_ajax %}
+    data-search-ajax
+  {% endif %}
+>
+  {%- paginate search.results by products_per_page -%}
+    <header class="header">
+      <div class="container">
+        <h1 class="u-heading-md" id="search-title">
+          {%- unless search.performed -%}
+            Search
+          {%- else -%}
+            Search Results
+          {%- endunless -%}
+        </h1>
+        {%- if search.performed -%}
+          <p id="search-description">
+            {% if search.results_count == 0 %}
+              Your search for "{{ search.terms }}" did not yield any results.
+            {%- else -%}
+              Your search for "{{ search.terms }}" returned {{ search.results_count }} results.
+            {%- endif -%}
+          </p>
+        {%- endif -%}
+      </div>
+    </header>
+    <div class="container">
+      {% if search.results_count > 0 %}
+        <div class="wrapper">
+          {%- if enable_filters -%}
+            <div class="filters">
+              <button class="filters-open c-btn main tertiary has-icon fw" type="button" aria-controls="search-filters" aria-expanded="false" data-search-filters-open>
+                {%- render 'icon', _name: 'icon-filters' -%}
+                {{ 'template.search.filters' | t }}
+                {{ paginate.items }}
+                {{ 'template.search.products' | t }}
+              </button>
+              {%- render 'storefront-filters', results: search, _total_items: paginate.items, _enable_sorting: section.settings.enable_sorting -%}
+            </div>
+          {%- endif -%}
+          <div class="search-content {% if enable_filters %} filters-enabled{% endif %}" id="results-container">
+            {% if section.settings.enable_infinite_results %}
+              <div class="pagination prev" data-search-pagination-less>
+                {%- if paginate.previous -%}
+                  {%- assign previous_url = paginate.previous.url | default: '#' -%}
+                  <a class="c-btn main tertiary center" href="{{ previous_url | url }}" data-search-pagination-less-btn>{{ 'Load previous' | escape }}</a>
+                {%- endif -%}
+              </div>
+            {% endif %}
+            <div class="grid" data-search-products>
+              {%- for search_item in search.results -%}
+                {% if search_item.object_type == 'product' %}
+                  {% render 'stmt-product-card', product: search_item -%}
+                {% elsif search_item.object_type == 'article' -%}
+                  {%- render 'article-item', _article: search_item -%}
+                {%- elsif search_item.object_type == 'page' -%}
+                  {% liquid
+                    assign page = search_item
+                    assign page_url = page.url
+                    assign page_heading = page.title
+                    assign page_image = page.metafields.custom.featured_image
+                    assign page_ribbon = page.metafields.promotion.lozenge_text
+                  %}
+                  {%- render 'category-item', _url: page_url, _image: page_image, _heading: page_heading, _ribbon: page_ribbon -%}
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+            {% if section.settings.enable_infinite_results %}
+              <div class="pagination next" data-search-pagination-more>
+                {%- if paginate.next -%}
+                  {%- assign next_url = paginate.next.url | default: '#' -%}
+                  <a class="c-btn main tertiary center" href="{{ next_url | url }}" data-search-pagination-more-btn>{{ 'Load more' | escape }}</a>
+                {%- endif -%}
+              </div>
+            {% else %}
+              <div data-search-pagination>
+                {%- if paginate.pages > 1 -%}
+                  {%- render 'pagination', paginate: paginate -%}
+                {%- endif -%}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {%- elsif search.performed -%}
+        <div data-search-empty>
+          <p class="u-heading-xs">{{- 'template.search.empty' | t -}}</p>
+        </div>
+      {%- else -%}
+        <p>{{- 'template.search.no_search_performed' | t -}}</p>
+      {%- endif -%}
+    </div>
+  {%- endpaginate -%}
+</div>
+<script type="text/javascript">
+  window.theme.enableInfiniteResults = {{ section.settings.enable_infinite_results }};
+  window.theme.paginateValue = {{ products_per_page }};
+</script>
+
+{% schema %}
+{
+  "name": {
+    "de": "Suchseite",
+    "en": "Search",
+    "es": "Búsqueda",
+    "fr": "Recherche",
+    "it": "Ricerca",
+    "pt-BR": "Pesquisa"
+  },
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_ajax",
+      "default": true,
+      "label": "Enable AJAX",
+      "info": "Enables real-time filtering, sorting and pagination using AJAX."
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filters",
+      "default": true,
+      "label": "Enable Filters"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "default": true,
+      "label": "Enable Sorting"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_infinite_results",
+      "default": true,
+      "label": "Enable Infinite Load More",
+      "info": "Loads more results on same page with Load More/Load Less buttons instead of page numbers"
+    },
+    {
+      "type": "header",
+      "content": "Products"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "label": "Products per Page",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "products_per_row",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Products per Row",
+      "default": 3
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

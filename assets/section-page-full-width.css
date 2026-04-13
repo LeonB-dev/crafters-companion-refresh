@@ -1,0 +1,16 @@
+.section-page-full-width .container {
+  display: flex;
+  flex-direction: column;
+}
+.section-page-full-width .container h1 {
+  width: 100%;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .section-page-full-width .container h1 {
+    max-width: var(--rte-max-width);
+  }
+}
+.section-page-full-width .c-rte {
+  max-width: none;
+}

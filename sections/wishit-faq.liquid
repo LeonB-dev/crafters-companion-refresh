@@ -1,0 +1,301 @@
+<div class="wishit-faq-section-holder" style="background-color: {{ section.settings.section-background }}">
+  <div class="page-width">
+    {% if section.settings.main-heading != blank %}
+      <h2 style="font-size: {{ section.settings.main-heading-size }}px; color: {{ section.settings.main-heading-color }};">
+        {{ section.settings.main-heading }}
+      </h2>
+    {% endif %}  
+    <div class="wishit-faq-inner-holder">
+      {% for block in section.blocks %}
+        {% if block.settings.faq-heading != blank %}
+          <div class="wishit-eachFaq close">
+            <h4 class="wishit-title_accor" style="font-size: {{ section.settings.question-size }}px; color: {{ section.settings.question-color }}; background-color: {{ section.settings.question-color-bg }}; ">{{ block.settings.faq-heading }}</h4>
+            <div class="wishit-accordion-content" style="font-size: {{ section.settings.answer-size }}px; color: {{ section.settings.answer-color }}; background-color: {{ section.settings.answer-color-bg }};">
+              {{ block.settings.faq-content }}
+              {% if block.settings.faq-image != blank %}
+                <div class="wishit-faq-content-image">
+                    <img src="{{ block.settings.faq-image | img_url: 'master' }}" />
+                </div>
+              {% endif %}  
+            </div> 
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  if (typeof(wishit_acc) === 'undefined') {
+    var wishit_acc = document.getElementsByClassName("wishit-title_accor");
+    setTimeout(function () {
+      for (let i = 0; i < wishit_acc.length; i++) {
+        wishit_acc[i].addEventListener("click", function () {
+          const currentFaq = this.closest(".wishit-eachFaq");
+
+          // Close all open FAQs
+          const allFaqs = document.querySelectorAll(".wishit-eachFaq");
+          allFaqs.forEach(faq => {
+            if (faq !== currentFaq) {
+              faq.classList.remove("open");
+              faq.classList.add("close");
+            }
+          });
+
+          // Toggle clicked FAQ
+          currentFaq.classList.toggle("open");
+          currentFaq.classList.toggle("close");
+        });
+      }
+    }, 2000);
+  }
+</script>
+
+{%- style -%}
+.wishit-faq-section-holder h4 { 
+  font-size: 24px;
+  margin: 0;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.wishit-eachFaq.close h4:before { 
+  content: '+'; 
+  width: 20px; 
+  height: 20px;
+  position: absolute;
+  top: 20%;
+  right: 10px;
+}
+
+.wishit-eachFaq.open h4:before { 
+  content: '-'; 
+  width: 20px; 
+  height: 20px;
+  position: absolute;
+  top: 20%;
+  right: 10px;
+}
+
+.wishit-eachFaq .wishit-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 15px;
+  line-height: 1.6;
+  word-break: normal;
+  overflow-wrap: break-word;
+  white-space: normal;
+  width: 100%;
+  max-width: 100%;
+}
+
+.wishit-eachFaq.open .wishit-accordion-content {
+  max-height: 1000px;
+  padding: 15px;
+}
+
+.wishit-accordion-content p {
+  margin: 0 0 10px;
+  widows: 2;
+  orphans: 2;
+}
+
+.wishit-accordion-content *:last-child {
+  margin-bottom: 0;
+}
+
+.wishit-eachFaq .wishit-title_accor { 
+  cursor: pointer;
+}
+
+.wishit-faq-section-holder {
+  padding: 50px 0;
+}
+
+.wishit-faq-section-holder h2 {
+  margin-bottom: 50px;
+  text-align: center; 
+  font-weight: 600;
+}
+
+.wishit-eachFaq {
+  margin-bottom: 2px;
+}
+
+.wishit-faq-content-image {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.wishit-faq-content-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Override default page-width restriction */
+.wishit-faq-section-holder .page-width {
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .wishit-faq-section-holder h4 {
+    padding: 10px 10px;    
+  }
+  .wishit-faq-section-holder h2 {
+    margin-bottom: 35px;
+  }
+  .wishit-eachFaq .wishit-accordion-content {
+    padding: 15px;
+  }
+  .wishit-faq-content-image {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+  @media only screen and (max-width: 767px) {
+  .wishit-eachFaq {
+    display: block;
+  }
+
+  .wishit-eachFaq .wishit-accordion-content {
+    max-height: none !important;
+    padding: 15px !important;
+    overflow: visible !important;
+  }
+
+  .wishit-title_accor {
+    cursor: default;
+  }
+
+  .wishit-eachFaq h4:before {
+    display: none;
+  }
+}
+{%- endstyle -%}
+
+
+
+{% schema %}
+  {
+    "name": "Wishit FAQ",
+    "settings": [
+      {
+        "type": "color",
+        "id": "section-background",
+        "default": "transparent",
+        "label": "Section Background"
+      },
+      {
+        "type": "text",
+        "id": "main-heading",
+        "label": "Main Heading"
+      },
+      {
+        "type": "range",
+        "id": "main-heading-size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Main Heading Size",
+        "default": 28
+      },
+      {
+        "type": "color",
+        "id": "main-heading-color",
+        "label": "Main Heading Color"
+      },
+      {
+        "type": "range",
+        "id": "question-size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Question Size",
+        "default": 20
+      },
+      {
+        "type": "color",
+        "id": "question-color",
+        "label": "Question Color"
+      },
+      {
+        "type": "color",
+        "id": "question-color-bg",
+        "label": "Question Color Background"
+      },
+      {
+        "type": "range",
+        "id": "answer-size",
+        "min": 12,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Answer Size",
+        "default": 16
+      },
+      {
+        "type": "color",
+        "id": "answer-color",
+        "label": "Answer Color"
+      },
+      {
+        "type": "color",
+        "id": "answer-color-bg",
+        "label": "Answer Color Background"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Faq",
+        "type": "faq",
+        "settings": [
+          {
+            "type": "text",
+            "id": "faq-heading",
+            "label": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "faq-content",
+            "label": "Answer"
+          },
+          {
+            "type": "image_picker",
+            "id": "faq-image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Wishit FAQ",
+        "blocks": [
+          {
+            "type": "faq",
+            "settings": 
+              {
+              "faq-heading": "FAQ Question 1",
+              "faq-content": "<p>Answer 1<\/p>"
+            }
+          },{
+            "type": "faq",
+            "settings": 
+              {
+              "faq-heading": "FAQ Question 2",
+              "faq-content": "<p>Answer 2<\/p>"
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

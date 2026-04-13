@@ -1,0 +1,198 @@
+{% assign template_name = 'section-header-usps' %}
+
+{% style %}
+   .section-header-usps .swiper-container {
+     position: relative;
+     background-color: {{ section.settings.background_color }};
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+   }
+
+   .header-usps-wrapper .swiper-slide a,
+   .header-usps-wrapper .swiper-slide p {
+     text-decoration:none;
+     color: {{ section.settings.text_color }};
+   }
+
+   .section-header-usps .swiper-button-prev,
+   .section-header-usps .swiper-button-next {
+       color: {{ section.settings.text_color }};
+       width: 16px;
+       height: 16px;
+       border-radius:50%;
+       top: 70%;
+       background-color: {{ section.settings.background_color | color_lighten: 20 }};
+     }
+
+  .section-header-usps .swiper-button-prev:after,
+  .section-header-usps .swiper-button-next:after {
+       font-size:8px;
+     }
+
+   .section-header-usps .swiper-container .swiper-pagination span {
+      background-color: {{ section.settings.text_color }};
+    }
+
+    .section-header-usps .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+      background-color: {{ section.settings.background_color | color_lighten: 20 }};
+    }
+
+    @media (min-width: 1280px) {
+      .swiper-wrapper.header-usps-wrapper {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+{% endstyle %}
+
+{{- 'section-header-usps.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-header-usps.js' | asset_url -}}" defer></script>
+
+<div class="{{ template_name }} swiper-grid" data-section-type="{{ template_name }}" data-section-id="{{ section.id }}">
+  <div
+    class="swiper-container"
+    data-usp-slider
+    data-slides-per-view-sm="{{ section.settings.slides_per_view_sm | default: 1 }}"
+    data-slides-per-view-md="{{ section.settings.slides_per_view_md | default: 2 }}"
+    data-slides-per-view-xl="{{ section.settings.slides_per_view_xl | default: 4 }}"
+  >
+    <div class="swiper-wrapper header-usps-wrapper">
+      {%- for block in section.blocks -%}
+        {% liquid
+          assign icon = block.settings.icon
+          assign text = block.settings.text
+          assign link = block.settings.usp_link
+          if block.settings.wider_icon
+            assign iconWidth = 'width: auto'
+          else
+            assign iconWidth = 'width: 1.5rem'
+          endif
+        %}
+
+        <div class="swiper-slide{% if icon == blank %} no-icon{% endif %}" data-usp-slide>
+          {%- if icon != blank -%}
+            <span>
+              {{- icon | image_url: width: 25 | image_tag: loading: 'eager', style: iconWidth -}}
+            </span>
+          {% endif %}
+          {% if link != blank %}
+            <a href="{{ link }}">{{ text }}</a>
+          {% else %}
+            {{ text }}
+          {% endif %}
+        </div>
+      {%- endfor -%}
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Header Brand USPs",
+  "tag": "section",
+  "class": "overflow-hidden",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#603C8E"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "default": 20,
+      "min": 10,
+      "max": 100,
+      "step": 2
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "default": 20,
+      "min": 0,
+      "max": 100,
+      "step": 2
+    },
+    {
+      "type": "range",
+      "id": "slides_per_view_sm",
+      "label": "Slides Per View (SM)",
+      "default": 1,
+      "min": 1,
+      "max": 3,
+    },
+    {
+      "type": "range",
+      "id": "slides_per_view_md",
+      "label": "Slides Per View (MD)",
+      "default": 2,
+      "min": 1,
+      "max": 3,
+    },
+    {
+      "type": "range",
+      "id": "slides_per_view_xl",
+      "label": "Slides Per View (XL)",
+      "default": 4,
+      "min": 1,
+      "max": 5,
+    },
+  ],
+  "blocks": [
+    {
+      "type": "brand_usps",
+      "name": "Brand USPs",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon",
+          "info": "SVG is the preference, however png images are accepted. The icon must be on a transparent background."
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "usp_link",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "wider_icon",
+          "label": "Wider Icon?",
+          "info": "Check this to double the width of the image - primarily used for reviews"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header Brand USPs",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

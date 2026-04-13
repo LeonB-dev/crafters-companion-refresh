@@ -1,0 +1,53 @@
+.snippet-category-item {
+  background-color: var(--colour-white);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--colour-emperor);
+  overflow: hidden;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  width: var(--category-item-width-sm);
+}
+@media (min-width: 1024px) {
+  .snippet-category-item {
+    width: var(--category-item-width-lg);
+  }
+}
+.snippet-category-item .image img,
+.snippet-category-item .image svg {
+  height: auto;
+  width: 100%;
+  aspect-ratio: 6/7;
+  object-fit: cover;
+  transition: transform var(--transition-duration) var(--transition-timing) 0s;
+  position: relative;
+  z-index: 1;
+}
+.snippet-category-item a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--colour-emperor);
+  background-color: var(--colour-white);
+  border-top: 1px solid var(--colour-emperor);
+  z-index: 5;
+}
+.snippet-category-item a span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-right: 1rem;
+}
+.snippet-category-item a svg {
+  width: 1rem;
+  height: 0.5rem;
+  fill: var(--colour-royal-purple);
+  flex-shrink: 0;
+}
+.snippet-category-item:hover img, .snippet-category-item:focus img {
+  transform: scale(1.1);
+}

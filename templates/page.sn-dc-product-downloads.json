@@ -1,0 +1,178 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "70b0f150-21d6-4a38-8bbf-e6d381acc350": {
+      "type": "brand-landing-header",
+      "settings": {
+        "edge_version": "none"
+      }
+    },
+    "f1e1d9ad-0830-48a4-9950-ae47b93be5ac": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "YOUR CREATIVE JOURNEY CONTINUES HERE…",
+        "small_text": "<p><strong>Thank you for buying a Fan-Art Like a Pro Art Kit. <\/strong>This is your exclusive access to expert hints and tips, deep-dive tutorials, downloadable content and more. <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "33a3ccf7-b705-43e1-9e97-645bbcc364df": {
+      "type": "image-feature",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/IMG_9570-2-Enhanced-NR_4508c3a1-9cf9-48fe-bb93-337c0f3d4150.jpg",
+        "heading": "ALL THE ESSENTIAL KNOW-HOW YOU NEED…",
+        "text": "<p>You’ve got the right tools, now you just need the right know-how! All the basics are covered here along with useful downloadable content. We’ll be making regular updates so be sure to check back soon. <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "disable_height": true,
+        "content_placement": "left"
+      }
+    },
+    "9ddb0bcd-9c5a-4644-8c0c-d6a02eccf4a8": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "COLOUR REFERENCE SHEETS",
+        "small_text": "<p> These handy download packs include fully coloured-up examples in each character design, showing you where to leave highlights or add shade and which colours our artist used where. Remember these are just meant as a guide - part of the fun of fan-art is expressing yourself, so feel free to explore and try things out!<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "88197f2a-1a84-40af-97b0-b5462f2f0d5d": {
+      "type": "downloads",
+      "blocks": {
+        "89053d6d-7bd1-43ab-ad21-6ee4d4a8767e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/DC_Batman.pdf?v=1697805775",
+            "image": "shopify:\/\/shop_images\/Batman.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – BATMAN",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "1c90bf64-d3b5-41af-a228-b6ad0786c40d": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/DC_The_Joker.pdf?v=1697805775",
+            "image": "shopify:\/\/shop_images\/Joker.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – THE JOKER",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "77b88c79-dcbc-48fa-98cf-3918ecbf4b5b": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/DC_Harley_Quinn.pdf?v=1697805775",
+            "image": "shopify:\/\/shop_images\/Harley_Quinn.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – HARLEY QUINN",
+            "text": "",
+            "download_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "89053d6d-7bd1-43ab-ad21-6ee4d4a8767e",
+        "1c90bf64-d3b5-41af-a228-b6ad0786c40d",
+        "77b88c79-dcbc-48fa-98cf-3918ecbf4b5b"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "md"
+      }
+    },
+    "2819ddb4-5a7f-4fc0-9fb0-9a7b38d8148d": {
+      "type": "downloads",
+      "blocks": {
+        "d4f7874e-aa24-4bf7-867f-603bca80200f": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/DC_Superman.pdf?v=1697805775",
+            "image": "shopify:\/\/shop_images\/Superman.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – SUPERMAN",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "d422f681-79b6-4c2f-b4f8-0de437a0d2ea": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/DC_Wonder_Woman.pdf?v=1697805775",
+            "image": "shopify:\/\/shop_images\/Wonder_Woman.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – WONDER WOMAN",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "7acb94c4-d89c-423e-ab8a-ce37b09b0293": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/DC_The_Flash.pdf?v=1697805775",
+            "image": "shopify:\/\/shop_images\/Flash.jpg",
+            "file_name": "DOWNLOADABLE REFERENCE PACK – THE FLASH",
+            "text": "",
+            "download_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "d4f7874e-aa24-4bf7-867f-603bca80200f",
+        "d422f681-79b6-4c2f-b4f8-0de437a0d2ea",
+        "7acb94c4-d89c-423e-ab8a-ce37b09b0293"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "md"
+      }
+    },
+    "6b7cb000-a710-4e1c-8139-40c8f780d721": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/IMG_9091-2-Enhanced-NR_0df0302c-0d99-42ec-9a87-c022e2a4fca8.jpg",
+        "main_heading": "Start with the basics…",
+        "main_text": "<p>The short video opposite shows all the techniques from the Quick-Start Guide included with your kit. Master these and you’ll be well on your way to creating fan-art like a pro!<\/p>",
+        "main_link_url": "https:\/\/www.youtube.com\/watch?v=oR2vpn5eVrg",
+        "main_link_text": "Watch Now",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "quinary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    }
+  },
+  "order": [
+    "70b0f150-21d6-4a38-8bbf-e6d381acc350",
+    "f1e1d9ad-0830-48a4-9950-ae47b93be5ac",
+    "33a3ccf7-b705-43e1-9e97-645bbcc364df",
+    "9ddb0bcd-9c5a-4644-8c0c-d6a02eccf4a8",
+    "88197f2a-1a84-40af-97b0-b5462f2f0d5d",
+    "2819ddb4-5a7f-4fc0-9fb0-9a7b38d8148d",
+    "6b7cb000-a710-4e1c-8139-40c8f780d721"
+  ]
+}

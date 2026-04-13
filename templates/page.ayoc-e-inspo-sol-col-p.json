@@ -1,0 +1,185 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false
+      }
+    },
+    "d404a13b-50e5-4aca-96aa-d6bc5a481b39": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Everyday Inspiration : Solid Colour Papers",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "d0c1b538-b597-4eaa-90a7-7f1a63252afa": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Click on the image of your choice to save and print as desired.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "c9f910d1-7193-49c6-9bbf-8b9666f111e5": {
+      "type": "downloads",
+      "blocks": {
+        "6983cc02-65e8-4c4b-9d0a-5f3ef22749df": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Coloured%20Cardstock\/ayoc_ei_cc%20%281%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_cc-1.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "537b42ad-3f47-4b5c-840a-ff6317e14303": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Coloured%20Cardstock\/ayoc_ei_cc%20%282%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_cc-2.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "e6fb2b8b-3db7-4bd5-a20b-b0085bf410b0": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Coloured%20Cardstock\/ayoc_ei_cc%20%283%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_cc-3.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "f3d5f9a8-cdd4-4e09-a6d2-a125b5331503": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Coloured%20Cardstock\/ayoc_ei_cc%20%284%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_cc-4.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "c0565339-1f72-41c3-8e14-b03867c25395": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Coloured%20Cardstock\/ayoc_ei_cc%20%285%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_cc-5.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "2dced1aa-74bf-428c-b954-574a767dcb9c": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Coloured%20Cardstock\/ayoc_ei_cc%20%286%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_cc-6_1.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "7a0f6356-1a48-4984-b4e6-05a9c5acb8cd": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Coloured%20Cardstock\/ayoc_ei_cc%20%287%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_cc-7.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "6f395109-3e0f-446d-bd58-7188ead35bae": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Coloured%20Cardstock\/ayoc_ei_cc%20%288%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_cc-8.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "6292d209-daf7-4413-b5af-2289886afb00": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Coloured%20Cardstock\/ayoc_ei_cc%20%289%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_cc-9.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "6983cc02-65e8-4c4b-9d0a-5f3ef22749df",
+        "537b42ad-3f47-4b5c-840a-ff6317e14303",
+        "e6fb2b8b-3db7-4bd5-a20b-b0085bf410b0",
+        "f3d5f9a8-cdd4-4e09-a6d2-a125b5331503",
+        "c0565339-1f72-41c3-8e14-b03867c25395",
+        "2dced1aa-74bf-428c-b954-574a767dcb9c",
+        "7a0f6356-1a48-4984-b4e6-05a9c5acb8cd",
+        "6f395109-3e0f-446d-bd58-7188ead35bae",
+        "6292d209-daf7-4413-b5af-2289886afb00"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "lg"
+      }
+    },
+    "f6ab093b-7502-4bd1-a4aa-cc06e9e3f09b": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to Downloads.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft-everyday-inspiration-downloads",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "09dd9c6d-1290-4c81-9fbc-cfa3f0c39f07": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to A Year of Craft",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d404a13b-50e5-4aca-96aa-d6bc5a481b39",
+    "d0c1b538-b597-4eaa-90a7-7f1a63252afa",
+    "c9f910d1-7193-49c6-9bbf-8b9666f111e5",
+    "f6ab093b-7502-4bd1-a4aa-cc06e9e3f09b",
+    "09dd9c6d-1290-4c81-9fbc-cfa3f0c39f07"
+  ]
+}

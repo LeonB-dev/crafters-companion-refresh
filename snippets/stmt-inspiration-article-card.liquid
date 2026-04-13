@@ -1,0 +1,27 @@
+{% liquid
+  assign read_time = 0
+  assign blog_url = article.url | split: '/'
+  assign blog_name = blogs[blog_url[2]].title
+
+  assign word_count = article.content | strip_html | split: ' ' | size
+  assign read_time = word_count | divided_by: 150 | ceil
+
+  if read_time == 0
+    assign read_time = 1
+  endif
+%}
+
+<a href="{{ article.url }}" class="inspiration__article inspiration__article--{{ block.id }} inspiration__article--{{ article_list_index }}">
+  <div class="inspiration__article-header">
+    <span class="inspiration__article-type">{{ blog_name }}</span>
+    <span class="inspiration__article-read-time">
+      {% render 'stmt-icon-stopwatch', class: 'inspiration__article-read-time-icon' %}
+      {{ 'template.article.read_time_with_count' | t: count: read_time }}
+    </span>
+  </div>
+  <h4 class="inspiration__article-title">{{ article.title }}</h4>
+  <div class="inspiration__article-footer">
+    <span class="inspiration__article-read-now">{{ 'template.article.read_now' | t }}</span>
+    <span class="inspiration__article-footer-type">{{ blog_name }}</span>
+  </div>
+</a>

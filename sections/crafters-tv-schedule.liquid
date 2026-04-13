@@ -1,0 +1,215 @@
+{%- liquid
+  assign template_name = 'section-crafters-tv-schedule'
+
+  assign day_in_seconds = 86400
+  assign current_time = 'now' | date: '%s'
+  assign time = 'now' | date: '%s' | plus: 0
+  assign current_day = time | date: '%u' | minus: 1
+  assign monday = day_in_seconds | times: current_day | times: -1 | plus: time
+-%}
+
+{{- 'section-crafters-tv-schedule.css' | asset_url | stylesheet_tag -}}
+<script defer src="{{- 'section-crafters-tv-schedule.js' | asset_url -}}"></script>
+
+<style>
+  /* Remove wrapper backgrounds and enforce text color */
+  .section-crafters-tv-schedule .wrapper,
+  .section-crafters-tv-schedule .wrapper::before,
+  .section-crafters-tv-schedule .wrapper::after {
+    background: none !important;
+    content: none !important;
+    color: inherit !important;
+  }
+
+  /* Banner buttons inherit colour */
+  .section-crafters-tv-schedule .swiper-container .swiper-wrapper .swiper-slide button {
+    color: inherit !important;
+  }
+  .section-crafters-tv-schedule .swiper-container .swiper-wrapper .swiper-slide button.is-active {
+    color: inherit !important;
+    background: rgba(253, 255, 252, 0.12);
+  }
+
+  /* Show item colours */
+  .section-crafters-tv-schedule .broadcasts .broadcast .details .show-heading {
+    color: {{ section.settings.show_name_color }} !important;
+  }
+  .section-crafters-tv-schedule .broadcasts .broadcast .details .showtime {
+    color: {{ section.settings.show_time_color }} !important;
+  }
+  .section-crafters-tv-schedule .broadcasts .broadcast {
+    border-bottom-color: {{ section.settings.show_separator_color }} !important;
+  }
+</style>
+
+<div
+  class="{{ template_name }} u-space-below-lg overflow-hidden"
+  data-section-type="{{ template_name }}"
+  data-section-id="{{ section.id }}"
+  style="
+    {% if section.settings.background_image != blank %}
+      background-image: url({{ section.settings.background_image | image_url }});
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    {% endif %}
+    color: {{ section.settings.text_color }};
+  "
+>
+  <div class="wrapper">
+    <div class="container">
+      {%- render 'crafters-tv-heading', _title: section.settings.title, _heading: section.settings.heading, _text: section.settings.text -%}
+
+      <div class="schedule-wrapper">
+        <div
+          class="swiper-container"
+          data-day-button-slider
+          style="
+            background-color: {{ section.settings.banner_background_color }};
+            color: {{ section.settings.banner_text_color }};
+          "
+        >
+          <div class="swiper-wrapper">
+            {%- for i in (0..6) -%}
+              {%- assign day = day_in_seconds | times: i | plus: monday -%}
+              <div class="swiper-slide">
+                <button type="button" class="{% if day == time %}is-active{% endif %}" data-day-of-the-week="{{ i }}">
+                  {% if day == time %}
+                    {{- 'ctv.today' | t -}}
+                  {% else %}
+                    {{- day | date: '%b %d' -}}
+                  {% endif %}
+                </button>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+
+      {% assign ctv_article_array = false %}
+      {% for ctv_article in settings.ctv_blog_schedule.articles %}
+        {% if ctv_article.tags contains "TV_Current_Week" %}
+          {% assign ctv_start_time = ctv_article.metafields.custom.start_time | date: '%s' %}
+          {% assign matrix = ctv_start_time | append: '|ctv_blog_schedule|' | append: forloop.index0 %}
+          {% if ctv_article_array %}
+            {% assign temp_index = matrix | split: ',' %}
+            {% assign ctv_article_array = ctv_article_array | concat: temp_index %}
+          {% else %}
+            {% assign ctv_article_array = matrix | split: ',' %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% for ctv_article in settings.ctv_blog.articles %}
+        {% if ctv_article.tags contains "TV_Current_Week" %}
+          {% assign ctv_start_time = ctv_article.metafields.custom.start_time | date: '%s' %}
+          {% assign matrix = ctv_start_time | append: '|ctv_blog|' | append: forloop.index0 %}
+          {% if ctv_article_array %}
+            {% assign temp_index = matrix | split: ',' %}
+            {% assign ctv_article_array = ctv_article_array | concat: temp_index %}
+          {% else %}
+            {% assign ctv_article_array = matrix | split: ',' %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign ctv_article_array = ctv_article_array | sort %}
+
+      <ul class="broadcasts">
+        {% if ctv_article_array %}
+          {% for ctv_article in ctv_article_array %}
+            {% if ctv_article %}
+              {% assign article_index = ctv_article | split: '|' | last | times: 1 %}
+              {% assign split_article = ctv_article | split: '|' %}
+              {% assign article_item = false %}
+              {% if split_article[1] == 'ctv_blog_schedule' %}
+                {% assign article_item = settings.ctv_blog_schedule.articles[article_index] %}
+              {% elsif split_article[1] == 'ctv_blog' %}
+                {% assign article_item = settings.ctv_blog.articles[article_index] %}
+              {% endif %}
+              {% if article_item %}
+                {% render 'ctv-schedule-item',
+                  _article: article_item,
+                  _current_day: current_day
+                %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CTV Schedule",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Section text colour",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "banner_background_color",
+      "label": "Dates banner background colour",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "banner_text_color",
+      "label": "Dates banner text colour",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "show_name_color",
+      "label": "Show name colour",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "show_time_color",
+      "label": "Show time colour",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "show_separator_color",
+      "label": "Show separator colour",
+      "default": "#cccccc"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

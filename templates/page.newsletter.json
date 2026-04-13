@@ -1,0 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "06d31e60-a282-4293-86a8-fce66eb09351": {
+      "type": "form-embed",
+      "settings": {
+        "heading": "Sign up and get 20% off your first order",
+        "text": "",
+        "form_embed": "<div class=\"klaviyo-form-SpL2gA\"></div>",
+        "enable_h1": false,
+        "margin_top": "md"
+      }
+    }
+  },
+  "order": [
+    "06d31e60-a282-4293-86a8-fce66eb09351"
+  ]
+}

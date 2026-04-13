@@ -1,0 +1,1112 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Herd Skeleton Theme",
+    "theme_version": "1.1.0",
+    "theme_author": "Herd",
+    "theme_support_email": "info@herd.io",
+    "theme_documentation_url": "https://www.herd.io/pages/get-in-touch/"
+  },
+  {
+    "name": "Accessibility Code",
+    "settings": [
+      {
+        "type": "liquid",
+        "id": "accessibility_code",
+        "label": "Accessibility Code"
+      }
+    ]
+  },
+  {
+    "name": "Branding",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "theme_logo",
+        "label": "Logo",
+        "info": "Will be used in the header of all pages and on the password page."
+      },
+      {
+        "type": "text",
+        "id": "brand_strapline",
+        "label": "Strapline"
+      },
+      {
+        "type": "image_picker",
+        "id": "theme_favicon",
+        "label": "Favicon",
+        "info": "At least 180x180, will be scaled accordingly."
+      },
+      {
+        "type": "header",
+        "content": "Colours - Background"
+      },
+      {
+        "type": "color",
+        "id": "colour_bg",
+        "label": "Background Colour",
+        "default": "#FDFFFC"
+      },
+      {
+        "type": "header",
+        "content": "Colours - Text"
+      },
+      {
+        "type": "color",
+        "id": "colour_text_base",
+        "label": "Text",
+        "default": "#1F1300"
+      },
+      {
+        "type": "color",
+        "id": "colour_text_link",
+        "label": "Links",
+        "default": "#1F1300"
+      }
+    ]
+  },
+  {
+    "name": "Customer",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "customer_login_image",
+        "label": "Login image"
+      },
+      {
+        "type": "image_picker",
+        "id": "customer_register_image",
+        "label": "Register image"
+      },
+      {
+        "type": "image_picker",
+        "id": "customer_reset_image",
+        "label": "Reset image"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_reset_message",
+        "default": true,
+        "label": "Enable existing customer reset message on sign in page."
+      }
+    ]
+  },
+  {
+    "name": "Product",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "pdp_use_sku",
+        "label": "Use SKU code on PDP.",
+        "default": false
+      }
+    ]
+  },
+  {
+    "name": "Predictive Search",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "predictive_search_enabled",
+        "default": true,
+        "label": "Enable predictive search"
+      },
+      {
+        "type": "header",
+        "content": "Suggested Content",
+        "info": "Content that shows when user clicks search bar but has not yet performed a search."
+      },
+      {
+        "type": "product_list",
+        "id": "popular_products_list",
+        "label": "Popular products."
+      },
+      {
+        "type": "textarea",
+        "id": "popular_searches",
+        "label": "Popular search terms",
+        "default": "Card\nPaper\nGlitter Paste\nGemini\nDies"
+      },
+      {
+        "type": "image_picker",
+        "id": "popular_search_image_1",
+        "label": "Image for popular search term 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "popular_search_image_2",
+        "label": "Image for popular search term 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "popular_search_image_3",
+        "label": "Image for popular search term 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "popular_search_image_4",
+        "label": "Image for popular search term 4"
+      },  
+      {
+        "type": "image_picker",
+        "id": "popular_search_image_5",
+        "label": "Image for popular search term 5"
+      },
+      {
+        "type": "header",
+        "content": "Search result fallback images",
+      },
+      {
+        "type": "image_picker",
+        "id": "search_result_thumbnail_collection_fallback",
+        "label": "Fallback image for collections"
+      },
+      {
+        "type": "image_picker",
+        "id": "search_result_thumbnail_page_fallback",
+        "label": "Fallback image for pages"
+      },
+      {
+        "type": "header",
+        "content": "Query Options"
+      },
+      {
+        "type": "checkbox",
+        "id": "resource_product",
+        "default": true,
+        "label": "Search for products to be shown in results"
+      },
+      {
+        "type": "checkbox",
+        "id": "resource_collection",
+        "default": true,
+        "label": "Search for collections to be shown in results"
+      },
+      {
+        "type": "checkbox",
+        "id": "resource_article",
+        "default": true,
+        "label": "Search for articles to be shown in results"
+      },
+      {
+        "type": "checkbox",
+        "id": "resource_page",
+        "default": true,
+        "label": "Search for pages to be shown in results"
+      },
+      {
+        "type": "range",
+        "id": "resource_limit",
+        "label": "Results Limit",
+        "info": "This will apply to each resource type if the box below is unchecked",
+        "default": 4,
+        "min": 0,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "type": "checkbox",
+        "id": "resource_limit_all",
+        "default": false,
+        "label": "Apply results limit to all types combined?",
+        "info": "This would mean if Results Limit is set to 5 and this box is checked results will show 5 items TOTAL across products, collections, etc"
+      },
+      {
+        "type": "select",
+        "id": "show_unavailable",
+        "label": "Show Unavailable/OOS Items?",
+        "options": [
+          {
+            "value": "show",
+            "label": "Show unavailable items"
+          },
+          {
+            "value": "hide",
+            "label": "Hide unavailable items"
+          },
+          {
+            "value": "last",
+            "label": "Show these items last (sort to bottom)"
+          }
+        ],
+        "default": "last"
+      },
+      {
+        "type": "header",
+        "content": "Results Options"
+      },
+      {
+        "type": "checkbox",
+        "id": "predictive_search_show_vendor",
+        "default": false,
+        "label": "Show vendor in predictive search",
+        "info": "Visible when search suggestions enabled."
+      },
+      {
+        "type": "checkbox",
+        "id": "predictive_search_show_price",
+        "default": false,
+        "label": "Show price in predictive search",
+        "info": "Visible when search suggestions enabled."
+      },
+      {
+        "type": "text",
+        "id": "additional_fields",
+        "label": "Additional Fields - Info Only",
+        "info": "Search is performed by default on headline information e.g. product titles, article authors etc. This is recommended for best search performance. If custom functionality is required speak to Herd to discuss implications and arrange development."
+      }
+    ]
+  },
+  {
+    "name": "Brands",
+    "settings": [
+      {
+        "type": "url",
+        "id": "brands_url",
+        "label": "Brands landing page URL"
+      }
+    ]
+  },
+  {
+    "name": "Products & Collections",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Products - Lozenges"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_product_item_lozenges",
+        "default": true,
+        "label": "Enable Product Lozenges",
+        "info": "This will show lozenges such as sale, sold out and new"
+      },
+      {
+        "type": "text",
+        "id": "new_lozenge_days_threshold",
+        "label": "Number of days for new tag threshold",
+        "default": "14"
+      },
+      {
+        "type": "header",
+        "content": "Lozenges - Colours"
+      },
+      {
+        "type": "color",
+        "id": "new_lozenge_colour",
+        "label": "'New' Lozenge Colour",
+        "default": "#00A08D"
+      },
+      {
+        "type": "color",
+        "id": "new_lozenge_text_colour",
+        "label": "'New' Lozenge Colour",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "on_sale_lozenge_colour",
+        "label": "'On Sale' Lozenge Colour",
+        "default": "#F25F5C"
+      },
+      {
+        "type": "color",
+        "id": "on_sale_text_lozenge_colour",
+        "label": "'On Sale' Lozenge Colour",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "sold_out_lozenge_colour",
+        "label": "'Sold Out' Lozenge Colour",
+        "default": "#1F1300"
+      },
+      {
+        "type": "color",
+        "id": "sold_out_text_lozenge_colour",
+        "label": "'Sold Out' Lozenge Colour",
+        "default": "#ffffff"
+      },
+        {
+  "type": "color",
+  "id": "waitlist_lozenge_colour",
+  "label": "Waitlist Lozenge Colour",
+  "default": "#9F7AEA"
+},
+{
+  "type": "color",
+  "id": "waitlist_text_lozenge_colour",
+  "label": "Waitlist Text Colour",
+  "default": "#FFFFFF"
+},
+      {
+        "type": "color",
+        "id": "offer_lozenge_colour",
+        "label": "'Offer' Lozenge Colour",
+        "default": "#00A08D"
+      },
+      {
+        "type": "color",
+        "id": "offer_text_lozenge_colour",
+        "label": "'Offer' Lozenge Colour",
+        "default": "#ffffff"
+      },
+      {
+          "type": "color",
+  "id": "coming_soon_lozenge_colour",
+  "label": "'Coming Soon' Lozenge Colour",
+  "default": "#FFD966"
+},
+{
+  "type": "color",
+  "id": "coming_soon_text_lozenge_colour",
+  "label": "'Coming Soon' Lozenge Text Colour",
+  "default": "#000000"
+},
+{
+  "type": "color",
+  "id": "back_in_stock_soon_lozenge_colour",
+  "label": "'Back in Stock Soon' Lozenge Colour",
+  "default": "#F6AD55"
+},
+{
+  "type": "color",
+  "id": "back_in_stock_soon_text_lozenge_colour",
+  "label": "'Back in Stock Soon' Text Colour",
+  "default": "#000000"
+},
+
+      {
+        "type": "header",
+        "content": "Product Finance"
+      },
+      {
+        "type": "text",
+        "id": "clearpay_threshold",
+        "label": "Threshold for Clearpay finance",
+        "info": "This should match the exact threshold set in your Clearpay contract.",
+        "default": "30.00"
+      },
+      {
+        "type": "header",
+        "content": "Collection Filters"
+      },
+      {
+        "type": "text",
+        "id": "tags_filter_name",
+        "label": "Tag Filter Name",
+        "info": "This should match the name given to the tag filter group in the Search & Discovery app.",
+        "default": "Special offers"
+      },
+      {
+        "type": "text",
+        "id": "tags_filter_prefix",
+        "label": "Tag Filter Prefix",
+        "info": "This should match the prefix given to the tag filter",
+        "default": "offer_"
+      },
+      {
+        "type": "range",
+        "id": "products_per_page",
+        "label": "Default products per Page",
+        "min": 12,
+        "max": 48,
+        "step": 12,
+        "default": 24
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_additional_filters",
+        "label": "Hide Additional Filters",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Theme Tax Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Tax Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "tax_settings_enabled",
+        "default": true,
+        "label": "Tax Settings Enabled",
+        "info": "When enabled the theme will either remove or add VAT to prices for microdata"
+      },
+      {
+        "type": "checkbox",
+        "id": "taxes_products_include_tax",
+        "default": true,
+        "label": "All prices include tax",
+        "info": "If your products include tax, make sure this is enabled you can check here (Settings > Taxes)[/admin/settings/taxes]"
+      },
+      {
+        "type": "text",
+        "id": "taxes_vat_multiplier",
+        "label": "Store default vat multiplier e.g. 20% for UK",
+        "default": "20"
+      }
+    ]
+  },
+  {
+    "name": "Cookie Alert",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Settings"
+      },
+      {
+        "type": "url",
+        "id": "privacy_policy_link",
+        "label": "Privacy Policy"
+      }
+    ]
+  },
+  {
+    "name": "Cart",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "cart_notes_enable",
+        "label": "Enable cart notes"
+      },
+      {
+        "type": "checkbox",
+        "id": "quick_cart_enable",
+        "label": "Enable Quick Cart",
+        "info": "Allows users to add products to the cart from anywhere on the store.",
+        "default": true
+      },
+      {
+        "type": "richtext",
+        "id": "quick_cart_empty_text",
+        "label": "Quick cart empty text",
+        "default": "<p>Your bag is empty</p>"
+      },
+      {
+        "type": "select",
+        "id": "quickcart_nosto_placement",
+        "label": "Nosto Placement Type For Modal",
+        "info": "Appears in quickcart modal when a product is added to cart",
+        "options": [
+          {
+            "value": "quickcart-nosto-1",
+            "label": "You Might Also Like - QuickCart"
+          },
+          {
+            "value": "cartpage-nosto-1",
+            "label": "Customers Who Bought These Also Bought"
+          }
+        ],
+        "default": "quickcart-nosto-1"
+      }
+    ]
+  },
+  {
+    "name": "CTV",
+    "settings": [
+      {
+        "type": "url",
+        "id": "ctv_header_link",
+        "label": "CTV Link for Header Icon"
+      },
+      {
+        "type": "link_list",
+        "id": "ctv_navigation",
+        "label": "CTV Navigation"
+      },
+      {
+        "type": "blog",
+        "id": "ctv_blog",
+        "label": "CTV Blog"
+      },
+      {
+        "type": "blog",
+        "id": "ctv_blog_schedule",
+        "label": "CTV Blog Schedule"
+      }
+    ]
+  },
+  {
+    "name": "Delivery & Returns",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Settings"
+      },
+      {
+        "type": "number",
+        "id": "free_delivery_threshold",
+        "label": "Free delivery threshold",
+        "default": 30,
+        "info": "Enter a value (in pounds)."
+      },
+      {
+        "type": "number",
+        "id": "standard_delivery_cost",
+        "label": "Standard delivery cost",
+        "info": "The cost must be in PENCE to allow correct calculations",
+        "default": 395
+      },
+      {
+        "type": "number",
+        "id": "standard_returns_days",
+        "label": "Standard returns window in days",
+        "default": 30
+      }
+    ]
+  },
+  {
+    "name": "Loyalty",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Settings"
+      },
+      {
+        "type": "page",
+        "id": "loyalty_header_link",
+        "label": "Loyalty Scheme Link for Header Icon"
+      },
+      {
+        "type": "number",
+        "id": "points_per_pound",
+        "label": "Points earnt per pound",
+        "default": 1
+      },
+      {
+        "type": "header",
+        "content": "Tier - Pearl"
+      },
+      {
+        "type": "text",
+        "id": "pearl_title",
+        "label": "Title",
+        "default": "Pearl"
+      },
+      {
+        "type": "number",
+        "id": "first_order_discount",
+        "label": "First order discount (%)",
+        "default": 20
+      },
+      {
+        "type": "number",
+        "id": "pearl_points",
+        "label": "Tier Points",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Tier - Bronze"
+      },
+      {
+        "type": "text",
+        "id": "bronze_title",
+        "label": "Title",
+        "default": "Bronze"
+      },
+      {
+        "type": "number",
+        "id": "bronze_discount",
+        "label": "Discount (%)",
+        "default": 5
+      },
+      {
+        "type": "number",
+        "id": "bronze_points",
+        "label": "Tier Points",
+        "default": 250
+      },
+      {
+        "type": "number",
+        "id": "bronze_shipping",
+        "label": "Free shipping threshold",
+        "default": 30
+      },
+      {
+        "type": "header",
+        "content": "Tier - Silver"
+      },
+      {
+        "type": "text",
+        "id": "silver_title",
+        "label": "Title",
+        "default": "Silver"
+      },
+      {
+        "type": "number",
+        "id": "silver_discount",
+        "label": "Discount (%)",
+        "default": 10
+      },
+      {
+        "type": "number",
+        "id": "silver_points",
+        "label": "Tier Points",
+        "default": 500
+      },
+      {
+        "type": "number",
+        "id": "silver_shipping",
+        "label": "Free shipping threshold",
+        "default": 30
+      },
+      {
+        "type": "header",
+        "content": "Tier - Gold"
+      },
+      {
+        "type": "text",
+        "id": "gold_title",
+        "label": "Title",
+        "default": "Gold"
+      },
+      {
+        "type": "number",
+        "id": "gold_discount",
+        "label": "Discount (%)",
+        "default": 15
+      },
+      {
+        "type": "number",
+        "id": "gold_points",
+        "label": "Tier Points",
+        "default": 750
+      },
+      {
+        "type": "number",
+        "id": "gold_shipping",
+        "label": "Free shipping threshold",
+        "default": 20
+      },
+      {
+        "type": "header",
+        "content": "Tier - Platinum"
+      },
+      {
+        "type": "text",
+        "id": "platinum_title",
+        "label": "Title",
+        "default": "Platinum"
+      },
+      {
+        "type": "number",
+        "id": "platinum_discount",
+        "label": "Discount (%)",
+        "default": 20
+      },
+      {
+        "type": "number",
+        "id": "platinum_points",
+        "label": "Tier Points",
+        "default": 1500
+      },
+      {
+        "type": "number",
+        "id": "platinum_shipping",
+        "label": "Free shipping threshold",
+        "default": 20
+      }
+    ]
+  },
+  {
+    "name": "Wishlist",
+    "settings": [
+      {
+        "type": "url",
+        "id": "wishlist_info_url",
+        "label": "Account Page Wishlist Info URL"
+      }
+    ]
+  },
+  {
+    "name": "Company Information",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Contact Details"
+      },
+      {
+        "type": "textarea",
+        "id": "company_address",
+        "label": "Address"
+      },
+      {
+        "type": "text",
+        "id": "company_phone",
+        "label": "Telephone Number",
+        "info": "Please enter your telephone number.",
+        "placeholder": "0123456789"
+      },
+      {
+        "type": "text",
+        "id": "company_email",
+        "label": "E-Mail Address",
+        "info": "Please enter your e-mail address.",
+        "placeholder": "me@mycompany.com"
+      },
+      {
+        "type": "header",
+        "content": "Company Details"
+      },
+      {
+        "type": "text",
+        "id": "company_legal_name",
+        "label": "Legal Name of Business"
+      },
+      {
+        "type": "text",
+        "id": "company_number",
+        "label": "Registered Company Number",
+        "info": "Please enter your company number.",
+        "placeholder": "0123456789"
+      },
+      {
+        "type": "text",
+        "id": "company_vat_number",
+        "label": "VAT Number",
+        "info": "Please enter your company VAT number.",
+        "placeholder": "GB0123456789"
+      },
+      {
+        "type": "textarea",
+        "id": "opening_hours",
+        "label": "Opening Hours",
+        "placeholder": "Monday to Friday 9am-5.30pm"
+      },
+      {
+        "type": "page",
+        "id": "returns_policy",
+        "label": "Returns Policy"
+      },
+      {
+        "type": "page",
+        "id": "delivery_policy",
+        "label": "Delivery Policy"
+      },
+      {
+        "type": "page",
+        "id": "club_inspire_policy",
+        "label": "Club Inspire Informational Page"
+      }
+    ]
+  },
+  {
+    "name": "Website Territories & HrefLang",
+    "settings": [
+      {
+        "type": "text",
+        "id": "hreflang_domains",
+        "label": "Hreflang Domains List",
+        "info": "Formatted as comma separated list with territory shortname, followed by a colon and then domain name. For combined territories such as EU use shortname in square brackets followed by territory codes separated by /, e.g. UK: www.crafterscompanion.co.uk, [EU]IE/SK/DE/CH: www..."
+      },
+      {
+        "type": "text",
+        "id": "x_default",
+        "label": "X-Default Country Code",
+        "default": "US",
+        "info": "Fully consider and discuss SEO implications with Herd before changing this setting. Ensure this setting is changed across ALL stores at the same time to avoid conflicting signals to search engines."
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_switcher",
+        "label": "Enable Territory Switcher?",
+        "default": false
+      }
+    ]
+  },
+  {
+    "name": "Microdata (JSON+LD)",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Local Business"
+      },
+      {
+        "type": "image_picker",
+        "id": "microdata_logo",
+        "label": "Microdata logo",
+        "info": "Schema company logo (600px x 600px)"
+      },
+      {
+        "type": "image_picker",
+        "id": "microdata_featured_image",
+        "label": "Featured Image"
+      },
+      {
+        "type": "text",
+        "id": "microdata_map",
+        "label": "Google Maps Link"
+      },
+      {
+        "type": "checkbox",
+        "id": "microdata_show_opening_hours",
+        "label": "Show opening hours?"
+      },
+      {
+        "type": "text",
+        "id": "microdata_opening_hours",
+        "label": "Opening Hours - Must be in schema.org format - see (Schema OpeningHours)[http://schema.org/openingHours]",
+        "placeholder": "Mo,Tu,We,Th,Fr 07:00-16:30"
+      },
+      {
+        "type": "header",
+        "content": "Product"
+      },
+      {
+        "type": "select",
+        "id": "product_microdata_display_until",
+        "label": "Display Until",
+        "options": [
+          {
+            "value": "14",
+            "label": "14 Days"
+          },
+          {
+            "value": "30",
+            "label": "30 Days"
+          },
+          {
+            "value": "45",
+            "label": "45 Days"
+          },
+          {
+            "value": "60",
+            "label": "60 Days"
+          },
+          {
+            "value": "90",
+            "label": "90 Days"
+          },
+          {
+            "value": "120",
+            "label": "120 Days"
+          },
+          {
+            "value": "150",
+            "label": "150 Days"
+          },
+          {
+            "value": "180",
+            "label": "180 Days"
+          },
+          {
+            "value": "365",
+            "label": "365 Days"
+          }
+        ],
+        "default": "30"
+      }
+    ]
+  },
+  {
+    "name": "Social media & Microdata",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Social sharing image"
+      },
+      {
+        "type": "image_picker",
+        "id": "share_image",
+        "label": "Image",
+        "info": "Shown when sharing a link on social media. [Learn more](https://help.shopify.com/manual/using-themes/troubleshooting/showing-social-media-thumbnail-images/) about image thumbnails."
+      },
+      {
+        "type": "text",
+        "id": "social_image_width",
+        "label": "Image Width"
+      },
+      {
+        "type": "text",
+        "id": "social_image_height",
+        "label": "Image Height"
+      },
+      {
+        "type": "header",
+        "content": "Social Media Optimisation"
+      },
+      {
+        "type": "text",
+        "id": "social_og_locale",
+        "label": "OG Locale - http://ogp.me/",
+        "default": "en_GB"
+      },
+      {
+        "type": "text",
+        "id": "geo_position",
+        "label": "Geo Position - http://www.geo-tag.de/generator/en.html",
+        "placeholder": "example: 53.718847, -0.426806"
+      },
+      {
+        "type": "text",
+        "id": "geo_place_name",
+        "label": "Geo Place Name",
+        "placeholder": "example: name of the building/address"
+      },
+      {
+        "type": "header",
+        "content": "Social sharing options"
+      },
+      {
+        "type": "checkbox",
+        "id": "share_facebook",
+        "label": "Share on Facebook",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "share_twitter",
+        "label": "Tweet on Twitter",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "share_instagram",
+        "label": "Share on Instagram",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Sharing links"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "Twitter link"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": "Facebook link"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "Instagram link"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube_link",
+        "label": "YouTube link"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok_link",
+        "label": "TikTok link"
+      }
+    ]
+  },
+  {
+    "name": "Tracking & Verification",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Google Search Console",
+        "info": "Google Site Verification"
+      },
+      {
+        "type": "text",
+        "id": "google_site_verification",
+        "label": "Add the Google verification content (only the content part, the meta tag will be created for you). You can specify multiple codes by CSV"
+      },
+      {
+        "type": "header",
+        "content": "Bing Site Verification"
+      },
+      {
+        "type": "text",
+        "id": "bing_site_verification",
+        "label": "Add the Bing verification content (only the content part, the meta tag will be created for you). You can specify multiple codes by CSV"
+      },
+      {
+        "type": "header",
+        "content": "Google Tag Manager"
+      },
+      {
+        "type": "checkbox",
+        "id": "tracking_gtm_show_errors",
+        "label": "Show Installation Errors?",
+        "info": "Show installation errors in a banner on the site",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tracking_gtm_id",
+        "label": "Google Tag Manager ID",
+        "info": "You can specify multiple codes by CSV"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_ga_tracking",
+        "label": "Enable Google Analytics Tracking?",
+        "info": "This will use codes entered below if switched on",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "ga_codes",
+        "label": "Google Analytics ID",
+        "info": "You can specify multiple codes by comma separating values"
+      },
+      {
+        "type": "header",
+        "content": "Bing Ads"
+      },
+      {
+        "type": "checkbox",
+        "id": "tracking_bing_ads_show_errors",
+        "label": "Show Installation Errors?",
+        "info": "Show installation errors in a banner on the site",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "tracking_bing_ads_id",
+        "label": "Bing Ads [ID]",
+        "info": "You can specify multiple codes by CSV NOTE you will need to request the conversion script to be added to this theme"
+      },
+      {
+        "type": "header",
+        "content": "Additional Scripts"
+      },
+      {
+        "type": "checkbox",
+        "id": "additional_scripts_are_enabled",
+        "label": "Load Additional Scripts",
+        "info": "Enabled additional scripts on the site?",
+        "default": false
+      },
+      {
+        "type": "textarea",
+        "id": "additional_scripts",
+        "label": "Additional Scripts",
+        "info": "Insert your additional scripts here"
+      }
+    ]
+  },
+  {
+    "name": "Hotjar",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_hotjar",
+        "label": "Enable Hotjar",
+        "default": true
+      },
+      {
+        "type": "textarea",
+        "id": "hotjar_script",
+        "label": "Hotjar script"
+      }
+    ]
+  }
+]

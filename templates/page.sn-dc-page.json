@@ -1,0 +1,234 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "header": {
+      "type": "brand-landing-header",
+      "settings": {
+        "edge_version": "none",
+        "margin_bottom": "sm"
+      }
+    },
+    "42233aa3-11a8-447d-a330-730d88671d29": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "STEP INTO A WORLD OF AUTHENTIC FAN-ART…",
+        "small_text": "<p>Get creative, express your fandom and achieve incredible artistic results you never<br\/>thought possible... Get ready to fan-art like a pro!<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1": {
+      "type": "image-feature",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/DC_Hero_Image_1800x900_886d32f6-9550-40c2-8268-f6b4b08521d8.jpg",
+        "heading": "DC FAN-ART LIKE A PRO ART KITS",
+        "text": "<p>Featuring officially licensed artwork straight from the DC archive, ready to combine with carefully hand-picked colours. Everything you need to recreate fan-favourite characters and scenes, just like the pros!<\/p>",
+        "link_text": "Shop Now",
+        "link_url": "\/collections\/dc",
+        "disable_height": true,
+        "content_placement": "left"
+      }
+    },
+    "aee780f9-9264-4f8a-863a-73d4e1eb16c6": {
+      "type": "text-header",
+      "settings": {
+        "heading": "EXPERTLY CURATED PROFESSIONAL ART TOOLS & ACCESSORIES",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "none",
+        "margin_top": "none"
+      }
+    },
+    "bab7aec5-01db-4922-bd5b-0478e45a8027": {
+      "type": "content-block-trio",
+      "blocks": {
+        "14acaefe-5109-4c27-85f4-d14fd25b4134": {
+          "type": "content_block",
+          "settings": {
+            "heading": "BATMAN",
+            "text": "Immerse yourself in the brooding world of the dark knight with this premium licenced Batman art kit.",
+            "image": "shopify:\/\/shop_images\/Product_Image_Batman_1350x1080_7d7cea87-b449-4c97-bb01-23d83a3ddf99.jpg",
+            "link_text": "Shop Now",
+            "link_url": "\/products\/spectrum-noir-pro-fan-art-24pc-batman"
+          }
+        },
+        "a051e613-e924-4938-9d54-328216b7a319": {
+          "type": "content_block",
+          "settings": {
+            "heading": "THE JOKER",
+            "text": "Create serious fan-art with this premium licensed art kit featuring The Joker in various manic poses.",
+            "image": "shopify:\/\/shop_images\/Product_Image_Joker_1350x1080_cb43801e-8106-44f0-b6b1-7a7a868873db.jpg",
+            "link_text": "Shop Now",
+            "link_url": "\/products\/spectrum-noir-pro-fan-art-24pc-joker"
+          }
+        },
+        "91ab9fd6-aa4a-4f21-aa52-64bd50397598": {
+          "type": "content_block",
+          "settings": {
+            "heading": "HARLEY QUINN",
+            "text": "Use professional-grade artist's tools to depict Harley in a range of authentic DC character designs.",
+            "image": "shopify:\/\/shop_images\/Product_Image_Harley_Quinn_1350x1080_0abf1ae5-74ae-4ef5-b52e-604e0b866b08.jpg",
+            "link_text": "Shop Now",
+            "link_url": "\/products\/spectrum-noir-pro-fan-art-24pc-harley-quinn"
+          }
+        }
+      },
+      "block_order": [
+        "14acaefe-5109-4c27-85f4-d14fd25b4134",
+        "a051e613-e924-4938-9d54-328216b7a319",
+        "91ab9fd6-aa4a-4f21-aa52-64bd50397598"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "quinary"
+      }
+    },
+    "f9de3dfd-d66a-478c-bbf1-e9962c1023a1": {
+      "type": "content-block-trio",
+      "blocks": {
+        "a2f26fa1-a41c-43d9-a984-9555aa57fdbd": {
+          "type": "content_block",
+          "settings": {
+            "heading": "SUPERMAN",
+            "text": "Flex your creative muscle, use pro level art tools to render Superman in various dynamic poses.",
+            "image": "shopify:\/\/shop_images\/Product_Image_Superman_1350x1080_fec2f75f-a078-438f-ac1b-6c3f478360dd.jpg",
+            "link_text": "Shop Now",
+            "link_url": "\/products\/spectrum-noir-pro-fan-art-24pc-superman"
+          }
+        },
+        "686f8c9f-b577-4fe0-93d9-68e8077bac8f": {
+          "type": "content_block",
+          "settings": {
+            "heading": "WONDER WOMAN",
+            "text": "Unleash your artistic super powers on a range of striking Wonder Woman character-designs.",
+            "image": "shopify:\/\/shop_images\/Product_Image_Wonder_Woman_1350x1080_78b8f5cf-6f10-4096-b846-4dceb9ebd901.jpg",
+            "link_text": "Shop Now",
+            "link_url": "\/products\/spectrum-noir-pro-fan-art-24pc-wonder-woman"
+          }
+        },
+        "a794edb5-8166-4b9a-bfae-8d2119dd379d": {
+          "type": "content_block",
+          "settings": {
+            "heading": "THE FLASH",
+            "text": "Bring your art skills up to speed and faithfully capture The Flash in iconic poses and designs.",
+            "image": "shopify:\/\/shop_images\/Product_Image_Flash_1350x1080_1a00104d-b88f-48ec-a985-c51328c5c990.jpg",
+            "link_text": "Shop Now",
+            "link_url": "\/products\/spectrum-noir-pro-fan-art-24pc-flash"
+          }
+        }
+      },
+      "block_order": [
+        "a2f26fa1-a41c-43d9-a984-9555aa57fdbd",
+        "686f8c9f-b577-4fe0-93d9-68e8077bac8f",
+        "a794edb5-8166-4b9a-bfae-8d2119dd379d"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "quinary"
+      }
+    },
+    "3fd3dd0f-7df2-4f0f-a3b0-44d052da5f95": {
+      "type": "text-header",
+      "settings": {
+        "heading": "GET READY TO FAN-ART LIKE A PRO!",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "none",
+        "margin_top": "none"
+      }
+    },
+    "7fcc4e2f-e490-44bc-a6b6-b40a7732d6bf": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<h3>What's in the box...<\/h3><p>Each kit includes 10 premium dual-tip art markers in carefully curated colours to faithfully recreate the heroes, villains and creatures of the Wizarding World. You’ll also discover 12 iconic, officially licensed character designs on premium art paper in both black and grey lines. Get to grips with colouring the black line-art first, then move onto the grey, adding precise inking detail with the included fine-liner. A printed Quick Start Guide provides expert hints and tips, plus there’s exclusive access to additional online content.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "537e291f-c229-467d-9041-17ba50b38510": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=jq5V-9jg5Ws",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "249aa0f4-7454-4016-b7bd-c70d65e3493f": {
+      "type": "text-header",
+      "settings": {
+        "heading": "THIS IS NOT JUST COLOURING IN, THIS IS FAN-ART LIKE A PRO…",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "none",
+        "margin_top": "none"
+      }
+    },
+    "1bafe95e-47fe-4c78-8d8f-c39645db74e7": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/IMG_9091-2-Enhanced-NR_0df0302c-0d99-42ec-9a87-c022e2a4fca8.webp",
+        "main_heading": "TAKE YOUR ART TO THE NEXT LEVEL!",
+        "main_text": "<h3>How it works…<\/h3><p>Artistic skill might come naturally or develop over time, but nothing should get in the way of creative expression or achieving authentic results. You just need the right tools and the right know-how.<\/p><p>Art markers aren’t like normal colouring pens, they apply perfectly smoothly and will layer and blend for an array of versatile effects. This is why they are so widely used by professional creatives within<br\/>the comic, movie and gaming industries. <\/p><p>By combining with officially licensed character designs<br\/>on premium paper, plus expert instruction and pro-tips, you’ve got everything you need to immerse in your fandom and create without limits!  <\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "sm",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-end",
+        "enable_dots": false,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "42233aa3-11a8-447d-a330-730d88671d29",
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1",
+    "aee780f9-9264-4f8a-863a-73d4e1eb16c6",
+    "bab7aec5-01db-4922-bd5b-0478e45a8027",
+    "f9de3dfd-d66a-478c-bbf1-e9962c1023a1",
+    "3fd3dd0f-7df2-4f0f-a3b0-44d052da5f95",
+    "7fcc4e2f-e490-44bc-a6b6-b40a7732d6bf",
+    "537e291f-c229-467d-9041-17ba50b38510",
+    "249aa0f4-7454-4016-b7bd-c70d65e3493f",
+    "1bafe95e-47fe-4c78-8d8f-c39645db74e7"
+  ]
+}

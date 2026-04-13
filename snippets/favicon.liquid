@@ -1,0 +1,18 @@
+{%- if settings.theme_favicon != blank -%}
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ settings.theme_favicon | image_url: width: 57 }}" />
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ settings.theme_favicon | image_url: width: 60 }}" />
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ settings.theme_favicon | image_url: width: 73 }}" />
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ settings.theme_favicon | image_url: width: 76 }}" />
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ settings.theme_favicon | image_url: width: 114 }}" />
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ settings.theme_favicon | image_url: width: 120 }}" />
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ settings.theme_favicon | image_url: width: 144 }}" />
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ settings.theme_favicon | image_url: width: 152 }}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ settings.theme_favicon | image_url: width: 180 }}" />
+  <link rel="icon" type="image/png" sizes="192x192"  href="{{ settings.theme_favicon | image_url: width: 192 }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ settings.theme_favicon | image_url: width: 32 }}" />
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ settings.theme_favicon | image_url: width: 96 }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ settings.theme_favicon | image_url: width: 16 }}" />
+  <meta name="msapplication-TileImage" content="{{ settings.theme_favicon | image_url: width: 144 }}" />
+{%- endif -%}
+  <meta name="msapplication-TileColor" content="{{ settings.theme_colour | default: '#000000' }}" />
+  <meta name="theme-color" content="{{ settings.theme_colour | default: '#000000' }}" />

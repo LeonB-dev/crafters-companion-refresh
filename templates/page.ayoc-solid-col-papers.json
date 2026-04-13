@@ -1,0 +1,185 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false
+      }
+    },
+    "d404a13b-50e5-4aca-96aa-d6bc5a481b39": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Big Celebrations : Solid Colour Papers",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "1b2309d8-8c35-4c49-b590-c409d0bdc94a": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Click on the image of your choice to save and print as desired.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "1edd0a1e-8119-4421-a198-ecf7edcec2e8": {
+      "type": "downloads",
+      "blocks": {
+        "4bd188c3-f81a-4f07-92fe-9ce8b0acca3c": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Solid%20Colour%20Papers\/ayoc_bigcel_solid%20%281%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_solid-1.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "c8b20bdf-2257-4207-b951-005a264f9c53": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Solid%20Colour%20Papers\/ayoc_bigcel_solid%20%282%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_solid-2.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "a3d56e19-0988-4756-a306-92aa5cb489fc": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Solid%20Colour%20Papers\/ayoc_bigcel_solid%20%283%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_solid-3.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "582f31b9-9d71-4157-9722-184d80d54973": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Solid%20Colour%20Papers\/ayoc_bigcel_solid%20%284%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_solid-4.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "031abf88-66d5-40cc-b665-dcb137120309": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Solid%20Colour%20Papers\/ayoc_bigcel_solid%20%285%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_solid-5.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "f697c33c-abec-4ee9-8245-a81ad3ef07ee": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Solid%20Colour%20Papers\/ayoc_bigcel_solid%20%286%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_solid-6.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "fff6f5ec-bcc2-44e5-bdd5-cea119cd5ae2": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Solid%20Colour%20Papers\/ayoc_bigcel_solid%20%287%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_solid-7.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "4e94ace6-8038-49c9-ae71-73c1db8f2c10": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Solid%20Colour%20Papers\/ayoc_bigcel_solid%20%288%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_solid-8.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "035a1dc8-a0f5-4a0b-8f5f-8263bbf0a366": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-bigcel\/Solid%20Colour%20Papers\/ayoc_bigcel_solid%20%289%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_bigcel_solid-9.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "4bd188c3-f81a-4f07-92fe-9ce8b0acca3c",
+        "c8b20bdf-2257-4207-b951-005a264f9c53",
+        "a3d56e19-0988-4756-a306-92aa5cb489fc",
+        "582f31b9-9d71-4157-9722-184d80d54973",
+        "031abf88-66d5-40cc-b665-dcb137120309",
+        "f697c33c-abec-4ee9-8245-a81ad3ef07ee",
+        "fff6f5ec-bcc2-44e5-bdd5-cea119cd5ae2",
+        "4e94ace6-8038-49c9-ae71-73c1db8f2c10",
+        "035a1dc8-a0f5-4a0b-8f5f-8263bbf0a366"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "lg"
+      }
+    },
+    "f6ab093b-7502-4bd1-a4aa-cc06e9e3f09b": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to Downloads.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft-downloads-1",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "aa6acd43-d1da-4b00-ade2-f70bf455ba5d": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to A Year of Craft.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d404a13b-50e5-4aca-96aa-d6bc5a481b39",
+    "1b2309d8-8c35-4c49-b590-c409d0bdc94a",
+    "1edd0a1e-8119-4421-a198-ecf7edcec2e8",
+    "f6ab093b-7502-4bd1-a4aa-cc06e9e3f09b",
+    "aa6acd43-d1da-4b00-ade2-f70bf455ba5d"
+  ]
+}

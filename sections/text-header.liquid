@@ -1,0 +1,191 @@
+{% liquid
+  assign template_name = 'section-text-header'
+
+  assign heading = section.settings.heading
+  assign text = section.settings.text
+  assign link_text = section.settings.link_text
+  assign link_url = section.settings.link_url
+  assign link_colour = section.settings.link_colour
+  assign enable_h1 = section.settings.enable_h1
+  assign enable_page_title = section.settings.enable_page_title
+  assign text_alignment = section.settings.text_alignment
+  assign margin_bottom = section.settings.margin_bottom
+  assign margin_top = section.settings.margin_top
+
+  if enable_page_title == true and template contains 'page'
+    assign heading = page.title
+  endif
+
+  assign heading_class = 'u-heading-md heading'
+%}
+
+<style>
+  div[data-section-id="{{ section.id }}"]{
+    {%- if text_alignment == true -%}
+      --text-alignment: center;
+      --text-margin: auto;
+    {%- else -%}
+      --text-alignment: start;
+      --text-margin: 0;
+    {%- endif -%}
+  }
+</style>
+
+{{- 'section-text-header.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-above-{{- margin_top }}  u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="wrapper">
+      {% if heading != blank %}
+        {%- if enable_h1 == true -%}
+          <h1 class="{{- heading_class -}}">{{ heading }}</h1>
+        {%- else -%}
+          <h2 class="{{- heading_class -}}">{{ heading }}</h2>
+        {%- endif -%}
+      {% endif %}
+      {{- text -}}
+      {% if link_text != blank and link_url != blank %}
+        <a href="{{ link_url }}" class="c-btn main {{ link_colour }}">
+          {{ link_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text Header",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_alignment",
+      "label": "Align text centrally"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_h1",
+      "label": "Use <h1> for heading",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_page_title",
+      "label": "Use page title for heading",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "link_colour",
+      "label": "Link colour",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Purple / Green Gradient"
+        },
+        {
+          "value": "secondary",
+          "label": "Purple / Red Gradient"
+        },
+        {
+          "value": "tertiary",
+          "label": "White"
+        },
+        {
+          "value": "quaternary",
+          "label": "Purple"
+        },
+        {
+          "value": "quinary",
+          "label": "Black"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "sm"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "label": "Add margin top",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "sm"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Text Header",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

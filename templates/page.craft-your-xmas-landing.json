@@ -1,0 +1,129 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "a4d8c22d-cf05-43f5-854e-e9d90925610b": {
+      "type": "crafters-tv-schedule",
+      "disabled": true,
+      "settings": {
+        "heading": "Schedule",
+        "title": "What's on this week",
+        "text": "<p>Don’t miss out on our live Crafter’s TV shows! All week, you’ll be able to view our programmes on this page or catch up on any of the action that you’ve missed!<\/p>"
+      }
+    },
+    "87d63b3f-f0a3-4969-b8e6-0282516d09fc": {
+      "type": "featured-products",
+      "blocks": {
+        "3834cb45-a3a6-456e-b539-24dde750ebf1": {
+          "type": "collection",
+          "settings": {
+            "collection": "spectrum-noir"
+          }
+        }
+      },
+      "block_order": [
+        "3834cb45-a3a6-456e-b539-24dde750ebf1"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "This week’s top selling products",
+        "heading_alignment": false,
+        "link_url": "shopify:\/\/collections\/spectrum-noir",
+        "link_text": "Shop more",
+        "grid_size": "lg",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "4600bcb3-b41a-483c-ac33-788d86172890": {
+      "type": "latest-articles",
+      "disabled": true,
+      "settings": {
+        "heading": "Available on catchup",
+        "text": "<p>At semper risus netus eu sit elementum commodo. Erat nisi nibh sociis sed egestas et. Urna ut nam id integer interdum ut odio et magna. <\/p>",
+        "link_url": "shopify:\/\/blogs\/crafters-tv",
+        "link_text": "Visit out Crafter's TV archive",
+        "blog": "inspiration"
+      }
+    },
+    "3b714e7c-bf43-42bc-9355-c779ae1f3c6f": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/YAMtUQxH5mM",
+        "heading": "",
+        "text": "<p>Adhesive Sprays<\/p>"
+      }
+    },
+    "b1cb8ebe-7f44-4632-bfb3-224282dd766c": {
+      "type": "content-block-trio",
+      "blocks": {
+        "d7139040-e28c-4cd7-a9e5-666f231e2303": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Craft Away",
+            "text": "Craft Adhesives",
+            "image": "shopify:\/\/shop_images\/sharon-callis---garden-florals---embossing-folders_divine-blooms_5.jpg",
+            "link_text": "Shop Adhesives now",
+            "link_url": "shopify:\/\/collections\/bag-making"
+          }
+        },
+        "a8540fd5-42dd-4c87-b177-317850617808": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Read about Crafting",
+            "text": "Happy Crafting Blog available now",
+            "image": "shopify:\/\/shop_images\/140922-kit-7.jpg",
+            "link_text": "Read the best blog ever",
+            "link_url": "shopify:\/\/blogs\/inspiration"
+          }
+        },
+        "7e7b2913-e964-407a-b19a-ff7b2923b1ef": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Crafting Made Easier",
+            "text": "Get in the habit this summer",
+            "image": "shopify:\/\/shop_images\/balloon-sentiments---stamp-_-die-packaging-birthday_9.jpg",
+            "link_text": "Watch Sara Craft",
+            "link_url": "shopify:\/\/collections\/art-storage"
+          }
+        }
+      },
+      "block_order": [
+        "d7139040-e28c-4cd7-a9e5-666f231e2303",
+        "a8540fd5-42dd-4c87-b177-317850617808",
+        "7e7b2913-e964-407a-b19a-ff7b2923b1ef"
+      ],
+      "settings": {
+      }
+    },
+    "871464b9-2b10-4c2f-beda-5a0fa91cd8bd": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Watch our great videos in CTV",
+        "small_text": "<p>Crafting ideas for every one<\/p>",
+        "link_text": "Watch Now",
+        "link_url": "shopify:\/\/collections\/card-making",
+        "left_align": false
+      }
+    }
+  },
+  "order": [
+    "a4d8c22d-cf05-43f5-854e-e9d90925610b",
+    "87d63b3f-f0a3-4969-b8e6-0282516d09fc",
+    "4600bcb3-b41a-483c-ac33-788d86172890",
+    "3b714e7c-bf43-42bc-9355-c779ae1f3c6f",
+    "b1cb8ebe-7f44-4632-bfb3-224282dd766c",
+    "871464b9-2b10-4c2f-beda-5a0fa91cd8bd"
+  ]
+}

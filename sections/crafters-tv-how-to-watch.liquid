@@ -1,0 +1,132 @@
+{%- liquid
+  assign template_name = 'section-crafters-tv-how-to-watch'
+%}
+
+{{- 'section-crafters-tv-how-to-watch.css' | asset_url | stylesheet_tag -}}
+
+<div
+  class="{{- template_name }} u-space-below-lg"
+  data-section-type="{{- template_name -}}"
+  data-section-id="{{ section.id }}"
+>
+  <div class="container">
+    <div class="content">
+      <h2 class="u-heading-xs">{{ section.settings.heading }}</h2>
+      {{ section.settings.text }}
+    </div>
+    <ul class="how-to-watch">
+      {% for block in section.blocks %}
+        {% liquid
+          assign logo = block.settings.logo
+        %}
+        <li>
+          <img class="wireframe" src="{{ block.settings.graphic_type | append: '.svg' | asset_url }}" alt="{{ block.settings.logo.alt }}" loading="lazy">
+          <div class="watch-content">
+            {% if logo != blank %}
+              {{- logo | image_url: width: block.settings.logo_width | image_tag: alt: block.settings.icon.alt, loading: 'lazy' -}}
+            {% endif %}
+            <div class="u-heading-xs">{{ block.settings.heading }}</div>
+            <p>{{ block.settings.text }}</p>
+            <a
+              href="{{ block.settings.link_url }}"
+              class="c-btn main"
+              {% if block.settings.colour != null %}
+                style="background-color: {{ block.settings.colour }}; color: var(--colour-sugar-cane)"
+              {% endif %}
+            >
+              {{- block.settings.link_text -}}
+            </a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CTV How To Watch",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "promotion",
+      "name": "CTV How To Watch Item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "graphic_type",
+          "label": "Graphic Type",
+          "options": [
+            {
+              "value": "facebook-wireframe",
+              "label": "Facebook Wireframe"
+            },
+            {
+              "value": "crafters-wireframe",
+              "label": "Crafters Wireframe"
+            },
+            {
+              "value": "youtube-wireframe",
+              "label": "Youtube Wireframe"
+            }
+          ],
+          "default": "crafters-wireframe"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo Image",
+          "info": "SVG is recommended for site performance. Alternatively, upload a PNG with transparent background."
+        },
+        {
+          "type": "text",
+          "id": "logo_width",
+          "label": "Logo Width in px",
+          "default": "192"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "color",
+          "id": "colour",
+          "label": "Button Colour"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

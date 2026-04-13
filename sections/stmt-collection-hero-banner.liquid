@@ -1,0 +1,156 @@
+{% liquid
+  assign title = collection.title
+  assign description = collection.description | prepend: '<p>' | append: '</p>'
+  assign image = collection.image
+  assign transparent_colors = 'rgba(0,0,0,0)|rgba(0, 0, 0, 0)|transparent' | split: '|'
+
+  if collection.metafields.custom.hero_banner_image != blank
+    assign image = collection.metafields.custom.hero_banner_image
+  endif
+
+  if collection.metafields.custom.primary_color != blank
+    assign primary_color = collection.metafields.custom.primary_color
+  endif
+
+  if collection.metafields.custom.secondary_color != blank
+    assign secondary_color = collection.metafields.custom.secondary_color
+  endif
+
+  if section.settings.title != blank
+    assign title = section.settings.title
+  endif
+
+  if section.settings.description != blank
+    assign description = section.settings.description
+  endif
+
+  if section.settings.image != blank
+    assign image = section.settings.image
+  endif
+
+  if section.settings.primary_color != blank
+    unless transparent_colors contains section.settings.primary_color
+      assign primary_color = section.settings.primary_color
+    endunless
+  endif
+
+  if section.settings.secondary_color != blank
+    unless transparent_colors contains section.settings.secondary_color
+      assign secondary_color = section.settings.secondary_color
+    endunless
+  endif
+
+  assign word_count = description | strip_html | split: ' ' | size
+%}
+
+{{ 'section-stmt-collection-hero-banner.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .collection-hero-banner--{{ section.id }} .collection-hero-banner__background-shape {
+    {% if primary_color != blank %}
+      color: {{ primary_color }};
+    {% endif %}
+    {% if secondary_color != blank %}
+      background-color: {{ secondary_color }};
+    {% endif %}
+  }
+{% endstyle %}
+
+<div class="collection-hero-banner collection-hero-banner--{{ section.id }}">
+  <div class="container">
+    <div class="collection-hero-banner__grid">
+      <div class="collection-hero-banner__grid-item collection-hero-banner__content-container">
+        <div class="collection-hero-banner__content">
+          {% if title != blank %}
+            <h1 class="collection-hero-banner__title">{{ title }}</h1>
+          {% endif %}
+
+          {% if description != blank %}
+            {% if word_count > 32 %}
+              <read-more class="collection-hero-banner__mobile-description read-more read-more--clipped">
+                <div class="collection-hero-banner__description read-more__excerpt">
+                  {{ description }}
+                </div>
+
+                <button type="button" class="collection-hero-banner__read-more read-more__toggle js-read-more-toggle">
+                  <span class="read-more__toggle-label read-more__toggle-label--more">{{ 'accessibility.read_more' | t }}</span>
+                  <span class="read-more__toggle-label read-more__toggle-label--less">{{ 'accessibility.read_less' | t }}</span>
+                </button>
+              </read-more>
+
+            {% else %}
+              <div class="collection-hero-banner__description">
+                {{ description }}
+              </div>
+            {% endif %}
+          {% endif %}
+
+          <scroll-to class="collection-hero-banner__scroll-to-content" data-target="#collectionSection">
+            {{ 'template.collection-section.browse_all' | t }}
+            {% render 'stmt-icon-arrow-down', class: 'collection-hero-banner__scroll-to-content-icon' %}
+          </scroll-to>
+        </div>
+
+        <div class="collection-hero-banner__background-shape collection-hero-banner__background-shape--mobile">
+          {% render 'stmt-icon-collection-background-shape-alt', class: 'collection-hero-banner__background-shape-icon' %}
+        </div>
+      </div>
+
+      {% if image != blank %}
+        <div class="collection-hero-banner__grid-item">
+          <div class="collection-hero-banner__image-container">
+            {{ image | image_url: width: 720, height: 480 | image_tag: class: 'collection-hero-banner__image' }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="collection-hero-banner__background-shape collection-hero-banner__background-shape--desktop">
+    {% render 'stmt-icon-collection-background-shape', class: 'collection-hero-banner__background-shape-icon' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Hero Banner",
+  "templates": ["collection"],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "info": "Will use collection title if not set"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "info": "Will use collection description if not set"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Will use collection featured image or hero banner image from metafields if not set"
+    },
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "Primary Colour",
+      "info": "Will use primary colour from metafields if not set"
+    },
+    {
+      "type": "color",
+      "id": "secondary_color",
+      "label": "Secondary Colour",
+      "info": "Will use secondary colour from metafields if not set"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Hero Banner"
+    }
+  ]
+}
+{% endschema %}

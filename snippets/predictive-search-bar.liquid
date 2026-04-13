@@ -1,0 +1,101 @@
+<div
+  class="search-modal snippet-predictive-search"
+  role="dialog"
+  aria-modal="true"
+  aria-label="{{ 'template.search.title' | t }}"
+  data-predictive-search-wrapper
+>
+  <div class="search-modal-content" tabindex="-1">
+    <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
+      <form
+        action="{{ routes.search_url }}"
+        method="get"
+        role="search"
+        class="search"
+      >
+        <div class="search-form-field">
+          <label class="sr-only" for="Search-In-Modal">{{ 'template.search.title' | t }}</label>
+          <input
+            class="search-input field-input"
+            id="Search-In-Modal"
+            type="search"
+            name="q"
+            value="{{ search.terms | escape }}"
+            placeholder="{{ 'template.search.title' | t }}"
+            {%- if settings.predictive_search_enabled -%}
+              role="combobox"
+              aria-expanded="false"
+              aria-owns="predictive-search-results"
+              aria-controls="predictive-search-results"
+              aria-haspopup="listbox"
+              aria-autocomplete="list"
+              autocorrect="off"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+            {%- endif -%}
+          >
+          {% comment %} <label class="field-label" for="Search-In-Modal-1">{{ 'template.search.title' | t }}</label> {% endcomment %}
+          <input type="hidden" name="options[prefix]" value="last">
+          <button type="reset" class="c-btn reset-button u-text-sm field__button{% if search.terms == blank %} hidden{% endif %}" aria-label="{{ 'template.search.reset' | t }}">Clear</button>
+          <button class="c-btn search-button submit-button" type="submit" aria-label="{{ 'template.search.submit' | t }}">
+            {%- render 'icon', _name: 'icon-search-2', _class: 'icon' -%}
+          </button>
+        </div>
+
+        {%- if settings.predictive_search_enabled -%}
+          <div
+            class="predictive-search predictive-search--header"
+            tabindex="-1"
+            data-predictive-search
+          >
+            <div class="predictive-search__suggestions">
+              <h2 class="results-container">Popular Products</h2>
+
+              <simple-slider>
+                <ul class="simple-slider">
+                  {%- for product in settings.popular_products_list -%}
+                    <li class="list-item">
+                      {% render 'stmt-product-card', product: product %}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </simple-slider>
+            </div>
+            <div class="predictive-search__loading-state">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                class="spinner"
+                viewBox="0 0 66 66"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  class="path"
+                  fill="none"
+                  stroke-width="6"
+                  cx="33"
+                  cy="33"
+                  r="30"></circle>
+              </svg>
+            </div>
+
+            <div class="container">
+              {% render 'other-searches' %}
+            </div>
+          </div>
+
+          <span class="predictive-search-status sr-only" role="status" aria-hidden="true"></span>
+        {%- endif -%}
+      </form>
+      <button
+        type="button"
+        class="c-btn close-button"
+        aria-label="{{ 'accessibility.close' | t }}"
+        data-search-close-wrapper
+      >
+        {%- render 'icon', _name: 'icon-close' -%}
+      </button>
+    </predictive-search>
+  </div>
+</div>

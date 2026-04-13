@@ -1,0 +1,234 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "header": {
+      "type": "brand-landing-header",
+      "settings": {
+        "edge_version": "none",
+        "margin_bottom": "md"
+      }
+    },
+    "42233aa3-11a8-447d-a330-730d88671d29": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Organise your way",
+        "small_text": "<p>Brought to you by the queen of all things organisation herself, Tiffany Spaulding is the incredible Totally Tiffany brand. Full of storage solutions for craft rooms of all sizes, and options to take your supplies with you on the go, this is your one-stop shop for all things storage and organisation. <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1": {
+      "type": "image-feature",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Totally_Tiffany_1.webp",
+        "heading": "Take organisation to the next level",
+        "text": "<p>With the brilliant range of storage options from Totally Tiffany, keeping your craft supplies organised has never been easier! With Buddy Bags designed specifically for ink pads, marker pens and more, storage trays for your paper crafting tools and innovative folders for your metal dies, you'll never be unorganised again!<\/p>",
+        "link_text": "Shop Totally Tiffany",
+        "link_url": "shopify:\/\/collections\/totally-tiffany",
+        "disable_height": false,
+        "content_placement": "left",
+        "margin_bottom": "lg"
+      }
+    },
+    "bab7aec5-01db-4922-bd5b-0478e45a8027": {
+      "type": "content-block-trio",
+      "blocks": {
+        "14acaefe-5109-4c27-85f4-d14fd25b4134": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Buddy Bags",
+            "text": "There's a Buddy Bag for everything from markers to ribbon - and all the ink pads in-between. Lightweight, portable and see through. You're going to love them!",
+            "image": "shopify:\/\/shop_images\/Buddy_Bags_1.jpg",
+            "link_text": "Shop now",
+            "link_url": "\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany=Buddybag"
+          }
+        },
+        "a051e613-e924-4938-9d54-328216b7a319": {
+          "type": "content_block",
+          "settings": {
+            "heading": "ScrapRack",
+            "text": "With an easy-to-use system, customisable pages and pockets, and the option to expand ScrapRack is the solution if you need a system that makes room for itself.",
+            "image": "shopify:\/\/shop_images\/ScrapRack.jpg",
+            "link_text": "Shop now",
+            "link_url": "\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Scraprack"
+          }
+        },
+        "91ab9fd6-aa4a-4f21-aa52-64bd50397598": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Desk Maid",
+            "text": "Having a tidy desk or worktop is absolutely essential for a crafter, and this can be achieved with the Desk Maid. Take a look to see Stadiums, Tool Towers and more!",
+            "image": "shopify:\/\/shop_images\/Ink_Storage.jpg",
+            "link_text": "Shop now",
+            "link_url": "\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Desk+Maid"
+          }
+        }
+      },
+      "block_order": [
+        "14acaefe-5109-4c27-85f4-d14fd25b4134",
+        "a051e613-e924-4938-9d54-328216b7a319",
+        "91ab9fd6-aa4a-4f21-aa52-64bd50397598"
+      ],
+      "settings": {
+        "use_image_only": false,
+        "link_style": "main",
+        "link_colour": "primary",
+        "margin_bottom": "lg"
+      }
+    },
+    "5494c7bb-d720-48a5-a3e5-5139d82add99": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Storage solutions for every craft room",
+        "small_text": "",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "1bafe95e-47fe-4c78-8d8f-c39645db74e7": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/2021-05-24.jpg",
+        "main_heading": "Handy hints & tips",
+        "main_text": "<p>Totally Tiffany is home to a selection of organisation ranges, from the ScrapRack that started it all to the Paper Handlers for stashing your pretty pads. Keep up to date with Tiffany's hints and tips on how to use each storage solution within the collection as well as hearing about the latest product launches and deals!<\/p>",
+        "main_link_url": "shopify:\/\/pages\/totally-tiffany-hints-tips",
+        "main_link_text": "Find out more",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "contain_image": false,
+        "enable_shapes": true,
+        "shape_position": "vertical-end",
+        "enable_dots": false,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "1b65dc5a-a008-4959-87ed-9373074e0392": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "header_title": "",
+        "main_heading": "Storage questions answered",
+        "main_text": "<p>Join Tiffany on the Totally Tiffany Facebook & YouTube pages for live shows and the opportunity to ask questions about your specific storage & organisation challenges!<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "contain_image": false,
+        "enable_shapes": true,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "10cdeb49-848f-43ee-ae1b-8050fd392a25": {
+      "type": "featured-products",
+      "blocks": {
+        "20da1594-98b5-494e-9e0c-d98d670e58a5": {
+          "type": "collection",
+          "settings": {
+            "collection": "totally-tiffany"
+          }
+        }
+      },
+      "block_order": [
+        "20da1594-98b5-494e-9e0c-d98d670e58a5"
+      ],
+      "settings": {
+        "heading": "Best selling Totally Tiffany products",
+        "heading_alignment": false,
+        "link_url": "",
+        "link_text": "",
+        "grid_size": "sm",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "ce9fb382-85bf-45c5-82d1-9ac1d30df4ba": {
+      "type": "featured-articles",
+      "blocks": {
+        "26a6fa4c-3d24-43d2-b225-3318b9e13ae0": {
+          "type": "article",
+          "settings": {
+            "article": "inspiration\/top-tips-for-perfect-organisation-with-the-totally-tiffany-scraprack"
+          }
+        },
+        "31020ad4-fe0c-4817-a8ff-4ad3d6ce115d": {
+          "type": "article",
+          "settings": {
+            "article": "inspiration\/13-craft-storage-ideas"
+          }
+        },
+        "95c515c5-fa0a-432e-961b-8f332cb0c5c9": {
+          "type": "article",
+          "settings": {
+            "article": "inspiration\/tips-and-tricks-for-using-the-totally-tiffany-vinyl-roll-organizer"
+          }
+        }
+      },
+      "block_order": [
+        "26a6fa4c-3d24-43d2-b225-3318b9e13ae0",
+        "31020ad4-fe0c-4817-a8ff-4ad3d6ce115d",
+        "95c515c5-fa0a-432e-961b-8f332cb0c5c9"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/2021-05-24.jpg",
+        "heading": "Follow our latest storage tips",
+        "text": "",
+        "link_url": "",
+        "link_text": "",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "42233aa3-11a8-447d-a330-730d88671d29",
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1",
+    "bab7aec5-01db-4922-bd5b-0478e45a8027",
+    "5494c7bb-d720-48a5-a3e5-5139d82add99",
+    "1bafe95e-47fe-4c78-8d8f-c39645db74e7",
+    "1b65dc5a-a008-4959-87ed-9373074e0392",
+    "10cdeb49-848f-43ee-ae1b-8050fd392a25",
+    "ce9fb382-85bf-45c5-82d1-9ac1d30df4ba"
+  ]
+}

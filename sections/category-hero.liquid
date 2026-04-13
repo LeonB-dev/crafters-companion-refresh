@@ -1,0 +1,266 @@
+{%- liquid
+  assign template_name = 'section-category-hero'
+
+  assign featured_image = page.metafields.custom.featured_image
+  assign page_handle = page.title | handleize
+  assign alt_layout = false
+  assign enable_alternative_category_hero_layout = page.metafields.custom.enable_alternative_category_hero_layout
+
+  if enable_alternative_category_hero_layout == true
+    assign alt_layout = true
+  endif
+
+  assign filter_url_snippet = '?filter.p.tag='
+  assign shop_url = shop.url
+
+  assign enable_collection_blocks = section.settings.enable_collection_blocks
+
+  assign tag_blocks = section.blocks | where: 'type', 'tag_block'
+  assign collection_blocks = section.blocks | where: 'type', 'collection_block'
+
+  assign text_width = section.settings.text_width
+
+  assign enable_blocks = section.settings.enable_blocks
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-category-hero.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-category-hero.js' | asset_url -}}"></script>
+
+<style>
+  div[data-section-id="{{ section.id }}"]{
+    --ul-left-padding: 7.75rem;
+    {%- if featured_image == blank -%}
+      --ul-left-padding: 0;
+    {%- endif -%}
+    {% if text_width == 'wide' %}
+      --text-width: 75%;
+    {% elsif text_width == 'full' %}
+      --text-width: 100%;
+    {% else %}
+      --text-width: var(--paragraph-max-width);
+    {% endif %}
+  }
+</style>
+
+{% if section.blocks.size > 0 and enable_blocks == true -%}
+  {% capture header_items %}
+  <ul>
+    {%- for block in tag_blocks -%}
+      {% liquid
+        assign collection = collections[block.settings.collection]
+        assign collection_handle = collection.title | handleize
+        assign collection_url = '/collections/' | append: collection_handle
+        assign tag = block.settings.tag
+        assign tag_formatted = tag | replace: ' ', '+' | prepend: filter_url_snippet
+        assign tag_url = shop.url | append: collection_url | append: tag_formatted
+        assign tag_text = tag | split: '_' | last
+      %}
+      <li>
+        <a href="{{ tag_url }}" class="c-btn query">
+          {{ tag_text }}
+        </a>
+      </li>
+    {%- endfor -%}
+  <ul>
+  {% endcapture %}
+{%- endif -%}
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }} overflow-hidden {% if alt_layout == true %} alt-layout {% endif %}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    {%- if alt_layout == false -%}
+      <header>
+        {%-
+          render 'section-header',
+          _image: featured_image,
+          _heading: page.title,
+          _text: page.content
+          _offset: false,
+          _heading_class: 'u-heading-lg',
+          _loading: 'eager'
+        -%}
+        {{ header_items }}
+      </header>
+    {%- else -%}
+      <header class="alt">
+        {%-
+          render 'category-hero-alt',
+          _image: featured_image,
+          _heading: page.title,
+          _description: page.content,
+          _header_items: header_items
+        -%}
+      </header>
+      {% if enable_blocks == true  %}
+        <h3 class="u-heading-xs block-heading">{{- 'template.category.block_heading_html' | t: title: page.title -}}</h3>
+      {% endif %}
+    {%- endif -%}
+    {% if enable_blocks == true  %}
+      <div class="swiper-container has-scrollbar" data-ch-slider>
+        <div class="swiper-wrapper">
+          {%- if enable_collection_blocks == true -%}
+            {%- for block in collection_blocks -%}
+              {% liquid
+                assign collection = block.settings.collection
+              %}
+              <div class="swiper-slide">
+                {%
+                  render 'category-item',
+                  _url: collection.url,
+                  _image: collection.image,
+                  _heading: collection.title,
+                  _loading: 'eager'
+                -%}
+              </div>
+            {%- endfor -%}
+          {%- else -%}
+            {%- for link in linklists[section.settings.menu].links -%}
+              {% liquid
+                assign link_handle = link.title | handleize
+              %}
+              {%- if page_handle == link_handle -%}
+                {%- for childlink in link.links -%}
+                  {% liquid
+                    assign page_url = childlink.url
+                    assign page_url_split = page_url | split: '/' | last
+
+                    if page_url contains 'collection'
+                      assign collection = collections[page_url_split]
+                      assign block_image = collection.image
+                    elsif page_url contains 'pages'
+                      assign page = pages[page_url_split]
+                      assign block_image = page.metafields.custom.featured_image
+                    endif
+                  %}
+                  <div class="swiper-slide">
+                    {%
+                      render 'category-item',
+                      _url: childlink.url,
+                      _image: block_image,
+                      _heading: childlink.title,
+                      _loading: 'eager'
+                    -%}
+                  </div>
+                {%- endfor -%}
+              {%- else -%}
+                {{ break }}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif-%}
+        </div>
+        <div class="swiper-scrollbar" data-ch-slider-scrollbar></div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Category Hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_collection_blocks",
+      "label": "Enable collection blocks",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_blocks",
+      "label": "Enable blocks below heading",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "text_width",
+      "label": "Select text with for desktop",
+      "options": [
+        {
+          "value": "standard",
+          "label": "Standard - Recommended"
+        },
+        {
+          "value": "wide",
+          "label": "Wide -75%"
+        },
+        {
+          "value": "full",
+          "label": "Full width"
+        }
+      ],
+      "default": "standard"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tag_block",
+      "name": "Tag block",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag",
+          "info": "This must be an exact match to the offer tag for the collection. E.g. offer_3 for 2"
+        }
+      ]
+    },
+    {
+      "type": "collection_block",
+      "name": "Collection block",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category Hero",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

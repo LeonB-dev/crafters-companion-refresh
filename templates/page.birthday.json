@@ -1,0 +1,650 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "text_only_DzhFGe": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "none"
+      }
+    },
+    "featured_image_LkNThL": {
+      "type": "featured-image",
+      "disabled": true,
+      "settings": {
+        "url": "",
+        "image": "shopify://shop_images/Header-Desktop.gif",
+        "image_mobile": "shopify://shop_images/Header-Mobile.gif",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "content_block_trio_RK9G7Q": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_phVjq9": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Gemini Machine Deals",
+            "text": "",
+            "image": "shopify://shop_images/Gemini_Deals.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/gemini-machine-deals"
+          }
+        },
+        "content_block_CG8GqX": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Vintage Vegas",
+            "text": "",
+            "image": "shopify://shop_images/Vintage_Vegas_ef7b2efd-ff6c-4708-b40d-39d2cb2eeead.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/vintage-vegas"
+          }
+        },
+        "content_block_p6fzwC": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Party Bag",
+            "text": "",
+            "image": "shopify://shop_images/Party_Bag_07e52cbe-8fee-440f-9a1d-dc1205654e50.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/crafters-companion-19th-birthday-party-bag"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_phVjq9",
+        "content_block_CG8GqX",
+        "content_block_p6fzwC"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "content_block_trio_Rjnk9B": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_ymwpUc": {
+          "type": "content_block",
+          "settings": {
+            "heading": "3 for 2 Paper & Card",
+            "text": "",
+            "image": "shopify://shop_images/3_for_2_Paper_and_Card_73488fed-dc91-4e66-860a-c0407d5c6fd3.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/3-for-2-on-select-paper-card"
+          }
+        },
+        "content_block_MJxxf9": {
+          "type": "content_block",
+          "settings": {
+            "heading": "3 for 2 Adhesives",
+            "text": "",
+            "image": "shopify://shop_images/3_for_2_Adhesives_0ba72319-d0c1-4c28-aa4f-4a5911978e87.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/3-for-2-adhesives"
+          }
+        },
+        "content_block_aQPHWr": {
+          "type": "content_block",
+          "settings": {
+            "heading": "3 for 2 Inkpads",
+            "text": "",
+            "image": "shopify://shop_images/3_for_2_Ink_Pads.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/3-for-2-on-select-inkpads"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_ymwpUc",
+        "content_block_MJxxf9",
+        "content_block_aQPHWr"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "content_block_trio_3UYjCx": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_GQEact": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Latest Launches",
+            "text": "",
+            "image": "shopify://shop_images/Latest_Launches_Sheena_Crystal_Visions.jpg",
+            "link_text": "",
+            "link_url": "shopify://pages/new"
+          }
+        },
+        "content_block_tb73jz": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Star Buys",
+            "text": "",
+            "image": "shopify://shop_images/400_x_300_Star_Buys_2.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/star-buys"
+          }
+        },
+        "content_block_zHN7eM": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Tap Pen Bundles",
+            "text": "",
+            "image": "shopify://shop_images/Tape_Pen_Bundles_649fa2cb-86ce-45f5-a154-c86535b2373a.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/tape-pen-bundles"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_GQEact",
+        "content_block_tb73jz",
+        "content_block_zHN7eM"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "featured_image_gzLPMR": {
+      "type": "featured-image",
+      "disabled": true,
+      "settings": {
+        "url": "https://online.flippingbook.com/view/879625619/",
+        "image": "shopify://shop_images/Birthday_Booklet_Slim_Desktop.jpg",
+        "image_mobile": "shopify://shop_images/700_x_700_Booklet_fbe08711-f0f7-404e-8904-69f758bce070.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "content_block_trio_M4ytVk": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_hiCwPK": {
+          "type": "content_block",
+          "settings": {
+            "heading": "3 for 2 Essential Tools",
+            "text": "",
+            "image": "shopify://shop_images/3_for_2_Essential_Tools_9bae4f5a-dc41-4943-a379-529e41c610d4.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/3-for-2-on-essential-tools"
+          }
+        },
+        "content_block_7tCdBb": {
+          "type": "content_block",
+          "settings": {
+            "heading": "3 for 2 Buddy Bags",
+            "text": "",
+            "image": "shopify://shop_images/3_for_2_Buddy_Bags.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/3-for-2-on-select-buddy-bags"
+          }
+        },
+        "content_block_Lj6i9i": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Double Points",
+            "text": "",
+            "image": "shopify://shop_images/Double_Points.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_hiCwPK",
+        "content_block_7tCdBb",
+        "content_block_Lj6i9i"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "content_block_trio_czYKhK": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_eE74en": {
+          "type": "content_block",
+          "settings": {
+            "heading": "80% off Build a Block Sets",
+            "text": "",
+            "image": "shopify://shop_images/80_off_Build-A-Block_Sets.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/80-off-build-a-block-sets"
+          }
+        },
+        "content_block_7rG888": {
+          "type": "content_block",
+          "settings": {
+            "heading": "70% off Multimedia Dies",
+            "text": "",
+            "image": "shopify://shop_images/70_off_Multi-Media_Dies.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/up-to-70-off-multi-media-dies"
+          }
+        },
+        "content_block_RgmiNh": {
+          "type": "content_block",
+          "settings": {
+            "heading": "70% off Kits & Boxes",
+            "text": "",
+            "image": "shopify://shop_images/70_off_Kits___Boxes.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/up-to-70-off-kits-boxes"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_eE74en",
+        "content_block_7rG888",
+        "content_block_RgmiNh"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "content_block_trio_ajgWFp": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_VkwRNf": {
+          "type": "content_block",
+          "settings": {
+            "heading": "70% Off Dies / Stamps / Folders / Stencils",
+            "text": "",
+            "image": "shopify://shop_images/70_off_Dies_Stamps_Folders_Stencils_c5bab288-4550-4f12-86ba-df924eafb212.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/70-off-select-dies-stamps-folders-stencils"
+          }
+        },
+        "content_block_RPYLqi": {
+          "type": "content_block",
+          "settings": {
+            "heading": "70% off Sewing Tools",
+            "text": "",
+            "image": "shopify://shop_images/70_off_Sewing_Tools.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/up-to-70-off-sewing-tools"
+          }
+        },
+        "content_block_gKfYeQ": {
+          "type": "content_block",
+          "settings": {
+            "heading": "70% off Sewing Templates",
+            "text": "",
+            "image": "shopify://shop_images/70_off_Sewing_Templates.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/up-to-70-off-sewing-templates"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_VkwRNf",
+        "content_block_RPYLqi",
+        "content_block_gKfYeQ"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "content_block_trio_VcghKe": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_f779Wz": {
+          "type": "content_block",
+          "settings": {
+            "heading": "60% off A4 Card Packs",
+            "text": "",
+            "image": "shopify://shop_images/60_off_A4_Card_Packs_db7d1fb8-7e77-49d9-8f74-814233f22356.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/up-to-60-off-select-a4-card-packs"
+          }
+        },
+        "content_block_6jFJiY": {
+          "type": "content_block",
+          "settings": {
+            "heading": "70% off Totally Tiffany",
+            "text": "",
+            "image": "shopify://shop_images/70_off_Totally_Tiffany.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/up-to-70-off-select-totally-tiffany-items"
+          }
+        },
+        "content_block_83iqX9": {
+          "type": "content_block",
+          "settings": {
+            "heading": "50% off Violet Studio",
+            "text": "",
+            "image": "shopify://shop_images/50_off_Violet_Studio.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/50-off-select-violet-studio-items"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_f779Wz",
+        "content_block_6jFJiY",
+        "content_block_83iqX9"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "content_block_trio_dEfNxP": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_VnkeAF": {
+          "type": "content_block",
+          "settings": {
+            "heading": "50% off Hooked",
+            "text": "",
+            "image": "shopify://shop_images/50_off_Hooked_Items.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/50-off-hooked-items"
+          }
+        },
+        "content_block_GxiN9x": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Up to 60% off select Paper Pads",
+            "text": "",
+            "image": "shopify://shop_images/60_off_Paper_Pads_9238c566-43a7-4fa0-89d0-aa2c83a7eaae.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/up-to-60-off-select-paper-pads"
+          }
+        },
+        "content_block_CYg7tA": {
+          "type": "content_block",
+          "settings": {
+            "heading": "30% off Storage",
+            "text": "",
+            "image": "shopify://shop_images/30_off_Storage.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/30-off-select-storage"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_VnkeAF",
+        "content_block_GxiN9x",
+        "content_block_CYg7tA"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "content_block_trio_eE3cga": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_eY3UFK": {
+          "type": "content_block",
+          "settings": {
+            "heading": "50% off Gilding Flakes",
+            "text": "",
+            "image": "shopify://shop_images/50_off_Gilding_Flakes.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/50-off-gilding-flakes"
+          }
+        },
+        "content_block_rQqBiJ": {
+          "type": "content_block",
+          "settings": {
+            "heading": "50% off Art & Colouring",
+            "text": "",
+            "image": "shopify://shop_images/50_off_Art_and_Colouring_a5ee45e5-0be2-401a-ace3-a8f222280522.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/50-off-select-art-colouring-items"
+          }
+        },
+        "content_block_ixMVVD": {
+          "type": "content_block",
+          "settings": {
+            "heading": "25% off Gilding Waxes",
+            "text": "",
+            "image": "shopify://shop_images/25_off_Gilding_Waxes_e2352d24-917d-42f5-82ef-d1dae7dfd5c9.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/25-off-gilding-waxes-1"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_eY3UFK",
+        "content_block_rQqBiJ",
+        "content_block_ixMVVD"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "content_block_trio_MgrPVJ": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_FhDeDE": {
+          "type": "content_block",
+          "settings": {
+            "heading": "50% off Fabric",
+            "text": "",
+            "image": "shopify://shop_images/50_off_Fabric.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/up-to-50-off-fabric"
+          }
+        },
+        "content_block_jnQK3b": {
+          "type": "content_block",
+          "settings": {
+            "heading": "30% off Plates & Accessories",
+            "text": "",
+            "image": "shopify://shop_images/30_off_Plates_and_Accessories_11ab7445-8441-47ee-9d93-cbcf4534c2e7.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/30-off-select-gemini-plates-accessories"
+          }
+        },
+        "content_block_9F7jQ6": {
+          "type": "content_block",
+          "settings": {
+            "heading": "2 for 20 Embossing Boards",
+            "text": "",
+            "image": "shopify://shop_images/2_for_20_Embossing_Boards.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/2-for-20-on-selected-embossing-boards"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_FhDeDE",
+        "content_block_jnQK3b",
+        "content_block_9F7jQ6"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "content_block_trio_LBVNWD": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_je4XbL": {
+          "type": "content_block",
+          "settings": {
+            "heading": "80% off Quilting Pattern Guides",
+            "text": "",
+            "image": "shopify://shop_images/80_off_Quilting_Pattern_Guides_a4aee4ba-f105-4e00-8dac-6dc53268b889.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/80-off-quilting-pattern-guides"
+          }
+        },
+        "content_block_dLDLwW": {
+          "type": "content_block",
+          "settings": {
+            "heading": "30% off Plates & Accessories",
+            "text": "",
+            "image": "shopify://shop_images/70_off_Threaders_Kits_a9d5bde6-2aa3-440f-bf43-62fcee0c2889.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/up-to-70-off-threaders-kits"
+          }
+        },
+        "content_block_X9fmJE": {
+          "type": "content_block",
+          "settings": {
+            "heading": "70% Off Threaders Items",
+            "text": "",
+            "image": "shopify://shop_images/70_off_Threaders_Items_f39a5bed-e24a-4f7b-aaf1-f0033e55abfe.jpg",
+            "link_text": "",
+            "link_url": "shopify://collections/70-off-threaders-items"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_je4XbL",
+        "content_block_dLDLwW",
+        "content_block_X9fmJE"
+      ],
+      "disabled": true,
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "featured_image_7RpbAx": {
+      "type": "featured-image",
+      "settings": {
+        "url": "",
+        "image": "shopify://shop_images/End_of_Birthday_Desktop_afc826ae-e735-4799-b4cd-5379db08a8e1.jpg",
+        "image_mobile": "shopify://shop_images/End_of_Birthday_Mobile_1b35394b-3c91-439a-a09f-b10759bfb91c.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "form_embed_NbQwgL": {
+      "type": "form-embed",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "text": "",
+        "form_embed": "",
+        "enable_h1": true,
+        "margin_top": "md"
+      }
+    },
+    "featured_image_zcXweG": {
+      "type": "featured-image",
+      "disabled": true,
+      "settings": {
+        "url": "shopify://pages/crafters-tv-schedule",
+        "image": "shopify://shop_images/CTV_Schedule_Desktop_938e996b-a919-4d0c-9bcf-73f40ac8d6a5.jpg",
+        "image_mobile": "shopify://shop_images/CTV_Schedule_Mobile_ea1482a5-b708-4ae9-b4bf-27bca0968f99.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "wishit_custom_html_j4H3rH": {
+      "type": "wishit-custom-html",
+      "disabled": true,
+      "settings": {
+        "html": "<a href=\"https://online.flippingbook.com/view/879625619/\" class=\"fbo-embed\" data-fbo-id=\"d08f9333d8\" data-fbo-ratio=\"3:2\" data-fbo-lightbox=\"yes\" data-fbo-width=\"100%\" data-fbo-height=\"auto\" data-fbo-version=\"1\" style=\"max-width: 100%\">19th Birthday Booklet (US)</a><script async=\"\" defer src=\"https://online.flippingbook.com/EmbedScriptUrl.aspx?m=redir&amp;hid=879625619\"></script>"
+      }
+    },
+    "form_embed_wHRNtX": {
+      "type": "form-embed",
+      "disabled": true,
+      "custom_css": [
+        ".u-heading-md {text-align: center;}"
+      ],
+      "settings": {
+        "heading": "Sign up for all our 19th Birthday news and offers",
+        "text": "",
+        "form_embed": "<div class=\"klaviyo-form-WTRzA7\"></div>",
+        "enable_h1": true,
+        "margin_top": "sm"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "text_only_DzhFGe",
+    "featured_image_LkNThL",
+    "content_block_trio_RK9G7Q",
+    "content_block_trio_Rjnk9B",
+    "content_block_trio_3UYjCx",
+    "featured_image_gzLPMR",
+    "content_block_trio_M4ytVk",
+    "content_block_trio_czYKhK",
+    "content_block_trio_ajgWFp",
+    "content_block_trio_VcghKe",
+    "content_block_trio_dEfNxP",
+    "content_block_trio_eE3cga",
+    "content_block_trio_MgrPVJ",
+    "content_block_trio_LBVNWD",
+    "featured_image_7RpbAx",
+    "form_embed_NbQwgL",
+    "featured_image_zcXweG",
+    "wishit_custom_html_j4H3rH",
+    "form_embed_wHRNtX"
+  ]
+}

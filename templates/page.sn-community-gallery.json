@@ -1,0 +1,416 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "120fdb19-2eee-4711-8d6f-fe4a1e50a770": {
+      "type": "image-feature",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/SN_Community_Gallary_3c65767a-752e-4fae-94fa-11b91f27f064.png",
+        "heading": "Community Gallery",
+        "text": "<p> <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "content_placement": "left"
+      }
+    },
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false
+      }
+    },
+    "76400532-dfd5-4af3-89c6-7f237848dbf5": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>If you are as passionate about art as we are, we want to hear from you!  Here at Spectrum Noir encouraging<strong> emerging artists<\/strong> is very important to us. We want to create an inclusive community where everyone can share their work and find <strong>new inspiration<\/strong>. <\/p><p>That’s why we have designed our <strong>Community Gallery<\/strong>. It’s a space for you to showcase your artwork and take a look at what other aspiring artists are working on using their Spectrum Noir markers. If you would like to be in for a chance to feature your artwork in our gallery,<strong> just fill in this<\/strong> <a href=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSccaZakwrm5wdDr5xTXFZEUF9He3Dv-FUnQCHKqxqa_u0GZrw\/viewform\">online form. <\/a><\/p><p>We might even share your submissions on an email or on our social media pages. Don’t forget to share your<strong> Instagram handle<\/strong> so that our art community can check out the rest of your portfolio, and let us know which Spectrum Noir markers you have used to create your masterpiece!<\/p><p><strong>Did you know?<\/strong> The Spectrum Noir team works with many artists to showcase their skills. And it’s often artists like you who reach out to us, with suggestions to develop <strong>our markers to suit their needs!<\/strong><\/p><p><strong>Submit your artwork for our Community Gallery<\/strong> <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "87fd02d0-4ea5-4812-8604-71ce9f24db1b": {
+      "type": "image-grid",
+      "blocks": {
+        "1c741c42-8545-4890-b934-03931979158b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_-_2022-06-29T145412.461.png"
+          }
+        },
+        "48fb1843-3449-42a7-9b6a-25e91ffefeae": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_98.png"
+          }
+        },
+        "0b4dffb2-5808-445b-9114-a6c499415974": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_100.png"
+          }
+        },
+        "1a9de3fd-c479-46aa-85bf-d2522be0941a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_-_2022-06-29T142233.206.png"
+          }
+        },
+        "6012b8be-8fc8-4e10-927c-133d233a7351": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_-_2022-06-29T142647.821.png"
+          }
+        },
+        "3b945b5f-8b76-4f0f-ae0b-74c61435fcdd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_25__1.png"
+          }
+        },
+        "4a59066a-3144-4aea-a949-952b64875d03": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_-_2022-06-29T142548.862.png"
+          }
+        },
+        "eabede87-65ad-4ef1-820f-434b02e69c2c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_-_2022-06-29T142453.699.png"
+          }
+        },
+        "c9166780-02e7-497e-aff1-b4f4ecf6e1be": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_-_2022-06-29T142401.063.png"
+          }
+        },
+        "621d4154-5a7d-40d7-bd88-15193cbfb052": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_97.png"
+          }
+        },
+        "cd152da5-0cbd-4816-afee-9a156eef5d94": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_-_2022-06-29T145339.821.png"
+          }
+        },
+        "c1a76277-8292-44e4-bc19-9501a04b9324": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_99.png"
+          }
+        },
+        "48898c39-1dc4-418f-8a6e-db754c5783f5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_-_2022-06-29T142309.100.png"
+          }
+        },
+        "d8db09fe-bf28-4d3d-9e92-df5fdeea7f11": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_32.png"
+          }
+        },
+        "b904f684-5b73-48a3-b5f5-8ccf06b3d71a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_-_2022-06-29T145309.292.png"
+          }
+        },
+        "842775d6-9a8a-4544-b58b-597db9e5334a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_22__2.png"
+          }
+        },
+        "40d1f007-238b-42f6-acf1-6effcbb0476c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_21__1.png"
+          }
+        },
+        "4c5f91d0-4bf9-4156-969d-9942cf3bbe9a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_20__1.png"
+          }
+        },
+        "8743390d-2595-4636-9620-dd481b807406": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_19__1.png"
+          }
+        },
+        "5badf86d-6b84-41bd-9098-e788a4ecc2b0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_18__1.png"
+          }
+        },
+        "e5a5cd67-1434-4fcf-960a-6d1fad68dbfd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_34.png"
+          }
+        },
+        "136e4c71-0b40-4c46-843b-cb7376a17ad9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_38.png"
+          }
+        },
+        "f7a49942-a4e9-444d-8634-29a996c526d7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_37.png"
+          }
+        },
+        "c80f6cf9-7fdd-4e26-adff-9a71fac3063c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_36.png"
+          }
+        },
+        "1e1deaab-de27-481a-b3c2-f5824a80747c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_8.png"
+          }
+        },
+        "da26e97f-d5ef-4fa8-9581-70cad5b92525": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_22__1.png"
+          }
+        },
+        "18e4a7e5-fc95-4fca-b6cc-284ef6572540": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_14__1.png"
+          }
+        },
+        "3483e9e4-6135-46be-b542-869a58c58dba": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_11.png"
+          }
+        },
+        "f939b2ad-0cb0-42b7-8366-32a59fc4e79a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_13.png"
+          }
+        },
+        "3c2dbb3d-72ed-4db5-b50e-570e6089d09c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_12.png"
+          }
+        },
+        "340e810a-c4b9-4024-9c0e-db97d087d1bd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_10.png"
+          }
+        },
+        "5368430e-113f-4efa-b29f-6cf7038e9dee": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_15.png"
+          }
+        },
+        "2d026506-5bca-4425-bca9-f85c54387791": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_16.png"
+          }
+        },
+        "a66c80db-3a6a-4363-b869-05405ab630dc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_17.png"
+          }
+        },
+        "91578208-e43c-4c31-a222-fcbba042610b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_18.png"
+          }
+        },
+        "7da7781d-6c0a-45aa-a65c-14dd1c2dcbd3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_19.png"
+          }
+        },
+        "bd341a63-0b5a-4d26-9e26-0c9d1297444b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_20.png"
+          }
+        },
+        "6b665cf8-cfc1-4dfa-828f-96ec20373dbf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_9.png"
+          }
+        },
+        "ad54cfb6-0946-4823-81a8-ad1fbb05bf00": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_23.png"
+          }
+        },
+        "d0b65538-39aa-4e47-89ea-bed9c6e779bf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_21.png"
+          }
+        },
+        "145d1f58-8ff5-4841-a065-be71ff066fa7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_24.png"
+          }
+        },
+        "00a2902a-9b22-4168-a3c8-b101ca7d5115": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_25.png"
+          }
+        },
+        "db4d239e-b6c6-4b63-b812-9e36a963c987": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_26.png"
+          }
+        },
+        "1fa0bcde-b40b-47e7-babd-29fb7c6fde75": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_27.png"
+          }
+        },
+        "80b0817d-4d09-4be7-a80d-f4a548c025f4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_28.png"
+          }
+        },
+        "32b901dc-b309-4cc8-bb98-8d73265fe4d1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_project_30.png"
+          }
+        },
+        "cefff5a5-d14f-4fea-aeb3-5168af258ce7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_Post_35.png"
+          }
+        },
+        "1b361bec-af50-4181-82f4-45f898211693": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_Post_38.png"
+          }
+        },
+        "a91c2975-bd96-42de-af92-304948ef1fd3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_Post_34.png"
+          }
+        },
+        "0b43f2f4-22a7-4b98-9de3-7808e520b59a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/My_Post_37.png"
+          }
+        }
+      },
+      "block_order": [
+        "1c741c42-8545-4890-b934-03931979158b",
+        "48fb1843-3449-42a7-9b6a-25e91ffefeae",
+        "0b4dffb2-5808-445b-9114-a6c499415974",
+        "1a9de3fd-c479-46aa-85bf-d2522be0941a",
+        "6012b8be-8fc8-4e10-927c-133d233a7351",
+        "3b945b5f-8b76-4f0f-ae0b-74c61435fcdd",
+        "4a59066a-3144-4aea-a949-952b64875d03",
+        "eabede87-65ad-4ef1-820f-434b02e69c2c",
+        "c9166780-02e7-497e-aff1-b4f4ecf6e1be",
+        "621d4154-5a7d-40d7-bd88-15193cbfb052",
+        "cd152da5-0cbd-4816-afee-9a156eef5d94",
+        "c1a76277-8292-44e4-bc19-9501a04b9324",
+        "48898c39-1dc4-418f-8a6e-db754c5783f5",
+        "d8db09fe-bf28-4d3d-9e92-df5fdeea7f11",
+        "b904f684-5b73-48a3-b5f5-8ccf06b3d71a",
+        "842775d6-9a8a-4544-b58b-597db9e5334a",
+        "40d1f007-238b-42f6-acf1-6effcbb0476c",
+        "4c5f91d0-4bf9-4156-969d-9942cf3bbe9a",
+        "8743390d-2595-4636-9620-dd481b807406",
+        "5badf86d-6b84-41bd-9098-e788a4ecc2b0",
+        "e5a5cd67-1434-4fcf-960a-6d1fad68dbfd",
+        "136e4c71-0b40-4c46-843b-cb7376a17ad9",
+        "f7a49942-a4e9-444d-8634-29a996c526d7",
+        "c80f6cf9-7fdd-4e26-adff-9a71fac3063c",
+        "1e1deaab-de27-481a-b3c2-f5824a80747c",
+        "da26e97f-d5ef-4fa8-9581-70cad5b92525",
+        "18e4a7e5-fc95-4fca-b6cc-284ef6572540",
+        "3483e9e4-6135-46be-b542-869a58c58dba",
+        "f939b2ad-0cb0-42b7-8366-32a59fc4e79a",
+        "3c2dbb3d-72ed-4db5-b50e-570e6089d09c",
+        "340e810a-c4b9-4024-9c0e-db97d087d1bd",
+        "5368430e-113f-4efa-b29f-6cf7038e9dee",
+        "2d026506-5bca-4425-bca9-f85c54387791",
+        "a66c80db-3a6a-4363-b869-05405ab630dc",
+        "91578208-e43c-4c31-a222-fcbba042610b",
+        "7da7781d-6c0a-45aa-a65c-14dd1c2dcbd3",
+        "bd341a63-0b5a-4d26-9e26-0c9d1297444b",
+        "6b665cf8-cfc1-4dfa-828f-96ec20373dbf",
+        "ad54cfb6-0946-4823-81a8-ad1fbb05bf00",
+        "d0b65538-39aa-4e47-89ea-bed9c6e779bf",
+        "145d1f58-8ff5-4841-a065-be71ff066fa7",
+        "00a2902a-9b22-4168-a3c8-b101ca7d5115",
+        "db4d239e-b6c6-4b63-b812-9e36a963c987",
+        "1fa0bcde-b40b-47e7-babd-29fb7c6fde75",
+        "80b0817d-4d09-4be7-a80d-f4a548c025f4",
+        "32b901dc-b309-4cc8-bb98-8d73265fe4d1",
+        "cefff5a5-d14f-4fea-aeb3-5168af258ce7",
+        "1b361bec-af50-4181-82f4-45f898211693",
+        "a91c2975-bd96-42de-af92-304948ef1fd3",
+        "0b43f2f4-22a7-4b98-9de3-7808e520b59a"
+      ],
+      "settings": {
+        "heading": "",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "md"
+      }
+    }
+  },
+  "order": [
+    "120fdb19-2eee-4711-8d6f-fe4a1e50a770",
+    "main",
+    "76400532-dfd5-4af3-89c6-7f237848dbf5",
+    "87fd02d0-4ea5-4812-8604-71ce9f24db1b"
+  ]
+}

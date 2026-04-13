@@ -1,0 +1,179 @@
+{%- liquid
+  assign template_name = 'section-slider'
+
+  assign use_full_width = section.settings.use_full_width
+  assign use_autoplay = section.settings.use_autoplay
+  assign use_nav = section.settings.use_nav
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-slider.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-slider.js' | asset_url -}}" defer></script>
+
+{% for block in section.blocks %}
+
+{% endfor %}
+
+{% capture slider %}
+  <div class="swiper-container" data-autoplay="{{- use_autoplay -}}" data-ss-slider>
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        {% liquid
+          assign image_desktop = block.settings.image_desktop
+          assign image_tablet = block.settings.image_tablet | default: image_desktop
+          assign image_mobile = block.settings.image_mobile | default: image_desktop
+          assign image_alt = image_desktop.alt
+
+          assign link_url = block.settings.link_url
+          assign slider_delay_timer = block.settings.slider_delay_timer
+        %}
+      {% capture picture %}
+          <picture>
+            <source media="(min-width:1500px)" srcset="{{- image_desktop | image_url: width: 1920 -}}">
+            <source media="(min-width:1100px)" srcset="{{- image_desktop | image_url: width: 1500 -}}">
+            <source media="(min-width:800px)" srcset="{{- image_desktop | image_url: width: 1024 -}}">
+            <source media="(min-width:551px)" srcset="{{- image_tablet | image_url: width: 800 -}}">
+            <source media="(max-width: 550.8px)" srcset="{{- image_mobile | image_url: width: 600 -}}">
+            <img src="{{- image_desktop | image_url: width: 480 -}}" alt="{{- image_alt -}}" height="440" width="390" loading="eager" class="image" />
+          </picture>
+        {% endcapture %}
+        <div class="swiper-slide" data-swiper-autoplay="{{- slider_delay_timer -}}000">
+          {% if link_url != blank %}
+            <a href="{{- link_url -}}">
+              {{ picture }}
+            </a>
+          {% else %}
+            {{ picture }}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-nav">
+      {% if use_nav == true %}
+        <button class=" c-btn swiper-button prev" aria-label="Previous" data-ss-prev>
+          {%- render 'icon', _name: 'icon-arrow-left' -%}
+        </button>
+      {% endif %}
+      {% if use_autoplay == true %}
+        <button class="c-btn swiper-button play-pause is-playing" data-ss-slider-play-toggle>
+          {%- render 'icon', _name: 'icon-play', _class: 'play' -%}
+          {%- render 'icon', _name: 'icon-pause', _class: 'pause' -%}
+        </button>
+      {% endif %}
+      {% if use_nav == true %}
+        <button class="c-btn swiper-button next" aria-label="Next" data-ss-next>
+         {%- render 'icon', _name: 'icon-arrow-right' -%}
+        </button>
+      {% endif %}
+    </div>
+  </div>
+{% endcapture %}
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {% if use_full_width == true %}
+    {{ slider }}
+  {% else %}
+    <div class="container">{{ slider }}</div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Slider",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_full_width",
+      "label": "Use full width of browser.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "use_autoplay",
+      "label": "Use autoplay.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "use_nav",
+      "label": "Use navigation button.",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "sm"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_desktop",
+          "label": "Image for desktop",
+          "info": "Minimum width: 1920px for full width. Minimum width: 1400px for container width."
+        },
+        {
+          "type": "image_picker",
+          "id": "image_tablet",
+          "label": "Image for tablet",
+          "info": "Minimum width: 800px."
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image for mobile",
+          "info": "Minimum width: 600px."
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "range",
+          "id": "slider_delay_timer",
+          "label": "Slider autoplay delay. 4 equals 4 seconds.",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "default": 1
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slider",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

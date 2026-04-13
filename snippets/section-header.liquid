@@ -1,0 +1,63 @@
+{% liquid
+  if _heading_class != blank
+    assign heading_class = _heading_class
+  else
+    assign heading_class = 'u-heading-xs'
+  endif
+
+  assign loading = _loading | default: 'lazy'
+
+  if _link_class != blank
+    assign _link_class = _link_class
+  else
+    assign _link_class = 'primary'
+  endif
+
+  assign image_alt = _image.alt | default: _heading | strip_html
+%}
+
+<div class="
+  snippet-section-header
+  {% if _heading_alignment == true %} center {% endif %}
+  {% if _offset != false -%}u-content-offset{% endif %}
+  {% if _image != blank %}has-image{% endif %}
+  {% if _link_url != blank and _link_text != blank and _link_class != blank %}has-link {% endif %}
+  {% if _text != blank or collection %}has-text {% endif %}">
+  {%- if _image != blank -%}
+    <div class="image">
+      <img src="{{- _image | image_url: width: 256 -}}" alt="{{- image_alt -}}" height="80" width="80" loading="{{- loading | default: 'lazy' -}}"/>
+    </div>
+  {%- endif -%}
+  {%- if collection or _is_h1 == true -%}
+    <h1 class="{{ heading_class }} heading" data-page-title="{{ _heading }}">{{- _heading -}}</h1>
+  {%- else -%}
+    <h2 class="{{ heading_class }} heading">{{- _heading -}}</h2>
+  {%- endif -%}
+  {%- if _text != blank -%}
+    <div class="description">{{- _text -}}</div>
+  {%- endif -%}
+  {% if collection and _offers_filter != blank %}
+    <ul class="filter-blocks">
+      {% assign offer_count = 0 %}
+      {% for filter_value in _offers_filter.values %}
+        {% assign filter_label = filter_value.label | downcase %}
+        {% if filter_label contains settings.tags_filter_prefix %}
+          <li>
+            <button class="c-btn query filter-button" data-filter-reference="Filter-{{ _offers_filter.param_name }}-{{ forloop.index }}" {% if filter_value.active %} disabled {% endif %}>
+              {{ filter_value.label | split: '_' | last }}
+            </button>
+          </li>
+          {% assign offer_count = offer_count | plus: 1 %}
+        {% endif %}
+
+        {% if offer_count == 4 %} {% break %} {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+  {%- if _link_url != blank and _link_text != blank -%}
+    <a href="{{- _link_url -}}" class="c-btn alt {{ _link_class }}">
+      {{- _link_text -}}
+      {%- render 'icon', _name: 'icon-arrow-right' -%}
+    </a>
+  {%- endif -%}
+</div>

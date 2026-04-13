@@ -1,0 +1,101 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "0fb83270-8751-43be-9d7e-06e58c8ff80e": {
+      "type": "category-hero",
+      "blocks": {
+        "d0b4af24-585e-4488-82d0-7645d952ae9a": {
+          "type": "tag_block",
+          "disabled": true,
+          "settings": {
+            "collection": "spectrum-noir",
+            "tag": "offer_3 for 2"
+          }
+        }
+      },
+      "block_order": [
+        "d0b4af24-585e-4488-82d0-7645d952ae9a"
+      ],
+      "settings": {
+        "menu": "main-menu",
+        "enable_collection_blocks": false,
+        "enable_blocks": true,
+        "text_width": "full",
+        "margin_bottom": "sm"
+      }
+    },
+    "4d90ad4e-453e-4717-9df1-6bc5396b40f5": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_fRy6N3": {
+          "type": "collection",
+          "settings": {
+            "collection": "papercraft"
+          }
+        }
+      },
+      "block_order": [
+        "collection_fRy6N3"
+      ],
+      "settings": {
+        "heading": "Shop our best-selling papercraft products",
+        "heading_alignment": false,
+        "link_url": "",
+        "link_text": "",
+        "grid_size": "lg",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "stmt_inspiration_3UDdLe": {
+      "type": "stmt-inspiration",
+      "blocks": {
+        "tab_LNp4Mb": {
+          "type": "tab",
+          "settings": {
+            "title": "Papercrafts",
+            "content_subtitle": "Get Inspired",
+            "content_title": "Discover card making",
+            "content_description": "<p>Handmade cards are the perfect way to show your love and appreciation and add a personal touch to any occasion.<\/p>",
+            "featured_collection": "papercraft",
+            "featured_collection_image_desktop": "shopify:\/\/shop_images\/papercraft_700_700_90ff977a-c36f-4fea-af8f-be4300c12573.png",
+            "featured_collection_image_mobile": "shopify:\/\/shop_images\/papercraft_700_700_4557c455-06d9-4df5-b902-cb5f2b629acd.png",
+            "primary_color": "#f3a2ac",
+            "secondary_color": "#e5d0d0",
+            "footer_title": "Explore our papercraft guides and inspiration on the blog.",
+            "featured_product": "gemini-ii-machine-north-american-version",
+            "featured_article_one": "inspiration\/5-bridgerton-inspired-crafting-ideas",
+            "featured_article_two": "inspiration\/best-friends-day-friendship-card-and-box-blog-project",
+            "featured_article_three": "",
+            "featured_article_four": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_LNp4Mb"
+      ],
+      "settings": {
+        "margin_top": 10,
+        "margin_bottom": 20,
+        "padding_top": 10,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "0fb83270-8751-43be-9d7e-06e58c8ff80e",
+    "4d90ad4e-453e-4717-9df1-6bc5396b40f5",
+    "stmt_inspiration_3UDdLe"
+  ]
+}

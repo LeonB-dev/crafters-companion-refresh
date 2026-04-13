@@ -1,0 +1,59 @@
+{%- liquid
+	assign template_name = 'section-product-content-sections'
+
+	assign content_sections = product.metafields.brand.content_sections.value
+%}
+
+{% if content_sections != blank %}
+	{{- 'section-product-content-sections.css' | asset_url | stylesheet_tag -}}
+
+	<div class="{{- template_name }} u-space-below-lg" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+		{% for content_section in content_sections %}
+			{% liquid
+				assign heading = content_section.heading
+				assign text = content_section.text | metafield_tag
+				assign image = content_section.image
+				assign image_alt = image.alt | default: heading
+				assign reverse_content_layout = content_section.reverse_content_layout
+				assign layout_class = ''
+				if reverse_content_layout ==  true
+					assign layout_class = 'align-right'
+				else
+					assign layout_class = 'align-left'
+				endif
+			%}
+			<div class="wrapper">
+				<div class="image">{{- image | image_url: width: 1920 | image_tag: widths: '600, 800, 1024, 1500', loading: 'eager', alt: image_alt-}}</div>
+				<div class="container">
+					<div class="content {{ layout_class }}">
+						<h2 class="u-heading-md">{{- heading -}}</h2>
+						<div class="c-rte">{{- text -}}</div>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endif %}
+
+{% schema %}
+{
+	"name": "PDP Content Sections",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Settings"
+		}
+	],
+	"blocks": [],
+	"presets": [
+		{
+			"name": "PDP Content Sections",
+			"category": "Content"
+		}
+	],
+	"enabled_on": {
+		"templates": ["product"]
+	}
+}
+{% endschema %}

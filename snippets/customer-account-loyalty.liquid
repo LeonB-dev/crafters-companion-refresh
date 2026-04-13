@@ -1,0 +1,100 @@
+<div class="loyalty">
+  <h3 class="u-text-xl">{{- 'template.customers.loyalty.heading' | t -}}</h3>
+  <ol class="overview blocks" data-loyalty-overview>
+    <li class="tier">
+      {%- render 'icon', _name: 'icon-tiers' -%}
+      <dl>
+        <dt>{{- 'template.customers.loyalty.your_tier' | t -}}</dt>
+        <dd data-loyalty-tier>...</dd>
+      </dl>
+    </li>
+    <li class="points">
+      {%- render 'icon', _name: 'icon-points-badge' -%}
+      <dl>
+        <dt>{{- 'template.customers.loyalty.your_points' | t -}}</dt>
+        <dd data-loyalty-points>...</dd>
+      </dl>
+    </li>
+    <li class="pending">
+      {%- render 'icon', _name: 'icon-pending-points' -%}
+      <dl>
+        <dt>{{- 'template.customers.loyalty.pending_points' | t -}}</dt>
+        <dd data-loyalty-pending>0</dd>
+      </dl>
+    </li>
+  </ol>
+  {% unless _enable_loyalty_loading == false %}
+    <div class="c-alert error">Loyalty tiers may take a while to show - your correct discount will still be applied at checkout.</div>
+  {% endunless %}
+  <ol class="links">
+    <li>
+      <button class="c-btn" data-loyalty-open>{{- 'template.customers.loyalty.view_history_html' | t -}}</button>
+    </li>
+    <li>
+      <a href="{{ settings.loyalty_header_link }}">{{- 'template.customers.loyalty.learn_more_html' | t -}}</a>
+    </li>
+  </ol>
+</div>
+
+<div class="loyalty-history-pullout" data-loyalty-pullout>
+  <button
+    class="c-btn close is-svg"
+    type="button"
+    aria-label="Close"
+    data-loyalty-close>
+    {%- render 'icon', _name: 'icon-close' -%}
+  </button>
+  <div class="wrapper" data-loyalty-inner>
+    <h3 class="u-text-xl">{{- 'template.customers.loyalty.history_heading' | t -}}</h3>
+    <div class="c-table">
+      <table role="table">
+        <thead role="rowgroup">
+          <tr role="row">
+            <th
+              id="orderId"
+              scope="col"
+              role="columnheader">{{- 'template.customers.loyalty.order_id' | t -}}</th>
+            <th
+              id="loyaltyActionType"
+              scope="col"
+              role="columnheader">{{- 'template.customers.loyalty.loyalty_action_type' | t -}}</th>
+            <th
+              id="loyaltyActionPoints"
+              scope="col"
+              role="columnheader">{{- 'template.customers.loyalty.loyalty_action_points' | t -}}</th>
+            <th
+              id="loyaltyActionDate"
+              scope="col"
+              role="columnheader">{{- 'template.customers.loyalty.loyalty_action_date' | t -}}</th>
+          </tr>
+        </thead>
+        <tbody role="rowgroup">
+          <tr role="row" data-loyalty-history-row>
+            <td
+              role="cell"
+              headers="orderId"
+              data-id></td>
+            <td
+              role="cell"
+              headers="loyaltyActionType"
+              data-loyalty-type>
+              {{ order.created_at | date: '%b %d, %Y' }}
+            </td>
+            <td
+              role="cell"
+              headers="loyaltyActionPoints"
+              data-loyalty-points>
+              {{ order.financial_status }}
+            </td>
+            <td
+              role="cell"
+              headers="loyaltyActionDate"
+              data-loyalty-date>
+              {{ order.fulfillment_status }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

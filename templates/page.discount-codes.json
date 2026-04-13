@@ -1,0 +1,63 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "8a69ee76-a3fe-4637-aa99-198df311bfa8": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Crafter’s Companion Voucher & Discount Codes",
+        "text": "<p>Enjoy an exclusive discount of <strong>10% off*<\/strong> for students, seniors and  NHS & key workers.<\/p><p>Whether you're looking for unique crafting tools, beautiful papers, or creative kits, you've come to the right place. Explore our discount offerings and start on a crafting journey that combines creativity with remarkable savings.<\/p><p>*standard T&Cs apply.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "link_colour": "primary",
+        "margin_bottom": "none",
+        "margin_top": "sm"
+      }
+    },
+    "9d982a58-e196-4121-b27f-0ae5ae8fdf50": {
+      "type": "form-embed",
+      "settings": {
+        "heading": "",
+        "text": "",
+        "form_embed": "<script src=\"https:\/\/assets.gocertify.me\/assets\/embed.js\" data-location=\"\/at\/crafters-companion\/hub\"><\/script>",
+        "enable_h1": false,
+        "margin_top": "none"
+      }
+    },
+    "c30e578d-6f0b-48e6-8b92-062a7775ac00": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Frequently Asked Questions",
+        "small_text": "<p><strong>How do I redeem my discount code online?<\/strong><\/p><p>Simply add the products that you want to purchase to your basket. Once you are happy, view your basket and enter your code in the discount code field on the right hand side of the page. If your code is valid, you should see your discount come off your subtotal when you click 'apply'. <\/p><p><strong>What if the code doesn't work?<\/strong><\/p><p>If your discount code does not apply to your order, the code may have been entered incorrectly or the items in your basket may not match the valid criteria. Please check your basket and try again before getting in touch with our customer service team. <\/p><p><strong>Please note: promotional codes exclude Gemini machines, third party brands, the current months launches and gift vouchers.<\/strong><\/p><p><strong>What if I forget to add a discount code?<\/strong><\/p><p>Promotional codes must be used at the time of ordering, and cannot be used retrospectively. Unfortunately, once an order has been placed, you will not be able to add the discount code. <\/p><p><strong>Can I use my discount code more than once?<\/strong><\/p><p>No. These discount codes can only be used once per customer. <\/p><p><strong>Can I use more than one discount code at a time?<\/strong><\/p><p>Promotional codes cannot be used in conjunction with other offers, unless otherwise stated. They will however work in conjunction with your Club Inspire discount if applicable.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "none"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "8a69ee76-a3fe-4637-aa99-198df311bfa8",
+    "9d982a58-e196-4121-b27f-0ae5ae8fdf50",
+    "c30e578d-6f0b-48e6-8b92-062a7775ac00"
+  ]
+}

@@ -1,0 +1,57 @@
+{%- liquid
+	assign template_name = 'section-product-content-points'
+
+	assign heading = product.metafields.brand.content_points_header
+	assign content_points = product.metafields.brand.content_points.value
+%}
+
+{% if content_points != blank %}
+	{{- 'section-product-content-points.css' | asset_url | stylesheet_tag -}}
+	<script src="{{ 'section-product-content-points.js' | asset_url }}" async></script>
+	<div class="{{- template_name }} u-space-below-lg" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+		<div class="container">
+			{% if heading != blank %}
+				<h2 class="u-heading-sm centre">{{ heading }}</h2>
+			{% endif %}
+			<div class="swiper-container" data-pcp-slider>
+				<div class="swiper-wrapper">
+					{% for content_point in content_points %}
+						{% liquid
+							assign text = content_point.text
+							assign image = content_point.image
+							assign image_alt = image.alt | default: text
+						%}
+						<div class="swiper-slide">
+							{{ image | image_url: width: 104 | image_tag: alt: image_alt, loading: 'lazy' -}}
+							<h3 class="u-text-xl">{{ text }}</h3>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="swiper-pagination" data-pcp-pagination></div>
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+{% schema %}
+{
+	"name": "PDP Content Points",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Settings"
+		}
+	],
+	"blocks": [],
+	"presets": [
+		{
+			"name": "PDP Content Points",
+			"category": "Content"
+		}
+	],
+	"enabled_on": {
+		"templates": ["product"]
+	}
+}
+{% endschema %}

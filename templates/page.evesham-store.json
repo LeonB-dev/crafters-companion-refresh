@@ -1,0 +1,283 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "store-hero",
+      "blocks": {
+        "c6c5669c-d316-45e2-997f-e3735f18cbaa": {
+          "type": "block",
+          "settings": {
+            "day": "Monday - Sunday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        },
+        "929282cd-9911-4a05-96ba-5a0151586407": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "day": "Tuesday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        },
+        "7ddd6bdb-2d7c-4d8b-b69c-fd578fde6302": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "day": "Wednesday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        },
+        "df5320c4-be26-4415-872e-68be268efa04": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "day": "Thursday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        },
+        "24bbb0b5-d146-4757-a142-e10933802144": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "day": "Friday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        },
+        "9fe9a1d5-5519-489c-9f7a-5e9fc9f5f1e9": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "day": "Saturday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        },
+        "0464509c-c0ef-41c8-920c-83782e2644d1": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "day": "Sunday",
+            "opening_time": "10:00",
+            "closing_time": "4:00"
+          }
+        }
+      },
+      "block_order": [
+        "c6c5669c-d316-45e2-997f-e3735f18cbaa",
+        "929282cd-9911-4a05-96ba-5a0151586407",
+        "7ddd6bdb-2d7c-4d8b-b69c-fd578fde6302",
+        "df5320c4-be26-4415-872e-68be268efa04",
+        "24bbb0b5-d146-4757-a142-e10933802144",
+        "9fe9a1d5-5519-489c-9f7a-5e9fc9f5f1e9",
+        "0464509c-c0ef-41c8-920c-83782e2644d1"
+      ],
+      "settings": {
+        "address": "The Valley Shopping Village,\nEvesham,\nWR11 4DS",
+        "telephone": "01386 446375",
+        "email": "eveshamstore@crafterscompanion.co.uk",
+        "bh_opening_time": "10:00",
+        "bh_closing_time": "4:00",
+        "map_embed": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d2449.9753896117386!2d-1.9407015236451803!3d52.11657656601977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870ddf2b2f6ef6f%3A0xcdd05119ac02fdb1!2sThe%20Valley%20Evesham!5e0!3m2!1sen!2suk!4v1694115115209!5m2!1sen!2suk\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>"
+      }
+    },
+    "d843a453-da9a-43fc-bce8-081175fa4474": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Shop products from the full Crafter’s Companion range, along with items from Sheena Douglass, Spectrum Noir and many more! <\/p><p>Inside you’ll find themed shopping areas for haberdashery, sewing, arts and papercraft, along with dedicated demonstration areas where you can get involved in workshops and group sessions with our friendly in-store team.<\/p><p>Need a little break after some crafty shopping? Stop by our cafe, The Crafty Cuppa, and enjoy a homemade slice of cake and a hot drink!<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "b2d37a0c-ee60-4cb6-9acf-66dfa18dd99b": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Evesham_1_388f750a-d35b-48ef-8858-a8fdd63d680c.jpg",
+        "main_heading": "What’s in store",
+        "main_text": "",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "What’s in store",
+        "list_text": "<p>Papercraft<\/p><p>Haberdashery<\/p><p>Knitting & Crochet<\/p><p>Art & Colouring<\/p><p>In-store café<\/p><p>Demonstrations<\/p><p>Dedicated Educational Area<\/p>",
+        "heading_size": "sm",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "contain_image": false,
+        "enable_shapes": true,
+        "shape_background": "shopify:\/\/shop_images\/background-noise-02.png",
+        "shape_position": "vertical-end",
+        "enable_dots": false,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "19549d29-befd-40f1-83e8-a8fe50bb8abf": {
+      "type": "downloads",
+      "blocks": {
+        "146d5ade-8c93-44c2-8e4b-87aa39c2a996": {
+          "type": "download_block",
+          "disabled": true,
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/Evesham_Craft_Along_February_A1.pdf?v=1705583818",
+            "file_name": "February 2024 Schedule",
+            "text": "<p>Craft along in store with our friendly experts. Come along with your friends and family. Call 01386 446 375 to book.<\/p>",
+            "download_text": "Download"
+          }
+        },
+        "download_block_EGLVem": {
+          "type": "download_block",
+          "disabled": true,
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/Evesham_Demo_Sam_Saturday_27th_April_A0.pdf?v=1711449546",
+            "file_name": "Demo Day - Saturday 27th April",
+            "text": "<p>No need to book! Drop in store any time from 10am - 4pm.<\/p>",
+            "download_text": "Download"
+          }
+        },
+        "download_block_yWeaC6": {
+          "type": "download_block",
+          "disabled": true,
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/Evesham_Demo_Sam_Wade_Saturday_24th_February_A1.pdf?v=1705583857",
+            "file_name": "Demo Day - Saturday 24th February",
+            "text": "<p>No need to book! Drop in store any time from 10am - 4pm.<\/p>",
+            "download_text": "Download"
+          }
+        },
+        "download_block_jVNNLn": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/Evesham_Craft_Along_May_A1.pdf?v=1714137046",
+            "file_name": "May 2024 Schedule",
+            "text": "<p>Craft along in store with our friendly experts. Come along with your friends and family. Call 01386 446 375 to book.<\/p>",
+            "download_text": "Download"
+          }
+        },
+        "download_block_byCxfF": {
+          "type": "download_block",
+          "disabled": true,
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/Evesham_Demo_Ali_Saturday_25th_May_A1.pdf?v=1714137047",
+            "file_name": "Demo Day - Saturday 25th May",
+            "text": "<p>No need to book! Drop in store any time from 10am - 4pm.<\/p>",
+            "download_text": "Download"
+          }
+        },
+        "download_block_xxb68c": {
+          "type": "download_block",
+          "disabled": true,
+          "settings": {
+            "file": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/Evesham_Demo_Ali_Saturday_30th_March_Easter_A1.pdf?v=1708005723",
+            "file_name": "Demo Day - Saturday 30th March",
+            "text": "<p>No need to book! Drop in store any time from 10am - 3pm.<\/p>",
+            "download_text": "Download"
+          }
+        }
+      },
+      "block_order": [
+        "146d5ade-8c93-44c2-8e4b-87aa39c2a996",
+        "download_block_EGLVem",
+        "download_block_yWeaC6",
+        "download_block_jVNNLn",
+        "download_block_byCxfF",
+        "download_block_xxb68c"
+      ],
+      "settings": {
+        "grid_layout": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "8bb0d60a-081e-4484-ad69-2758891a066e": {
+      "type": "media-slider",
+      "blocks": {
+        "6f4e4706-3514-489f-b6a3-ef8415ca4e41": {
+          "type": "media_slide",
+          "settings": {
+          }
+        },
+        "72c4ee01-bacb-4d20-9367-a3432c5a6bfc": {
+          "type": "media_slide",
+          "settings": {
+          }
+        },
+        "6b8d35b2-fe0e-4766-b074-d670e43d05b6": {
+          "type": "media_slide",
+          "settings": {
+          }
+        },
+        "775cc2ec-810b-4cce-8acc-f4e8836d9cc2": {
+          "type": "media_slide",
+          "settings": {
+          }
+        },
+        "2d35c85e-a99d-439b-ae93-1f1de21da4ae": {
+          "type": "media_slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "6f4e4706-3514-489f-b6a3-ef8415ca4e41",
+        "72c4ee01-bacb-4d20-9367-a3432c5a6bfc",
+        "6b8d35b2-fe0e-4766-b074-d670e43d05b6",
+        "775cc2ec-810b-4cce-8acc-f4e8836d9cc2",
+        "2d35c85e-a99d-439b-ae93-1f1de21da4ae"
+      ],
+      "disabled": true,
+      "settings": {
+        "large": true,
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "fd890282-4688-40ed-8ceb-73293e546d8c": {
+      "type": "text-header",
+      "disabled": true,
+      "settings": {
+        "heading": "Craft Along in store",
+        "text": "<p>Integer mauris lacus eget nunc faucibus id. Commodo nullam bibendum nibh vitae natoque suscipit. Tortor mi vitae enim in proin sagittis.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "link_colour": "primary",
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d843a453-da9a-43fc-bce8-081175fa4474",
+    "b2d37a0c-ee60-4cb6-9acf-66dfa18dd99b",
+    "19549d29-befd-40f1-83e8-a8fe50bb8abf",
+    "8bb0d60a-081e-4484-ad69-2758891a066e",
+    "fd890282-4688-40ed-8ceb-73293e546d8c"
+  ]
+}

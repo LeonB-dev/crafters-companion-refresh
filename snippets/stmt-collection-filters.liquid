@@ -1,0 +1,204 @@
+{%- liquid
+  assign per_page_options = '12,24,36,48' | split: ','
+
+  assign total_items = paginate.items
+  assign page_to = paginate.current_offset | plus: products.size
+
+  if page_to > total_items
+    assign page_to = total_items
+  endif
+
+  assign page_from = page_to | minus: products.size | plus: 1
+
+  if collection
+    assign current_url = collection.url | append: '?'
+    assign initial_url = collection.url
+  endif
+
+  assign filters_size = 0
+  assign active_filters_exist = false
+  assign active_filters_size = 0
+  assign collection_size = collection.size
+
+  for filter in collection.filters
+    if filter.active_values.size > 0
+      for active_value in filter.active_values
+        assign url_sections_array = current_url | split: '?'
+
+        capture apos_escaped_filter_value
+          render 'apostrophe-escape', string: active_value.value
+        endcapture
+        capture amp_escaped_filter_value
+          render 'ampersand-escape', string: apos_escaped_filter_value
+        endcapture
+        assign escaped_active_value = amp_escaped_filter_value | url_encode | replace: '%26%2339%3B', '%27'
+        assign current_url = current_url | append: active_value.param_name | append: '=' | append: escaped_active_value | append: '&'
+      endfor
+
+      assign active_filters_exist = true
+      assign active_filters_size = active_filters_size | plus: filter.active_values.size
+    endif
+
+    if filter.type == 'price_range'
+      if filter.min_value.value != null or filter.max_value.value != null
+        if filter.min_value.value != null
+          assign min_value = filter.min_value.value | money_without_currency | replace: ',', ''
+          assign current_url = current_url | append: filter.min_value.param_name | append: '=' | append: min_value | append: '&'
+        endif
+        if filter.max_value.value != null
+          assign max_value = filter.max_value.value | money_without_currency | replace: ',', ''
+          assign current_url = current_url | append: filter.max_value.param_name | append: '=' | append: max_value | append: '&'
+        endif
+
+        assign active_filters_exist = true
+      endif
+    endif
+  endfor
+
+  if collection
+    assign user_allowed_filter_categories = shop.metafields.filters.allow_list | append: ',' | append: collection.metafields.filters.allow_list
+    assign user_disallowed_filter_categories = shop.metafields.filters.disallow_list | append: ',' | append: collection.metafields.filters.disallow_list
+    assign user_allowed_filter_categories_array = user_allowed_filter_categories | split: ',' | uniq
+    assign excluded_filters = collection.metafields.custom.excluded_filters
+    assign user_disallowed_filter_categories_array = excluded_filters.value
+
+    for disallowed_filter_category in user_disallowed_filter_categories_array
+      assign disallowed_filter = disallowed_filter_category | downcase | strip | handleize
+
+      unless user_allowed_filter_categories_array contains disallowed_filter_category
+        assign disallowed_filter_categories = disallowed_filter_categories | append: ',' | append: disallowed_filter
+      endunless
+    endfor
+
+    assign disallowed_filter_categories_array = disallowed_filter_categories | split: ',' | uniq
+  endif
+
+  for filter in collection.filters
+    assign lowercase_filter_label = filter.label | downcase
+
+    unless disallowed_filter_categories_array contains lowercase_filter_label
+      assign filters_size = filters_size | plus: 1
+    endunless
+  endfor
+-%}
+
+<form class="js-collection-form">
+  <div class="container">
+    <button type="button" class="collection__filters-toggle collection__hide-loading js-collection-sidebar-toggle">
+      {% render 'stmt-icon-filter', class: 'collection__filters-toggle-icon' %}
+      <span>{{ 'template.collection-section.filter_results' | t }}</span>
+      {% render 'stmt-icon-filter-mobile', class: 'collection__filters-toggle-icon mobile-icon' %}
+      <span class="mobile-text">{{ 'template.collection-section.filter' | t }}</span>
+    </button>
+
+    <div class="collection__filters-header collection__hide-loading">
+      <div class="collection__filters collection-filters--{{ filters_size }} js-collection-filters">
+        {% if settings.hide_additional_filters and filters_size > 3 %}
+          <button type="button" class="collection__toggle-additional-filters js-collection-toggle-additional-filters">
+            <span class="collection__toggle-additional-filters-show">
+              {{ 'template.collection-section.show_all_filters' | t }}
+            </span>
+            <span class="collection__toggle-additional-filters-hide">
+              {{ 'template.collection-section.show_fewer_filters' | t }}
+            </span>
+          </button>
+        {% endif %}
+        {% for filter in collection.filters %}
+          {% render 'stmt-collection-filter', filter: filter, collection: collection, disallowed_filter_categories_array: disallowed_filter_categories_array %}
+        {% endfor %}
+      </div>
+
+      {% if active_filters_exist %}
+        {% render 'stmt-active-filters', collection: collection, class: 'collection__active-filters--desktop' %}
+      {% endif %}
+    </div>
+
+    <div class="collection__sorting collection__hide-loading">
+      <div class="collection__items">
+        {%- capture page_range -%}{{ page_from }} - {{ page_to }}{%- endcapture -%}
+
+        {{ 'template.collection-section.showing_html' | t: range: page_range, total: total_items }}
+      </div>
+      <div class="total-items">{{ total_items }}{% if total_items == 1 %} {{ 'template.collection-section.product' | t }}{% else %} {{ 'template.collection-section.products' | t }}{% endif %}</div>
+
+      <label class="collection__per-page collection__hide-loading">
+        <span>{{ 'template.collection-section.view' | t }}</span>
+        <div class="collection__select-wrap collection__per-page-select-wrap">
+          <select name="per_page" class="collection__select js-collection-per-page">
+            {% for per_page in per_page_options %}
+              {% assign per_page_num = per_page | times: 1 %}
+              <option
+                value="{{ per_page }}"
+                {% if per_page_num == paginate.page_size %}
+                  selected
+                {% endif %}
+              >
+                {{ per_page }}
+              </option>
+            {% endfor %}
+          </select>
+          {% render 'stmt-icon-angle-down', class: 'collection__select-icon' %}
+        </div>
+        <span class="collection__per-page-label-desktop">{{ 'template.collection-section.products_per_page' | t }}</span>
+        <span class="collection__per-page-label-mobile">{{ 'template.collection-section.products_per_page_mobile' | t }}</span>
+      </label>
+
+      <label class="collection__sort-by collection__hide-loading">
+        <span>{{ 'template.collection-section.sort_by' | t }}</span>
+        <div class="collection__select-wrap">
+          <select name="sort_by" class="collection__select js-collection-sort-by">
+            {%- for option in collection.sort_options -%}
+              <option
+                value="{{ option.value }}"
+                {% if option.value == collection.sort_by %}
+                  selected
+                {% endif %}
+              >
+                {{ option.name }}
+              </option>
+            {%- endfor -%}
+          </select>
+          {% render 'stmt-icon-angle-down', class: 'collection__select-icon' %}
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class="collection__sidebar js-collection-sidebar">
+    <div class="collection__sidebar-header-container">
+      <div class="collection__sidebar-header">
+        <div class="collection__sidebar-title">{{ 'template.collection-section.filters' | t }}</div>
+
+        {% if active_filters_size > 0 %}
+          <div class="collection__sidebar-applied-filters">
+            {{ 'template.collection-section.applied_filters' | t: count: active_filters_size }}
+          </div>
+        {% endif %}
+
+        <button type="button" class="collection__sidebar-close js-collection-sidebar-toggle">
+          {% render 'stmt-icon-close', class: 'collection__sidebar-close-icon' %}
+        </button>
+      </div>
+    </div>
+
+    {% if active_filters_exist %}
+      <div class="collection__sidebar-active-filters">
+        {% render 'stmt-active-filters', collection: collection, class: 'collection__active-filters--sidebar' %}
+      </div>
+    {% endif %}
+
+    <div class="collection__sidebar-filters">
+      {% for filter in collection.filters %}
+        {% render 'stmt-collection-filter', filter: filter, collection: collection, disallowed_filter_categories_array: disallowed_filter_categories_array, sidebar: true %}
+      {% endfor %}
+    </div>
+
+    <div class="collection__sidebar-footer">
+      <button type="button" class="collection__sidebar-footer-button js-collection-sidebar-toggle">
+        {{ 'template.collection-section.view_items' | t: count: total_items }}
+      </button>
+    </div>
+  </div>
+
+  <div class="collection__backdrop js-collection-sidebar-toggle"></div>
+</form>

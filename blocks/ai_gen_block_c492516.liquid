@@ -1,0 +1,285 @@
+{% doc %}
+  @prompt
+    2 text box block row with main header, header and text for each box
+    
+    
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-text-boxes-{{ ai_gen_id }} {
+    padding: 40px 20px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-text-boxes__container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-text-boxes__main-heading-{{ ai_gen_id }} {
+    text-align: {{ block.settings.main_heading_alignment }};
+    font-size: {{ block.settings.main_heading_size }}px;
+    color: {{ block.settings.main_heading_color }};
+    margin: 0 0 40px;
+  }
+
+  .ai-text-boxes__row-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.gap }}px;
+  }
+
+  .ai-text-boxes__box-{{ ai_gen_id }} {
+    background-color: {{ block.settings.box_background_color }};
+    padding: {{ block.settings.box_padding }}px;
+    border-radius: {{ block.settings.box_border_radius }}px;
+  }
+
+  .ai-text-boxes__heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 16px;
+  }
+
+  .ai-text-boxes__text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-text-boxes__row-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.gap | times: 0.75 }}px;
+    }
+
+    .ai-text-boxes__main-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.main_heading_size | times: 0.8 }}px;
+      margin-bottom: 24px;
+    }
+
+    .ai-text-boxes__heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.85 }}px;
+    }
+
+    .ai-text-boxes__text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-text-boxes-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-text-boxes__container-{{ ai_gen_id }}">
+    {% if block.settings.main_heading != blank %}
+      <h2 class="ai-text-boxes__main-heading-{{ ai_gen_id }}">
+        {{ block.settings.main_heading }}
+      </h2>
+    {% endif %}
+
+    <div class="ai-text-boxes__row-{{ ai_gen_id }}">
+      <div class="ai-text-boxes__box-{{ ai_gen_id }}">
+        {% if block.settings.box_1_heading != blank %}
+          <h3 class="ai-text-boxes__heading-{{ ai_gen_id }}">
+            {{ block.settings.box_1_heading }}
+          </h3>
+        {% endif %}
+        {% if block.settings.box_1_text != blank %}
+          <div class="ai-text-boxes__text-{{ ai_gen_id }}">
+            {{ block.settings.box_1_text }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="ai-text-boxes__box-{{ ai_gen_id }}">
+        {% if block.settings.box_2_heading != blank %}
+          <h3 class="ai-text-boxes__heading-{{ ai_gen_id }}">
+            {{ block.settings.box_2_heading }}
+          </h3>
+        {% endif %}
+        {% if block.settings.box_2_text != blank %}
+          <div class="ai-text-boxes__text-{{ ai_gen_id }}">
+            {{ block.settings.box_2_text }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Two text boxes",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main heading"
+    },
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main heading",
+      "default": "Our Features"
+    },
+    {
+      "type": "select",
+      "id": "main_heading_alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "main_heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Size",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "main_heading_color",
+      "label": "Color",
+      "default": "#1F1300"
+    },
+    {
+      "type": "header",
+      "content": "Box 1"
+    },
+    {
+      "type": "text",
+      "id": "box_1_heading",
+      "label": "Heading",
+      "default": "Feature One"
+    },
+    {
+      "type": "richtext",
+      "id": "box_1_text",
+      "label": "Text",
+      "default": "<p>Add your description here. Explain the benefits and features of this section.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Box 2"
+    },
+    {
+      "type": "text",
+      "id": "box_2_heading",
+      "label": "Heading",
+      "default": "Feature Two"
+    },
+    {
+      "type": "richtext",
+      "id": "box_2_text",
+      "label": "Text",
+      "default": "<p>Add your description here. Explain the benefits and features of this section.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Gap between boxes",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "box_padding",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Box padding",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "box_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Box border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Box heading size",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "default": "#FDFFFC"
+    },
+    {
+      "type": "color",
+      "id": "box_background_color",
+      "label": "Box background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Box heading",
+      "default": "#1F1300"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#1F1300"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two text boxes"
+    }
+  ]
+}
+{% endschema %}

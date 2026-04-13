@@ -1,0 +1,108 @@
+{% liquid
+  assign template_name = 'section-sitemap'
+%}
+
+{{- 'section-sitemap.css' | asset_url | stylesheet_tag -}}
+
+<div
+  class="{{- template_name }} u-space-below-lg"
+  data-section-type="{{- template_name -}}"
+  data-section-id="{{ section.id }}"
+>
+  <div class="container">
+    <div class="sitemap-wrapper">
+      {%- for block in section.blocks -%}
+        {% liquid
+          assign heading = block.settings.heading
+          assign selected_menu = linklists[block.settings.linklist]
+        %}
+        {%- if selected_menu != blank -%}
+          {%- if heading != blank -%}
+            <h2 class="u-heading-sm heading">{{- heading -}}</h2>
+          {%- endif -%}
+          <ul class="tier-1" role="menu">
+            {% for link in selected_menu.links %}
+              {% liquid
+                if link.title == 'Site Map'
+                  continue
+                endif
+              -%}
+              {% if link.url != blank %}
+                {%- liquid
+                  assign link_item_title = link.title
+                %}
+                <li role="menuitem">
+                  <a href="{{ link.url }}">
+                    {{- link_item_title -}}
+                  </a>
+                  {%- if link.links != blank -%}
+                    <ul class="tier-2" role="menu">
+                      {% for childlink in link.links %}
+                        {% liquid
+                          assign children_item_title = childlink.title
+                        %}
+                        <li role="menuitem">
+                          <a href="{{- childlink.url -}}">
+                            {{- children_item_title -}}
+                          </a>
+                          {% if childlink.links != blank %}
+                            <ul class="tier-3" role="menu">
+                              {% for grandchildlink in childlink.links %}
+                                {% liquid
+                                  assign grandchild_item_title = grandchildlink.title
+                                %}
+                                <li role="menuitem">
+                                  <a
+                                    href="{{- grandchildlink.url -}}"
+                                  >
+                                    {{- grandchild_item_title -}}
+                                  </a>
+                                </li>
+                              {% endfor %}
+                            </ul>
+                          {% endif %}
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {%- endif -%}
+                </li>
+              {% endif %}
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Sitemap",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "sitemap",
+      "name": "Sitemap Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "info": "Optional"
+        },
+        {
+          "type": "link_list",
+          "id": "linklist",
+          "label": "Link List"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

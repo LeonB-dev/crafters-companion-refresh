@@ -1,0 +1,207 @@
+<div class="wishit-marquee-wrapper">
+  <div class="wishit-marquee wishit-marquee1">
+    {% for block in section.blocks %}
+    <p>
+        {% if block.settings.url != blank %} <a href='{{ block.settings.url }}' target="_blank">{% endif %}
+        {{ block.settings.text }}
+        {% if block.settings.url != blank %} </a>{% endif %}
+    </p>
+    {% endfor %}
+  </div> 
+  <div class="wishit-marquee wishit-marquee2">
+    {% for block in section.blocks %}
+    <p>
+        {{ block.settings.text }}
+    </p>
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "WishIt Marquee Slider",
+    "settings": [
+      {
+        "type": "header",
+        "content": "WishIt Customization Support",
+        "info": "For any customizations required in this section, feel free to write to us at contact@adevole.com"
+      },{
+        "type": "color",
+        "id": "background-color",
+        "label": "Background Color",
+        "default": "#000000"
+      },{
+        "type": "color",
+        "id": "font-color",
+        "label": "Font Color",
+        "default": "#FFFD00"
+      },{
+        "type": "range",
+        "id": "font-size",
+        "label": "Font Size",
+        "min": 14,
+        "max": 100,
+        "step":1,
+        "unit": "px",
+        "default": 50
+      },{
+        "type": "range",
+        "id": "spacing",
+        "label": "Spacing",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 60
+      },{
+        "type": "range",
+        "id": "margin",
+        "label": "Top/Bottom Margin",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "default": 20,
+        "info": "Preview may show wrong height, save to see the changes."
+      },{
+        "type": "range",
+        "id": "speed",
+        "label": "Speed",
+        "min": 20,
+        "max": 200,
+        "step": 5,
+        "unit": "s",
+        "default": 100
+      }],
+    "blocks": [
+      {
+        "name": "Item",
+        "type": "item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Url"
+          }
+        ]
+      }],
+    "presets": [
+      {
+            "name": "WishIt Marquee Slider",
+            "blocks": [{
+                  "type": "item",
+                  "settings": {
+                    "text": "🔍 Compact Design",
+                    "url": ""
+                  }
+              },{
+                  "type": "item",
+                  "settings": {
+                    "text": "💪 Durable Material",
+                    "url": ""
+                  }
+              },{
+                  "type": "item",
+                  "settings": {
+                    "text": "💻 User-friendly Interface",
+                    "url": ""
+                  }
+              },{
+                "type": "item",
+                "settings": {
+                  "text": "🚀 Efficient Performance",
+                  "url": ""
+                }
+              }]
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+
+  
+.wishit-marquee-wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: {{ section.settings.font-size | times: 3 }}px;
+  background: {{ section.settings.background-color }};
+  color: {{ section.settings.font-color }};
+}
+
+.wishit-marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+}
+.wishit-marquee1{
+  animation: marquee1 {{ section.settings.speed }}s linear infinite;
+}
+.wishit-marquee2 {
+  animation: marquee2 {{ section.settings.speed }}s linear infinite;
+}
+
+.wishit-marquee p {
+  display: inline-block;
+  font-size: {{ section.settings.font-size }}px;
+  padding: 10px {{ section.settings.spacing }}px;
+  margin: {{ section.settings.margin }}px auto;
+  
+}
+.wishit-marquee p a{
+  color: inherit;
+  text-decoration: underline;
+}  
+
+@keyframes marquee1 {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  50% {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 1;
+  }
+  50.01% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+@keyframes marquee2 {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+  50% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes marquee3 {
+  0% {
+    transform: translate3d(200%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+{% endstyle %}
+
+{% javascript %}
+  var marquee = document.querySelector(".wishit-marquee");
+  var marqueeWrapper = document.querySelector(".wishit-marquee-wrapper");
+  marqueeWrapper.style.height = marquee.offsetHeight + "px";
+{% endjavascript %}

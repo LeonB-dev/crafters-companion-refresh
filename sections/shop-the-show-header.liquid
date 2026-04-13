@@ -1,0 +1,85 @@
+{%- liquid
+  assign template_name = 'section-shop-the-show-header'
+
+  assign debug = false
+
+  assign heading = ''
+  assign title = collection.title | split: '-' | first
+  assign heading = collection.title | remove: title | remove: '- '
+  assign description = collection.description
+
+  assign shop_the_date = collection.metafields.custom.linked_ctv_collection.value
+  assign article_url = collection.metafields.custom.linked_ctv_article_url.value | remove: ' '
+  assign article_url_split = article_url | split: '/' | last
+  
+  assign blog_schedule = 'crafters-tv-schedule'
+  assign blog_tb = 'crafters-tv'
+  if article_url contains blog_schedule
+    assign blog_handle = blog_schedule | append: '/'
+  elsif article_url contains 'crafters-tv'
+    assign blog_handle = blog_tb | append: '/'
+  endif
+  
+  assign article_blog_path = article_url_split | prepend: blog_handle
+  
+  assign article = articles[article_blog_path]
+  
+  unless article != blank
+    assign article_blog_path = article_blog_path | remove: '-schedule'
+    assign article = articles[article_blog_path]
+  endunless
+
+  assign article_start_time = article.metafields.custom.start_time | date: '%s'
+  assign article_end_time = article.metafields.custom.end_time | date: '%s'
+  assign article_video_id = article.metafields.custom.video_id
+  assign date = article.published_at | date: '%e %B, %Y' | prepend: '<time class="date">' | append: '</time>'
+  assign content = article.content
+  assign content = content | prepend: date
+
+  assign std_collection = collections[article.metafields.custom.shop_the_day_collection]
+
+%}
+{{- 'section-shop-the-show-header.css' | asset_url | stylesheet_tag -}}
+<link rel="stylesheet" type="text/css" href="https://cdn.plyr.io/3.7.8/plyr.css"/>
+<script async src="{{- 'section-shop-the-show-header.js' | asset_url -}}"></script>
+
+{% if debug == true %}
+  <pre>
+    article_video_id: {{ article_video_id }}<br>
+    blog_handle: {{ blog_handle }}<br>
+    article_blog_path: {{ article_blog_path }}<br>
+    article: {{ article.title }}<br>
+  </pre>
+{% endif %}
+
+<div class="{{- template_name }} u-space-below-lg overflow-hidden" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="wrapper">
+    {%- render 'paper-edge', _edge_version: 'edge-03', _bottom_edge_colour: 'white' -%}
+    <div class="container">
+      <div class="inner-wrapper">
+        <div class="content">
+          {%- render 'crafters-tv-heading', _title: title, _heading: 'Shop the Show', _text: description, _text_class: '' -%}
+          {%- if std_collection != blank -%}
+            <a href="{{- std_collection.url -}}" class="c-btn main std">Shop the day</a>
+          {%- endif -%}
+        </div>
+        {% render 'plyr-video-player', _article_video_id: article_video_id %}
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Shop the Show",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

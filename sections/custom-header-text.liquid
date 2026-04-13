@@ -1,0 +1,307 @@
+{% schema %}
+{
+  "name": "Custom Header & Text Box",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header_text",
+      "label": "Header Text",
+      "default": "This is the header"
+    },
+    {
+      "type": "range",
+      "id": "header_font_size",
+      "label": "Header Font Size (px)",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "header_font_size_mobile",
+      "label": "Header Font Size (Mobile, px)",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "header_font_weight",
+      "label": "Header Font Weight",
+      "default": "600",
+      "options": [
+        { "value": "300", "label": "Light (300)" },
+        { "value": "400", "label": "Regular (400)" },
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi-Bold (600)" },
+        { "value": "700", "label": "Bold (700)" },
+        { "value": "800", "label": "Extra-Bold (800)" }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "header_color",
+      "label": "Header Color",
+      "default": "#222222"
+    },
+    {
+      "type": "select",
+      "id": "header_text_align",
+      "label": "Header Text Alignment",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "header_text_align_mobile",
+      "label": "Header Text Alignment (Mobile)",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "header_width",
+      "label": "Header Width (e.g. 100%, 300px)",
+      "default": "100%"
+    },
+    {
+      "type": "text",
+      "id": "header_width_mobile",
+      "label": "Header Width (Mobile, e.g. 100%, 300px)",
+      "default": "100%"
+    },
+    
+    {
+      "type": "textarea",
+      "id": "body_text",
+      "label": "Body Text",
+      "default": "This is the body text."
+    },
+    {
+      "type": "checkbox",
+      "id": "body_use_bullets",
+      "label": "Use Bullet Points",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "body_bullet_spacing",
+      "label": "Bullet Spacing (px)",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body Font Size (px)",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "body_font_size_mobile",
+      "label": "Body Font Size (Mobile, px)",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "body_font_weight",
+      "label": "Body Font Weight",
+      "default": "400",
+      "options": [
+        { "value": "300", "label": "Light (300)" },
+        { "value": "400", "label": "Regular (400)" },
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi-Bold (600)" },
+        { "value": "700", "label": "Bold (700)" },
+        { "value": "800", "label": "Extra-Bold (800)" }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "Body Color",
+      "default": "#333333"
+    },
+    {
+      "type": "select",
+      "id": "body_text_align",
+      "label": "Body Text Alignment",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "body_text_align_mobile",
+      "label": "Body Text Alignment (Mobile)",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "body_width",
+      "label": "Body Width (e.g. 100%, 300px)",
+      "default": "100%"
+    },
+    {
+      "type": "text",
+      "id": "body_width_mobile",
+      "label": "Body Width (Mobile, e.g. 100%, 300px)",
+      "default": "100%"
+    },
+    
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Padding (px)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Corner Rounding (px)",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "default": 8
+    },
+    {
+      "type": "checkbox",
+      "id": "add_border",
+      "label": "Add Border",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color",
+      "default": "#dddddd"
+    },
+    {
+      "type": "range",
+      "id": "border_size",
+      "label": "Border Size (px)",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 2
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Header & Text Box with Bullets, Alignment & Spacing",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .custom-box {
+    box-sizing: border-box;
+    margin: 0 auto;
+    word-wrap: break-word;
+  }
+
+  .custom-box .header, .custom-box .body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+  }
+
+  .custom-box .body ul {
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+
+  /* MOBILE STYLES */
+  @media (max-width: 768px) {
+    .custom-box {
+      padding: {{ section.settings.padding }}px;
+    }
+    .custom-box .header {
+      font-size: {{ section.settings.header_font_size_mobile }}px !important;
+      width: {{ section.settings.header_width_mobile }} !important;
+      text-align: {{ section.settings.header_text_align_mobile }} !important;
+    }
+    .custom-box .body {
+      font-size: {{ section.settings.body_font_size_mobile }}px !important;
+      width: {{ section.settings.body_width_mobile }} !important;
+      text-align: {{ section.settings.body_text_align_mobile }} !important;
+    }
+  }
+</style>
+
+<div class="custom-box" style="
+  background-color: {{ section.settings.background_color }};
+  padding: {{ section.settings.padding }}px;
+  border-radius: {{ section.settings.border_radius }}px;
+  {% if section.settings.add_border %}
+    border: {{ section.settings.border_size }}px solid {{ section.settings.border_color }};
+  {% endif %}
+">
+  <div class="header" style="
+    font-size: {{ section.settings.header_font_size }}px;
+    font-weight: {{ section.settings.header_font_weight }};
+    color: {{ section.settings.header_color }};
+    width: {{ section.settings.header_width }};
+    text-align: {{ section.settings.header_text_align }};
+  ">
+    {{ section.settings.header_text }}
+  </div>
+
+  <div class="body" style="
+    font-size: {{ section.settings.body_font_size }}px;
+    font-weight: {{ section.settings.body_font_weight }};
+    color: {{ section.settings.body_color }};
+    width: {{ section.settings.body_width }};
+    text-align: {{ section.settings.body_text_align }};
+    margin-top: 10px;
+  ">
+    {% if section.settings.body_use_bullets %}
+      <ul style="margin-bottom: 0; padding-left: 20px; line-height: {{ section.settings.body_bullet_spacing | plus: 1 }}px;">
+        {% assign lines = section.settings.body_text | newline_to_br | split: '<br />' %}
+        {% for line in lines %}
+          <li style="margin-bottom: {{ section.settings.body_bullet_spacing }}px;">{{ line }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      {{ section.settings.body_text | newline_to_br }}
+    {% endif %}
+  </div>
+</div>
+

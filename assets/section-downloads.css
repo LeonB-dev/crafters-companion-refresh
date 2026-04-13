@@ -1,0 +1,93 @@
+.section-downloads {
+  position: relative;
+}
+.section-downloads .container {
+  display: flex;
+  justify-content: center;
+}
+.section-downloads .container .wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .section-downloads .container .wrapper {
+    max-width: 792px;
+  }
+}
+.section-downloads .container .wrapper .download img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+.section-downloads .container .wrapper .download .file-name {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 1.25rem;
+}
+.section-downloads .container .wrapper .download p {
+  margin-bottom: 1rem;
+}
+.section-downloads .container .wrapper .download .download-link {
+  text-decoration: none;
+  color: var(--colour-black);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.section-downloads .container .wrapper .download svg {
+  width: 0.5rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+.section-downloads .container .wrapper .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .section-downloads .container .wrapper .grid {
+    gap: 4rem;
+  }
+}
+.section-downloads .container .wrapper .grid .download {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex-basis: 40%;
+}
+@media (min-width: 768px) {
+  .section-downloads .container .wrapper .grid .download {
+    flex-basis: 24%;
+  }
+}
+.section-downloads .container .wrapper .list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.section-downloads .container .wrapper .list .download {
+  display: flex;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--colour-whisper);
+}
+@media (max-width: 767.98px) {
+  .section-downloads .container .wrapper .list .download {
+    flex-direction: column;
+  }
+}
+.section-downloads .container .wrapper .list .download .download-link {
+  justify-content: flex-start;
+}
+@media (min-width: 768px) {
+  .section-downloads.grid-layout .container .wrapper {
+    max-width: 1040px;
+  }
+}

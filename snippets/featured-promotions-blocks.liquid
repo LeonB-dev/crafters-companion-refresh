@@ -1,0 +1,48 @@
+{% liquid
+  assign promotions_size = _section_blocks.size
+  assign overflow_class = ''
+
+  if promotions_size > 3
+    assign overflow_class = 'add-overflow'
+  endif
+%}
+
+{%- if promotions_size < 4 -%}
+<div class="promotions _0{{- promotions_size }} {{ overflow_class }}">
+  {%- for block in _section_blocks -%}
+    {%-
+      render 'promotion-item',
+      _collection: block.settings.collection
+      _product: block.settings.product
+      _page: block.settings.page,
+      _page_type: block.settings.page_type,
+      _image: block.settings.image,
+      _text: block.settings.text,
+      _terms: block.settings.terms
+    -%}
+  {%- endfor -%}
+</div>
+{%- elsif promotions_size > 3 -%}
+  <script src="{{- 'section-featured-promotions.js' | asset_url -}}"></script>
+  <div class="container">
+    <div class="swiper-container has-scrollbar {{ background_colour }}" data-sfp-slider>
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          <div class="swiper-slide">
+            {%-
+              render 'promotion-item',
+              _collection: block.settings.collection
+              _product: block.settings.product
+              _page: block.settings.page,
+              _page_type: block.settings.page_type,
+              _image: block.settings.image,
+              _text: block.settings.text,
+              _terms: block.settings.terms
+            -%}
+          </div>
+        {%- endfor -%}
+      </div>
+      <div class="swiper-scrollbar" data-sfp-slider-scrollbar></div>
+    </div>
+  </div>
+{%- endif -%}

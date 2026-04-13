@@ -1,0 +1,33 @@
+{% liquid
+  assign product_videos = product.media | where: 'media_type', 'video'
+  assign product_external_videos = product.media | where: 'media_type', 'external_video'
+  assign product_media_array = product_videos | concat: product_external_videos
+  assign crafters_tv = product.metafields.custom.crafters_tv_video.value
+%}
+
+{{- 'snippet-modal-component.css' | asset_url | stylesheet_tag -}}
+
+<div class="snippet-modal-component" data-pmv-modal>
+  <div class="modal-wrapper" data-pmv-modal-wrapper>
+    <div class="modal-header">
+      <p class="u-text-xl heading">{{- product.title -}}</p>
+      <button class="c-btn modal-close is-svg" type="button" aria-label="Close" data-pmv-modal-close>
+        {%- render 'icon', _name: 'icon-close' -%}
+      </button>
+    </div>
+    <div class="modal-content">
+      {%- for media in product_media_array -%}
+        <div class="media" aria-labelledby="{{ media.id }}" data-pmv-content hidden>
+          {{ media | media_tag: image_size: '1024x', autoplay: false, loop: false, controls: true, preload: 'none' }}
+        </div>
+      {%- endfor -%}
+      {%- if crafters_tv.text != blank and crafters_tv.url != blank -%}
+        <div class="ctv">
+          <a href="{{ crafters_tv.url }}" class="u-heading-xs stretched-link">{{- 'products.product.as_featured_on_ctv' | t -}}</a>
+          {{ crafters_tv.text | metafield_tag }}
+          <img src="{{ 'crafters-tv-logo-white.svg' | asset_url -}}" alt="As featured on Crafters TV" height="69" width="210" loading="lazy"/>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

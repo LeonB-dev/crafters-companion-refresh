@@ -1,0 +1,64 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "article",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "enable_featured_image": false
+      }
+    },
+    "article-recommendations": {
+      "type": "article-recommendations",
+      "settings": {
+        "enabled": true,
+        "heading": "Recommended Articles",
+        "edge_version": "edge-02",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper"
+      }
+    },
+    "products": {
+      "type": "featured-products",
+      "blocks": {
+        "a06b9049-b7b2-45cf-872e-4870fc85127a": {
+          "type": "collection",
+          "settings": {
+            "collection": "spectrum-noir"
+          }
+        }
+      },
+      "block_order": [
+        "a06b9049-b7b2-45cf-872e-4870fc85127a"
+      ],
+      "settings": {
+        "heading": "Recently viewed products",
+        "heading_alignment": false,
+        "link_url": "",
+        "link_text": "",
+        "grid_size": "sm",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "article-recommendations",
+    "products"
+  ]
+}

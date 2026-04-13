@@ -1,0 +1,154 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Happy Holidays : Solid Colour Papers",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "2778526e-34ac-487e-93b4-9007aadaf2b6": {
+      "type": "downloads",
+      "blocks": {
+        "0cc9efec-54b1-4105-8071-c04d4d9c1276": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%281%29.png",
+            "image": "shopify:\/\/shop_images\/hs.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%281%29.png"
+          }
+        },
+        "49860630-f628-4530-b52a-2d66cd649d7d": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%282%29.png",
+            "image": "shopify:\/\/shop_images\/hs2.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%282%29.png"
+          }
+        },
+        "d41cdd2f-9880-47f2-9d14-2de4d0a95032": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%283%29.png",
+            "image": "shopify:\/\/shop_images\/hs3.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%283%29.png"
+          }
+        },
+        "a12c9cc8-7bf4-4038-8824-842a1fa056b6": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%284%29.png",
+            "image": "shopify:\/\/shop_images\/hs4.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%284%29.png"
+          }
+        },
+        "02d4ea15-0778-449f-9715-2d225cad2754": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%285%29.png",
+            "image": "shopify:\/\/shop_images\/hs5.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%285%29.png"
+          }
+        },
+        "74136c6b-b2d2-4c39-aad6-ee08f5e59f20": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%286%29.png",
+            "image": "shopify:\/\/shop_images\/hs6.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%286%29.png"
+          }
+        },
+        "276c1832-0461-4410-bab3-1ed7474ff11c": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%287%29.png",
+            "image": "shopify:\/\/shop_images\/hs7_7a630fd8-3112-4942-a334-badf2c263290.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%287%29.png"
+          }
+        },
+        "ec90b898-693f-428b-90b6-0975a053e7fa": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%288%29.png",
+            "image": "shopify:\/\/shop_images\/hs8.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-happy-holidays\/Coloured%20Cardstock\/ayoc_cc_hh%20%288%29.png"
+          }
+        }
+      },
+      "block_order": [
+        "0cc9efec-54b1-4105-8071-c04d4d9c1276",
+        "49860630-f628-4530-b52a-2d66cd649d7d",
+        "d41cdd2f-9880-47f2-9d14-2de4d0a95032",
+        "a12c9cc8-7bf4-4038-8824-842a1fa056b6",
+        "02d4ea15-0778-449f-9715-2d225cad2754",
+        "74136c6b-b2d2-4c39-aad6-ee08f5e59f20",
+        "276c1832-0461-4410-bab3-1ed7474ff11c",
+        "ec90b898-693f-428b-90b6-0975a053e7fa"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "lg"
+      }
+    },
+    "e53af899-d97b-4fd0-8cf3-a2763a7d6450": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p><\/p><p><\/p>",
+        "link_text": "Back to Downloads.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft-happy-holidays-downloads",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "04f22708-2447-4661-abf3-1cbcac1234c0": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p><\/p><p><\/p>",
+        "link_text": "Back to A Year Of Craft.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef",
+    "2778526e-34ac-487e-93b4-9007aadaf2b6",
+    "e53af899-d97b-4fd0-8cf3-a2763a7d6450",
+    "04f22708-2447-4661-abf3-1cbcac1234c0"
+  ]
+}

@@ -1,0 +1,107 @@
+{% liquid
+  assign template_name = 'section-product'
+
+  assign parent_brand = product.metafields.custom.parent_brand.value
+
+  if parent_brand != blank
+    assign brand_metaobject = parent_brand
+  else
+    assign product_vendor = product.vendor | handleize
+    assign collection = collections[product_vendor]
+    assign brand_metaobject = collection.metafields.custom.brand.value
+  endif
+
+  assign parent_brand = brand_metaobject.parent_brand.value
+
+  assign hide_newsletter_section = section.settings.hide_newsletter_section
+
+  assign blocks_accordion_item = section.blocks | where: 'type', 'accordion-item' | default: null
+%}
+{% if brand_metaobject != blank %}
+  {% render 'brand-nav', _parent_brand_metaobject: parent_brand %}
+{% endif %}
+
+{% render 'breadcrumb-pdp', product: product %}
+
+{{- 'section-product.css' | asset_url | stylesheet_tag -}}
+
+<script src="{{- 'section-product.js' | asset_url -}}"></script>
+
+<div
+  class="{{- template_name }} section-product-new u-space-below-md"
+  data-section-type="{{- template_name -}}"
+  data-section-id="{{ section.id }}"
+>
+  <div class="container">
+    {%- render 'product-media-grid', product: product -%}
+    {%- render 'product-media-grid-new', product: product -%}
+
+    <div class="product-form product-form-new">
+      {%- render 'product-form', product: product, _section_id: section.id -%}
+      {%- render 'product-content', product: product -%}
+      {%- liquid
+        if blocks_accordion_item
+          render 'product-accordion-new', product: product, blocks: blocks_accordion_item
+        endif
+      -%}
+    </div>
+  </div>
+
+  {%- render 'product-sticky-actions', product: product -%}
+  {%- render 'swym-product-view', product: product -%}
+</div>
+
+{% if hide_newsletter_section == true %}
+  <style>
+    #wrapper #shopify-section-newsletter {
+      display: none;
+    }
+
+    #wrapper .section-footer .top {
+      fill: var(--colour-white);
+    }
+  </style>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Product",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_newsletter_section",
+      "label": "Hide the newsletter section.",
+      "default": false
+    },
+  ],
+  "blocks": [
+    {
+      "type": "accordion-item",
+      "name": "Accordion item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_description",
+          "label": "Use Product Description?",
+          "default": false
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

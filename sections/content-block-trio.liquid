@@ -1,0 +1,177 @@
+{%- liquid
+  assign template_name = 'section-content-block-trio'
+
+  assign link_style = section.settings.link_style
+  assign link_colour = section.settings.link_colour
+  assign custom_link_bg_colour = section.settings.custom_link_bg_colour
+  assign custom_link_colour = section.settings.custom_link_colour
+  assign use_image_only = section.settings.use_image_only
+
+  if custom_link_bg_colour != blank and custom_link_colour != blank
+    assign link_colour = ''
+  endif
+
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-content-block-trio.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-content-block-item.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-content-block-trio.js' | asset_url -}}"></script>
+
+<style>
+  {% if custom_link_bg_colour != blank and custom_link_colour != blank %}
+    div[data-section-id="{{ section.id }}"] .c-btn.main{
+      background-color: {{ custom_link_bg_colour }};
+      color: {{ custom_link_colour }};
+    }
+  {% endif %}
+    div[data-section-id="{{ section.id }}"] .snippet-content-block-item .image {
+    {% if use_image_only == true %}
+      border: 0;
+    {% else %}
+      border-bottom: 1px solid var(--colour-emperor);
+    {% endif %}
+  }
+</style>
+
+<div class="{{- template_name }} overflow-hidden u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="swiper-container has-scrollbar" data-scbt-slider>
+      <div class="swiper-wrapper content-blocks">
+        {%- for block in section.blocks -%}
+          <div class="swiper-slide">
+            {%- render 'content-block-item', _block_settings: block.settings, _link_style: link_style, _link_colour: link_colour, _use_image_only: use_image_only -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Content Block Trio",
+  "tag": "section",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_image_only",
+      "label": "Use image only and hide content. This also wrap the image in a link.",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "link_style",
+      "label": "Link style",
+      "options": [
+        {
+          "value": "main",
+          "label": "Main"
+        },
+        {
+          "value": "alt",
+          "label": "Alternative"
+        }
+      ],
+      "default": "alt"
+    },
+    {
+      "type": "select",
+      "id": "link_colour",
+      "label": "Link colour",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "tertiary",
+          "label": "Tertiary"
+        },
+        {
+          "value": "quaternary",
+          "label": "Quaternary"
+        },
+        {
+          "value": "quinary",
+          "label": "Quinary"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "This will override the default image"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Content Block Trio",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

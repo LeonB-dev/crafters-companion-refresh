@@ -1,0 +1,288 @@
+{%- liquid
+  assign template_name = 'section-featured-products'
+
+  assign margin_bottom = section.settings.margin_bottom
+  assign heading_alignment = section.settings.heading_alignment
+  assign grid_size = section.settings.grid_size
+
+  if grid_size == 'sm'
+    assign block_limit = 6
+  elsif grid_size == 'lg'
+    assign block_limit = 10
+  endif
+
+  assign heading = section.settings.heading
+  assign image = section.settings.image
+
+  assign featured_block = section.blocks | first
+%}
+
+{{- 'section-featured-products.css' | asset_url | stylesheet_tag -}}
+
+<div
+  class="{{- template_name }} u-space-below-{{- margin_bottom -}}"
+  data-section-type="{{- template_name -}}"
+  data-section-id="{{ section.id }}"
+  {% if featured_block.settings.nosto_placement %}
+    data-nosto-placement
+  {% endif %}
+>
+  {%- render 'paper-edge', _section: section -%}
+  <div class="container">
+    {% unless featured_block.settings.nosto_placement == 'categorypage-nosto-2' %}
+      {%- render 'section-header', _heading: heading, _image: image, _heading_alignment: heading_alignment -%}
+    {% endunless %}
+    {% liquid
+      if featured_block.type == 'collection'
+        assign product_feed = collections[featured_block.settings.collection].products
+      elsif featured_block.type == 'product_list'
+        assign product_feed = featured_block.settings.product_list
+      elsif featured_block.type == 'nosto_placement'
+        assign product_feed = null
+      endif
+    %}
+    {% if product_feed %}
+      <div class="c-product-grid grid-{{- grid_size -}}">
+        {%- for product in product_feed limit: block_limit -%}
+          {% render 'stmt-product-card', product: product -%}
+        {%- endfor -%}
+      </div>
+    {% elsif featured_block.settings.nosto_placement %}
+      {% render 'nosto-element', id: featured_block.settings.nosto_placement %}
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Coll Featured Products",
+  "tag": "section",
+  "max_blocks": 1,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_alignment",
+      "label": "Align header text to the centre",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "grid_size",
+      "label": "Product grid size",
+      "info": "Choose small for 1 row of products on desktop. Large for 2 rows on desktop.",
+      "options": [
+        {
+          "value": "sm",
+          "label": "4-6 - Small"
+        },
+        {
+          "value": "lg",
+          "label": "6-10 - Large"
+        }
+      ],
+      "default": "sm"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "top_edge_colour",
+      "label": "Top edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "bottom_edge_colour",
+      "label": "Bottom edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "background_colour",
+      "label": "Background colour",
+      "info": "This can only be applied if a edge version is selected",
+      "options": [
+        {
+          "value": "black-squeeze",
+          "label": "Green"
+        },
+        {
+          "value": "pippin",
+          "label": "Pink"
+        },
+        {
+          "value": "whisper",
+          "label": "Purple"
+        }
+      ],
+      "default": "whisper"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Products via Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection",
+          "info": "Note that these products will be shared across all products using this template."
+        }
+      ]
+    },
+    {
+      "type": "product_list",
+      "name": "Products via Selection",
+      "settings": [
+        {
+          "type": "product_list",
+          "id": "product_list",
+          "label": "Product List",
+          "info": "Please select 10 products. Note that these will be shared across all products using this template.",
+          "limit": 10
+        }
+      ]
+    },
+    {
+      "type": "nosto_placement",
+      "name": "Products via Nosto",
+      "settings": [
+        {
+          "type": "select",
+          "id": "nosto_placement",
+          "label": "Nosto Placement Type",
+          "options": [
+            {
+              "value": "categorypage-nosto-1",
+              "label": "Most Popular Products in This Category"
+            },
+            {
+              "value": "categorypage-nosto-2",
+              "label": "Products You Recently Viewed"
+            }
+          ],
+          "default": "categorypage-nosto-1"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coll Featured Products",
+      "category": "Content"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["collection"]
+  }
+}
+{% endschema %}

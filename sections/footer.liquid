@@ -1,0 +1,190 @@
+{%- liquid
+  assign template_name = 'section-footer'
+
+  if template == 'cart'
+    assign top_edge_colour = 'green'
+  elsif template contains 'customer'
+    assign top_edge_colour = 'white'
+  else
+    assign top_edge_colour = 'pink'
+  endif
+
+  if template contains 'page'
+    assign hide_section = page.metafields.custom.hide_newsletter_section
+  elsif template contains 'collection'
+    assign hide_section = collection.metafields.custom.hide_newsletter_section
+  endif
+
+  if hide_section == true
+    assign top_edge_colour = 'white'
+  endif
+%}
+
+{% if settings.theme_logo %}
+  {%- capture logo_image -%}
+    {{- settings.theme_logo | image_url: width: 112 | image_tag: alt: shop.name, loading: 'eager' -}}
+  {%- endcapture -%}
+{% endif %}
+
+{%- capture logo -%}
+  <a href="{{ routes.root_url }}" aria-label="Home">
+    {{- logo_image -}}
+  </a>
+{%- endcapture -%}
+
+{{- 'section-footer.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-footer.js' | asset_url }}" defer></script>
+
+<div class="{{- template_name -}}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="logo-social">
+      {{ logo }}
+      <div class="social">
+      <span>{{- 'sections.footer.social_menu_label' | t -}}</span>
+      <ul>
+        {%- render 'social-sharing' -%}
+      </ul>
+    </div>
+    </div>
+
+    <div class="menus">
+      {% for block in section.blocks %}
+        <collapsible-content>
+          <button
+            aria-expanded="false"
+            aria-controls="CollapsibleContent-size-chart"
+          >
+            <span>{{- block.settings.link_list_title -}}</span>
+            {%- render 'icon', _name: 'icon-chevron-down' -%}
+          </button>
+          <div class="collapsible__content">
+            <div class="menu">
+              <ul>
+                {%- for link in linklists[block.settings.link_list].links -%}
+                  <li>
+                    <a href="{{- link.url -}}">
+                      {{- link.title -}}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          </div>
+        </collapsible-content>
+      {% endfor %}
+
+      {% if section.settings.policy_menu != blank %}
+        <collapsible-content class="policy-menu-mobile">
+          <button
+            aria-expanded="false"
+            aria-controls="CollapsibleContent-size-chart"
+          >
+            <span>{{- 'sections.footer.policy_menu_label' | t -}}</span>
+            {%- render 'icon', _name: 'icon-chevron-down' -%}
+          </button>
+          <div class="collapsible__content">
+            <div class="menu">
+              <ul>
+                {%- for link in linklists[section.settings.policy_menu].links -%}
+                  <li>
+                    <a href="{{- link.url -}}">
+                      {{- link.title -}}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          </div>
+        </collapsible-content>
+      {% endif %}
+    </div>
+    <!-- {% if section.settings.policy_menu != blank %}
+      <div class="policy-menu-desktop">
+        <div>
+          <div class="menu">
+            <ul>
+              {%- for link in linklists[section.settings.policy_menu].links -%}
+                <li>
+                  <a href="{{- link.url -}}">
+                    {{- link.title -}}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {% endif %} -->
+  </div>
+
+  <div class="copyright">
+    <div class="container">
+      <p class="copyright-indent">
+        <span>
+          {%- render 'icon', _name: 'icon-copyright' -%}
+        </span>
+        <span>
+          <strong>
+            {{- 'now' | date: '%Y' }}
+            {{ settings.company_legal_name -}}
+          </strong>
+          <span>|</span>
+          {{- 'sections.footer.copyright_html' | t: companyNumber: settings.company_number, vatNumber: settings.company_vat_number -}}
+           <br>
+    <a href="https://www.outrank.co.uk/" class="footer-static-link">
+      Digital Marketing by Outrank Ltd
+    </a>
+        </span>
+      </p>
+      {%- if shop.enabled_payment_types.size > 0 and section.settings.show_payment == true -%}
+        <div class="payments">
+          {%- render 'payment-icons' -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "footer",
+  "class": "site-footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "General"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment",
+      "label": "Show Payment Icons?",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "policy_menu",
+      "label": "Policies Menu"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "links",
+      "name": "Link Lists",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_list_title",
+          "label": "Title"
+        },
+        {
+          "type": "link_list",
+          "id": "link_list",
+          "label": "Link List"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

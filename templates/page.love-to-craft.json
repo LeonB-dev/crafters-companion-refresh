@@ -1,0 +1,214 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "0bfa1904-d23f-4847-b294-cfc70b09b564": {
+      "type": "featured-image",
+      "settings": {
+        "url": "shopify:\/\/collections\/love-to-craft",
+        "image": "shopify:\/\/shop_images\/Campaign_Banner_Dekstop_f806b066-894e-44c7-b11d-bfb9daaf9dc9.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Campaign_Banner_Mobile_f7432b4a-2ecf-43a4-afe2-b5d52d897b49.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "5c3d14f5-fef8-4e65-a21a-d4e3c0e1e84a": {
+      "type": "content-block-trio",
+      "blocks": {
+        "7848c7dd-61b3-4555-8c8f-d77d5df6e4c5": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Day 1",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Day_1_-_20_OFF_Craft_Tools_b17f10d9-3a41-4087-8df3-e67d9c515108.jpg",
+            "link_text": "",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/love-to-craft?filter.p.m.custom.love_to_craft=Tools"
+          }
+        },
+        "content_block_PW63Kc": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Day 1",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Day_1_-_Up_To_20_OFF_Spectrum_Noir_7db01680-3635-481b-9cb6-a27df85846fd.jpg",
+            "link_text": "",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/love-to-craft?filter.p.m.custom.love_to_craft=Spectrum+Noir"
+          }
+        },
+        "content_block_NDk8th": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Day 2",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Day_2_-_Up_To_50_OFF_Embossing.jpg",
+            "link_text": "",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/love-to-craft?filter.p.m.custom.love_to_craft=Embossing"
+          }
+        }
+      },
+      "block_order": [
+        "7848c7dd-61b3-4555-8c8f-d77d5df6e4c5",
+        "content_block_PW63Kc",
+        "content_block_NDk8th"
+      ],
+      "settings": {
+        "use_image_only": true,
+        "link_style": "main",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "e8f1a764-ecb7-4bf9-bd47-7c012f92d41b": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_Grh7hV": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Day 4",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Day_3_-_Up_To_70_OFF_Colouring_cb8df028-0607-4b03-9472-402bb94a6df2.jpg",
+            "link_text": "",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/love-to-craft?filter.p.m.custom.love_to_craft=Colouring"
+          }
+        },
+        "content_block_QGUXTV": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Day 5",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Day_4_-_15_OFF_Mixed_Media_4d93d7c4-6b75-4c2b-b933-8ae2c221a708.jpg",
+            "link_text": "",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/love-to-craft?filter.p.m.custom.love_to_craft=Mix+Media"
+          }
+        },
+        "content_block_WhiTTb": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Day 6",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Day_5_-_Up_To_70_OFF_Floral_Crafts.jpg",
+            "link_text": "",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/love-to-craft?filter.p.m.custom.love_to_craft=Floral"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_Grh7hV",
+        "content_block_QGUXTV",
+        "content_block_WhiTTb"
+      ],
+      "settings": {
+        "use_image_only": true,
+        "link_style": "main",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "content_block_trio_rRbXnT": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_bfyCiN": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Day 6",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Day_6_-_Up_To_70_OFF_Die_Cutting.jpg",
+            "link_text": "",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/love-to-craft?filter.p.m.custom.love_to_craft=Die+Cutting"
+          }
+        },
+        "content_block_VaYQm3": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Day 7",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Day_6_-_Up_To_50_OFF_Soft_Craft.jpg",
+            "link_text": "",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/love-to-craft?filter.p.m.custom.love_to_craft=Soft+Craft"
+          }
+        },
+        "content_block_UNFwnh": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Day 7",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Day_7_-_Up_To_70_OFF_Dimensionals_Box_Making.jpg",
+            "link_text": "",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/love-to-craft?filter.p.m.custom.love_to_craft=Box+Making"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_bfyCiN",
+        "content_block_VaYQm3",
+        "content_block_UNFwnh"
+      ],
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "content_block_trio_qUrz4j": {
+      "type": "content-block-trio",
+      "blocks": {
+        "content_block_Y73kPE": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Day 8",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Day_8_-_Up_To_70_Stamping_Stencils.jpg",
+            "link_text": "",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/love-to-craft?filter.p.m.custom.love_to_craft=Stamping+%26+Stencils"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_Y73kPE"
+      ],
+      "settings": {
+        "use_image_only": true,
+        "link_style": "alt",
+        "link_colour": "primary",
+        "margin_bottom": "none"
+      }
+    },
+    "2e4c3f47-2ce5-44f0-a0ec-acc637a5d1b9": {
+      "type": "featured-image",
+      "settings": {
+        "url": "shopify:\/\/pages\/crafters-tv-schedule",
+        "image": "shopify:\/\/shop_images\/Crafter_s_TV_Schedule_Banner_Desktop_b2dcf8af-ece2-4c14-a36d-1ed193abdef0.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/CTV_Schedule_Banner_Mobile_copy.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "0bfa1904-d23f-4847-b294-cfc70b09b564",
+    "5c3d14f5-fef8-4e65-a21a-d4e3c0e1e84a",
+    "e8f1a764-ecb7-4bf9-bd47-7c012f92d41b",
+    "content_block_trio_rRbXnT",
+    "content_block_trio_qUrz4j",
+    "2e4c3f47-2ce5-44f0-a0ec-acc637a5d1b9"
+  ]
+}

@@ -1,0 +1,265 @@
+{%- liquid
+  assign template_name = 'section-crafters-tv-feature'
+
+  assign crafters_logo = section.settings.crafters_logo
+
+  assign heading = section.settings.heading | remove: '<p>' | remove: '</p>'
+  assign text = section.settings.text
+
+  assign live_link_url = shop.metafields.ctv.live_show.value
+
+  if live_link_url == "false"
+    assign live_link_url = blank
+  endif
+  assign live_link_text = section.settings.live_link_text
+
+  assign schedule_link_url = section.settings.schedule_link_url
+  assign schedule_link_text = section.settings.schedule_link_text
+
+  assign image = section.settings.image
+  assign image_alt = image.alt | heading | strip_html
+  
+  assign fp_link_url = section.settings.fp_link_url
+  
+  if fp_link_url contains 'collections'
+    assign collection_handle = fp_link_url | split: '/' | last
+    assign collection = collections[collection_handle]
+  endif
+
+  assign fp_heading = section.settings.fp_heading
+  assign fp_link_text = section.settings.fp_link_text
+  assign fp_product_list = section.settings.fp_product_list | default: collection.products
+%}
+
+{{- 'section-crafters-tv-feature.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {%- render 'paper-edge', _section: section -%}
+  <div class="container">
+    <div class="wrapper">
+      <div class="content u-content-offset">
+        <img src="{{- crafters_logo | image_url -}}" alt="{{- crafters_logo.alt | default: 'Crafters TV' -}}" height="72" width="220" class="crafters-tv-logo" loading="lazy"/>
+        <h2 class="u-heading-lg">{{- heading -}}</h2>
+        {{- text -}}
+        <div class="actions">
+          {%- if live_link_url != blank and live_link_text != blank -%}
+            <a href="{{- live_link_url -}}" class="c-btn main tertiary has-icon">
+              {%- render 'icon', _name: 'icon-tv' -%}
+              {{- live_link_text -}}
+              {%- render 'icon', _name: 'icon-arrow-right', _class: 'arrow' -%}
+            </a>
+          {%- endif -%}
+          {%- if schedule_link_url != blank and schedule_link_text != blank -%}
+            <a href="{{- schedule_link_url -}}" class="c-btn main secondary has-icon">
+              {%- render 'icon', _name: 'icon-calendar-clock' -%}
+              {{- schedule_link_text -}}
+              {%- render 'icon', _name: 'icon-arrow-right', _class: 'arrow' -%}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+      <picture class="image">
+        <source media="(max-width: 550.8px)" srcset="{{- image | image_url: width: 600 -}}">
+        <source media="(min-width:551px)" srcset="{{- image | image_url: width: 800 -}}">
+        <img src="{{- image | image_url: width: 600 -}}" alt="{{- image_alt -}}" height="358" width="240" loading="lazy">
+      </picture>
+    </div>
+    <hr/>
+    <div class="featured-products">
+      {%-
+        render 'section-header',
+        _heading: fp_heading,
+        _link_url: fp_link_url,
+        _link_text: fp_link_text,
+        _link_class: 'quaternary'
+      -%}
+      <div class="c-product-grid grid-sm">
+        {%- for product in fp_product_list limit: 6 -%}
+          {%-
+            render 'product-item',
+            product: product
+          -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Crafter's TV Feature",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Minimum width: 800px and 3/2 aspect ratio."
+    },
+    {
+      "type": "image_picker",
+      "id": "crafters_logo",
+      "label": "Crafters TV Logo"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Links - Watch live"
+    },
+    {
+      "type": "url",
+      "id": "live_link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "live_link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "header",
+      "content": "Links - Schedule"
+    },
+    {
+      "type": "url",
+      "id": "schedule_link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "schedule_link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "header",
+      "content": "Featured Products"
+    },
+    {
+      "type": "textarea",
+      "id": "fp_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "url",
+      "id": "fp_link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "fp_link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "product_list",
+      "id": "fp_product_list",
+      "label": "Product List",
+      "info": "Please select 6 products",
+      "limit": 6
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "edge-01"
+    },
+    {
+      "type": "select",
+      "id": "top_edge_colour",
+      "label": "Top edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "bottom_edge_colour",
+      "label": "Bottom edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Crafter's TV Feature",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

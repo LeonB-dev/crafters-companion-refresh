@@ -1,0 +1,260 @@
+{%- liquid
+  assign template_name = 'section-hero-banner'
+  assign use_autoplay = section.settings.use_autoplay
+  assign margin_top = section.settings.margin_top
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-hero-banner.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-hero-banner.js' | asset_url -}}" defer></script>
+
+<div
+  class="{{- template_name }}"
+  data-section-type="{{- template_name -}}"
+  data-section-id="{{ section.id }}"
+>
+  {%- render 'paper-edge', _section: section -%}
+  <div class="swiper-container" data-autoplay="{{- use_autoplay -}}" data-hb-slider data-transition-time="{{ section.settings.slide_transition_time | times: 1000 }}">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        {% liquid
+          assign text_colour = block.settings.text_colour
+          assign primary_colour = block.settings.primary_colour
+          assign button_colour = block.settings.button_colour
+          assign subtitle = block.settings.subtitle
+          assign title = block.settings.title
+          assign content = block.settings.content
+          assign cta_text = block.settings.cta_text
+          assign link_url = block.settings.link_url
+          assign secondary_link_text = block.settings.secondary_link_text
+          assign secondary_link_url = block.settings.secondary_link_url
+          assign video = block.settings.video
+          assign image_desktop = block.settings.image_desktop
+          assign image_mobile = block.settings.image_mobile | default: image_desktop
+          assign image_alt = image_desktop.alt
+        %}
+
+        <div class="hb-slide swiper-slide">
+          <div class="hb-slide__background" style="background-color: {{ primary_colour }};">
+            <div class="hb-content__grid {% if video %}has-video{% endif %}">
+              <div class="hb-content__text">
+                <span class="hb-content__subtitle">{{ subtitle }}</span>
+                <h2>{{ title }}</h2>
+                <div class="hb-slide__content">
+                  {{ content }}
+                </div>
+                <div class="hb-slide__buttons">
+                  <a class="c-btn button lozenge-l" href="{{- link_url -}}" class="c-btn" style="color: {{ text_colour }}; background: {{ button_colour }}">{{ cta_text }}</a>
+                  <a href="{{- secondary_link_url -}}" class="c-btn underlined">{{ secondary_link_text }}</a>
+                </div>
+              </div>
+              {% if video %}
+                <div class="hb-slide__video">
+                  {{ video | video_tag: image_size: '400x', autoplay: false, loop: true, controls: false, muted: true }}
+                  <button
+                    type="button"
+                    class="c-btn video-play"
+                    aria-label="Play video"
+                    data-ci-video-control
+                  >
+                    {%- render 'icon', _name: 'icon-play', _class: 'play' -%}
+                    {%- render 'icon', _name: 'icon-pause', _class: 'pause' -%}
+                  </button>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+
+          {% capture picture %}
+            <picture>
+              <source media="(min-width:1500px)" srcset="{{- image_desktop | image_url: width: 1920 -}}">
+              <source media="(min-width:1100px)" srcset="{{- image_desktop | image_url: width: 1500 -}}">
+              <source media="(min-width:800px)" srcset="{{- image_desktop | image_url: width: 1024 -}}">
+              <source media="(max-width: 767px)" srcset="{{- image_mobile | image_url: width: 800 -}}">
+              <img fetchpriority="high" src="{{- image_desktop | image_url: width: 800 -}}" alt="{{- image_alt -}}" height="{{ image_desktop.height }}" width="{{ image_desktop.width }}" loading="eager" class="image" />
+            </picture>
+          {% endcapture %}
+          {% if link_url != blank %}
+            <a href="{{- link_url -}}">
+              {{ picture }}
+            </a>
+          {% else %}
+            {{ picture }}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.blocks.size > 1 %}
+      <div class="swiper-nav slider-ui">
+        <div class="container">
+          {% if use_autoplay %}
+            <svg width="30" height="30" viewBox="0 0 30 30" class="circular-progress" style="--transition-time: {{ section.settings.slide_transition_time | times: 1000 }}ms">
+              <circle class="bg"></circle>
+              <circle class="fg"></circle>
+            </svg>
+          {% endif %}
+          <div class="swiper-pagination" data-swiper-pagination></div>
+          <div>
+            <button class="slider-ui__prev" type="button" data-hb-prev>
+              {%- render 'icon', _name: 'icon-prev' -%}
+              <span class="sr-only">Previous</span>
+            </button>
+            <button data-hb-next class="slider-ui__next active" type="button" data-hb-next>
+              {%- render 'icon', _name: 'icon-next' -%}
+              <span class="sr-only">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  #{{ section.id }}.section-hero-banner {
+    margin-top: {{ margin_top }}px;
+    margin-bottom: {{ margin_bottom }}px;
+  }
+
+  #{{ section.id }} button.slider-ui__prev {
+    background: {{ primary_colour | color_modify: 'alpha', 0.25 }};
+    color: {{ text_colour }};
+  }
+  #{{ section.id }}.section-hero-banner .slider-ui button.active {
+    background: {{ primary_colour }};
+    color: {{ text_colour }};
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "tag": "section",
+  "class": "overflow-hidden",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "use_autoplay",
+      "label": "Slide Autoplay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "slide_transition_time",
+      "label": "Slide Transition Time",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "color",
+          "id": "text_colour",
+          "label": "Text Colour",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "primary_colour",
+          "label": "Primary Colour",
+          "info": "This is the primary colour used for the background of the slide.",
+          "default": "#FEF5F6"
+        },
+        {
+          "type": "color",
+          "id": "button_colour",
+          "label": "Button Colour",
+          "default": "#F3A2AC"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Subtitle"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Content</p>"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "CTA Text",
+          "default": "Shop now"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "CTA URL"
+        },
+        {
+          "type": "text",
+          "id": "secondary_link_text",
+          "label": "Secondary Link Text"
+        },
+        {
+          "type": "url",
+          "id": "secondary_link_url",
+          "label": "Secondary Link URL"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_desktop",
+          "label": "Image (Desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image (Mobile)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

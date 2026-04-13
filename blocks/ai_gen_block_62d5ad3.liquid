@@ -1,0 +1,629 @@
+{% doc %}
+  @prompt
+    image block, title under video in monseratt font, links to another page, width 1800px, width adjustable, image radius, optional seperate image for mobile, fully moveable Title, subtitle and button, image, title and button overlay on image, different imagee for desktop and mobile, IMAGE WIDTH ADJUSTABLE
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-adjustable-image-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ai-adjustable-image__container-{{ ai_gen_id }} {
+    width: {{ block.settings.desktop_width_percent }}%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .ai-adjustable-image__link-{{ ai_gen_id }} {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+  }
+
+  .ai-adjustable-image__image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_radius }}px;
+  }
+
+  .ai-adjustable-image__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-adjustable-image__image-placeholder-{{ ai_gen_id }} {
+    background-color: #f4f4f4;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-adjustable-image__image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .ai-adjustable-image__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-adjustable-image__overlay-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: {{ block.settings.overlay_color }};
+    opacity: {{ block.settings.overlay_opacity }};
+    pointer-events: none;
+  }
+
+  .ai-adjustable-image__content-{{ ai_gen_id }} {
+    position: absolute;
+    top: {{ block.settings.content_vertical_position }}%;
+    left: {{ block.settings.content_horizontal_position }}%;
+    transform: translate(-50%, -50%);
+    text-align: {{ block.settings.text_alignment }};
+    width: 90%;
+    max-width: {{ block.settings.content_max_width }}px;
+    z-index: 2;
+  }
+
+  .ai-adjustable-image__title-{{ ai_gen_id }} {
+    font-family: 'Montserrat', sans-serif;
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 {{ block.settings.title_margin }}px;
+    font-weight: {{ block.settings.title_weight }};
+    text-shadow: {{ block.settings.text_shadow_horizontal }}px {{ block.settings.text_shadow_vertical }}px {{ block.settings.text_shadow_blur }}px {{ block.settings.text_shadow_color }};
+  }
+
+  .ai-adjustable-image__subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    color: {{ block.settings.subtitle_color }};
+    margin: 0 0 {{ block.settings.subtitle_margin }}px;
+    font-weight: {{ block.settings.subtitle_weight }};
+    text-shadow: {{ block.settings.text_shadow_horizontal }}px {{ block.settings.text_shadow_vertical }}px {{ block.settings.text_shadow_blur }}px {{ block.settings.text_shadow_color }};
+  }
+
+  .ai-adjustable-image__button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_radius }}px;
+    font-size: {{ block.settings.button_font_size }}px;
+    transition: all 0.3s ease;
+    border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
+  }
+
+  .ai-adjustable-image__button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+    color: {{ block.settings.button_hover_text_color }};
+    border-color: {{ block.settings.button_hover_border_color }};
+  }
+
+  .ai-adjustable-image__desktop-{{ ai_gen_id }} {
+    display: block;
+  }
+
+  .ai-adjustable-image__mobile-{{ ai_gen_id }} {
+    display: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-adjustable-image__container-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-adjustable-image__desktop-{{ ai_gen_id }} {
+      display: {% if block.settings.mobile_image %}none{% else %}block{% endif %};
+    }
+
+    .ai-adjustable-image__mobile-{{ ai_gen_id }} {
+      display: {% if block.settings.mobile_image %}block{% else %}none{% endif %};
+    }
+
+    .ai-adjustable-image__title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.7 }}px;
+    }
+
+    .ai-adjustable-image__subtitle-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subtitle_size | times: 0.8 }}px;
+    }
+
+    .ai-adjustable-image__button-{{ ai_gen_id }} {
+      font-size: {{ block.settings.button_font_size | times: 0.9 }}px;
+      padding: {{ block.settings.button_padding_vertical | times: 0.8 }}px {{ block.settings.button_padding_horizontal | times: 0.8 }}px;
+    }
+
+    .ai-adjustable-image__content-{{ ai_gen_id }} {
+      width: 95%;
+    }
+  }
+{% endstyle %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<div class="ai-adjustable-image-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-adjustable-image__container-{{ ai_gen_id }}">
+    {% if block.settings.link_url != blank %}
+      <a href="{{ block.settings.link_url }}" class="ai-adjustable-image__link-{{ ai_gen_id }}">
+    {% endif %}
+
+    <div class="ai-adjustable-image__image-wrapper-{{ ai_gen_id }}">
+      <div class="ai-adjustable-image__desktop-{{ ai_gen_id }}">
+        {% if block.settings.desktop_image %}
+          <img
+            src="{{ block.settings.desktop_image | image_url: width: 2000 }}"
+            alt="{{ block.settings.desktop_image.alt | escape }}"
+            loading="lazy"
+            width="{{ block.settings.desktop_image.width }}"
+            height="{{ block.settings.desktop_image.height }}"
+            class="ai-adjustable-image__image-{{ ai_gen_id }}"
+          >
+        {% else %}
+          <div class="ai-adjustable-image__image-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-adjustable-image__empty-state-{{ ai_gen_id }}">
+              Add a desktop image
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      {% if block.settings.mobile_image %}
+        <div class="ai-adjustable-image__mobile-{{ ai_gen_id }}">
+          <img
+            src="{{ block.settings.mobile_image | image_url: width: 1000 }}"
+            alt="{{ block.settings.mobile_image.alt | escape }}"
+            loading="lazy"
+            width="{{ block.settings.mobile_image.width }}"
+            height="{{ block.settings.mobile_image.height }}"
+            class="ai-adjustable-image__image-{{ ai_gen_id }}"
+          >
+        </div>
+      {% endif %}
+
+      {% if block.settings.show_overlay %}
+        <div class="ai-adjustable-image__overlay-{{ ai_gen_id }}"></div>
+      {% endif %}
+
+      {% if block.settings.show_content %}
+        <div class="ai-adjustable-image__content-{{ ai_gen_id }}">
+          {% if block.settings.title != blank %}
+            <h2 class="ai-adjustable-image__title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+          {% endif %}
+
+          {% if block.settings.subtitle != blank %}
+            <p class="ai-adjustable-image__subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</p>
+          {% endif %}
+
+          {% if block.settings.button_text != blank %}
+            <span class="ai-adjustable-image__button-{{ ai_gen_id }}">{{ block.settings.button_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if block.settings.link_url != blank %}
+      </a>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Adjustable image",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Desktop image"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop image"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Mobile image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image",
+      "info": "Optional. If not set, desktop image will be used on mobile."
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "label": "Image border radius",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_overlay",
+      "label": "Show overlay",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.4
+    },
+    {
+      "type": "header",
+      "content": "Link"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_content",
+      "label": "Show content overlay",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Image Title"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Title weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "range",
+      "id": "title_margin",
+      "label": "Title bottom spacing",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "label": "Subtitle size",
+      "min": 14,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "subtitle_weight",
+      "label": "Subtitle weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_margin",
+      "label": "Subtitle bottom spacing",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Text shadow"
+    },
+    {
+      "type": "range",
+      "id": "text_shadow_horizontal",
+      "label": "Horizontal offset",
+      "min": -10,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "text_shadow_vertical",
+      "label": "Vertical offset",
+      "min": -10,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "text_shadow_blur",
+      "label": "Blur radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "color",
+      "id": "text_shadow_color",
+      "label": "Shadow color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop now"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "Button font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "label": "Button vertical padding",
+      "min": 5,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "label": "Button horizontal padding",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Button hover background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Button hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "label": "Button border width",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Button border color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border_color",
+      "label": "Button hover border color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "button_radius",
+      "label": "Button border radius",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "content_vertical_position",
+      "label": "Vertical position",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "content_horizontal_position",
+      "label": "Horizontal position",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "Content max width",
+      "min": 300,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "default": 800
+    }
+  ],
+  "presets": [
+    {
+      "name": "Adjustable image"
+    }
+  ]
+}
+{% endschema %}

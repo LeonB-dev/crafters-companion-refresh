@@ -1,0 +1,20 @@
+.section-page-404 {
+  position: relative;
+  padding: 1rem 0 0;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .section-page-404 {
+    padding: 6rem 0 0;
+  }
+}
+.section-page-404 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-page-404 .container a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}

@@ -1,0 +1,122 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "crafters-tv-ways-to-watch",
+      "blocks": {
+        "4487edbc-b5ac-49f9-80bd-651636c18410": {
+          "type": "promotion",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Network_Browser.svg",
+            "heading": "Watch anywhere",
+            "text": "<p>You can watch Crafter’s TV anywhere in the world, on any device with an internet connection.<\/p>"
+          }
+        },
+        "ce13cb97-0779-48bd-9415-5204f0a63897": {
+          "type": "promotion",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-workshops.svg",
+            "heading": "Chat with the Experts",
+            "text": "<p>Chat with our experts and other viewers when you watch Crafter’s TV on <a href=\"https:\/\/www.youtube.com\/user\/CraftersCompanion1\" target=\"_blank\" title=\"https:\/\/www.youtube.com\/user\/CraftersCompanion1\">YouTube<\/a> or <a href=\"https:\/\/www.facebook.com\/crafterscompaniontv\/\" target=\"_blank\" title=\"https:\/\/www.facebook.com\/crafterscompaniontv\/\">Facebook<\/a>.<\/p>"
+          }
+        },
+        "9966d68c-4102-4a16-8774-cf12f3bc5968": {
+          "type": "promotion",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Calendar_Clock.svg",
+            "heading": "Catch up on missed shows",
+            "text": "<p>If you missed a show, you can <a href=\"\/pages\/crafters-tv-schedule\" title=\"Crafter's TV Schedule\">catch up<\/a> on any show from anywhere in the world.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "4487edbc-b5ac-49f9-80bd-651636c18410",
+        "ce13cb97-0779-48bd-9415-5204f0a63897",
+        "9966d68c-4102-4a16-8774-cf12f3bc5968"
+      ],
+      "settings": {
+        "title": "Ways to Watch",
+        "heading": "Watch Crafter’s TV anywhere, on any device.",
+        "text": "<p>Tune in on the go, at the office or at home. No matter where you are or the device you're using, never miss a show again!<\/p>"
+      }
+    },
+    "966edf19-e4a3-483d-b11b-cef8f60437dc": {
+      "type": "crafters-tv-how-to-watch",
+      "blocks": {
+        "c9500265-a7d4-4941-a1ce-f4a71f57d4a6": {
+          "type": "promotion",
+          "settings": {
+            "graphic_type": "crafters-wireframe",
+            "logo_width": "256",
+            "heading": "Watch live and shop",
+            "text": "Stream our shows through the Crafter's Companion homepage or the Watch Crafter's TV page. You'll be able to shop along with the show without missing a minute of the action.",
+            "link_url": "\/pages\/crafters-tv-schedule",
+            "link_text": "Visit our broadcast page",
+            "colour": "#73308a"
+          }
+        },
+        "e39df51d-18ed-4ffb-a81d-8d6e847e2a09": {
+          "type": "promotion",
+          "settings": {
+            "graphic_type": "facebook-wireframe",
+            "logo_width": "192",
+            "heading": "Watch live and join in the conversation",
+            "text": "Join in the conversation and watch our shows via the Crafter's TV Facebook page. Ask our Craft Experts a question, talk to other crafters in the chat box and enjoy the show!",
+            "link_url": "https:\/\/www.facebook.com\/crafterscompaniontv\/",
+            "link_text": "Visit our Facebook page",
+            "colour": "#1877f2"
+          }
+        },
+        "466f1efa-0214-47d0-8e20-70b3031626c2": {
+          "type": "promotion",
+          "settings": {
+            "graphic_type": "youtube-wireframe",
+            "logo_width": "176",
+            "heading": "Watch live and join in the conversation",
+            "text": "Don't have a Facebook account, but want to join in? Head over to our YouTube channel! You can watch the shows live and talk to your crafty friends in the chat box.",
+            "link_url": "https:\/\/www.youtube.com\/user\/CraftersCompanion1",
+            "link_text": "Visit our YouTube channel",
+            "colour": "#ed1d24"
+          }
+        }
+      },
+      "block_order": [
+        "c9500265-a7d4-4941-a1ce-f4a71f57d4a6",
+        "e39df51d-18ed-4ffb-a81d-8d6e847e2a09",
+        "466f1efa-0214-47d0-8e20-70b3031626c2"
+      ],
+      "settings": {
+        "heading": "Where and how can you watch Crafter’s TV?",
+        "text": "<p>Part of the Crafter’s Companion family, Crafter’s TV is a digital channel for all crafters, from total beginners to expert makers.<br\/><br\/>With more than 35 hours of live shows each week, you can tune in to a packed schedule of shows for all crafters, from total beginners to expert makers.<br\/><br\/>Join our friendly family of experts and presenters every day for new and exciting crafting products, live tutorials and inspiring demonstrations. This is a channel for all craft fans to discover our newest crafting innovations, learn a new technique and make new friends!<br\/><br\/>You can watch live via or catch up via our website, Facebook page or Youtube Channel.<br\/>Tune in using your phone, computer or even by streaming straight onto your TV.<br\/><br\/>So, wherever you are, it couldn't be simpler to tune in on yourfavourite devices and join the fun! Here's how...<\/p>"
+      }
+    },
+    "2538415f-df05-4743-9541-a0bcc6dc264e": {
+      "type": "latest-articles",
+      "settings": {
+        "heading": "Available on catchup",
+        "text": "<p>Never miss a show again! No matter the time or place, catch up on your favourite Crafter's TV show. Catch up on yesterday's Wake Up Call, last week's Craft Along, last year's Launch Party and so many more shows at any time on our YouTube channel!<\/p>",
+        "link_url": "shopify:\/\/blogs\/crafters-tv",
+        "link_text": "Visit our Crafter's TV archive",
+        "blog": "crafters-tv",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "966edf19-e4a3-483d-b11b-cef8f60437dc",
+    "2538415f-df05-4743-9541-a0bcc6dc264e"
+  ]
+}

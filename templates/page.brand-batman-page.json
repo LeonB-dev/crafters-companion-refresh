@@ -1,0 +1,200 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "header": {
+      "type": "brand-landing-header",
+      "settings": {
+        "edge_version": "none"
+      }
+    },
+    "42233aa3-11a8-447d-a330-730d88671d29": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Let’s make it together",
+        "small_text": "<p>From perfectly portable, manual options to state-of-the-art, electronic machines - there’s a Gemini for every type of craft and every type of crafter. From scrapbooking and home decor to handmade cards, quilting and everything in between, you can make more with Gemini.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1": {
+      "type": "image-feature",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/batman-background_6d6dbe4c-2126-432e-97e6-7ab2d39ce791.jpg",
+        "heading": "Innovation to make more with the Gemini II",
+        "text": "<p>Set your creative sights higher and aim for the stars with the Gemini II. Our newest electronic cutting machine has all of the power, precision and performance of the original Gemini, but with updated functions and unique innovations. So you can cut, emboss and create with unmatched precision and intricacy.<\/p>",
+        "link_text": "Shop the Gemini II",
+        "link_url": "shopify:\/\/collections\/gemini",
+        "content_placement": "left"
+      }
+    },
+    "bab7aec5-01db-4922-bd5b-0478e45a8027": {
+      "type": "content-block-trio",
+      "blocks": {
+        "14acaefe-5109-4c27-85f4-d14fd25b4134": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Gemini Mini",
+            "text": "Don't let its size fool you - the Gemini Mini is no mouse! All you have to do is turn the handle to cut out or emboss crisp and detailed designs onto your papercraft projects.",
+            "link_text": "Shop the Gemini Mini",
+            "link_url": "\/products\/gemini-mini-manual-die-cutting-machine"
+          }
+        },
+        "a051e613-e924-4938-9d54-328216b7a319": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Gemini Midi",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "91ab9fd6-aa4a-4f21-aa52-64bd50397598": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Gemini Junior",
+            "text": "It's crafting without the tricky bits cut out! Sit back and relax as the electronic Gemini Junior does the hard work for you. Craft projects just got easier.",
+            "link_text": "Shop the Gemini Junior",
+            "link_url": "\/products\/gemini-junior-die-cutting-and-embossing-machine"
+          }
+        }
+      },
+      "block_order": [
+        "14acaefe-5109-4c27-85f4-d14fd25b4134",
+        "a051e613-e924-4938-9d54-328216b7a319",
+        "91ab9fd6-aa4a-4f21-aa52-64bd50397598"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "primary"
+      }
+    },
+    "5494c7bb-d720-48a5-a3e5-5139d82add99": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Tortor aliquam eu lectus convallis vitae amet augue. Eget facilisis in convallis magna vel vel mattis eget vestibulum. Dignissim dictum urna volutpat feugiat.",
+        "small_text": "",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "1bafe95e-47fe-4c78-8d8f-c39645db74e7": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/comic-books.jpg",
+        "main_heading": "Tortor aliquam eu lectus convallis vitae amet augue.",
+        "main_text": "<p>Tortor aliquam eu lectus convallis vitae amet augue. Eget facilisis in convallis magna vel vel mattis eget vestibulum. Dignissim dictum urna volutpat feugiat.<\/p><p>Tortor aliquam eu lectus convallis vitae amet augue. Eget facilisis in convallis magna vel vel mattis eget vestibulum. Dignissim dictum urna volutpat feugiat.<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": true,
+        "shape_background": "shopify:\/\/shop_images\/background-noise-01.png",
+        "shape_position": "vertical-end",
+        "enable_dots": false,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "1b65dc5a-a008-4959-87ed-9373074e0392": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/comic-book.jpg",
+        "main_heading": "Tortor aliquam eu lectus convallis vitae amet augue.",
+        "main_text": "<p>Tortor aliquam eu lectus convallis vitae amet augue. Eget facilisis in convallis magna vel vel mattis eget vestibulum. Dignissim dictum urna volutpat feugiat.<\/p><p>Tortor aliquam eu lectus convallis vitae amet augue. Eget facilisis in convallis magna vel vel mattis eget vestibulum. Dignissim dictum urna volutpat feugiat.<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "10cdeb49-848f-43ee-ae1b-8050fd392a25": {
+      "type": "featured-products",
+      "blocks": {
+        "20da1594-98b5-494e-9e0c-d98d670e58a5": {
+          "type": "collection",
+          "settings": {
+            "collection": "gemini"
+          }
+        }
+      },
+      "block_order": [
+        "20da1594-98b5-494e-9e0c-d98d670e58a5"
+      ],
+      "settings": {
+        "heading": "Our top selling Gemini products",
+        "heading_alignment": false,
+        "link_url": "",
+        "link_text": "",
+        "grid_size": "sm",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "3a30aaa9-391d-469a-9a67-f382464483f0": {
+      "type": "latest-articles",
+      "settings": {
+        "heading": "Related articles for you",
+        "text": "",
+        "link_url": "",
+        "link_text": "",
+        "blog": "inspiration",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "42233aa3-11a8-447d-a330-730d88671d29",
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1",
+    "bab7aec5-01db-4922-bd5b-0478e45a8027",
+    "5494c7bb-d720-48a5-a3e5-5139d82add99",
+    "1bafe95e-47fe-4c78-8d8f-c39645db74e7",
+    "1b65dc5a-a008-4959-87ed-9373074e0392",
+    "10cdeb49-848f-43ee-ae1b-8050fd392a25",
+    "3a30aaa9-391d-469a-9a67-f382464483f0"
+  ]
+}

@@ -1,0 +1,72 @@
+{% liquid
+  assign template_name = 'section-product-recommendations'
+%}
+
+{{- 'snippet-product-item.css' | asset_url | stylesheet_tag -}}
+
+{%- if section.settings.enabled -%}
+  <div data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}" data-product-id="{{ product.id }}" data-limit="{{ section.settings.limit | default: 12 }}">
+    {%- if recommendations.products_count > 0 -%}
+      <div class="container">
+        <h3>{{ section.settings.title | escape }}</h3>
+
+        <div class="swiper-container" data-product-recommendations-slider>
+          <div class="swiper-wrapper">
+            {%- for product in recommendations.products -%}
+              <div class="swiper-slide" data-product-recommendations-slide>
+                {% render 'stmt-product-card', product: product -%}
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+
+        <button class="c-btn" data-product-recommendations-prev>
+          <span class="sr-only">{{ 'components.slider_labels.previous_slide' | t | escape }}</span>
+          {%- render 'icon', _name: 'icon-arrow-left' -%}
+        </button>
+        <button class="c-btn" data-product-recommendations-next>
+          <span class="sr-only">{{ 'components.slider_labels.next_slide' | t | escape }}</span>
+          {%- render 'icon', _name: 'icon-arrow-right' -%}
+        </button>
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": {
+    "de": "Produktempfehlungen",
+    "en": "Product Recommendations",
+    "es": "Recomendaciones de Productos",
+    "fr": "Recommandations de Produits",
+    "it": "Consigli sul Prodotto",
+    "ja": "製品の推奨事項",
+    "pt-BR": "Recomendações de produtos"
+  },
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enabled",
+      "label": "Enable Product Recommendations?",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Recommended Products"
+    },
+    {
+      "type": "range",
+      "id": "limit",
+      "label": "Limit",
+      "min": 4,
+      "max": 40,
+      "step": 1,
+      "default": 12
+    }
+  ]
+}
+{% endschema %}

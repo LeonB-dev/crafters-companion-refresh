@@ -1,0 +1,21 @@
+<div class="summary">
+  <div class="summary-wrapper">
+    <h2>{{ 'template.cart.summary' | t }}</h2>
+    {%- render 'cart-totals', cart: cart -%}
+
+    <div class="cart-discounting">
+      <div class="csapps-cart-original-total"></div>
+    </div>
+
+    <div class="actions">
+      <button class="c-btn main primary fw" type="submit" name="checkout" id="checkout">
+        {% render 'icon', _name: 'icon-bag' -%}
+        {{ 'template.cart.checkout' | t }}
+      </button>
+    </div>
+    <div class="payments">
+      <p>{{- 'template.cart.accepted_payment_methods' | t }}</p>
+      {%- render 'payment-icons' -%}
+    </div>
+  </div>
+</div>

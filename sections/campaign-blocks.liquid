@@ -1,0 +1,270 @@
+{%- liquid
+  assign template_name = 'section-campaign-blocks'
+
+  assign kicker = section.settings.kicker
+  assign heading = section.settings.heading | remove: '<p>' | remove: '</p>' | replace: '<strong>', '<strong><span>' | replace: '</strong>', '</span></strong>'
+  assign text = section.settings.text
+
+  assign link_url = section.settings.link_url
+  assign link_text = section.settings.link_text
+
+  assign heading_class = 'u-heading-lg heading'
+  assign kicker_class = 'u-text-md kicker'
+
+  assign disable_h1_tags = section.settings.disable_h1_tags
+  assign h1_tag = section.settings.h1_tag
+
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-campaign-blocks.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-campaign-blocks.js' | asset_url -}}"></script>
+
+<div class="{{- template_name }}  u-space-below-{{- margin_bottom }} overflow-hidden" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="content u-content-offset">
+      {% if kicker != blank %}
+        {% if h1_tag == 'kicker' and disable_h1_tags == false %}
+          <h1 class="{{- kicker_class -}}">{{ kicker }}</h1>
+        {% else %}
+          <p class="{{- kicker_class -}}">{{ kicker }}</p>
+        {% endif %}
+      {% endif %}
+      {% if h1_tag == 'heading' and disable_h1_tags == false %}
+        <h1 class="{{- heading_class -}}">{{- heading -}}</h1>
+      {% else %}
+        <h2 class="{{- heading_class -}}">{{- heading -}}</h2>
+      {% endif %}
+      {{- text -}}
+      {%- if link_url != blank and link_text != blank -%}
+        <a href="{{- link_url -}}" class="c-btn main primary">{{- link_text -}}</a>
+      {%- endif -%}
+    </div>
+    <div class="swiper-container" data-scb-slider>
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          {% liquid
+            assign heading = block.settings.heading
+            assign image = block.settings.image
+
+            if block.type == 'collection_block'
+              assign collection = collections[block.settings.collection]
+              assign page_url = collection.url
+              assign page_heading = collection.title
+              assign page_image = collection.image
+              assign page_lozenge = collection.metafields.promotion.lozenge_text
+            elsif block.type == 'page_block'
+              assign page = pages[block.settings.page]
+              assign page_url = page.url
+              assign page_heading = page.title
+              assign page_image = page.metafields.custom.featured_image
+              assign page_lozenge = page.metafields.promotion.lozenge_text
+            elsif block.type == 'product_block'
+              assign product = block.settings.product
+              assign page_url = product.url
+              assign page_lozenge = block.settings.lozenge
+            endif
+
+            if heading != blank
+              assign page_heading = heading
+            endif
+
+            if image != blank
+              assign page_image = image
+            endif
+          %}
+          <div class="swiper-slide">
+            {%
+              render 'category-item',
+              _url: page_url,
+              _image: page_image,
+              _heading: page_heading,
+              _lozenge: page_lozenge
+              _loading: 'eager'
+            -%}
+          </div>
+        {%- endfor -%}
+      </div>
+      <div class="swiper-nav">
+        <button class=" c-btn swiper-button prev" aria-label="Previous" data-scb-prev>
+          {%- render 'icon', _name: 'icon-arrow-left' -%}
+        </button>
+        <button class="c-btn swiper-button next" aria-label="Next" data-scb-next>
+          {%- render 'icon', _name: 'icon-arrow-right' -%}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Campaign Blocks",
+  "tag": "section",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Kicker"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Bold text will display custom underline effect."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_h1_tags",
+      "label": "Disable all H1 tags",
+      "info": "This will disable all H1 tags, changing the heading to a H2 tag. This should be disabled if the section is not the first (top) section on this page.",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "h1_tag",
+      "label": "Designate H1 tag",
+      "options": [
+        {
+          "value": "kicker",
+          "label": "Kicker"
+        },
+        {
+          "value": "heading",
+          "label": "Heading"
+        }
+      ],
+      "default": "heading"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_block",
+      "name": "Collection block",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "This will override the default image. Minimum width: 400px and 5/7 aspect ratio."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "info": "This will override the default page/collection title"
+        }
+      ]
+    },
+    {
+      "type": "page_block",
+      "name": "Page block",
+      "settings": [
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Page"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "This will override the default image. Minimum width: 400px and 5/7 aspect ratio."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "info": "This will override the default page/collection title"
+        }
+      ]
+    },
+    {
+      "type": "product_block",
+      "name": "Product block",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Minimum width: 400px and 5/7 aspect ratio."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "lozenge",
+          "label": "Lozenge"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Campaign Blocks",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

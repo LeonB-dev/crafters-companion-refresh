@@ -1,0 +1,320 @@
+{%- liquid
+  assign template_name = 'section-image-text-slider'
+
+  assign image = section.settings.image
+  assign margin_bottom = section.settings.margin_bottom
+  assign heading = section.settings.heading
+
+  assign block_heading_class = 'u-heading-xs'
+
+  assign heading_size = section.settings.heading_size
+  assign link_style = section.settings.link_style
+  assign link_colour = section.settings.link_colour
+%}
+
+{{- 'section-image-text-slider.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-image-text-slider.js' | asset_url -}}" defer></script>
+
+<div
+  class="{{- template_name }} u-space-below-{{- margin_bottom }}"
+  data-section-type="{{- template_name -}}"
+  data-section-id="{{ section.id }}"
+>
+  {%- render 'paper-edge', _section: section -%}
+  <div class="container">
+    <h2 class="u-heading-{{- heading_size }} centre heading">{{- heading -}}</h2>
+    <div class="swiper-container" data-it-slider>
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          {% liquid
+            assign small_heading = block.settings.small_heading
+            assign heading = block.settings.heading
+            assign text = block.settings.text
+            assign link_text = block.settings.link_text
+            assign link_url = block.settings.link_url
+            assign image = block.settings.image
+          %}
+          <div class="swiper-slide">
+            {%- if image != blank -%}
+              <figure class="image">
+                {{- image | image_url: width: 600 | image_tag: alt: image.alt | default: heading, loading: 'lazy' -}}
+              </figure>
+            {%- endif -%}
+            <div class="content">
+              {%- if small_heading != blank -%}
+                <small>{{ small_heading }}</small>
+              {%- endif -%}
+              <h3 class="{{ block_heading_class }} heading">{{ heading }}</h3>
+              {{ text }}
+              {%- if link_url != blank and link_text != blank -%}
+                <a href="{{ link_url }}" class="c-btn {{ link_style }} {{ link_colour }} has-icon">
+                  {{ link_text }}
+                  {%- render 'icon', _name: 'icon-arrow-right', _class: 'arrow' -%}
+                </a>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+      <div class="swiper-pagination" data-it-slider-pagination></div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image Text Slider",
+  "tag": "section",
+  "class": "overflow-hidden",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Main heading size",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        }
+      ],
+      "default": "md"
+    },
+    {
+      "type": "select",
+      "id": "link_style",
+      "label": "Link style",
+      "options": [
+        {
+          "value": "main",
+          "label": "Main"
+        },
+        {
+          "value": "alt",
+          "label": "Alternative"
+        }
+      ],
+      "default": "alt"
+    },
+    {
+      "type": "select",
+      "id": "link_colour",
+      "label": "Link colour",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "tertiary",
+          "label": "Tertiary"
+        },
+        {
+          "value": "quaternary",
+          "label": "Quaternary"
+        },
+        {
+          "value": "quinary",
+          "label": "Quinary"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "top_edge_colour",
+      "label": "Top edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "bottom_edge_colour",
+      "label": "Bottom edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "background_colour",
+      "label": "Background colour",
+      "info": "This can only be applied if a edge version is selected",
+      "options": [
+        {
+          "value": "black-squeeze",
+          "label": "Green"
+        },
+        {
+          "value": "pippin",
+          "label": "Pink"
+        },
+        {
+          "value": "whisper",
+          "label": "Purple"
+        }
+      ],
+      "default": "whisper"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "info_block",
+      "name": "Information Block",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "small_heading",
+          "label": "Subheading",
+          "info": "To appear above title."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link Url"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Text Slider",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

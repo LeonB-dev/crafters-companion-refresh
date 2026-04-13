@@ -1,0 +1,127 @@
+{% liquid
+  assign parent_brand = product.metafields.custom.parent_brand.value
+
+  if parent_brand != blank
+    assign brand_metaobject = parent_brand
+  else
+    assign product_vendor = product.vendor | handleize
+    assign collection = collections[product_vendor]
+    assign brand_metaobject = collection.metafields.custom.brand.value
+  endif
+
+  assign brand_logo = brand_metaobject.sticker_logo
+  assign brand_name = brand_metaobject.name
+  assign brand_logo_alt = brand_logo.alt | default: brand_name
+%}
+
+<div
+  class="
+    product-media-grid-new
+
+    {% if is_mobile %}
+      is-mobile
+    {% else %}
+      is-desktop
+    {% endif %}
+  "
+>
+  <div class="product-media-grid-new__items swiper" data-product-media-new-items>
+    <ul class="product-media-grid-new__items-list swiper-wrapper">
+      {% for media in product.media %}
+        <li
+          class="product-media-grid-new__item swiper-slide"
+          data-background-image="{{ media.preview_image | image_url: width: 1000 }}"
+          onmousemove="zoom(event)"
+          onmouseenter="zoom(event)"
+          ontouchstart="zoom(event)"
+          ontouchmove="zoom(event)"
+          data-thumbnail-id="{{ media.id }}"
+          data-media-id="{{ media.id }}"
+          data-product-image
+        >
+          {{ media | image_url: width: 1600 | image_tag: class: 'product-media-grid-new__item-image' }}
+
+          {% if media.media_type == 'video' or media.media_type == 'external_video' %}
+            <div class="product-media-grid-new__actions" data-media-id="{{ media.id }}">
+              <button
+                class="product-media-grid-new__actions-button c-btn has-icon main primary"
+                type="button"
+                aria-controls="{{ media.id }}"
+                data-pmg-modal-open
+              >
+                {% render 'icon', _name: 'icon-play' %}
+
+                Watch Video
+              </button>
+            </div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <div class="product-media-grid-new__items-pagination swiper-pagination"></div>
+
+    {% if brand_logo != blank %}
+      <a
+        class="product-media-grid-new__brand-logo"
+        href="{{ collection.url }}"
+        aria-label="{{ collection.title }}"
+      >
+        {{ brand_logo | image_url: height: 40 | image_tag: alt: brand_logo_alt, loading: 'lazy' }}
+      </a>
+    {% endif %}
+  </div>
+
+  {% unless is_mobile %}
+    {% if product.media.size > 1 %}
+      <div class="product-media-grid-new__thumbnails-wrapper">
+        <div class="product-media-grid-new__thumbnails swiper" data-product-media-new-thumbnails>
+          <ul class="product-media-grid-new__thumbnails-list swiper-wrapper">
+            {% for media in product.media %}
+              <li class="product-media-grid-new__thumbnail-item swiper-slide">
+                <button
+                  class="product-media-grid-new__thumbnail-button"
+                  type="button"
+                  data-product-media-new-thumbnail-button="{{ forloop.index0 }}"
+                >
+                  {{ media | image_url: width: 300 | image_tag: class: 'product-media-grid-new__thumbnail-image' }}
+                </button>
+              </li>
+            {% endfor %}
+          </ul>
+
+          <div class="product-media-grid-new__thumbnails-navigation">
+            <div class="product-media-grid-new__thumbnails-pagination swiper-pagination"></div>
+            <div class="product-media-grid-new__thumbnails-previous swiper-button-prev"></div>
+            <div class="product-media-grid-new__thumbnails-next swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endunless %}
+</div>
+<script>
+  function zoom(e) {
+    var zoomer = e.currentTarget;
+    var backgroundImage = zoomer.getAttribute('data-background-image');
+    zoomer.style.backgroundImage = 'url(' + backgroundImage + ')';
+
+    var offsetX, offsetY;
+
+    var x = (offsetX / zoomer.offsetWidth) * 100;
+    var y = (offsetY / zoomer.offsetHeight) * 100;
+
+    zoomer.style.backgroundPosition = x + '% ' + y + '%';
+
+    // Reset background image and position when mouse leaves or touch ends
+    zoomer.addEventListener('mouseleave', function () {
+      zoomer.style.backgroundImage = 'none';
+    });
+    zoomer.addEventListener('touchend', function () {
+      zoomer.style.backgroundImage = 'none';
+    });
+  }
+</script>

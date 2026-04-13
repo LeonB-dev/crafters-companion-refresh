@@ -1,0 +1,17 @@
+<div class="predictive-search__other-searches">
+  <div data-predictive-search-stored-queries></div>
+
+  <div class="predictive-search__popular-searches">
+    {% assign popular_searches = settings.popular_searches | newline_to_br | split: '<br />' %}
+    {% if popular_searches.size > 0 %}
+      <h2>{{ 'template.search.top_suggestions' | t }}</h2>
+      <ul>
+        {% for popular_search in popular_searches %}
+          <li>
+            <a href="{{ routes.search_url }}?q={{ popular_search }}">{{ popular_search }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>

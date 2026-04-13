@@ -1,0 +1,89 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "7eb8ef77-4afb-4858-ba57-413bfe2d2bd6": {
+      "type": "featured-image",
+      "settings": {
+        "url": "",
+        "image": "shopify:\/\/shop_images\/Campaign_Page_Banner_b490f9b9-4593-4cb8-ab5a-206f7e28e8c5.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "md"
+      }
+    },
+    "main": {
+      "type": "collection",
+      "settings": {
+        "enable_heading": true,
+        "enable_ajax": true,
+        "enable_count": true,
+        "enable_sorting": true,
+        "products_per_page": 24,
+        "enable_infinite_results": true,
+        "margin_bottom": "md"
+      }
+    },
+    "aad1b6d2-d4e4-442d-b1d5-904f322253cf": {
+      "type": "featured-products-collection",
+      "blocks": {
+        "ec014298-f9d0-412e-9ed2-a6bda00bbd3c": {
+          "type": "nosto_placement",
+          "settings": {
+            "nosto_placement": "categorypage-nosto-1"
+          }
+        }
+      },
+      "block_order": [
+        "ec014298-f9d0-412e-9ed2-a6bda00bbd3c"
+      ],
+      "settings": {
+        "heading": "Most Popular",
+        "heading_alignment": false,
+        "grid_size": "sm",
+        "edge_version": "edge-01",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "purple",
+        "background_colour": "black-squeeze",
+        "margin_bottom": "none"
+      }
+    },
+    "a8034894-8e92-4eaf-870d-ef78604340e3": {
+      "type": "featured-products-collection",
+      "blocks": {
+        "45a6fcd2-4553-4123-8290-5049a876671b": {
+          "type": "nosto_placement",
+          "settings": {
+            "nosto_placement": "categorypage-nosto-2"
+          }
+        }
+      },
+      "block_order": [
+        "45a6fcd2-4553-4123-8290-5049a876671b"
+      ],
+      "settings": {
+        "heading": "Recently Viewed",
+        "heading_alignment": false,
+        "grid_size": "sm",
+        "edge_version": "edge-01",
+        "top_edge_colour": "purple",
+        "bottom_edge_colour": "pink",
+        "background_colour": "whisper",
+        "margin_bottom": "none"
+      }
+    }
+  },
+  "order": [
+    "7eb8ef77-4afb-4858-ba57-413bfe2d2bd6",
+    "main",
+    "aad1b6d2-d4e4-442d-b1d5-904f322253cf",
+    "a8034894-8e92-4eaf-870d-ef78604340e3"
+  ]
+}

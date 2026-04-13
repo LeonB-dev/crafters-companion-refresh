@@ -1,0 +1,57 @@
+{% comment %}
+  The Page Title snippet.
+{% endcomment %}
+
+{%- capture seo_title -%}
+  {%- if collection and current_tags.size > 0 -%}
+    {%- if current_tags.size >= 1 -%}
+      {% assign current_tag = current_tags[0] | handleize %}
+      {% assign seo_overrides = collection.metafields.filter.seo_overrides | where: 'match_tag', current_tag | first %}
+    {%- endif -%}
+    {%- if seo_overrides.title.size > 0 -%}
+      {{ seo_overrides.title }}
+    {%- elsif current_tags.size == 1 -%}
+      {% for tag in current_tags %}
+        {%- assign tag_value = tag | split: '_' | last -%}
+        {%- assign meta_tags = ' & ' | append: meta_tags | append: tag_value -%}
+      {% endfor %}
+      {%- assign meta_tags = meta_tags | remove_first: ' & ' | append: ' ' | append: collection.title -%}
+      {{ 'general.meta.tags' | t: tags: meta_tags | trim -}}
+    {%- else -%}
+      {{ page_title }}
+    {%- endif -%}
+  {%- elsif collection and collection.filters.active_values.size > 0 -%}
+    {%- if collection.filters.active_values.size >= 1 -%}
+      {% assign current_tag = collection.filters.active_values[0] | handleize %}
+      {% assign seo_overrides = collection.metafields.filter.seo_overrides | where: 'match_tag', current_tag | first %}
+    {%- endif -%}
+    {%- if seo_overrides.title.size > 0 -%}
+      {{ seo_overrides.title }}
+    {%- elsif current_tags.size == 1 -%}
+      {% for tag in current_tags %}
+        {%- assign tag_value = tag | split: '_' | last -%}
+        {%- assign meta_tags = ' & ' | append: meta_tags | append: tag_value -%}
+      {% endfor %}
+      {%- assign meta_tags = meta_tags | remove_first: ' & ' | append: ' ' | append: collection.title -%}
+      {{ 'general.meta.tags' | t: tags: meta_tags | trim -}}
+    {%- else -%}
+      {{ page_title }}
+    {%- endif -%}
+  {%- elsif template == 'search' and search.performed == true -%}
+    {{ 'general.search.heading' | t: count: search.results_count }}: {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+  {%- else -%}
+    {{ page_title }}
+  {%- endif -%}
+
+  {%- if current_page and current_page > 1 -%}
+    &ndash; {{ 'general.meta.page' | t: page: current_page }}
+  {%- endif -%}
+  {%- assign escaped_page_title = page_title | escape -%}
+  {%- unless settings.pagetitle_append_shop_suffix == false %}
+    {%- unless escaped_page_title contains shop.name -%}
+      {{ '| ' | append: shop.name }}
+    {%- endunless -%}
+  {%- endunless -%}
+{%- endcapture -%}
+{% assign seo_title = seo_title | newline_to_br | replace: '<br />', ' ' | strip_newlines %}
+<title>{{ seo_title | strip }}</title>

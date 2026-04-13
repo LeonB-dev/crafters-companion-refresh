@@ -1,0 +1,25 @@
+{% liquid
+%}
+
+{{- 'snippet-breadcrumb.css' | asset_url | stylesheet_tag -}}
+
+{%- capture separator -%}
+{%- render 'icon', _name: 'icon-chevron-right' -%}
+{%- endcapture -%}
+
+
+<nav aria-label="{{ 'breadcrumb.aria_label' | t }}" role="navigation" class="snippet-breadcrumb">
+  <ol>
+    <li>
+      <a href="{{ routes.root_url }}" title="Home" rel="home">Home</a>
+    </li>
+    <li>
+      {{ separator }}
+      <a href="{{ settings.brands_url }}" title="Home" rel="home">{{ 'brands.brands_title' | t }}</a>
+    </li>
+    <li>
+      {{ separator }}
+      <span aria-current="page">{{ _brand }}</span>
+    </li>
+  </ol>
+</nav>

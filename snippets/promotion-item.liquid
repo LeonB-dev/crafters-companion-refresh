@@ -1,0 +1,58 @@
+{% liquid
+  if _page_type == 'type_collection' and _collection != blank
+    assign image = _collection.image
+    assign heading = _collection.title
+    assign metafield_text = _collection.metafields.promotion.text | metafield_tag
+    assign metafield_terms = _collection.metafields.promotion.terms
+    assign text = _text | default: metafield_text
+    assign terms = _terms | default: metafield_terms
+    assign url = _collection.url
+  elsif _page_type == 'type_product' and _product != blank
+    assign image = _product.featured_image
+    assign heading = _product.title
+    assign text = _text
+    assign terms = _terms
+    assign url = _product.url
+  elsif _page_type == 'type_page' and _page != blank
+    assign image = pages[_page.metafields.custom.featured_image]
+    assign heading = _product.title
+    assign text = _text
+    assign terms = _terms
+    assign url = _product.url
+  endif
+
+  if _image != blank
+    assign image = _image
+  endif
+  assign image_alt = image.alt | default: heading
+%}
+
+
+<div class="snippet-promotion-item">
+  {% if image != blank %}
+    {{ image | image_url: width: 512 | image_tag: alt: image_alt, loading: 'lazy' }}
+  {% else %}
+    {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+  {% endif %}
+  <div class="promotion-content">
+    <a href="{{- url -}}" class="u-heading-sm stretched-link heading">{{ heading | capitalize }}</a>
+    {{- text | replace: '<p>', '<p class="u-text-xl description">' -}}
+
+    {% if _page_type == 'type_collection' and metafield_terms != blank -%}
+      <ul class="terms u-text-sm">
+        {%- for term in terms.value -%}
+          <li >{{ term }}</li>
+        {%- endfor -%}
+      </ul>
+    {% elsif terms != blank %}
+      {% liquid
+        assign terms_split = terms | split: '</p>'
+      %}
+      <ul class="terms u-text-sm">
+        {%- for term in terms_split -%}
+          <li >{{ term | remove: '<p>' | remove: '</p>' }}</li>
+        {%- endfor -%}
+      </ul>
+    {% endif %}
+  </div>
+</div>

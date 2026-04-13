@@ -1,0 +1,128 @@
+{% liquid
+  assign current_variant = product.selected_or_first_available_variant
+
+  assign title = product.title
+  assign price = product.price
+  assign price_compare_at = product.compare_at_price
+  assign url = product.url
+
+  assign show_lozenges = false
+  assign show_new_lozenge = false
+
+  assign show_product_item_lozenges = settings.show_product_item_lozenges
+
+  if show_product_item_lozenges == true
+    assign show_lozenges = true
+  endif
+
+  assign date_now = 'now' | date: '%s'
+  assign limit = 3600 | times: 24 | times: settings.new_lozenge_days_threshold
+  assign date_published = product.created_at | date: '%s'
+  assign date_difference = date_now | minus: date_published
+
+  if date_difference < limit
+    assign show_new_lozenge = true
+  endif
+
+  assign product_image = product.featured_image
+  if product.images.size > 1
+    assign image_hover = product.images[1]
+  endif
+
+  for tag in product.tags
+    if tag contains settings.tags_filter_prefix
+      assign offer_tag = tag | split: '_' | last
+    endif
+  endfor
+%}
+
+<div class="snippet-product-item" data-product-item>
+  {% if _sticker_logo != blank %}
+    {{ _sticker_logo | image_url: width: 64 | image_tag: alt: _sticker_logo_alt, class:'sticker-logo', loading: 'lazy' }}
+  {% endif %}
+  {% render 'swym-product-view', product: product %}
+
+  {%- if show_lozenges == true -%}
+    <div class="c-lozenges">
+      {% if current_variant.available == true -%}
+        {% if offer_tag != blank -%}
+          <span class="offer persian-green">{{ offer_tag }}</span>
+        {% elsif price_compare_at > price -%}
+          <span class="on-sale carnation">{{- 'products.product.on_sale' | t -}}</span>
+        {%- elsif show_new_lozenge == true -%}
+          <span class="new persian-green">{{- 'products.product.new' | t -}}</span>
+        {%- endif -%}
+      {%- elsif current_variant.available == false -%}
+        <span class="sold-out emperor">{{- 'products.product.sold_out' | t -}}</span>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+  <div class="image">
+    {%- if product_image != blank -%}
+      <img
+        src="{{- product_image | image_url: width: 400 -}}"
+        height="300"
+        width="300"
+        alt="{{- title | remove: '"' -}}"
+        loading="lazy"
+      >
+      {%- if image_hover != null -%}
+        <img
+          src="{{- image_hover | image_url: width: 400 -}}"
+          height="300"
+          width="300"
+          alt="{{- title | remove: '"' -}}"
+          class="hover-img"
+          loading="lazy"
+        >
+      {%- endif -%}
+    {%- else -%}
+      {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+    {%- endif -%}
+  </div>
+  <div class="details">
+    <a href="{{- url -}}" class="stretched-link title">{{- title -}}</a>
+    <div class="pricing">
+      <span class="current">{{- price | money -}}</span>
+      {%- if price_compare_at > price -%}
+        <span class="was">{{- price_compare_at | money -}}</span>
+      {%- endif -%}
+    </div>
+  </div>
+  <div class="product-actions">
+    {% if current_variant.available %}
+      <button
+        class="c-btn product-add"
+        type="button"
+        data-product-item-variant-id="{{ current_variant.id }}"
+        data-product-item-quantity="1"
+        data-product-item-add
+      >
+        {{- 'products.product.add_to_cart' | t -}}
+      </button>
+    {% else %}
+      <a class="c-btn product-add" href="{{- url -}}"> View product </a>
+    {% endif %}
+    <button 
+      data-with-epi="true" 
+      class="c-btn wishlist-add product_{{ product.id }}"      
+      data-swaction="addToWishlist" 
+      data-product-id="{{ product.id }}" 
+      data-variant-id="{{ product.variants[0].id }}" 
+      data-product-url="{{ shop.url }}{{ product.url }}"
+      aria-label="Add to wishlist"
+    >
+    {%- render 'icon', _name: 'icon-wishlist' -%}
+    </button>
+  </div>
+</div>
+
+{% comment %}
+  data-with-epi="true" 
+  class="c-btn wishlist-add $!divId product_$!product.productId"      
+  data-swaction="addToWishlist" 
+  data-product-id="$!product.productId" 
+  data-variant-id="$!product.skus[0].id" 
+  data-product-url="$!product.url"
+  aria-label="Add to wishlist"
+{% endcomment %}

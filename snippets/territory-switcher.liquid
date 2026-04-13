@@ -1,0 +1,113 @@
+<script>
+  const countrySelectors = {
+    modal: '[data-territory-modal]',
+    modalClose: '[data-country-switcher-close]',
+    form: '#territory-form',
+    dropdown: '#territory-dropdown',
+    name: '#country-name',
+    mainOverlay: "[data-overlay-quickcart]",
+    countryList: "[data-country-list]",
+    countryListToggle: "[data-country-list-toggle]"
+  }
+  const territories = {};
+  {% for territory in _blocks %}
+    territories["{{ territory.settings.name }}"] = {
+      url: "{{ territory.settings.url }}",
+      countries: []
+    };
+    {% assign countries = territory.settings.countries | split: ',' %}
+    {% for country in countries %}
+      territories["{{ territory.settings.name }}"].countries.push("{{ country | strip }}");
+    {% endfor %}
+    {% if territory.settings.url contains shop.domain %}
+      {% assign current_lang_flag =  'icon-flag-' | append: territory.settings.name | append: '.jpg' | downcase | asset_img_url: '64x' %}
+    {% endif %}
+  {% endfor %}
+
+  if(Intl && !getComputedStyle(document.documentElement).getPropertyValue('--arc-palette-background')) {
+    let intlOptions = Intl.DateTimeFormat().resolvedOptions();
+    document.addEventListener('themeReady', function() {
+      const countryCode = intlOptions.locale.split('-')[1];
+      console.log(countryCode);
+      if (!theme.countryCodes) return;
+      const matchedCountry = theme.countryCodes[countryCode];
+      for (let key in territories) {
+        if (matchedCountry && territories[key].countries.includes(matchedCountry)) {
+          window.Shopify.currentLang = {
+            icon: "{{ current_lang_flag }}",
+            name: matchedCountry
+          };
+          if (!territories[key].url.includes('{{ shop.domain }}') && !sessionStorage.getItem("redirectDeclined") && !window.location.href.includes('dev.myshopify') && theme.enableTerritorySwitcher) {
+            const modal = document.querySelector(countrySelectors.modal);
+            if (modal) {
+              const modalClose = modal.querySelector(countrySelectors.modalClose);
+              const modalForm = modal.querySelector(countrySelectors.form);
+              const modalDropdown = modal.querySelector(countrySelectors.dropdown);
+              const modalOptions = modalDropdown.querySelectorAll('option');
+              const countryName = modal.querySelector(countrySelectors.name);
+              const mainOverlay = document.querySelector(countrySelectors.mainOverlay);
+  
+              const activeClass = 'is-visible';
+              modal.classList.add(activeClass);
+              mainOverlay.classList.add(activeClass);
+  
+              countryName.innerText = matchedCountry;
+  
+              modalOptions.forEach(function (option) {
+                if (territories[key].url === option.value) {
+                  option.setAttribute('selected', true);
+                }
+              });
+              function redirect(url) {
+                if (url.includes('{{ shop.domain }}')) {
+                  modal.classList.remove(activeClass);
+                  mainOverlay.classList.remove(activeClass);
+                  sessionStorage.setItem("redirectDeclined", "true");
+                } else {
+                  window.location.href = url;
+                };
+              };
+              modalClose.addEventListener('click', function() { redirect(territories[key].url); });
+              modalForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                redirect(modalDropdown.value + "{{- request.path -}}");
+              })
+            }
+          }
+        }
+      }
+  
+      const countryList = document.querySelector(countrySelectors.countryList);
+      const countryListToggle = document.querySelector(countrySelectors.countryListToggle);
+  
+      if(countryList && countryListToggle) {
+        countryListToggle.addEventListener('click', function() {
+          countryList.classList.toggle('is-visible');
+        });
+      }
+    });
+  }
+</script>
+
+<div class="snippet-territory-switcher" data-country-list>
+  <div class="container">
+    <ol role="menu">
+      {% for territory in _blocks %}
+        {% unless territory.settings.url contains shop.domain %}
+          {% liquid
+            assign name = territory.settings.name | downcase
+            assign flag_image = 'icon-flag-' | append: name
+            assign flag_image_file = flag_image | append: '.jpg'
+          %}
+          <li>
+            {% assign url = territory.settings.url | append: request.path  %}
+            <a href="{{ url }}">
+              <img src="{{- flag_image_file | asset_img_url: '64x' -}}" alt="{{- name }} flag" height="16" width="16" loading="eager">
+              <span>{{ name }}</span>
+            </a>
+          </li>
+        {% endunless %}
+      {% endfor %}
+    </ol>
+  </div>
+</div>

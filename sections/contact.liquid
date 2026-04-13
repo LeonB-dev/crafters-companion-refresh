@@ -1,0 +1,365 @@
+{%- liquid
+  assign template_name = 'section-contact'
+
+  assign form_heading = section.settings.form_heading
+  assign form_text = section.settings.form_text
+  assign form_subheading = section.settings.form_subheading
+  assign form_image = section.settings.form_image
+  assign form_image_bg = section.settings.form_image_bg
+
+  assign form_id = section.settings.form_id
+  assign form_id_edit = form_id | handleize
+  assign submit_text = section.settings.submit_text
+
+  assign form_label_class = 'form-label'
+  assign form_input_class = 'form-input'
+
+  assign type_array = ''
+  assign form_array = section.blocks | map: 'type'
+%}
+
+{{- 'section-contact.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-above-sm u-space-below-lg" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container" id="contact-form">
+    {%- if form_heading != blank or form_text != blank -%}
+      <div class="contact-header">
+        {% if form_heading != blank %}
+          <h2 class="u-heading-md">{{ form_heading -}}</h2>
+        {% endif %}
+        {% if form_text != blank %}
+          {{ form_text }}
+        {% endif %}
+      </div>
+    {%- endif -%}
+    <div class="contact-form-container">
+      <div class="form-wrapper">
+        {% if section.settings.form_embed != blank %}
+          {{ section.settings.form_embed }}
+        {% else %}
+          {% if form_subheading != blank %}
+            <h3 class="u-heading-xs">{{ form_subheading }}</h3>
+          {% endif %}
+          {%- form 'contact', class: 'c-form', id: 'contact-form' -%}
+            {% if form.errors %}
+              <div class="c-alert error">{{ form.errors | default_errors }}</div>
+            {% endif %}
+            {%- if form.posted_successfully? -%}
+              <p class="c-alert success">Your message was sent successfully.</p>
+            {%- endif -%}
+            {% for block in section.blocks -%}
+              {% liquid
+                assign heading = block.settings.heading
+                assign placeholder = block.settings.placeholder
+              %}
+              {% unless type_array contains block.type %}
+                {% assign type_array = type_array | append: block.type | append: ',' %}
+                <div class="form-field{% if block.type == 'marketing' %} has-checkbox{% endif %}{% if block.type == 'first_last_name' %} double-container{% endif %}">
+                  {%- case block.type -%}
+                    {% when 'first_name' -%}
+                      {% assign default_placeholder = 'forms.first_name_placeholder' | t %}
+                      <label class="{{- form_label_class -}}" for="first-name">{{- heading -}}<sup>&#42;</sup></label>
+                      <input class="{{- form_input_class -}}" type="text" name="contact[first_name]" id="first-name" placeholder="{{- placeholder | default: default_placeholder -}}" required>
+                    {% when 'last_name' %}
+                      {% assign default_placeholder = 'forms.last_name_placeholder' | t %}
+                      <label class="{{- form_label_class -}}" for="last-name">{{- heading -}}<sup>&#42;</sup></label>
+                      <input class="{{- form_input_class -}}" type="text" name="contact[last_name]" id="last-name" placeholder="{{- placeholder | default: default_placeholder -}}" required>
+                    {% when 'first_last_name' %}
+                      {% liquid
+                        assign first_name_text = block.settings.first_name_text
+                        assign first_name_placeholder = block.settings.first_name_placeholder
+                        assign first_name_default_placeholder = 'forms.first_name_placeholder' | t
+                        assign last_name_text = block.settings.last_name_text
+                        assign last_name_placeholder = block.settings.last_name_placeholder
+                        assign last_name_default_placeholder = 'forms.last_name_placeholder' | t
+                      %}
+                      <div class="form-field">
+                        <label class="{{- form_label_class -}}" for="first-name">{{- first_name_text -}}<sup>&#42;</sup></label>
+                        <input class="{{- form_input_class -}}" type="text" name="contact[first_name]" id="first-name" placeholder="{{- first_name_placeholder | default: first_name_default_placeholder -}}" required>
+                      </div>
+                      <div class="form-field">
+                        <label class="{{- form_label_class -}}" for="last-name">{{- last_name_text -}}<sup>&#42;</sup></label>
+                        <input class="{{- form_input_class -}}" type="text" name="contact[last_name]" id="last-name" placeholder="{{- last_name_placeholder | default: last_name_default_placeholder -}}" required>
+                      </div>
+                    {% when 'email' %}
+                      {% assign default_placeholder = 'forms.email_placeholder' | t %}
+                      <label class="{{- form_label_class -}}" for="email">{{- heading -}}<sup>&#42;</sup></label>
+                      <input class="{{- form_input_class -}}" type="text" name="contact[email]" id="email" placeholder="{{- placeholder | default: default_placeholder -}}" required>
+                    {% when 'telephone' %}
+                      {% assign default_placeholder = 'forms.telephone_placeholder' | t %}
+                      <label class="{{- form_label_class -}}" for="telephone">{{- heading -}}</label>
+                      <input class="{{- form_input_class -}}" type="text" name="contact[telephone]" id="telephone" placeholder="{{- placeholder | default: default_placeholder -}}">
+                    {% when 'message' %}
+                      {% assign default_placeholder = 'forms.message_placeholder' | t %}
+                      <label class="{{- form_label_class -}}" for="message">{{- heading -}}<sup>&#42;</sup></label>
+                      <textarea class="{{- form_input_class -}}" name="contact[message]" id="message" placeholder="{{- placeholder | default: default_placeholder -}}" required></textarea>
+                    {% when 'company' %}
+                      {% assign default_placeholder = 'forms.company_placeholder' | t %}
+                      <label class="{{- form_label_class -}}" for="company">{{- heading -}}</label>
+                      <input class="{{- form_input_class -}}" type="text" name="contact[company]" id="company" placeholder="{{- placeholder | default: default_placeholder -}}">
+                    {% when 'website' %}
+                      {% assign default_placeholder = 'forms.website_placeholder' | t %}
+                      <label class="{{- form_label_class -}}" for="website">{{- heading -}}</label>
+                      <input class="{{- form_input_class -}}" type="text" name="contact[website]" id="website" placeholder="{{- placeholder | default: default_placeholder -}}">
+                    {% when 'marketing' %}
+                      <input class="{{- form_input_class -}}" type="checkbox" name="contact[marketing]" id="marketing">
+                      <label class="{{- form_label_class -}}" for="marketing">{{- heading | remove: '<p>' | remove: '</p>' -}}</label>
+                  {%- endcase -%}
+                </div>
+              {% endunless %}
+            {% endfor %}
+            <button class="c-btn main primary" type="submit">{{- submit_text -}}</button>
+          {%- endform -%}
+        {% endif %}
+      </div>
+
+      <div class="contact-image">
+        <div class="image-wrapper">
+          <img src="{{- form_image | image_url: width: 800 -}}" alt="{{- form_image.alt | default: form_heading -}}" height="680" width="600">
+        </div>
+        {% if form_image_bg != blank %}
+          <img class="bg" src="{{- form_image_bg | image_url: width: 800 -}}" alt="{{- form_image_bg.alt | default: form_heading -}}" height="680" width="600">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "form_heading",
+      "label": "Form heading"
+    },
+    {
+      "type": "textarea",
+      "id": "form_text",
+      "label": "Form text"
+    },
+    {
+      "type": "header",
+      "content": "Form Embed"
+    },
+    {
+      "type": "html",
+      "id": "form_embed",
+      "label": "Form Embed Code",
+      "info": "If form embed code used this will override use of Shopify contact form."
+    },
+    {
+      "type": "header",
+      "content": "Shopify Form"
+    },
+    {
+      "type": "text",
+      "id": "form_subheading",
+      "label": "Form subheading"
+    },
+    {
+      "type": "image_picker",
+      "id": "form_image",
+      "label": "Form Image",
+      "info": "Minimum width: 800px and 1/1 aspect ratio."
+    },
+    {
+      "type": "image_picker",
+      "id": "form_image_bg",
+      "label": "Form Background Image"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "text",
+      "id": "form_id",
+      "label": "Contact form ID",
+      "default": "contact-form"
+    },
+    {
+      "type": "text",
+      "id": "submit_text",
+      "label": "Button submit text",
+      "default": "Send"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "first_name",
+      "name": "First Name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "First name:"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder",
+          "info": "Overrides the placeholder set in languages"
+        }
+      ]
+    },
+    {
+      "type": "last_name",
+      "name": "Last Name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Last name:"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder",
+          "info": "Overrides the placeholder set in languages"
+        }
+      ]
+    },
+    {
+      "type": "first_last_name",
+      "name": "First & Last Name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "first_name_text",
+          "label": "First Name text",
+          "default": "First name:"
+        },
+        {
+          "type": "text",
+          "id": "first_name_placeholder",
+          "label": "First Name Placeholder",
+          "info": "Overrides the placeholder set in languages"
+        },
+        {
+          "type": "text",
+          "id": "last_name_text",
+          "label": "Last Name text",
+          "default": "Last name:"
+        },
+        {
+          "type": "text",
+          "id": "last_name_placeholder",
+          "label": "Last Name Placeholder",
+          "info": "Overrides the placeholder set in languages"
+        }
+      ]
+    },
+    {
+      "type": "email",
+      "name": "Email",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Email address:"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder",
+          "info": "Overrides the placeholder set in languages"
+        }
+      ]
+    },
+    {
+      "type": "telephone",
+      "name": "Telephone",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Telephone number:"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder",
+          "info": "Overrides the placeholder set in languages"
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "name": "Message",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Message:"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder",
+          "info": "Overrides the placeholder set in languages"
+        }
+      ]
+    },
+    {
+      "type": "company",
+      "name": "Company",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Company name:"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder",
+          "info": "Overrides the placeholder set in languages"
+        }
+      ]
+    },
+    {
+      "type": "website",
+      "name": "website",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Website URL:"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder",
+          "info": "Overrides the placeholder set in languages"
+        }
+      ]
+    },
+    {
+      "type": "marketing",
+      "name": "Marketing",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "Marketing",
+          "info": "This is to check if the customer will accept marketing emails."
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

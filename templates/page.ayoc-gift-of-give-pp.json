@@ -1,0 +1,242 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "091fa3b1-15d2-4c7a-ba7b-c15d35806983": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – The Gift of Giving: Patterned Papers",
+        "text": "<p>Click on the image of your choice to save and print as desired.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "56b519ec-1ad8-4a0f-ab83-40ae1207eefd": {
+      "type": "downloads",
+      "blocks": {
+        "96107e3e-bef7-42d6-b563-41aeb5028a12": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%201.png",
+            "image": "shopify:\/\/shop_images\/g1.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%201.png"
+          }
+        },
+        "426f4096-69a7-4456-a06a-a4f8ab9ec5c1": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%202.png",
+            "image": "shopify:\/\/shop_images\/g2.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%202.png"
+          }
+        },
+        "35d58f74-aa9d-40b6-819e-8ef86d9e4dd7": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%203.png",
+            "image": "shopify:\/\/shop_images\/g3.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%203.png"
+          }
+        },
+        "0903790f-d135-4411-bb7c-74f3c3287d03": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%204.png",
+            "image": "shopify:\/\/shop_images\/g4.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%204.png"
+          }
+        },
+        "8c8318d9-e12e-4f28-8455-5526cde6d76c": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%205.png",
+            "image": "shopify:\/\/shop_images\/g5.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%205.png"
+          }
+        },
+        "2f47577b-066b-46bb-b3bc-76fecea00cf4": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%206.png",
+            "image": "shopify:\/\/shop_images\/g6.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%206.png"
+          }
+        },
+        "8bdf01c0-1272-412f-aa4f-754f7a99541d": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%207.png",
+            "image": "shopify:\/\/shop_images\/g7.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%207.png"
+          }
+        },
+        "7a94868d-8ed5-49e6-9980-51510c54069a": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%208.png",
+            "image": "shopify:\/\/shop_images\/g8.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%208.png"
+          }
+        },
+        "df8dcc5d-9691-4cfe-a9e0-7d221b0e7032": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%209.png",
+            "image": "shopify:\/\/shop_images\/Asset_9.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset%209.png"
+          }
+        },
+        "8632441f-4270-4d3b-aa21-6f605d187c75": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset10.png",
+            "image": "shopify:\/\/shop_images\/Asset10.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset10.png"
+          }
+        },
+        "13e753d0-b614-4a74-b1db-8c247a92bee7": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset11.png",
+            "image": "shopify:\/\/shop_images\/Asset11.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset11.png"
+          }
+        },
+        "1b593089-78ba-447a-8a20-ec9e69a65305": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset12.png",
+            "image": "shopify:\/\/shop_images\/Asset12.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset12.png"
+          }
+        },
+        "ee510ec6-2502-424b-8260-cdb4858ef73e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset13.png",
+            "image": "shopify:\/\/shop_images\/Asset13.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset13.png"
+          }
+        },
+        "be0e97ee-7def-44c3-926c-06b3ed87436f": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset14.png",
+            "image": "shopify:\/\/shop_images\/Asset14.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset14.png"
+          }
+        },
+        "521a9b9f-cc25-44a2-9423-e2e9c925b719": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset15.png",
+            "image": "shopify:\/\/shop_images\/Asset15.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset15.png"
+          }
+        },
+        "8003e713-fd5d-42c6-8950-2ccc5ea1caa6": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset16.png",
+            "image": "shopify:\/\/shop_images\/Asset16.png",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-gog\/Patterned%20Papers\/Asset16.png"
+          }
+        }
+      },
+      "block_order": [
+        "96107e3e-bef7-42d6-b563-41aeb5028a12",
+        "426f4096-69a7-4456-a06a-a4f8ab9ec5c1",
+        "35d58f74-aa9d-40b6-819e-8ef86d9e4dd7",
+        "0903790f-d135-4411-bb7c-74f3c3287d03",
+        "8c8318d9-e12e-4f28-8455-5526cde6d76c",
+        "2f47577b-066b-46bb-b3bc-76fecea00cf4",
+        "8bdf01c0-1272-412f-aa4f-754f7a99541d",
+        "7a94868d-8ed5-49e6-9980-51510c54069a",
+        "df8dcc5d-9691-4cfe-a9e0-7d221b0e7032",
+        "8632441f-4270-4d3b-aa21-6f605d187c75",
+        "13e753d0-b614-4a74-b1db-8c247a92bee7",
+        "1b593089-78ba-447a-8a20-ec9e69a65305",
+        "ee510ec6-2502-424b-8260-cdb4858ef73e",
+        "be0e97ee-7def-44c3-926c-06b3ed87436f",
+        "521a9b9f-cc25-44a2-9423-e2e9c925b719",
+        "8003e713-fd5d-42c6-8950-2ccc5ea1caa6"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "lg"
+      }
+    },
+    "bae27d76-4b59-4b8c-b5df-af869484fd54": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to Downloads.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft-the-gift-of-giving-downloads",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    },
+    "90bc246c-b78b-4afc-9567-42fd0ec0a413": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to A Year Of Craft.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    }
+  },
+  "order": [
+    "091fa3b1-15d2-4c7a-ba7b-c15d35806983",
+    "56b519ec-1ad8-4a0f-ab83-40ae1207eefd",
+    "bae27d76-4b59-4b8c-b5df-af869484fd54",
+    "90bc246c-b78b-4afc-9567-42fd0ec0a413"
+  ]
+}

@@ -1,0 +1,9 @@
+<div class="container collection__hide-loading">
+  <div class="collection__grid">
+    {% for product in products %}
+      <div class="collection__grid-item">
+        {% render 'stmt-product-card', product: product, collection: collection, _sticker_logo: sticker_logo, _sticker_logo_alt: sticker_logo_alt, forloop: forloop %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

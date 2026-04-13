@@ -1,0 +1,212 @@
+{% liquid
+  assign subtitle = section.settings.subtitle
+  assign title = section.settings.title
+  assign transparent_colors = 'rgba(0,0,0,0)|rgba(0, 0, 0, 0)|transparent' | split: '|'
+  assign show_slider = false
+
+  assign blockSize = 0
+
+  for feature in product.metafields.custom.key_features.value
+    assign blockSize = blockSize | plus: 1
+    assign blocks = product.metafields.custom.key_features.value
+  endfor
+
+  if blockSize == 0
+    for block in section.blocks
+      if block.settings.title != blank and block.settings.image != blank and block.settings.description != blank
+        assign blockSize = blockSize | plus: 1
+      endif
+    endfor
+    assign blocks = section.blocks
+  endif
+
+  if blockSize > 2
+    assign show_slider = true
+  endif
+%}
+
+<link href="{{ 'section-stmt-key-features.css' | asset_url }}" rel="preload" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ 'section-stmt-key-features.css' | asset_url }}"></noscript>
+
+{% style %}
+  {% for block in blocks %}
+    {% liquid
+      assign color = ''
+      assign background_color = ''
+
+      if block.color != blank
+      unless transparent_colors contains block.color
+          assign color = block.color
+      endunless
+      elsif block.settings.color != blank
+        unless transparent_colors contains block.settings.color
+          assign color = block.settings.color
+        endunless
+      endif
+
+      if block.background_color != blank
+        unless transparent_colors contains block.background_color
+          assign background_color = block.background_color
+        endunless
+      elsif block.settings.background_color != blank
+        unless transparent_colors contains block.settings.background_color
+          assign background_color = block.settings.background_color
+        endunless
+      endif
+
+    %}
+
+    .key-features__block--{{ block.id }} {
+      {% if color != blank %}
+        color: {{ color }};
+      {% endif %}
+      {% if background_color != blank %}
+        background-color: {{ background_color }};
+      {% endif %}
+    }
+  {% endfor %}
+{% endstyle %}
+
+<div class="key-features key-features--{{ section.id }}">
+  <div class="container">
+    <div class="key-features__header">
+      {% if subtitle != blank %}
+        <p class="key-features__subtitle">{{ subtitle }}</p>
+      {% endif %}
+
+      {% if title != blank %}
+        <h2 class="key-features__title">{{ title }}</h2>
+      {% endif %}
+    </div>
+
+    {% if blocks != blank %}
+      {% if show_slider %}
+        <simple-slider class="key-features__slider" data-variable-slide-width="true">
+          <ul class="simple-slider">
+      {% else %}
+        <div class="key-features__blocks">
+      {% endif %}
+
+      {% for block in blocks %}
+        {% liquid
+          if block.image != blank
+            assign image = block.image
+          else
+            assign image = block.settings.image
+          endif
+
+          if block.title != blank
+            assign title = block.title.value
+          else
+            assign title = block.settings.title
+          endif
+
+          if block.description != blank
+            assign children = block.description.value.children.last
+            assign description = children.children.last.value
+          else
+            assign description = block.settings.description
+          endif
+
+          assign showBlock = false
+
+          if image != blank and title != blank and description != blank
+            assign showBlock = true
+          endif
+        %}
+
+        {% if showBlock %}
+          {% if show_slider %}
+            <li class="simple-slider__slide">
+          {% endif %}
+
+          <div class="key-features__block key-features__block--{{ block.id }}" {{ block.shopify_attributes }}>
+            {% if image != blank %}
+              {{ image | image_url: width: 56, height: 56 | image_tag: class: 'key-features__block-image' }}
+            {% endif %}
+
+            {% if title != blank %}
+              <h3 class="key-features__block-title">{{ title }}</h3>
+            {% endif %}
+
+            {% if description != blank %}
+              <div class="key-features__block-description">
+                {{ description }}
+              </div>
+            {% endif %}
+          </div>
+
+          {% if show_slider %}
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% if show_slider %}
+        </ul>
+        {% render 'simple-slider-ui' %}
+        </simple-slider>
+      {% else %}
+        </div>
+      {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Key Features",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Colour"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background colour"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Key Features"
+    }
+  ]
+}
+{% endschema %}

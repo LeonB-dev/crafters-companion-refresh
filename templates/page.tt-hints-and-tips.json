@@ -1,0 +1,379 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "cf8c39a2-144e-4ebf-bf53-d66f7190a844": {
+      "type": "text-header",
+      "settings": {
+        "heading": "How to organize your...",
+        "text": "<p>Hints and Tips about which products you may need to help keep your craft room organized and tidy. Read on for some great insight into how I use the products...<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "3c7cd013-e085-4338-9d2b-dafcf668d2fc": {
+      "type": "content-block-trio",
+      "blocks": {
+        "05a3fdcf-c2f9-4220-859d-bc0334a44262": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Adhesive Organizers",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Organize-adhesives-with-the-Totally-Tiffany-Stadium-Arranger-SA10.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-craft-adhesive-storage"
+          }
+        },
+        "448e765e-a876-4abf-bcd3-df8ccae4a64f": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Bakers Twine Organizers",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/A38-Organize-and-store-bakers-twine-with-Totally-Tiffany_d049face-4b11-4b51-8658-bea6efb2e72b.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-bakers-twine-organizers"
+          }
+        },
+        "4bcef850-6d62-4820-9550-0f7b47ad1e99": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Cards and Card Blanks",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/DSST6697_Card_blank_organizer__by_TotallyTiffany_1.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-card-storage"
+          }
+        }
+      },
+      "block_order": [
+        "05a3fdcf-c2f9-4220-859d-bc0334a44262",
+        "448e765e-a876-4abf-bcd3-df8ccae4a64f",
+        "4bcef850-6d62-4820-9550-0f7b47ad1e99"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "primary"
+      }
+    },
+    "226f201d-8907-4337-a49c-41cff485448a": {
+      "type": "content-block-trio",
+      "blocks": {
+        "55220ad0-2541-452d-a384-1de2cad4b768": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Cricut Cartridge Organizers",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/SNG10_Sue_with_Cricut_Cartridges_3.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-cricut-cartridge-organization"
+          }
+        },
+        "16bc8230-39f3-456e-8bb9-70862c3dae49": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Dies",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Die-magnets-organization-SP5PK-Mags5x7-Totally-Tiffany-solutions.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-die-storage-organization"
+          }
+        },
+        "cc4832f7-5c9f-44ab-9761-700639c62483": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Embellishments",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Embellishement.png",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-embellishments"
+          }
+        }
+      },
+      "block_order": [
+        "55220ad0-2541-452d-a384-1de2cad4b768",
+        "16bc8230-39f3-456e-8bb9-70862c3dae49",
+        "cc4832f7-5c9f-44ab-9761-700639c62483"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "primary"
+      }
+    },
+    "2ce98ebf-4dbe-4930-891c-6faefc6ab63c": {
+      "type": "content-block-trio",
+      "blocks": {
+        "f018e48f-3f06-443c-ae96-ef07a6534129": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Embossing Folders",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/DSST-organize-embossing-folders.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-embossing-folder-storage"
+          }
+        },
+        "9b925551-a69c-44cc-900e-800dbef947fe": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Flowers",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Pile_of_flowers__bouquet__SQ.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-floral-embellishment-organization"
+          }
+        },
+        "029457bc-082d-4013-855e-74c79c02c485": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Glitter Glues Re-inkers",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/WBDRSPR_Flower_organizer__embellishments__TotallyTiffany_22_1.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-glitter-glue-storage"
+          }
+        }
+      },
+      "block_order": [
+        "f018e48f-3f06-443c-ae96-ef07a6534129",
+        "9b925551-a69c-44cc-900e-800dbef947fe",
+        "029457bc-082d-4013-855e-74c79c02c485"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "primary"
+      }
+    },
+    "463b48e1-0611-45bb-89d9-5e33c7f07364": {
+      "type": "content-block-trio",
+      "blocks": {
+        "92b49fdf-cf95-43ea-8419-3cd1bd121888": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Inks",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Tim_Holtz_craft_supplies_SPS12_Ink-pad-storage-and-organization-shelf.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-ink-pad-storage"
+          }
+        },
+        "bcbe8c9f-0fd2-459e-b3a1-38ad75fe7e30": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Kiwi Lane Organizers",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Kiwi-Lane-Organization-Binder-11.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-kiwi-lane-organizers"
+          }
+        },
+        "86c602a1-621a-4a64-80af-26232fe50289": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Paper",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/12x12-Paper-Organizer-storage-box-with-12x12-pockets-A26-P40_1.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-paper-organization"
+          }
+        }
+      },
+      "block_order": [
+        "92b49fdf-cf95-43ea-8419-3cd1bd121888",
+        "bcbe8c9f-0fd2-459e-b3a1-38ad75fe7e30",
+        "86c602a1-621a-4a64-80af-26232fe50289"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "primary"
+      }
+    },
+    "71040f5c-fb47-4503-b9bb-3777a10c23a4": {
+      "type": "content-block-trio",
+      "blocks": {
+        "a64735cf-e5bd-4c02-92f4-34a5cbb75c4b": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Pens, Markers & Pencils",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/SPSXL15_6895_Marker_storage_and_organizer_2001.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-pen-pencil-marker-organizers"
+          }
+        },
+        "49bc56ee-5e94-4406-9157-423976eb5dcf": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Planner Supplies",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Black-Ditto-Bag-loaded-with-planner-supplies-SDTT-Totally-Tiffany-Organization.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-planner-supply-organizers"
+          }
+        },
+        "ba701e44-28bf-4f1e-8730-938ada4d955d": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Photos",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/P43-Perfect-Six-Photos-by-layout.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-photo-storage-solutions"
+          }
+        }
+      },
+      "block_order": [
+        "a64735cf-e5bd-4c02-92f4-34a5cbb75c4b",
+        "49bc56ee-5e94-4406-9157-423976eb5dcf",
+        "ba701e44-28bf-4f1e-8730-938ada4d955d"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "primary"
+      }
+    },
+    "e293676d-0007-43e5-b479-3a691c544ff9": {
+      "type": "content-block-trio",
+      "blocks": {
+        "ad6088ed-c2e9-49e2-896c-01a721a219ab": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Punches",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/SA10_Punch-Organizier-by-Desk-Maid-Totally-Tiffany.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-punch-storage"
+          }
+        },
+        "d2f62e0f-880e-4f92-9e99-492abb36f544": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Stamps Wood Mounted",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Organize__wood_stamps__Stadium_Arranger__SA10__TotallyTiffany.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-stamp-storage"
+          }
+        },
+        "5c7507c0-7f77-4095-8aa5-9e14a4458785": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Stamps Unmounted",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Organize-store-acrylic-stamps-P42-unmounted-stamps-2-out.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-unmounted-stamp-organizers"
+          }
+        }
+      },
+      "block_order": [
+        "ad6088ed-c2e9-49e2-896c-01a721a219ab",
+        "d2f62e0f-880e-4f92-9e99-492abb36f544",
+        "5c7507c0-7f77-4095-8aa5-9e14a4458785"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "primary"
+      }
+    },
+    "899867d7-2f93-44c0-b801-94514bd225cf": {
+      "type": "content-block-trio",
+      "blocks": {
+        "f6fafb61-cf43-4c76-9195-17451407a065": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Stencils",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/P42-Stencils-with-SYFLG-out-of-pocket-white.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-stencil-organizers"
+          }
+        },
+        "927c3be0-eb71-485e-83ef-c22441f8d140": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Stickers",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/How-to-organize-scrapbooking-supplies-12x12-stickers-Totally-tiffany-the-ScrapRack-P40.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-sticker-storage"
+          }
+        },
+        "2a86016a-280e-4a74-8b3b-703013c0683f": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Tools",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/How_to_Organize_tool_Totally-Tiffany-WD-TT13-1_1.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-tool-organizers"
+          }
+        }
+      },
+      "block_order": [
+        "f6fafb61-cf43-4c76-9195-17451407a065",
+        "927c3be0-eb71-485e-83ef-c22441f8d140",
+        "2a86016a-280e-4a74-8b3b-703013c0683f"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "primary"
+      }
+    },
+    "03f81fcf-740a-4082-80b5-50c66a8b5fe3": {
+      "type": "content-block-trio",
+      "blocks": {
+        "9531572d-0ca0-4140-a3bb-84d791bd2586": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Travel",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/SDTT45BLK-Ditto-Tool-Bag-loaded-6.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-travel-organizers"
+          }
+        },
+        "9cf00ef0-55ea-4605-8a3b-a761b6d44ac0": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Washi Tape",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/ss6l-Washi-tape-loaded-front-view-2.jpg",
+            "link_text": "Find out more",
+            "link_url": "shopify:\/\/pages\/totally-tiffany-washi-tape-organizers"
+          }
+        }
+      },
+      "block_order": [
+        "9531572d-0ca0-4140-a3bb-84d791bd2586",
+        "9cf00ef0-55ea-4605-8a3b-a761b6d44ac0"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "primary"
+      }
+    }
+  },
+  "order": [
+    "cf8c39a2-144e-4ebf-bf53-d66f7190a844",
+    "3c7cd013-e085-4338-9d2b-dafcf668d2fc",
+    "226f201d-8907-4337-a49c-41cff485448a",
+    "2ce98ebf-4dbe-4930-891c-6faefc6ab63c",
+    "463b48e1-0611-45bb-89d9-5e33c7f07364",
+    "71040f5c-fb47-4503-b9bb-3777a10c23a4",
+    "e293676d-0007-43e5-b479-3a691c544ff9",
+    "899867d7-2f93-44c0-b801-94514bd225cf",
+    "03f81fcf-740a-4082-80b5-50c66a8b5fe3"
+  ]
+}

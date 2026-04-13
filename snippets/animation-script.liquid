@@ -1,0 +1,21 @@
+<script>
+  window.addEventListener("load", (event) => {
+    const animateElements = document.querySelectorAll('.animate');
+    const callback = (entries, observer) => {
+      entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animation-active')
+        }
+      })
+    }
+    const options = {
+      rootMargin: "-96px",
+    }
+    const animateObserver = new IntersectionObserver(callback, options)
+
+    animateElements.forEach(animateElement => {
+      animateObserver.observe(animateElement)
+    });
+  });
+</script>

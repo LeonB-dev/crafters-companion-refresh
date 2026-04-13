@@ -1,0 +1,425 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "e530a70f-8dee-4f6a-a32f-d25ed826d0ea": {
+      "type": "featured-image",
+      "settings": {
+        "url": "https:\/\/www.youtube.com\/c\/CraftersCompanionTV",
+        "image": "shopify:\/\/shop_images\/Crafter_s_TV_Schedule_Banner_Desktop_c8bbd92f-2cf9-4da6-8a24-66ca8108bbec.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/CTV_Schedule_Banner_Mobile_80b8dcc1-d3a1-472a-94ce-0c2ac2b1d773.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "0dfed792-4e72-42e4-ae36-a97fc159aa8d": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>We're right here with you this Christmas! Find our full schedule of shows over the festive period below.<br\/><strong>Please note: Some of these shows are repeated.<\/strong><\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "e272f33a-77f0-48e7-a3b6-eefe4f0162c8": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Crafter's TV Christmas Schedule",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "link_colour": "primary",
+        "margin_bottom": "none",
+        "margin_top": "sm"
+      }
+    },
+    "89b465c4-77ab-4ef6-974f-b656b20b0897": {
+      "type": "featured-image",
+      "settings": {
+        "url": "",
+        "image": "shopify:\/\/shop_images\/Sat_9.png",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "none"
+      }
+    },
+    "ab6464e7-a487-4673-b87d-49427abd6329": {
+      "type": "featured-image",
+      "settings": {
+        "url": "",
+        "image": "shopify:\/\/shop_images\/3_926577c8-6ea4-49f5-8e85-b81b2ac9ad95.png",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "none"
+      }
+    },
+    "c068d167-6600-4308-909e-9889ae789209": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Shop the Show",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "link_colour": "primary",
+        "margin_bottom": "none",
+        "margin_top": "sm"
+      }
+    },
+    "67c52cc0-fe1c-4ec0-ae4a-c3361a6a0c34": {
+      "type": "information-blocks",
+      "blocks": {
+        "c93a5ea9-636b-4ae8-b85e-22e501cacee9": {
+          "type": "info_block",
+          "settings": {
+            "category": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Saturday 23rd",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-23-12-2023"
+          }
+        },
+        "4ed1b416-a975-4dc4-b958-0c14609d6d1a": {
+          "type": "info_block",
+          "settings": {
+            "category": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Sunday 24th",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-24-12-2023"
+          }
+        },
+        "7794459e-8a65-46dc-b819-29ff37e441e0": {
+          "type": "info_block",
+          "settings": {
+            "category": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Monday 25th",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-25-12-2023"
+          }
+        }
+      },
+      "block_order": [
+        "c93a5ea9-636b-4ae8-b85e-22e501cacee9",
+        "4ed1b416-a975-4dc4-b958-0c14609d6d1a",
+        "7794459e-8a65-46dc-b819-29ff37e441e0"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "enable_icons": true,
+        "heading_size": "md",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "none",
+        "block_colour": "whisper"
+      }
+    },
+    "741b8ae9-1be1-42e1-aed3-2e7981d58bbf": {
+      "type": "information-blocks",
+      "blocks": {
+        "846c5fc4-4e93-496a-83c5-d6e4625e3f6e": {
+          "type": "info_block",
+          "settings": {
+            "category": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Tuesday 26th",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-26-12-2023"
+          }
+        },
+        "55f5a40d-6e85-4231-acfa-e25e58b6f99f": {
+          "type": "info_block",
+          "settings": {
+            "category": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Wednesday 27th",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-27-12-2023"
+          }
+        },
+        "42a7e333-60de-4878-b29b-2238a6c803cd": {
+          "type": "info_block",
+          "settings": {
+            "category": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Thursday 28th",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-28-12-2023"
+          }
+        }
+      },
+      "block_order": [
+        "846c5fc4-4e93-496a-83c5-d6e4625e3f6e",
+        "55f5a40d-6e85-4231-acfa-e25e58b6f99f",
+        "42a7e333-60de-4878-b29b-2238a6c803cd"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "enable_icons": true,
+        "heading_size": "md",
+        "edge_version": "none",
+        "top_edge_colour": "purple",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "none",
+        "block_colour": "whisper"
+      }
+    },
+    "db8edd26-11fd-424e-a0e2-00252c642b43": {
+      "type": "information-blocks",
+      "blocks": {
+        "ddd44231-8e8b-4f4e-9eac-6d0f891d803f": {
+          "type": "info_block",
+          "settings": {
+            "category": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Friday 29th",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-29-12-2023"
+          }
+        },
+        "e4f0921b-0e9b-44f1-b1e0-683a57b8a031": {
+          "type": "info_block",
+          "settings": {
+            "category": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Saturday 30th",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-30-12-2023"
+          }
+        },
+        "4156e6d1-e7fe-488f-a093-98d65385bb77": {
+          "type": "info_block",
+          "settings": {
+            "category": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Sunday 31st",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-31-12-2023"
+          }
+        }
+      },
+      "block_order": [
+        "ddd44231-8e8b-4f4e-9eac-6d0f891d803f",
+        "e4f0921b-0e9b-44f1-b1e0-683a57b8a031",
+        "4156e6d1-e7fe-488f-a093-98d65385bb77"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "enable_icons": true,
+        "heading_size": "md",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "none",
+        "block_colour": "whisper"
+      }
+    },
+    "7427e5fb-58d8-4ee6-8144-6667cc9896b4": {
+      "type": "information-blocks",
+      "blocks": {
+        "fa0c2e83-7009-480c-a712-ecca329eab5e": {
+          "type": "info_block",
+          "settings": {
+            "category": "",
+            "heading": "",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "0001049a-0a71-452f-bc04-76f9595b5ff2": {
+          "type": "info_block",
+          "settings": {
+            "category": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Monday 1st Jan",
+            "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-01-01-2024"
+          }
+        },
+        "d1d50a76-2246-4281-9ddd-761ca3ce92fe": {
+          "type": "info_block",
+          "settings": {
+            "category": "",
+            "heading": "",
+            "text": "",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "fa0c2e83-7009-480c-a712-ecca329eab5e",
+        "0001049a-0a71-452f-bc04-76f9595b5ff2",
+        "d1d50a76-2246-4281-9ddd-761ca3ce92fe"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "enable_icons": true,
+        "heading_size": "md",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "sm",
+        "block_colour": "whisper"
+      }
+    },
+    "45eed5da-8d27-4f4f-a6ef-f4ae3d9ccc59": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Saturday 23rd",
+        "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-23-12-2023",
+        "left_align": false,
+        "margin_bottom": "none"
+      }
+    },
+    "63396a0c-49d8-49e1-95c6-a5240df6ed9b": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Sunday 24th",
+        "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-24-12-2023",
+        "left_align": false,
+        "margin_bottom": "none"
+      }
+    },
+    "a3081311-793c-47d4-8d3e-f9158bdf3d52": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Monday 25th",
+        "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-25-12-2023",
+        "left_align": false,
+        "margin_bottom": "none"
+      }
+    },
+    "5d9a66ed-d407-4b81-ada1-56ac5cc2cfbd": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Tuesday 26th",
+        "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-26-12-2023",
+        "left_align": false,
+        "margin_bottom": "none"
+      }
+    },
+    "41cf505c-e3bd-4bf4-b598-e3e340f7b23c": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Wednesday 27th",
+        "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-27-12-2023",
+        "left_align": false,
+        "margin_bottom": "none"
+      }
+    },
+    "5c5c030d-d67f-4653-8fda-ca8bf34be075": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Thursday 28th",
+        "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-28-12-2023",
+        "left_align": false,
+        "margin_bottom": "none"
+      }
+    },
+    "be35f206-8999-4f9f-994d-72ae4cac6cc7": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Friday 29th",
+        "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-29-12-2023",
+        "left_align": false,
+        "margin_bottom": "none"
+      }
+    },
+    "6cee6a22-ad07-4c93-91da-7d57c954e61c": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Saturday 30th",
+        "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-30-12-2023",
+        "left_align": false,
+        "margin_bottom": "none"
+      }
+    },
+    "7f803727-84a8-4122-a091-7c9549399b2f": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Sunday 31st",
+        "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-31-12-2023",
+        "left_align": false,
+        "margin_bottom": "none"
+      }
+    },
+    "3fd427be-0439-4303-bb8e-0eabfe46c585": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Monday 1st",
+        "link_url": "https:\/\/www.crafterscompanion.co.uk\/collections\/shop-the-day-01-01-2024",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "e530a70f-8dee-4f6a-a32f-d25ed826d0ea",
+    "0dfed792-4e72-42e4-ae36-a97fc159aa8d",
+    "e272f33a-77f0-48e7-a3b6-eefe4f0162c8",
+    "89b465c4-77ab-4ef6-974f-b656b20b0897",
+    "ab6464e7-a487-4673-b87d-49427abd6329",
+    "c068d167-6600-4308-909e-9889ae789209",
+    "67c52cc0-fe1c-4ec0-ae4a-c3361a6a0c34",
+    "741b8ae9-1be1-42e1-aed3-2e7981d58bbf",
+    "db8edd26-11fd-424e-a0e2-00252c642b43",
+    "7427e5fb-58d8-4ee6-8144-6667cc9896b4",
+    "45eed5da-8d27-4f4f-a6ef-f4ae3d9ccc59",
+    "63396a0c-49d8-49e1-95c6-a5240df6ed9b",
+    "a3081311-793c-47d4-8d3e-f9158bdf3d52",
+    "5d9a66ed-d407-4b81-ada1-56ac5cc2cfbd",
+    "41cf505c-e3bd-4bf4-b598-e3e340f7b23c",
+    "5c5c030d-d67f-4653-8fda-ca8bf34be075",
+    "be35f206-8999-4f9f-994d-72ae4cac6cc7",
+    "6cee6a22-ad07-4c93-91da-7d57c954e61c",
+    "7f803727-84a8-4122-a091-7c9549399b2f",
+    "3fd427be-0439-4303-bb8e-0eabfe46c585"
+  ]
+}

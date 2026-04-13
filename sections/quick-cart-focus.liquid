@@ -1,0 +1,73 @@
+{%- liquid
+  assign quick_cart_enable = false
+  if settings.quick_cart_enable and template.name != 'cart'
+      assign quick_cart_enable = true
+  endif
+              
+  assign most_recently_updated_time = 0
+  for item in cart.items
+
+    if item.properties.last_updated_at > most_recently_updated_time
+      assign most_recent_added = item
+      assign most_recently_updated_time = item.properties.last_updated_at
+    endif
+  endfor
+  
+  -%}
+
+
+{%- if quick_cart_enable -%}
+
+  <div class="section-quick-cart-focus" data-quick-cart-modal data-section-id="{{ section.id }}">
+    <div class="snippet-modal-component is-visible" data-modal-component>
+      <div class="modal-wrapper" data-pmv-modal-wrapper>
+        <div class="modal-header">
+          <span></span>
+          <button class="c-btn modal-close is-svg" type="button" aria-label="Close" data-quick-cart-modal-close>
+            {%- render 'icon', _name: 'icon-close' -%}
+          </button>
+        </div>
+        <div class="modal-content">
+          <div class="c-message success added-to-cart">
+            <span>
+              {%- render 'icon', _name: 'icon-task-list-check' -%}
+              <span class="u-text-md">{{ 'template.cart.added_to_basket' | t }}</span>              
+            </span>
+            <a href="{{ routes.cart_url }}">{{ 'template.cart.view_basket' | t }}</a>
+          </div>
+          <form class="c-form" action="">
+            <div class="content" data-quick-cart-content {% unless cart.item_count > 0 %}hidden{% endunless %}>
+              <ul class="cart-items" data-quick-cart-items>
+                {%- render 'cart-item', item: most_recent_added, collection: collection, _quick-cart-class: 'quick-cart-focus-item' -%}
+              </ul>
+            </div>
+            <div class="empty" {% if cart.item_count > 0 %}hidden{% endif %} data-quick-cart-empty>
+              <svg focusable="false" aria-hidden="true" role="presentation">
+                <use xlink:href="#sprite-icon-shopping-basket"></use>
+              </svg>
+              {{- settings.quick_cart_empty_text | replace: '<p>', '<p class="title">' -}}
+            </div>
+          </form>
+
+
+          <div class="quickcart_recs" data-nosto-placement>
+            <h3 class="u-heading-xs">
+              {{ 'template.cart.you_might_like' | t }}
+            </h3>
+            {% render 'nosto-tagging', _product: most_recent_added %}
+            {% render 'nosto-element', id: settings.quickcart_nosto_placement, _css_selector: 'quickcart_recs' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div hidden data-cart-count>{{ cart.item_count }}</div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Quick Cart Focus",
+  "tag": "section",
+  "settings": []
+}
+{% endschema %}

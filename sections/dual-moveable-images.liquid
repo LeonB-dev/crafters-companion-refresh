@@ -1,0 +1,128 @@
+{% schema %}
+{
+  "name": "Dual Moveable Block",
+  "settings": [
+    {"type":"image_picker","id":"image_1_desktop","label":"Image 1 (Desktop)"},
+    {"type":"image_picker","id":"image_1_mobile","label":"Image 1 (Mobile)"},
+    {"type":"text","id":"title_1","label":"Title 1"},
+    {"type":"number","id":"title_size_1_desktop","label":"Title Size 1 (Desktop px)","default":24},
+    {"type":"number","id":"title_size_1_mobile","label":"Title Size 1 (Mobile px)","default":18},
+    {"type":"color","id":"title_color_1","label":"Title Color 1","default":"#000000"},
+    {"type":"range","id":"title_weight_1","label":"Title Weight 1","min":100,"max":900,"step":100,"default":700},
+    {"type":"number","id":"subtitle_size_1_desktop","label":"Subtitle Size 1 (Desktop px)","default":16},
+    {"type":"number","id":"subtitle_size_1_mobile","label":"Subtitle Size 1 (Mobile px)","default":14},
+    {"type":"range","id":"subtitle_weight_1","label":"Subtitle Weight 1","min":100,"max":900,"step":100,"default":400},
+    {"type":"color","id":"subtitle_color_1","label":"Subtitle Color 1","default":"#000000"},
+    {"type":"number","id":"title_subtitle_spacing_1","label":"Spacing Title → Subtitle 1 (px)","default":10},
+    {"type":"number","id":"subtitle_button_spacing_1","label":"Spacing Subtitle → Button 1 (px)","default":10},
+    {"type":"text","id":"subtitle_1","label":"Subtitle 1"},
+    {"type":"url","id":"button_link_1","label":"Button Link 1"},
+    {"type":"text","id":"button_text_1","label":"Button Text 1"},
+    {"type":"color","id":"button_bg_color_1","label":"Button Background Color 1","default":"#000000"},
+    {"type":"color","id":"button_text_color_1","label":"Button Text Color 1","default":"#ffffff"},
+    {"type":"number","id":"button_font_size_1","label":"Button Font Size 1 (px)","default":16},
+    {"type":"range","id":"button_weight_1","label":"Button Font Weight 1","min":100,"max":900,"step":100,"default":500},
+    {"type":"number","id":"button_width_1","label":"Button Width 1 (px)","default":150},
+    {"type":"number","id":"button_height_1","label":"Button Height 1 (px)","default":40},
+    {"type":"range","id":"content_x_1","label":"Content X 1 (desktop %)","min":0,"max":100,"step":1,"default":50},
+    {"type":"range","id":"content_y_1","label":"Content Y 1 (desktop %)","min":0,"max":100,"step":1,"default":50},
+    {"type":"range","id":"content_x_1_mobile","label":"Content X 1 (mobile %)","min":0,"max":100,"step":1,"default":50},
+    {"type":"range","id":"content_y_1_mobile","label":"Content Y 1 (mobile %)","min":0,"max":100,"step":1,"default":50},
+
+    {"type":"image_picker","id":"image_2_desktop","label":"Image 2 (Desktop)"},
+    {"type":"image_picker","id":"image_2_mobile","label":"Image 2 (Mobile)"},
+    {"type":"text","id":"title_2","label":"Title 2"},
+    {"type":"number","id":"title_size_2_desktop","label":"Title Size 2 (Desktop px)","default":24},
+    {"type":"number","id":"title_size_2_mobile","label":"Title Size 2 (Mobile px)","default":18},
+    {"type":"color","id":"title_color_2","label":"Title Color 2","default":"#000000"},
+    {"type":"range","id":"title_weight_2","label":"Title Weight 2","min":100,"max":900,"step":100,"default":700},
+    {"type":"number","id":"subtitle_size_2_desktop","label":"Subtitle Size 2 (Desktop px)","default":16},
+    {"type":"number","id":"subtitle_size_2_mobile","label":"Subtitle Size 2 (Mobile px)","default":14},
+    {"type":"range","id":"subtitle_weight_2","label":"Subtitle Weight 2","min":100,"max":900,"step":100,"default":400},
+    {"type":"color","id":"subtitle_color_2","label":"Subtitle Color 2","default":"#000000"},
+    {"type":"number","id":"title_subtitle_spacing_2","label":"Spacing Title → Subtitle 2 (px)","default":10},
+    {"type":"number","id":"subtitle_button_spacing_2","label":"Spacing Subtitle → Button 2 (px)","default":10},
+    {"type":"text","id":"subtitle_2","label":"Subtitle 2"},
+    {"type":"url","id":"button_link_2","label":"Button Link 2"},
+    {"type":"text","id":"button_text_2","label":"Button Text 2"},
+    {"type":"color","id":"button_bg_color_2","label":"Button Background Color 2","default":"#000000"},
+    {"type":"color","id":"button_text_color_2","label":"Button Text Color 2","default":"#ffffff"},
+    {"type":"number","id":"button_font_size_2","label":"Button Font Size 2 (px)","default":16},
+    {"type":"range","id":"button_weight_2","label":"Button Font Weight 2","min":100,"max":900,"step":100,"default":500},
+    {"type":"number","id":"button_width_2","label":"Button Width 2 (px)","default":150},
+    {"type":"number","id":"button_height_2","label":"Button Height 2 (px)","default":40},
+    {"type":"range","id":"content_x_2","label":"Content X 2 (desktop %)","min":0,"max":100,"step":1,"default":50},
+    {"type":"range","id":"content_y_2","label":"Content Y 2 (desktop %)","min":0,"max":100,"step":1,"default":50},
+    {"type":"range","id":"content_x_2_mobile","label":"Content X 2 (mobile %)","min":0,"max":100,"step":1,"default":50},
+    {"type":"range","id":"content_y_2_mobile","label":"Content Y 2 (mobile %)","min":0,"max":100,"step":1,"default":50}
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.dual-image-container{display:flex;flex-wrap:wrap;gap:20px;}
+.dual-image-item{position:relative;flex:1 1 48%;}
+.dual-image-item img{width:100%;display:block;}
+.dual-image-content{position:absolute;text-align:center;transform:translate(-50%,-50%);}
+.dual-image-content a{display:inline-block;text-decoration:none;}
+.dual-image-1-desktop,.dual-image-2-desktop{display:block !important;}
+.dual-image-1-mobile,.dual-image-2-mobile{display:none !important;}
+@media(max-width:768px){
+.dual-image-container{flex-direction:column;}
+.dual-image-1-desktop,.dual-image-2-desktop{display:none !important;}
+.dual-image-1-mobile,.dual-image-2-mobile{display:block !important;}
+}
+{% endstylesheet %}
+
+<div class="dual-image-container">
+
+  <!-- IMAGE 1 -->
+  <div class="dual-image-item">
+    {% if section.settings.image_1_desktop %}<img src="{{ section.settings.image_1_desktop | img_url: 'master' }}" class="dual-image-1-desktop">{% endif %}
+    {% if section.settings.image_1_mobile %}<img src="{{ section.settings.image_1_mobile | img_url: 'master' }}" class="dual-image-1-mobile">{% endif %}
+    <div class="dual-image-content dual-image-1">
+      <h2 style="font-size:{{ section.settings.title_size_1_desktop }}px;font-weight:{{ section.settings.title_weight_1 }};color:{{ section.settings.title_color_1 }};">{{ section.settings.title_1 }}</h2>
+      <p style="font-size:{{ section.settings.subtitle_size_1_desktop }}px;font-weight:{{ section.settings.subtitle_weight_1 }};color:{{ section.settings.subtitle_color_1 }};margin-top:{{ section.settings.title_subtitle_spacing_1 }}px;">{{ section.settings.subtitle_1 }}</p>
+      {% if section.settings.button_link_1 %}
+      <a href="{{ section.settings.button_link_1 }}" style="background-color:{{ section.settings.button_bg_color_1 }};color:{{ section.settings.button_text_color_1 }};font-weight:{{ section.settings.button_weight_1 }};font-size:{{ section.settings.button_font_size_1 }}px;width:{{ section.settings.button_width_1 }}px;height:{{ section.settings.button_height_1 }}px;line-height:{{ section.settings.button_height_1 }}px;text-align:center;margin-top:{{ section.settings.subtitle_button_spacing_1 }}px;">
+        {{ section.settings.button_text_1 }}
+      </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- IMAGE 2 -->
+  <div class="dual-image-item">
+    {% if section.settings.image_2_desktop %}<img src="{{ section.settings.image_2_desktop | img_url: 'master' }}" class="dual-image-2-desktop">{% endif %}
+    {% if section.settings.image_2_mobile %}<img src="{{ section.settings.image_2_mobile | img_url: 'master' }}" class="dual-image-2-mobile">{% endif %}
+    <div class="dual-image-content dual-image-2">
+      <h2 style="font-size:{{ section.settings.title_size_2_desktop }}px;font-weight:{{ section.settings.title_weight_2 }};color:{{ section.settings.title_color_2 }};">{{ section.settings.title_2 }}</h2>
+      <p style="font-size:{{ section.settings.subtitle_size_2_desktop }}px;font-weight:{{ section.settings.subtitle_weight_2 }};color:{{ section.settings.subtitle_color_2 }};margin-top:{{ section.settings.title_subtitle_spacing_2 }}px;">{{ section.settings.subtitle_2 }}</p>
+      {% if section.settings.button_link_2 %}
+      <a href="{{ section.settings.button_link_2 }}" style="background-color:{{ section.settings.button_bg_color_2 }};color:{{ section.settings.button_text_color_2 }};font-weight:{{ section.settings.button_weight_2 }};font-size:{{ section.settings.button_font_size_2 }}px;width:{{ section.settings.button_width_2 }}px;height:{{ section.settings.button_height_2 }}px;line-height:{{ section.settings.button_height_2 }}px;text-align:center;margin-top:{{ section.settings.subtitle_button_spacing_2 }}px;">
+        {{ section.settings.button_text_2 }}
+      </a>
+      {% endif %}
+    </div>
+  </div>
+
+</div>
+
+{% style %}
+/* Desktop positions */
+.dual-image-1 {top:{{ section.settings.content_y_1 }}%;left:{{ section.settings.content_x_1 }}%;}
+.dual-image-2 {top:{{ section.settings.content_y_2 }}%;left:{{ section.settings.content_x_2 }}%;}
+
+/* Mobile positions & font overrides */
+@media (max-width:768px){
+.dual-image-1{top:{{ section.settings.content_y_1_mobile }}%;left:{{ section.settings.content_x_1_mobile }}%;}
+.dual-image-1 h2{font-size:{{ section.settings.title_size_1_mobile }}px !important;}
+.dual-image-1 p{font-size:{{ section.settings.subtitle_size_1_mobile }}px !important;color:{{ section.settings.subtitle_color_1 }} !important;}
+.dual-image-1 a{font-size:{{ section.settings.button_font_size_1 }}px !important;}
+
+.dual-image-2{top:{{ section.settings.content_y_2_mobile }}%;left:{{ section.settings.content_x_2_mobile }}%;}
+.dual-image-2 h2{font-size:{{ section.settings.title_size_2_mobile }}px !important;}
+.dual-image-2 p{font-size:{{ section.settings.subtitle_size_2_mobile }}px !important;color:{{ section.settings.subtitle_color_2 }} !important;}
+.dual-image-2 a{font-size:{{ section.settings.button_font_size_2 }}px !important;}
+}
+{% endstyle %}

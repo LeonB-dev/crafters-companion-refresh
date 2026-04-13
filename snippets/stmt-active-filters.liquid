@@ -1,0 +1,26 @@
+<div class="collection__active-filters {{ class }}">
+  <button type="button" class="collection__active-filters-clear js-collection-clear-filters">
+    {% render 'stmt-icon-close', class: 'collection__filters-icon' %}
+    {{ 'template.collection-section.clear_all_filters' | t }}
+  </button>
+
+  {%- for filter in collection.filters -%}
+    {%- for value in filter.active_values -%}
+      <button type="button" data-url="{{ value.url_to_remove }}" class="collection__active-filter js-collection-active-filter">
+          {{ filter.label }}: {{ value.label | replace: settings.tags_filter_prefix, '' | escape }}
+
+        {% render 'stmt-icon-close', class: 'collection__filters-icon' %}
+      </button>
+    {%- endfor -%}
+
+    {% if filter.type == 'price_range' %}
+      {%- if filter.min_value.value != null or filter.max_value.value != null -%}
+        <button type="button" data-url="{{ filter.url_to_remove }}" class="collection__active-filter js-collection-active-filter">
+            {{ filter.label }}: {% if filter.min_value.value %}{{ filter.min_value.value | ceil | money_without_trailing_zeros }}{%- else -%}{{ 0 | money_without_trailing_zeros }}{% endif %} &dash; {% if filter.max_value.value %}{{ filter.max_value.value | ceil | money_without_trailing_zeros }}{% else %}{{ filter.range_max | ceil | money_without_trailing_zeros }}{% endif %}
+
+          {% render 'stmt-icon-close', class: 'collection__filters-icon' %}
+        </button>
+      {%- endif -%}
+    {% endif %}
+  {%- endfor -%}
+</div>

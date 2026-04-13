@@ -1,0 +1,113 @@
+{%- liquid
+  assign template_name = 'section-video'
+
+  assign internal_video = section.settings.internal_video
+  assign external = section.settings.external
+  assign external_video = section.settings.external_video
+
+  assign heading = section.settings.heading
+  assign text = section.settings.text
+
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-video.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="wrapper">
+      {% if external %}
+        {% if external_video.type == 'youtube' %}
+        <iframe class="video" src="https://www.youtube.com/embed/{{- external_video.id -}}" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {%  elsif external_video.type == 'vimeo' %}
+          <iframe class="video" src="https://player.vimeo.com/video/{{- external_video.id -}}" loading="lazy" title="Vimeo video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {% else %}
+          This section does not support this type of video link
+        {% endif %}
+      {% else %}
+        {{- internal_video | video_tag: controls: true, width: 800, height: 450, image_size: '800x450' -}}
+      {% endif %}
+
+      {% if heading != blank or text != blank %}
+        <div class="content">
+          {% if heading != blank %}
+            <h2>{{ heading }}</h2>
+          {% endif %}
+          {% if text != blank %}
+            {{ text }}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Video",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "video",
+      "id": "internal_video",
+      "label": "Internal video"
+    },
+    {
+      "type": "checkbox",
+      "id": "external",
+      "label": "Use external URL instead",
+      "default": false
+    },
+    {
+      "type": "video_url",
+      "id": "external_video",
+      "label": "External video",
+      "accept": [
+        "youtube",
+        "vimeo"
+      ]
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Video",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,72 @@
+{% liquid
+  assign template_name = 'section-cart'
+
+  assign title = 'template.cart.title' | t
+
+  if customer
+    assign title = 'template.cart.title_customer' | t: _customer_name: customer.first_name
+  endif
+%}
+
+{{- 'section-cart.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-cart-item.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-cart-totals.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-cart.js' | asset_url -}}" defer></script>
+
+<div class="{{- template_name }} u-space-below-lg" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="aiod-general-discount-topbar"></div>
+  <div class="container">
+    <div class="body">
+      {%- if cart.item_count > 0 -%}
+        <form class="c-form aiod-cart-form" action="{{ routes.cart_url }}" method="post" novalidate data-cart-form>
+          <div>
+            <header class="header">
+              <h1 id="page-title">{{- title -}}</h1>
+              {%- if cart.item_count > 0 -%}
+                <div class="total-text">
+                  <div>
+                    {{- 'template.cart.subtotal' | t -}}
+                  </div>
+                  <div>
+                    ({{ cart.item_count }}
+                    {{ cart.item_count | pluralize: 'item', 'items' }}) | <strong>{{ cart.total_price | money }}</strong>
+                  </div>
+                  <div>
+              {%- endif -%}
+            </header>
+            <div class="cart-items" data-csapp_line_wrapper>
+              {%- for item in cart.items -%}
+                {%- render 'cart-item', item: item, _forloop_index: forloop.index -%}
+              {%- endfor -%}
+            </div>
+            <p class="empty-basket-link">
+              <a href="{{ routes.cart_clear_url }}">{{ 'template.cart.empty_basket' | t }}</a>
+            </p>
+          </div>
+
+          <div class="cart-sidebar">
+            {% render 'cart-delivery-threshold' %}
+            {%- render 'cart-summary', cart: cart -%}
+          </div>
+        </form>
+
+      {%- else -%}
+        <p>{{ 'template.cart.empty' | t }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cart",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    }
+  ],
+  "blocks": []
+}
+{% endschema %}

@@ -1,0 +1,63 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "settings": {
+      }
+    },
+    "af0bdc01-e210-4d15-881b-d49fb4db0f60": {
+      "type": "sitemap",
+      "blocks": {
+        "f351f38b-a69d-4d0b-b89a-e9fe6cbe03f7": {
+          "type": "sitemap",
+          "settings": {
+            "heading": "",
+            "linklist": "main-menu"
+          }
+        },
+        "c3087402-8d39-402a-a677-dd2dc13fc069": {
+          "type": "sitemap",
+          "settings": {
+            "heading": "",
+            "linklist": "footer"
+          }
+        },
+        "7bb84f95-2dc4-422f-92b8-c50a3c4caa89": {
+          "type": "sitemap",
+          "settings": {
+            "heading": "",
+            "linklist": "footer-information"
+          }
+        },
+        "4fade5b8-d274-4a5f-9bb0-7e90fbebd1eb": {
+          "type": "sitemap",
+          "settings": {
+            "heading": "",
+            "linklist": "footer-company"
+          }
+        }
+      },
+      "block_order": [
+        "f351f38b-a69d-4d0b-b89a-e9fe6cbe03f7",
+        "c3087402-8d39-402a-a677-dd2dc13fc069",
+        "7bb84f95-2dc4-422f-92b8-c50a3c4caa89",
+        "4fade5b8-d274-4a5f-9bb0-7e90fbebd1eb"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "af0bdc01-e210-4d15-881b-d49fb4db0f60"
+  ]
+}

@@ -1,0 +1,162 @@
+{%- liquid
+  assign template_name = 'section-image-feature'
+
+  assign image = section.settings.image
+  assign image_mobile = section.settings.image_mobile
+  assign heading = section.settings.heading | strip_html
+  assign text = section.settings.text
+  assign link_url = section.settings.link_url
+  assign link_text = section.settings.link_text
+  assign content_placement = section.settings.content_placement
+  assign disable_height = section.settings.disable_height
+
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-image-feature.css' | asset_url | stylesheet_tag -}}
+
+<style>
+  div[data-section-id="{{ section.id }}"]{
+    {%- if content_placement == 'left' -%}
+      --content-alignment: 1 / span 1;
+    {%- else -%}
+      --content-alignment: 2 / span 1;
+    {%- endif -%}
+  }
+  {% if disable_height == true %}
+    #wrapper div[data-section-id="{{ section.id }}"] .image, #wrapper div[data-section-id="{{ section.id }}"] .image{
+      height: auto;
+    }
+    #wrapper div[data-section-id="{{ section.id }}"] .image, #wrapper div[data-section-id="{{ section.id }}"] .image img{
+      height: auto;
+    }
+  {% endif %}
+</style>
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="image {{ section.settings.content_placement }}">
+    {% if image_mobile != blank %}
+      <picture>
+        <source media="(min-width:1500px)" srcset="{{- image | image_url: width: 1920 -}}">
+        <source media="(min-width:1100px)" srcset="{{- image | image_url: width: 1500 -}}">
+        <source media="(min-width:800px)" srcset="{{- image | image_url: width: 1024 -}}">
+        <source media="(min-width:551px)" srcset="{{- image_mobile | image_url: width: 800 -}}">
+        <source media="(max-width: 550.8px)" srcset="{{- image_mobile | image_url: width: 600 -}}">
+        <img src="{{- image | image_url: height: 512 -}}" alt="{{- image_alt -}}" height="412" width="390" loading="lazy" />
+      </picture>
+      {% else %}
+        {{ image | image_url: width: 1920 | image_tag: widths: '600, 800, 1024, 1500', alt: image.alt, loading: 'lazy' }}
+    {% endif %}
+  </div>
+  <div class="container {{ section.settings.content_placement }}">
+    <div class="content">
+      <h2 class="u-heading-md">{{- heading -}}</h2>
+      {{- text -}}
+      {% if link_url and link_text %}
+        <a href="{{ link_url }}" class="c-btn main primary">{{ link_text }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image Feature",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image for mobile (optional)",
+      "info": "Minimum width: 800px. "
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_height",
+      "label": "Disable fixed height.",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "content_placement",
+      "label": "Content Placement",
+      "info": "This only applies to large devices.",
+      "options": [
+        {
+          "value": "left",
+          "label": "Content left"
+        },
+        {
+          "value": "right",
+          "label": "Content right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Image Feature",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

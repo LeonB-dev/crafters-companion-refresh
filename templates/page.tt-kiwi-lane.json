@@ -1,0 +1,153 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "dae6707d-2d4c-4982-b3a4-a881a796aca0": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Kiwi Lane Organizers",
+        "text": "<p>Scroll to the bottom to view videos on how to organize Kiwi Lane templates with Totally-Tiffany products.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "c0502488-0808-4f0c-b22e-52aaab2779df": {
+      "type": "content-block-trio",
+      "blocks": {
+        "c48b0d05-2408-47dd-831d-ecef97b86c56": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "Additional pockets for the Kiwi Lane Template Organizer.",
+            "image": "shopify:\/\/shop_images\/KL-TRP-6901-Kiwi-Lane-3-pocket-organizer-card-004.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "ac2e5f19-6ea5-4e78-8071-543025432256": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "EZ2O Brandy Buddy Bag is ideal for Kiwi Lane boarder templates.",
+            "image": "shopify:\/\/shop_images\/SNG16-Brandy-Buddy-Bag-organize-store-Kiwi-Lane-Template.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "1353af1a-3da5-44be-ba4c-162c08ee04a7": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "The Spinder Binder and ScrapRack Storage Pages can create the perfect binder storage system for your Kiwi Lane templates. Watch the video below to learn more.",
+            "image": "shopify:\/\/shop_images\/Kiwi-Lane-Organization-Binder-11_06d6d72d-483f-4007-a6b6-9a4a2b43608e.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "c48b0d05-2408-47dd-831d-ecef97b86c56",
+        "ac2e5f19-6ea5-4e78-8071-543025432256",
+        "1353af1a-3da5-44be-ba4c-162c08ee04a7"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "d1e38b60-6358-4218-8b01-d5c1f24bf311": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "View All EZ2 Organize",
+        "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "9bf8a5ce-0cd2-43fc-b1b9-621897f1041f": {
+      "type": "content-block-trio",
+      "blocks": {
+        "86a81178-fd41-42cf-9525-faeafc639e3d": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "Double Sided Duo, 4x1 pocket page will hold multiple Kiwi Lane templates I each pocket.",
+            "image": "shopify:\/\/shop_images\/template2.jpg",
+            "link_text": "View All ScrapRack",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Scraprack"
+          }
+        },
+        "fb98870f-b18b-48a8-ae86-48d675f4a11e": {
+          "type": "content_block",
+          "settings": {
+            "heading": "",
+            "text": "Die, Stamp & Supply Organizer - great for your Kiwi Lane templates too! Use our Die & Stamp Pockets to keep sets of templates together.",
+            "image": "shopify:\/\/shop_images\/Kiwi-Lane-Organization-DSST-SYF-8.jpg",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Desk+Maid"
+          }
+        }
+      },
+      "block_order": [
+        "86a81178-fd41-42cf-9525-faeafc639e3d",
+        "fb98870f-b18b-48a8-ae86-48d675f4a11e"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "87811005-083b-476c-9991-ae79b02e1b7c": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "Tips & Tricks",
+        "small_text": "",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "73f34e35-9b3d-40df-b4af-abbf64967815": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=Bj1k96ygxak",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "a1c15207-c211-44af-98c8-548fcba0c6dc": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=q54wOPW1C7I",
+        "heading": "",
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "dae6707d-2d4c-4982-b3a4-a881a796aca0",
+    "c0502488-0808-4f0c-b22e-52aaab2779df",
+    "d1e38b60-6358-4218-8b01-d5c1f24bf311",
+    "9bf8a5ce-0cd2-43fc-b1b9-621897f1041f",
+    "87811005-083b-476c-9991-ae79b02e1b7c",
+    "73f34e35-9b3d-40df-b4af-abbf64967815",
+    "a1c15207-c211-44af-98c8-548fcba0c6dc"
+  ]
+}

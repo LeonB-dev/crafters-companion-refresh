@@ -1,0 +1,53 @@
+{%- capture my_account_text -%}
+<span class="u-text-lg">{{- 'template.customers.account.my_account' | t -}}</span>
+{%- endcapture -%}
+
+<aside class="aside">
+  <button type="button" class="c-btn u-text-lg" data-aside-toggle>
+    {{- 'template.customers.account.account' | t -}}
+    {%- render 'icon', _name: 'icon-chevron-down' -%}
+  </button>
+  <div class="details">
+    <div class="links">
+      {%- if _account_link == true -%}
+        <a href="{{- routes.account_url -}}" class="my-account">
+          {{- my_account_text -}}
+        </a>
+      {%- else -%}
+        <p class="my-account">{{- my_account_text -}}</p>
+      {%- endif -%}
+      <a href="{{- routes.account_logout_url -}}" class="logout u-text-md">{{- 'template.customers.account.logout' | t -}}</a>
+    </div>
+    <dl>
+      <dt>{{- 'template.customers.account.email' | t -}}</dt>
+      <dd>{{ customer.email }}</dd>
+
+      <dt class="address">
+        {{- 'template.customers.account.address' | t -}}
+        {%- unless template contains 'addresses' -%}
+          <a href="{{ routes.account_addresses_url }}"
+            >(
+            {{- 'template.customers.account.edit' | t -}}
+            )
+          </a>
+        {%- endunless -%}
+      </dt>
+      {%- if customer.default_address != blank -%}
+        <dd>
+          <address>
+            {{- customer.default_address | format_address | remove: '<p>' | remove: '</p>' -}}
+          </address>
+        </dd>
+      {%- endif -%}
+    </dl>
+  </div>
+</aside>
+
+<script>
+  let asideToggle = document.querySelector('[data-aside-toggle]');
+
+  asideToggle.addEventListener('click', function () {
+    asideToggle.nextElementSibling.classList.toggle('is-active');
+    asideToggle.classList.toggle('is-active');
+  });
+</script>

@@ -1,0 +1,41 @@
+{% liquid
+  assign title = _article.title
+
+  assign image = _article.image
+  assign image_alt = image.alt | default: title
+
+  assign url = _article.url | escape
+  assign date = _article.published_at | date: '%e %B, %Y'
+
+  assign blog_url = _article.url | split: '/'
+  assign blog_name = blogs[blog_url[2]].title
+  assign blog_handle = blog_name | handleize
+  
+  if blog_handle contains 'tv'
+    assign title = title | split: '-' | first
+  endif
+%}
+
+<article class="snippet-article-item {{ is_feature }} {{ is_feature_first }} {{ is_feature_last }}">
+  <div class="image">
+    {%- if image != blank -%}
+      <img
+        src="{{- image | image_url: width: 600 -}}"
+        height="270"
+        width="358"
+        alt="{{- image_alt -}}"
+        loading="lazy"
+        class=""
+      >
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag }}
+    {%- endif -%}
+  </div>
+  {%- if _show_craft_label == true -%}
+    <small class="category">{{ craft_area }}</small>
+  {%- endif -%}
+  <a href="{{- url -}}" class="u-heading-xs title stretched-link">
+    {{- title -}}
+  </a>
+  <time class="date u-text-sm">{{- date -}}</time>
+</article>

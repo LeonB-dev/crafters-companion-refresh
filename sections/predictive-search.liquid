@@ -1,0 +1,205 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+<div id="predictive-search-results" class="predictive-search-results" role="listbox">
+  <button
+    type="button"
+    class="c-btn close-button modal"
+    aria-label="{{ 'accessibility.close' | t }}"
+    data-close-search-modal
+  >
+    {%- render 'icon', _name: 'icon-close' -%}
+  </button>
+
+  {%- if predictive_search.performed -%}
+    {% assign first_column_results_size = predictive_search.resources.queries.size | plus: predictive_search.resources.collections.size | plus: predictive_search.resources.pages.size | plus: predictive_search.resources.articles.size %}
+
+    {%- if first_column_results_size > 0 or predictive_search.resources.products.size > 0 -%}
+      <div id="predictive-search-results-groups-wrapper" class="predictive-results-wrapper{% unless predictive_search.resources.products.size > 0 %} no-products{% endunless %}{% unless predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0 %} no-suggestions{% endunless %}">
+        <div>
+          <p class="results-container predictive-results__query">
+            {% capture searchTerms %}
+              <strong>"{{ predictive_search.terms }}"</strong>
+            {% endcapture %}
+            {{ 'general.search.results_html' | t: searchTerms: searchTerms }}
+          </p>
+
+          <tabbed-view>
+            <div class="tab-buttons">
+              <div class="container">
+                {%- if predictive_search.resources.collections.size > 0 -%}
+                  <button class="c-btn active" type="button">
+                    <span>{{ 'general.search.collections' | t }}</span>
+                  </button>
+                {%- endif %}
+                {%- if predictive_search.resources.pages.size > 0 -%}
+                  <button class="c-btn" type="button">
+                    <span>{{ 'general.search.pages' | t }}</span>
+                  </button>
+                {%- endif %}
+                <button class="c-btn" type="button">
+                  <span>{{ 'general.search.popular' | t }}</span>
+                </button>
+                {%- if predictive_search.resources.articles.size > 0 -%}
+                  <button class="c-btn" type="button">
+                    <span>{{ 'general.search.articles' | t }}</span>
+                  </button>
+                {%- endif %}
+              </div>
+            </div>
+            <div class="tab-content">
+              {% comment %}Collections{% endcomment %}
+              {%- if predictive_search.resources.collections.size > 0 -%}
+                <div data-tab="Collections" class="results-collections results-container active">
+                  <simple-slider id="slider-predictive-collections-results" class="js-tabbed-slider">
+                    {% render 'simple-slider-ui', class: "slider-ui--purple" %}
+
+                    <ul
+                      id="predictive-search-results-collections-list"
+                      class="simple-slider"
+                      role="group"
+                      aria-labelledby="predictive-search-collections"
+                    >
+                      {%- for collection in predictive_search.resources.collections -%}
+                        <li
+                          id="predictive-search-option-collection-{{ forloop.index }}"
+                          class="search-list-item list-item"
+                          role="option"
+                          aria-selected="false"
+                        >
+                          <a href="{{ collection.url }}" tabindex="-1">
+                            {% liquid
+                              assign collection_image = collection.image
+                              if collection_image == blank
+                                assign collection_image = settings.search_result_thumbnail_collection_fallback
+                              endif
+                            %}
+                            {% render 'stmt-general-card', card_title: collection.title, card_image: collection_image, card_url: collection.url %}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </simple-slider>
+                </div>
+              {%- endif -%}
+
+              {% comment %}Pages{% endcomment %}
+              {%- if predictive_search.resources.pages.size > 0 -%}
+                <div data-tab="Pages" class="results-pages results-container">
+                  <simple-slider id="slider-predictive-collections-results" class="js-tabbed-slider">
+                    {% render 'simple-slider-ui', class: "slider-ui--purple" %}
+                    <ul
+                      id="predictive-search-results-pages-list"
+                      class="simple-slider"
+                      role="group"
+                      aria-labelledby="predictive-search-pages"
+                    >
+                      {%- for page in predictive_search.resources.pages -%}
+                        <li
+                          id="predictive-search-option-page-{{ forloop.index }}"
+                          class="list-item"
+                          role="option"
+                          aria-selected="false"
+                        >
+                          {% liquid
+                            assign page_image = page.metafields.custom.featured_image
+                            if page_image == blank
+                              assign page_image = settings.search_result_thumbnail_page_fallback
+                            endif
+                          %}
+                          {% render 'stmt-general-card', card_title: page.title, card_image: page_image, card_url: page.url %}
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </simple-slider>
+                </div>
+              {%- endif -%}
+
+              {% comment %}Polular{% endcomment %}
+              {% assign popular_searches = settings.popular_searches | newline_to_br | split: '<br />' %}
+              {%- if popular_searches.size > 0 -%}
+                <div data-tab="Popular" class="results-collections results-container">
+                  <simple-slider id="slider-predictive-popular-results" class="js-tabbed-slider">
+                    {% render 'simple-slider-ui', class: "slider-ui--purple" %}
+                    <ul
+                      id="predictive-search-results-popular-list"
+                      class="simple-slider"
+                      role="group"
+                      aria-labelledby="predictive-search-pages"
+                    >
+                      {% for popular_search in popular_searches %}
+                        <li
+                          class="list-item"
+                          role="option"
+                          aria-selected="false"
+                        >
+                          {% liquid
+                            assign search_title = popular_search
+                            assign search_image_handle = 'popular_search_image_' | append: forloop.index
+                            assign search_image = settings[search_image_handle]
+                            assign search_query = popular_search | url_encode
+                            assign search_url = routes.search_url | append: '?q=' | append: search_query
+                          %}
+                          {% render 'stmt-general-card', card_title: search_title, card_image: search_image, card_url: search_url %}
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </simple-slider>
+                </div>
+              {%- endif -%}
+
+              {% comment %}Articles{% endcomment %}
+              {%- if predictive_search.resources.articles.size > 0 -%}
+                <div data-tab="Articles" class="results-articles results-container">
+                  <simple-slider id="slider-predictive-articles-results" class="js-tabbed-slider">
+                    {% render 'simple-slider-ui', class: "slider-ui--purple" %}
+                    <ul
+                      id="predictive-search-results-articles-list-desktop"
+                      class="simple-slider"
+                      role="group"
+                      aria-labelledby="predictive-search-articles-desktop"
+                    >
+                      {%- for article in predictive_search.resources.articles -%}
+                        <li
+                          id="predictive-search-option-article-desktop-{{ forloop.index }}"
+                          class="search-list-item"
+                          role="option"
+                          aria-selected="false"
+                        >
+                          {% render 'stmt-general-card', card_title: article.title, card_image: article.image, card_url: article.url %}
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </simple-slider>
+                </div>
+              {%- endif -%}
+            </div>
+          </tabbed-view>
+        </div>
+    {%- else -%}
+      <div class="no-results-found">
+        <strong>No results found</strong>
+      </div>
+    {%- endif -%}
+
+    <div class="predictive-search__loading-state" aria-hidden="true">
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="spinner"
+        viewBox="0 0 66 66"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          class="path"
+          fill="none"
+          stroke-width="6"
+          cx="33"
+          cy="33"
+          r="30"></circle>
+      </svg>
+    </div>
+  {%- endif -%}
+
+  <div class="container">
+    {% render 'other-searches' %}
+  </div>
+</div>

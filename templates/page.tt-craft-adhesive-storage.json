@@ -1,0 +1,282 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "fd7bf228-39c4-4c09-8aef-1e9952a1fec5": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Craft Adhesive Storage",
+        "text": "<p>All crafters use adhesive; glues, tapes, spray adhesives, etc. They're a major part of a crafter's supply stash. But more often than not they're thrown into a drawer where they remain until they're dried up and useless. Totally-Tiffany's craft adhesive storage products are a great way to not only keep your crafting space organized, but also to keep those necessary supplies at hand for ease of use. Whether you're trying to organize liquid glue, glue sticks, tape runners, or spray on adhesive, there's a Totally-Tiffany adhesive storage product that is perfect for your craft storage needs.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "f4fe3259-eb45-4643-bb2f-f621de0038e2": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SNG06BS3_Adhesives_Closed_back_view.jpg",
+        "main_heading": "EZ2O Gail Buddy Bag - 10-12 adhesive runners",
+        "main_text": "<p>Fill our clear vinyl Gail Buddy Bag with your adhesive runners.  You'll love being able to see exactly what is in the bag. Great for crafters who travel to classes, crops and other events.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize",
+        "main_link_text": "View All EZ20 Bags and Totes",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "edge-01",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "black-squeeze",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "363d6b3e-eba0-42fe-b965-7c0418171378": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/Organize-adhesives-with-the-Totally-Tiffany-Stadium-Arranger-SA10.jpg",
+        "main_heading": "Desk Maid Stadium Arranger - countless adhesives",
+        "main_text": "<p>The Stadium Arranger is the perfect desktop organizer for adhesive runners.  All of your adhesives are visible and accessible. Great for those of you who mostly craft at home.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=DeskMaid",
+        "main_link_text": "View All Desk Maid Organizers",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "570808d5-58e8-44ef-a313-f01a8f9e6097": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SNS2-Adhesive-Storage-5-Drawer-box-for-IKEA-EXPEDIT-OR-KALLAX.jpg",
+        "main_heading": "Stash and Store 5 Drawer Supply Organizer - tons of adhesives",
+        "main_text": "<p>Fill your cube or shelf storage with our Stash and Store 5 Drawer system. This box is ideal for adhesive runners.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+        "main_link_text": "View All Stash & Store Organization",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "edge-01",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "black-squeeze",
+        "content_position": "vertical-centre",
+        "margin_bottom": "md",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "f2578ab4-2a8b-40dc-9f3c-a03528cd4148": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/BSFP-SNG043.jpg",
+        "main_heading": "EZ2O Monica Buddy Bag - 5 or 6 tape runners",
+        "main_text": "<p>Ideal for crafters who travel with their craft supplies.  Grab it off your desk and drop it into your tote.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize",
+        "main_link_text": "View All EZ20 Bags and Totes",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "eae3c46d-4e7f-4981-9068-3ee3d3f0f8f9": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SNG14-Dawn-mixed-use.jpg",
+        "main_heading": "EZ2O Dawn Buddy Bag - tape runners and glue sticks too. ",
+        "main_text": "<p>Dawn has 4 small interior boxes to help keep your small adhesives in line.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize",
+        "main_link_text": "View All EZ20 Bags and Totes",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "edge-01",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "black-squeeze",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "55ebe2f6-0a58-474d-823b-e1000bc03b14": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SM28-FF-Organize-pop-dot-glue-dots-memory-pockets_1.jpg",
+        "main_heading": "4x6 Fab File",
+        "main_text": "<p>Glue dots and pop dots store easily in our 4x6 Fab File.  Use the included file folder to separate by size, thickness, or type.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=Fab+Files",
+        "main_link_text": "View All Fab Files",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "59a16025-0ce5-42c1-b162-705d4b777ffc": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/DSST-Organize-Adhesives-pop-dots-glue-dots-15.jpg",
+        "main_heading": "Desk Maid - Die, Stamp & Supply Organizer",
+        "main_text": "<p>An easy way to \"file\" your glue dots, pop dots, and other sheet style adhesives.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=DeskMaid",
+        "main_link_text": "View All Desk Maid Organizers",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "edge-01",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "black-squeeze",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "d710fe2b-13c0-4e7b-9920-4a0a78b157c2": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SNG13-pop-dot-adhesive-organizer-organization-003.jpg",
+        "main_heading": "Karen Buddy Bag",
+        "main_text": "<p>The Karen Buddy Bag is the perfect size to \"file\" your sheet adhesives.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize",
+        "main_link_text": "View All EZ20 Bags and Totes",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "29cc6172-590f-46ab-9a6a-b067f4ac48e4": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SS4L_adhesive_organizer__Desk_Maid__TotallyTiffany_6_1.jpg",
+        "main_heading": "Desk Maid - 4 Level Supply Stadium Organizer",
+        "main_text": "<p>Are you an adhesive junkie like me? This could be your perfect organizer.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=DeskMaid",
+        "main_link_text": "View All Desk Maid Organizers",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "edge-01",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "black-squeeze",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    }
+  },
+  "order": [
+    "fd7bf228-39c4-4c09-8aef-1e9952a1fec5",
+    "f4fe3259-eb45-4643-bb2f-f621de0038e2",
+    "363d6b3e-eba0-42fe-b965-7c0418171378",
+    "570808d5-58e8-44ef-a313-f01a8f9e6097",
+    "f2578ab4-2a8b-40dc-9f3c-a03528cd4148",
+    "eae3c46d-4e7f-4981-9068-3ee3d3f0f8f9",
+    "55ebe2f6-0a58-474d-823b-e1000bc03b14",
+    "59a16025-0ce5-42c1-b162-705d4b777ffc",
+    "d710fe2b-13c0-4e7b-9920-4a0a78b157c2",
+    "29cc6172-590f-46ab-9a6a-b067f4ac48e4"
+  ]
+}

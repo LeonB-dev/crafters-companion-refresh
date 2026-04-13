@@ -1,0 +1,145 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "120fdb19-2eee-4711-8d6f-fe4a1e50a770": {
+      "type": "image-feature",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Spectrum_noir_3dd14b4e-08f8-4b26-980f-adb80dc49073.jpg",
+        "heading": "Video Library",
+        "text": "<p> <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "content_placement": "left"
+      }
+    },
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false
+      }
+    },
+    "93319629-40d6-4e21-999f-8300e8856b26": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/KaTxqud9Kok",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "3105853b-1be0-432a-9f03-cd157021e29a": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/559VmDiXQ7E",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "44f5d15c-c63d-4b85-91d5-aa15b2303844": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/dHWPuEV593U",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "0c0cab06-341d-4e2d-b5d4-131b2e4a19df": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/lkhW1PbPStE",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "4baa827a-016a-455e-b400-59d4e18e7c30": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/qR-0CuLYkZY",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "17c1fcdf-1d80-4ed2-bfb7-2a634bf3de52": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/l4HRzAyCy3U",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "fb64fd4b-a74d-4052-8c83-a8e0aa5dfa73": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/F9aQnUAphU4",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "1347b9c9-5740-4086-9b70-07360c5530f5": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/hpbBjJVrc-s",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "650c1aad-d097-491b-9191-b59c3e31daf3": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/ZbZZxnRB5xg",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "1a61cd5a-892f-4b4c-989f-02da376d038d": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/8J65PjpxIPk",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "2a831432-80a4-4fc5-9916-aaf6af0a779b": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/youtu.be\/1739D56xOF0",
+        "heading": "",
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "120fdb19-2eee-4711-8d6f-fe4a1e50a770",
+    "main",
+    "93319629-40d6-4e21-999f-8300e8856b26",
+    "3105853b-1be0-432a-9f03-cd157021e29a",
+    "44f5d15c-c63d-4b85-91d5-aa15b2303844",
+    "0c0cab06-341d-4e2d-b5d4-131b2e4a19df",
+    "4baa827a-016a-455e-b400-59d4e18e7c30",
+    "17c1fcdf-1d80-4ed2-bfb7-2a634bf3de52",
+    "fb64fd4b-a74d-4052-8c83-a8e0aa5dfa73",
+    "1347b9c9-5740-4086-9b70-07360c5530f5",
+    "650c1aad-d097-491b-9191-b59c3e31daf3",
+    "1a61cd5a-892f-4b4c-989f-02da376d038d",
+    "2a831432-80a4-4fc5-9916-aaf6af0a779b"
+  ]
+}

@@ -1,0 +1,43 @@
+{%- liquid
+  assign gift_card_expiry_date = gift_card.expires_on | date: "%d/%m/%y"
+  assign formatted_current_balance = gift_card.balance | money
+  assign formatted_initial_value = gift_card.initial_value | money_without_trailing_zeros: gift_card.currency
+  assign code_size = gift_card.code | format_code | size
+-%}
+<div class="container">
+    <div class="t-gift-card">
+        <h1 class="c-heading-h3">{{ 'gift_cards.issued.subtext' | t }}</h1>
+        <div class="c-gift-card-image">
+            <img src="{{ 'gift-card/card.svg' | shopify_asset_url }}" alt="{{ shop.name }} Gift Card" />
+        </div>
+        {%- unless gift_card.enabled -%}
+            <span class="giftcard-tag">{{ 'gift_cards.issued.disabled' | t }}</span>
+        {%- endunless -%}
+
+        {%- if gift_card.expired and gift_card.enabled -%}
+            <span class="giftcard-tag">{{ 'gift_cards.issued.expired' | t: expiry: gift_card_expiry_date }}</span>
+        {%- endif -%}
+
+        {%- if gift_card.expired != true and gift_card.expires_on and gift_card.enabled -%}
+            <span class="giftcard-tag giftcard-tag--active">{{ 'gift_cards.issued.active' | t: expiry: gift_card_expiry_date }}</span>
+        {%- endif -%}
+
+        <h2 class="c-heading-h5">Gift card value:</h2>
+        <p class="c-heading-h2 c-color-deep">{{ 'gift_cards.issued.initial_value' | t: value: formatted_initial_value }}</p>
+        {%- if gift_card.balance != gift_card.initial_value -%}
+            <p>{{ 'gift_cards.issued.remaining_html' | t: balance: formatted_current_balance }}</p>
+        {%- endif -%}
+
+        <div class="c-gift-card-code">
+            <span id="GiftCardDigits" class="c-heading-h4 giftcard__code" data-gift-card-digits>{{ gift_card.code | format_code }}</span>
+        </div>
+        <p>{{ 'gift_cards.issued.redeem' | t }}</p>
+        <a href="{{ shop.url }}" class="c-bttn" target="_blank">{{ 'gift_cards.issued.shop_link' | t }}</a>
+
+        {%- if gift_card.pass_url -%}
+            <a href="{{ gift_card.pass_url }}" class="apple-wallet">
+                <img class="apple-wallet-image" src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}" width="120" height="40" alt="{{ 'gift_cards.issued.add_to_apple_wallet' | t }}">
+            </a>
+        {%- endif -%}
+    </div>
+</div>

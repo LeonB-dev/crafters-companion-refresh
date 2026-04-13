@@ -1,0 +1,243 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "d404a13b-50e5-4aca-96aa-d6bc5a481b39": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Everyday Inspiration : Patterned Papers",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "margin_bottom": "md"
+      }
+    },
+    "d0c1b538-b597-4eaa-90a7-7f1a63252afa": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p>Click on the image of your choice to save and print as desired.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false
+      }
+    },
+    "7ab84918-2cd5-4d4c-a037-763b8c23c36a": {
+      "type": "downloads",
+      "blocks": {
+        "3d46b572-d184-4637-ae71-9b3ce0685fe5": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%281%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-1.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "479066dd-7c47-448f-88aa-2824628ccb53": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%282%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-2.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "d7418cc0-b2a3-4af0-938a-9f3aa465043c": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%283%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-3.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "fb21c6dd-f720-47bc-a7bf-b333c8f82702": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%284%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-4.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "42d67c4c-6e4f-48e0-8ed1-86c1831c335d": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%285%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-5.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "6650f28e-8ada-44f5-a72d-188e1d2fa968": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%286%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-6.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "130f0618-88a6-4ec9-baff-0639c6e9c43a": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%287%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-7.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "b3cc712a-a6a5-4fe8-8172-a5d1bdfc078f": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%288%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-8.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "40c97ce0-ae81-48c8-86f6-d488c59ff56a": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%289%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-9.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "1d2ea157-0623-4918-a96d-99b90d06138f": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%2810%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-10.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "515d131f-6f9f-4a82-8304-3ee845cb7a6d": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%2811%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-11.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "dcac6634-7ad7-4adb-a871-8434de157032": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%2812%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-12.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "0eab807b-2bef-4a1a-9f83-ababc915773d": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%2813%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-13.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "2290d8ca-ac84-4e3c-94f5-11b987684619": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%2814%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-14.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "2d5c2a50-89e8-4822-8c05-01527ca9d646": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%2815%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-15.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        },
+        "b3dc9276-7630-48db-ae18-17ccba05bb1e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-everyday-inspiration\/Patterned%20Papers\/ayoc_ei_pp%20%2816%29.png",
+            "image": "shopify:\/\/shop_images\/ayoc_ei_pp-16.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "3d46b572-d184-4637-ae71-9b3ce0685fe5",
+        "479066dd-7c47-448f-88aa-2824628ccb53",
+        "d7418cc0-b2a3-4af0-938a-9f3aa465043c",
+        "fb21c6dd-f720-47bc-a7bf-b333c8f82702",
+        "42d67c4c-6e4f-48e0-8ed1-86c1831c335d",
+        "6650f28e-8ada-44f5-a72d-188e1d2fa968",
+        "130f0618-88a6-4ec9-baff-0639c6e9c43a",
+        "b3cc712a-a6a5-4fe8-8172-a5d1bdfc078f",
+        "40c97ce0-ae81-48c8-86f6-d488c59ff56a",
+        "1d2ea157-0623-4918-a96d-99b90d06138f",
+        "515d131f-6f9f-4a82-8304-3ee845cb7a6d",
+        "dcac6634-7ad7-4adb-a871-8434de157032",
+        "0eab807b-2bef-4a1a-9f83-ababc915773d",
+        "2290d8ca-ac84-4e3c-94f5-11b987684619",
+        "2d5c2a50-89e8-4822-8c05-01527ca9d646",
+        "b3dc9276-7630-48db-ae18-17ccba05bb1e"
+      ],
+      "settings": {
+        "grid_layout": true
+      }
+    },
+    "f6ab093b-7502-4bd1-a4aa-cc06e9e3f09b": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<p><strong>Back to Downloads.<br\/>Back to A Year of Craft.<\/strong><\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d404a13b-50e5-4aca-96aa-d6bc5a481b39",
+    "d0c1b538-b597-4eaa-90a7-7f1a63252afa",
+    "7ab84918-2cd5-4d4c-a037-763b8c23c36a",
+    "f6ab093b-7502-4bd1-a4aa-cc06e9e3f09b"
+  ]
+}

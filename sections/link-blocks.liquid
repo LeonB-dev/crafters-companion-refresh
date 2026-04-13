@@ -1,0 +1,114 @@
+{% liquid
+  assign template_name = 'section-link-blocks'
+
+  assign heading = section.settings.heading
+  assign text = section.settings.text
+  assign blocks = section.blocks | map: 'settings'
+
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-link-blocks.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    <div class="wrapper">
+      {% if heading != blank %}
+        <h2 class="u-heading-sm">{{ heading }}</h2>
+      {% endif %}
+      {{ text }}
+      {% if blocks.size > 0 %}
+        <div class="link-blocks">
+          {% for block in blocks %}
+            <a href="{{ link_url }}" class="link-block">
+              <img src="{{- block.image | image_url: width: 150 -}}" alt="{{- block.image.alt | default: block.link_text -}}" height="150" width="150" loading="lazy">
+              <span class="link-title">{{ block.link_text }}</span>
+              {%- render 'icon', _name: 'icon-arrow-right' -%}
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Link Blocks",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_block",
+      "name": "Link Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Minimum width: 200px and 1/1 aspect ratio."
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Link Blocks",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

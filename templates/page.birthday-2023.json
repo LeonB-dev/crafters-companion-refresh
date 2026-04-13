@@ -1,0 +1,178 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "450bfcca-15b4-4488-825f-3704b8a802f7": {
+      "type": "featured-image",
+      "settings": {
+        "url": "shopify://collections/new",
+        "image": "shopify://shop_images/Desktop_Tease_474d06d8-dd39-49dd-84c0-bb078a79b97a.jpg",
+        "image_mobile": "shopify://shop_images/Mobile_Tease.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": true,
+        "margin_bottom": "none"
+      }
+    },
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "00f17f2b-108e-4b18-bd12-2b332a1e4aed": {
+      "type": "featured-image",
+      "disabled": true,
+      "settings": {
+        "url": "shopify://pages/offers",
+        "image": "shopify://shop_images/Banner_Main_NEW.jpg",
+        "disable_aspect_ratio": false,
+        "enable_full_width": false,
+        "margin_bottom": "md"
+      }
+    },
+    "9ecb31e4-cbdf-44fd-a64c-bc2e842e3e65": {
+      "type": "image-text-slider",
+      "blocks": {
+        "33be2caf-62ac-4931-9266-3b5fc49fa761": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>One per order, while stocks last</p>",
+            "link_text": "Shop Now",
+            "link_url": "shopify://pages/offers",
+            "image": "shopify://shop_images/Main_Landing_PageSpend_10.jpg"
+          }
+        },
+        "b7b6f193-8f50-447d-8072-9e792870da85": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>One per order, while stocks last</p>",
+            "link_text": "Shop Now",
+            "link_url": "shopify://pages/offers"
+          }
+        },
+        "145a7905-e651-4fc9-bdae-c07d90337815": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>One per order, while stocks last</p>",
+            "link_text": "Shop Now",
+            "link_url": "shopify://pages/offers"
+          }
+        }
+      },
+      "block_order": [
+        "33be2caf-62ac-4931-9266-3b5fc49fa761",
+        "b7b6f193-8f50-447d-8072-9e792870da85",
+        "145a7905-e651-4fc9-bdae-c07d90337815"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "sm",
+        "link_style": "main",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "md"
+      }
+    },
+    "dcb4ebd7-9ea3-45a1-8000-a22d3da2ec18": {
+      "type": "image-text-slider",
+      "blocks": {
+        "09aa11e9-73f0-4c8f-931a-f7a57a82edd4": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://pages/offers",
+            "image": "shopify://shop_images/Main_Landing_PageShop_All.jpg"
+          }
+        },
+        "b323b88f-9028-4b50-9a65-c92461f1970b": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/new"
+          }
+        },
+        "fb440e13-f506-4ed8-b07e-01ffbf7a4b33": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/star-buys"
+          }
+        }
+      },
+      "block_order": [
+        "09aa11e9-73f0-4c8f-931a-f7a57a82edd4",
+        "b323b88f-9028-4b50-9a65-c92461f1970b",
+        "fb440e13-f506-4ed8-b07e-01ffbf7a4b33"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "sm",
+        "link_style": "main",
+        "link_colour": "secondary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "md"
+      }
+    },
+    "c937aab0-800e-46ff-ab03-a07681383d2c": {
+      "type": "featured-image",
+      "disabled": true,
+      "settings": {
+        "url": "https://online.flippingbook.com/view/373137245/",
+        "disable_aspect_ratio": false,
+        "enable_full_width": false,
+        "margin_bottom": "md"
+      }
+    },
+    "6950ca8e-5e16-46aa-912b-aeb841edf0c7": {
+      "type": "featured-image",
+      "disabled": true,
+      "settings": {
+        "url": "shopify://pages/crafters-tv-schedule",
+        "disable_aspect_ratio": false,
+        "enable_full_width": false,
+        "margin_bottom": "md"
+      }
+    }
+  },
+  "order": [
+    "450bfcca-15b4-4488-825f-3704b8a802f7",
+    "main",
+    "00f17f2b-108e-4b18-bd12-2b332a1e4aed",
+    "9ecb31e4-cbdf-44fd-a64c-bc2e842e3e65",
+    "dcb4ebd7-9ea3-45a1-8000-a22d3da2ec18",
+    "c937aab0-800e-46ff-ab03-a07681383d2c",
+    "6950ca8e-5e16-46aa-912b-aeb841edf0c7"
+  ]
+}

@@ -1,0 +1,81 @@
+{% liquid
+  assign template_name = 'section-list-blocks'
+
+  assign list_blocks = section.blocks | map: 'settings'
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-list-blocks.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    {% for list_block in list_blocks %}
+      <div class="list-block">
+        <span class="list-title">{{ list_block.title }}</span>
+        {{ list_block.list }}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "List Blocks",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "list_block",
+      "name": "List Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "list",
+          "label": "List",
+          "info": "Please use the list option in the richtext editor"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "List Blocks",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

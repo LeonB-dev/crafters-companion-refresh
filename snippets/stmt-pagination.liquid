@@ -1,0 +1,20 @@
+<link href="{{ 'snippet-stmt-pagination.css' | asset_url }}" rel="preload" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ 'snippet-stmt-pagination.css' | asset_url }}"></noscript>
+
+<div class="container">
+  <div class="pagination">
+    <a href="{{ paginate.previous.url | remove: '?page=1' }}" data-page="{{ paginate.current_page | minus: 1 }}" class="js-pagination pagination__button{% unless paginate.previous %} pagination__button--disabled{% endunless %}">
+      <span class="sr-only">{{ 'pagination.previous_page' | t }}</span>
+      {% render 'stmt-icon-angle-left', class: 'pagination__icon' %}
+    </a>
+
+    <span class="pagination__page">
+      {{ 'pagination.page_with_number_and_total' | t: number: paginate.current_page, total: paginate.pages }}
+    </span>
+
+    <a href="{{ paginate.next.url }}" data-page="{{ paginate.current_page | plus: 1 }}" class="js-pagination pagination__button{% unless paginate.next %} pagination__button--disabled{% endunless %}">
+      <span class="sr-only">{{ 'pagination.next_page' | t }}</span>
+      {% render 'stmt-icon-angle-right', class: 'pagination__icon' %}
+    </a>
+  </div>
+</div>

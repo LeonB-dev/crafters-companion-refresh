@@ -1,0 +1,72 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "featured_image_9ynbDH": {
+      "type": "featured-image",
+      "name": "Featured Image",
+      "settings": {
+        "url": "shopify://collections/retro-christmas-mini-collection",
+        "image": "shopify://shop_images/Launch_Retro_Christmas_Desktop_d0454e63-89d1-4685-83a7-60c54c4a5dcf.jpg",
+        "image_mobile": "shopify://shop_images/Launch_Retro_Christmas_Mobile_b3c4408d-da30-4d8f-9520-54154aa0f66e.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": true,
+        "margin_bottom": "none"
+      }
+    },
+    "wishit_custom_html_RwXHpY": {
+      "type": "wishit-custom-html",
+      "name": "WishIt HTML/CSS/JS",
+      "settings": {
+        "html": "<!-- Load Montserrat font -->\n<link href=\"https://fonts.googleapis.com/css2?family=Montserrat:wght@600&amp;display=swap\" rel=\"stylesheet\">\n\n<!-- Centered Paragraph Text -->\n<div style=\"max-width: 900px; margin: 30px auto; text-align: center;\">\n  <p style=\"font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.2rem; color: #000;\">\n    Step back in time with the Retro Christmas Collection by Crafter’s Companion, brimming with vintage-inspired charm. Featuring rosy-cheeked Santas, reindeer, ornaments, and more, it’s perfect for handmade cards, gift bags, and festive decorations.\n\n  </p>\n</div>"
+      }
+    },
+    "wishit_custom_html_HDahAR": {
+      "type": "wishit-custom-html",
+      "name": "WishIt HTML/CSS/JS",
+      "settings": {
+        "html": "<a href=\"https://online.flippingbook.com/view/807700334/\" class=\"fbo-embed\" data-fbo-id=\"5024d056b5\" data-fbo-ratio=\"3:2\" data-fbo-lightbox=\"yes\" data-fbo-width=\"100%\" data-fbo-height=\"auto\" data-fbo-version=\"1\" style=\"max-width: 100%\">Retro Christmas - Digital Look book </a><script async=\"\" defer src=\"https://online.flippingbook.com/EmbedScriptUrl.aspx?m=redir&amp;hid=807700334\"></script>"
+      }
+    },
+    "featured_products_ANVDHF": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_YatLfb": {
+          "type": "collection",
+          "settings": {
+            "collection": "retro-christmas-mini-collection"
+          }
+        }
+      },
+      "block_order": [
+        "collection_YatLfb"
+      ],
+      "name": "Featured Products",
+      "settings": {
+        "heading": "Featured Collection",
+        "heading_alignment": false,
+        "link_url": "shopify://collections/retro-christmas-mini-collection",
+        "link_text": "Shop All",
+        "grid_size": "lg",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "featured_image_9ynbDH",
+    "wishit_custom_html_RwXHpY",
+    "wishit_custom_html_HDahAR",
+    "featured_products_ANVDHF"
+  ]
+}

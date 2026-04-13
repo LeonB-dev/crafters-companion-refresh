@@ -1,0 +1,14 @@
+{% liquid
+  assign template_name = 'section-page-404'
+%}
+
+{{- 'section-page-404.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{ template_name }} u-space-below-lg">
+  <div class="container">
+    <h1 class="u-heading-xl">{{ 'template.404.title' | t }}</h1>
+    <h2 class="u-heading-sm">{{ 'template.404.sub_heading' | t }}</h2>
+    <p>{{- 'template.404.description_html' | t: url: shop.url -}}</p>
+    <a href="/" class="c-btn main primary">{{ 'template.404.go_to_homepage' | t }}</a>
+  </div>
+</div>

@@ -1,0 +1,401 @@
+{%- liquid
+  assign template_name = 'section-text-and-image'
+
+  assign layout_direction = section.settings.layout_direction
+
+  assign enable_dots = section.settings.enable_dots
+  assign enable_shapes = section.settings.enable_shapes
+
+  assign margin_bottom = section.settings.margin_bottom
+  assign edge_version = section.settings.edge_version
+  assign background_colour = section.settings.background_colour
+  assign top_edge_colour = section.settings.top_edge_colour
+  assign bottom_edge_colour = section.settings.bottom_edge_colour
+-%}
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {%- render 'paper-edge', _section: section -%}
+  {%- render 'text-and-image', _section: section, _enable_shapes: enable_shapes, _enable_dots: enable_dots -%}
+</div>
+
+{% schema %}
+{
+  "name": "Text & Image",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "header_title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "header_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Main Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Image",
+      "info": "Minimum width: 800px and 3/2 aspect ratio."
+    },
+    {
+      "type": "inline_richtext",
+      "id": "main_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "main_text",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "main_link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "main_link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "header",
+      "content": "List items"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "list_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "list_text",
+      "label": "List items",
+      "info": "Add each new list item on a new line (Press return at the end of each list item)."
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Maing heading size",
+      "options": [
+        {
+          "value": "xs",
+          "label": "Extra Small"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        }
+      ],
+      "default": "md"
+    },
+    {
+      "type": "select",
+      "id": "layout_direction",
+      "label": "Layout direction",
+      "info": "This only applies to large devices when the content is side by side.",
+      "options": [
+        {
+          "value": "image-left",
+          "label": "Image left"
+        },
+        {
+          "value": "image-right",
+          "label": "Image right"
+        }
+      ],
+      "default": "image-right"
+    },
+    {
+      "type": "select",
+      "id": "link_colour",
+      "label": "Link colour",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Purple / Green Gradient"
+        },
+        {
+          "value": "secondary",
+          "label": "Purple / Red Gradient"
+        },
+        {
+          "value": "tertiary",
+          "label": "White"
+        },
+        {
+          "value": "quaternary",
+          "label": "Purple"
+        },
+        {
+          "value": "quinary",
+          "label": "Black"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "top_edge_colour",
+      "label": "Top edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "bottom_edge_colour",
+      "label": "Bottom edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "background_colour",
+      "label": "Background colour",
+      "info": "This can only be applied if a edge version is selected",
+      "options": [
+        {
+          "value": "black-squeeze",
+          "label": "Green"
+        },
+        {
+          "value": "pippin",
+          "label": "Pink"
+        },
+        {
+          "value": "whisper",
+          "label": "Purple"
+        }
+      ],
+      "default": "whisper"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Content Positioning - Desktop",
+      "options": [
+        {
+          "value": "vertical-start",
+          "label": "Upper Vertical Alignment"
+        },
+        {
+          "value": "vertical-centre",
+          "label": "Central Vertical Alignment"
+        },
+        {
+          "value": "vertical-end",
+          "label": "Lower Vertical Alignment"
+        }
+      ],
+      "default": "vertical-centre"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    },
+    {
+      "type": "checkbox",
+      "id": "contain_image",
+      "label": "Contain image within parent boundaries",
+      "info": "Enabling this means the full image will made visible.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_shapes",
+      "label": "Enable geometric shape background graphics.",
+      "info": "If dots are also enabled shapes will not show. Turn off dots first and upload a background image below.",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "shape_background",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "shape_position",
+      "label": "Shape Positioning",
+      "options": [
+        {
+          "value": "vertical-start",
+          "label": "Upper Vertical Alignment"
+        },
+        {
+          "value": "vertical-centre",
+          "label": "Central Vertical Alignment"
+        },
+        {
+          "value": "vertical-end",
+          "label": "Lower Vertical Alignment"
+        }
+      ],
+      "default": "vertical-centre"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_dots",
+      "label": "Enable dotted background graphics.",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "dot_colour_top",
+      "label": "Colour for the top right dots",
+      "options": [
+        {
+          "value": "persian-green",
+          "label": "Green"
+        },
+        {
+          "value": "royal-purple",
+          "label": "Purple"
+        },
+        {
+          "value": "carnation",
+          "label": "Red"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "carnation"
+    },
+    {
+      "type": "select",
+      "id": "dot_colour_bottom",
+      "label": "Colour for the bottom left dots",
+      "options": [
+        {
+          "value": "persian-green",
+          "label": "Green"
+        },
+        {
+          "value": "royal-purple",
+          "label": "Purple"
+        },
+        {
+          "value": "carnation",
+          "label": "Red"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "royal-purple"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Text & Image",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

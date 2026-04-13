@@ -1,0 +1,639 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "76e0d221-68cf-445e-a8de-b3dca8938491": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Ink Pad Storage",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "0749fcc2-ddf9-4d59-a9d6-b6831de80026": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Tim Holtz Distress or Oxide Inks",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "077bfe38-a63b-461f-b717-6f85aad7f6a5": {
+      "type": "content-block-trio",
+      "blocks": {
+        "7e19014a-ab54-48aa-8f50-7f141b1772bf": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Edna Buddy Bag",
+            "text": "Holds up to 19 inks.",
+            "image": "shopify:\/\/shop_images\/SNG-05-Edna-Tim-Holtz-Distress-ink-organizer-by-Totally-Tiffany.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "dab4ed52-db94-4f1f-8664-ecac0a567538": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Irene Buddy Bag",
+            "text": "Holds up to 12 inks.",
+            "image": "shopify:\/\/shop_images\/SNG12-Irene-Buddy-Bag-Tim-Holtz-Distress-Ink-or-Oxide-Ink-Organizer-Totally-Tiffany.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "dc09306a-9448-40b1-b5e6-3d5be71e39f4": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Teresa Buddy Bag",
+            "text": "Holds up to 10 re-inkers",
+            "image": "shopify:\/\/shop_images\/SNG07-Teresa-re-iners-tim-holtz-orgaizer-Totally-Tiffany-1024x1024_1.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        }
+      },
+      "block_order": [
+        "7e19014a-ab54-48aa-8f50-7f141b1772bf",
+        "dab4ed52-db94-4f1f-8664-ecac0a567538",
+        "dc09306a-9448-40b1-b5e6-3d5be71e39f4"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "65f8c1c4-380f-47a7-b978-d58a32772178": {
+      "type": "content-block-trio",
+      "blocks": {
+        "c29aa4a6-4e7c-4e81-a689-7f51c72cbbf7": {
+          "type": "content_block",
+          "settings": {
+            "heading": "The Pen & Ink Palace",
+            "text": "Holds 10 full size ink pads, 10 mini ink pads, 18 distress markers, and up to 27 re-inkers.",
+            "image": "shopify:\/\/shop_images\/Tim_Holtz_craft_supplies_SPS12_Ink-pad-storage-and-organization-shelf_a81b2df0-7fb1-41f2-9ce6-3c6123a6cba6.jpg",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany=DeskMaid"
+          }
+        },
+        "c2e0ae79-6a45-4cfc-80f9-4e439e66038a": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Shelly Buddy Bag",
+            "text": "Holds up to 22 mini ink pads. \nFor best result, place the inks back to back so you can see them on either side of the bag.",
+            "image": "shopify:\/\/shop_images\/SNG08-Shelly-Bag-Tim-Holtz-Mini-Distress-Ink-organizer.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        }
+      },
+      "block_order": [
+        "c29aa4a6-4e7c-4e81-a689-7f51c72cbbf7",
+        "c2e0ae79-6a45-4cfc-80f9-4e439e66038a"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "5aca35aa-e8b4-43b9-93eb-f1bd3cf480c3": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Memento Ink Storage",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "4d264f5f-0925-4434-91cd-48e47ef6ba17": {
+      "type": "content-block-trio",
+      "blocks": {
+        "060da4c4-8125-4cf4-a197-1484ddb2237d": {
+          "type": "content_block",
+          "settings": {
+            "heading": "1\" Stamp, Store & Go Bag",
+            "text": "Holds 40 Teardrop Inks",
+            "image": "shopify:\/\/shop_images\/A38-Memento-Ink-Organizer.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "ab3d918b-4470-44e2-b535-8bd827ab49bc": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Shelly Buddy Bag",
+            "text": "Holds 16 inks, double-stacked.",
+            "image": "shopify:\/\/shop_images\/SNG08-Shelly-MementoTear-Drop-Inks-16-inks.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "d791583f-a11a-43a8-8896-a0d7cfb58b5a": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Stamp & Supply Stadium ",
+            "text": "Holds 11 Teardrop inks per row - 6 rows, 66 inks.",
+            "image": "shopify:\/\/shop_images\/SS6L-Memento-Teardrop-Ink-Organizer.jpg",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Desk+Maid"
+          }
+        }
+      },
+      "block_order": [
+        "060da4c4-8125-4cf4-a197-1484ddb2237d",
+        "ab3d918b-4470-44e2-b535-8bd827ab49bc",
+        "d791583f-a11a-43a8-8896-a0d7cfb58b5a"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "f6754bf0-9293-43c9-9a33-0e8d56cbb21d": {
+      "type": "content-block-trio",
+      "blocks": {
+        "d0520761-4a33-498b-a27e-704d064bb08e": {
+          "type": "content_block",
+          "settings": {
+            "heading": "15\" Pen & Ink Palace",
+            "text": "Holds up to 88 Memento Tear Drops",
+            "image": "shopify:\/\/shop_images\/SPSXL_15_Loaded_with_ink_pads.jpg",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Desk+Maid"
+          }
+        }
+      },
+      "block_order": [
+        "d0520761-4a33-498b-a27e-704d064bb08e"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "3cb8dd63-d4bc-4115-ab95-f01aa9e0dfbe": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Stampin’ Up! ink pad storage",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "03eedb9f-0cf7-4762-b650-6c5c50e47250": {
+      "type": "content-block-trio",
+      "blocks": {
+        "7edde064-a48f-4097-908a-913651f83992": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Leanne Buddy Bag",
+            "text": "Holds 15 of the older style of \"flip\" inks.  I tucked my matching markers into the side of the bag.",
+            "image": "shopify:\/\/shop_images\/Stampin-Up-Ink-Pads-Markers-Totally-Tiffany-Leanne-Bag-sng19-008.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "02b5a06a-1c7a-493a-82b1-5c967d8de040": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Leanne Buddy Bag",
+            "text": "The Leanne Buddy Bag will also hold the new style of Stampin' Up Ink pads.  I believe around 20 will fit in the Leanne bag.  Store them vertically or horizontally - similar to picture on the left.",
+            "image": "shopify:\/\/shop_images\/Stampin-Up-ink-pad-storage-Leanne-Bag-Totally-Tiffany-6.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "e34fec5c-b117-438a-99c5-cc4e1aca7532": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Sue Buddy Bag",
+            "text": "Will hold 10 ink pads",
+            "image": "shopify:\/\/shop_images\/SNG10-Sue-tampin-Up-Ink-Pads-10.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        }
+      },
+      "block_order": [
+        "7edde064-a48f-4097-908a-913651f83992",
+        "02b5a06a-1c7a-493a-82b1-5c967d8de040",
+        "e34fec5c-b117-438a-99c5-cc4e1aca7532"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "2d266d13-a6b7-44d5-b66e-718803d18b2d": {
+      "type": "content-block-trio",
+      "blocks": {
+        "a31fce86-ddc4-46a1-8d92-985959f0ce00": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Irene Buddy Bag",
+            "text": "Holds 12 re-inkers",
+            "image": "shopify:\/\/shop_images\/SNG12-SU-Reinker-organizer-4-1024x1024.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "beb41aba-9c39-46dd-99e2-138bcf010e32": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Dawn Buddy Bag",
+            "text": "Holds 12 re-inkers",
+            "image": "shopify:\/\/shop_images\/SNG14-Stampin-Up-reinkers-storage-organization-8.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "fb3f34d6-6b0b-47e3-80e5-aeae24950122": {
+          "type": "content_block",
+          "settings": {
+            "heading": "XL Pen & Ink Palace",
+            "text": "Will hold 18 SU Ink Pads plus storage for re-inkers and stamp blocks on top. Will hold coordinating SU makers too.",
+            "image": "shopify:\/\/shop_images\/Stampin-Up-inks-reinkers-Desk-Maid-Pen-Ink-Palace-Totally-Tiffany-SPSXL15-1.jpg",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Desk+Maid"
+          }
+        }
+      },
+      "block_order": [
+        "a31fce86-ddc4-46a1-8d92-985959f0ce00",
+        "beb41aba-9c39-46dd-99e2-138bcf010e32",
+        "fb3f34d6-6b0b-47e3-80e5-aeae24950122"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "fe0955eb-a9dc-40a8-9bd6-6f10f7c5891d": {
+      "type": "text-header",
+      "settings": {
+        "heading": "ColorBox Ink Pad Storage",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "6fc7548b-99d1-4d2f-9f2c-d8ae86d04a4f": {
+      "type": "content-block-trio",
+      "blocks": {
+        "ddd7ea98-7396-4fb8-84a1-98eacd6fb765": {
+          "type": "content_block",
+          "settings": {
+            "heading": "15\" Desk Maid Pen & Ink Palace",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/SPSXL_15_Loaded_with_ink_pads_1.jpg",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Desk+Maid"
+          }
+        },
+        "95442e9b-dd66-4284-99da-cd6e7cd10978": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Katya Buddy Bag",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/Katya-Buddy-Bag-BSFP-SNG20-Totally-Tiffany-23.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "e90b0e38-6a5b-449c-9cbd-a4839054ce8d": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Dawn Buddy Bag",
+            "text": "Dawn can hold up to 12 ColorBox ink pads, 3 per divider box. This buddy bag is perfect for taking your inks on the road and letting you see what colors it holds without even having to open it up. The material is sturdy and can be cleaned easily.",
+            "image": "shopify:\/\/shop_images\/OrganizeColorboxinkpadsSNG14EZ2Organize.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        }
+      },
+      "block_order": [
+        "ddd7ea98-7396-4fb8-84a1-98eacd6fb765",
+        "95442e9b-dd66-4284-99da-cd6e7cd10978",
+        "e90b0e38-6a5b-449c-9cbd-a4839054ce8d"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "9a289bd0-19d4-4862-87cf-6efacf8cf971": {
+      "type": "content-block-trio",
+      "blocks": {
+        "2f420d84-9c5b-418c-b31c-cb14c074939b": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Monica Buddy Bag",
+            "text": "Monica can hold 9 ColorBox ink pads. Her compact size allows crafters to take her wherever they go and not take up space. The clear material makes it easy to see what colors are inside and is sturdy enough to protect your ink pads.",
+            "image": "shopify:\/\/shop_images\/BSFP-SNG042.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "9ac3347c-295b-4b56-bfbe-5003552a179c": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Leanne Buddy Bag",
+            "text": "The Leanne bag will hold up to 30 ink pads.  She's the ideal size for Stephanie Barnard, & Colorbox, but if you have a mix of ink pads from others like Catherine Pooler or FSJ, they'll all fit together in the the Leanne Buddy Bag.",
+            "image": "shopify:\/\/shop_images\/BSFP-SNG19-Leanne-with-28-ink-pads-colorbox-SOL-1.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "5d0d5c80-fbd9-4dc7-9bc2-6eaf410af83e": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Teresa Buddy Bag",
+            "text": "The Teresa Buddy Bag will hold 6-7 mini Colorbox Ink Pads.  These are a popular ink pad from Stamps of Life.  Do you have the Colorbox Cat's Eye ink pads?  Teresa will hold 15!  Group your ink pads together by color family.",
+            "image": "shopify:\/\/shop_images\/BSFP-SNG07.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        }
+      },
+      "block_order": [
+        "2f420d84-9c5b-418c-b31c-cb14c074939b",
+        "9ac3347c-295b-4b56-bfbe-5003552a179c",
+        "5d0d5c80-fbd9-4dc7-9bc2-6eaf410af83e"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "f6042fbb-7273-45eb-9aa0-abdd1230268f": {
+      "type": "content-block-trio",
+      "blocks": {
+        "97aef8fe-14e7-4347-9684-364a7fa0cbe9": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Edna Buddy Bag",
+            "text": "The Edna Buddy Bag will help you organize up to 24 mini Colorbox ink pads.  Easy to use at home and great for travelling with your supplies too.  Organize your ink pads for a crop or class with the Edna Buddy Bag.",
+            "image": "shopify:\/\/shop_images\/NG05-Stephanie-Barnard-Mini-Colorbox-Ink-Pad-Storage-Organizer-bag..jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        }
+      },
+      "block_order": [
+        "97aef8fe-14e7-4347-9684-364a7fa0cbe9"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "96c2cf4a-945c-4b29-9364-f7d5a646bcf6": {
+      "type": "text-header",
+      "settings": {
+        "heading": "CTMH Ink Pad Storage",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "1049b8e7-62ed-4477-904f-6ffa570aff9f": {
+      "type": "content-block-trio",
+      "blocks": {
+        "ec4dc695-a1eb-4a51-bf0b-4ac9120280b6": {
+          "type": "content_block",
+          "settings": {
+            "heading": "4x6 Fab File",
+            "text": "This Fab File can hold up to 11 CTMH ink pads. The small, compact size is the ideal grab-and-go stamp pad storage. Made of sturdy material to keep your inks safe",
+            "image": "shopify:\/\/shop_images\/SM28-FF-CTMH-Ink-Pad-Organizer-storage-6.jpg",
+            "link_text": "View All Fab Files",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Fab+Files"
+          }
+        },
+        "ee3e7e77-8325-48a3-984a-07f6a603d80a": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Barbara Buddy Bag",
+            "text": "The Barbara Buddy Bag can hold up to 10 magnetic CTMH ink pads. The crystal clear vinyl makes it easy to see your colors without even opening the bag",
+            "image": "shopify:\/\/shop_images\/BSFP-sng15-CTMH-Close-to-my-heart-ink-pad-organizer-magnetic.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "66c0ced4-2875-430b-8fac-4ffe1825639c": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Gail Buddy Bag",
+            "text": "The Gail Buddy Bag can hold up to 9 CTMH ink pads. Great for storing your inks at home, or taking them to a crafting class or event.",
+            "image": "shopify:\/\/shop_images\/BSFP-SNG07.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        }
+      },
+      "block_order": [
+        "ec4dc695-a1eb-4a51-bf0b-4ac9120280b6",
+        "ee3e7e77-8325-48a3-984a-07f6a603d80a",
+        "66c0ced4-2875-430b-8fac-4ffe1825639c"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "a7a9ed8a-1ed0-497d-a571-fd9459c136bd": {
+      "type": "content-block-trio",
+      "blocks": {
+        "6f7451e2-637a-4a60-9a99-22943f7206d9": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Monica Buddy Bag ",
+            "text": "The Monica Buddy Bag can hold up to 10 of the old style CTMH ink pads.",
+            "image": "shopify:\/\/shop_images\/BSFP-SNG12.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "32527914-d546-47d8-991b-94b3fdf52969": {
+          "type": "content_block",
+          "settings": {
+            "heading": "15\" Pen & Ink Palace",
+            "text": "CTMH ink pads are not shown in the image above, but this will hold up to 4 ink pads per shelf (24 total).",
+            "image": "shopify:\/\/shop_images\/SPSXL_15_Loaded_with_ink_pads.jpg",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Desk+Maid"
+          }
+        }
+      },
+      "block_order": [
+        "6f7451e2-637a-4a60-9a99-22943f7206d9",
+        "32527914-d546-47d8-991b-94b3fdf52969"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "e11bfa89-becb-4080-809f-c8fe1c2ae433": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Quick Quotes Powder Puff Ink Organizers",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "cf36f183-15fb-422f-a38f-8a44e5749d97": {
+      "type": "content-block-trio",
+      "blocks": {
+        "aa27c679-009c-4afd-9ea0-dcc419004fe4": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Irene Buddy Bag ",
+            "text": "Holds 16 QQ Inks",
+            "image": "shopify:\/\/shop_images\/SNG11-Irene-QQ-Powder-Puff-Inks.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "e948c5bc-511b-423a-8ebe-802d5aa5eca2": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Gail Buddy Bag",
+            "text": "Holds 16 QQ inks",
+            "image": "shopify:\/\/shop_images\/SNG06BS__5_QQ_Powder_Puff_Inks_Closed.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "2315fc54-6ee0-4368-a283-d7f87980462e": {
+          "type": "content_block",
+          "settings": {
+            "heading": "1\" Stamp and Punch Pack",
+            "text": "Holds 17 QQ inks",
+            "image": "shopify:\/\/shop_images\/A38-Powder-Puff-Inks-by-Quick-Quotes-storage-organization.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        }
+      },
+      "block_order": [
+        "aa27c679-009c-4afd-9ea0-dcc419004fe4",
+        "e948c5bc-511b-423a-8ebe-802d5aa5eca2",
+        "2315fc54-6ee0-4368-a283-d7f87980462e"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    },
+    "54196863-6c41-4b8f-a69e-08d8d87b4063": {
+      "type": "content-block-trio",
+      "blocks": {
+        "15be5bdb-c31e-4f96-8210-3c36537f6a7e": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Dawn Buddy Bag ",
+            "text": "Holds 16 Quick Quotes Inks",
+            "image": "shopify:\/\/shop_images\/Organize_QQ_inks__sng14__2.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "a509c2e0-cb05-4847-be2f-dbb533a46cc8": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Edna Buddy Bag",
+            "text": "Holds 16 inks on edge or 24 inks stacked flat.",
+            "image": "shopify:\/\/shop_images\/SNG05-Quick-Quotes-Powder-Puff-Ink-Organizer-Buddy-Bag.jpg",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize"
+          }
+        },
+        "397de22b-12a6-48c2-8800-df6832a39e80": {
+          "type": "content_block",
+          "settings": {
+            "heading": "XL Pen & Ink Palace",
+            "text": "Holds up to 48 QQ PP Chalk Inks, with a little extra storage on top.",
+            "image": "shopify:\/\/shop_images\/SPSXL_15_Loaded_with_ink_pads_3.jpg",
+            "link_text": "View All DeskMaid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Desk+Maid"
+          }
+        }
+      },
+      "block_order": [
+        "15be5bdb-c31e-4f96-8210-3c36537f6a7e",
+        "a509c2e0-cb05-4847-be2f-dbb533a46cc8",
+        "397de22b-12a6-48c2-8800-df6832a39e80"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    }
+  },
+  "order": [
+    "76e0d221-68cf-445e-a8de-b3dca8938491",
+    "0749fcc2-ddf9-4d59-a9d6-b6831de80026",
+    "077bfe38-a63b-461f-b717-6f85aad7f6a5",
+    "65f8c1c4-380f-47a7-b978-d58a32772178",
+    "5aca35aa-e8b4-43b9-93eb-f1bd3cf480c3",
+    "4d264f5f-0925-4434-91cd-48e47ef6ba17",
+    "f6754bf0-9293-43c9-9a33-0e8d56cbb21d",
+    "3cb8dd63-d4bc-4115-ab95-f01aa9e0dfbe",
+    "03eedb9f-0cf7-4762-b650-6c5c50e47250",
+    "2d266d13-a6b7-44d5-b66e-718803d18b2d",
+    "fe0955eb-a9dc-40a8-9bd6-6f10f7c5891d",
+    "6fc7548b-99d1-4d2f-9f2c-d8ae86d04a4f",
+    "9a289bd0-19d4-4862-87cf-6efacf8cf971",
+    "f6042fbb-7273-45eb-9aa0-abdd1230268f",
+    "96c2cf4a-945c-4b29-9364-f7d5a646bcf6",
+    "1049b8e7-62ed-4477-904f-6ffa570aff9f",
+    "a7a9ed8a-1ed0-497d-a571-fd9459c136bd",
+    "e11bfa89-becb-4080-809f-c8fe1c2ae433",
+    "cf36f183-15fb-422f-a38f-8a44e5749d97",
+    "54196863-6c41-4b8f-a69e-08d8d87b4063"
+  ]
+}

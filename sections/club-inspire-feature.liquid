@@ -1,0 +1,295 @@
+{%- liquid
+  assign template_name = 'section-club-inspire-feature'
+  assign margin_bottom = section.settings.margin_bottom
+
+  assign image = section.settings.image
+  assign image_alt = image.alt | heading | strip_html
+
+  assign heading = section.settings.heading | remove: '<p>' | remove: '</p>'
+  assign text = section.settings.text
+
+  assign points_text = section.settings.points_text
+
+  assign link_text = section.settings.link_text
+
+  assign login_text = section.settings.login_text
+
+  assign enable_dots = section.settings.enable_dots
+  assign dot_colour_top = section.settings.dot_colour_top
+  assign dot_colour_bottom = section.settings.dot_colour_bottom
+
+%}
+
+{{- 'section-club-inspire-feature.css' | asset_url | stylesheet_tag -}}
+
+{%- if enable_dots == true -%}
+  <style>
+    div[data-section-id="{{ section.id }}"] .image::before{
+      background-image: radial-gradient(var(--colour-{{- dot_colour_bottom -}}) 36%, var(--colour-black-squeeze) 30%);
+    }
+
+    div[data-section-id="{{ section.id }}"] .image::after{
+      background-image: radial-gradient(var(--colour-{{- dot_colour_top -}}) 36%, var(--colour-black-squeeze) 30%);
+    }
+  </style>
+{%- endif -%}
+
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }} overflow-hidden" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {%- unless edge_version == 'none' -%}
+    {%-
+      render 'paper-edge',
+      _section: section
+    -%}
+  {%- endunless -%}
+  <div class="container">
+    <div class="content u-content-offset">
+      <p class="subheading">Club Inspire</p>
+      <h2 class="u-heading-lg">{{- heading -}}</h2>
+      {{ text }}
+      {{ points_text | replace: '<p>', '<p class="points-text">' }}
+      {%- if link_text != blank -%}
+        <a href="/pages/club-inspire" class="c-btn main primary">{{- link_text -}}</a>
+      {%- endif -%}
+      {{- login_text -}}
+    </div>
+    <picture class="image u-dots">
+      <source media="(max-width: 550.8px)" srcset="{{- image | image_url: width: 600 -}}">
+      <source media="(min-width:551px)" srcset="{{- image | image_url: width: 800 -}}">
+      <img src="{{- image | image_url: width: 600 -}}" alt="{{- image_alt -}}" height="358" width="240" loading="lazy">
+    </picture>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Club Inspire Feature",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Minimum width: 600px and 5/4 aspect ratio."
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text"
+    },
+    {
+      "type": "richtext",
+      "id": "points_text",
+      "label": "Points CTA text"
+    },
+    {
+      "type": "richtext",
+      "id": "login_text",
+      "label": "Log in text"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "edge-03"
+    },
+    {
+      "type": "select",
+      "id": "top_edge_colour",
+      "label": "Top edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "is-hidden"
+    },
+    {
+      "type": "select",
+      "id": "bottom_edge_colour",
+      "label": "Bottom edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "background_colour",
+      "label": "Background colour",
+      "info": "This can only be applied if a edge version is selected",
+      "options": [
+        {
+          "value": "black-squeeze",
+          "label": "Green"
+        },
+        {
+          "value": "pippin",
+          "label": "Pink"
+        },
+        {
+          "value": "whisper",
+          "label": "Purple"
+        }
+      ],
+      "default": "black-squeeze"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_dots",
+      "label": "Enable dotted background graphics.",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "dot_colour_top",
+      "label": "Colour for the top right dots",
+      "options": [
+        {
+          "value": "persian-green",
+          "label": "Green"
+        },
+        {
+          "value": "royal-purple",
+          "label": "Purple"
+        },
+        {
+          "value": "carnation",
+          "label": "Red"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "persian-green"
+    },
+    {
+      "type": "select",
+      "id": "dot_colour_bottom",
+      "label": "Colour for the bottom left dots",
+      "options": [
+        {
+          "value": "persian-green",
+          "label": "Green"
+        },
+        {
+          "value": "royal-purple",
+          "label": "Purple"
+        },
+        {
+          "value": "carnation",
+          "label": "Red"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "royal-purple"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Club Inspire Feature",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

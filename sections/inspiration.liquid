@@ -1,0 +1,354 @@
+{% liquid
+  assign template_name = 'section-inspiration'
+  assign edge_version = section.settings.edge_version
+  assign background_colour = section.settings.background_colour
+  assign margin_bottom = section.settings.margin_bottom
+  assign link_url = section.settings.link_url
+  assign blogs_tag = section.settings.blogs_tag
+%}
+
+{{- 'section-inspiration.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-article-card.css' | asset_url | stylesheet_tag -}}
+<script src="{{ 'section-inspiration.js' | asset_url }}" defer></script>
+
+<div
+  class="{{- template_name }} u-space-below-{{- margin_bottom }} overflow-hidden"
+  data-section-type="{{- template_name -}}"
+  data-section-id="{{ section.id }}"
+>
+  {%- unless edge_version == 'none' -%}
+    {%- render 'paper-edge', _section: section -%}
+  {%- endunless -%}
+  <div class="container">
+    <div class="content u-content-offset">
+      <div class="heading">
+        <h2 class="u-heading-md">{{ section.settings.title | replace: '<strong>', '<strong><span>' | replace: '</strong>', '</span></strong>' }}</h2>
+        <p class="text-md">{{ section.settings.description }}</p>
+        {% if link_url %}
+          <a href="{{ link_url }}" class="c-btn main primary">{{ section.settings.link_text }}</a>
+        {% endif %}
+      </div>
+
+      <div class="blogs">
+        {%- render 'icon', _name: 'icon-scissors', _class: 'scissors' -%}
+        <h3 class="u-heading-xs heading">{{ section.settings.blogs_title }}</h3>
+
+        <div
+          class="swiper-container"
+          data-slider="blogs"
+          data-autoplay="{{ section.settings.autoplay_blogs }}"
+          data-slides-visible="1.2/2.2/1.2"
+        >
+          <div class="swiper-wrapper">
+            {% liquid
+              for link in linklists[section.settings.blog_menu].links
+                assign blog = link.object
+                if blog.articles
+                  assign featured_articles = featured_articles | concat: blog.articles
+                endif
+              endfor
+              assign featured_articles = featured_articles | sort: 'published_at' | reverse
+            %}
+            {% if blogs_tag.size > 0 %}
+              {%- for article in featured_articles limit: section.settings.blog_limit -%}
+                {% if article.tags contains blogs_tag %}
+                  <div class="swiper-slide">
+                    {%- render 'article-card', article: article, _show_image: true -%}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              {%- for article in featured_articles limit: section.settings.blog_limit -%}
+                <div class="swiper-slide">
+                  {%- render 'article-card', article: article, _show_image: true -%}
+                </div>
+              {%- endfor -%}
+            {% endif %}
+          </div>
+          <div class="swiper-nav">
+            <div class="swiper-button c-btn" data-prev>
+              <span class="sr-only">{{ 'components.slider_labels.previous_slide' | t | escape }}</span>
+              {%- render 'icon', _name: 'icon-arrow-left' -%}
+            </div>
+            <div class="swiper-button c-btn" data-next>
+              <span class="sr-only">{{ 'components.slider_labels.next_slide' | t | escape }}</span>
+              {%- render 'icon', _name: 'icon-arrow-right' -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel">
+      {% liquid
+        if section.blocks.size > 10
+          assign col_limit = 6
+        elsif section.blocks.size > 7
+          assign col_limit = 4
+        else
+          assign col_limit = 12
+        endif
+        assign autoplay_inspiration = section.settings.autoplay_inspiration
+      %}
+      {% render 'carousel', _autoplay_inspiration: autoplay_inspiration, _media_blocks: section.blocks, _col_limit: col_limit, _fallback_link: link_url %}
+      {% if section.blocks.size > 7 %}
+        {% render 'carousel', _autoplay_inspiration: autoplay_inspiration, _media_blocks: section.blocks, _offset: col_limit, _fallback_link: link_url %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Inspiration",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "id": "title",
+      "type": "inline_richtext",
+      "label": "Title",
+      "default": "Looking for your next bit of inspiration?"
+    },
+    {
+      "id": "description",
+      "type": "richtext",
+      "label": "Description",
+      "default": "<p>You've come to the right place! Take a look through our blog for our latest craft hints and tips, news, demonstration videos, launches and more.</p>"
+    },
+    {
+      "id": "link_text",
+      "type": "text",
+      "label": "Link Text",
+      "default": "See more"
+    },
+    {
+      "id": "link_url",
+      "type": "url",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Blogs"
+    },
+    {
+      "id": "blogs_title",
+      "type": "text",
+      "label": "Featured Blogs Title",
+      "default": "Latest Blogs"
+    },
+    {
+      "type": "link_list",
+      "id": "blog_menu",
+      "label": "Blogs Menu",
+      "info": "The menu is used to find all blogs."
+    },
+    {
+      "id": "blogs_tag",
+      "type": "text",
+      "label": "Tag To Filter Blogs (optional)",
+      "info": "If entered, blogs shown will be filtered on this tag rather than just showing most recent"
+    },
+    {
+      "id": "blog_limit",
+      "type": "number",
+      "label": "Featured Blogs Limit",
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_blogs",
+      "label": "Autoplay Blog Slider?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Carousels"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_inspiration",
+      "label": "Autoplay Inspirational Image Sliders?",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Paper Edges"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "top_edge_colour",
+      "label": "Top edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "bottom_edge_colour",
+      "label": "Bottom edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "background_colour",
+      "label": "Background colour",
+      "info": "This can only be applied if a edge version is selected",
+      "options": [
+        {
+          "value": "black-squeeze",
+          "label": "Green"
+        },
+        {
+          "value": "pippin",
+          "label": "Pink"
+        },
+        {
+          "value": "whisper",
+          "label": "Purple"
+        }
+      ],
+      "default": "whisper"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Carousel Image",
+      "type": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Minimum width: 400px and 3/2 aspect ratio."
+        },
+        {
+          "type": "article",
+          "id": "article",
+          "label": "article"
+        }
+      ]
+    },
+    {
+      "name": "Carousel Video",
+      "type": "video",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "article",
+          "id": "article",
+          "label": "article"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Inspiration",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,70 @@
+{% liquid
+  assign has_thumbnails = ''
+  if product.media.size > 1
+    assign has_thumbnails = 'has-thumbnails'
+  endif
+%}
+
+<div class="product-media-slider {{ has_thumbnails -}}" data-pms-container>
+  <div class="header">
+    <p class="u-heading-xs">{{- product.title -}}</p>
+    <div class="price-btn-wrapper">
+      <div class="pricing">
+        <span class="current u-text-xl" data-product-price>{{ _product_price | money }}</span>
+        {%- if _product_compare_at_price != blank -%}
+          <span class="was u-text-md">{{ _product_compare_at_price | money }}</span>
+        {%- endif -%}
+      </div>
+      <div class="media-slider-actions">
+        <button class="c-btn main primary has-icon add-to-basket" data-basket-add-dupe >
+          {%- render 'icon', _name: 'icon-basket' -%}
+          {{- 'products.product.add_to_cart' | t -}}
+        </button>
+        <button class="c-btn main has-icon  add-to-wishlist">
+          {%- render 'icon', _name: 'icon-wishlist' -%}
+          {{- 'products.product.add_to_wishlist' | t -}}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="swiper-container" data-pms-slider>
+      <div class="swiper-wrapper">
+        {%- for media in product.media -%}
+          <div class="swiper-slide {{ media.media_type }}">
+            {%- if media.media_type == 'image' -%}
+              <picture class="image">
+                <source media="(max-width: 550.8px)" srcset="{{- media.preview_image | image_url: width: 600 -}}">
+                <source media="(min-width:551px)" srcset="{{- media.preview_image | image_url: width: 800 -}}">
+                <source media="(min-width:1400px)" srcset="{{- media.preview_image | image_url: width: 1000 -}}">
+                <img src="{{- media.preview_image | image_url: width: 600 -}}" alt="{{- media.alt | default: product.title | strip_html -}}" height="358" width="240" loading="{%- if forloop.first == true -%}eager{%- else -%}lazy{%- endif -%}">
+              </picture>
+            {%- elsif media.media_type == 'video' or media.media_type == 'external_video' -%}
+              {{ media | media_tag: image_size: '1024x', autoplay: false, loop: false, controls: true, preload: 'none' }}
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+      <button class="c-btn swiper-button prev" aria-label="Previous" data-pms-slider-prev>
+        {%- render 'icon', _name: 'icon-arrow-left' -%}
+      </button>
+      <button class="c-btn swiper-button next" aria-label="Next" data-pms-slider-next>
+        {%- render 'icon', _name: 'icon-arrow-right' -%}
+      </button>
+    </div>
+  </div>
+  <div class="thumbs">
+    <div class="swiper-container" data-pms-thumb-slider>
+      <div class="swiper-wrapper">
+        {%- for media in product.media -%}
+          <div class="swiper-slide {{ media.media_type }}">
+            <img src="{{- media.preview_image | image_url: width: 128 -}}" alt="{{- media.alt | default: product.title | strip_html -}}" height="80" width="80" loading="lazy">
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+  <button class="c-btn modal-close" type="button" aria-label="Close" data-pms-modal-close>
+    {%- render 'icon', _name: 'icon-close' -%}
+  </button>
+</div>

@@ -1,0 +1,83 @@
+{% liquid
+  assign show_parent_brand_nav = false
+
+  assign parent_brand_logo = _parent_brand_metaobject.logo
+  assign collection = collections[_parent_brand_metaobject.collection]
+  assign page = pages[_parent_brand_metaobject.page]
+  assign overlay_colour = _parent_brand_metaobject.colour_overlay
+  assign text_colour = _parent_brand_metaobject.text_colour
+  assign parent_brand = _parent_brand_metaobject.parent_brand
+
+  assign background_image = _parent_brand_metaobject.background_image
+
+  if template contains 'product'
+    assign background_image = background_image | image_url: width: 1200
+    assign background_image_1x = background_image | image_url: width: 800
+    assign background_image_2x = background_image | image_url: width: 1920
+  endif
+%}
+
+{{- 'snippet-brand-nav.css' | asset_url | stylesheet_tag -}}
+
+<style>
+  .snippet-brand-nav{
+  	color: {{ text_colour }};
+  	border-bottom-color: {{ text_colour }};
+
+  	{% if template contains 'product' %}
+  		margin-bottom: 1.5rem;
+  	{% endif %}
+  }
+  {% if template contains 'product' %}
+  	.snippet-brand-nav::before {
+  		content:'';
+  		position:absolute;
+  		inset: 0;
+  		height: 100%;
+  		width: 100%;
+  		z-index: 1;
+  		background-image: url({{- background_image -}});
+  		background-image: -webkit-image-set(
+  			url({{- background_image_1x -}}) 1x,
+  			url({{- background_image_2x -}}) 2x);
+  		background-image: image-set(
+  			url({{- background_image_1x -}}) 1x,
+  			url({{- background_image_2x -}}) 2x);
+  		background-size:cover;
+  		background-repeat: no-repeat;
+  	}
+  	.snippet-brand-nav::after {
+  		content:'';
+  		position:absolute;
+  		inset: 0;
+  		height: 100%;
+  		width: 100%;
+  		z-index: 5;
+  		background-color: {{ overlay_colour }};
+  		opacity:0.88;
+  	}
+  	.snippet-brand-nav .container{
+  		position: relative;
+  		z-index:10;
+  	}
+  {% else %}
+  	.snippet-brand-nav {
+  		background-color: {{ overlay_colour }};
+  	}
+  {% endif %}
+</style>
+<div class="snippet-brand-nav">
+  <div class="container">
+    <a href="{{ page.url }}" aria-label="" class="logo">
+      {{ parent_brand_logo | image_url: height: 32 | image_tag: alt: parent_brand_logo.alt, loading: 'eager' }}
+    </a>
+    <ul>
+      <li>
+        <a href="{{ collection.url }}">Shop all</a>
+      </li>
+      <li>
+        <a href="{{ page.url }}">About</a>
+      </li>
+    </ul>
+  </div>
+</div>

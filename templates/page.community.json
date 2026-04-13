@@ -1,0 +1,130 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "94ad4674-ba7c-4581-b00a-38258e96c206": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/community-intro.png",
+        "main_heading": "How we’re helping",
+        "main_text": "<p>Here at Crafter’s Companion, we’re committed to <strong>supporting our local community <\/strong>in the North East of England, as well as across the world. We’re proud to support a number of different charities with various fundraising<strong> activities <\/strong>throughout the year – <strong>take a peek at<\/strong> what we’ve been up to!<\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "6b5916e0-dd66-4447-9621-e70382d6e9c0": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/sara-gem.jpg",
+        "main_heading": "Charity of the Year",
+        "main_text": "<p>This year, our chosen Charity of the Year is the Bradley Lowery Foundation.<\/p><p><strong>The charity, which is based in the UK,<\/strong> was established in August 2017 after six-year-old Bradley Lowery, lost his fight to Stage 4 High Risk Neuroblastoma, a rare and aggressive form of childhood cancer.<\/p><p>In 2013, his mum, Gemma, started a fundraising campaign to raise funds to get Bradley treatment in the USA. The campaign was hugely successful and with the support of thousands of people, raised over £1.3m, as well as vital awareness for Neuroblastoma and other childhood cancers.  These donations provided the funding base for the charity.<\/p><p>The Bradley Lowery Foundation aims to support families who are fundraising for treatment or equipment, which is not readily available or covered by the NHS. The foundation also supports research into neuroblastoma and childhood cancers, is developing plans to support a £600,000 holiday home in Scarborough and runs a support line for the families of children with cancer in the North East.<\/p><p>In addition to The Bradley Lowery Foundation, Crafter’s Companion regularly backs national and international fundraising campaigns such as Children In Need, Cash For Kids, Save The Children’s Christmas Jumper Day and more.<\/p>",
+        "main_link_url": "https:\/\/bradleyloweryfoundation.com\/",
+        "main_link_text": "Find out more",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "quaternary",
+        "edge_version": "edge-03",
+        "top_edge_colour": "is-hidden",
+        "bottom_edge_colour": "is-hidden",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "5794e007-7780-4665-8b12-93628d1a2785": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "<h2>Crafter’s Companion also supports a number of schools and sports teams. We are proud sponsors of <strong>Tudhoe Cricket Club and Spennymoor Town FC. <\/strong><\/h2>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "f46fd6d3-6dfa-4d80-b1e2-77513bccad18": {
+      "type": "image-grid",
+      "blocks": {
+        "40a7ea34-29ae-444d-a66a-e86b12613edd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/298952848_473892448078344_7709099312238451693_n.jpg"
+          }
+        },
+        "2054f03f-49c6-4fa9-aaf7-7272801f3e6d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ATC-Full-Logo-web_Large_63c8e927-ba20-445b-a58a-7998bfd28328.jpg"
+          }
+        },
+        "6ce9926d-d6ab-4518-99a5-cec539117e8a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/11402821_987743591258740_52800544474659725_o.jpg"
+          }
+        },
+        "1c3f2af2-fa24-4be9-910c-b06f4c8be079": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/367449290_776981127764580_9059094536663282950_n-removebg-preview_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "40a7ea34-29ae-444d-a66a-e86b12613edd",
+        "2054f03f-49c6-4fa9-aaf7-7272801f3e6d",
+        "6ce9926d-d6ab-4518-99a5-cec539117e8a",
+        "1c3f2af2-fa24-4be9-910c-b06f4c8be079"
+      ],
+      "settings": {
+        "heading": "",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "94ad4674-ba7c-4581-b00a-38258e96c206",
+    "6b5916e0-dd66-4447-9621-e70382d6e9c0",
+    "5794e007-7780-4665-8b12-93628d1a2785",
+    "f46fd6d3-6dfa-4d80-b1e2-77513bccad18"
+  ]
+}

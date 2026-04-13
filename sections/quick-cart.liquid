@@ -1,0 +1,108 @@
+{%- liquid
+  assign quick_cart_enable = false
+  if settings.quick_cart_enable and template.name != 'cart'
+    assign quick_cart_enable = true
+  endif
+  assign cart_original_total = 0
+-%}
+
+{%- if quick_cart_enable -%}
+  {{- 'snippet-modal-component.css' | asset_url | stylesheet_tag -}}
+  {{- 'section-quick-cart.css' | asset_url | stylesheet_tag -}}
+  {{- 'snippet-cart-item.css' | asset_url | stylesheet_tag -}}
+
+  <div class="section-quick-cart" data-quick-cart-pullout>
+    <div class="quick-cart-header">
+      <div>
+        <h2>{{ 'template.cart.title' | t }}</h2>
+        <p>
+          {{ 'template.cart.subtotal' | t }} ({{ cart.item_count }}
+          {{ cart.item_count | pluralize: 'item', 'items' }}) | <span>{{ cart.total_price | money }}</span>
+        </p>
+      </div>
+
+      <button class="c-btn close is-svg" type="button" aria-label="Close" data-quick-cart-close>
+        {%- render 'icon', _name: 'icon-close-white' -%}
+      </button>
+    </div>
+
+    <div class="quick-cart-container" data-quick-cart>
+      {% if cart.item_count > 0 %}
+        {% render 'cart-delivery-threshold' %}
+
+        <hr class="quick-cart-hr">
+
+        <div class="c-form">
+          <div
+            class="content"
+            data-quick-cart-content
+            {% unless cart.item_count > 0 %}
+              hidden
+            {% endunless %}
+          >
+            <ul class="cart-items" data-quick-cart-items data-csapp_line_wrapper>
+              {%- if cart.item_count > 0 -%}
+                {%- for item in cart.items -%}
+                  {% liquid
+                    assign item_original_price = item.price | times: item.quantity
+
+                    if item.product.compare_at_price > 0
+                      assign item_original_price = item.product.compare_at_price | times: item.quantity
+                    endif
+
+                    assign cart_original_total = cart_original_total | plus: item_original_price
+                  %}
+
+                  {%- render 'cart-item', item: item, collection: collection, _forloop_index: forloop.index, _quick-cart-class: 'quick-cart-item' -%}
+                {%- endfor -%}
+              {%- endif -%}
+            </ul>
+          </div>
+        </div>
+        <div class="actions quick-cart-footer" data-quick-cart-actions>
+          <dl class="quick-cart-subtotal">
+            <dt>{{- 'template.cart.subtotal' | t -}}</dt>
+            <dd>
+              {% if cart_original_total > 0 and cart_original_total != cart.total_price %}
+                <s>{{- cart_original_total | money -}}</s>
+              {% endif %}
+
+              <span class="csapps-cart-original-total">{{- cart.total_price | money -}}</span>
+            </dd>
+            <div class="aiod_cart_total" hidden></div>
+          </dl>
+
+          <div class="quick-cart-footer-actions">
+            <a href="{{- routes.cart_url -}}" aria-label="{{- 'View Basket' | escape -}}" class="c-btn main secondary-text-dark">
+              {{ 'template.cart.view_my_basket' | t }}
+            </a>
+            <a class="c-btn main checkout primary" aria-label="Checkout" href="{{- '/checkout' -}}">
+              {% render 'icon', _name: 'icon-bag' -%}
+              {{ 'template.cart.checkout' | t }}
+            </a>
+          </div>
+          <p class="discount-disclaimer">{{ 'template.cart.discounts_at_checkout_html' | t: _cart_url: routes.cart_url }}</p>
+          <div class="payments">
+            <p>{{- 'template.cart.accepted_payment_methods' | t }}</p>
+            {%- render 'payment-icons' -%}
+          </div>
+        </div>
+      {% else %}
+        <div class="empty" data-quick-cart-empty>
+          {%- render 'icon', _name: 'icon-basket' -%}
+          {{- settings.quick_cart_empty_text | replace: '<p>', '<p class="title">' -}}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div hidden data-cart-count>{{ cart.item_count }}</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Quick Cart",
+  "tag": "section",
+  "settings": []
+}
+{% endschema %}

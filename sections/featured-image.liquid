@@ -1,0 +1,130 @@
+{% liquid
+  assign template_name = 'section-featured-image'
+
+  assign image = section.settings.image
+  assign image_mobile = section.settings.image_mobile
+  assign url = section.settings.url
+  assign disable_aspect_ratio = section.settings.disable_aspect_ratio
+  assign enable_full_width = section.settings.enable_full_width
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{% if image != blank %}
+  {{- 'section-featured-image.css' | asset_url | stylesheet_tag -}}
+  {% if disable_aspect_ratio == false or enable_full_width == false %}
+    <style>
+      div[data-section-id="{{ section.id }}"] img{
+        {% if disable_aspect_ratio == false %}
+          aspect-ratio: 16 / 9;
+        {% endif %}
+        {% if enable_full_width == false %}
+          border-radius: var(--border-radius-xl);
+        {% endif %}
+      }
+    </style>
+  {% endif %}
+
+  <div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+    {% if enable_full_width == false %}
+      <div class="container">
+    {% endif %}
+      {% if url != blank %}
+        <a href="{{ url }}">
+      {% endif %}
+     {% if image_mobile != blank %}
+        <picture>
+          <source media="(min-width:1500px)" srcset="{{- image | image_url: width: 1920 -}}">
+          <source media="(min-width:1100px)" srcset="{{- image | image_url: width: 1500 -}}">
+          <source media="(min-width:800px)" srcset="{{- image | image_url: width: 1024 -}}">
+          <source media="(min-width:551px)" srcset="{{- image_mobile | image_url: width: 800 -}}">
+          <source media="(max-width: 550.8px)" srcset="{{- image_mobile | image_url: width: 600 -}}">
+          <img src="{{- image | image_url: height: 512 -}}" alt="{{- image_alt -}}" height="412" width="390" loading="lazy" class="image" />
+        </picture>
+        {% else %}
+          {{ image | image_url: width: 1920 | image_tag: widths: '600, 800, 1024, 1500', alt: image.alt, loading: 'lazy' }}
+      {% endif %}
+      {% if url != blank %}
+        </a>
+      {% endif %}
+      {% if enable_full_width == false %}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Featured Image",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Minimum width: 1920px and 3/1 aspect ratio."
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Image for mobile (optional)",
+      "info": "Minimum width: 800px. "
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_aspect_ratio",
+      "label": "Disable aspect ratio",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_full_width",
+      "label": "Make image full width of the browser",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Featured Image",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

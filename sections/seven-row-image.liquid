@@ -1,0 +1,339 @@
+{% schema %}
+{
+  "name": "Seven Image Row",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Header",
+      "default": "Our Featured Collections"
+    },
+
+    {
+      "type": "header",
+      "content": "Image Block 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Image 1"
+    },
+    {
+      "type": "text",
+      "id": "heading1",
+      "label": "Heading 1",
+      "default": "Heading 1"
+    },
+    {
+      "type": "text",
+      "id": "text1",
+      "label": "Text 1",
+      "default": "Description for image 1."
+    },
+    {
+      "type": "url",
+      "id": "link1",
+      "label": "Link 1"
+    },
+
+    {
+      "type": "header",
+      "content": "Image Block 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image 2"
+    },
+    {
+      "type": "text",
+      "id": "heading2",
+      "label": "Heading 2",
+      "default": "Heading 2"
+    },
+    {
+      "type": "text",
+      "id": "text2",
+      "label": "Text 2",
+      "default": "Description for image 2."
+    },
+    {
+      "type": "url",
+      "id": "link2",
+      "label": "Link 2"
+    },
+
+    {
+      "type": "header",
+      "content": "Image Block 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Image 3"
+    },
+    {
+      "type": "text",
+      "id": "heading3",
+      "label": "Heading 3",
+      "default": "Heading 3"
+    },
+    {
+      "type": "text",
+      "id": "text3",
+      "label": "Text 3",
+      "default": "Description for image 3."
+    },
+    {
+      "type": "url",
+      "id": "link3",
+      "label": "Link 3"
+    },
+
+    {
+      "type": "header",
+      "content": "Image Block 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "image4",
+      "label": "Image 4"
+    },
+    {
+      "type": "text",
+      "id": "heading4",
+      "label": "Heading 4",
+      "default": "Heading 4"
+    },
+    {
+      "type": "text",
+      "id": "text4",
+      "label": "Text 4",
+      "default": "Description for image 4."
+    },
+    {
+      "type": "url",
+      "id": "link4",
+      "label": "Link 4"
+    },
+
+    {
+      "type": "header",
+      "content": "Image Block 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "image5",
+      "label": "Image 5"
+    },
+    {
+      "type": "text",
+      "id": "heading5",
+      "label": "Heading 5",
+      "default": "Heading 5"
+    },
+    {
+      "type": "text",
+      "id": "text5",
+      "label": "Text 5",
+      "default": "Description for image 5."
+    },
+    {
+      "type": "url",
+      "id": "link5",
+      "label": "Link 5"
+    },
+
+    {
+      "type": "header",
+      "content": "Image Block 6"
+    },
+    {
+      "type": "image_picker",
+      "id": "image6",
+      "label": "Image 6"
+    },
+    {
+      "type": "text",
+      "id": "heading6",
+      "label": "Heading 6",
+      "default": "Heading 6"
+    },
+    {
+      "type": "text",
+      "id": "text6",
+      "label": "Text 6",
+      "default": "Description for image 6."
+    },
+    {
+      "type": "url",
+      "id": "link6",
+      "label": "Link 6"
+    },
+
+    {
+      "type": "header",
+      "content": "Image Block 7"
+    },
+    {
+      "type": "image_picker",
+      "id": "image7",
+      "label": "Image 7"
+    },
+    {
+      "type": "text",
+      "id": "heading7",
+      "label": "Heading 7",
+      "default": "Heading 7"
+    },
+    {
+      "type": "text",
+      "id": "text7",
+      "label": "Text 7",
+      "default": "Description for image 7."
+    },
+    {
+      "type": "url",
+      "id": "link7",
+      "label": "Link 7"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Seven Image Row",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+{% assign image_count = 0 %}
+{% for i in (1..7) %}
+  {% assign image_key = 'image' | append: i %}
+  {% if section.settings[image_key] %}
+    {% assign image_count = image_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+<div class="seven-image-row-wrapper image-count-{{ image_count }}">
+  {% if section.settings.main_heading != blank %}
+    <h2 class="seven-image-main-header">{{ section.settings.main_heading }}</h2>
+  {% endif %}
+
+  <div class="seven-image-row">
+    {% for i in (1..7) %}
+      {% capture image_key %}image{{ i }}{% endcapture %}
+      {% capture link_key %}link{{ i }}{% endcapture %}
+      {% capture heading_key %}heading{{ i }}{% endcapture %}
+      {% capture text_key %}text{{ i }}{% endcapture %}
+
+      {% assign image = section.settings[image_key] %}
+      {% assign link = section.settings[link_key] %}
+      {% assign heading = section.settings[heading_key] %}
+      {% assign text = section.settings[text_key] %}
+
+      {% if image %}
+        <div class="seven-image-block">
+          <a href="{{ link | default: '#' }}" class="seven-block-link">
+            <img src="{{ image | image_url: width: 2000 }}" alt="{{ heading | escape }}">
+            <div class="seven-text-content">
+              <h3>{{ heading }}</h3>
+              <p>{{ text }}</p>
+            </div>
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+/* ---- SEVEN IMAGE ROW ---- */
+
+.seven-image-row-wrapper {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.seven-image-main-header {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.seven-image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.seven-image-block {
+  text-align: center;
+  flex: 1 1 calc(14.28% - 20px);
+  max-width: calc(14.28% - 20px);
+}
+
+.seven-block-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.seven-block-link:hover img {
+  transform: scale(1.03);
+}
+
+.seven-image-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.seven-text-content {
+  margin-top: 10px;
+  padding: 0 6px;
+}
+
+.seven-text-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.seven-text-content p {
+  font-size: 14px;
+  color: #333;
+  margin-top: 6px;
+}
+
+/* MOBILE: horizontal scroll layout */
+@media screen and (max-width: 768px) {
+  .seven-image-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 10px 10px 10px;
+  }
+
+  .seven-image-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .seven-image-block {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+
+  .seven-image-main-header {
+    font-size: 22px;
+  }
+}
+</style>

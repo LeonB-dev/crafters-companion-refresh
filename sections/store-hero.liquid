@@ -1,0 +1,152 @@
+{%- liquid
+  assign template_name = 'section-store-hero'
+
+  assign image = page.metafields.custom.featured_image
+  assign address = section.settings.address
+  assign telephone = section.settings.telephone
+  assign email = section.settings.email
+  assign bh_opening_time = section.settings.bh_opening_time
+  assign bh_closing_time = section.settings.bh_closing_time
+  assign map_embed = section.settings.map_embed
+%}
+
+{{- 'section-store-hero.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-below-lg" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <div class="container">
+    <header class="header">
+      {{- image | image_url: width: 200 | image_tag: alt: image.alt | default: page.title, loading: 'eager' -}}
+      <div class="content">
+        <small>Store</small>
+        <h2 class="u-heading-sm">{{- page.title -}}</h2>
+        {{- page.content -}}
+      </div>
+    </header>
+    <hr class="whisper">
+    <div class="information">
+      {%- if address != blank or telephone != blank or email != blank -%}
+        <div class="details">
+          <h3 class="u-text-lg">Store details</h3>
+          {%- if address != blank -%}
+            <div class="address">
+              {%- render 'icon', _name: 'icon-map' -%}
+              <address>{{- address | replace: ',', ',<br>' -}}</address>
+              <a href="" _target="blank" class="c-btn alt primary">
+                Get directions
+                {%- render 'icon', _name: 'icon-arrow-right' -%}
+              </a>
+            </div>
+          {%- endif -%}
+          {%- if telephone != blank -%}
+            <div>
+              {%- render 'icon', _name: 'icon-phone' -%}
+              <a href="tel:{{- telephone | remove: ' ' -}}">{{- telephone -}}</a>
+            </div>
+          {%- endif -%}
+          {%- if email != blank -%}
+            <div>
+              {%- render 'icon', _name: 'icon-email-compose' -%}
+              <a href="mailto:{{- email -}}">{{- email -}}</a>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      <div class="hours">
+        <h3 class="u-text-lg">Opening Hours</h3>
+        <ol>
+          {%- for block in section.blocks -%}
+            {% liquid
+              assign day = block.settings.day
+              assign opening_time = block.settings.opening_time
+              assign closing_time = block.settings.closing_time
+            %}
+            {%- if day != blank and opening_time != blank and closing_time != blank -%}
+              <li>{{ day }} <span>{{ opening_time }} am - {{ closing_time }} pm</span></li>
+            {%- endif -%}
+          {%- endfor -%}
+          {%- if bh_opening_time != blank and bh_closing_time != blank -%}
+            <li class="bh">Bank Holiday Hours <span>{{ bh_opening_time }} am - {{ bh_closing_time }} pm</span></li>
+          {%- endif -%}
+        </ol>
+      </div>
+      <div class="map">
+        {{- map_embed -}}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Store Hero",
+  "tag": "section",
+  "max_blocks": 7,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "address",
+      "label": "Address"
+    },
+    {
+      "type": "text",
+      "id": "telephone",
+      "label": "Telephone"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email"
+    },
+    {
+      "type": "header",
+      "content": "Bank Holiday Hours"
+    },
+    {
+      "type": "text",
+      "id": "bh_opening_time",
+      "label": "Opening time"
+    },
+    {
+      "type": "text",
+      "id": "bh_closing_time",
+      "label": "Closing time"
+    },
+    {
+      "type": "header",
+      "content": "Map embed"
+    },
+    {
+      "type": "html",
+      "id": "map_embed",
+      "label": "Map embed iframe"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Opening Hour block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "day",
+          "label": "Day"
+        },
+        {
+          "type": "text",
+          "id": "opening_time",
+          "label": "Opening time"
+        },
+        {
+          "type": "text",
+          "id": "closing_time",
+          "label": "Closing time"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,29 @@
+.section-crafters-tv-presenter .presenter-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 0.5rem;
+}
+@media (max-width: 575.98px) {
+  .section-crafters-tv-presenter .presenter-details {
+    justify-content: center;
+  }
+}
+.section-crafters-tv-presenter .presenter-details, .section-crafters-tv-presenter .presenter-details li {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.section-crafters-tv-presenter .presenter-details li {
+  gap: 1rem;
+}
+.section-crafters-tv-presenter .presenter-details li svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.section-crafters-tv-presenter .presenter-details li dd {
+  color: var(--colour-royal-purple);
+}
+.section-crafters-tv-presenter .c-btn {
+  margin-top: 2rem;
+}

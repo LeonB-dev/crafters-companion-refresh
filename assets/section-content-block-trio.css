@@ -1,0 +1,14 @@
+@media (min-width: 1024px) {
+  .section-content-block-trio .content-blocks {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.section-content-block-trio .swiper-container .swiper-slide {
+  height: auto;
+  width: 100%;
+}
+.section-content-block-trio .swiper-container .snippet-promotion-item {
+  height: 100%;
+}

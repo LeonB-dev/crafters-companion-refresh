@@ -1,0 +1,92 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "centre": false
+      }
+    },
+    "6a61db14-3ab9-4de6-b35f-19fce694c354": {
+      "type": "featured-image",
+      "settings": {
+        "url": "shopify:\/\/products\/gemini-ii-die-cutting-and-embossing-machine",
+        "image": "shopify:\/\/shop_images\/Main_Banner_Desktop_Version_2_copy_2048x2048_9ffb2f11-6cb3-4cd7-bea6-3047f8fb9375.webp",
+        "disable_aspect_ratio": false,
+        "enable_full_width": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "c0e8e974-d0de-490e-a57e-270a414397d3": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/gemiilanding_072a7014-d49c-4f70-acf1-0b3ae5d41bac.png",
+        "main_heading": "Cutting edge creativity. ",
+        "main_text": "<p>Innovative design features. Unparalleled cutting power. Infinite possibilities. Smarter and faster, meet our new die cutting and embossing machine! The Gemini II has all of the power, precision and performance of the original Gemini, with unique new features and updated functions.<\/p>",
+        "main_link_url": "shopify:\/\/products\/gemini-ii-die-cutting-and-embossing-machine",
+        "main_link_text": "Shop now",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "secondary",
+        "edge_version": "none",
+        "top_edge_colour": "pink",
+        "bottom_edge_colour": "pink",
+        "background_colour": "pippin",
+        "content_position": "vertical-centre",
+        "margin_bottom": "md",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "d52537b2-2b6d-4d28-8802-d5b8aa15cce3": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/9x12platecol_50ffb37c-3671-4861-8e2d-1c51d3e80655.jpg",
+        "main_heading": "Accessories.",
+        "main_text": "<p>Take your crafts to the next level with our new range of Gemini ll accessories. Choose from an exciting selection of products including a 360° Turn Table that attaches to the base of your machine, so you can enjoy crafting from any angle, a Magnetic Die Storage Stand that keeps your metal dies together and in one place, extra resilient White Cutting Plates that last even longer than before and more.<\/p>",
+        "main_link_url": "shopify:\/\/collections\/gemini",
+        "main_link_text": "Shop now",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-right",
+        "link_colour": "secondary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "md",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "6a61db14-3ab9-4de6-b35f-19fce694c354",
+    "c0e8e974-d0de-490e-a57e-270a414397d3",
+    "d52537b2-2b6d-4d28-8802-d5b8aa15cce3"
+  ]
+}

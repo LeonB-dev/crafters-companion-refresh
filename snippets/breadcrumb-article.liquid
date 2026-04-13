@@ -1,0 +1,53 @@
+{% liquid
+
+%}
+
+{{- 'snippet-breadcrumb-article.css' | asset_url | stylesheet_tag -}}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let previousPageUrl = document.referrer;
+    let breadcrumbs = document.querySelectorAll('a[data-article-breadcrumb]');
+    let breadcrumbLi = document.querySelector('[data-article-breadcrumb-li]');
+    let mql = window.matchMedia(`(min-width: ${window.theme.breakpoints.md}px)`);
+    if (previousPageUrl.includes('craft-area')) {
+      breadcrumbs.forEach((breadcrumb) => {
+        let breadcrumbSpan = breadcrumb.querySelector('.craft-area');
+        let breadcrumbHandle = previousPageUrl.split('/')[6];
+        let breadcrumbNameSplit = breadcrumbHandle.split('_')[1];
+
+        breadcrumb.setAttribute('href', previousPageUrl);
+        breadcrumbSpan.innerText = breadcrumbNameSplit;
+        // console.log('breadcrumbSpan', breadcrumbSpan);
+        // console.log('breadcrumbHandle', breadcrumbHandle);
+        // console.log('breadcrumbNameSplit', breadcrumbNameSplit);
+        if(mql.matches) {
+          breadcrumbLi.hidden = false;
+        }
+      });
+    }
+  });
+</script>
+
+<nav class="snippet-breadcrumb-article">
+  <ol>
+    <li>
+      <a href="{{ routes.root_url }}" title="Home" rel="home">Home</a>
+    </li>
+    <li>
+      <a href="{{ _blog.url }}" title="Home">{{- _blog.title -}}</a>
+    </li>
+    <li hidden data-article-breadcrumb-li>
+      <a href="{{- _blog.url -}}" title="Home"  data-article-breadcrumb>
+        <span class="craft-area"></span>
+      </a>
+    </li>
+    <li>
+      <span>{{- _title -}}</span>
+    </li>
+  </ol>
+  <a href="{{- _blog.url -}}" data-article-breadcrumb>
+    {%- render 'icon', _name: 'icon-arrow-left' %}
+    <span class="back-to">Back to</span> <span class="craft-area"> {{ _blog.title }}</span>
+  </a>
+</nav>

@@ -1,0 +1,205 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slider_j3eCqU": {
+      "type": "slider",
+      "blocks": {
+        "slide_48WBTT": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify://shop_images/1240_x_500_Desktop_b84dee08-f80e-4850-a3f1-0c9b62fa973c.jpg",
+            "image_mobile": "shopify://shop_images/375_x_210_Mobile_dec4d196-f81c-4dc5-92e2-b56fc34478ef.jpg",
+            "link_url": "shopify://pages/black-friday",
+            "slider_delay_timer": 1
+          }
+        }
+      },
+      "block_order": [
+        "slide_48WBTT"
+      ],
+      "settings": {
+        "use_full_width": false,
+        "use_autoplay": false,
+        "use_nav": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "main": {
+      "type": "crafters-tv-deals",
+      "disabled": true,
+      "settings": {
+        "title": "Deals & Offers",
+        "heading": "Great deals for you",
+        "text": "<p>Discover a world of deals as shown on Crafter's TV! From exclusive bundles to product launches and more, find a huge range of offers, hand picked by our experts.</p>",
+        "featured_promotions_heading": ""
+      }
+    },
+    "55a74e80-3f89-4fe5-96e5-e578618a482b": {
+      "type": "image-text-slider",
+      "blocks": {
+        "853ba66c-5688-4c01-a8d8-e381ff827396": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Get up to 70% off Selected Embossing Folders all through the month!",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/up-to-70-off-selected-embossing-folders",
+            "image": "shopify://shop_images/1500_x_1000_ba07f6ce-1ee8-4ad9-a887-53fe1636372e.jpg"
+          }
+        },
+        "ad5e7825-1f3c-4caf-9f3f-83b4a1a5c1ed": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Colour your crafts creatively with 30% off all Inkpads this November!",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/30-off-selected-inkpads",
+            "image": "shopify://shop_images/1500_x_1000_9891e0ab-b44b-4e8e-896d-771264a89802.jpg"
+          }
+        },
+        "d3ba2e14-3203-4edd-a35e-a9f36bfdceb5": {
+          "type": "info_block",
+          "disabled": true,
+          "settings": {
+            "small_heading": "",
+            "heading": "Bring sparkle and shine to your crafts and projects with the amazing deals of our Firework Flash Sale.",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/firework-flash-sale-crackling-deals",
+            "image": "shopify://shop_images/1500_x_1000_ce9259da-c321-4429-9e1e-bc2d79cc6b4a.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "853ba66c-5688-4c01-a8d8-e381ff827396",
+        "ad5e7825-1f3c-4caf-9f3f-83b4a1a5c1ed",
+        "d3ba2e14-3203-4edd-a35e-a9f36bfdceb5"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "main",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "none"
+      }
+    },
+    "image_text_slider_VngeeL": {
+      "type": "image-text-slider",
+      "blocks": {
+        "info_block_PrxVfK": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Don't miss our End of Summer Sale with over 500 items now with up to 70% off!",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/end-of-summer-sale",
+            "image": "shopify://shop_images/1500_x_1000_556f2c68-b65e-4d66-9f73-d05052b3660e.jpg"
+          }
+        },
+        "info_block_kULch8": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Add sparkle to your projects with our glitter glue packs - now with up to 70% off! ",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/up-to-70-off-glitter-glue-packs",
+            "image": "shopify://shop_images/1500_x_1000_16ffb371-258f-4552-bd82-cbb44e438295.jpg"
+          }
+        },
+        "info_block_wTEAz6": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Once they're gone, they're gone!",
+            "text": "",
+            "link_text": "Shop Now",
+            "link_url": "shopify://collections/outlet-sale",
+            "image": "shopify://shop_images/1500_x_1000_b754403c-3479-41dc-9a54-15a3bbc95ae2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "info_block_PrxVfK",
+        "info_block_kULch8",
+        "info_block_wTEAz6"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "main",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "sm"
+      }
+    },
+    "9aca658b-6599-4227-9f96-529c01a21d10": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_xUEzXG": {
+          "type": "collection",
+          "settings": {
+            "collection": "new"
+          }
+        }
+      },
+      "block_order": [
+        "collection_xUEzXG"
+      ],
+      "settings": {
+        "heading": "This week's top selling products",
+        "heading_alignment": false,
+        "link_url": "",
+        "link_text": "",
+        "grid_size": "lg",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "aa695c10-9afd-48e8-973a-b1af5f8b1e28": {
+      "type": "latest-articles",
+      "settings": {
+        "heading": "Available on catchup",
+        "text": "<p>Never miss a show again! No matter the time or place, catch up on your favourite Crafter's TV show. Catch up on yesterday's Wake Up Call, last week's Craft Along, last year's Launch Party and so many more shows at any time on our YouTube channel!</p>",
+        "link_url": "shopify://blogs/crafters-tv",
+        "link_text": "Visit out Crafter's TV archive",
+        "blog": "crafters-tv",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "slider_j3eCqU",
+    "main",
+    "55a74e80-3f89-4fe5-96e5-e578618a482b",
+    "image_text_slider_VngeeL",
+    "9aca658b-6599-4227-9f96-529c01a21d10",
+    "aa695c10-9afd-48e8-973a-b1af5f8b1e28"
+  ]
+}

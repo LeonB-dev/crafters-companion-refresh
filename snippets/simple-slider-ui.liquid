@@ -1,0 +1,16 @@
+<div>
+  <simple-slider-ui class="slider-ui {{ class }}">
+    <ul class="slider-ui__dots {% if use_autoplay %}auto-play{% endif %}"></ul>
+
+    <div class="slider-ui__arrows">
+      <button class="slider-ui__prev" type="button">
+        {%- render 'icon', _name: 'icon-prev' -%}
+        <span class="sr-only">Previous</span>
+      </button>
+      <button class="slider-ui__next active" type="button">
+        {%- render 'icon', _name: 'icon-next' -%}
+        <span class="sr-only">Next</span>
+      </button>
+    </div>
+  </simple-slider-ui>
+</div>

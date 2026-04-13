@@ -1,0 +1,191 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "241b732b-59b6-4034-98ea-03023d94e1a9": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Glitter Glue Storage",
+        "text": "<p>If you love working with glitter glues, pearls and drops you've probably got dozens of them. Whether you want to keep them visible and accessible on the shelf next to your workspace or you want to store them in your cube shelving, we've got the perfect solution for glitter glue storage.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "db9713d7-ef7f-4da7-adcc-3355da8f0301": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SNG05-Edna-fat-glitter-glues.jpg",
+        "main_heading": "Edna Buddy Bag",
+        "main_text": "<p>For any crafter on-the-go, grab this Buddy Bag to keep your glitter glues organized and easily seen. Holds up to 30 bottles.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize",
+        "main_link_text": "View All EZ2O Bags and Totes",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "44ef3abc-decd-40a5-ba0a-f8716828b295": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SNG07-Teresa-re-iners-tim-holtz-orgaizer-Totally-Tiffany-1024x1024.jpg",
+        "main_heading": "Teresa Buddy Bag",
+        "main_text": "<p>Organize your small bottles by color, brand or type of product. This bag will hold 10 Stickles size glitter glues. Great if you like to travel to classes and crops with your supplies.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.totally_tiffany_brands=EZ2Organize",
+        "main_link_text": "View All EZ2O Bags and Totes",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "8d7f3ccb-2891-47d8-80f8-0445da6b8f0e": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SA10_Glitter_Glue__Reinkerwhite-1_1.jpg",
+        "main_heading": "3 Level Stadium Arranger",
+        "main_text": "<p>This desk top organizer will hold up to 80 small glitter glue, Stickles, or re-inker type bottles.  Ideal for small glitter bottles too!<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Desk+Maid",
+        "main_link_text": "View All DeskMaid",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-right",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "6ba1db47-8e0e-49fa-b294-0d8193e0a7f6": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/SS6L-Nuvo-Drops-Stickles-Teardrop-Ink-Organizer.jpg",
+        "main_heading": "Stamp & Supply Stadium",
+        "main_text": "<p>Glitter Glue storage in plain sight! Make your glitter glue easy to access when crafting at home. Stickles Glitter Glues, Re-inker bottles:  14 bottles per row, 84 bottles total.  Also holds larger Nuvo Drops & Studio G bottles.<\/p>",
+        "main_link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany?filter.p.m.custom.storage_range=Desk+Maid",
+        "main_link_text": "View All DeskMaid",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "xs",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "lg",
+        "enable_shapes": false,
+        "shape_position": "vertical-centre",
+        "enable_dots": true,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    },
+    "b0868787-1a25-4c52-a249-0c797812fa3c": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Tips & Tricks",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "10b0df7f-4c8a-4428-bfc6-83491b487a3e": {
+      "type": "content-block-trio",
+      "blocks": {
+        "173cb825-2664-4950-92e2-77c4273c4b9d": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Catalogs on index cards",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/SNS-box-color-catalog-001.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "8e096d28-9d11-4265-b622-b123d51c82a9": {
+          "type": "content_block",
+          "settings": {
+            "heading": "Catalog \"color\" supplies",
+            "text": "",
+            "image": "shopify:\/\/shop_images\/SNS-3-bottom-drawers-loaded-in-box.jpg",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "173cb825-2664-4950-92e2-77c4273c4b9d",
+        "8e096d28-9d11-4265-b622-b123d51c82a9"
+      ],
+      "settings": {
+        "link_style": "alt",
+        "link_colour": "primary"
+      }
+    }
+  },
+  "order": [
+    "241b732b-59b6-4034-98ea-03023d94e1a9",
+    "db9713d7-ef7f-4da7-adcc-3355da8f0301",
+    "44ef3abc-decd-40a5-ba0a-f8716828b295",
+    "8d7f3ccb-2891-47d8-80f8-0445da6b8f0e",
+    "6ba1db47-8e0e-49fa-b294-0d8193e0a7f6",
+    "b0868787-1a25-4c52-a249-0c797812fa3c",
+    "10b0df7f-4c8a-4428-bfc6-83491b487a3e"
+  ]
+}

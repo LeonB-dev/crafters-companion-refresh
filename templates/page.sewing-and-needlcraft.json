@@ -1,0 +1,99 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "0fb83270-8751-43be-9d7e-06e58c8ff80e": {
+      "type": "category-hero",
+      "blocks": {
+        "d0b4af24-585e-4488-82d0-7645d952ae9a": {
+          "type": "tag_block",
+          "disabled": true,
+          "settings": {
+            "collection": "spectrum-noir",
+            "tag": "offer_3 for 2"
+          }
+        }
+      },
+      "block_order": [
+        "d0b4af24-585e-4488-82d0-7645d952ae9a"
+      ],
+      "settings": {
+        "menu": "main-menu",
+        "enable_collection_blocks": false,
+        "enable_blocks": true,
+        "text_width": "full",
+        "margin_bottom": "sm"
+      }
+    },
+    "stmt_inspiration_aBYfB4": {
+      "type": "stmt-inspiration",
+      "blocks": {
+        "tab_3ieyJq": {
+          "type": "tab",
+          "settings": {
+            "title": "Soft Crafts",
+            "content_subtitle": "Get Inspired",
+            "content_title": "Learn to sew",
+            "content_description": "<p>Whether you’re an experienced sewer or picking up a needle for the first time, we’re here to help you get started on your next masterpiece.<\/p>",
+            "featured_collection": "sewing-essentials",
+            "primary_color": "#f5a119",
+            "secondary_color": "#fef1dc",
+            "footer_title": "",
+            "featured_product": "threaders-gingerbread-man-gingerbread-woman-kit",
+            "featured_article_one": "inspiration\/sewing-for-beginners-with-threaders",
+            "featured_article_two": "inspiration\/learn-more-about-sewing-and-needlecraft",
+            "featured_article_three": "",
+            "featured_article_four": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_3ieyJq"
+      ],
+      "settings": {
+        "margin_top": 10,
+        "margin_bottom": 20,
+        "padding_top": 10,
+        "padding_bottom": 20
+      }
+    },
+    "4d90ad4e-453e-4717-9df1-6bc5396b40f5": {
+      "type": "featured-products",
+      "blocks": {
+        "e7a83ced-7755-418b-bd06-5a377cf253f3": {
+          "type": "collection",
+          "settings": {
+            "collection": "sewing-needlecraft"
+          }
+        }
+      },
+      "block_order": [
+        "e7a83ced-7755-418b-bd06-5a377cf253f3"
+      ],
+      "settings": {
+        "heading": "Shop our best-selling products",
+        "heading_alignment": false,
+        "link_url": "",
+        "link_text": "",
+        "grid_size": "lg",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "0fb83270-8751-43be-9d7e-06e58c8ff80e",
+    "stmt_inspiration_aBYfB4",
+    "4d90ad4e-453e-4717-9df1-6bc5396b40f5"
+  ]
+}

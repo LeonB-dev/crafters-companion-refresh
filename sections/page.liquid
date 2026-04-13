@@ -1,0 +1,75 @@
+{% liquid
+  assign template_name = 'section-page'
+
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-page.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-space-above-sm u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <header class="header">
+    <div class="container">
+    <h1 class="u-heading-lg {% if section.settings.centre %}centre{% endif %}" id="page-title">{{- page.title | escape }}</h1>
+    </div>
+  </header>
+  {%- if page.content != blank -%}
+    <div class="container">
+      <div class="c-rte">
+        {{- page.content | replace: '<table', '<div class="c-table"><table' | replace: '</table>', '</table></div>' -}}
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Page",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "centre",
+      "label": "Centre Heading For This Template",
+      "info": "All pages on this template will change. Do not change for the standard page template."
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Page",
+      "category": "Content"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["page"]
+  }
+}
+{% endschema %}

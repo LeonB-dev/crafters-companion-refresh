@@ -1,0 +1,342 @@
+{% doc %}
+  @prompt
+    2 Image row with header in monsteratt font. Each image links somewhere and has a title. works on desktop and mobile, can the images be 1214 x 909 can the size on desktop be 1800px width, desktop width adjustable, different font sizes for mobile, title and content and background colour, add header title and description box that are both central, background colour full width of page
+    
+    
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-image-row-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    width: 100%;
+  }
+
+  .ai-image-row-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.desktop_width }}px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .ai-image-row-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .ai-image-row-title-{{ ai_gen_id }} {
+    font-family: 'Montserrat', sans-serif;
+    font-size: {{ block.settings.header_title_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0 0 16px 0;
+    font-weight: 700;
+  }
+
+  .ai-image-row-description-{{ ai_gen_id }} {
+    font-family: 'Montserrat', sans-serif;
+    font-size: {{ block.settings.header_description_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+  }
+
+  .ai-image-row-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .ai-image-row-item-{{ ai_gen_id }} {
+    position: relative;
+    text-decoration: none;
+    display: block;
+  }
+
+  .ai-image-row-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1214 / 909;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  .ai-image-row-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ai-image-row-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-image-row-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .ai-image-row-item-title-{{ ai_gen_id }} {
+    font-family: 'Montserrat', sans-serif;
+    font-size: {{ block.settings.item_title_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-image-row-container-{{ ai_gen_id }} {
+      padding: 30px 16px;
+    }
+
+    .ai-image-row-header-{{ ai_gen_id }} {
+      margin-bottom: 30px;
+    }
+
+    .ai-image-row-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.header_title_size_mobile }}px;
+    }
+
+    .ai-image-row-description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.header_description_size_mobile }}px;
+    }
+
+    .ai-image-row-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .ai-image-row-item-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.item_title_size_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<div class="ai-image-row-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-image-row-container-{{ ai_gen_id }}">
+    {% if block.settings.header_title != blank or block.settings.header_description != blank %}
+      <div class="ai-image-row-header-{{ ai_gen_id }}">
+        {% if block.settings.header_title != blank %}
+          <h2 class="ai-image-row-title-{{ ai_gen_id }}">{{ block.settings.header_title }}</h2>
+        {% endif %}
+        {% if block.settings.header_description != blank %}
+          <div class="ai-image-row-description-{{ ai_gen_id }}">{{ block.settings.header_description }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ai-image-row-grid-{{ ai_gen_id }}">
+      {% for i in (1..2) %}
+        {% liquid
+          assign image_key = 'image_' | append: i
+          assign link_key = 'link_' | append: i
+          assign title_key = 'title_' | append: i
+          
+          assign image = block.settings[image_key]
+          assign link = block.settings[link_key]
+          assign title = block.settings[title_key]
+        %}
+
+        <a 
+          href="{{ link }}" 
+          class="ai-image-row-item-{{ ai_gen_id }}"
+          {% if link == blank %}aria-disabled="true"{% endif %}
+        >
+          <div class="ai-image-row-image-wrapper-{{ ai_gen_id }}">
+            {% if image %}
+              <img
+                src="{{ image | image_url: width: 1214 }}"
+                alt="{{ image.alt | escape }}"
+                loading="lazy"
+                width="1214"
+                height="909"
+                class="ai-image-row-image-{{ ai_gen_id }}"
+              >
+            {% else %}
+              <div class="ai-image-row-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+          {% if title != blank %}
+            <h3 class="ai-image-row-item-title-{{ ai_gen_id }}">{{ title }}</h3>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "2 image row",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "richtext",
+      "id": "header_title",
+      "label": "Title",
+      "default": "<p>Featured Collections</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "header_description",
+      "label": "Description",
+      "default": "<p>Discover our curated selection</p>"
+    },
+    {
+      "type": "range",
+      "id": "header_title_size",
+      "min": 16,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size (desktop)",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "header_title_size_mobile",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size (mobile)",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "header_description_size",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Description size (desktop)",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "header_description_size_mobile",
+      "min": 12,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Description size (mobile)",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Title",
+      "default": "Collection 1"
+    },
+    {
+      "type": "header",
+      "content": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Title",
+      "default": "Collection 2"
+    },
+    {
+      "type": "header",
+      "content": "Item titles"
+    },
+    {
+      "type": "range",
+      "id": "item_title_size",
+      "min": 14,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size (desktop)",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "item_title_size_mobile",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size (mobile)",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width",
+      "min": 1000,
+      "max": 2000,
+      "step": 100,
+      "unit": "px",
+      "label": "Maximum width (desktop)",
+      "default": 1800
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "2 image row"
+    }
+  ]
+}
+{% endschema %}

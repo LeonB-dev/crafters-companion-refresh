@@ -1,0 +1,32 @@
+{{- 'snippet-breadcrumb.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'snippet-breadcrumb-pdp.js' | asset_url -}}"></script>
+
+<nav aria-label="{{ 'breadcrumb.aria_label' | t }}" role="navigation" class="snippet-breadcrumb container">
+  {%- capture separator -%}
+    {%- render 'icon', _name: 'icon-chevron-right' -%}
+  {%- endcapture -%}
+
+  <ol id="pdp-breadcrumb">
+    <li>
+      <a href="{{ routes.root_url }}" title="Home" rel="home">Home</a>
+      {{ separator }}
+    </li>
+
+    {%- if collection.url -%}
+        <li id="collection-li">
+          <a href="{{ collection.url }}" title="{{ collection.title | escape }}">{{ collection.title | escape }}</a>
+          {{ separator }}
+        </li>
+    {%- else -%}
+      {% assign first_collection = product.collections | first %}
+        <li id="collection-li">
+          <a href="{{ first_collection.url }}" title="{{ first_collection.title }}">{{ first_collection.title }}</a>
+          {{ separator }}
+        </li>
+    {%- endif -%}
+    <li>
+      <span class="breadcrumb-current-desktop" aria-current="page">{{ product.title | escape }}</span>
+      <span class="breadcrumb-current-mobile">{{ product.title | truncate: 25 | escape }}</span>
+    </li>
+  </ol>
+</nav>

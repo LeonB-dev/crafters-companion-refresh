@@ -1,0 +1,290 @@
+{% doc %}
+  @prompt
+    banner with text and this count down timer <table align="center">
+      <tbody>
+        <tr>
+          <td><img src="https://gen.sendtric.com/countdown/dml2wltpv8" style="display: block;max-width:100%;" /></td>
+        </tr>
+      </tbody>
+    </table>, timer on same line as title, title size adjustable, two banner titles split by |, add countdown banner, REMOVE | BETWEEN RIGHT TITLE AND TIMER
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-split-banner-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px;
+    text-align: center;
+  }
+
+  .ai-split-banner__content-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: {{ block.settings.spacing }}px;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .ai-split-banner__title-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.title_size }}px;
+    margin: 0;
+    font-weight: {{ block.settings.title_weight }};
+  }
+
+  .ai-split-banner__divider-{{ ai_gen_id }} {
+    color: {{ block.settings.divider_color }};
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: {{ block.settings.divider_weight }};
+    line-height: 1;
+  }
+
+  .ai-split-banner__timer-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .ai-split-banner__timer-{{ ai_gen_id }} img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-split-banner__title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.8 }}px;
+    }
+
+    .ai-split-banner__divider-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.8 }}px;
+    }
+
+    .ai-split-banner__content-{{ ai_gen_id }} {
+      gap: {{ block.settings.mobile_spacing }}px;
+    }
+
+    {% if block.settings.hide_divider_mobile %}
+      .ai-split-banner__divider-{{ ai_gen_id }} {
+        display: none;
+      }
+    {% endif %}
+  }
+{% endstyle %}
+
+<div
+  class="ai-split-banner-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-split-banner__content-{{ ai_gen_id }}">
+    {% if block.settings.title_left != blank %}
+      <h2 class="ai-split-banner__title-{{ ai_gen_id }}">
+        {{ block.settings.title_left }}
+      </h2>
+    {% endif %}
+
+    <span class="ai-split-banner__divider-{{ ai_gen_id }}">|</span>
+
+    {% if block.settings.title_right != blank %}
+      <h2 class="ai-split-banner__title-{{ ai_gen_id }}">
+        {{ block.settings.title_right }}
+      </h2>
+    {% endif %}
+
+    {% if block.settings.show_timer and block.settings.timer_url != blank %}
+      <div class="ai-split-banner__timer-{{ ai_gen_id }}">
+        <img
+          src="{{ block.settings.timer_url }}"
+          alt="Countdown timer"
+          loading="lazy"
+        >
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Split banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title_left",
+      "label": "Left title",
+      "default": "Black Friday"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title_right",
+      "label": "Right title",
+      "default": "Cyber Monday"
+    },
+    {
+      "type": "header",
+      "content": "Countdown timer"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_timer",
+      "label": "Show countdown timer",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "timer_url",
+      "label": "Countdown timer image URL"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_spacing",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile spacing",
+      "default": 10
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_divider_mobile",
+      "label": "Hide divider on mobile",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Title style"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 12,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 28
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Title weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#1F1300"
+    },
+    {
+      "type": "header",
+      "content": "Divider style"
+    },
+    {
+      "type": "select",
+      "id": "divider_weight",
+      "label": "Divider weight",
+      "options": [
+        {
+          "value": "100",
+          "label": "Thin"
+        },
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "300"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider color",
+      "default": "#1F1300"
+    },
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#FDFFFC"
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Split banner"
+    }
+  ]
+}
+{% endschema %}

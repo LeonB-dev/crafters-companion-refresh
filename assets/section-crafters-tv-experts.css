@@ -1,0 +1,122 @@
+.section-crafters-tv-experts {
+  text-align: center;
+}
+@media (max-width: 1023.98px) {
+  .section-crafters-tv-experts {
+    padding: 4rem 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-crafters-tv-experts {
+    padding: 3.5rem 0 2.5rem;
+  }
+}
+.section-crafters-tv-experts .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-crafters-tv-experts .container .subheading {
+  margin-bottom: 1.25rem;
+}
+.section-crafters-tv-experts .container p {
+  max-width: 550px;
+}
+.section-crafters-tv-experts .experts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.section-crafters-tv-experts .craft-expert-block {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--colour-white);
+  border-radius: var(--border-radius-xl);
+  border: 1px solid var(--colour-emperor);
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 1.5rem;
+  text-align: left;
+}
+@media (min-width: 576px) {
+  .section-crafters-tv-experts .craft-expert-block {
+    width: calc(50% - 0.5rem);
+  }
+}
+@media (min-width: 1024px) {
+  .section-crafters-tv-experts .craft-expert-block {
+    width: calc(33% - 0.46rem);
+  }
+}
+.section-crafters-tv-experts .craft-expert-block > * {
+  display: block;
+}
+.section-crafters-tv-experts .craft-expert-block > *:not(.image) {
+  padding: 0 1.5rem;
+}
+.section-crafters-tv-experts .craft-expert-block p {
+  flex: 1;
+}
+.section-crafters-tv-experts .craft-expert-block .image {
+  border: none;
+  border-bottom: 1px solid var(--colour-emperor);
+  margin-bottom: 1.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+.section-crafters-tv-experts .craft-expert-block .image,
+.section-crafters-tv-experts .craft-expert-block .image img {
+  aspect-ratio: 5/4;
+}
+.section-crafters-tv-experts .craft-expert-block .image img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-duration) var(--transition-timing) 0s;
+}
+.section-crafters-tv-experts .craft-expert-block .image svg {
+  height: 100%;
+}
+.section-crafters-tv-experts .craft-expert-block h3 {
+  margin-bottom: 1.5rem;
+}
+.section-crafters-tv-experts .craft-expert-block ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 0.5rem;
+}
+@media (max-width: 575.98px) {
+  .section-crafters-tv-experts .craft-expert-block ol {
+    justify-content: center;
+  }
+}
+@media (max-width: 1023.98px) {
+  .section-crafters-tv-experts .craft-expert-block ol {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+.section-crafters-tv-experts .craft-expert-block ol, .section-crafters-tv-experts .craft-expert-block ol li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .section-crafters-tv-experts .craft-expert-block ol, .section-crafters-tv-experts .craft-expert-block ol li {
+    gap: 2.5rem;
+  }
+}
+.section-crafters-tv-experts .craft-expert-block ol li {
+  gap: 1rem;
+}
+.section-crafters-tv-experts .craft-expert-block ol li svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.section-crafters-tv-experts .craft-expert-block ol li dd {
+  color: var(--colour-royal-purple);
+}

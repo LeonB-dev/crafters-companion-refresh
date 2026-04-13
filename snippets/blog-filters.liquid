@@ -1,0 +1,377 @@
+{% liquid
+  assign active_tag = request.path | split: '/' | last
+
+  for tag in blog.all_tags
+    assign tag_split = tag | split: '_' | first
+    assign tag_split_handleize = tag_split | handleize
+
+    case tag_split_handleize
+      when 'craft-area'
+        assign show_craft_area = true
+      when 'craft-expert'
+        assign show_craft_expert = true
+      when 'skill-difficulty'
+        assign show_skill_difficulty = true
+      when 'occasion'
+        assign show_occasion = true
+      when 'technique'
+        assign show_technique = true
+      when 'seasonal'
+        assign show_seasonal = true
+      when 'collection'
+        assign show_collection = true
+      when 'show'
+        assign show_shows = true
+      when 'date'
+        assign show_date = true
+    endcase
+  endfor
+
+  assign disabled_class = 'is-disabled'
+%}
+
+{{- 'snippet-blog-filters.css' | asset_url | stylesheet_tag -}}
+
+<div class="snippet-blog-filters" id="blog-filters" data-bf>
+  <button class="close-filters c-btn" data-bf-close>
+    {%- render 'icon', _name: 'icon-close' -%}
+  </button>
+  <nav>
+    <ul class="tier-1">
+      {%- comment -%}Craft Experts{%- endcomment -%}
+      {%- if show_craft_expert == true -%}
+        <li>
+          <button class="c-btn" aria-controls="craft-experts" aria-expanded="false" data-bf-toggle>
+            {%- render 'icon', _name: 'icon-craft-experts' -%}
+            <span>
+              {{- 'template.blog.craft_expert_title' | t -}}
+              {%- render 'icon', _name: 'icon-chevron-down' -%}
+            </span>
+          </button>
+          <ul class="tier-2" id="craft-experts" data-bf-option>
+            {%- for tag in blog.all_tags -%}
+              {% liquid
+                assign tag_split = tag | split: '_' | first
+                assign tag_split_handleize = tag_split | handleize
+                assign current_tag = tag | handleize
+
+              %}
+              {%- if tag_split_handleize contains 'craft-expert' -%}
+                <li
+                  {% if current_tags contains tag -%}
+                    class="is-active"
+                    {% unless current_tags contains tag -%}
+                      class="disabled"
+                    {%- endunless -%}
+                  {%- endif -%}
+                  data-bf-category
+                >
+                  {%- if current_tags contains tag -%}
+                    {{ tag | split: '_' | last | link_to_remove_tag: tag }}
+                  {%- else -%}
+                    {{ tag | split: '_' | last | link_to_add_tag: tag }}
+                  {%- endif -%}
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </li>
+      {%- endif -%}
+      {%- comment -%}Craft Area{%- endcomment -%}
+      {%- if show_craft_area == true -%}
+        <li>
+          <button class="c-btn" aria-controls="craft-area" data-bf-toggle>
+            {%- render 'icon', _name: 'icon-craft-area' -%}
+            <span>
+              {{- 'template.blog.craft_area_title' | t -}}
+              {%- render 'icon', _name: 'icon-chevron-down' -%}
+            </span>
+          </button>
+          <ul class="tier-2" id="craft-area" data-bf-option>
+            {%- for tag in blog.all_tags -%}
+              {% liquid
+                assign tag_split = tag | split: '_' | first
+                assign tag_split_handleize = tag_split | handleize
+                assign current_tag = tag | handleize
+              %}
+              {%- if tag_split_handleize contains 'craft-area' -%}
+                <li
+                  {% if current_tags contains tag -%}
+                    class="is-active"
+                  {%- endif -%}
+                  data-bf-category
+                >
+                  {%- if current_tags contains tag -%}
+                    {{ tag | split: '_' | last | link_to_remove_tag: tag }}
+                  {%- else -%}
+                    {{ tag | split: '_' | last | link_to_add_tag: tag }}
+                  {%- endif -%}
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </li>
+      {%- endif -%}
+      {%- comment -%}Skills and Difficulty{%- endcomment -%}
+      {%- if show_skill_difficulty == true -%}
+        <li>
+          <button class="c-btn" aria-controls="skill-difficulty" data-bf-toggle>
+            {%- render 'icon', _name: 'icon-craft-skills' -%}
+            <span>
+              {{- 'template.blog.craft_skills_title' | t -}}
+              {%- render 'icon', _name: 'icon-chevron-down' -%}
+            </span>
+          </button>
+          <ul class="tier-2" id="skill-difficulty" data-bf-option>
+            {%- for tag in blog.all_tags -%}
+              {% liquid
+                assign tag_split = tag | split: '_' | first
+                assign tag_split_handleize = tag_split | handleize
+                assign current_tag = tag | handleize
+              %}
+              {%- if tag_split_handleize contains 'skill-difficulty' -%}
+                <li
+                  {% if current_tags contains tag -%}
+                    class="is-active"
+                  {%- endif -%}
+                  data-bf-category
+                >
+                  {%- if current_tags contains tag -%}
+                    {{ tag | split: '_' | last | link_to_remove_tag: tag }}
+                  {%- else -%}
+                    {{ tag | split: '_' | last | link_to_add_tag: tag }}
+                  {%- endif -%}
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </li>
+      {%- endif -%}
+      {%- comment -%}Occasion{%- endcomment -%}
+      {%- if show_occasion == true -%}
+        <li>
+          <button class="c-btn" aria-controls="occasion" data-bf-toggle>
+            {%- render 'icon', _name: 'icon-craft-occasion' -%}
+            <span>
+              {{- 'template.blog.craft_occasion_title' | t -}}
+              {%- render 'icon', _name: 'icon-chevron-down' -%}
+            </span>
+          </button>
+          <ul class="tier-2" id="occasion" data-bf-option>
+            {%- for tag in blog.all_tags -%}
+              {% liquid
+                assign tag_split = tag | split: '_' | first
+                assign tag_split_handleize = tag_split | handleize
+                assign current_tag = tag | handleize
+              %}
+              {%- if tag_split_handleize contains 'occasion' -%}
+                <li
+                  {% if current_tags contains tag -%}
+                    class="is-active"
+                  {%- endif -%}
+                  data-bf-category
+                >
+                  {%- if current_tags contains tag -%}
+                    {{ tag | split: '_' | last | link_to_remove_tag: tag }}
+                  {%- else -%}
+                    {{ tag | split: '_' | last | link_to_add_tag: tag }}
+                  {%- endif -%}
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </li>
+      {%- endif -%}
+      {%- comment -%}Technique{%- endcomment -%}
+      {%- if show_technique == true -%}
+        <li>
+          <button class="c-btn" aria-controls="technique" data-bf-toggle>
+            {%- render 'icon', _name: 'icon-craft-technique' -%}
+            <span>
+              {{- 'template.blog.craft_technique_title' | t -}}
+              {%- render 'icon', _name: 'icon-chevron-down' -%}
+            </span>
+          </button>
+          <ul class="tier-2" id="technique" data-bf-option>
+            {%- for tag in blog.all_tags -%}
+              {% liquid
+                assign tag_split = tag | split: '_' | first
+                assign tag_split_handleize = tag_split | handleize
+                assign current_tag = tag | handleize
+              %}
+              {%- if tag_split_handleize contains 'technique' -%}
+                <li
+                  {% if current_tags contains tag -%}
+                    class="is-active"
+                  {%- endif -%}
+                  data-bf-category
+                >
+                  {%- if current_tags contains tag -%}
+                    {{ tag | split: '_' | last | link_to_remove_tag: tag }}
+                  {%- else -%}
+                    {{ tag | split: '_' | last | link_to_add_tag: tag }}
+                  {%- endif -%}
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </li>
+      {%- endif -%}
+      {%- comment -%}Seasonal{%- endcomment -%}
+      {%- if show_seasonal == true -%}
+        <li>
+          <button class="c-btn" aria-controls="seasonal" data-bf-toggle>
+            {%- render 'icon', _name: 'icon-craft-season' -%}
+            <span>
+              {{- 'template.blog.craft_season_title' | t -}}
+              {%- render 'icon', _name: 'icon-chevron-down' -%}
+            </span>
+          </button>
+          <ul class="tier-2" id="seasonal" data-bf-option>
+            {%- for tag in blog.all_tags -%}
+              {% liquid
+                assign tag_split = tag | split: '_' | first
+                assign tag_split_handleize = tag_split | handleize
+                assign current_tag = tag | handleize
+              %}
+              {%- if tag_split_handleize contains 'seasonal' -%}
+                <li
+                  {% if current_tags contains tag -%}
+                    class="is-active"
+                  {%- endif -%}
+                  data-bf-category
+                >
+                  {%- if current_tags contains tag -%}
+                    {{ tag | split: '_' | last | link_to_remove_tag: tag }}
+                  {%- else -%}
+                    {{ tag | split: '_' | last | link_to_add_tag: tag }}
+                  {%- endif -%}
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </li>
+      {%- endif -%}
+      {%- comment -%}Collection{%- endcomment -%}
+      {%- if show_collection == true -%}
+        <li>
+          <button class="c-btn" aria-controls="collection" data-bf-toggle>
+            {%- render 'icon', _name: 'icon-collection' -%}
+            <span>
+              {{- 'template.blog.craft_collection_title' | t -}}
+              {%- render 'icon', _name: 'icon-chevron-down' -%}
+            </span>
+          </button>
+          <ul class="tier-2" id="collection" data-bf-option>
+            {%- for tag in blog.all_tags -%}
+              {% liquid
+                assign tag_split = tag | split: '_' | first
+                assign tag_split_handleize = tag_split | handleize
+                assign current_tag = tag | handleize
+              %}
+              {%- if tag_split_handleize contains 'collection' -%}
+                <li
+                  {% if current_tags contains tag -%}
+                    class="is-active"
+                  {%- endif -%}
+                  data-bf-category
+                >
+                  {%- if current_tags contains tag -%}
+                    {{ tag | split: '_' | last | link_to_remove_tag: tag }}
+                  {%- else -%}
+                    {{ tag | split: '_' | last | link_to_add_tag: tag }}
+                  {%- endif -%}
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </li>
+      {%- endif -%}
+      {%- comment -%}Shows{%- endcomment -%}
+      {%- if show_shows == true -%}
+        <li>
+          <button class="c-btn" aria-controls="shows" data-bf-toggle>
+            {%- render 'icon', _name: 'icon-tv-colour' -%}
+            <span>
+              {{- 'template.blog.craft_shows_title' | t -}}
+              {%- render 'icon', _name: 'icon-chevron-down' -%}
+            </span>
+          </button>
+          <ul class="tier-2" id="shows" data-bf-option>
+            {%- for tag in blog.all_tags -%}
+              {% liquid
+                assign tag_split = tag | split: '_' | first
+                assign tag_split_handleize = tag_split | handleize
+                assign current_tag = tag | handleize
+              %}
+              {%- if tag_split_handleize contains 'show' -%}
+                <li
+                  {% if current_tags contains tag -%}
+                    class="is-active"
+                  {%- endif -%}
+                  data-bf-category
+                >
+                  {%- if current_tags contains tag -%}
+                    {{ tag | split: '_' | last | link_to_remove_tag: tag }}
+                  {%- else -%}
+                    {{ tag | split: '_' | last | link_to_add_tag: tag }}
+                  {%- endif -%}
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </li>
+      {%- endif -%}
+      {%- comment -%}Date{%- endcomment -%}
+      {%- if show_date == true -%}
+        <li>
+          <button class="c-btn" aria-controls="date" aria-expanded="false" data-bf-toggle>
+            {%- render 'icon', _name: 'icon-calendar' -%}
+            <span>
+              {{- 'template.blog.date_title' | t -}}
+              {%- render 'icon', _name: 'icon-chevron-down' -%}
+            </span>
+          </button>
+          <ul class="tier-2" id="date" data-bf-option>
+            {%- for tag in blog.all_tags -%}
+              {% liquid
+                assign tag_split = tag | split: '_' | first
+                assign tag_split_handleize = tag_split | handleize
+                assign current_tag = tag | handleize
+
+              %}
+              {%- if tag_split_handleize contains 'date' -%}
+                <li
+                  {% if current_tags contains tag -%}
+                    class="is-active"
+                    {% unless current_tags contains tag -%}
+                      class="disabled"
+                    {%- endunless -%}
+                  {%- endif -%}
+                  data-bf-category
+                >
+                  {%- if current_tags contains tag -%}
+                    {{ tag | split: '_' | last | link_to_remove_tag: tag }}
+                  {%- else -%}
+                    {{ tag | split: '_' | last | link_to_add_tag: tag }}
+                  {%- endif -%}
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </li>
+      {%- endif -%}
+    </ul>
+    <ul class="active-filters">
+      {% for tag in blog.all_tags %}
+        {% unless current_tags contains tag %}
+          {% continue %}
+        {% endunless %}
+        <li>
+          {{ tag | replace: '_', ': ' | link_to_remove_tag: tag }}
+          {%- render 'icon', _name: 'icon-times' -%}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

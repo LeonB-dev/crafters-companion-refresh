@@ -1,0 +1,256 @@
+{%- liquid
+  assign template_name = 'section-featured-collections'
+  assign margin_bottom = section.settings.margin_bottom
+
+  assign promotions_size = section.blocks.size
+  assign overflow_class = ''
+
+  if promotions_size > 3
+    assign overflow_class = 'add-overflow'
+  endif
+%}
+
+{{- 'section-featured-collections.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-category-item.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-featured-collections.js' | asset_url -}}"></script>
+
+<div class="{{- template_name }} overflow-hidden u-space-below-{{- margin_bottom -}}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {%- render 'paper-edge', _section: section -%}
+  <div class="container">
+    {%-
+      render 'section-header',
+      _heading: section.settings.heading,
+      _image: section.settings.image,
+    -%}
+    <div class="swiper-container" data-fc-slider>
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          {% liquid
+            assign heading = block.settings.heading
+            assign image = block.settings.image
+
+            if block.type == 'collection_block'
+              assign collection = collections[block.settings.collection]
+              assign page_url = collection.url
+              assign page_heading = collection.title
+              assign page_image = collection.image
+              assign page_ribbon = collection.metafields.promotion.lozenge_text
+            elsif block.type == 'page_block'
+              assign page = pages[block.settings.page]
+              assign page_url = page.url
+              assign page_heading = page.title
+              assign page_image = page.metafields.custom.featured_image
+              assign page_ribbon = page.metafields.promotion.lozenge_text
+            endif
+
+            if heading != blank
+              assign page_heading = heading
+            endif
+
+            if image != blank
+              assign page_image = image
+            endif
+          %}
+          <div class="swiper-slide">
+            {% render 'category-item', _url: page_url, _image: page_image, _heading: page_heading, _ribbon: page_ribbon, _loading: 'eager' -%}
+          </div>
+        {%- endfor -%}
+      </div>
+
+      <div class="swiper-nav">
+        <button class="swiper-button c-btn" data-fc-slider-prev>
+          <span class="sr-only">{{ 'components.slider_labels.previous_slide' | t | escape }}</span>
+          {%- render 'icon', _name: 'icon-arrow-left' -%}
+        </button>
+        <button class="swiper-button c-btn" data-fc-slider-next>
+          <span class="sr-only">{{ 'components.slider_labels.next_slide' | t | escape }}</span>
+          {%- render 'icon', _name: 'icon-arrow-right' -%}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured Collections",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "top_edge_colour",
+      "label": "Top edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "bottom_edge_colour",
+      "label": "Bottom edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "background_colour",
+      "label": "Background colour",
+      "info": "This can only be applied if a edge version is selected",
+      "options": [
+        {
+          "value": "black-squeeze",
+          "label": "Green"
+        },
+        {
+          "value": "pippin",
+          "label": "Pink"
+        },
+        {
+          "value": "whisper",
+          "label": "Purple"
+        }
+      ],
+      "default": "whisper"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_block",
+      "name": "Collection block",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "This will override the default image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "info": "This will override the default page/collection title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collections",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

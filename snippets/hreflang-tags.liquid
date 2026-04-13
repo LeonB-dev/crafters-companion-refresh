@@ -1,0 +1,58 @@
+{% assign territories_array = settings.hreflang_domains | strip | split: ',' %}
+{%  comment  %}  
+  hreflang_domains setting format: 'UK:www..., US:www..., [EU]IE/SK/CH/DE/ES:www...'
+
+  A singular code such as UK will be used both for tag matching to 'store-uk' and as a suffix to the hreflang tag, e.g. 'en-UK'.
+  A code group such as [EU] denoted by the brackets will be used for tag-matching to store-eu but will then be split for hreflang tags using 
+  the codes that follow the brackets and are separated by / e.g. 'en-IE', 'en-SK', 'en-CH'.
+  If a product or article does not have a matching store tag ('store-us', 'store-uk', 'store-eu') then that hreflang tag will be skipped.
+{% endcomment %}
+{% liquid
+  assign query_string = _current_query_string | default: ''
+
+  for territory in territories_array
+    assign country_codes = territory | split: ':' | first | strip
+    assign multi_codes = false
+
+    for code in country_codes
+      assign territory_match = false
+
+      if code contains '['
+        assign name = code | split: ']' | first | replace: '[', ''
+        assign country_names = code | split: ']' | last | split: '/'
+        assign multi_codes = true
+      else
+        assign name = code
+      endif
+      assign tag_name = 'Store' | append: '-' | append: name | downcase
+
+      if product
+        assign tags = product.tags
+      elsif article
+        assign tags = article.tags
+      endif
+
+      if tags
+        for tag in tags
+          assign downcased_product_tag = tag | downcase
+          if downcased_product_tag == tag_name
+            assign territory_match = true
+            break
+          endif
+        endfor
+      else
+        assign territory_match = true
+      endif
+
+      if territory_match
+        if multi_codes
+          for country_name in country_names
+            render 'hreflang-tag', name: country_name, territory: territory, _query_string: query_string
+          endfor
+        else
+          render 'hreflang-tag', name: name, territory: territory, _query_string: query_string
+        endif
+      endif   
+    endfor
+  endfor
+%}

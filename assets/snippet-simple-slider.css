@@ -1,0 +1,7 @@
+.simple-slider-ui button,
+.simple-slider-ui li {
+  background: none;
+  border: none;
+  border-radius: 50%;
+  background-color: pink;
+}

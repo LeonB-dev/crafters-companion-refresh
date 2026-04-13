@@ -1,0 +1,140 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "af8e8751-f7fd-425e-bbfd-336cbccb4152": {
+      "type": "text-header",
+      "settings": {
+        "heading": "Stamp Storage",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "sm"
+      }
+    },
+    "ffaa87db-b3a7-49e6-953a-6f955daafe3c": {
+      "type": "image-text-slider",
+      "blocks": {
+        "44f31109-9baf-43d3-a70e-b19219def5d7": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Stamp & Supply Stadium",
+            "text": "",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/1_b7d1ac47-ec69-4569-81ed-f6cef39f712b.jpg"
+          }
+        },
+        "0a121957-e0e0-4606-9fbc-4c184af13ada": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Double-sided Stamp, Store, & Go Bag ",
+            "text": "",
+            "link_text": "View All EZ2Organize ",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/2_fbd2e725-e785-4929-a234-b53700645d03.jpg"
+          }
+        },
+        "d53f14ab-79bf-4b5e-b38d-0091c5bd71a9": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Edna Buddy Bag",
+            "text": "",
+            "link_text": "View All EZ2Organize ",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/3_d2b51ebe-ed03-4506-93a7-61cd6a0f3a48.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "44f31109-9baf-43d3-a70e-b19219def5d7",
+        "0a121957-e0e0-4606-9fbc-4c184af13ada",
+        "d53f14ab-79bf-4b5e-b38d-0091c5bd71a9"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    },
+    "7c198457-4e08-4471-a758-823fbd5e2faa": {
+      "type": "image-text-slider",
+      "blocks": {
+        "c784c62f-8ece-4c61-bed0-b5c644332a5b": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "4 Level Stamp & Supply Stadium",
+            "text": "",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/4_e1336747-6d8b-4ed8-942b-8878f8af7c2e.jpg"
+          }
+        },
+        "7e2edcfa-c63c-432f-80d4-f698fec1aa9b": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "1\" Stamp, Store and Go Bag",
+            "text": "",
+            "link_text": "View All EZ2Organize",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/5_29a9f9f1-ca07-4d0b-a7ff-82d8045f2085.jpg"
+          }
+        },
+        "0305991e-1b5f-471f-92e0-9336393ed02e": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "Stadium Arranger",
+            "text": "",
+            "link_text": "View All Desk Maid",
+            "link_url": "https:\/\/crafters-uk.myshopify.com\/collections\/totally-tiffany",
+            "image": "shopify:\/\/shop_images\/6_f6b9928d-e219-4822-bf18-0ef56936d1cf.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "c784c62f-8ece-4c61-bed0-b5c644332a5b",
+        "7e2edcfa-c63c-432f-80d4-f698fec1aa9b",
+        "0305991e-1b5f-471f-92e0-9336393ed02e"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "alt",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "lg"
+      }
+    }
+  },
+  "order": [
+    "af8e8751-f7fd-425e-bbfd-336cbccb4152",
+    "ffaa87db-b3a7-49e6-953a-6f955daafe3c",
+    "7c198457-4e08-4471-a758-823fbd5e2faa"
+  ]
+}

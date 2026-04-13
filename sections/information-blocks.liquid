@@ -1,0 +1,306 @@
+{%- liquid
+  assign template_name = 'section-information-blocks'
+
+  assign heading = section.settings.heading
+
+  assign margin_bottom = section.settings.margin_bottom
+  assign enable_icons = section.settings.enable_icons
+  assign heading_size = section.settings.heading_size
+
+  assign block_heading_class = 'u-heading-xs'
+
+  if enable_icons == true
+    assign block_heading_class = 'u-text-xl'
+    assign block_class = 'has-icon'
+    assign block_colour = section.settings.block_colour
+  endif
+%}
+
+{{- 'section-information-blocks.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-information-blocks.js' | asset_url -}}" defer></script>
+
+<style>
+  div[data-section-id="{{ section.id }}"]{
+    --block-colour: var(--colour-{{- block_colour -}});
+  }
+</style>
+<div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  {%- render 'paper-edge', _section: section -%}
+  <div class="container">
+    {%- if heading != blank -%}
+      <h2 class="u-heading-{{- heading_size }} centre">{{- heading -}}</h2>
+    {%- endif -%}
+    <div class="swiper-container" data-ib-slider>
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          {% liquid
+            assign category = block.settings.category
+            assign heading = block.settings.heading
+            assign text = block.settings.text
+            assign link_text = block.settings.link_text
+            assign link_url = block.settings.link_url
+            assign icon = block.settings.icon
+          %}
+          <div class="swiper-slide {{ block_class }}" data-ib-slide>
+            {%- if icon != blank and enable_icons == true -%}
+              <div class="icon">{{- icon | image_url: width: 32 | image_tag: alt: icon.alt | default: heading, loading: 'lazy' -}}</div>
+            {%- endif -%}
+            <div class="content">
+              {%- if category != blank -%}
+                <p class="u-text-md category">{{ category }}</p>
+              {%- endif -%}
+              <h3 class="{{ block_heading_class }} heading">{{ heading }}</h3>
+              {{ text }}
+              {%- if link_url != blank and link_text != blank -%}
+                <a href="{{ link_url }}" class="c-btn main primary">{{ link_text }}</a>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+      <div class="swiper-pagination" data-ib-pagination></div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Information Blocks",
+  "tag": "section",
+  "class": "overflow-hidden",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_icons",
+      "label": "Enable icons in the blocks",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Maing heading size",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        }
+      ],
+      "default": "md"
+    },
+    {
+      "type": "select",
+      "id": "edge_version",
+      "label": "Edge version",
+      "options": [
+        {
+          "value": "edge-01",
+          "label": "One"
+        },
+        {
+          "value": "edge-02",
+          "label": "Two"
+        },
+        {
+          "value": "edge-03",
+          "label": "Three"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "top_edge_colour",
+      "label": "Top edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "bottom_edge_colour",
+      "label": "Bottom edge colour",
+      "options": [
+        {
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "pink",
+          "label": "Pink"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "is-hidden",
+          "label": "None"
+        }
+      ],
+      "default": "white"
+    },
+    {
+      "type": "select",
+      "id": "background_colour",
+      "label": "Background colour",
+      "info": "This can only be applied if a edge version is selected",
+      "options": [
+        {
+          "value": "black-squeeze",
+          "label": "Green"
+        },
+        {
+          "value": "pippin",
+          "label": "Pink"
+        },
+        {
+          "value": "whisper",
+          "label": "Purple"
+        }
+      ],
+      "default": "whisper"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Add margin below",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        }
+      ],
+      "default": "lg"
+    },
+    {
+      "type": "select",
+      "id": "block_colour",
+      "label": "Block colour",
+      "info": "This colour will be for the block background on mobile and then for the icon on desktop.",
+      "options": [
+        {
+          "value": "black-squeeze",
+          "label": "Green"
+        },
+        {
+          "value": "pippin",
+          "label": "Pink"
+        },
+        {
+          "value": "whisper",
+          "label": "Purple"
+        }
+      ],
+      "default": "whisper"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "info_block",
+      "name": "Information Block",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "category",
+          "label": "Category / Subheading",
+          "info": "To appear above title."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link Url"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon",
+          "info": "Please enable icons in the section settings to use this feature. Icons must be vector or high-res png image."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Information Blocks",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

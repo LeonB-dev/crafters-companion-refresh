@@ -1,0 +1,101 @@
+{% liquid
+  assign template_name = 'section-content-hub'
+%}
+
+{{- 'section-content-hub.css' | asset_url | stylesheet_tag -}}
+
+<div class="{{- template_name }} u-spacer" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+  <header class="header">
+    <div class="container">
+      <h1 class="u-heading-xl" id="page-title">{{- page.title | escape }}</h1>
+    </div>
+  </header>
+  <div class="container">
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign blog = blogs[block.settings.blog]
+        assign description = block.settings.description | default: blank
+        assign limit = block.settings.limit | default: 4
+        assign cta_enabled = block.settings.cta_enabled
+        assign cta_text = block.settings.cta_text | default: 'View More'
+      -%}
+      {%- if blog and blog.articles.size > 2 -%}
+        <div class="blog">
+          <div class="blog-heading">
+            <h2 class="u-heading-lg">{{- blog.title | escape -}}</h2>
+            {%- if description != blank -%}
+              {{- description | safe -}}
+            {%- endif -%}
+          </div>
+          <div class="grid">
+            {%- if blog.articles.size > 0 -%}
+              {%- for article in blog.articles limit: 3 -%}
+                {%- render 'article-item', article: article, _show_image: true -%}
+              {%- endfor -%}
+            {%- else -%}
+              <p>{{ 'This blog does not have any published articles.' | escape }}</p>
+            {%- endif -%}
+          </div>
+          {%- if cta_enabled == true -%}
+            <a class="c-btn primary" href="{{ blog.url | url }}" title="{{- cta_text | escape -}}">
+              {{- cta_text | escape -}}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Content Hub",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Settings"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "blog",
+      "name": "Blog",
+      "settings": [
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "Blog"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "header",
+          "content": "Call to Action"
+        },
+        {
+          "type": "checkbox",
+          "id": "cta_enabled",
+          "label": "Enabled?",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "Text",
+          "default": "Read More"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Content Hub",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

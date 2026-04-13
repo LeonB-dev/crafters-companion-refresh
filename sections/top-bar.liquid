@@ -1,0 +1,151 @@
+{% liquid
+  assign text_color = section.settings.text_color
+  assign background_color = section.settings.background_color
+  assign cta_background_color = section.settings.cta_background_color
+  assign order_line = section.settings.order_line
+  assign contact_link = section.settings.contact_link
+
+  assign territory_blocks = section.blocks | where: 'type', 'domain'
+  for territory in territory_blocks
+    if territory.settings.url contains shop.domain
+      assign current_domain = territory.settings.name
+      assign current_currency = territory.settings.currency
+      assign file_name = current_domain | handleize
+      assign icon_flag = 'icon-flag-' | append: file_name | append: '.jpg' | downcase | asset_img_url: '64x'
+
+      assign territory_text = current_domain
+      if current_currency != blank
+        assign territory_text = territory_text | append: ' / ' | append: current_currency
+      endif
+    endif
+  endfor
+%}
+{% capture top_bar_styles %}
+  {% if text_color != blank %}
+    color: {{ text_color }};
+  {% endif %}
+  {% if background_color != blank %}
+    background-color: {{ background_color }};
+  {% endif %}
+{% endcapture %}
+
+{% capture cta_styles %}
+  {% if cta_background_color != blank %}
+    background-color: {{ cta_background_color }};
+  {% endif %}
+{% endcapture %}
+
+<link href="{{ 'section-top-bar.css' | asset_url }}" rel="preload" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ 'section-top-bar.css' | asset_url }}"></noscript>
+
+{{- 'snippet-territory-switcher.css' | asset_url | stylesheet_tag -}}
+{{- 'snippet-modal-component.css' | asset_url | stylesheet_tag -}}
+
+<div class="top-bar" style="{{ top_bar_styles }}">
+  <div class="container">
+    {% if order_line != blank %}
+      <div>
+        <a href="tel:{{ order_line }}">
+          {{ 'sections.top-bar.order-line' | t }}
+          {%- render 'icon', _name: 'icon-tel' -%}
+          <span>{{ order_line }}</span>
+        </a>
+      </div>
+    {% endif %}
+
+    <div>
+      <button class="c-btn country-list-toggle" type="button" data-country-list-toggle>
+        <img src="{{- icon_flag -}}" alt="{{ current_domain }} flag" height="12" width="12" loading="eager">
+        <span>{{ territory_text }}</span>
+        {%- render 'icon', _name: 'icon-chevron-down' -%}
+      </button>
+
+      {% render 'territory-switcher', _blocks: territory_blocks %}
+      {% if settings.enable_switcher %}
+        {% render 'territory-modal', _blocks: territory_blocks %}
+      {% endif %}
+    </div>
+
+    {% if contact_link != blank %}
+      <div>
+        <a class="c-btn main-2" href="{{ contact_link }}" style="{{ cta_styles }}">
+          {%- render 'icon', _name: 'icon-headset' -%}
+          {{ 'sections.top-bar.contact-us' | t }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Top Bar",
+  "settings": [
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ECE6F1"
+    },
+    {
+      "type": "color",
+      "id": "cta_background_color",
+      "label": "CTA Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "id": "order_line",
+      "label": "Order line",
+      "default": "01388 663251"
+    },
+    {
+      "type": "url",
+      "id": "contact_link",
+      "label": "Contact Us Link",
+      "default": "/collections/all"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "domain",
+      "name": "Domain",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Domain & Countries"
+        },
+        {
+          "id": "currency",
+          "type": "text",
+          "label": "Territory Currency",
+          "info": "£ GBP, € EUR, $ USD, etc"
+        },
+        {
+          "id": "name",
+          "type": "text",
+          "label": "Territory Name",
+          "info": "E.g. USA, UK, EU, etc"
+        },
+        {
+          "id": "url",
+          "type": "url",
+          "label": "Domain Web Address"
+        },
+        {
+          "id": "countries",
+          "type": "text",
+          "label": "Included Countries",
+          "info": "List all countries in this domain as a comma separated list, e.g. 'Sweden, Finland, France, etc"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

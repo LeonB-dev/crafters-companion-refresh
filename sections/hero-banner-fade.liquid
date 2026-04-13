@@ -1,0 +1,402 @@
+{%- liquid
+  assign template_name = 'section-hero-banner-fade'
+  assign use_autoplay = section.settings.use_autoplay
+  assign transition_time = section.settings.transition_time
+  assign margin_top = section.settings.margin_top
+  assign margin_bottom = section.settings.margin_bottom
+%}
+
+{{- 'section-hero-banner-fade.css' | asset_url | stylesheet_tag -}}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    margin-top: {{ margin_top }}px;
+    margin-bottom: {{ margin_bottom }}px;
+
+    --transition-time: {{ transition_time }}s;
+  }
+</style>
+
+<div
+  class="{{- template_name }}"
+  data-section-type="{{- template_name -}}"
+  data-section-id="{{ section.id }}"
+>
+  <fade-slider data-autoplay="{{- use_autoplay -}}" data-transition-time="{{ section.settings.transition_time | times: 1000 }}">
+    <ul class="fade-slider">
+      {% for block in section.blocks %}
+        {% liquid
+          # Layout
+          assign content_position = block.settings.content_position
+          assign sticker_position_mobile = block.settings.sticker_position_mobile
+          assign sticker_position_desktop = block.settings.sticker_position_desktop
+
+          # Colours
+          assign text_colour = block.settings.text_colour
+          assign slide_background_colour = block.settings.slide_background_colour
+          assign cta_text_colour = block.settings.cta_text_colour
+          assign cta_background_colour = block.settings.cta_background_colour
+
+          # Content
+          assign title = block.settings.title | replace: '<h1>', '<span class="h1">' | replace: '</h1>', '</span>'
+          assign title = title | replace: '<h2>', '<span class="h2">' | replace: '</h2>', '</span>'
+
+          assign subtitle = block.settings.subtitle
+          assign content = block.settings.content
+          assign cta_text = block.settings.cta_text
+          assign link_url = block.settings.link_url
+
+          assign sticker_text = block.settings.sticker_text | replace: '<h1>', '<span class="h1">' | replace: '</h1>', '</span>'
+          assign sticker_text = sticker_text | replace: '<h2>', '<span class="h2">' | replace: '</h2>', '</span>'
+
+          # Images and video
+          assign video = block.settings.video
+          assign poster = null
+          if block.settings.poster
+            assign poster = block.settings.poster | img_url:'master'
+          endif
+          assign video_mobile = block.settings.video_mobile
+          assign poster_mobile = null
+          if block.settings.poster_mobile
+            assign poster_mobile = block.settings.poster_mobile | img_url:'master'
+          endif
+          assign image_desktop = block.settings.image_desktop
+          assign image_mobile = block.settings.image_mobile | default: image_desktop
+          assign image_alt = image_desktop.alt
+        %}
+          <li>
+            <div class="hbf-slide 
+                        {% if forloop.index == 1 %}active{% endif %} 
+                        {% if content_position == "right" %}hbf-slide--content-right{% endif %}">
+              {% if sticker_text != blank %}
+                <div class="hbf-slide__sticker hbf-slide__sticker--mobile
+                           {% if sticker_position_mobile == "right" %}hbf-slide--sticker-right{% endif %}
+                            hbf-slide--desktop-sticker-{{ sticker_position_desktop }}" 
+                        
+                     style="color: {{ cta_text_colour }}; background-color: {{ cta_background_colour }};">
+                  {{ sticker_text }}
+                </div>
+              {% endif %}
+              <div class="hbf-slide__background" style="color: {{ text_colour }}; background-color: {{ slide_background_colour }};">
+                {% if sticker_text != blank and sticker_position_desktop == "boundary" %}
+                  <div class="hbf-slide__sticker hbf-slide__sticker--desktop
+                             {% if sticker_position_mobile == "right" %}hbf-slide--sticker-right{% endif %}
+                              hbf-slide--desktop-sticker-{{ sticker_position_desktop }}" 
+                          
+                       style="color: {{ cta_text_colour }}; background-color: {{ cta_background_colour }};">
+                    {{ sticker_text }}
+                  </div>
+                {% endif %}
+                <div class="hbf-content__grid {% if video %}has-video{% endif %}">
+                  <div class="hbf-content__text">
+                    <span class="hbf-content__subtitle">{{ subtitle }}</span>
+                    <h2>{{ title }}</h2>
+                    <div class="hbf-slide__content">
+                      {{ content }}
+                    </div>
+                    <div class="hbf-slide__buttons">
+                      <a class="c-btn button lozenge-l" href="{{- link_url -}}" class="c-btn" style="color: {{ cta_text_colour }}; background: {{ cta_background_colour }}">{{ cta_text }}</a>
+                      <div class="ui-spacer"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hbf-slide__media">
+                {% if video or video_mobile %}
+                  
+                  <video-loader>
+                    <div class="hbf-slide__video">
+                      {% if video %}
+                        {% if poster %}
+                          {{ video | video_tag: image_size: '400x', autoplay: false, loop: true, controls: false, muted: true, poster: poster }}
+                        {% else %}
+                          {{ video | video_tag: image_size: '400x', autoplay: false, loop: true, controls: false, muted: true }}
+                        {% endif %}
+                      {% endif %}
+                      {% if video_mobile %}
+                        {% if poster_mobile %}
+                          {{ video_mobile | video_tag: image_size: '400x', autoplay: false, loop: true, controls: false, muted: true, class: "video--mobile", poster: poster_mobile }}
+                        {% else %}
+                          {{ video_mobile | video_tag: image_size: '400x', autoplay: false, loop: true, controls: false, muted: true, class: "video--mobile" }}
+                        {% endif %}
+                      {% endif %}
+                      <button
+                        type="button"
+                        class="c-btn video-play"
+                        aria-label="Play video"
+                        data-ci-video-control
+                      >
+                        {%- render 'icon', _name: 'icon-play', _class: 'play' -%}
+                        {%- render 'icon', _name: 'icon-pause', _class: 'pause' -%}
+                      </button>
+                      <button
+                        type="button"
+                        class="c-btn video-play video-play--mobile"
+                        aria-label="Play video"
+                        data-ci-video-control
+                      >
+                        {%- render 'icon', _name: 'icon-play', _class: 'play' -%}
+                        {%- render 'icon', _name: 'icon-pause', _class: 'pause' -%}
+                      </button>
+                    </div>
+                  </video-loader>
+
+                {% elsif image_desktop != blank or image_mobile != blank %}
+
+                  {% capture picture %}
+                    <picture>
+                      <source media="(min-width:1500px)" srcset="{{- image_desktop | image_url: width: 1920 -}}">
+                      <source media="(min-width:1100px)" srcset="{{- image_desktop | image_url: width: 1500 -}}">
+                      <source media="(min-width:800px)" srcset="{{- image_desktop | image_url: width: 1024 -}}">
+                      <source media="(max-width: 767px)" srcset="{{- image_mobile | image_url: width: 800 -}}">
+                      <img fetchpriority="high" src="{{- image_desktop | image_url: width: 800 -}}" alt="{{- image_alt -}}" height="{{ image_desktop.height }}" width="{{ image_desktop.width }}" loading="eager" class="image" />
+                    </picture>
+                  {% endcapture %}
+
+              
+                  {% if sticker_text != blank and sticker_position_desktop != "boundary" %}
+                    <div class="hbf-slide__sticker hbf-slide__sticker--desktop
+                                {% if sticker_position_mobile == "right" %}hbf-slide--sticker-right{% endif %}
+                                hbf-slide--desktop-sticker-{{ sticker_position_desktop }}" 
+                            
+                          style="color: {{ cta_text_colour }}; background-color: {{ cta_background_colour }};">
+                      {{ sticker_text }}
+                    </div>
+                  {% endif %}
+                  {% if link_url != blank %}
+                    <a href="{{- link_url -}}">
+                      {{ picture }}
+                    </a>
+                  {% else %}
+                    {{ picture }}
+                  {% endif %}
+                {% endif %}
+              </div>
+            </div>
+          </li>
+      {%- endfor -%}
+    </ul>
+    {% render 'simple-slider-ui', use_autoplay: use_autoplay %}
+  </fade-slider>
+</div>
+
+{% schema %}
+{
+  "name": "Hero Banner Fade",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "use_autoplay",
+      "label": "Slide Autoplay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "transition_time",
+      "label": "Slide Transition Time",
+      "min": 1,
+      "max": 15,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+          "type": "select",
+          "id": "content_position",
+          "label": "Content Position (desktop)",
+          "info": "Swap position of the text and image.",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "select",
+          "id": "sticker_position_mobile",
+          "label": "Sticker Position (mobile)",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "select",
+          "id": "sticker_position_desktop",
+          "label": "Sticker Position (desktop)",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            },
+            {
+              "value": "boundary",
+              "label": "Boundary"
+            }
+          ],
+          "default": "boundary"
+        },
+        {
+          "type": "header",
+          "content": "Colours"
+        },
+        {
+          "type": "color",
+          "id": "text_colour",
+          "label": "Text Colour",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "slide_background_colour",
+          "label": "Slide Background Colour",
+          "info": "The background of the slide.",
+          "default": "#FEF5F6"
+        },
+        {
+          "type": "color",
+          "id": "cta_text_colour",
+          "label": "CTA Text Colour",
+          "default": "#000000",
+          "info": "Also sets the sticker text colour"
+        },
+        {
+          "type": "color",
+          "id": "cta_background_colour",
+          "label": "CTA Background Colour",
+          "default": "#F3A2AC",
+          "info": "Also sets the sticker background colour"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Subtitle"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "<p>Title</p>",
+          "info": "Use h1 and h2 controls for larger text",
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Content</p>"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "CTA Text",
+          "default": "Shop now"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "CTA URL"
+        },
+        {
+          "type": "richtext",
+          "id": "sticker_text",
+          "label": "Sticker Text",
+          "info": "Use h1 and h2 controls for larger text",
+        },
+        {
+          "type": "header",
+          "content": "Images and video"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_desktop",
+          "label": "Image (Desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image (Mobile)"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video (Desktop)"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Video poster image (Desktop)"
+        },
+        {
+          "type": "video",
+          "id": "video_mobile",
+          "label": "Video (Mobile)"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster_mobile",
+          "label": "Video poster image (Mobile)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner Fade",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,242 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef": {
+      "type": "text-header",
+      "settings": {
+        "heading": "A Year of Craft – Let’s Party : Patterned Papers",
+        "text": "<p>Click on the image of your choice to save and print as desired.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": false,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "md",
+        "margin_top": "sm"
+      }
+    },
+    "bc3a3e6f-0b33-4269-b56b-8d035f31869e": {
+      "type": "downloads",
+      "blocks": {
+        "7594e1af-b4e6-4508-bb77-e3b9585173a3": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%281%29.png",
+            "image": "shopify:\/\/shop_images\/1.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%281%29.png"
+          }
+        },
+        "06979276-603c-4ccf-8937-4c4ddfd7836f": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%282%29.png",
+            "image": "shopify:\/\/shop_images\/2.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%282%29.png"
+          }
+        },
+        "02586605-e1ed-42be-9784-80215a389f93": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%283%29.png",
+            "image": "shopify:\/\/shop_images\/3.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%283%29.png"
+          }
+        },
+        "d890f924-0db2-46a5-a2a9-a0408df25860": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%284%29.png",
+            "image": "shopify:\/\/shop_images\/4.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%284%29.png"
+          }
+        },
+        "f43ab1b3-3ddc-45f7-9bd6-c1f956edb993": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%285%29.png",
+            "image": "shopify:\/\/shop_images\/5_655340dd-b572-48f5-9b89-97ad214066c7.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%285%29.png"
+          }
+        },
+        "306b7828-9f7a-406b-98b2-136054d439e2": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%286%29.png",
+            "image": "shopify:\/\/shop_images\/6.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%286%29.png"
+          }
+        },
+        "323b9f62-4528-443f-a7a9-022fc86d76c4": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%287%29.png",
+            "image": "shopify:\/\/shop_images\/7.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%287%29.png"
+          }
+        },
+        "f286a526-64c5-4595-bbd5-37183fb8664e": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%288%29.png",
+            "image": "shopify:\/\/shop_images\/8.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%288%29.png"
+          }
+        },
+        "b154190a-12ef-4d9d-9f37-afa442421dc2": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%289%29.png",
+            "image": "shopify:\/\/shop_images\/9.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%289%29.png"
+          }
+        },
+        "cc4b4f17-0784-4fba-b6ea-b09f0dfbca72": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2810%29.png",
+            "image": "shopify:\/\/shop_images\/10.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2810%29.png"
+          }
+        },
+        "a7dffe22-44f4-4661-a557-30c24c809216": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2811%29.png",
+            "image": "shopify:\/\/shop_images\/11.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2811%29.png"
+          }
+        },
+        "43ccbc1b-5c21-4c41-a003-4d5d473b5523": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2812%29.png",
+            "image": "shopify:\/\/shop_images\/12_7b916cad-02e2-4597-a674-04edd0ca11ba.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2812%29.png"
+          }
+        },
+        "5c9b7f1e-a68a-42b8-b2d8-468c14e0bdda": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2813%29.png",
+            "image": "shopify:\/\/shop_images\/13.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2813%29.png"
+          }
+        },
+        "c3e5dc3d-b004-4b64-a9a1-2d67c8d03f53": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2814%29.png",
+            "image": "shopify:\/\/shop_images\/14_7f071a4d-2680-4dc0-8cf3-19b76f938de4.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2814%29.png"
+          }
+        },
+        "e9685133-3fad-4e23-b833-001ea98a0c30": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2815%29.png",
+            "image": "shopify:\/\/shop_images\/15_acb8d0be-b5bd-42e2-a0d0-a9f1d160b2b0.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2815%29.png"
+          }
+        },
+        "becf2f5d-6284-46ae-b67a-2e9bfde7a1cc": {
+          "type": "download_block",
+          "settings": {
+            "file": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2816%29.png",
+            "image": "shopify:\/\/shop_images\/16.jpg",
+            "file_name": "",
+            "text": "",
+            "download_text": "https:\/\/ccdownloads.ams3.digitaloceanspaces.com\/page-downloads\/a-year-of-craft-lets-party\/Patterned%20Papers\/ayoc_lp_pp%20%2816%29.png"
+          }
+        }
+      },
+      "block_order": [
+        "7594e1af-b4e6-4508-bb77-e3b9585173a3",
+        "06979276-603c-4ccf-8937-4c4ddfd7836f",
+        "02586605-e1ed-42be-9784-80215a389f93",
+        "d890f924-0db2-46a5-a2a9-a0408df25860",
+        "f43ab1b3-3ddc-45f7-9bd6-c1f956edb993",
+        "306b7828-9f7a-406b-98b2-136054d439e2",
+        "323b9f62-4528-443f-a7a9-022fc86d76c4",
+        "f286a526-64c5-4595-bbd5-37183fb8664e",
+        "b154190a-12ef-4d9d-9f37-afa442421dc2",
+        "cc4b4f17-0784-4fba-b6ea-b09f0dfbca72",
+        "a7dffe22-44f4-4661-a557-30c24c809216",
+        "43ccbc1b-5c21-4c41-a003-4d5d473b5523",
+        "5c9b7f1e-a68a-42b8-b2d8-468c14e0bdda",
+        "c3e5dc3d-b004-4b64-a9a1-2d67c8d03f53",
+        "e9685133-3fad-4e23-b833-001ea98a0c30",
+        "becf2f5d-6284-46ae-b67a-2e9bfde7a1cc"
+      ],
+      "settings": {
+        "grid_layout": true,
+        "margin_bottom": "lg"
+      }
+    },
+    "5b6757f1-6f63-4e45-af57-2b3ed3c65f30": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to Downloads.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft-let-s-party-downloads",
+        "left_align": false,
+        "margin_bottom": "lg"
+      }
+    },
+    "14efce64-0fbe-4db3-b178-7928996cdad0": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "",
+        "small_text": "",
+        "link_text": "Back to A Year Of Craft.",
+        "link_url": "shopify:\/\/pages\/a-year-of-craft",
+        "left_align": false,
+        "margin_bottom": "md"
+      }
+    }
+  },
+  "order": [
+    "dfe7f261-e0be-4018-a8a4-de21f0b5cbef",
+    "bc3a3e6f-0b33-4269-b56b-8d035f31869e",
+    "5b6757f1-6f63-4e45-af57-2b3ed3c65f30",
+    "14efce64-0fbe-4db3-b178-7928996cdad0"
+  ]
+}

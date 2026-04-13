@@ -1,0 +1,274 @@
+{% liquid
+  assign template_name = 'section-collection-carousel'
+
+  assign title = section.settings.title
+  assign description = section.settings.description
+  assign margin_top = section.settings.margin_top
+  assign margin_bottom = section.settings.margin_bottom
+  assign padding_top = section.settings.padding_top
+  assign padding_bottom = section.settings.padding_bottom
+
+  assign short_list_class = ""
+  if section.blocks.size <= 5
+    assign short_list_class = "short-list"
+  endif
+%}
+
+{{- 'section-collection-carousel.css' | asset_url | stylesheet_tag -}}
+
+<div
+  class="{{- template_name }} u-space-above-{{- margin_top }} u-space-below-{{- margin_bottom }} overflow-hidden {{ short_list_class }}"
+  data-section-type="{{- template_name -}}"
+  data-section-id="{{ section.id }}"
+  id="{{ section.id }}"
+>
+  <div class="container">
+    <div class="content">
+      <div class="heading">
+        <h2>{{ title | replace: '<strong>', '<strong><span>' | replace: '</strong>', '</span></strong>' }}</h2>
+        <div>{{ description }}</div>
+      </div>
+    </div>
+  </div>
+
+  <simple-slider class="simple-slider--fullwidth">
+    <ul
+      id="collection-carousel-{{ section.id }}"
+      class="simple-slider results-listn"
+    >
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign collection = block.settings.collection
+
+          assign heading = ''
+          if block.settings.heading != blank
+            assign heading = block.settings.heading
+          else
+            assign heading = collection.title
+          endif
+
+          assign image = ''
+          if block.settings.image
+            assign image = block.settings.image
+          else
+            assign image = collection.image
+          endif
+
+          assign button_text = block.settings.button_text
+
+          assign page_url = block.settings.page_url
+          if page_url == blank
+            assign page_url = collection.url
+          endif
+
+          assign background_color = block.settings.background_color
+          assign heading_color = block.settings.heading_color
+          assign button_text_color = block.settings.button_text_color
+          assign button_background_color = block.settings.button_background_color
+        -%}
+        <li
+          id="collection-carousel-block-{{ forloop.index }}"
+          class="list-item"
+          role="option"
+          aria-selected="false"
+        >
+          {% render 'collection-item', _url: page_url, _image: image, _heading: heading, _heading_color: heading_color, _background_color: background_color, _button_text: button_text, _button_text_color: button_text_color, _button_background_color: button_background_color, _loading: 'eager' -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+
+    {% render 'simple-slider-ui', _items: section.block %}
+  </simple-slider>
+
+  <!-- Show centered grid on desktop when 5 or less blocks -->
+  <div class="container">
+    <div class="content">
+      <ul class="simple-slider-fixed-output">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign collection = block.settings.collection
+
+            assign heading = ''
+            if block.settings.heading != blank
+              assign heading = block.settings.heading
+            else
+              assign heading = collection.title
+            endif
+
+            assign image = ''
+            if block.settings.image
+              assign image = block.settings.image
+            else
+              assign image = collection.image
+            endif
+
+            assign button_text = block.settings.button_text
+
+            assign page_url = block.settings.page_url
+            if page_url == blank
+              assign page_url = collection.url
+            endif
+
+            assign background_color = block.settings.background_color
+            assign heading_color = block.settings.heading_color
+            assign button_text_color = block.settings.button_text_color
+            assign button_background_color = block.settings.button_background_color
+          -%}
+          <li
+            class="list-item"
+            role="option"
+            aria-selected="false"
+          >
+            {% render 'collection-item', _url: page_url, _image: image, _heading: heading, _heading_color: heading_color, _background_color: background_color, _button_text: button_text, _button_text_color: button_text_color, _button_background_color: button_background_color, _loading: 'eager' -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  #{{ section.id }}.section-collection-carousel {
+    margin-top: {{ margin_top }}px;
+    margin-bottom: {{ margin_bottom }}px;
+    padding-top: {{ padding_top }}px;
+    padding-bottom: {{ padding_bottom }}px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Collection Carousel",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "id": "title",
+      "type": "inline_richtext",
+      "label": "Title",
+      "default": "Discover Your Crafting Essentials"
+    },
+    {
+      "id": "description",
+      "type": "richtext",
+      "label": "Description",
+      "default": "<p>We're passionate about providing you everything you need for your crafting journey, whether you're a seasoned crafter or just starting out. Explore our wide range of categories to discover the perfect supplies and tools to bring your creative ideas to life.</p>"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 16
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_item",
+      "name": "Collection Item",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "header",
+          "content": "Settings"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "info": "Optionally override the selected collection's default title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Optionally override the selected collection's default image"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "info": "Enter text to show a button",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "page_url",
+          "label": "URL",
+          "info": "Leave empty to link to the collection page"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#dddddd"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button Text Color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "button_background_color",
+          "label": "Button Background Color",
+          "default": "#ffffff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Carousel",
+      "category": "Content"
+    }
+  ]
+}
+{% endschema %}

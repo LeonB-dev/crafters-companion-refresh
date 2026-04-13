@@ -1,0 +1,139 @@
+{%- liquid
+  assign template_name = 'section-customer-account'
+%}
+{{- 'section-customer.css' | asset_url | stylesheet_tag -}}
+{{- 'section-customer-account.css' | asset_url | stylesheet_tag -}}
+<script src="{{- 'section-customer-account.js' | asset_url -}}"></script>
+<div
+  class="section-customer {{ template_name -}}"
+  data-section-type="{{- template_name -}}"
+  data-section-id="{{ section.id }}">
+  <div class="container">
+    {%- render 'customer-header', _title: title -%}
+    {%- render 'customer-aside', customer: customer, _account_link: false -%}
+    <div class="content">
+      {%- if customer.orders.size > 0 -%}
+        <div class="orders">
+          <h3 class="u-text-xl">{{- 'template.customers.account.recent_orders' | t -}}</h3>
+          <div class="c-table">
+            {% paginate customer.orders by 20 %}
+              <table role="table">
+                <thead role="rowgroup">
+                  <tr role="row">
+                    <th
+                      id="orderId"
+                      scope="col"
+                      role="columnheader">{{- 'template.customers.order.order_id' | t -}}</th>
+                    <th
+                      id="orderDate"
+                      scope="col"
+                      role="columnheader">{{- 'template.customers.order.order_date' | t -}}</th>
+                    <th
+                      id="orderPayment"
+                      scope="col"
+                      role="columnheader">{{- 'template.customers.order.order_payment' | t -}}</th>
+                    <th
+                      id="orderFulfillment"
+                      scope="col"
+                      role="columnheader">{{- 'template.customers.order.order_fulfillment' | t -}}</th>
+                    <th
+                      id="orderTotal"
+                      scope="col"
+                      role="columnheader">{{- 'template.customers.account.address' | t -}}</th>
+                  </tr>
+                </thead>
+                <tbody role="rowgroup">
+                  {% for order in customer.orders %}      
+                             {% unless order.tags contains "Magento_Order" %}     
+                    <tr role="row">
+                      <td role="cell" headers="orderId">
+                        <a
+                          href="{{ order.customer_url }}"
+                          data-order-placed-time="{{ order.created_at | date: '%Y-%m-%e %H:%M' }}">
+                          {{ order.name }}
+                        </a>
+                      </td>
+                      <td role="cell" headers="orderDate">
+                        <a href="{{ order.customer_url }}"
+                          class="no-underline">
+                          {{ order.created_at | date: '%b %d, %Y' }}
+                        </a>
+                      </td>
+                      <td role="cell" headers="orderPayment">
+                        <a href="{{ order.customer_url }}"
+                          class="no-underline">
+                          {{ order.financial_status }}
+                        </a>
+                      </td>
+                      <td role="cell" headers="orderFulfillment">
+                        <a href="{{ order.customer_url }}"
+                          class="no-underline">
+                          {{ order.fulfillment_status }}
+                        </a>
+                      </td>
+                      <td role="cell" headers="orderTotal">
+                        <a href="{{ order.customer_url }}"
+                          class="no-underline">
+                          {{ order.total_price | money }}
+                        </a>
+                      </td>
+                    </tr>
+          {% endunless %}
+                  {% endfor %}
+                </tbody>
+              </table>
+              {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+              {%- endif -%}
+            {%- endpaginate -%}
+          </div>
+        </div>
+            {% endif %}
+      <div class="yotpo-widget-instance" data-yotpo-instance-id="1012027"></div>
+        <div class="yotpo-widget-instance" data-yotpo-instance-id="1012799"></div>
+      <div class="wishlist">
+        <h3 class="u-text-xl">{{- 'template.customers.wishlist.heading' | t -}}</h3>
+        <ol class="blocks">
+          <li class="total" id="wishlist-total">
+            {%- render 'icon', _name: 'icon-wishlist-items' -%}
+            <dl>
+              <dt>{{- 'template.customers.wishlist.total_items' | t -}}</dt>
+              <dd>...</dd>
+            </dl>
+          </li>
+          <li class="custom" id="wishlist-template">
+            {%- render 'icon', _name: 'icon-wishlist-custom' -%}
+            <dl>
+              <dt>List - Loading</dt>
+              <dd>...</dd>
+            </dl>
+          </li>
+        </ol>
+        <a href="{% if settings.wishlist_info_url != blank %}{{ settings.wishlist_info_url }}{% else %}#swym-wishlist{% endif %}">{{- 'template.customers.wishlist.learn_more_html' | t -}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Customer Account",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Settings"
+      }, {
+        "type": "checkbox",
+        "id": "enable_loyalty_section",
+        "label": "Enable Loyalty Section",
+        "default": false
+      }, {
+        "type": "checkbox",
+        "id": "enable_loyalty_loading",
+        "label": "Enable Loyalty Tier Loading Message?",
+        "default": true
+      }
+    ],
+    "blocks": []
+  }
+{% endschema %}

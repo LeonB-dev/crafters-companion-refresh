@@ -1,0 +1,264 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "e11645c8-1ec5-4845-8458-9f1f4115baa2": {
+      "type": "featured-image",
+      "settings": {
+        "url": "",
+        "image": "shopify:\/\/shop_images\/Content_Page_Header.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "3b98a11b-450d-4424-b875-cace5f869244": {
+      "type": "text-header",
+      "settings": {
+        "heading": "YOUR CREATIVE JOURNEY CONTINUES HERE...",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "none",
+        "margin_top": "none"
+      }
+    },
+    "c072dcb6-417c-44b4-a75a-4e216b3131f8": {
+      "type": "text-header",
+      "settings": {
+        "heading": "",
+        "text": "<p><strong>Thank you for buying a Colour Like a Pro Art Kit. <\/strong><br\/>This is your exclusive access to expert hints and tips, <br\/>deep-dive tutorials, downloadable content and more. <\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "none"
+      }
+    },
+    "341cc22a-4d75-47e8-9032-0085ee0b1fd0": {
+      "type": "image-feature",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Content_Page_Hero.jpg",
+        "heading": "ALL THE ESSENTIAL KNOW-HOW YOU NEED…",
+        "text": "<p>You’ve got the right tools, now you just need the right know-how! All the basics are covered here along with useful downloadable content. We’ll be making regular updates so be sure to check back soon<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "disable_height": false,
+        "content_placement": "left"
+      }
+    },
+    "e038907f-fd3f-4f49-8a15-ef34806c81ca": {
+      "type": "text-header",
+      "settings": {
+        "heading": "",
+        "text": "<p>These handy download packs include fully coloured-up examples in each character design, showing you where to leave highlights or add shade and which colours our artist used where. Remember these are just meant as a guide - part of the fun is expressing yourself, so feel free to explore and try things out!<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "none"
+      }
+    },
+    "a39f552e-f7bc-466d-9b37-6f34f5190243": {
+      "type": "image-text-slider",
+      "blocks": {
+        "7ef6fcac-bb46-4203-841f-6af63a1067df": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>DOWNLOADABLE REFERENCE PACK – <strong>CELESTIAL MAIDENS 1<\/strong><\/p>",
+            "link_text": "DOWNLOAD",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/Celestial_Maidens_1.pdf?v=1699960436",
+            "image": "shopify:\/\/shop_images\/Content_Page_Celestrial_Ref_Pack_Celestial_Maidens_1.jpg"
+          }
+        },
+        "3f6451c9-6e54-4155-a4a0-5a0925833d45": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>DOWNLOADABLE REFERENCE PACK – <strong>CELESTIAL MAIDENS 2<\/strong><\/p>",
+            "link_text": "DOWNLOAD",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/Celestial_Maidens_2.pdf?v=1699960436",
+            "image": "shopify:\/\/shop_images\/Content_Page_Celestrial_Ref_Pack_Celestial_Maidens_2_27c99122-d3af-484f-ad3b-1e275c6edfdf.jpg"
+          }
+        },
+        "7f2e3330-238e-4a26-8f02-aa9c9c031b8a": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>DOWNLOADABLE REFERENCE PACK – <strong>CELESTIAL MAIDENS 3<\/strong><\/p>",
+            "link_text": "DOWNLOAD",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/Celestial_Maidens_3.pdf?v=1699960436",
+            "image": "shopify:\/\/shop_images\/Content_Page_Celestrial_Ref_Pack_Celestial_Maidens_3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "7ef6fcac-bb46-4203-841f-6af63a1067df",
+        "3f6451c9-6e54-4155-a4a0-5a0925833d45",
+        "7f2e3330-238e-4a26-8f02-aa9c9c031b8a"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "md",
+        "link_style": "main",
+        "link_colour": "tertiary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "sm"
+      }
+    },
+    "b908fbc4-5750-4610-9d13-c13b400fb6f2": {
+      "type": "image-text-slider",
+      "blocks": {
+        "83429543-1d97-4f88-ada6-8c3d36a4a1e9": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>DOWNLOADABLE REFERENCE PACK –<br\/><strong>WAY OF THE SAMURAI 1<\/strong><\/p>",
+            "link_text": "DOWNLOAD",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/Way_of_the_Samurai_1.pdf?v=1699960665",
+            "image": "shopify:\/\/shop_images\/Content_Page_Celestrial_Ref_Pack_Way_of_the_Samurai_1.jpg"
+          }
+        },
+        "67add935-4171-4673-af9a-d3f7e76f4ce9": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>DOWNLOADABLE REFERENCE PACK –<br\/><strong>WAY OF THE SAMURAI 2<\/strong><\/p>",
+            "link_text": "DOWNLOAD",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/Way_of_the_Samurai_2.pdf?v=1699960665",
+            "image": "shopify:\/\/shop_images\/Content_Page_Celestrial_Ref_Pack_Way_of_the_Samurai_2.jpg"
+          }
+        },
+        "f40ec18d-0769-440c-a1dd-e7a81ab53276": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>DOWNLOADABLE REFERENCE PACK –<strong> WAY OF THE SAMURAI 3<\/strong><\/p>",
+            "link_text": "DOWNLOAD",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/Way_of_the_Samurai_3.pdf?v=1699960665",
+            "image": "shopify:\/\/shop_images\/Content_Page_Celestrial_Ref_Pack_Way_of_the_Samurai_3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "83429543-1d97-4f88-ada6-8c3d36a4a1e9",
+        "67add935-4171-4673-af9a-d3f7e76f4ce9",
+        "f40ec18d-0769-440c-a1dd-e7a81ab53276"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "sm",
+        "link_style": "main",
+        "link_colour": "tertiary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "sm"
+      }
+    },
+    "a981ad35-5f58-4b83-8ba8-de1b494f07b0": {
+      "type": "text-header",
+      "settings": {
+        "heading": "",
+        "text": "<p>Here you can download digital versions of the quick-start guide included with your kit, for immediate easy <br\/>access on your desktop or portable device<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "none"
+      }
+    },
+    "0b6e3ce0-bf56-4ef7-ac6a-818896d17e38": {
+      "type": "image-text-slider",
+      "blocks": {
+        "c314235b-e04b-408e-9156-67f1dfd926f4": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>QUICK-START GUIDE – <strong>MANGA & COMIC HEROES<\/strong><br\/><\/p>",
+            "link_text": "DOWNLOAD",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/CORE_QUICK_START_GUIDE_MANGA___COMIC_HEROES-compressed_1.pdf?v=1699959213",
+            "image": "shopify:\/\/shop_images\/Content_Page_Celestrial_Ref_Pack_Start_Guide_Manga_and_Comic_Heroes.jpg"
+          }
+        },
+        "08af7e70-6e4f-46d4-a7b8-67b952bb43d1": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>QUICK-START GUIDE – <strong>CELESTIAL MAIDENS<\/strong><\/p>",
+            "link_text": "DOWNLOAD",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/CORE_QUICK_START_GUIDE_CELESTIAL_MAIDENS_compressed_3.pdf?v=1699961330",
+            "image": "shopify:\/\/shop_images\/Content_Page_Celestrial_Ref_Pack_Start_Guide_Celestial_Maidens.jpg"
+          }
+        },
+        "b76a839c-b2f8-4d70-ae19-82043aba1c40": {
+          "type": "info_block",
+          "settings": {
+            "small_heading": "",
+            "heading": "",
+            "text": "<p>QUICK-START GUIDE – <strong>WAY OF THE SAMURAI<\/strong><\/p>",
+            "link_text": "DOWNLOAD",
+            "link_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0672\/5615\/6478\/files\/CORE_QUICK_START_GUIDE_WAY_OF_THE_SAMURAI-compressed.pdf?v=1699958790",
+            "image": "shopify:\/\/shop_images\/Content_Page_Celestrial_Ref_Pack_Start_Guide_Way_of_The_Samurai.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "c314235b-e04b-408e-9156-67f1dfd926f4",
+        "08af7e70-6e4f-46d4-a7b8-67b952bb43d1",
+        "b76a839c-b2f8-4d70-ae19-82043aba1c40"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "sm",
+        "link_style": "main",
+        "link_colour": "tertiary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "margin_bottom": "sm"
+      }
+    }
+  },
+  "order": [
+    "e11645c8-1ec5-4845-8458-9f1f4115baa2",
+    "3b98a11b-450d-4424-b875-cace5f869244",
+    "c072dcb6-417c-44b4-a75a-4e216b3131f8",
+    "341cc22a-4d75-47e8-9032-0085ee0b1fd0",
+    "e038907f-fd3f-4f49-8a15-ef34806c81ca",
+    "a39f552e-f7bc-466d-9b37-6f34f5190243",
+    "b908fbc4-5750-4610-9d13-c13b400fb6f2",
+    "a981ad35-5f58-4b83-8ba8-de1b494f07b0",
+    "0b6e3ce0-bf56-4ef7-ac6a-818896d17e38"
+  ]
+}

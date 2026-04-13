@@ -1,0 +1,38 @@
+{% liquid
+  assign carousel_image_height = 300
+  assign carousel_image_width = 600
+  assign image_render_width = 600
+
+  assign image = _media.settings.image
+
+  if _media.settings.article != null
+    assign article_url = _media.settings.article.url
+    assign image = _media.settings.article.image.src
+    assign title = _media.settings.article.title
+  endif
+  
+  assign aria_default = 'template.blog.inspiration' | t
+%}
+
+<div class="carousel-item">
+  {%- if _media.type == 'image' -%}
+    <a href="{{- article_url | default: _fallback_link -}}" aria-label="{{- title | default: aria_default -}}">
+      <img
+        src="{{ image | image_url: width: image_render_width }}"
+        alt="{{- image.alt | default: aria_default -}}"
+        height="140"
+        width="180"
+        loading="lazy">
+      </a>
+  {% else %}
+    <button
+      type="button"
+      class="c-btn video-play"
+      aria-label="Play video"
+      data-ci-video-control>
+      {%- render 'icon', _name: 'icon-play', _class: 'play' -%}
+      {%- render 'icon', _name: 'icon-pause', _class: 'pause' -%}
+    </button>
+    <a href="{{- article_url -}}"  aria-label="{{- title | default: aria_default -}}">{{- _media.settings.video | video_tag: controls: false -}}</a>
+  {% endif %}
+</div>

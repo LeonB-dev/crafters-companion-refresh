@@ -1,0 +1,72 @@
+<script>
+	{%- comment -%}
+			Delay non-important scripts from loading
+	{%- endcomment -%}
+	setTimeout(loadShortDelayedScripts, 4000);
+	setTimeout(loadLongDelayedScripts, 8000);
+
+	function loadShortDelayedScripts(){
+			document.querySelectorAll("[data-type='short-delay']").forEach(function (elem) {
+					elem.setAttribute("src", elem.getAttribute("data-src"));
+			});
+	}
+
+	function loadLongDelayedScripts(){
+			document.querySelectorAll("[data-type='delay']").forEach(function (elem) {
+					elem.setAttribute("src", elem.getAttribute("data-src"));
+			});
+	}
+
+	{%- comment -%}
+			Delay scripts to an interaction event on the page.
+			NOTE: Fallback is to run the timeout if no interaction occurs
+			https://medium.com/@wpmetabox/how-to-delay-the-execution-of-javascript-to-boost-page-speed-10c6ff41ac2e
+	{%- endcomment -%}
+	const fallbackTimeout = setTimeout(loadInteractionDelayedScripts, 8000);
+
+	const userInteractionEvents = ["scroll","keydown","touchmove","touchstart"];
+
+	userInteractionEvents.forEach(function (event) {
+			window.addEventListener(event, triggerScriptLoader, true);
+	});
+
+	function triggerScriptLoader(e) {
+			//console.log("e", e);
+			clearTimeout(fallbackTimeout);
+
+			loadInteractionDelayedScripts();
+
+			userInteractionEvents.forEach(function (event) {
+					window.removeEventListener(event, triggerScriptLoader, true);
+			});
+	}
+
+	function loadInteractionDelayedScripts() {
+			document.querySelectorAll("[data-type='interaction']").forEach(function (elem) {
+					elem.setAttribute("src", elem.getAttribute("data-src"));
+					//console.log("loading script interaction:", elem);
+			});
+	}
+
+/*
+*    Herd.io: allow third party code to be delayed by our interaction event
+*/
+	const userInteractionEventsForFunction = ["scroll","keydown","touchmove","touchstart"];
+	function addInteractionLoadDelay(funk){
+			//console.log("Add to our delay: addinteractionLoadDelay", funk);
+			const timeout = setTimeout(loadInteractionDelayedFunctions, 2500, funk);
+
+			userInteractionEventsForFunction.forEach(function (event) {
+					clearTimeout(fallbackTimeout);
+					//console.log("interaction event remove listener", event);
+					window.removeEventListener(event, loadInteractionDelayedFunctions, true);
+			});
+	}
+
+	function loadInteractionDelayedFunctions(funk) {
+			//console.log("Execute: ", funk);
+			funk();
+	}
+
+	window.theme.addInteractionLoadDelay = addInteractionLoadDelay;
+</script>

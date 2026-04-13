@@ -1,0 +1,456 @@
+{% doc %}
+  @prompt
+    5 Image row with header in monsteratt font. Each image links somewhere and has a title. works on desktop and mobile, can the images be 390 x 460, on mobile can i be in a scrollable line?, can the size on desktop be  1800px width, desktop width adjustable, different font sizes for mobile
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-image-row-{{ ai_gen_id }} {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .ai-image-row-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.desktop_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-image-row-header-{{ ai_gen_id }} {
+    font-family: 'Montserrat', sans-serif;
+    font-size: {{ block.settings.header_font_size }}px;
+    text-align: {{ block.settings.header_alignment }};
+    margin: 0 0 30px;
+    color: {{ block.settings.header_color }};
+    font-weight: {{ block.settings.header_font_weight }};
+  }
+
+  .ai-image-row-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: {{ block.settings.desktop_gap }}px;
+  }
+
+  .ai-image-row-item-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  .ai-image-row-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 390 / 460;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    margin-bottom: 12px;
+  }
+
+  .ai-image-row-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-image-row-item-{{ ai_gen_id }}:hover .ai-image-row-image-{{ ai_gen_id }} {
+    transform: scale(1.05);
+  }
+
+  .ai-image-row-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-image-row-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-image-row-title-{{ ai_gen_id }} {
+    font-family: 'Montserrat', sans-serif;
+    font-size: {{ block.settings.title_font_size }}px;
+    color: {{ block.settings.title_color }};
+    text-align: center;
+    margin: 0;
+    font-weight: {{ block.settings.title_font_weight }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-image-row-header-{{ ai_gen_id }} {
+      font-size: {{ block.settings.header_font_size_mobile }}px;
+      margin-bottom: 20px;
+    }
+
+    .ai-image-row-grid-{{ ai_gen_id }} {
+      display: flex;
+      overflow-x: auto;
+      gap: {{ block.settings.mobile_gap }}px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .ai-image-row-grid-{{ ai_gen_id }}::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ai-image-row-item-{{ ai_gen_id }} {
+      flex: 0 0 auto;
+      width: 280px;
+      scroll-snap-align: start;
+    }
+
+    .ai-image-row-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_font_size_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<div class="ai-image-row-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-image-row-container-{{ ai_gen_id }}">
+    {% if block.settings.header != blank %}
+      <h2 class="ai-image-row-header-{{ ai_gen_id }}">{{ block.settings.header }}</h2>
+    {% endif %}
+
+    <div class="ai-image-row-grid-{{ ai_gen_id }}">
+      {% for i in (1..5) %}
+        {% liquid
+          assign image_key = 'image_' | append: i
+          assign title_key = 'title_' | append: i
+          assign link_key = 'link_' | append: i
+          
+          assign image = block.settings[image_key]
+          assign title = block.settings[title_key]
+          assign link = block.settings[link_key]
+        %}
+
+        {% if link != blank %}
+          <a href="{{ link }}" class="ai-image-row-item-{{ ai_gen_id }}">
+        {% else %}
+          <div class="ai-image-row-item-{{ ai_gen_id }}">
+        {% endif %}
+          <div class="ai-image-row-image-wrapper-{{ ai_gen_id }}">
+            {% if image %}
+              <img
+                src="{{ image | image_url: width: 780 }}"
+                alt="{{ title | escape }}"
+                class="ai-image-row-image-{{ ai_gen_id }}"
+                loading="lazy"
+                width="390"
+                height="460"
+              >
+            {% else %}
+              <div class="ai-image-row-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+          {% if title != blank %}
+            <h3 class="ai-image-row-title-{{ ai_gen_id }}">{{ title }}</h3>
+          {% endif %}
+        {% if link != blank %}
+          </a>
+        {% else %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "5 Image row",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header text",
+      "default": "Featured Collections"
+    },
+    {
+      "type": "select",
+      "id": "header_alignment",
+      "label": "Header alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "color",
+      "id": "header_color",
+      "label": "Header color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "header_font_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Header font size (desktop)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "header_font_size_mobile",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Header font size (mobile)",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "header_font_weight",
+      "label": "Header font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "header",
+      "content": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_3",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "link_3",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_4",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "link_4",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_5",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_5",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "link_5",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Title style"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 12,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Title font size (desktop)",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "title_font_size_mobile",
+      "min": 10,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Title font size (mobile)",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "title_font_weight",
+      "label": "Title font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width",
+      "min": 1000,
+      "max": 2000,
+      "step": 100,
+      "unit": "px",
+      "label": "Desktop width",
+      "default": 1800
+    },
+    {
+      "type": "range",
+      "id": "desktop_gap",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Gap between images (desktop)",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 10,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "label": "Gap between images (mobile)",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "5 Image row"
+    }
+  ]
+}
+{% endschema %}

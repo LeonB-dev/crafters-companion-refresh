@@ -1,0 +1,177 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "header": {
+      "type": "brand-landing-header",
+      "settings": {
+        "edge_version": "none",
+        "margin_bottom": "sm"
+      }
+    },
+    "42233aa3-11a8-447d-a330-730d88671d29": {
+      "type": "text-only",
+      "settings": {
+        "large_text": "STEP INTO A WORLD OF MAGICAL <em>FAN-ART<\/em>…",
+        "small_text": "<p>Get creative, express your fandom and achieve incredible artistic results you never<br\/>thought possible... Get ready to fan-art like a pro!<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "left_align": false,
+        "margin_bottom": "sm"
+      }
+    },
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1": {
+      "type": "image-feature",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HP_Hero_Image_1800x900_f8d4bda9-1ee0-4fbf-b508-4882060c530b.jpg",
+        "heading": "WIZARDING WORLD FAN-ART LIKE A PRO ART KITS",
+        "text": "<p>Featuring officially licensed artwork straight from the Wizarding World archive, ready to combine with carefully hand-picked colours. Everything you need to recreate fan-favourite characters and scenes, just like the pros!<\/p>",
+        "link_text": "Shop Now",
+        "link_url": "\/collections\/wizarding-world",
+        "disable_height": true,
+        "content_placement": "left"
+      }
+    },
+    "cf4be3ec-9fb0-4ed7-9c1c-54fcbcbdddfb": {
+      "type": "text-header",
+      "settings": {
+        "heading": "EXPERTLY CURATED PROFESSIONAL ART TOOLS & ACCESSORIES",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "none",
+        "margin_top": "none"
+      }
+    },
+    "bab7aec5-01db-4922-bd5b-0478e45a8027": {
+      "type": "content-block-trio",
+      "blocks": {
+        "14acaefe-5109-4c27-85f4-d14fd25b4134": {
+          "type": "content_block",
+          "settings": {
+            "heading": "HARRY POTTER",
+            "text": "Create faithful renditions of Harry in a range of magical poses with these premium art tools and accessories.",
+            "image": "shopify:\/\/shop_images\/Product_Image_Harry_Potter_1350x1080_44344792-915c-44d9-a395-ee172a3dfd52.jpg",
+            "link_text": "Shop Now",
+            "link_url": "\/products\/spectrum-noir-pro-fan-art-24pc-harry-potter"
+          }
+        },
+        "a051e613-e924-4938-9d54-328216b7a319": {
+          "type": "content_block",
+          "settings": {
+            "heading": "MAGICAL COMPANIONS",
+            "text": "Featuring familiar feathered and furred faces from the Wizarding World plus a certain house-elf...",
+            "image": "shopify:\/\/shop_images\/Product_Image_Compainions_1350x1080_5767129f-cec8-4ee0-80ec-804ac2601cea.jpg",
+            "link_text": "Shop Now",
+            "link_url": "\/products\/spectrum-noir-pro-fan-art-24pc-magical-companions"
+          }
+        },
+        "91ab9fd6-aa4a-4f21-aa52-64bd50397598": {
+          "type": "content_block",
+          "settings": {
+            "heading": "MAGICAL CREATURES",
+            "text": "With a cast of iconic creatures from the Wizarding World, including the Pixie, Mermaid, Basilisk and more.",
+            "image": "shopify:\/\/shop_images\/Product_Image_Creatures_1350x1080_89c3ccfb-2930-4f64-b717-1c57409648a7.jpg",
+            "link_text": "Shop Now",
+            "link_url": "\/products\/spectrum-noir-pro-fan-art-24pc-magical-creatures"
+          }
+        }
+      },
+      "block_order": [
+        "14acaefe-5109-4c27-85f4-d14fd25b4134",
+        "a051e613-e924-4938-9d54-328216b7a319",
+        "91ab9fd6-aa4a-4f21-aa52-64bd50397598"
+      ],
+      "settings": {
+        "link_style": "main",
+        "link_colour": "quinary"
+      }
+    },
+    "de29f5a7-5fed-4c77-bb8c-d24aa6396344": {
+      "type": "text-header",
+      "settings": {
+        "heading": "GET READY TO FAN-ART LIKE A PRO!",
+        "text": "<h3>What's in the box...<\/h3><p>Each kit includes 10 premium dual-tip art markers in carefully curated colours to faithfully recreate the heroes, villains and creatures of the Wizarding World. You’ll also discover 12 iconic, officially licensed character designs on premium art paper in both black and grey lines. Get to grips with colouring the black line-art first, then move onto the grey, adding precise inking detail with the included fine-liner. A printed Quick Start Guide provides expert hints and tips, plus there’s exclusive access to additional online content.<\/p>",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "sm",
+        "margin_top": "none"
+      }
+    },
+    "50e05a81-74d7-4891-a03e-33da2f7a63a6": {
+      "type": "video",
+      "settings": {
+        "external": true,
+        "external_video": "https:\/\/www.youtube.com\/watch?v=g-u8A-JzCm8",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "01498e1a-9bba-4b9f-9225-cd2a4b47a37f": {
+      "type": "text-header",
+      "settings": {
+        "heading": "THIS IS NOT JUST COLOURING IN, THIS IS FAN-ART LIKE A PRO…",
+        "text": "",
+        "link_text": "",
+        "link_url": "",
+        "text_alignment": true,
+        "enable_h1": false,
+        "enable_page_title": false,
+        "margin_bottom": "none",
+        "margin_top": "none"
+      }
+    },
+    "1bafe95e-47fe-4c78-8d8f-c39645db74e7": {
+      "type": "text-and-image",
+      "settings": {
+        "header_title": "",
+        "main_image": "shopify:\/\/shop_images\/IMG_9310-2-Enhanced-NR.webp",
+        "main_heading": "TAKE YOUR ART TO THE NEXT LEVEL!",
+        "main_text": "<h3>How it works…<\/h3><p>Artistic skill might come naturally or develop over time, but nothing should get in the way of creative expression or achieving authentic results. You just need the right tools and the right know-how.<\/p><p>Art markers aren’t like normal colouring pens, they apply perfectly smoothly and will layer and blend for an array of versatile effects. This is why they are so widely used by professional creatives within the comic, movie and gaming industries.<\/p><p>By combining with officially licensed character designs on premium paper, plus expert instruction and pro-tips, you’ve got everything you need to immerse in your fandom and create without limits!  <\/p>",
+        "main_link_url": "",
+        "main_link_text": "",
+        "list_heading": "",
+        "list_text": "",
+        "heading_size": "md",
+        "layout_direction": "image-left",
+        "link_colour": "primary",
+        "edge_version": "none",
+        "top_edge_colour": "white",
+        "bottom_edge_colour": "white",
+        "background_colour": "whisper",
+        "content_position": "vertical-centre",
+        "margin_bottom": "sm",
+        "contain_image": false,
+        "enable_shapes": false,
+        "shape_position": "vertical-end",
+        "enable_dots": false,
+        "dot_colour_top": "carnation",
+        "dot_colour_bottom": "royal-purple"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "42233aa3-11a8-447d-a330-730d88671d29",
+    "453ddf37-4b73-45ce-8132-5d44bdb693d1",
+    "cf4be3ec-9fb0-4ed7-9c1c-54fcbcbdddfb",
+    "bab7aec5-01db-4922-bd5b-0478e45a8027",
+    "de29f5a7-5fed-4c77-bb8c-d24aa6396344",
+    "50e05a81-74d7-4891-a03e-33da2f7a63a6",
+    "01498e1a-9bba-4b9f-9225-cd2a4b47a37f",
+    "1bafe95e-47fe-4c78-8d8f-c39645db74e7"
+  ]
+}

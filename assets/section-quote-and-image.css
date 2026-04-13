@@ -1,0 +1,55 @@
+.section-quote-and-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.section-quote-and-image .wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .section-quote-and-image .wrapper {
+    grid-template-columns: 1fr 50%;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+.section-quote-and-image .wrapper .image img {
+  border-radius: 1rem;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+.section-quote-and-image .wrapper .quote {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.section-quote-and-image .wrapper .quote svg {
+  fill: var(--colour-whisper);
+  height: 2.5rem;
+  width: 2.5rem;
+}
+@media (min-width: 768px) {
+  .section-quote-and-image .wrapper .quote svg {
+    position: absolute;
+    top: -3rem;
+    left: -1.25rem;
+  }
+}
+.section-quote-and-image .wrapper .quote .quote-content {
+  padding: 0.5rem 1.25rem 0;
+}
+@media (min-width: 768px) {
+  .section-quote-and-image .wrapper .quote .quote-content {
+    padding: 0;
+  }
+}
+.section-quote-and-image .wrapper .quote .quote-content p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+}
