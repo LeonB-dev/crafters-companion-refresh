@@ -72,7 +72,7 @@
         "button_link": "shopify://collections/spring",
         "button_text": "Browse Now",
         "banner_width_desktop": 100,
-        "content_top_desktop": 50,
+        "content_top_desktop": 0,
         "content_left_desktop": 75,
         "text_width_desktop": 100,
         "content_position_desktop": "center",
