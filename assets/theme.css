@@ -2769,34 +2769,6 @@ a.button.lozenge-l {
 .section-promotion-cards .richtext-area span {
   font-weight: 300;
 }
-.top-bar .container,
-.site-header .container,
-.section-footer .container,
-.section-collection-carousel .container,
-.section-hero-banner .container,
-.inspiration .container,
-.section-testimonials .container,
-.section-hero-banner .container,
-.split-grid .container,
-.collection .container,
-.product-card .container,
-.collection-hero-banner .container,
-.collection-seo .container,
-.key-features .container,
-.section-product-new .container,
-.section-stmt-video .container,
-.instagram .container,
-.section-cart .container,
-.section-header-usps .container,
-.section-featured-products .container,
-.section-hero-banner-fade .container,
-.section-promotion-cards .container,
-.quick-collection-links .container,
-.announcement-bar .container,
-.section-promotion-cards .container {
-  /* wider container */
-  --container-max-width: 1760px;
-}
 
 .read-more {
   display: block;
