@@ -1,0 +1,120 @@
+:root {
+  --font-family: Montserrat, sans-serif;
+
+  --font-weight-700: 700;
+  --font-weight-600: 600;
+  --font-weight-500: 500;
+
+  --heading-letter-spacing: 1px;
+  --heading-line-height: normal;
+
+  --heading-1-size: 52px;
+  --heading-2-size: 42px;
+  --heading-3-size: 36px;
+  --heading-4-size: 28px;
+  --heading-5-size: 24px;
+  --heading-6-size: 20px;
+
+  --heading-1-size-m: 38px;
+  --heading-2-size-m: 32px;
+  --heading-3-size-m: 28px;
+  --heading-4-size-m: 24px;
+  --heading-5-size-m: 20px;
+  --heading-6-size-m: 18px;
+
+  --body-size-large: 18px;
+  --body-size-medium: 16px;
+  --body-size-small: 14px;
+}
+
+.crafters-heading {
+  font-family: var(--font-family);
+  font-style: normal;
+  line-height: var(--heading-line-height);
+  letter-spacing: var(--heading-letter-spacing);
+  font-weight: var(--heading-weight-500);
+}
+
+.crafters-heading--1 {
+  font-size: var(--heading-1-size);
+  font-weight: var(--heading-weight-600);
+}
+
+.crafters-heading--2 {
+  font-size: var(--heading-2-size);
+}
+
+.crafters-heading--3 {
+  font-size: var(--heading-3-size);
+}
+
+.crafters-heading--4 {
+  font-size: var(--heading-4-size);
+}
+
+.crafters-heading--5 {
+  font-size: var(--heading-5-size);
+}
+
+.crafters-heading--6 {
+  font-size: var(--heading-6-size);
+}
+
+.body-text {
+    font-family: var(--font-family);
+}
+
+.body-text--large {
+    font-size: var(---body-size-large);
+}
+
+.body-text--medium {
+    font-size: var(--body-size-medium);
+}
+
+.body-text--small {
+    font-size: var(--body-size-small);
+}
+
+.body-text--accent {
+    font-size: var(--body-size-medium);
+    font-weight: var(--font-weight-600);
+    text-transform: uppercase;
+}
+
+.btn {
+    font-size: var(--body-size-medium);
+    font-weight: var(--font-weight-600);
+}
+
+.btn--small {
+    font-size: var(--body-size-medium);
+    font-weight: var(--body-size-small);
+}
+
+@media only screen and (max-width:767px) {
+    .crafters-heading--1 {
+        font-size: var(--heading-1-size-m);
+        font-weight: var(--heading-weight-700);
+    }
+
+    .crafters-heading--2 {
+        font-size: var(--heading-2-size-m);
+    }
+
+    .crafters-heading--3 {
+        font-size: var(--heading-3-size-m);
+    }
+
+    .crafters-heading--4 {
+        font-size: var(--heading-4-size-m);
+    }
+
+    .crafters-heading--5 {
+        font-size: var(--heading-5-size-m);
+    }
+
+    .crafters-heading--6 {
+        font-size: var(--heading-6-size-m);
+    }
+}
