@@ -46,7 +46,7 @@ shopify version
 
 ```bash
 cd ~/Documents
-git clone https://github.com/LeonB-dev/crafters-companion-refresh.git
+git clone https://github.com/outrankagency/crafters-companion-refresh.git
 cd crafters-companion-refresh
 ```
 
@@ -135,7 +135,7 @@ shopify version
 
 ```bash
 cd ~
-git clone https://github.com/LeonB-dev/crafters-companion-refresh.git
+git clone https://github.com/outrankagency/crafters-companion-refresh.git
 cd crafters-companion-refresh
 ```
 
