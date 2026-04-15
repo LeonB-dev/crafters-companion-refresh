@@ -10,9 +10,7 @@
   endif
 %}
 
-{{- 'section-featured-collections.css' | asset_url | stylesheet_tag -}}
 {{- 'snippet-category-item.css' | asset_url | stylesheet_tag -}}
-<script src="{{- 'section-featured-collections.js' | asset_url -}}"></script>
 
 <div class="{{- template_name }} overflow-hidden u-space-below-{{- margin_bottom -}}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
   {%- render 'paper-edge', _section: section -%}
@@ -70,6 +68,62 @@
     </div>
   </div>
 </div>
+
+{% stylesheet %}
+.section-featured-collections .swiper-container {
+  position: relative;
+}
+@media (max-width: 1279.98px) {
+  .section-featured-collections .swiper-container {
+    padding-bottom: 4rem;
+  }
+}
+.section-featured-collections .swiper-container .swiper-wrapper {
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+@media (min-width: 1280px) {
+  .section-featured-collections .swiper-container .swiper-wrapper {
+    display: grid;
+    gap: 1rem;
+    overflow: visible;
+    grid-auto-columns: minmax(0, 20rem);
+    grid-auto-flow: column;
+  }
+}
+.section-featured-collections .swiper-slide {
+  height: auto;
+  width: auto;
+}
+.section-featured-collections .snippet-category-item {
+  width: 16.25rem;
+}
+@media (min-width: 768px) {
+  .section-featured-collections .snippet-category-item {
+    width: 21.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .section-featured-collections .snippet-category-item {
+    width: 100%;
+  }
+}
+.section-featured-collections .swiper-nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+@media (min-width: 1280px) {
+  .section-featured-collections .swiper-nav {
+    display: none;
+  }
+}
+{% endstylesheet %}
+
+{% javascript %}
+(()=>{"use strict";var e;e={name:"section-featured-collections",events:{async onLoad(){window.matchMedia(`(max-width: ${window.theme.breakpoints.xl}px)`).matches&&this.loadSlider()},loadSlider(){window.theme.Swiper?this.initSlider():document.addEventListener("theme:inititialised",(()=>{this.initSlider()}),{once:!0})},initSlider(){const e=this.container.querySelector("[data-fc-slider]"),i=e.querySelector("[data-fc-slider-prev]"),t=e.querySelector("[data-fc-slider-next]");e&&new window.theme.Swiper(e,{slidesPerView:"auto",loop:!1,speed:1e3,spaceBetween:16,simulateTouch:!1,navigation:{prevEl:i,nextEl:t}})}}},theme.sections.push(e)})();
+{% endjavascript %}
 
 {% schema %}
 {

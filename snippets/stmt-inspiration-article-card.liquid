@@ -1,3 +1,13 @@
+{% doc %}
+  Article card for inspiration sections.
+
+  @param {article} article - The article object
+  @param {block} block - The section block object
+  @param {number} article_list_index - The index of the article in the list
+
+  @example
+  {% render 'stmt-inspiration-article-card', article: article, block: block, article_list_index: forloop.index %}
+{% enddoc %}
 {% liquid
   assign read_time = 0
   assign blog_url = article.url | split: '/'

@@ -1,3 +1,14 @@
+{% doc %}
+  Creates swiper carousel container for media items.
+
+  @param {array} _media_blocks - Array of media block objects to display in the carousel
+  @param {number} _offset - Number of items to offset from the start
+  @param {number} _col_limit - Maximum number of items to display
+  @param {string} _fallback_link - Fallback URL passed to each carousel item
+
+  @example
+  {% render 'carousel', _media_blocks: section.blocks, _offset: 0, _col_limit: 6, _fallback_link: collection.url %}
+{% enddoc %}
 {% assign video_blocks = _media_blocks | where: 'type', 'video' %}
 
 <div

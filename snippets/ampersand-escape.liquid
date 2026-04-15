@@ -1,2 +1,10 @@
+{% doc %}
+  Replaces HTML-escaped ampersand with regular ampersand.
+
+  @param {string} string - The string containing HTML-escaped ampersands to replace
+
+  @example
+  {% render 'ampersand-escape', string: product.title %}
+{% enddoc %}
 {%- comment -%} Replacing unicode version of ampersand that has been HTML escaped, so it can be correctly url encoded {%- endcomment -%}
 {%- echo string | replace: '&amp;', '&' -%}

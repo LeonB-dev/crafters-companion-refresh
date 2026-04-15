@@ -12,8 +12,6 @@
   assign link_colour = section.settings.link_colour
 %}
 
-{{- 'section-image-text-slider.css' | asset_url | stylesheet_tag -}}
-<script src="{{- 'section-image-text-slider.js' | asset_url -}}" defer></script>
 
 <div
   class="{{- template_name }} u-space-below-{{- margin_bottom }}"
@@ -60,6 +58,66 @@
     </div>
   </div>
 </div>
+
+{% stylesheet %}
+.section-image-text-slider .heading {
+  max-width: 50rem;
+}
+@media (min-width: 1024px) {
+  .section-image-text-slider .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+.section-image-text-slider .swiper-slide {
+  height: auto;
+  background-color: var(--colour-white);
+  border: 1px solid var(--colour-emperor);
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767.98px) {
+  .section-image-text-slider .swiper-slide {
+    text-align: center;
+  }
+}
+.section-image-text-slider .swiper-slide small {
+  display: block;
+  margin: 0 0 0.5rem 0;
+}
+.section-image-text-slider .image {
+  border-bottom: 1px solid var(--colour-emperor);
+  margin: 0;
+}
+.section-image-text-slider .image img {
+  height: auto;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.section-image-text-slider .content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.section-image-text-slider .content .c-btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+@media (max-width: 1023.98px) {
+  .section-image-text-slider .swiper-pagination {
+    margin-top: 2.5rem;
+  }
+}
+{% endstylesheet %}
+
+{% javascript %}
+(()=>{"use strict";var e;e={name:"section-image-text-slider",events:{async onLoad(){window.matchMedia(`(max-width: ${window.theme.breakpoints.lg}px)`).matches&&this.loadSlider()},loadSlider(){window.theme.Swiper?this.initSlider():document.addEventListener("theme:inititialised",(()=>{this.initSlider()}),{once:!0})},initSlider(){const e=this.container.querySelector("[data-it-slider]"),i=e.querySelector("[data-it-slider-pagination]");e&&new window.theme.Swiper(e,{slidesPerView:1,loop:!1,speed:800,spaceBetween:16,simulateTouch:!0,autoplay:{delay:6e3},pagination:{el:i,clickable:!0},breakpoints:{[theme.breakpoints.md]:{slidesPerView:2}}})}}},theme.sections.push(e)})();
+{% endjavascript %}
 
 {% schema %}
 {

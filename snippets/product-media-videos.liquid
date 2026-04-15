@@ -1,3 +1,11 @@
+{% doc %}
+  Modal for product video playback.
+
+  @param {product} product - The product object containing video media
+
+  @example
+  {% render 'product-media-videos', product: product %}
+{% enddoc %}
 {% liquid
   assign product_videos = product.media | where: 'media_type', 'video'
   assign product_external_videos = product.media | where: 'media_type', 'external_video'

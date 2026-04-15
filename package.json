@@ -1,0 +1,10 @@
+{
+  "name": "crafters-companion-refresh",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "shopify theme dev --open --host=0.0.0.0 --store=crafters-uk-dev.myshopify.com",
+    "pull": "shopify theme pull",
+    "check": "shopify theme check"
+  }
+}

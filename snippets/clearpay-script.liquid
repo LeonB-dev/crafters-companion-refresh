@@ -1,3 +1,9 @@
+{% doc %}
+  Integrates Clearpay payment messaging.
+
+  @example
+  {% render 'clearpay-script' %}
+{% enddoc %}
 {% liquid
   assign clearpay_threshold = settings.clearpay_threshold | times: 1.0
 

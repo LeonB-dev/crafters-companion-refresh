@@ -1,3 +1,11 @@
+{% doc %}
+  Generates hreflang alternate link tags.
+
+  @param {string} _current_query_string - The current page query string to preserve across locales
+
+  @example
+  {% render 'hreflang-tags', _current_query_string: request.query_string %}
+{% enddoc %}
 {% assign territories_array = settings.hreflang_domains | strip | split: ',' %}
 {%  comment  %}  
   hreflang_domains setting format: 'UK:www..., US:www..., [EU]IE/SK/CH/DE/ES:www...'

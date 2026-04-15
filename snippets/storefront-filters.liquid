@@ -1,3 +1,13 @@
+{% doc %}
+  Filters UI for search/storefront results.
+
+  @param {object} results - The search or storefront results object
+  @param {collection} collection - The collection to filter
+  @param {array} search_types - Array of search types to filter by
+
+  @example
+  {% render 'storefront-filters', results: results, collection: collection, search_types: search_types %}
+{% enddoc %}
 {%- liquid
   assign template_name = 'snippet-collection-filters'
 

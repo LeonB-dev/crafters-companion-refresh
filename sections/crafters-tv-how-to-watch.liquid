@@ -2,7 +2,6 @@
   assign template_name = 'section-crafters-tv-how-to-watch'
 %}
 
-{{- 'section-crafters-tv-how-to-watch.css' | asset_url | stylesheet_tag -}}
 
 <div
   class="{{- template_name }} u-space-below-lg"
@@ -42,6 +41,98 @@
     </ul>
   </div>
 </div>
+
+{% stylesheet %}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .section-crafters-tv-how-to-watch .container {
+    max-width: var(--content-tablet-width);
+  }
+}
+@media (min-width: 1024px) {
+  .section-crafters-tv-how-to-watch .container {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+}
+.section-crafters-tv-how-to-watch .content {
+  z-index: 10;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .section-crafters-tv-how-to-watch .content {
+    padding-top: 2rem;
+    background-color: var(--colour-sugar-cane);
+    text-align: left;
+  }
+}
+@media (min-width: 1280px) {
+  .section-crafters-tv-how-to-watch .content {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 14rem;
+  }
+}
+.section-crafters-tv-how-to-watch ul.how-to-watch {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.section-crafters-tv-how-to-watch ul.how-to-watch li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--colour-emperor);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .section-crafters-tv-how-to-watch ul.how-to-watch li {
+    padding: 2.5rem;
+    flex-direction: row-reverse;
+  }
+}
+.section-crafters-tv-how-to-watch ul.how-to-watch li img.wireframe {
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .section-crafters-tv-how-to-watch ul.how-to-watch li img.wireframe {
+    position: absolute;
+    width: 19.25rem;
+    right: -4.25rem;
+  }
+}
+@media (max-width: 1023.98px) {
+  .section-crafters-tv-how-to-watch ul.how-to-watch li img.wireframe {
+    left: -0.75rem;
+    margin-bottom: 2rem;
+  }
+}
+.section-crafters-tv-how-to-watch ul.how-to-watch li .watch-content {
+  text-align: left;
+}
+.section-crafters-tv-how-to-watch ul.how-to-watch li .watch-content img {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .section-crafters-tv-how-to-watch ul.how-to-watch li .watch-content {
+    padding-right: 15rem;
+  }
+  .section-crafters-tv-how-to-watch ul.how-to-watch li .watch-content img {
+    margin-bottom: 2.5rem;
+  }
+}
+{% endstylesheet %}
 
 {% schema %}
 {

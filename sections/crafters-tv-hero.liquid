@@ -229,14 +229,14 @@
 /* Desktop background & overlay */
 @media screen and (min-width: 768px) {
   .crafters-tv-hero {
-    background-image: url({{ section.settings.desktop_bg | img_url: '2048x2048' }});
+    background-image: url({{ section.settings.desktop_bg | image_url: width: 2048, height: 2048 }});
     background-size: cover;
     background-position: top left;
     background-repeat: no-repeat;
   }
 
   .crafters-tv-overlay-container {
-    background-image: url({{ section.settings.overlay_desktop | img_url: '2048x' }});
+    background-image: url({{ section.settings.overlay_desktop | image_url: width: 2048 }});
     height: {{ section.settings.desktop_overlay_height | default: 800 }}px;
   }
 }
@@ -244,14 +244,14 @@
 /* Mobile background & overlay */
 @media screen and (max-width: 767px) {
   .crafters-tv-hero {
-    background-image: url({{ section.settings.mobile_bg | img_url: '800x' }});
+    background-image: url({{ section.settings.mobile_bg | image_url: width: 800 }});
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
   }
 
   .crafters-tv-overlay-container {
-    background-image: url({{ section.settings.overlay_mobile | img_url: '800x' }});
+    background-image: url({{ section.settings.overlay_mobile | image_url: width: 800 }});
     height: {{ section.settings.mobile_overlay_height | default: 450 }}px;
   }
 

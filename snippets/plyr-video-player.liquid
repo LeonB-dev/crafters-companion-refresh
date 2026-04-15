@@ -1,3 +1,11 @@
+{% doc %}
+  Embedded YouTube video player in modal.
+
+  @param {string} _article_video_id - The YouTube video ID to embed
+
+  @example
+  {% render 'plyr-video-player', _article_video_id: 'dQw4w9WgXcQ' %}
+{% enddoc %}
 <div class="video-wrapper">
   <div class="plyr__video-embed" id="sts-player" hidden >
     <button class="c-btn is-svg pip-close-button" type="button" aria-label="Close" data-pip-close>

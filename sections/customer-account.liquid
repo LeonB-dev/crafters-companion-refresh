@@ -2,8 +2,6 @@
   assign template_name = 'section-customer-account'
 %}
 {{- 'section-customer.css' | asset_url | stylesheet_tag -}}
-{{- 'section-customer-account.css' | asset_url | stylesheet_tag -}}
-<script src="{{- 'section-customer-account.js' | asset_url -}}"></script>
 <div
   class="section-customer {{ template_name -}}"
   data-section-type="{{- template_name -}}"
@@ -114,6 +112,183 @@
     </div>
   </div>
 </div>
+{% stylesheet %}
+.section-customer-account {
+  min-height: 50vh;
+}
+@supports (height: 100dvh) {
+  .section-customer-account {
+    min-height: 50dvh;
+  }
+}
+.section-customer-account .content .loyalty a, .section-customer-account .content .loyalty button, .section-customer-account .content .wishlist a, .section-customer-account .content .wishlist button {
+  text-decoration: none;
+}
+.section-customer-account .content .loyalty a span, .section-customer-account .content .loyalty button span, .section-customer-account .content .wishlist a span, .section-customer-account .content .wishlist button span {
+  text-decoration: underline;
+  font-weight: 500;
+}
+.section-customer-account .loyalty .links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+@media (max-width: 767.98px) {
+  .section-customer-account .loyalty .links {
+    flex-direction: column;
+  }
+}
+.section-customer-account .loyalty .links li {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .section-customer-account .loyalty .links li:not(:first-child) {
+    padding-left: 1.5rem;
+  }
+  .section-customer-account .loyalty .links li:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 24px;
+    width: 1px;
+    background-color: var(--colour-whisper);
+  }
+}
+.section-customer-account .orders table th, .section-customer-account .orders table td {
+  text-transform: capitalize;
+}
+.section-customer-account .orders .snippet-pagination {
+  margin-top: 1.5rem;
+}
+.section-customer-account .blocks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1.5rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(11.5rem, 1fr);
+  gap: 1rem;
+  overflow-x: auto;
+  max-width: 100%;
+}
+.section-customer-account .blocks::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.section-customer-account .blocks::-webkit-scrollbar-thumb {
+  background: var(--colour-royal-purple);
+  border: 8px solid var(--colour-royal-purple);
+  border-radius: 0;
+}
+.section-customer-account .blocks::-webkit-scrollbar-track {
+  background: var(--colour-sugar-cane);
+}
+@media (max-width: 767.98px) {
+  .section-customer-account .blocks {
+    padding-right: var(--gutter);
+  }
+}
+.section-customer-account .blocks li {
+  background-color: var(--colour-white);
+  border: 1px solid var(--colour-emperor);
+  border-radius: var(--border-radius-lg);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 2rem;
+}
+.section-customer-account .blocks li svg {
+  height: 2rem;
+  width: 2rem;
+}
+.section-customer-account .blocks li dl dt {
+  margin-bottom: 0.5rem;
+}
+.section-customer-account .blocks li dl dd {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--colour-royal-purple);
+}
+.section-customer-account .loyalty-history-pullout {
+  --loyalty-history-padding: 1rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  height: calc(100vh - 2rem);
+  width: 100%;
+  max-width: calc(100vw - 2rem);
+  background-color: var(--colour-white);
+  z-index: 10100;
+  transform: translateX(110%);
+  transition: transform var(--transition-duration) var(--transition-timing);
+  overflow: hidden;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius-lg);
+  background-color: var(--colour-white);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+  padding: var(--loyalty-history-padding) 0 0;
+  transition-delay: 0s;
+}
+@supports (height: 100dvh) {
+  .section-customer-account .loyalty-history-pullout {
+    height: calc(100dvh - 2rem);
+  }
+}
+@media (min-width: 768px) {
+  .section-customer-account .loyalty-history-pullout {
+    max-width: 80vw;
+  }
+}
+@media (min-width: 1024px) {
+  .section-customer-account .loyalty-history-pullout {
+    --loyalty-history-padding: 2rem;
+    max-width: 45rem;
+  }
+}
+.section-customer-account .loyalty-history-pullout.is-active {
+  transform: none;
+  transition-delay: var(--transition-duration);
+}
+.section-customer-account .loyalty-history-pullout .close {
+  width: 1rem;
+  margin: 0 var(--loyalty-history-padding) 1rem auto;
+}
+.section-customer-account .loyalty-history-pullout .wrapper {
+  padding: var(--loyalty-history-padding);
+  padding-top: 0;
+}
+
+.quick-cart-overlay {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-duration) var(--transition-timing) 0s;
+  transition-delay: var(--transition-duration);
+  z-index: 9999;
+}
+.quick-cart-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+{% endstylesheet %}
+
+{% javascript %}
+(()=>{"use strict";function t(){document.body.style.removeProperty("overflow")}const e="data-order-placed-time",n="is-active",o={};var l;l={name:"section-customer-account",events:{async onLoad(){this.createElementsObject(),this.loadWishlistElements(),this.loadLoyaltyElements()},initLoyaltyPullout(){const e=document.querySelector("[data-loyalty-pullout]"),o=document.querySelector("[data-loyalty-open]"),l=document.querySelector("[data-loyalty-close]"),r=document.querySelector("[data-overlay-quickcart]");o&&(o.addEventListener("click",(function(t){t.preventDefault(),e.classList.add(n),document.body.style.overflowY="hidden",r&&r.classList.add(n)})),l&&l.addEventListener("click",(function(){e.classList.remove(n),t(),r&&r.classList.remove(n)})),r&&r.addEventListener("click",(function(){o.classList.remove(n),e.classList.remove(n),r.classList.remove(n),t()})))},sortObjByDateString(t,n){const o=t.date?t.date:t.getAttribute(e),l=n.date?n.date:n.getAttribute(e);return o>l?-1:l>o?1:0},loadLoyaltyElements(){async function t(){const t=document.querySelector("[data-loyalty-overview]");if(!t)return;const n=t.querySelector("[data-loyalty-tier]"),o=t.querySelector("[data-loyalty-points]"),l=t.querySelector("[data-loyalty-pending]"),r=document.querySelector("[data-loyalty-inner]").querySelector("[data-loyalty-history-row]"),s=await swellAPI.getCustomerDetails(),a=s.vipTier?.name||"Updating",i=s.pointsBalance,c=s.actionHistoryItems.reduce(((t,e)=>{let n=t;return e.status&&"pending"===e.status.toLowercase()&&e.points&&(n+=e.points),n}),0);n.innerText=a,o.innerText=i,l.innerText=c;const d=[...document.querySelectorAll(`[${e}]`)].sort(this.sortObjByDateString);s.actionHistoryItems.sort(this.sortObjByDateString).forEach((t=>{if(null===t.points)return;const n=r.cloneNode(!0),o=n.querySelectorAll("td"),l=new Date(t.createdAt),s=`${l.getFullYear()}-${l.getMonth().toString().length>1?"":"0"}${l.getMonth()+1}-${l.getDate()} ${l.getUTCHours().toString().length>1?"":"0"}${l.getUTCHours()}:${l.getMinutes()}`;o.forEach((n=>{if(n.hasAttribute("data-id"))if(t.action.includes("purchase")){let t;d.forEach(((o,l)=>{if(o.getAttribute(e)?.split(":")[0]===s.split(":")[0]){const r=Number(o.getAttribute(e)?.split(":")[1]),a=Number(s.split(":")[1]);if(r===a||r===a+1||r===a-1)return t=o.cloneNode(!0),t.setAttribute("class",""),n.appendChild(t),void d.splice(l,1);n.innerText="N/A"}}))}else n.innerText="N/A";else n.hasAttribute("data-loyalty-type")?n.innerText=t.action:n.hasAttribute("data-loyalty-points")?n.innerText=t.points:n.hasAttribute("data-loyalty-date")&&(n.innerText=t.date)})),r.parentNode.insertBefore(n,r)})),r.remove()}const n=setInterval((function(){swellAPI&&swellAPI.getCustomerDetails&&(clearInterval(n),setTimeout(t,1e3))}),300);this.initLoyaltyPullout()},loadWishlistElements(){const t=function(t){let e=0;const n=document.querySelector("#wishlist-template");t.forEach(((o,l)=>{const r=n.cloneNode(!0),s=r.querySelector("dt"),a=r.querySelector("dd");s.innerText=o.lname,a.innerText=o.cnt,n.parentNode.insertBefore(r,n),e+=o.cnt,l===t.length-1&&n.remove()})),document.querySelector("#wishlist-total").querySelector("dd").innerText=e},e=function(t){},n=setInterval((()=>{_swat&&(_swat.fetchLists({callbackFn:t,errorFn:e}),clearInterval(n))}),400)},createElementsObject(){o.asideToggleElement=this.container.querySelector("[data-aside-toggle]")},initAsideToggle(){o.asideToggleElement.addEventListener("click",(function(){o.asideToggleElement.nextElementSibling.classList.toggle(n),o.asideToggleElement.classList.toggle(n)}))}}},theme.sections.push(l)})();
+{% endjavascript %}
+
 {% schema %}
   {
     "name": "Customer Account",

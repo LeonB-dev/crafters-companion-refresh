@@ -155,7 +155,7 @@
         <div class="bloggle--blog-item ai--flex-start-layout" style="border-radius: 0px;" >
           <a class="bloggle--blog-item-link" href="{{ article.url }}">
             {% if article.image %}
-              <img class="bloggle--blog-item-img lazybloggle" data-src="{{ article.image | img_url:'700x' }}" alt="{{ article.image.alt }}">
+              <img class="bloggle--blog-item-img lazybloggle" data-src="{{ article.image | image_url: width: 700 }}" alt="{{ article.image.alt }}">
             {% endif %}
             <div class="article-text-container responsive-div ai--flex-start-layout">
               <p class="bloggle--blog-item-title ">{{ article.title }}</p>

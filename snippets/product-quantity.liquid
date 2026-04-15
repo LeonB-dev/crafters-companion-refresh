@@ -1,3 +1,12 @@
+{% doc %}
+  Quantity input with increment/decrement buttons.
+
+  @param {section} section - The parent section object
+  @param {boolean} isDupe - Whether this is a duplicate quantity input
+
+  @example
+  {% render 'product-quantity', section: section, isDupe: false %}
+{% enddoc %}
 <div class="product-form-new__quantity" data-quantity-new>
   <label class="sr-only" for="Quantity-{{ section.id }}"> Quantity </label>
 

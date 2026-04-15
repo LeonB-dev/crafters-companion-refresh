@@ -1,3 +1,12 @@
+{% doc %}
+  Header for customer pages.
+
+  @param {string} _title - The main heading text
+  @param {string} _subheading - The subheading text displayed below the title
+
+  @example
+  {% render 'customer-header', _title: 'My Account', _subheading: 'Welcome back' %}
+{% enddoc %}
 <header class="header">
   {%- if _subheading != blank -%}
     <p class="u-text-md subheading">{{- _subheading -}}</p>

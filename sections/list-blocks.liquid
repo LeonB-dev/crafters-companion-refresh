@@ -5,7 +5,6 @@
   assign margin_bottom = section.settings.margin_bottom
 %}
 
-{{- 'section-list-blocks.css' | asset_url | stylesheet_tag -}}
 
 <div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
   <div class="container">
@@ -17,6 +16,52 @@
     {% endfor %}
   </div>
 </div>
+
+{% stylesheet %}
+.section-list-blocks {
+  position: relative;
+}
+.section-list-blocks .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 576px) {
+  .section-list-blocks .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .section-list-blocks .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.section-list-blocks .container .list-block {
+  padding: 2rem;
+  border: 1px solid var(--colour-emperor);
+  border-radius: 1rem;
+}
+.section-list-blocks .container .list-block .list-title {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--colour-emperor);
+  margin-bottom: 1.25rem;
+}
+.section-list-blocks .container .list-block ul {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.section-list-blocks .container .list-block ul li {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+{% endstylesheet %}
 
 {% schema %}
 {

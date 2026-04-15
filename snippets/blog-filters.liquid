@@ -1,3 +1,9 @@
+{% doc %}
+  Renders filterable blog navigation with category filters.
+
+  @example
+  {% render 'blog-filters' %}
+{% enddoc %}
 {% liquid
   assign active_tag = request.path | split: '/' | last
 
@@ -29,8 +35,6 @@
 
   assign disabled_class = 'is-disabled'
 %}
-
-{{- 'snippet-blog-filters.css' | asset_url | stylesheet_tag -}}
 
 <div class="snippet-blog-filters" id="blog-filters" data-bf>
   <button class="close-filters c-btn" data-bf-close>
@@ -375,3 +379,303 @@
     </ul>
   </nav>
 </div>
+
+{% stylesheet %}
+.snippet-blog-filters {
+  width: 88vw;
+  display: flex;
+}
+.snippet-blog-filters::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.snippet-blog-filters::-webkit-scrollbar-thumb {
+  background: var(--colour-whisper);
+  border: 8px solid var(--colour-whisper);
+  border-radius: 4px;
+}
+.snippet-blog-filters::-webkit-scrollbar-track {
+  background: var(--colour-sugar-cane);
+}
+@media (min-width: 768px) {
+  .snippet-blog-filters {
+    width: 72vw;
+  }
+}
+@media (max-width: 1023.98px) {
+  .snippet-blog-filters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform var(--transition-duration) var(--transition-timing) 0s;
+    overflow: hidden;
+    z-index: 100;
+    background-color: var(--colour-sugar-cane);
+    height: 100%;
+    z-index: 250;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1024px) {
+  .snippet-blog-filters {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+}
+.snippet-blog-filters.is-visible {
+  transform: none;
+  transition-delay: 0.8s;
+}
+.snippet-blog-filters .close-filters {
+  height: 4rem;
+  width: 4rem;
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+}
+@media (min-width: 1024px) {
+  .snippet-blog-filters .close-filters {
+    display: none;
+  }
+}
+.snippet-blog-filters .close-filters svg {
+  height: 1rem;
+  width: 1rem;
+}
+.snippet-blog-filters nav {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1023.98px) {
+  .snippet-blog-filters nav {
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+}
+.snippet-blog-filters ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.snippet-blog-filters ul.tier-1 {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 1023.98px) {
+  .snippet-blog-filters ul.tier-1 {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1024px) {
+  .snippet-blog-filters ul.tier-1 {
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+.snippet-blog-filters ul.tier-1 > li {
+  position: relative;
+}
+@media (max-width: 1023.98px) {
+  .snippet-blog-filters ul.tier-1 > li {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--colour-whisper);
+  }
+}
+.snippet-blog-filters ul.tier-1 button {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0;
+  font-weight: 500;
+}
+@media (max-width: 1023.98px) {
+  .snippet-blog-filters ul.tier-1 button {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .snippet-blog-filters ul.tier-1 button {
+    flex-direction: column;
+  }
+}
+.snippet-blog-filters ul.tier-1 button svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.snippet-blog-filters ul.tier-1 button span {
+  flex-grow: 1;
+  text-align: start;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .snippet-blog-filters ul.tier-1 button span {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+.snippet-blog-filters ul.tier-1 button span svg {
+  height: 0.875rem;
+  width: 0.875rem;
+  fill: currentColor;
+}
+@media (max-width: 1023.98px) {
+  .snippet-blog-filters ul.tier-1 button span svg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) rotate(0);
+    transform-origin: center center;
+    opacity: 1;
+    transition: all var(--transition-duration) var(--transition-timing) 0s;
+  }
+}
+@media (min-width: 1024px) {
+  .snippet-blog-filters ul.tier-1 button span svg {
+    height: 0.675rem;
+    width: 0.675rem;
+  }
+}
+@media (max-width: 1023.98px) {
+  .snippet-blog-filters ul.tier-1 button.is-active span svg {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+.snippet-blog-filters ul.tier-2 {
+  display: none;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 0 0 2.5rem;
+}
+@media (min-width: 1024px) {
+  .snippet-blog-filters ul.tier-2 {
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-duration) var(--transition-timing) 0s;
+    transform: translate(-50%, 2rem);
+    background-color: var(--colour-white);
+    border: 1px solid var(--colour-emperor);
+    border-radius: var(--border-radius-sm);
+    width: 12.5rem;
+    z-index: 40;
+  }
+}
+.snippet-blog-filters ul.tier-2 li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.snippet-blog-filters ul.tier-2 li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  transform: translateY(-50%);
+  border-radius: 0.25rem;
+  border: 1px solid var(--colour-emperor);
+  background-color: var(--colour-white);
+}
+.snippet-blog-filters ul.tier-2 li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  transform: translateY(-50%);
+  border-radius: 0.25rem;
+  background-color: transparent;
+}
+.snippet-blog-filters ul.tier-2 li.is-active::after {
+  background-color: var(--colour-emperor);
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 10 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill:white;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;'%3E%3Cpath d='M8.47,0.265L3.284,5.451C3.282,5.453 3.279,5.454 3.276,5.454C3.273,5.454 3.271,5.453 3.269,5.451C3.269,5.451 1.53,3.715 1.53,3.715C1.237,3.423 0.762,3.423 0.469,3.716C0.177,4.009 0.177,4.484 0.47,4.777L2.21,6.513C2.493,6.796 2.876,6.954 3.276,6.954C3.676,6.954 4.06,6.796 4.343,6.513L9.53,1.326C9.823,1.033 9.823,0.558 9.53,0.265C9.238,-0.028 8.762,-0.028 8.47,0.265Z'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: 0.675rem;
+  background-position: center;
+}
+.snippet-blog-filters ul.tier-2 li.is-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+}
+.snippet-blog-filters ul.tier-2 li a {
+  color: var(--colour-emperor);
+  text-decoration: none;
+}
+.snippet-blog-filters ul.tier-2 li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.snippet-blog-filters ul.tier-2.is-active {
+  display: flex;
+}
+@media (min-width: 1024px) {
+  .snippet-blog-filters ul.tier-2.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0.5rem);
+  }
+}
+.snippet-blog-filters ul.active-filters {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 1023.98px) {
+  .snippet-blog-filters ul.active-filters {
+    flex-direction: column;
+    margin-top: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .snippet-blog-filters ul.active-filters {
+    justify-content: center;
+  }
+}
+.snippet-blog-filters ul.active-filters li {
+  position: relative;
+  padding: 0.5rem 0.75rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--colour-white);
+  border: 1px solid var(--colour-emperor);
+  border-radius: 1rem;
+  align-self: flex-start;
+}
+.snippet-blog-filters ul.active-filters li a {
+  display: block;
+  color: var(--colour-emperor);
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.snippet-blog-filters ul.active-filters li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.snippet-blog-filters ul.active-filters li svg {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+{% endstylesheet %}

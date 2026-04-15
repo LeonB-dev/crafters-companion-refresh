@@ -1,2 +1,10 @@
+{% doc %}
+  Replaces HTML-escaped apostrophe with regular apostrophe.
+
+  @param {string} string - The string containing HTML-escaped apostrophes to replace
+
+  @example
+  {% render 'apostrophe-escape', string: product.title %}
+{% enddoc %}
 {%- comment -%} Replacing unicode version of apostrophe that has been HTML escaped, so it can be correctly url encoded {%- endcomment -%}
 {%- echo string | replace: '&#39;', "'" -%}

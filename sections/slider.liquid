@@ -7,9 +7,6 @@
   assign margin_bottom = section.settings.margin_bottom
 %}
 
-{{- 'section-slider.css' | asset_url | stylesheet_tag -}}
-<script src="{{- 'section-slider.js' | asset_url -}}" defer></script>
-
 {% for block in section.blocks %}
 
 {% endfor %}
@@ -76,6 +73,62 @@
     <div class="container">{{ slider }}</div>
   {% endif %}
 </div>
+
+{% stylesheet %}
+.section-slider picture, .section-slider picture img {
+  width: 100%;
+  display: block;
+}
+.section-slider .swiper-container {
+  overflow: hidden;
+  position: relative;
+}
+.section-slider .swiper-nav {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  z-index: 5;
+  padding: 0 1rem;
+  pointer-events: none;
+}
+.section-slider .swiper-nav button {
+  pointer-events: auto;
+}
+.section-slider .play-pause {
+  position: relative;
+}
+.section-slider .play-pause svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity var(--transition-duration) var(--transition-timing) 0s;
+  height: 0.875rem;
+  width: 0.875rem;
+}
+.section-slider .play-pause svg.play {
+  opacity: 1;
+}
+.section-slider .play-pause svg.pause {
+  opacity: 0;
+}
+.section-slider .play-pause.is-playing svg.play {
+  opacity: 0;
+}
+.section-slider .play-pause.is-playing svg.pause {
+  opacity: 1;
+}
+{% endstylesheet %}
+
+{% javascript %}
+(()=>{"use strict";var e,t;e="section-slider",t={async onLoad(){this.loadSlider()},loadSlider(){window.theme.Swiper?this.initSlider():document.addEventListener("theme:inititialised",(()=>{this.initSlider()}),{once:!0})},initSlider(){const e=this.container.querySelector("[data-ss-slider]"),t=e.querySelector("[data-ss-slider-play-toggle]"),i=e.getAttribute("data-autoplay"),s=e.querySelector("[data-ss-prev]"),a=e.querySelector("[data-ss-next]");var n=new window.theme.Swiper(e,{slidesPerView:1,autoHeight:!0,loop:!0,speed:600,loadPrevNext:!0,navigation:{prevEl:s,nextEl:a}});"true"===i&&n.autoplay.start(),t.addEventListener("click",(function(){t.classList.contains("is-playing")?(n.autoplay.pause(),t.classList.remove("is-playing")):(n.autoplay.run(),t.classList.add("is-playing"))}))}},Shopify.theme.sections&&Shopify.theme.sections.register?(0===Shopify.theme.sections.getInstances(e).length&&Shopify.theme.sections.register(e,t),Shopify.theme.sections.load(e)):function(e,t){var i={name:e,events:t};theme.sections.push(i)}(e,t)})();
+{% endjavascript %}
 
 {% schema %}
 {

@@ -1,3 +1,11 @@
+{% doc %}
+  Renders form fields for customer address.
+
+  @param {string} _form_id - Unique identifier for the address form instance
+
+  @example
+  {% render 'customer-address-inputs', _form_id: 'address-1' %}
+{% enddoc %}
 <div class="form-field ">
   <label class="form-label" for="first-name-{{ _form_id }}">{{ 'forms.first_name_label' | t }}</label>
   <input id="first-name-{{ _form_id }}" class="form-input{% if show_errors == true and form.errors contains 'first_name' %} form-input--error{% endif %}" name="address[first_name]" type="text" placeholder="{{ 'forms.first_name_label' | t }}" value="{{ form.first_name }}" autocapitalize="words">

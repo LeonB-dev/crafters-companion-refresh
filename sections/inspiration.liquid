@@ -7,9 +7,6 @@
   assign blogs_tag = section.settings.blogs_tag
 %}
 
-{{- 'section-inspiration.css' | asset_url | stylesheet_tag -}}
-{{- 'snippet-article-card.css' | asset_url | stylesheet_tag -}}
-<script src="{{ 'section-inspiration.js' | asset_url }}" defer></script>
 
 <div
   class="{{- template_name }} u-space-below-{{- margin_bottom }} overflow-hidden"
@@ -97,6 +94,262 @@
     </div>
   </div>
 </div>
+
+{% stylesheet %}
+.section-inspiration {
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .section-inspiration {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+.section-inspiration .container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 1024px) {
+  .section-inspiration .container {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .section-inspiration .container {
+    gap: 6.5rem;
+  }
+}
+.section-inspiration .container > .content {
+  grid-column: 1;
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .section-inspiration .container > .content {
+    padding: 0 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section-inspiration .container > .content {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .section-inspiration .container > .content > .heading {
+    max-width: var(--content-tablet-width);
+    margin: 0 auto;
+  }
+}
+.section-inspiration .container > .content .blogs {
+  --blog-padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.32);
+  border: 1px dashed var(--colour-royal-purple);
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  border-radius: 16px;
+  position: relative;
+}
+@media (max-width: 1023.98px) {
+  .section-inspiration .container > .content .blogs {
+    margin-top: 2.5rem;
+  }
+}
+.section-inspiration .container > .content .blogs .scissors {
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  transform: translateY(-50%);
+}
+.section-inspiration .container > .content .blogs .heading {
+  margin-left: var(--blog-padding);
+}
+.section-inspiration .container > .content .blogs .swiper-container {
+  position: relative;
+  overflow: hidden;
+  padding: 0 var(--blog-padding) 4rem;
+}
+.section-inspiration .container > .content .blogs .swiper-container .swiper-slide {
+  transition: all var(--transition-duration) var(--transition-timing) 0s;
+}
+.section-inspiration .container > .content .blogs .swiper-container .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+.section-inspiration .container > .content .blogs .swiper-container .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.4;
+}
+.section-inspiration .container > .content .blogs .swiper-container .swiper-nav {
+  position: absolute;
+  right: var(--blog-padding);
+  bottom: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .section-inspiration .container > .content .blogs .swiper-container .swiper-nav {
+    left: var(--blog-padding);
+  }
+}
+.section-inspiration .container .carousel {
+  grid-column: 2;
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 1023.98px) {
+  .section-inspiration .container .carousel {
+    margin-bottom: 3rem;
+    width: 100vw;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1024px) {
+  .section-inspiration .container .carousel {
+    height: 1100px;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1280px) {
+  .section-inspiration .container .carousel {
+    padding-right: 4rem;
+  }
+}
+.section-inspiration .container .carousel .swiper-container {
+  min-width: 0;
+}
+.section-inspiration .container .carousel .swiper-slide {
+  display: flex;
+}
+@media (max-width: 1023.98px) {
+  .section-inspiration .container .carousel .swiper-slide {
+    width: 250px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-inspiration .container .carousel .swiper-slide {
+    height: 200px;
+  }
+}
+.section-inspiration .container .carousel .swiper-wrapper {
+  transition-timing-function: linear;
+}
+.section-inspiration .container .carousel .carousel-item {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: var(--border-radius-sm);
+}
+@media (min-width: 768px) {
+  .section-inspiration .container .carousel .carousel-item {
+    aspect-ratio: 5/4;
+  }
+}
+@media (min-width: 1024px) {
+  .section-inspiration .container .carousel .carousel-item {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 3/2;
+  }
+}
+.section-inspiration .container .carousel .carousel-item a {
+  position: relative;
+  z-index: 1;
+}
+.section-inspiration .container .carousel .carousel-item img,
+.section-inspiration .container .carousel .carousel-item video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.section-inspiration .container .carousel .carousel-item video {
+  position: relative;
+  z-index: 1;
+}
+.section-inspiration .container .carousel .carousel-item .video-play {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  z-index: 5;
+  padding: 0;
+  background-color: var(--colour-sugar-cane);
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 0.25rem;
+  display: grid;
+  place-items: center;
+}
+.section-inspiration .container .carousel .carousel-item .video-play:focus {
+  background-color: var(--colour-royal-purple);
+}
+.section-inspiration .container .carousel .carousel-item .video-play:focus svg {
+  fill: var(--colour-white);
+}
+.section-inspiration .container .carousel .carousel-item .video-play svg {
+  height: 0.75rem;
+  width: 0.75rem;
+  fill: var(--colour-emperor);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all var(--transition-duration) var(--transition-timing) 0s;
+}
+.section-inspiration .container .carousel .carousel-item .video-play svg.play {
+  opacity: 1;
+}
+.section-inspiration .container .carousel .carousel-item .video-play svg.pause {
+  opacity: 0;
+}
+.section-inspiration .container .carousel .carousel-item .video-play.playing .play {
+  opacity: 0;
+}
+.section-inspiration .container .carousel .carousel-item .video-play.playing .pause {
+  opacity: 1;
+}
+
+.snippet-article-card .category {
+  display: none;
+  visibility: hidden;
+}
+.snippet-article-card .image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/1;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+}
+.snippet-article-card .image img {
+  width: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+.snippet-article-card a {
+  text-decoration: none;
+  color: inherit;
+}
+.snippet-article-card a .title {
+  font-weight: 600;
+  line-height: 1.25;
+  display: block;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+.snippet-article-card a p {
+  margin-bottom: 0.5rem;
+}
+.snippet-article-card .date {
+  font-size: 0.75rem;
+  color: var(--colour-royal-purple);
+}
+{% endstylesheet %}
+
+{% javascript %}
+(()=>{"use strict";const e="data-slides-visible",t="lg";var i,s;i="section-inspiration",s={onLoad(){this.initVideoControls(),this.activeSliders=[],this.initAllSliders(),this.addBreakpointEventListeners()},addBreakpointEventListeners(){window.addEventListener(`breakpoint-down:${t}`,this.resetSliders.bind(this)),window.addEventListener(`breakpoint-up:${t}`,this.resetSliders.bind(this))},initAllSliders(){this.sliders=this.container.querySelectorAll("[data-slider]"),this.sliders.forEach((e=>{this.initSlider(e)}))},initVideoControls(){this.container.querySelectorAll("[data-ci-video-control]").forEach((e=>{let t=e.parentNode.querySelector("video");e.addEventListener("click",(function(){t.paused?(t.play(),e.classList.add("playing")):(t.pause(),e.classList.remove("playing"))}))}))},initSlider(i){const s=i.querySelector("[data-pagination]"),r=i.querySelector("[data-next]"),n=i.querySelector("[data-prev]"),o=window.matchMedia(`(max-width: ${window.theme.breakpoints[t]}px)`),[a,d,l]=i.hasAttribute(e)?i.getAttribute(e).split("/"):["auto","auto","auto"];if(i){const e=i.getAttribute("data-autoplay");this.direction=!1===this.direction;var c=!1;"true"===e&&(c=!0),new window.theme.Swiper(i,{slidesPerView:l||d,spaceBetween:16,loop:!("true"!==i.getAttribute("data-loop")||!o),slidesOffsetBefore:this.direction?50:0,simulateTouch:!0,speed:c?8e3:500,breakpoints:{[theme.breakpoints.lg]:{slidesPerView:a,direction:"true"===i.getAttribute("data-vertical")?"vertical":"horizontal"},[theme.breakpoints.md]:{slidesPerView:d}},pagination:!!s&&{el:s,clickable:!0},navigation:!(!n||!r)&&{prevEl:n,nextEl:r}}),c=!1}},resetSliders(){this.activeSliders.forEach((e=>{e.destroy()})),this.initAllSliders()}},Shopify.theme.sections&&Shopify.theme.sections.register?(0===Shopify.theme.sections.getInstances(i).length&&Shopify.theme.sections.register(i,s),Shopify.theme.sections.load(i)):function(e,t){var i={name:e,events:t};theme.sections.push(i)}(i,s)})();
+{% endjavascript %}
 
 {% schema %}
 {

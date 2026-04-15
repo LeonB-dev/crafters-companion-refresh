@@ -17,7 +17,6 @@
   assign margin_bottom = section.settings.margin_bottom
 %}
 
-{{- 'section-page-header.css' | asset_url | stylesheet_tag -}}
 
 <style>
   div[data-section-id="{{ section.id }}"] {
@@ -86,6 +85,70 @@
   </div>
   {%- render 'paper-edge', _section: section, _bottom_edge_colour: 'white' -%}
 </div>
+
+{% stylesheet %}
+.section-page-header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  color: var(--colour-text);
+}
+.section-page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  z-index: 5;
+}
+.section-page-header picture,
+.section-page-header .container {
+  grid-column: 1;
+  grid-row: 1;
+}
+.section-page-header .image {
+  position: relative;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: block;
+  object-fit: cover;
+}
+.section-page-header .container {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-auto-flow: row;
+  place-content: center;
+}
+.section-page-header .logo {
+  height: 2.5rem;
+  width: 100%;
+  max-width: 24rem;
+  object-fit: contain;
+}
+@media (min-width: 768px) {
+  .section-page-header .logo {
+    height: 3.5rem;
+  }
+}
+.section-page-header .heading {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1rem;
+}
+.section-page-header .actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+{% endstylesheet %}
 
 {% schema %}
 {

@@ -1,3 +1,13 @@
+{% doc %}
+  Renders individual carousel item with image or video.
+
+  @param {object} _media - The media block object containing image or video settings
+  @param {number} _index - The index of the item in the carousel
+  @param {string} _fallback_link - Fallback URL if no article URL is available
+
+  @example
+  {% render 'carousel-item', _media: block, _index: forloop.index, _fallback_link: collection.url %}
+{% enddoc %}
 {% liquid
   assign carousel_image_height = 300
   assign carousel_image_width = 600

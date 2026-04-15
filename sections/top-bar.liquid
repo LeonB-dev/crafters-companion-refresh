@@ -11,7 +11,7 @@
       assign current_domain = territory.settings.name
       assign current_currency = territory.settings.currency
       assign file_name = current_domain | handleize
-      assign icon_flag = 'icon-flag-' | append: file_name | append: '.jpg' | downcase | asset_img_url: '64x'
+      assign icon_flag = 'icon-flag-' | append: file_name | append: '.jpg' | downcase | asset_url
 
       assign territory_text = current_domain
       if current_currency != blank
@@ -38,7 +38,6 @@
 <link href="{{ 'section-top-bar.css' | asset_url }}" rel="preload" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ 'section-top-bar.css' | asset_url }}"></noscript>
 
-{{- 'snippet-territory-switcher.css' | asset_url | stylesheet_tag -}}
 {{- 'snippet-modal-component.css' | asset_url | stylesheet_tag -}}
 
 <div class="top-bar" style="{{ top_bar_styles }}">
@@ -76,6 +75,66 @@
     {% endif %}
   </div>
 </div>
+
+
+{% stylesheet %}
+.snippet-territory-switcher {
+  position: absolute;
+  top: 3rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 150;
+  transition: all var(--transition-duration) var(--transition-timing) 0s;
+}
+.snippet-territory-switcher.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+.snippet-territory-switcher .container {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.snippet-territory-switcher ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: var(--border-radius-lg);
+  background-color: var(--colour-white);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+  padding: 0.25rem;
+  display: grid;
+}
+.snippet-territory-switcher ol li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--colour-emperor);
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius-lg);
+  background-color: var(--colour-sugar-cane);
+  transition: all var(--transition-duration) var(--transition-timing) 0s;
+  min-width: 6rem;
+}
+.snippet-territory-switcher ol li a span {
+  text-transform: uppercase;
+}
+.snippet-territory-switcher ol li a img {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.snippet-territory-switcher ol li:hover a, .snippet-territory-switcher ol li:focus a {
+  background-color: var(--colour-whisper);
+}
+{% endstylesheet %}
 
 {% schema %}
 {

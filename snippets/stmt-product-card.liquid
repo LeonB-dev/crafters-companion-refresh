@@ -1,3 +1,14 @@
+{% doc %}
+  Feature-rich product card.
+
+  @param {product} product - The product object
+  @param {collection} collection - The collection the product belongs to
+  @param {image} _sticker_logo - The sticker logo image
+  @param {string} _sticker_logo_alt - Alt text for the sticker logo
+
+  @example
+  {% render 'stmt-product-card', product: product, collection: collection, _sticker_logo: section.settings.sticker_logo, _sticker_logo_alt: section.settings.sticker_logo_alt %}
+{% enddoc %}
 {% liquid
   assign current_variant = product.selected_or_first_available_variant
   assign title = product.title

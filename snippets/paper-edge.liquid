@@ -1,3 +1,9 @@
+{% doc %}
+  Decorative SVG paper edge (horizontal).
+
+  @example
+  {% render 'paper-edge' %}
+{% enddoc %}
 {% liquid
   assign edge_version = _edge_version | default: _section.settings.edge_version
   assign background_colour = _background_colour | default: _section.settings.background_colour

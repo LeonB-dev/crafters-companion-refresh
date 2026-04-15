@@ -1,1 +1,0 @@
-(()=>{"use strict";HTMLElement,customElements.define("fade-carousel",FadeCarouusel)})();

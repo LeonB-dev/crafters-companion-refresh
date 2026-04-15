@@ -1,3 +1,13 @@
+{% doc %}
+  Tab controls for inspiration section.
+
+  @param {section} section - The parent section object
+  @param {block} block - The current block object
+  @param {string} breakpoint - The breakpoint for responsive rendering
+
+  @example
+  {% render 'stmt-inspiration-tabs', section: section, block: block, breakpoint: 'desktop' %}
+{% enddoc %}
 <div class="inspiration__tabs inspiration__tabs--{{ breakpoint }}">
   {% for tab in section.blocks %}
     <button type="button" class="inspiration__tabs-control inspiration__tabs-control--{{ tab.id }} js-inspiration-tab-control {% if block.id == tab.id %}active{% endif %}" data-target-tab="inspirationTab{{ tab.id }}" data-target-banner="inspirationBanner{{ tab.id }}" {{ tab.shopify_attributes }}>

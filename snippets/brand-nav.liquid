@@ -1,3 +1,11 @@
+{% doc %}
+  Displays brand navigation bar with logo, links, and background.
+
+  @param {metaobject} _parent_brand_metaobject - The parent brand metaobject containing logo, colours, and links
+
+  @example
+  {% render 'brand-nav', _parent_brand_metaobject: product.metafields.custom.parent_brand.value %}
+{% enddoc %}
 {% liquid
   assign show_parent_brand_nav = false
 
@@ -16,8 +24,6 @@
     assign background_image_2x = background_image | image_url: width: 1920
   endif
 %}
-
-{{- 'snippet-brand-nav.css' | asset_url | stylesheet_tag -}}
 
 <style>
   .snippet-brand-nav{
@@ -81,3 +87,49 @@
     </ul>
   </div>
 </div>
+
+{% stylesheet %}
+.snippet-brand-nav {
+  position: relative;
+  padding: 1.5rem 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  overflow: hidden;
+}
+.snippet-brand-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.snippet-brand-nav .logo {
+  display: block;
+}
+.snippet-brand-nav .logo img {
+  height: 2rem;
+  width: auto;
+  max-width: 12rem;
+  object-fit: contain;
+}
+.snippet-brand-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+.snippet-brand-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .snippet-brand-nav ul {
+    gap: 2rem;
+  }
+}
+.snippet-brand-nav ul li:hover a, .snippet-brand-nav ul li:focus a {
+  text-decoration: underline;
+}
+{% endstylesheet %}

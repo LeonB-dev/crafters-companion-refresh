@@ -4,7 +4,6 @@
   assign margin_bottom = section.settings.margin_bottom
 %}
 
-{{- 'section-page-full-width.css' | asset_url | stylesheet_tag -}}
 
 <div class="{{- template_name }} u-space-below-{{- margin_bottom }} u-space-above-sm" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
   <header class="header">
@@ -20,6 +19,25 @@
     </div>
   {%- endif -%}
 </div>
+
+{% stylesheet %}
+.section-page-full-width .container {
+  display: flex;
+  flex-direction: column;
+}
+.section-page-full-width .container h1 {
+  width: 100%;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .section-page-full-width .container h1 {
+    max-width: var(--rte-max-width);
+  }
+}
+.section-page-full-width .c-rte {
+  max-width: none;
+}
+{% endstylesheet %}
 
 {% schema %}
 {

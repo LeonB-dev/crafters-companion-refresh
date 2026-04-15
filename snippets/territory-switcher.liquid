@@ -1,3 +1,11 @@
+{% doc %}
+  Territory switcher based on geolocation.
+
+  @param {array} _blocks - Array of section blocks for territory options
+
+  @example
+  {% render 'territory-switcher', _blocks: section.blocks %}
+{% enddoc %}
 <script>
   const countrySelectors = {
     modal: '[data-territory-modal]',
@@ -20,7 +28,7 @@
       territories["{{ territory.settings.name }}"].countries.push("{{ country | strip }}");
     {% endfor %}
     {% if territory.settings.url contains shop.domain %}
-      {% assign current_lang_flag =  'icon-flag-' | append: territory.settings.name | append: '.jpg' | downcase | asset_img_url: '64x' %}
+      {% assign current_lang_flag =  'icon-flag-' | append: territory.settings.name | append: '.jpg' | downcase | asset_url %}
     {% endif %}
   {% endfor %}
 
@@ -102,7 +110,7 @@
           <li>
             {% assign url = territory.settings.url | append: request.path  %}
             <a href="{{ url }}">
-              <img src="{{- flag_image_file | asset_img_url: '64x' -}}" alt="{{- name }} flag" height="16" width="16" loading="eager">
+              <img src="{{- flag_image_file | asset_url -}}" alt="{{- name }} flag" height="16" width="16" loading="eager">
               <span>{{ name }}</span>
             </a>
           </li>

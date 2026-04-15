@@ -1,1 +1,0 @@
-(()=>{"use strict";var e,t;e="section-footer",t={async onLoad(){}},Shopify.theme.sections&&Shopify.theme.sections.register?(0===Shopify.theme.sections.getInstances(e).length&&Shopify.theme.sections.register(e,t),Shopify.theme.sections.load(e)):function(e,t){var s={name:e,events:t};theme.sections.push(s)}(e,t)})();

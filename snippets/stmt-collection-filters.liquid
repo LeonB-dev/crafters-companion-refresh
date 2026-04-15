@@ -1,3 +1,13 @@
+{% doc %}
+  Collection filters container.
+
+  @param {collection} collection - The collection object
+  @param {array} products - The array of products to filter
+  @param {paginate} paginate - The paginate object
+
+  @example
+  {% render 'stmt-collection-filters', collection: collection, products: products, paginate: paginate %}
+{% enddoc %}
 {%- liquid
   assign per_page_options = '12,24,36,48' | split: ','
 

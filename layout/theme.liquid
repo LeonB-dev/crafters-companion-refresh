@@ -186,7 +186,7 @@
     {% endif %}
 
     {%- if template contains 'gift_card' -%}
-      {{ 'vendor/qrcode.js' | shopify_asset_url | script_tag }}
+      <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
     {%- endif -%}
 
     {%- render 'tracking-scripts' -%}
@@ -281,10 +281,11 @@
     id="wrapper"
     class="template-{{ template.name | handleize }}{% if template.suffix %} template-{{ template | handleize }}{% endif %} {% if template.directory == 'customers' %} customer {% endif %} {% if template.name == 'collection' and settings.hide_additional_filters %}hide-additional-filters{% endif %}"
   >
+    <a href="#main-content" class="skip-to-content sr-only">{{ 'accessibility.skip_to_text' | t }}</a>
     <div class="quick-cart-overlay" data-overlay-quickcart></div>
     {% sections 'header-group' %}
     <div class="overlay-nav" data-nav-desktop-overlay></div>
-    <main class="site-main">
+    <main class="site-main" id="main-content">
       {%- section 'header-usps' -%}
       {%- if template contains 'ctv'
         or template contains 'crafters-tv'
@@ -355,6 +356,7 @@
     <script
       src="//parcelintelligence.sfo3.digitaloceanspaces.com/js/bespokeshipping.min.js"
       type="text/javascript"
+      defer
     ></script>
     <script>
   document.addEventListener("DOMContentLoaded", function () {

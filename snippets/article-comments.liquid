@@ -1,3 +1,9 @@
+{% doc %}
+  Renders article comments form and existing comments.
+
+  @example
+  {% render 'article-comments' %}
+{% enddoc %}
 {%- if blog.comments_enabled? -%}
 
     {%- comment -%}

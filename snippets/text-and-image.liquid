@@ -1,3 +1,15 @@
+{% doc %}
+  Content section with image, text, and optional decorative shapes.
+
+  @param {section} _section - The section object containing settings and blocks
+  @param {boolean} _enable_dots - Whether to enable decorative dot patterns
+  @param {boolean} _enable_shapes - Whether to enable decorative shapes
+  @param {boolean} _ctvp - Whether to enable CTV player functionality
+  @param {string} background_colour - Background colour override
+
+  @example
+  {% render 'text-and-image', _section: section, _enable_dots: true, _enable_shapes: true, _ctvp: false, background_colour: '#fff' %}
+{% enddoc %}
 {% liquid
   assign header_title = _section.settings.header_title
   assign header_image = _section.settings.header_image
@@ -42,8 +54,6 @@
     assign list_items = list_text | split: '</p>'
   endif
 %}
-
-{{- 'snippet-text-and-image.css' | asset_url | stylesheet_tag -}}
 
 <style>
   div[data-section-id="{{ _section.id }}"] .container{
@@ -142,3 +152,116 @@
     </div>
   </div>
 </div>
+
+{% stylesheet %}
+.snippet-text-and-image {
+  --image-width: 48%;
+}
+@media (min-width: 1280px) {
+  .snippet-text-and-image {
+    --image-width: 56%;
+  }
+}
+.snippet-text-and-image .container {
+  display: grid;
+  gap: 3rem;
+  grid-template-areas: "image" "content";
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .snippet-text-and-image .container {
+    max-width: var(--content-tablet-width);
+  }
+}
+@media (min-width: 1024px) {
+  .snippet-text-and-image .container {
+    grid-template-columns: var(--grid-columns);
+    grid-template-areas: var(--layout-direction);
+    align-items: center;
+    gap: 3rem;
+  }
+  .snippet-text-and-image .container.vertical-start {
+    align-items: start;
+  }
+  .snippet-text-and-image .container.vertical-end {
+    align-items: end;
+  }
+}
+@media (min-width: 1280px) {
+  .snippet-text-and-image .container {
+    gap: 6rem;
+    padding: 0 var(--content-offset);
+  }
+}
+.snippet-text-and-image .container > .image {
+  grid-area: image;
+  position: relative;
+}
+.snippet-text-and-image .container > .image.u-dots::before {
+  bottom: 0;
+  left: 0;
+  transform: translate(-16px, 16px);
+}
+@media (min-width: 1024px) {
+  .snippet-text-and-image .container > .image.u-dots::before {
+    transform: translate(-36px, 12px);
+  }
+}
+.snippet-text-and-image .container > .image.u-dots::after {
+  top: 0;
+  right: 0;
+  transform: translate(-16px, -22px);
+}
+@media (min-width: 1024px) {
+  .snippet-text-and-image .container > .image.u-dots::after {
+    top: 0;
+    transform: translate(-100%, -24px);
+  }
+}
+.snippet-text-and-image .container > .image img:not(.bg-shape) {
+  height: auto;
+  width: 100%;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  object-fit: var(--image-fit);
+  aspect-ratio: 5/4;
+  position: relative;
+  z-index: 5;
+}
+.snippet-text-and-image .container > .image img.bg-shape {
+  --shape-offset: 1rem;
+  --shape-width: calc(var(--shape-offset) * 2);
+  height: calc(100% + var(--shape-width));
+  width: calc(100% + var(--shape-width));
+  max-width: none;
+  position: absolute;
+  inset: calc(var(--shape-offset) * -1);
+  object-fit: contain;
+  object-position: var(--shape-position);
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .snippet-text-and-image .container > .image img.bg-shape {
+    --shape-offset: 2rem;
+  }
+}
+.snippet-text-and-image .content {
+  grid-area: content;
+}
+@media (max-width: 1023.98px) {
+  .snippet-text-and-image .content {
+    text-align: var(--text-alignment);
+  }
+  .snippet-text-and-image .content h2, .snippet-text-and-image .content p {
+    margin-left: var(--text-margin);
+    margin-right: var(--text-margin);
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .snippet-text-and-image .content .c-check-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.snippet-text-and-image .content > * {
+  max-width: 32rem;
+}
+{% endstylesheet %}

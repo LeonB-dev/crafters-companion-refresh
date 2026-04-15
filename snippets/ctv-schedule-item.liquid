@@ -1,3 +1,12 @@
+{% doc %}
+  Displays CTV broadcast schedule item.
+
+  @param {article} _article - The article object containing broadcast details
+  @param {string} _current_day - The current day index for active state comparison
+
+  @example
+  {% render 'ctv-schedule-item', _article: article, _current_day: current_day %}
+{% enddoc %}
 {% assign start_time_seconds = _article.metafields.custom.start_time | date: '%s' | plus: 0 %}
 {%- assign day_as_int = start_time_seconds | date: '%u' | minus: 1 -%}
 

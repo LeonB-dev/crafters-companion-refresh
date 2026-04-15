@@ -1,3 +1,16 @@
+{% doc %}
+  Generic card component.
+
+  @param {string} card_title - The card title
+  @param {image} card_image - The card image
+  @param {string} card_url - The card URL
+  @param {variant} current_variant - The current product variant
+  @param {number} price_compare_at - The compare at price
+  @param {number} price - The price
+
+  @example
+  {% render 'stmt-general-card', card_title: 'My Card', card_image: image, card_url: '/products/example', price: 1999 %}
+{% enddoc %}
 {% liquid
   comment 
     card_title

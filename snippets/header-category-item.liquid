@@ -1,3 +1,20 @@
+{% doc %}
+  Renders header category display item.
+
+  @param {string} _heading - The category heading text
+  @param {string} _heading_color - CSS color for the heading text
+  @param {string} _background_color - CSS background color for the item
+  @param {image} _image - The category image
+  @param {string} _loading - The image loading attribute value
+  @param {string} _url - The link URL for the category
+  @param {string} _button_text - The call-to-action button label
+  @param {string} _button_text_color - CSS color for the button text
+  @param {string} _button_background_color - CSS background color for the button
+  @param {string} _lozenge - Optional lozenge badge text
+
+  @example
+  {% render 'header-category-item', _heading: 'New Arrivals', _url: '/collections/new', _button_text: 'Shop Now' %}
+{% enddoc %}
 <div class="snippet-collection-item" style="background-color: {{ _background_color }}">
   {%- if _lozenge != blank -%}
     <span class="c-lozenge carnation">{{- _lozenge -}}</span>

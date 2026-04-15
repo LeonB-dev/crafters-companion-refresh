@@ -2,8 +2,6 @@
   assign template_name = 'section-sitemap'
 %}
 
-{{- 'section-sitemap.css' | asset_url | stylesheet_tag -}}
-
 <div
   class="{{- template_name }} u-space-below-lg"
   data-section-type="{{- template_name -}}"
@@ -74,6 +72,36 @@
     </div>
   </div>
 </div>
+
+{% stylesheet %}
+.section-sitemap .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-sitemap .sitemap-wrapper {
+  width: 100%;
+  max-width: var(--rte-max-width);
+}
+.section-sitemap .sitemap-wrapper ul {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.section-sitemap .sitemap-wrapper ul li {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.section-sitemap .sitemap-wrapper ul li a {
+  color: currentColor;
+}
+.section-sitemap .sitemap-wrapper ul ul.tier-2,
+.section-sitemap .sitemap-wrapper ul ul.tier-3 {
+  padding: 0.5rem 0 0.5rem 1.25rem;
+}
+{% endstylesheet %}
 
 {% schema %}
 {

@@ -5,7 +5,6 @@
   assign anchor_text = section.settings.anchor_text
 %}
 
-{{- 'section-promotion-hero.css' | asset_url | stylesheet_tag -}}
 
 <div class="{{- template_name }} u-space-below-lg" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
   {%- for block in section.blocks -%}
@@ -46,6 +45,149 @@
     window.scrollBy(0, 600);
   });
 </script>
+
+{% stylesheet %}
+.section-promotion-hero {
+  display: grid;
+  grid-template-areas: "promotion-1" "content";
+  gap: 2.5rem;
+}
+@media (min-width: 768px) {
+  .section-promotion-hero {
+    padding: 0 var(--gutter);
+    grid-template-columns: 1fr 36vw 36vw 1fr;
+    grid-template-areas: "promotion-1 promotion-1 promotion-2 promotion-2" ". content content .";
+    gap: 2rem 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section-promotion-hero {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "promotion-1 content promotion-2";
+    gap: 2rem;
+    align-items: center;
+    padding: 0;
+  }
+}
+@media (min-width: 1600px) {
+  .section-promotion-hero {
+    padding: 0 1rem;
+    gap: 4rem;
+  }
+}
+.section-promotion-hero strong {
+  color: var(--colour-carnation);
+}
+.section-promotion-hero .promotion {
+  position: relative;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .section-promotion-hero .promotion {
+    border-radius: var(--border-radius-lg);
+  }
+}
+@media (min-width: 1600px) {
+  .section-promotion-hero .promotion {
+    border-radius: var(--border-radius-lg);
+  }
+}
+@media (min-width: 768px) {
+  .section-promotion-hero .promotion {
+    aspect-ratio: 4/5;
+    padding: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section-promotion-hero .promotion {
+    justify-content: flex-end;
+    aspect-ratio: unset;
+    height: 35rem;
+  }
+}
+@media (min-width: 1600px) {
+  .section-promotion-hero .promotion {
+    height: 44rem;
+  }
+}
+.section-promotion-hero .promotion._01 {
+  grid-area: promotion-1;
+}
+@media (min-width: 1024px) and (max-width: 1599.98px) {
+  .section-promotion-hero .promotion._01 {
+    border-top-right-radius: var(--border-radius-lg);
+    border-bottom-right-radius: var(--border-radius-lg);
+  }
+}
+.section-promotion-hero .promotion._02 {
+  grid-area: promotion-2;
+}
+@media (max-width: 767.98px) {
+  .section-promotion-hero .promotion._02 {
+    display: none;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1599.98px) {
+  .section-promotion-hero .promotion._02 {
+    border-top-left-radius: var(--border-radius-lg);
+    border-bottom-left-radius: var(--border-radius-lg);
+  }
+}
+@media (min-width: 1280px) {
+  .section-promotion-hero .promotion._02 {
+    justify-content: start;
+  }
+}
+.section-promotion-hero .promotion img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.section-promotion-hero .promotion .content {
+  background-color: var(--colour-sugar-cane);
+  padding: 1.5rem 3rem;
+  border-radius: var(--border-radius-xs);
+  border: 1px solid var(--colour-emperor);
+  color: var(--colour-emperor);
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1279.98px) {
+  .section-promotion-hero .promotion .content {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .section-promotion-hero .promotion .content {
+    padding: 1rem;
+    width: 100%;
+    max-width: 22rem;
+  }
+}
+.section-promotion-hero .promotion .content p {
+  margin: 0 0 0.5rem;
+}
+.section-promotion-hero .main-content {
+  text-align: center;
+  grid-area: content;
+}
+@media (max-width: 767.98px) {
+  .section-promotion-hero .main-content {
+    padding: 0 var(--gutter);
+  }
+}
+{% endstylesheet %}
 
 {% schema %}
 {

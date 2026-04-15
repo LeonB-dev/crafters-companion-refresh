@@ -1,1 +1,91 @@
-{"sections":{"custom_banner_EqnhXg":{"type":"custom-banner","name":"Custom Banner","settings":{"use_video":true,"desktop_video_file":"shopify:\/\/files\/videos\/Desktop Top Travel US_5084336b-a1d9-4f0e-838d-ff846c085f36.mp4","mobile_video_file":"shopify:\/\/files\/videos\/Mobile Top Travel US_eec8af7f-7787-455d-a5db-93290a4a2dfb.mp4","button_text":"Buy Tickets","button_link":"https:\/\/www.crafterscompanion.com\/collections\/craftaganza","button_bg_color":"#fdfffc","button_text_color":"#ba1841"}},"custom_header_text_7QUHQN":{"type":"custom-header-text","name":"Custom Header & Text Box with Bullets, Alignment & Spacing","settings":{"header_text":"","header_font_size":24,"header_font_weight":"600","header_color":"#fdfffc","header_text_align":"center","header_width":"100%","body_text":"We are thrilled to partner with Michael and Karen Ebeling, a Florida based travel planning team, who will help you book your flight(s) and hotel room. Our friends at Ebeling Travel Adventures are here to help. Once you have checked out, you will receive an email with a link to fill out a travel form to help you plan your travel.\n\nOnce the form is complete, the Ebelings will contact you to finalize room bookings and include you in the Crafter Companions Special Room Block.  To ensure a smooth arrival, the Ebeling’s team will be on-site at the hotel to assist with check-in, and at the airport to help attendees connect with the correct hotel shuttle for the event.","body_use_bullets":false,"body_bullet_spacing":5,"body_font_size":18,"body_font_weight":"400","body_color":"#fdfffc","body_text_align":"center","body_width":"100%","background_color":"#1e2f5a","padding":20,"border_radius":0,"add_border":false,"border_color":"#1e2f5a","border_size":2}},"video_9c4hT6":{"type":"video","custom_css":["{background-color: #1e2f5a;}"," {padding-top: 20px;}"," {padding-bottom: 5px;}"],"name":"Video","settings":{"external":true,"external_video":"https:\/\/youtu.be\/wTOPAR8mFdg","heading":"","text":"","margin_bottom":"none"}},"custom_header_text_QbDiT7":{"type":"custom-header-text","name":"Custom Header & Text Box with Bullets, Alignment & Spacing","settings":{"header_text":"Contact Information for Ebeling Travel Adventures","header_font_size":24,"header_font_weight":"600","header_color":"#fdfffc","header_text_align":"center","header_width":"100%","body_text":"Email: michael.ebeling@cruiseplanners.com\nPhone: 352-247-7313","body_use_bullets":false,"body_bullet_spacing":5,"body_font_size":18,"body_font_weight":"400","body_color":"#fdfffc","body_text_align":"center","body_width":"100%","background_color":"#1e2f5a","padding":20,"border_radius":0,"add_border":false,"border_color":"#1e2f5a","border_size":2}}},"order":["custom_banner_EqnhXg","custom_header_text_7QUHQN","video_9c4hT6","custom_header_text_QbDiT7"]}
+{
+  "sections": {
+    "custom_banner_EqnhXg": {
+      "type": "custom-banner",
+      "name": "Custom Banner",
+      "settings": {
+        "use_video": true,
+        "desktop_video_file": "",
+        "mobile_video_file": "",
+        "button_text": "Buy Tickets",
+        "button_link": "https://www.crafterscompanion.com/collections/craftaganza",
+        "button_bg_color": "#fdfffc",
+        "button_text_color": "#ba1841"
+      }
+    },
+    "custom_header_text_7QUHQN": {
+      "type": "custom-header-text",
+      "name": "Custom Header & Text Box with Bullets, Alignment & Spacing",
+      "settings": {
+        "header_text": "",
+        "header_font_size": 24,
+        "header_font_weight": "600",
+        "header_color": "#fdfffc",
+        "header_text_align": "center",
+        "header_width": "100%",
+        "body_text": "We are thrilled to partner with Michael and Karen Ebeling, a Florida based travel planning team, who will help you book your flight(s) and hotel room. Our friends at Ebeling Travel Adventures are here to help. Once you have checked out, you will receive an email with a link to fill out a travel form to help you plan your travel.\n\nOnce the form is complete, the Ebelings will contact you to finalize room bookings and include you in the Crafter Companions Special Room Block.  To ensure a smooth arrival, the Ebeling’s team will be on-site at the hotel to assist with check-in, and at the airport to help attendees connect with the correct hotel shuttle for the event.",
+        "body_use_bullets": false,
+        "body_bullet_spacing": 5,
+        "body_font_size": 18,
+        "body_font_weight": "400",
+        "body_color": "#fdfffc",
+        "body_text_align": "center",
+        "body_width": "100%",
+        "background_color": "#1e2f5a",
+        "padding": 20,
+        "border_radius": 0,
+        "add_border": false,
+        "border_color": "#1e2f5a",
+        "border_size": 2
+      }
+    },
+    "video_9c4hT6": {
+      "type": "video",
+      "custom_css": [
+        "{background-color: #1e2f5a;}",
+        " {padding-top: 20px;}",
+        " {padding-bottom: 5px;}"
+      ],
+      "name": "Video",
+      "settings": {
+        "external": true,
+        "external_video": "https://youtu.be/wTOPAR8mFdg",
+        "heading": "",
+        "text": "",
+        "margin_bottom": "none"
+      }
+    },
+    "custom_header_text_QbDiT7": {
+      "type": "custom-header-text",
+      "name": "Custom Header & Text Box with Bullets, Alignment & Spacing",
+      "settings": {
+        "header_text": "Contact Information for Ebeling Travel Adventures",
+        "header_font_size": 24,
+        "header_font_weight": "600",
+        "header_color": "#fdfffc",
+        "header_text_align": "center",
+        "header_width": "100%",
+        "body_text": "Email: michael.ebeling@cruiseplanners.com\nPhone: 352-247-7313",
+        "body_use_bullets": false,
+        "body_bullet_spacing": 5,
+        "body_font_size": 18,
+        "body_font_weight": "400",
+        "body_color": "#fdfffc",
+        "body_text_align": "center",
+        "body_width": "100%",
+        "background_color": "#1e2f5a",
+        "padding": 20,
+        "border_radius": 0,
+        "add_border": false,
+        "border_color": "#1e2f5a",
+        "border_size": 2
+      }
+    }
+  },
+  "order": [
+    "custom_banner_EqnhXg",
+    "custom_header_text_7QUHQN",
+    "video_9c4hT6",
+    "custom_header_text_QbDiT7"
+  ]
+}

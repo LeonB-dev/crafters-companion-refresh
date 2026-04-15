@@ -1,3 +1,13 @@
+{% doc %}
+  Renders individual cart line item with controls.
+
+  @param {line_item} item - The cart line item to display
+  @param {number} _forloop_index - The index of the item in the cart
+  @param {string} _quick-cart-class - CSS class for quick cart styling
+
+  @example
+  {% render 'cart-item', item: item, _forloop_index: forloop.index, _quick-cart-class: 'quick-cart-item' %}
+{% enddoc %}
 <li
   class="cart-item {{ _quick-cart-class }} aiod-cart-item"
   {% if _quick-cart-class == 'quick-cart-item' %}

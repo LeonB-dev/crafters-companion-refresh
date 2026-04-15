@@ -1,1 +1,10 @@
+{% doc %}
+  Renders a Nosto personalization element.
+
+  @param {string} _css_selector - Optional CSS class to apply to the Nosto element
+  @param {string} id - The Nosto placement ID
+
+  @example
+  {% render 'nosto-element', id: 'frontpage-nosto-1', _css_selector: 'nosto-wide' %}
+{% enddoc %}
 <div class="nosto_element {% if _css_selector %}{{ _css_selector }}{% endif %}" id="{{ id }}"></div>

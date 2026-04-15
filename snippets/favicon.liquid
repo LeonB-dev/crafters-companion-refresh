@@ -1,3 +1,9 @@
+{% doc %}
+  Outputs favicon and apple touch icon tags.
+
+  @example
+  {% render 'favicon' %}
+{% enddoc %}
 {%- if settings.theme_favicon != blank -%}
   <link rel="apple-touch-icon" sizes="57x57" href="{{ settings.theme_favicon | image_url: width: 57 }}" />
   <link rel="apple-touch-icon" sizes="60x60" href="{{ settings.theme_favicon | image_url: width: 60 }}" />
