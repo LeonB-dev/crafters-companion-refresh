@@ -1,3 +1,12 @@
+{% doc %}
+  Sticky floating product actions bar.
+
+  @param {product} product - The product object
+  @param {boolean} has_flexible - Whether the product has flexible payment options
+
+  @example
+  {% render 'product-sticky-actions', product: product, has_flexible: false %}
+{% enddoc %}
 {% liquid
   assign current_variant = product.selected_or_first_available_variant
   assign product_price = current_variant.price

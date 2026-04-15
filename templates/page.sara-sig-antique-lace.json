@@ -1,1 +1,266 @@
-{"sections":{"featured_image_FziBJQ":{"type":"featured-image","name":"Featured Image","settings":{"url":"","image":"shopify:\/\/shop_images\/Desktop_1_762e49fd-490c-46d4-be3e-9fce1b2837d9.jpg","image_mobile":"shopify:\/\/shop_images\/Mobile_1_47ff9783-d1ff-43fe-96c0-70484922d56d.jpg","disable_aspect_ratio":true,"enable_full_width":true,"margin_bottom":"sm"}},"custom_header_text_3xQQcz":{"type":"custom-header-text","name":"Custom Header & Text Box with Bullets, Alignment & Spacing","settings":{"header_text":"SARA SIGNATURE ANTIQUE LACE","header_font_size":32,"header_font_size_mobile":20,"header_font_weight":"600","header_color":"#222222","header_text_align":"center","header_text_align_mobile":"center","header_width":"100%","header_width_mobile":"100%","body_text":"Something old, something new, something elegant that’s just for you - the Sara Signature Antique Lace collection brings true heirloom beauty to wedding stationery, and event decor for any special occasion. Patterned paper, stamps, real lace embellishments and intricately crafted metal dies create the timeless beauty of antique lace. While a rustic colour palette brings natural warmth and charm to invitations, decorations, place settings and more.","body_use_bullets":false,"body_bullet_spacing":5,"body_font_size":18,"body_font_size_mobile":16,"body_font_weight":"400","body_color":"#333333","body_text_align":"center","body_text_align_mobile":"center","body_width":"60%","body_width_mobile":"100%","background_color":"rgba(0,0,0,0)","padding":20,"border_radius":8,"add_border":false,"border_color":"#dddddd","border_size":2}},"blocks_NdH6eN":{"type":"_blocks","blocks":{"ai_gen_block_bff72a7_wVk3Td":{"type":"ai_gen_block_bff72a7","settings":{"section_background_color":"#ffffff","button_text":"Shop Collection","button_link":"shopify:\/\/collections\/sara-signature-antique-lace","button_background_color":"#000000","button_text_color":"#ffffff","button_hover_background_color":"#5a2569","button_hover_text_color":"#ffffff","button_border_color":"#733089","button_hover_border_color":"#5a2569","button_border_width":0,"button_border_radius":0,"button_font_size":16,"button_font_weight":"600","button_padding_vertical":12,"button_padding_horizontal":24,"alignment":"center","mobile_alignment":"center","padding_top":40,"padding_bottom":40},"blocks":{}}},"block_order":["ai_gen_block_bff72a7_wVk3Td"],"name":"One button row","settings":{}},"blocks_7QyJyV":{"type":"_blocks","blocks":{"ai_gen_block_be5ab60_YQ3q9p":{"type":"ai_gen_block_be5ab60","settings":{"desktop_image":"shopify:\/\/shop_images\/Desktop_2_e5944b55-3715-4547-a505-a24baf4cc191.jpg","min_height_desktop":500,"mobile_image":"shopify:\/\/shop_images\/Mobile_2_5e2c9b09-c249-491d-9cdc-b87ea935d23d.jpg","min_height_mobile":400,"image_fit":"cover","desktop_width_percent":100,"heading":"BROWSE OUR PRODUCT LOOKBOOK","heading_color":"#1f1300","heading_size_desktop":32,"heading_size_mobile":20,"heading_weight":"600","heading_spacing":15,"subheading":"Get inspired and discover the product in detail","subheading_color":"#1f1300","subheading_size_desktop":18,"subheading_size_mobile":16,"subheading_weight":"500","subheading_spacing":30,"button_text":"View Here","button_link":"https:\/\/online.flippingbook.com\/view\/692640239\/","button_bg_color":"#000000","button_bg_color_hover":"#603c8e","button_text_color":"#fdfffc","button_text_color_hover":"#fdfffc","button_font_size":16,"button_font_size_mobile":14,"button_font_weight":"600","button_padding_x":30,"button_padding_y":15,"button_border_radius":0,"button_border_width":0,"button_border_color":"#733089","button_border_color_hover":"#603c8e","content_position_x_desktop":30,"content_position_y_desktop":55,"text_align_desktop":"center","content_max_width":50,"content_position_x_mobile":50,"content_position_y_mobile":75,"text_align_mobile":"center","content_max_width_mobile":100},"blocks":{}}},"block_order":["ai_gen_block_be5ab60_YQ3q9p"],"custom_css":[],"name":"Custom banner","settings":{}},"video_usps_qkYgKA":{"type":"video-usps","blocks":{"usp_bdqiGF":{"type":"usp","settings":{"usp_text":"A beautifully detailed collection inspired by delicate lace patterns"}},"usp_BX9zPT":{"type":"usp","settings":{"usp_text":"A new paper pad featuring layered lace textures for added depth on your crafts"}},"usp_LGgENd":{"type":"usp","settings":{"usp_text":"Includes a new envelope die concept to decorate your envelopes with one intricate die"}},"usp_aBTC8B":{"type":"usp","settings":{"usp_text":"White lace rub-ons which create detailed designs quickly and easily"}}},"block_order":["usp_bdqiGF","usp_BX9zPT","usp_LGgENd","usp_aBTC8B"],"custom_css":[],"name":"Video with USPs","settings":{"heading":"Why you will love it:","media_type":"video","video":"shopify:\/\/files\/videos\/Lace video for D&J.mp4","right_bg_color":"rgba(0,0,0,0)","panel_bg_color":"rgba(0,0,0,0)","panel_border_color":"#000000","heading_color":"#000000","heading_font_size_desktop":32,"heading_font_size_mobile":20,"heading_font_weight":"bold","usp_color":"#000000","usp_font_size_desktop":18,"usp_font_size_mobile":14,"usp_font_weight":"normal","tick_color":"#000000"}},"featured_products_ztRRBP":{"type":"featured-products","blocks":{"collection_qgkei3":{"type":"collection","settings":{"collection":"sara-signature-antique-lace"}}},"block_order":["collection_qgkei3"],"name":"Featured Products","settings":{"heading":"","heading_alignment":false,"link_url":"shopify:\/\/collections\/sara-signature-antique-lace","link_text":"","grid_size":"lg","edge_version":"none","top_edge_colour":"purple","bottom_edge_colour":"is-hidden","background_colour":"whisper","margin_bottom":"none"}},"blocks_MY8W7N":{"type":"_blocks","blocks":{"ai_gen_block_bff72a7_wQNKCX":{"type":"ai_gen_block_bff72a7","settings":{"section_background_color":"#ffffff","button_text":"Shop Collection","button_link":"shopify:\/\/collections\/sara-signature-antique-lace","button_background_color":"#000000","button_text_color":"#ffffff","button_hover_background_color":"#5a2569","button_hover_text_color":"#ffffff","button_border_color":"#733089","button_hover_border_color":"#5a2569","button_border_width":0,"button_border_radius":0,"button_font_size":16,"button_font_weight":"600","button_padding_vertical":12,"button_padding_horizontal":24,"alignment":"center","mobile_alignment":"center","padding_top":40,"padding_bottom":40},"blocks":{}}},"block_order":["ai_gen_block_bff72a7_wQNKCX"],"name":"One button row","settings":{}}},"order":["featured_image_FziBJQ","custom_header_text_3xQQcz","blocks_NdH6eN","blocks_7QyJyV","video_usps_qkYgKA","featured_products_ztRRBP","blocks_MY8W7N"]}
+{
+  "sections": {
+    "featured_image_FziBJQ": {
+      "type": "featured-image",
+      "name": "Featured Image",
+      "settings": {
+        "url": "",
+        "image": "shopify://shop_images/Desktop_1_762e49fd-490c-46d4-be3e-9fce1b2837d9.jpg",
+        "image_mobile": "shopify://shop_images/Mobile_1_47ff9783-d1ff-43fe-96c0-70484922d56d.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": true,
+        "margin_bottom": "sm"
+      }
+    },
+    "custom_header_text_3xQQcz": {
+      "type": "custom-header-text",
+      "name": "Custom Header & Text Box with Bullets, Alignment & Spacing",
+      "settings": {
+        "header_text": "SARA SIGNATURE ANTIQUE LACE",
+        "header_font_size": 32,
+        "header_font_size_mobile": 20,
+        "header_font_weight": "600",
+        "header_color": "#222222",
+        "header_text_align": "center",
+        "header_text_align_mobile": "center",
+        "header_width": "100%",
+        "header_width_mobile": "100%",
+        "body_text": "Something old, something new, something elegant that’s just for you - the Sara Signature Antique Lace collection brings true heirloom beauty to wedding stationery, and event decor for any special occasion. Patterned paper, stamps, real lace embellishments and intricately crafted metal dies create the timeless beauty of antique lace. While a rustic colour palette brings natural warmth and charm to invitations, decorations, place settings and more.",
+        "body_use_bullets": false,
+        "body_bullet_spacing": 5,
+        "body_font_size": 18,
+        "body_font_size_mobile": 16,
+        "body_font_weight": "400",
+        "body_color": "#333333",
+        "body_text_align": "center",
+        "body_text_align_mobile": "center",
+        "body_width": "60%",
+        "body_width_mobile": "100%",
+        "background_color": "rgba(0,0,0,0)",
+        "padding": 20,
+        "border_radius": 8,
+        "add_border": false,
+        "border_color": "#dddddd",
+        "border_size": 2
+      }
+    },
+    "blocks_NdH6eN": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_bff72a7_wVk3Td": {
+          "type": "ai_gen_block_bff72a7",
+          "settings": {
+            "section_background_color": "#ffffff",
+            "button_text": "Shop Collection",
+            "button_link": "shopify://collections/sara-signature-antique-lace",
+            "button_background_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_background_color": "#5a2569",
+            "button_hover_text_color": "#ffffff",
+            "button_border_color": "#733089",
+            "button_hover_border_color": "#5a2569",
+            "button_border_width": 0,
+            "button_border_radius": 0,
+            "button_font_size": 16,
+            "button_font_weight": "600",
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 24,
+            "alignment": "center",
+            "mobile_alignment": "center",
+            "padding_top": 40,
+            "padding_bottom": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_bff72a7_wVk3Td"
+      ],
+      "name": "One button row",
+      "settings": {}
+    },
+    "blocks_7QyJyV": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_be5ab60_YQ3q9p": {
+          "type": "ai_gen_block_be5ab60",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Desktop_2_e5944b55-3715-4547-a505-a24baf4cc191.jpg",
+            "min_height_desktop": 500,
+            "mobile_image": "shopify://shop_images/Mobile_2_5e2c9b09-c249-491d-9cdc-b87ea935d23d.jpg",
+            "min_height_mobile": 400,
+            "image_fit": "cover",
+            "desktop_width_percent": 100,
+            "heading": "BROWSE OUR PRODUCT LOOKBOOK",
+            "heading_color": "#1f1300",
+            "heading_size_desktop": 32,
+            "heading_size_mobile": 20,
+            "heading_weight": "600",
+            "heading_spacing": 15,
+            "subheading": "Get inspired and discover the product in detail",
+            "subheading_color": "#1f1300",
+            "subheading_size_desktop": 18,
+            "subheading_size_mobile": 16,
+            "subheading_weight": "500",
+            "subheading_spacing": 30,
+            "button_text": "View Here",
+            "button_link": "https://online.flippingbook.com/view/692640239/",
+            "button_bg_color": "#000000",
+            "button_bg_color_hover": "#603c8e",
+            "button_text_color": "#fdfffc",
+            "button_text_color_hover": "#fdfffc",
+            "button_font_size": 16,
+            "button_font_size_mobile": 14,
+            "button_font_weight": "600",
+            "button_padding_x": 30,
+            "button_padding_y": 15,
+            "button_border_radius": 0,
+            "button_border_width": 0,
+            "button_border_color": "#733089",
+            "button_border_color_hover": "#603c8e",
+            "content_position_x_desktop": 30,
+            "content_position_y_desktop": 55,
+            "text_align_desktop": "center",
+            "content_max_width": 50,
+            "content_position_x_mobile": 50,
+            "content_position_y_mobile": 75,
+            "text_align_mobile": "center",
+            "content_max_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_be5ab60_YQ3q9p"
+      ],
+      "custom_css": [],
+      "name": "Custom banner",
+      "settings": {}
+    },
+    "video_usps_qkYgKA": {
+      "type": "video-usps",
+      "blocks": {
+        "usp_bdqiGF": {
+          "type": "usp",
+          "settings": {
+            "usp_text": "A beautifully detailed collection inspired by delicate lace patterns"
+          }
+        },
+        "usp_BX9zPT": {
+          "type": "usp",
+          "settings": {
+            "usp_text": "A new paper pad featuring layered lace textures for added depth on your crafts"
+          }
+        },
+        "usp_LGgENd": {
+          "type": "usp",
+          "settings": {
+            "usp_text": "Includes a new envelope die concept to decorate your envelopes with one intricate die"
+          }
+        },
+        "usp_aBTC8B": {
+          "type": "usp",
+          "settings": {
+            "usp_text": "White lace rub-ons which create detailed designs quickly and easily"
+          }
+        }
+      },
+      "block_order": [
+        "usp_bdqiGF",
+        "usp_BX9zPT",
+        "usp_LGgENd",
+        "usp_aBTC8B"
+      ],
+      "custom_css": [],
+      "name": "Video with USPs",
+      "settings": {
+        "heading": "Why you will love it:",
+        "media_type": "video",
+        "video": "",
+        "right_bg_color": "rgba(0,0,0,0)",
+        "panel_bg_color": "rgba(0,0,0,0)",
+        "panel_border_color": "#000000",
+        "heading_color": "#000000",
+        "heading_font_size_desktop": 32,
+        "heading_font_size_mobile": 20,
+        "heading_font_weight": "bold",
+        "usp_color": "#000000",
+        "usp_font_size_desktop": 18,
+        "usp_font_size_mobile": 14,
+        "usp_font_weight": "normal",
+        "tick_color": "#000000"
+      }
+    },
+    "featured_products_ztRRBP": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_qgkei3": {
+          "type": "collection",
+          "settings": {
+            "collection": "sara-signature-antique-lace"
+          }
+        }
+      },
+      "block_order": [
+        "collection_qgkei3"
+      ],
+      "name": "Featured Products",
+      "settings": {
+        "heading": "",
+        "heading_alignment": false,
+        "link_url": "shopify://collections/sara-signature-antique-lace",
+        "link_text": "",
+        "grid_size": "lg",
+        "edge_version": "none",
+        "top_edge_colour": "purple",
+        "bottom_edge_colour": "is-hidden",
+        "background_colour": "whisper",
+        "margin_bottom": "none"
+      }
+    },
+    "blocks_MY8W7N": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_bff72a7_wQNKCX": {
+          "type": "ai_gen_block_bff72a7",
+          "settings": {
+            "section_background_color": "#ffffff",
+            "button_text": "Shop Collection",
+            "button_link": "shopify://collections/sara-signature-antique-lace",
+            "button_background_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_background_color": "#5a2569",
+            "button_hover_text_color": "#ffffff",
+            "button_border_color": "#733089",
+            "button_hover_border_color": "#5a2569",
+            "button_border_width": 0,
+            "button_border_radius": 0,
+            "button_font_size": 16,
+            "button_font_weight": "600",
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 24,
+            "alignment": "center",
+            "mobile_alignment": "center",
+            "padding_top": 40,
+            "padding_bottom": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_bff72a7_wQNKCX"
+      ],
+      "name": "One button row",
+      "settings": {}
+    }
+  },
+  "order": [
+    "featured_image_FziBJQ",
+    "custom_header_text_3xQQcz",
+    "blocks_NdH6eN",
+    "blocks_7QyJyV",
+    "video_usps_qkYgKA",
+    "featured_products_ztRRBP",
+    "blocks_MY8W7N"
+  ]
+}

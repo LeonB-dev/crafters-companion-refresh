@@ -1,3 +1,11 @@
+{% doc %}
+  Renders pagination controls.
+
+  @param {paginate} paginate - The Shopify paginate object
+
+  @example
+  {% render 'pagination', paginate: paginate %}
+{% enddoc %}
 {{- 'snippet-pagination.css' | asset_url | stylesheet_tag -}}
 <nav class="snippet-pagination" aria-label="{{ 'pagination.aria_label' | t }}" role="navigation">
   {%- if paginate.previous -%}

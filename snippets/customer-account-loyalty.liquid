@@ -1,3 +1,11 @@
+{% doc %}
+  Displays customer loyalty tier, points, and history.
+
+  @param {boolean} _enable_loyalty_loading - Whether to show a loading state for the loyalty section
+
+  @example
+  {% render 'customer-account-loyalty', _enable_loyalty_loading: true %}
+{% enddoc %}
 <div class="loyalty">
   <h3 class="u-text-xl">{{- 'template.customers.loyalty.heading' | t -}}</h3>
   <ol class="overview blocks" data-loyalty-overview>

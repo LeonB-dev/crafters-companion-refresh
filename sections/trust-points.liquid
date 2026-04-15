@@ -2,9 +2,6 @@
   assign template_name = 'section-trust-points'
 %}
 
-{{- 'section-trust-points.css' | asset_url | stylesheet_tag -}}
-<script src="{{- 'section-trust-points.js' | asset_url -}}" defer></script>
-
 <div class="{{- template_name }} swiper-grid" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
   <div class="swiper-container" data-stp-slider>
     <div class="swiper-wrapper">
@@ -21,6 +18,60 @@
     </div>
   </div>
 </div>
+
+{% stylesheet %}
+.section-trust-points {
+  background-color: rgba(115, 48, 137, 0.04);
+  margin-bottom: var(--trust-points-margin);
+}
+@media (min-width: 768px) {
+  .section-trust-points.swiper-grid .swiper-wrapper {
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .section-trust-points.swiper-grid .swiper-wrapper {
+    gap: 5rem;
+  }
+}
+.section-trust-points .swiper-slide {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+}
+@media (min-width: 768px) {
+  .section-trust-points .swiper-slide {
+    height: 3.5rem;
+  }
+}
+.section-trust-points .swiper-slide p {
+  margin: 0;
+}
+@media (max-width: 1023.98px) {
+  .section-trust-points .swiper-slide p {
+    font-size: 0.75rem;
+    line-height: 1.25;
+  }
+}
+.section-trust-points .swiper-slide p strong {
+  font-weight: 500;
+}
+.section-trust-points .swiper-slide img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+{% endstylesheet %}
+
+{% javascript %}
+(()=>{"use strict";var e;e={name:"section-trust-points",events:{async onLoad(){const e=this.container.querySelectorAll("[data-stp-slide]"),i=window.matchMedia(`(min-width: ${window.theme.breakpoints.lg}px)`),t=this.container;e.length<3&&i.matches||(this.loadSlider(),t.classList.remove("swiper-grid"))},loadSlider(){window.theme.Swiper?this.initSlider():document.addEventListener("theme:inititialised",(()=>{this.initSlider()}),{once:!0})},initSlider(){const e=document.querySelector("[data-stp-slider]");e&&new window.theme.Swiper(e,{slidesPerView:1,loop:!0,speed:800,spaceBetween:8,simulateTouch:!1,autoplay:{delay:6e3},breakpoints:{[theme.breakpoints.lg]:{slidesPerView:2}}})}}},theme.sections.push(e)})();
+{% endjavascript %}
 
 {% schema %}
 {

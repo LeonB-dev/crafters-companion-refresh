@@ -14,9 +14,6 @@
   assign margin_bottom = section.settings.margin_bottom
 %}
 
-{{- 'section-content-block-trio.css' | asset_url | stylesheet_tag -}}
-{{- 'snippet-content-block-item.css' | asset_url | stylesheet_tag -}}
-<script src="{{- 'section-content-block-trio.js' | asset_url -}}"></script>
 
 <style>
   {% if custom_link_bg_colour != blank and custom_link_colour != blank %}
@@ -47,6 +44,80 @@
     </div>
   </div>
 </div>
+
+{% stylesheet %}
+@media (min-width: 1024px) {
+  .section-content-block-trio .content-blocks {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.section-content-block-trio .swiper-container .swiper-slide {
+  height: auto;
+  width: 100%;
+}
+.section-content-block-trio .swiper-container .snippet-promotion-item {
+  height: 100%;
+}
+.snippet-content-block-item {
+  position: relative;
+  height: 100%;
+  background-color: var(--colour-white);
+  border: 1px solid var(--colour-emperor);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: none;
+  transition: box-shadow var(--transition-duration) var(--transition-timing) 0s;
+}
+.snippet-content-block-item:hover, .snippet-content-block-item:focus {
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.24);
+}
+.snippet-content-block-item .image img, .snippet-content-block-item .image svg {
+  height: auto;
+  width: 100%;
+  aspect-ratio: 5/4;
+  object-fit: cover;
+}
+.snippet-content-block-item .block-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1.5rem 1.5rem;
+  flex-grow: 1;
+}
+.snippet-content-block-item .block-content * {
+  margin: 0;
+}
+.snippet-content-block-item .block-content .description {
+  flex-grow: 2;
+}
+@media (max-width: 1023.98px) {
+  .snippet-content-block-item .block-content .description {
+    max-height: 4.5rem;
+    overflow: hidden;
+  }
+}
+.snippet-content-block-item .block-content .c-btn {
+  width: -webkit-max-content;
+  width: max-content;
+}
+.snippet-content-block-item .description strong {
+  font-weight: 600;
+  color: var(--colour-carnation);
+}
+.snippet-content-block-item a.heading {
+  text-decoration: none;
+  color: var(--colour-text-base);
+}
+{% endstylesheet %}
+
+{% javascript %}
+(()=>{"use strict";var e,i;e="section-content-block-trio",i={async onLoad(){window.matchMedia(`(max-width: ${window.theme.breakpoints.lg}px)`).matches&&this.loadSlider()},loadSlider(){window.theme.Swiper?this.initSlider():document.addEventListener("theme:inititialised",(()=>{this.initSlider()}),{once:!0})},initSlider(){this.container.querySelectorAll("[data-scbt-slider]").forEach((e=>{const i=e.querySelector("[data-scbt-slider-scrollbar]");new window.theme.Swiper(e,{slidesPerView:1.1,loop:!1,spaceBetween:16,slideToClickedSlide:!0,freeMode:{enabled:!0,sticky:!1,momentumBounce:!1},scrollbar:{el:i,draggable:!0},mousewheel:!0,breakpoints:{[theme.breakpoints.sm]:{slidesPerView:1.8},[theme.breakpoints.md]:{slidesPerView:2.2}}})}))}},Shopify.theme.sections&&Shopify.theme.sections.register?(0===Shopify.theme.sections.getInstances(e).length&&Shopify.theme.sections.register(e,i),Shopify.theme.sections.load(e)):function(e,i){var t={name:e,events:i};theme.sections.push(t)}(e,i)})();
+{% endjavascript %}
 
 {% schema %}
 {

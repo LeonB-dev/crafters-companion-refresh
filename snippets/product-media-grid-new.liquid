@@ -1,3 +1,12 @@
+{% doc %}
+  Responsive product media grid with thumbnails.
+
+  @param {product} product - The product object containing media assets
+  @param {boolean} is_mobile - Whether to render the mobile layout
+
+  @example
+  {% render 'product-media-grid-new', product: product, is_mobile: false %}
+{% enddoc %}
 {% liquid
   assign parent_brand = product.metafields.custom.parent_brand.value
 

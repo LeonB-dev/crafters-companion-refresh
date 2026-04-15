@@ -1,3 +1,11 @@
+{% doc %}
+  Outputs Nosto tracking and tagging code.
+
+  @param {product} _product - The product object for Nosto product tagging
+
+  @example
+  {% render 'nosto-tagging', _product: product %}
+{% enddoc %}
 {% unless _product.id %}
   {% if template == 'index' %}
   <div class="nosto_page_type" style="display:none">front</div>

@@ -1,3 +1,9 @@
+{% doc %}
+  Shows free delivery progress bar with loyalty tier discounts.
+
+  @example
+  {% render 'cart-delivery-threshold' %}
+{% enddoc %}
 {% liquid
   assign cart_total = cart.total_price
   assign loyalty_total = 0
@@ -43,8 +49,6 @@
   assign threshold_percentage = cart_total | divided_by: free_delivery_threshold
 %}
 
-{{ 'snippet-delivery-threshold.css' | asset_url | stylesheet_tag }}
-
 <div class="cart-delivery-threshold">
   {% render 'stmt-icon-delivery', class: 'cart-delivery-threshold__icon'  %}
   <div>
@@ -61,3 +65,44 @@
     </span>
   </div>
 </div>
+
+{% stylesheet %}
+.cart-delivery-threshold {
+  padding: 1rem;
+  background-color: var(--colour-white);
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid var(--colour-purple-x-light);
+  font-weight: 300;
+}
+.cart-delivery-threshold strong {
+  font-weight: 600;
+}
+.cart-delivery-threshold svg {
+  width: 2rem;
+  height: 2rem;
+}
+.cart-delivery-threshold > div {
+  flex-grow: 1;
+}
+.cart-delivery-threshold .free-delivery-bar {
+  height: 5px;
+  width: 100%;
+  background-color: var(--colour-purple-x-light);
+  border-radius: 5px;
+  display: block;
+  margin-top: 0.5rem;
+  position: relative;
+}
+.cart-delivery-threshold .free-delivery-bar-over {
+  height: 100%;
+  max-width: 100%;
+  border-radius: 5px;
+  background-color: var(--colour-royal-purple);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+{% endstylesheet %}

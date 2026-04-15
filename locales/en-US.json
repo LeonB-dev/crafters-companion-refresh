@@ -1,1 +1,509 @@
-{"accessibility":{"skip_to_text":"Skip to content","skip_to_product_info":"Skip to product information","close":"Close","unit_price_separator":"per","vendor":"Vendor:","read_more":"Read more","read_less":"Read less","error":"Error","refresh_page":"Choosing a selection results in a full page refresh.","link_messages":{"new_window":"Opens in a new window.","external":"Opens external website."},"loading":"Loading...","total_reviews":"total reviews","star_reviews_info":"{{ rating_value }} out of {{ rating_max }} stars","collapsible_content_title":"Collapsible content","complementary_products":"Complementary products"},"template":{"category":{"block_heading_html":"Shop our <span>{{ title }}<\/span> collections"},"404":{"title":"Oops!","sub_heading":"You're not supposed to see this!","description_html":"The page you were looking for cannot be found but we have some amazing deals on our <a href=\"{{ url }}\">homepage<\/a>.","go_to_homepage":"Go to homepage"},"article":{"meta_html":"Posted <time datetime=\"{{ datetime }}\">{{ date }}<\/time> by <span>{{ author }}<\/span>","tags_title":"Tags","no_tags":"Sorry, there are no tags for this blog.","subscribe_title":"Subscribe","subscribe_link":"Subscribe to our blog","blog":"Blog","read_more_title":"Read more: {{ title }}","read_more":"Read more","read_now":"Read Now","read_time":"Read time:","read_time_with_count":{"one":"1 min read","other":"{{ count }} min read"},"written_by":"Written by:","published_on":"Published on:","read_more_posts":"Read more posts by {{ name }}","comments":{"one":"{{ count }} comment","other":"{{ count }} comments"},"moderated":"Please note, comments need to be approved before they are published.","comment_form_title":"Leave a comment","name":"Name","email":"Email","message":"Comment","post":"Post comment","back_to_blog":"Back to blog","share":"Share this article","success":"Your comment was posted successfully! Thank you!","success_moderated":"Your comment was posted successfully. We will publish it in a little while, as our blog is moderated."},"blog":{"description_html":"Displaying {{ count }} blog articles.","description_with_tag_html":"Displaying {{ count }} blog articles tagged with \"{{ tag }}\".","empty":"Sorry, there are no published articles for this blog.","empty_tagged":"Sorry, there are no published articles that match your query.","tags_title":"Tags","clear_tags":"Clear tags","no_tags":"Sorry, there are no tags for this blog.","subscribe_title":"Subscribe","subscribe_link":"Subscribe to our blog","craft_expert_title":"Craft Expert","craft_area_title":"Craft Area","craft_skills_title":"Skills & Difficulty","craft_occasion_title":"Occasion","craft_technique_title":"Technique","craft_season_title":"Seasonal","craft_collection_title":"Collection","craft_shows_title":"Shows","date_title":"Date","filter":"Filter","posts":"posts","inspiration":"Inspiration"},"cart":{"title":"Your Basket","item":"item","items":"items","added_to_basket":"Item added to your basket","empty_basket":"Empty Basket","view_my_basket":"View My Basket","view_basket":"View your basket","items_in_basket":"{{ item_count }} item{{ plural }} in your basket","you_might_like":"You might also like","title_customer":"Hi {{ _customer_name }}, here's your basket","fomo_html":"Items in your basket are not reserved — <a href=\"{{ _checkout_url }}\">checkout<\/a> now to make them yours.","login_member_prices":"Log in to view member prices","summary":"Order Summary","remove":"Remove","note_label":"Notes","note_placeholder":"Special instructions for your delivery.","subtotal":"Subtotal","free":"FREE","vat_total":"VAT","total":"Total","estimated_delivery":"Estimated delivery","delivery":"Estimated delivery","delivery_threshold":"Spend {{ threshold_difference }} to get free delivery","shipping_at_checkout":"Shipping & taxes calculated at checkout","discounts_at_checkout_html":"Got a discount code? Apply it in your <a href=\"{{ _cart_url }}\">basket<\/a>","loyalty_line":"Loyalty discount ({{ discount }}% off)","savings_line":"Savings","update":"Update","proceed_to_checkout":"Proceed to checkout","checkout":"Checkout","accepted_payments":"Accepted payments","accepted_payment_methods":"Accepted Payment Methods","clear":"Clear","empty":"Your basket is currently empty.","cookies_required":"Enable cookies to use the shopping basket","continue_browsing_html":"<a href=\"{{ all_collections_url }}\" data-cart-continue-shopping>Continue Shopping<\/a>","item_quantity":"Item quantity","savings":"You're saving","exc_vat":"exc. VAT","inc_vat":"inc. VAT","free_delivery_html":"Delivery is calculated at checkout","delivery_qualify_html":"Delivery is calculated at checkout","label":{"product":"Product","price":"Price","quantity":"Quantity","total":"Total","discounted_price":"Discounted price","original_price":"Original price"}},"collection-section":{"filter_results":"Filter results","show_all_filters":"Show all filters","show_fewer_filters":"Show fewer filters","clear_all_filters":"Clear all filters","showing_html":"Showing <span class=\"collection__items-count\">{{ range }}<\/span> of {{ total }} products","view":"View","products_per_page":"products per page","products_per_page_mobile":"per page","sort_by":"Sort by","filters":"Filters","applied_filters":"{{ count }} applied","view_items":"View items ({{ count }})","from":"From","to":"To","apply_filter":"Apply filter","browse_all":"Browse All Products","filter":"","product":"","products":""},"collection":{"filters":"Filters","products":"products","active_filters":"Filters Applied","clear":"Clear all","clear_filters":"clear all filters","close_menu":"Close Menu","empty":"There are no results.","go_back":"Go back one step","sort_by":"Sort by","apply":"Apply Filters","products_button":"Products","info_button":"Learn More"},"gift_card":{"title":"Here's your {{ value }} gift card for {{ shop }}!","subtext":"Here's your gift card!","disabled":"Disabled","expired":"Expired on {{ expiry }}","active":"Expires on {{ expiry }}","redeem":"Use this code at checkout to redeem your gift card","shop_link":"Start shopping","print":"Print","remaining_html":"{{ balance }} left","add_to_apple_wallet":"Add to Apple Wallet","initial_value":"{{ value }}"},"list_collections":{"title":"Collections","description":{"one":"Browsing {{ count }} collection","other":"Browsing {{ count }} collections"}},"password":{"title":"Opening Soon","description":"This store is password protected.","form_aria_label":"Password form","form_password_label":"Password","form_password_placeholder":"Enter password","form_submit":"Submit","admin_link_html":"{{ text }} <a href=\"{{ link_url }}\">{{ link_text }}<\/a>"},"product":{"see_more_images":"See more images","flexible_payments":"Flexible payments available"},"search":{"no_results_html":"Your search for \"{{ terms }}\" did not yield any results.","results_for_html":"Your search for \"{{ terms }}\" revealed the following:","results_with_count":"Found: {{ count }} total results for \"{{ terms }}\"","results_suggestions_with_count":"{{ count }} suggested searches","results_pages_with_count":"{{ count }} pages","results_products_with_count":"{{ count }} products","title":"Search papercraft, sewing, colouring and more","placeholder":"I am looking for...","submit":"Search","reset":"Reset","no_results":"No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.","page":"Page","products":"Products","items":"Items","results_with_count_and_term":{"one":"{{ count }} result found for “{{ terms }}”","other":"{{ count }} results found for “{{ terms }}”"},"filters":"Filters","search_for":"Search for “{{ terms }}”","suggestions":"Popular Suggestions","top_suggestions":"Popular Suggestions","pages":"Pages","collections":"Collections","articles":"Articles","clear_filters":"Clear all filters","close_menu":"Close Menu","empty":"There are no items.","go_back":"Go back one step","no_search_performed":"No search was performed. Please use the search bar at the top to begin your search."},"customers":{"my_crafters":"My Crafters","account":{"welcome":"Welcome, {{ name }}","account":"Account","my_account":"My account","intro":"You can use this area to view your order history, loyalty info, wishlist and contact information. ","logout":"Logout","email":"Email","address":"Address","edit":"Edit","recent_orders":"Your recent orders"},"loyalty":{"heading":"Loyalty","history_heading":"Loyalty History","your_tier":"Your tier","your_points":"Your points","pending_points":"Pending points","view_history_html":"View your <span>history<\/span>","learn_more_html":"Learn more about <a href=\"\/pages\/club-inspire\"><u>Club Inspire<u><\/a><u>","points":"","benefits":"Benefits:","pearl_discount":"250 points with your first order","percent_off_orders":"{{ discount }}% off all orders","free_shipping_text_html":"Free <a href=\"\/pages\/delivery-information\">shipping<\/a> on orders over £{{ shipping }}","sign_up_text":"Sign up","sign_in_text":"Sign in","order_id":"Order ID","loyalty_action_type":"Type","loyalty_action_points":"Points","loyalty_action_date":"Insertion Date"},"wishlist":{"heading":"Wishlist","total_items":"Total Items","learn_more_html":"Learn more about managing your <span>Wishlist<\/span>"},"activate_account":{"activate":"Activate Account","cancel":"Cancel"},"login":{"continue_shopping":"Continue shopping","heading":"Sign in","submit_text":"Sign in","forgotton_password_text":"Forgotten your password?","create_account_upsell_html":"Don’t have an account? <a href=\"{{ signup_url }}\">Sign up<\/a> now.","create_account_instructions":"","signup_submit_text":"Sign up"},"guest":{"guest_submit_text":"Continue as guest"},"order":{"order_id":"Order ID","order_date":"Date","order_payment":"Payment Status","order_fulfillment":"Fulfillment Status","order_total":"Total"},"register":{"heading":"Sign up","submit_text":"Sign up","login_text":"Already have an account?"},"reset_password":{"reset_password_info_text":"Please enter your email address below to receive a password reset link.","success_message":"We've sent you an email with a link to update your password.","reset_submit_text":"Reset my password","cancel_reset_password_text":"Cancel","heading":"Reset your password"}},"social":{"facebook_title":"Facebook","instagram_title":"Instagram","tiktok_title":"TikTok","twitter_title":"Twitter","youtube_title":"YouTube"}},"cookie":{"cookie_policy_message_html":"{{ name }} use cookies to provide a better user experience and personalised ads \/ content. By clicking 'ACCEPT', you are agreeing to our Privacy and <a href=\"{{ root_url }}pages\/privacy-policy\">Cookie Policy<\/a>. You can opt out by <a href=\"{{ root_url }}pages\/privacy-policy\" data-cookie-bar-reject>clicking here<\/a>.","accept_text":"Accept"},"products":{"product":{"regular_price":"Regular price","sold_out":"Sold Out","unavailable":"Unavailable","on_sale":"On Sale","new":"New","on_sale_from_html":"On Sale from {{ price }}","from_text_html":"From {{ price }}","quantity":"Quantity","add_to_cart":"Add to Basket","add_to_wishlist":"Add to Wishlist","save":"Save","points_html":"Earn <strong>{{points}} points<\/strong> with <a href=\"{{ routes.root_url }}pages\/{{ settings.club_inspire_policy }}\">Club Inspire<\/a>","learn_how_this_works_html":"<a href=\"{{ learn_how_url }}\">Learn<\/a> how this product works","featured_on_ctv_html":"Featured on <a href=\"{{ ctv_url }}\">Crafter's TV<\/a>","as_featured_on_ctv":"As featured on Crafter's TV","sku":"Product SKU: ","free_delivery_html":"This item qualifies for <strong>Free Delivery<\/strong>","low_stock_html":"Less than {{ lowStockThreshold }} left"}},"ctv":{"shop_the_show":"Shop the Show","watch":"Watch the show","watch_live":"Watch Now","today":"Today","shop_the_day":"Shop the day","std_terms_text":"","std_offers_text":"","view_schedule":"View our schedule","craft_speciality":"Craft speciality","craft_technique":"Craft technique"},"breadcrumb":{"aria_label":"Breadcrumb links"},"pagination":{"aria_label":"Pagination links","previous_page":"Previous page","next_page":"Next page","page_with_number":"Page {{ number }}","load_more":"Load more","load_previous":"Load previous","page_with_number_and_total":"Page {{ number }} of {{ total }}"},"gift_cards":{"issued":{"title":"Here's your {{ value }} gift card for {{ shop }}!","subtext":"Here's your gift card!","disabled":"Disabled","expired":"Expired on {{ expiry }}","active":"Expires on {{ expiry }}","redeem":"Use this code at checkout to redeem your gift card","shop_link":"Start shopping","print":"Print","remaining_html":"{{ balance }} left","add_to_apple_wallet":"Add to Apple Wallet","initial_value":"{{ value }}"}},"components":{"slider_labels":{"next_slide":"Next slide","previous_slide":"Previous slide"}},"general":{"meta":{"tags":"{{ tags }} ","page":"Page {{ page }}"},"search":{"results_html":"Showing results for {{ searchTerms }}","collections":"Collections","pages":"Pages","popular":"Popular","articles":"Articles","heading":"Search our store","results_with_count":"Found: {{ count }} results for \"{{ terms }}\""}},"sections":{"header":{"nav_aria_label":"Site links","cart_link_title_html":"Basket ({{ count }})","cart_link_text":"Basket"},"top-bar":{"order-line":"Order line","contact-us":"Contact Us"},"footer":{"nav_aria_label":"Footer links","shop_menu_label":"Shop","information_menu_label":"Useful Information","company_menu_label":"Company","policy_menu_label":"Policies & Documents","social_menu_label":"Follow Us","lang_menu_label":"You are in","copyright_html":"Registered in England..."},"instagram":{"button":"Follow us on Insta"}},"cart":{"general":{"title":"TODO"}},"territory_selector":{"heading":"Select your territory","browsing_from_html":"Delivery to the <span id='country-name'><\/span>?","confirm":"Confirm your territory","submit":"Submit"},"forms":{"first_name_label":"First Name","first_name_placeholder":"Enter your first name","last_name_label":"Last Name","last_name_placeholder":"Enter your last name","email_label":"Email","email_placeholder":"Enter your email address","telephone_label":"Email","telephone_placeholder":"Enter your telephone number","message_label":"Message","message_placeholder":"Enter your message","company_label":"Company","company_placeholder":"Enter your company name","website_label":"Website","website_placeholder":"Enter your website URL","password_label":"Password","password_placeholder":"Enter your password","password_confirm_label":"Password Confirmation","password_confirm_placeholder":"Re-enter your password","marketing_signup_label":"I am happy for you to contact me via email about latest offers, product launches, news and other relevant information.","edit_address":"Edit Address","company":"Company","address_one":"Address 1","address_two":"Address 2","city":"City","country":"Country","province":"Province","postcode":"Postcode","phone_number":"Phone Number","default_address":"Set as your default address?","add_new_address":"Add New Address","save":"Save","cancel":"cancel","uk_postcode_regex":"[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}","us_postcode_regex":"\\d{5}([ \\-]\\d{4})?","newsletter":{"success_message":"TODO","tags":"TODO","context":"TODO"}},"brands":{"brands_title":"Brands"},"templates":{"search":{"no_results":"TODO"}}}
+{
+  "accessibility": {
+    "skip_to_text": "Skip to content",
+    "skip_to_product_info": "Skip to product information",
+    "close": "Close",
+    "unit_price_separator": "per",
+    "vendor": "Vendor:",
+    "read_more": "Read more",
+    "read_less": "Read less",
+    "error": "Error",
+    "refresh_page": "Choosing a selection results in a full page refresh.",
+    "link_messages": {
+      "new_window": "Opens in a new window.",
+      "external": "Opens external website."
+    },
+    "loading": "Loading...",
+    "total_reviews": "total reviews",
+    "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
+    "collapsible_content_title": "Collapsible content",
+    "complementary_products": "Complementary products"
+  },
+  "template": {
+    "404": {
+      "title": "Oops!",
+      "sub_heading": "You're not supposed to see this!",
+      "description_html": "The page you were looking for cannot be found but we have some amazing deals on our <a href=\"{{ url }}\">homepage</a>.",
+      "go_to_homepage": "Go to homepage"
+    },
+    "category": {
+      "block_heading_html": "Shop our <span>{{ title }}</span> collections"
+    },
+    "article": {
+      "meta_html": "Posted <time datetime=\"{{ datetime }}\">{{ date }}</time> by <span>{{ author }}</span>",
+      "tags_title": "Tags",
+      "no_tags": "Sorry, there are no tags for this blog.",
+      "subscribe_title": "Subscribe",
+      "subscribe_link": "Subscribe to our blog",
+      "blog": "Blog",
+      "read_more_title": "Read more: {{ title }}",
+      "read_more": "Read more",
+      "read_now": "Read Now",
+      "read_time": "Read time:",
+      "read_time_with_count": {
+        "one": "1 min read",
+        "other": "{{ count }} min read"
+      },
+      "written_by": "Written by:",
+      "published_on": "Published on:",
+      "read_more_posts": "Read more posts by {{ name }}",
+      "comments": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      },
+      "moderated": "Please note, comments need to be approved before they are published.",
+      "comment_form_title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Comment",
+      "post": "Post comment",
+      "back_to_blog": "Back to blog",
+      "share": "Share this article",
+      "success": "Your comment was posted successfully! Thank you!",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated."
+    },
+    "blog": {
+      "description_html": "Displaying {{ count }} blog articles.",
+      "description_with_tag_html": "Displaying {{ count }} blog articles tagged with \"{{ tag }}\".",
+      "empty": "Sorry, there are no published articles for this blog.",
+      "empty_tagged": "Sorry, there are no published articles that match your query.",
+      "tags_title": "Tags",
+      "clear_tags": "Clear tags",
+      "no_tags": "Sorry, there are no tags for this blog.",
+      "subscribe_title": "Subscribe",
+      "subscribe_link": "Subscribe to our blog",
+      "craft_expert_title": "Craft Expert",
+      "craft_area_title": "Craft Area",
+      "craft_skills_title": "Skills & Difficulty",
+      "craft_occasion_title": "Occasion",
+      "craft_technique_title": "Technique",
+      "craft_season_title": "Seasonal",
+      "craft_collection_title": "Collection",
+      "craft_shows_title": "Shows",
+      "date_title": "Date",
+      "filter": "Filter",
+      "posts": "posts",
+      "inspiration": "Inspiration"
+    },
+    "cart": {
+      "title": "Your Basket",
+      "item": "item",
+      "items": "items",
+      "added_to_basket": "Item added to your basket",
+      "empty_basket": "Empty Basket",
+      "view_my_basket": "View My Basket",
+      "view_basket": "View your basket",
+      "items_in_basket": "{{ item_count }} item{{ plural }} in your basket",
+      "you_might_like": "You might also like",
+      "title_customer": "Hi {{ _customer_name }}, here's your basket",
+      "fomo_html": "Items in your basket are not reserved — <a href=\"{{ _checkout_url }}\">checkout</a> now to make them yours.",
+      "login_member_prices": "Log in to view member prices",
+      "summary": "Order Summary",
+      "remove": "Remove",
+      "note_label": "Notes",
+      "note_placeholder": "Special instructions for your delivery.",
+      "subtotal": "Subtotal",
+      "free": "FREE",
+      "vat_total": "VAT",
+      "total": "Total",
+      "estimated_delivery": "Estimated delivery",
+      "delivery": "Estimated delivery",
+      "delivery_threshold": "Spend {{ threshold_difference }} to get free delivery",
+      "shipping_at_checkout": "Shipping & taxes calculated at checkout",
+      "discounts_at_checkout_html": "Got a discount code? Apply it in your <a href=\"{{ _cart_url }}\">basket</a>",
+      "loyalty_line": "Loyalty discount ({{ discount }}% off)",
+      "savings_line": "Savings",
+      "update": "Update",
+      "proceed_to_checkout": "Proceed to checkout",
+      "checkout": "Checkout",
+      "accepted_payments": "Accepted payments",
+      "accepted_payment_methods": "Accepted Payment Methods",
+      "clear": "Clear",
+      "empty": "Your basket is currently empty.",
+      "cookies_required": "Enable cookies to use the shopping basket",
+      "continue_browsing_html": "<a href=\"{{ all_collections_url }}\" data-cart-continue-shopping>Continue Shopping</a>",
+      "item_quantity": "Item quantity",
+      "savings": "You're saving",
+      "exc_vat": "exc. VAT",
+      "inc_vat": "inc. VAT",
+      "free_delivery_html": "Delivery is calculated at checkout",
+      "delivery_qualify_html": "Delivery is calculated at checkout",
+      "label": {
+        "product": "Product",
+        "price": "Price",
+        "quantity": "Quantity",
+        "total": "Total",
+        "discounted_price": "Discounted price",
+        "original_price": "Original price"
+      }
+    },
+    "collection-section": {
+      "filter_results": "Filter results",
+      "show_all_filters": "Show all filters",
+      "show_fewer_filters": "Show fewer filters",
+      "clear_all_filters": "Clear all filters",
+      "showing_html": "Showing <span class=\"collection__items-count\">{{ range }}</span> of {{ total }} products",
+      "view": "View",
+      "products_per_page": "products per page",
+      "products_per_page_mobile": "per page",
+      "sort_by": "Sort by",
+      "filters": "Filters",
+      "applied_filters": "{{ count }} applied",
+      "view_items": "View items ({{ count }})",
+      "from": "From",
+      "to": "To",
+      "apply_filter": "Apply filter",
+      "browse_all": "Browse All Products",
+      "filter": "",
+      "product": "",
+      "products": ""
+    },
+    "collection": {
+      "filters": "Filters",
+      "products": "products",
+      "active_filters": "Filters Applied",
+      "clear": "Clear all",
+      "clear_filters": "clear all filters",
+      "close_menu": "Close Menu",
+      "empty": "There are no results.",
+      "go_back": "Go back one step",
+      "sort_by": "Sort by",
+      "apply": "Apply Filters",
+      "products_button": "Products",
+      "info_button": "Learn More"
+    },
+    "gift_card": {
+      "title": "Here's your {{ value }} gift card for {{ shop }}!",
+      "subtext": "Here's your gift card!",
+      "disabled": "Disabled",
+      "expired": "Expired on {{ expiry }}",
+      "active": "Expires on {{ expiry }}",
+      "redeem": "Use this code at checkout to redeem your gift card",
+      "shop_link": "Start shopping",
+      "print": "Print",
+      "remaining_html": "{{ balance }} left",
+      "add_to_apple_wallet": "Add to Apple Wallet",
+      "initial_value": "{{ value }}"
+    },
+    "list_collections": {
+      "title": "Collections",
+      "description": {
+        "one": "Browsing {{ count }} collection",
+        "other": "Browsing {{ count }} collections"
+      }
+    },
+    "password": {
+      "title": "Opening Soon",
+      "description": "This store is password protected.",
+      "form_aria_label": "Password form",
+      "form_password_label": "Password",
+      "form_password_placeholder": "Enter password",
+      "form_submit": "Submit",
+      "admin_link_html": "{{ text }} <a href=\"{{ link_url }}\">{{ link_text }}</a>"
+    },
+    "product": {
+      "see_more_images": "See more images",
+      "flexible_payments": "Flexible payments available"
+    },
+    "search": {
+      "no_results_html": "Your search for \"{{ terms }}\" did not yield any results.",
+      "results_for_html": "Your search for \"{{ terms }}\" revealed the following:",
+      "results_with_count": "Found: {{ count }} total results for \"{{ terms }}\"",
+      "results_suggestions_with_count": "{{ count }} suggested searches",
+      "results_pages_with_count": "{{ count }} pages",
+      "results_products_with_count": "{{ count }} products",
+      "title": "Search papercraft, sewing, colouring and more",
+      "placeholder": "I am looking for...",
+      "submit": "Search",
+      "reset": "Reset",
+      "no_results": "No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "page": "Page",
+      "products": "Products",
+      "items": "Items",
+      "results_with_count_and_term": {
+        "one": "{{ count }} result found for “{{ terms }}”",
+        "other": "{{ count }} results found for “{{ terms }}”"
+      },
+      "filters": "Filters",
+      "search_for": "Search for “{{ terms }}”",
+      "suggestions": "Popular Suggestions",
+      "top_suggestions": "Popular Suggestions",
+      "pages": "Pages",
+      "collections": "Collections",
+      "articles": "Articles",
+      "clear_filters": "Clear all filters",
+      "close_menu": "Close Menu",
+      "empty": "There are no items.",
+      "go_back": "Go back one step",
+      "no_search_performed": "No search was performed. Please use the search bar at the top to begin your search."
+    },
+    "customers": {
+      "my_crafters": "My Crafters",
+      "account": {
+        "welcome": "Welcome, {{ name }}",
+        "account": "Account",
+        "my_account": "My account",
+        "intro": "You can use this area to view your order history, loyalty info, wishlist and contact information. ",
+        "logout": "Logout",
+        "email": "Email",
+        "address": "Address",
+        "edit": "Edit",
+        "recent_orders": "Your recent orders"
+      },
+      "loyalty": {
+        "heading": "Loyalty",
+        "history_heading": "Loyalty History",
+        "your_tier": "Your tier",
+        "your_points": "Your points",
+        "pending_points": "Pending points",
+        "view_history_html": "View your <span>history</span>",
+        "learn_more_html": "Learn more about <a href=\"/pages/club-inspire\"><u>Club Inspire<u></a><u>",
+        "points": "",
+        "benefits": "Benefits:",
+        "pearl_discount": "250 points with your first order",
+        "percent_off_orders": "{{ discount }}% off all orders",
+        "free_shipping_text_html": "Free <a href=\"/pages/delivery-information\">shipping</a> on orders over £{{ shipping }}",
+        "sign_up_text": "Sign up",
+        "sign_in_text": "Sign in",
+        "order_id": "Order ID",
+        "loyalty_action_type": "Type",
+        "loyalty_action_points": "Points",
+        "loyalty_action_date": "Insertion Date"
+      },
+      "wishlist": {
+        "heading": "Wishlist",
+        "total_items": "Total Items",
+        "learn_more_html": "Learn more about managing your <span>Wishlist</span>"
+      },
+      "activate_account": {
+        "activate": "Activate Account",
+        "cancel": "Cancel"
+      },
+      "login": {
+        "continue_shopping": "Continue shopping",
+        "heading": "Sign in",
+        "submit_text": "Sign in",
+        "forgotton_password_text": "Forgotten your password?",
+        "create_account_upsell_html": "Don’t have an account? <a href=\"{{ signup_url }}\">Sign up</a> now.",
+        "create_account_instructions": "",
+        "signup_submit_text": "Sign up"
+      },
+      "guest": {
+        "guest_submit_text": "Continue as guest"
+      },
+      "order": {
+        "order_id": "Order ID",
+        "order_date": "Date",
+        "order_payment": "Payment Status",
+        "order_fulfillment": "Fulfillment Status",
+        "order_total": "Total"
+      },
+      "register": {
+        "heading": "Sign up",
+        "submit_text": "Sign up",
+        "login_text": "Already have an account?"
+      },
+      "reset_password": {
+        "reset_password_info_text": "Please enter your email address below to receive a password reset link.",
+        "success_message": "We've sent you an email with a link to update your password.",
+        "reset_submit_text": "Reset my password",
+        "cancel_reset_password_text": "Cancel",
+        "heading": "Reset your password"
+      }
+    },
+    "social": {
+      "facebook_title": "Facebook",
+      "instagram_title": "Instagram",
+      "tiktok_title": "TikTok",
+      "twitter_title": "Twitter",
+      "youtube_title": "YouTube"
+    }
+  },
+  "cookie": {
+    "cookie_policy_message_html": "{{ name }} use cookies to provide a better user experience and personalised ads / content. By clicking 'ACCEPT', you are agreeing to our Privacy and <a href=\"{{ root_url }}pages/privacy-policy\">Cookie Policy</a>. You can opt out by <a href=\"{{ root_url }}pages/privacy-policy\" data-cookie-bar-reject>clicking here</a>.",
+    "accept_text": "Accept"
+  },
+  "products": {
+    "product": {
+      "regular_price": "Regular price",
+      "sold_out": "Sold Out",
+      "unavailable": "Unavailable",
+      "on_sale": "On Sale",
+      "new": "New",
+      "on_sale_from_html": "On Sale from {{ price }}",
+      "from_text_html": "From {{ price }}",
+      "quantity": "Quantity",
+      "add_to_cart": "Add to Basket",
+      "add_to_wishlist": "Add to Wishlist",
+      "save": "Save",
+      "points_html": "Earn <strong>{{points}} points</strong> with <a href=\"{{ routes.root_url }}pages/{{ settings.club_inspire_policy }}\">Club Inspire</a>",
+      "learn_how_this_works_html": "<a href=\"{{ learn_how_url }}\">Learn</a> how this product works",
+      "featured_on_ctv_html": "Featured on <a href=\"{{ ctv_url }}\">Crafter's TV</a>",
+      "as_featured_on_ctv": "As featured on Crafter's TV",
+      "sku": "Product SKU: ",
+      "free_delivery_html": "This item qualifies for <strong>Free Delivery</strong>",
+      "low_stock_html": "Less than {{ lowStockThreshold }} left"
+    }
+  },
+  "ctv": {
+    "shop_the_show": "Shop the Show",
+    "watch": "Watch the show",
+    "watch_live": "Watch Now",
+    "today": "Today",
+    "shop_the_day": "Shop the day",
+    "std_terms_text": "",
+    "std_offers_text": "",
+    "view_schedule": "View our schedule",
+    "craft_speciality": "Craft speciality",
+    "craft_technique": "Craft technique"
+  },
+  "breadcrumb": {
+    "aria_label": "Breadcrumb links"
+  },
+  "pagination": {
+    "aria_label": "Pagination links",
+    "previous_page": "Previous page",
+    "next_page": "Next page",
+    "page_with_number": "Page {{ number }}",
+    "load_more": "Load more",
+    "load_previous": "Load previous",
+    "page_with_number_and_total": "Page {{ number }} of {{ total }}"
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Here's your {{ value }} gift card for {{ shop }}!",
+      "subtext": "Here's your gift card!",
+      "disabled": "Disabled",
+      "expired": "Expired on {{ expiry }}",
+      "active": "Expires on {{ expiry }}",
+      "redeem": "Use this code at checkout to redeem your gift card",
+      "shop_link": "Start shopping",
+      "print": "Print",
+      "remaining_html": "{{ balance }} left",
+      "add_to_apple_wallet": "Add to Apple Wallet",
+      "initial_value": "{{ value }}"
+    }
+  },
+  "components": {
+    "slider_labels": {
+      "next_slide": "Next slide",
+      "previous_slide": "Previous slide"
+    }
+  },
+  "general": {
+    "meta": {
+      "tags": "{{ tags }} ",
+      "page": "Page {{ page }}"
+    },
+    "search": {
+      "results_html": "Showing results for {{ searchTerms }}",
+      "collections": "Collections",
+      "pages": "Pages",
+      "popular": "Popular",
+      "articles": "Articles",
+      "heading": "Search our store",
+      "results_with_count": "Found: {{ count }} results for \"{{ terms }}\""
+    }
+  },
+  "sections": {
+    "header": {
+      "nav_aria_label": "Site links",
+      "cart_link_title_html": "Basket ({{ count }})",
+      "cart_link_text": "Basket",
+      "crafters_tv": "Crafters TV",
+      "club_inspire": "Club Inspire",
+      "wishlist": "Wishlist",
+      "main_menu": "Main Menu",
+      "back": "Back",
+      "shop_link": "Shop {{ title }}",
+      "your_crafters": "Your Crafters"
+    },
+    "top-bar": {
+      "order-line": "Order line",
+      "contact-us": "Contact Us"
+    },
+    "footer": {
+      "nav_aria_label": "Footer links",
+      "shop_menu_label": "Shop",
+      "information_menu_label": "Useful Information",
+      "company_menu_label": "Company",
+      "policy_menu_label": "Policies & Documents",
+      "social_menu_label": "Follow Us",
+      "lang_menu_label": "You are in",
+      "copyright_html": "Registered in England..."
+    },
+    "instagram": {
+      "button": "Follow us on Insta"
+    },
+    "store_hero": {
+      "opening_hours": "Opening Hours",
+      "bank_holiday_hours": "Bank Holiday Hours"
+    },
+    "club_inspire_feature": {
+      "subheading": "Club Inspire"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "TODO"
+    }
+  },
+  "territory_selector": {
+    "heading": "Select your territory",
+    "browsing_from_html": "Delivery to the <span id='country-name'></span>?",
+    "confirm": "Confirm your territory",
+    "submit": "Submit"
+  },
+  "forms": {
+    "first_name_label": "First Name",
+    "first_name_placeholder": "Enter your first name",
+    "last_name_label": "Last Name",
+    "last_name_placeholder": "Enter your last name",
+    "email_label": "Email",
+    "email_placeholder": "Enter your email address",
+    "telephone_label": "Email",
+    "telephone_placeholder": "Enter your telephone number",
+    "message_label": "Message",
+    "message_placeholder": "Enter your message",
+    "company_label": "Company",
+    "company_placeholder": "Enter your company name",
+    "website_label": "Website",
+    "website_placeholder": "Enter your website URL",
+    "password_label": "Password",
+    "password_placeholder": "Enter your password",
+    "password_confirm_label": "Password Confirmation",
+    "password_confirm_placeholder": "Re-enter your password",
+    "marketing_signup_label": "I am happy for you to contact me via email about latest offers, product launches, news and other relevant information.",
+    "edit_address": "Edit Address",
+    "company": "Company",
+    "address_one": "Address 1",
+    "address_two": "Address 2",
+    "city": "City",
+    "country": "Country",
+    "province": "Province",
+    "postcode": "Postcode",
+    "phone_number": "Phone Number",
+    "default_address": "Set as your default address?",
+    "add_new_address": "Add New Address",
+    "save": "Save",
+    "cancel": "cancel",
+    "uk_postcode_regex": "[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}",
+    "us_postcode_regex": "\\d{5}([ \\-]\\d{4})?",
+    "newsletter": {
+      "success_message": "TODO",
+      "tags": "TODO",
+      "context": "TODO"
+    },
+    "default_address_heading": "Default Address",
+    "delete_address": "Delete Address",
+    "new_address": "New Address"
+  },
+  "brands": {
+    "brands_title": "Brands"
+  },
+  "templates": {
+    "search": {
+      "no_results": "TODO"
+    }
+  }
+}

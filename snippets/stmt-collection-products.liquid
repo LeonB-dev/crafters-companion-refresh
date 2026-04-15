@@ -1,3 +1,14 @@
+{% doc %}
+  Grid display of collection products.
+
+  @param {collection} collection - The collection object
+  @param {array} products - The array of products to display
+  @param {image} _sticker_logo - The sticker logo image
+  @param {string} _sticker_logo_alt - Alt text for the sticker logo
+
+  @example
+  {% render 'stmt-collection-products', collection: collection, products: collection.products, _sticker_logo: section.settings.sticker_logo, _sticker_logo_alt: section.settings.sticker_logo_alt %}
+{% enddoc %}
 <div class="container collection__hide-loading">
   <div class="collection__grid">
     {% for product in products %}

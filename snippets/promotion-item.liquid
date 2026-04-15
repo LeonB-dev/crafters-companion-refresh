@@ -1,3 +1,17 @@
+{% doc %}
+  Promotional card with image and text.
+
+  @param {string} _page_type - The type of page for the promotion
+  @param {collection} _collection - The collection object
+  @param {product} _product - The product object
+  @param {page} _page - The page object
+  @param {image} _image - The promotional image
+  @param {string} _text - The promotional text
+  @param {string} _terms - The terms and conditions text
+
+  @example
+  {% render 'promotion-item', _page_type: 'type_collection', _collection: collection, _image: block.settings.image, _text: block.settings.text, _terms: block.settings.terms %}
+{% enddoc %}
 {% liquid
   if _page_type == 'type_collection' and _collection != blank
     assign image = _collection.image

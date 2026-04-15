@@ -1,3 +1,13 @@
+{% doc %}
+  Swiper-based product media carousel.
+
+  @param {product} product - The product object to display media for
+  @param {number} _product_price - The product price
+  @param {number} _product_compare_at_price - The product compare at price
+
+  @example
+  {% render 'product-media-slider', product: product, _product_price: product.price, _product_compare_at_price: product.compare_at_price %}
+{% enddoc %}
 {% liquid
   assign has_thumbnails = ''
   if product.media.size > 1

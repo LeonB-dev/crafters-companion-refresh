@@ -4,7 +4,6 @@
   assign margin_bottom = section.settings.margin_bottom
 %}
 
-{{- 'section-promotion-cards.css' | asset_url | stylesheet_tag -}}
 
 <style>
   #shopify-section-{{ section.id }} {
@@ -115,6 +114,301 @@
       </div>
   {%- endfor -%}
 </div>
+
+{% stylesheet %}
+.section-promotion-cards {
+  /* wider container */
+  --container-max-width: 1760px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+.section-promotion-cards .promotion-card {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  min-height: 192px;
+  /* Content top left */
+  /* Content bottom left */
+  /* Content base */
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards .promotion-card {
+    min-height: 420px;
+  }
+}
+.section-promotion-cards .promotion-card .promotion-card__sticker {
+  position: absolute;
+  top: 0.3rem;
+  left: 1rem;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  border-radius: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.2;
+}
+@media (min-width: 1280px) {
+  .section-promotion-cards .promotion-card .promotion-card__sticker {
+    font-size: 20px;
+    top: 0.5rem;
+    width: 190px;
+    height: 190px;
+  }
+}
+@media (min-width: 1600px) {
+  .section-promotion-cards .promotion-card .promotion-card__sticker {
+    top: 1rem;
+  }
+}
+.section-promotion-cards .promotion-card .promotion-card__sticker.promotion-card__sticker--right {
+  left: unset;
+  right: 1rem;
+}
+.section-promotion-cards .promotion-card .promotion-card__sticker p {
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+.section-promotion-cards .promotion-card .promotion-card__sticker .h2 {
+  font-size: 16px;
+  line-height: 1.2;
+}
+@media (min-width: 1280px) {
+  .section-promotion-cards .promotion-card .promotion-card__sticker .h2 {
+    font-size: 40px;
+  }
+}
+.section-promotion-cards .promotion-card .promotion-card__sticker .h1 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+@media (min-width: 1280px) {
+  .section-promotion-cards .promotion-card .promotion-card__sticker .h1 {
+    font-size: 50px;
+  }
+}
+.section-promotion-cards .promotion-card .promotion-card__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.section-promotion-cards .promotion-card .promotion-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-promotion-cards .promotion-card .promotion-card__media .image-desktop {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards .promotion-card .promotion-card__media .image-mobile {
+    display: none;
+  }
+  .section-promotion-cards .promotion-card .promotion-card__media .image-desktop {
+    display: block;
+  }
+}
+.section-promotion-cards .promotion-card .promotion-card__content {
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards .promotion-card .promotion-card__content {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+.section-promotion-cards .promotion-card .promotion-card__content p {
+  font-size: 10px;
+  font-weight: 300;
+  margin-top: 0.5rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards .promotion-card .promotion-card__content p {
+    font-size: 16px;
+  }
+}
+.section-promotion-cards .promotion-card .promotion-card__content .promotion-card__title {
+  word-break: break-word;
+}
+.section-promotion-cards .promotion-card .promotion-card__content .promotion-card__title p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.4;
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards .promotion-card .promotion-card__content .promotion-card__title p {
+    font-size: 30px;
+  }
+}
+.section-promotion-cards .promotion-card .promotion-card__content .promotion-card__title .h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards .promotion-card .promotion-card__content .promotion-card__title .h3 {
+    font-size: 30px;
+  }
+}
+.section-promotion-cards .promotion-card .promotion-card__content .promotion-card__title .h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards .promotion-card .promotion-card__content .promotion-card__title .h2 {
+    font-size: 35px;
+  }
+}
+.section-promotion-cards .promotion-card .promotion-card__content .promotion-card__title .h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards .promotion-card .promotion-card__content .promotion-card__title .h1 {
+    font-size: 50px;
+    line-height: 1.4;
+  }
+}
+.section-promotion-cards .promotion-card.promotion-card--top_left .promotion-card__sticker {
+  display: none;
+}
+.section-promotion-cards .promotion-card.promotion-card--top_left .promotion-card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+.section-promotion-cards .promotion-card.promotion-card--top_left .promotion-card__content {
+  padding-right: 3rem;
+  border-bottom-right-radius: 500px;
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards .promotion-card.promotion-card--top_left .promotion-card__content {
+    padding-right: 9rem;
+  }
+}
+.section-promotion-cards .promotion-card.promotion-card--top_left .promotion-card__content > div {
+  display: flex;
+  flex-direction: column-reverse;
+  min-width: 0;
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards .promotion-card.promotion-card--top_left .promotion-card__content > div {
+    flex-direction: column;
+  }
+}
+.section-promotion-cards .promotion-card.promotion-card--top_left .promotion-card__content > div .promotion-card__text {
+  max-width: 12.5rem;
+}
+.section-promotion-cards .promotion-card.promotion-card--top_left .promotion-card__content > div strong {
+  display: block;
+}
+.section-promotion-cards .promotion-card.promotion-card--bottom_left .promotion-card__sticker {
+  display: none;
+}
+.section-promotion-cards .promotion-card.promotion-card--bottom_left .promotion-card__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.section-promotion-cards .promotion-card.promotion-card--bottom_left .promotion-card__content {
+  border-top-right-radius: 500px;
+  width: -webkit-max-content;
+  width: max-content;
+  margin-left: 0;
+  padding-right: 3rem;
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards .promotion-card.promotion-card--bottom_left .promotion-card__content {
+    padding-right: 6rem;
+  }
+}
+.section-promotion-cards .promotion-card.promotion-card--bottom_left .promotion-card__title {
+  width: -webkit-max-content;
+  width: max-content;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 2;
+}
+.section-promotion-cards .promotion-card.promotion-card--bottom_left .promotion-card__buttons {
+  margin-bottom: 1rem;
+  text-align: right;
+  position: absolute;
+}
+.section-promotion-cards .promotion-card.promotion-card--base .promotion-card__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.section-promotion-cards .promotion-card.promotion-card--base .promotion-card__container .promotion-card__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.section-promotion-cards .promotion-card.promotion-card--base .promotion-card__container .promotion-card__content > div {
+  align-self: flex-end;
+}
+.section-promotion-cards .promotion-card.promotion-card--base .promotion-card__container .promotion-card__content > div .promotion-card__title {
+  line-height: 1.2;
+}
+.section-promotion-cards .promotion-card.promotion-card--base .promotion-card__container .promotion-card__text p {
+  font-size: 8px;
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards .promotion-card.promotion-card--base .promotion-card__container .promotion-card__text p {
+    font-size: 16px;
+  }
+}
+.section-promotion-cards .promotion-card.promotion-card--base .promotion-card__container .promotion-card__buttons {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.section-promotion-cards .promotion-card .promotion-card__buttons {
+  position: relative;
+  margin-top: 1.125rem;
+}
+.section-promotion-cards .promotion-card .promotion-card__buttons .lozenge-l {
+  width: -webkit-max-content;
+  width: max-content;
+  font-size: var(--font-size-m);
+  padding: 1rem 1.4rem;
+}
+@media (min-width: 1024px) {
+  .section-promotion-cards .promotion-card .promotion-card__buttons .lozenge-l {
+    font-size: var(--font-size-xl);
+    padding: 1.2rem 1.4rem;
+  }
+}
+{% endstylesheet %}
 
 {% schema %}
 {

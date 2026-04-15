@@ -1,3 +1,13 @@
+{% doc %}
+  Generates individual hreflang link tag.
+
+  @param {string} name - The language-region code for the hreflang attribute
+  @param {string} territory - The domain territory mapping string
+  @param {string} _query_string - The query string to append to the URL
+
+  @example
+  {% render 'hreflang-tag', name: 'en-GB', territory: 'UK:www.example.com', _query_string: '?ref=uk' %}
+{% enddoc %}
 {% liquid 
   assign url = territory | split: ':' | last | strip
   if product

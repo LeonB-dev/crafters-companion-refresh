@@ -1,3 +1,12 @@
+{% doc %}
+  Displays article list item with image, title, and date.
+
+  @param {article} _article - The article object to display
+  @param {boolean} _show_craft_label - Whether to show the craft area label
+
+  @example
+  {% render 'article-item', _article: article, _show_craft_label: true %}
+{% enddoc %}
 {% liquid
   assign title = _article.title
 

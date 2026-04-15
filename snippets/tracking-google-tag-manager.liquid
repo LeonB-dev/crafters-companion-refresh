@@ -1,3 +1,9 @@
+{% doc %}
+  Google Tag Manager integration.
+
+  @example
+  {% render 'tracking-google-tag-manager' %}
+{% enddoc %}
 {% assign errors = '' %}
 
 {% if settings.tracking_gtm_show_errors == true and settings.tracking_gtm_id.size < 1 %}

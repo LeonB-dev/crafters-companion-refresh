@@ -1,3 +1,11 @@
+{% doc %}
+  Clickable collection card.
+
+  @param {object} card - The card object containing link and display data
+
+  @example
+  {% render 'quick-collection-card', card: block.settings %}
+{% enddoc %}
 {% capture link %}
   {% if card.link != blank %}
     <a href="{{ card.link }}">

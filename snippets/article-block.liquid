@@ -1,3 +1,12 @@
+{% doc %}
+  Displays article with image, title, excerpt, and category label.
+
+  @param {article} _article - The article object to display
+  @param {number} _forloop_index - The index of the article in the loop
+
+  @example
+  {% render 'article-block', _article: article, _forloop_index: forloop.index %}
+{% enddoc %}
 {% liquid
   assign title = _article.title
   assign image_alt = image.alt | default: title

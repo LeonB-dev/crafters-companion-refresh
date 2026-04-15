@@ -1,3 +1,9 @@
+{% doc %}
+  Displays payment method icons.
+
+  @example
+  {% render 'payment-icons' %}
+{% enddoc %}
 <ul>
   {%- for type in shop.enabled_payment_types -%}
     <li>

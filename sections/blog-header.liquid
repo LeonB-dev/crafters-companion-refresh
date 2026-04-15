@@ -6,7 +6,6 @@
   assign featured_image = blog.metafields.custom.featured_image
 %}
 
-{{- 'section-blog-header.css' | asset_url | stylesheet_tag -}}
 
 <div class="{{- template_name -}}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
   <picture>
@@ -27,6 +26,66 @@
     _bottom_edge_colour: 'white'
   -%}
 </div>
+
+{% stylesheet %}
+.section-blog-header {
+  position: relative;
+  margin-bottom: 3rem;
+}
+@media (min-width: 1024px) {
+  .section-blog-header {
+    margin-bottom: 4rem;
+  }
+}
+.section-blog-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--colour-royal-purple);
+  opacity: 0.88;
+  z-index: 5;
+}
+.section-blog-header picture {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.section-blog-header picture, .section-blog-header picture img {
+  display: block;
+}
+.section-blog-header picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.section-blog-header .content {
+  padding: 4rem var(--gutter);
+  position: relative;
+  z-index: 50;
+  color: var(--colour-sugar-cane);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .section-blog-header .content {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .section-blog-header .content {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+  }
+}
+.section-blog-header .content h1, .section-blog-header .content p {
+  margin-left: auto;
+  margin-right: auto;
+}
+{% endstylesheet %}
 
 {% schema %}
 {

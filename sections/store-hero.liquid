@@ -52,7 +52,7 @@
         </div>
       {%- endif -%}
       <div class="hours">
-        <h3 class="u-text-lg">Opening Hours</h3>
+        <h3 class="u-text-lg">{{ 'sections.store_hero.opening_hours' | t }}</h3>
         <ol>
           {%- for block in section.blocks -%}
             {% liquid
@@ -65,7 +65,7 @@
             {%- endif -%}
           {%- endfor -%}
           {%- if bh_opening_time != blank and bh_closing_time != blank -%}
-            <li class="bh">Bank Holiday Hours <span>{{ bh_opening_time }} am - {{ bh_closing_time }} pm</span></li>
+            <li class="bh">{{ 'sections.store_hero.bank_holiday_hours' | t }} <span>{{ bh_opening_time }} am - {{ bh_closing_time }} pm</span></li>
           {%- endif -%}
         </ol>
       </div>

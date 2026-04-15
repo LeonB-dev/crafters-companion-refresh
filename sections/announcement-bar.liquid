@@ -1,6 +1,5 @@
 {% unless section.settings.index_only == true and template.name != 'index' %}
  
-  {{- 'section-announcement-bar.css' | asset_url | stylesheet_tag -}}
 
   {% assign numberOfAnnoucements = 0 %}
   {%- for block in section.blocks -%}
@@ -88,6 +87,103 @@
     </div>
   </div>
 {% endunless %}
+
+{% stylesheet %}
+@media (min-width: 768px) {
+  .announcement-bar-section {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+}
+.announcement-bar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  color: black;
+  height: 3rem;
+  display: flex;
+  overflow: hidden;
+  z-index: 115;
+  position: relative;
+}
+
+.announcement-items__container {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.announcement-bar .announcement-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+}
+
+.announcement-bar__link {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.announcement-bar__link .icon-arrow {
+  display: inline-block;
+  pointer-events: none;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+  margin-bottom: 1px;
+}
+
+.announcement-bar__message {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .announcement-bar__message {
+    display: inline;
+  }
+
+  .announcement-bar__message_mobile {
+    display: none;
+  }
+}
+.announcement-bar__link .announcement-bar__message {
+  padding: 0 0.125rem;
+}
+
+.announcement-bar .announcement-bar__message,
+.announcement-bar .announcement-bar__message_mobile {
+  margin: 0;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.announcement-item span a,
+.announcement-item span a:visited,
+.announcement-item span a:hover,
+.announcement-item span a:focus,
+.announcement-item span a:active {
+  color: inherit;
+}
+
+p.announcement-bar__message {
+  text-align: center;
+}
+
+/* annoucment bar animation */
+.announcement-items__container > .announcement-item {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+{% endstylesheet %}
 
 {% schema %}
 {

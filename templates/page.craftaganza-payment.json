@@ -1,1 +1,249 @@
-{"sections":{"custom_banner_EqnhXg":{"type":"custom-banner","name":"Custom Banner","settings":{"use_video":true,"desktop_video_file":"shopify:\/\/files\/videos\/Desktop Top Payment US_a25f7223-bfd7-466c-b947-edff79dd4292.mp4","mobile_video_file":"shopify:\/\/files\/videos\/Mobile Top Payment US_1005dbcf-2dde-4425-a2c7-bdb9fb62480d.mp4","button_text":"Buy Tickets","button_link":"https:\/\/www.crafterscompanion.com\/collections\/craftaganza","button_bg_color":"#fdfffc","button_text_color":"#ba1841"}},"custom_header_text_e4VFWg":{"type":"custom-header-text","name":"Custom Header & Text Box with Bullets, Alignment & Spacing","settings":{"header_text":"","header_font_size":20,"header_font_weight":"600","header_color":"#fdfffc","header_text_align":"center","header_width":"100%","body_text":"We have PayPal Pay in 3 available if you want to split the payment of your Craftaganza Ticket, the use of PayPal Pay in 3 is subject PayPal terms and conditions. Please make your own financial decision if you wish to pay in instalments.","body_use_bullets":false,"body_bullet_spacing":5,"body_font_size":20,"body_font_weight":"600","body_color":"#fdfffc","body_text_align":"center","body_width":"100%","background_color":"#1e2f5a","padding":40,"border_radius":0,"add_border":false,"border_color":"#1e2f5a","border_size":2}},"custom_header_text_YQ7MTW":{"type":"custom-header-text","disabled":true,"name":"Custom Header & Text Box with Bullets, Alignment & Spacing","settings":{"header_text":"Clearpay","header_font_size":20,"header_font_weight":"600","header_color":"#fdfffc","header_text_align":"center","header_width":"100%","body_text":"You can shop now and pay later with Clearpay on crafterscompanion.co.uk if you are are 18+ and a resident of the UK. \n\nClearpay makes budgeting easier, allowing you to break down your payments into four instalments, due every two weeks, interest-free.* Remember, spend responsibly – sometimes splitting up payments might not always be the best option. Take a look at our FAQs below for everything you need to know.","body_use_bullets":false,"body_bullet_spacing":5,"body_font_size":16,"body_font_weight":"400","body_color":"#fdfffc","body_text_align":"center","body_width":"100%","background_color":"#1e2f5a","padding":20,"border_radius":0,"add_border":false,"border_color":"#1e2f5a","border_size":2}},"featured_image_YdYUy8":{"type":"featured-image","disabled":true,"custom_css":["{background-color: #1e2f5a;}"," {padding-top: 20px;}"," {padding-bottom: 0px;}"],"name":"Featured Image","settings":{"url":"","image":"shopify:\/\/shop_images\/Clearpay_UK_HowitWorks_Desktop_Mint_1x_1_2048x2048_91ae2ebc-8c89-483a-85ed-b028a2b36060.webp","disable_aspect_ratio":true,"enable_full_width":false,"margin_bottom":"none"}},"custom_header_text_wNVX8N":{"type":"custom-header-text","name":"Custom Header & Text Box with Bullets, Alignment & Spacing","settings":{"header_text":"PayPal Pay in 3","header_font_size":20,"header_font_weight":"600","header_color":"#fdfffc","header_text_align":"center","header_width":"100%","body_text":"Time and flexibility are on your side.\n\nMake the first payment at the time of purchase then make two more monthly payments on the same date each month. Split your purchases of between £20.00 and £3,000.00 into 3 interest-free payments without late fees.1","body_use_bullets":false,"body_bullet_spacing":5,"body_font_size":16,"body_font_weight":"400","body_color":"#fdfffc","body_text_align":"center","body_width":"100%","background_color":"#1e2f5a","padding":20,"border_radius":0,"add_border":false,"border_color":"#1e2f5a","border_size":2}},"three_image_row_EQbnrN":{"type":"three-image-row","custom_css":["{background-color: #1e2f5a;}"],"name":"Three Image Row","settings":{"image1":"shopify:\/\/shop_images\/Untitled_design_-_2025-09-10T132126.393_b9fddf81-c03b-4b16-a221-8b379ac10371.png","heading1":"","text1":"","link1":"","image2":"shopify:\/\/shop_images\/paypal-pay-in-3-example-image.jpg","heading2":"","text2":"","link2":"","image3":"shopify:\/\/shop_images\/Untitled_design_-_2025-09-08T141110.061_4fb453d5-363d-4804-885d-d15f65a9997e.png","heading3":"","text3":"","link3":""}},"faq_section_bkA9wJ":{"type":"faq-section","blocks":{"faq_fdGVzU":{"type":"faq","settings":{"question":"What is PayPal Pay in 3?","answer":"<p>PayPal Pay in 3 is an interest-free loan that lets you split your basket into 3 payments, with the first due at time of purchase and subsequent payments due every month on the same date. It’s a great way to spread the cost of larger items or to cover emergencies, and is a helpful tool to manage your budget more effectively. Pay in 3 is an unregulated credit agreement, so you will have fewer protections under this agreement than you would under a regulated credit agreement. Carefully consider whether the purchase is affordable and how you will make the repayments. Be aware of the possible impact of using Pay in 3 and of missing payments, including making other borrowing more difficult or more expensive.<\/p>"}},"faq_wXPMC4":{"type":"faq","settings":{"question":"Will I be able to use PayPal Pay in 3?","answer":"<p>We’re offering PayPal Pay in 3 to a growing number of our UK customers.<br\/><br\/>PayPal Pay in 3 is not available for certain merchants and goods. We may also decide not to offer PayPal Pay in 3 as a payment option in certain circumstances, such as where our checks suggest an increased risk of fraud or where data we hold suggests you may not be eligible. The checks we run are with an external credit reference agency. This search will only be visible to you and will not affect your credit score.<br\/><br\/>If you choose PayPal Pay in 3 as your payment method when you check out with PayPal, you’ll be taken through the application process. You’ll get a decision instantly, but not everyone is approved based on the checks we carry out.<\/p>"}},"faq_xW4pTz":{"type":"faq","settings":{"question":"Can PayPal Pay in 3 ever impact my credit score?","answer":"<p>When applying for a PayPal Pay in 3, we may conduct a “soft” credit check if we need more information to make a decision. “Soft” credit checks are not visible to others, so have no impact on your credit file. However, we do share some data on your repayment history with Transunion. Although it does not impact your credit score, this data will be visible to other companies and may impact your ability to obtain credit from other lenders and the cost of accessing it. More information is available in our Pay in 3 Terms & Conditions.<\/p>"}},"faq_aejjPH":{"type":"faq","settings":{"question":"How long will my PayPal Pay in 3 plan last?","answer":"<p>Your plan will last 2 months in total. The first payment will be due at the time of purchase, followed by 2 further payments due each month after that.<\/p>"}},"faq_wdE4Kx":{"type":"faq","settings":{"question":"What information do I need to apply for PayPal Pay in 3?","answer":"<p>To apply for PayPal Pay in 3, you’ll need to provide your:<br\/><br\/><\/p><p>Title<br\/>Phone number<br\/>Address<br\/>Date of birth<br\/>Payment details<\/p>"}},"faq_e4a3pW":{"type":"faq","settings":{"question":"How is my application for PayPal Pay in 3 assessed?","answer":"<p>Our decision making process is automated. We assess your financial position using a combination of the information you provided within your application, and information about your usage and history with PayPal to decide whether PayPal Pay in 3 is suitable for you at this time. We may also run a “soft” credit check with an external credit reference agency when you apply if we need more information to make our decision. This search will only be visible to you and will not affect your credit score.<\/p>"}},"faq_U4CGRm":{"type":"faq","settings":{"question":"Are there any fees associated with PayPal Pay in 3?","answer":"<p>There are no fees for choosing to pay with PayPal Pay in 3.<\/p>"}},"faq_8w3Vbn":{"type":"faq","settings":{"question":"Are PayPal Pay in 3 purchases eligible for cashback?","answer":"<p>From July to September, you can earn 3% cashback on PayPal eligible purchases, including Pay in 3 and PayPal Credit, in the category of your choice during the promotion period (up to £15 each month). Be sure to choose a category (Fashion and Retail, Food and Dining, Home and Electronics, and Ground Transport) each month to earn cashback. Cashback applies to eligible purchases via PayPal online checkout only.3<\/p>"}},"faq_E4RjDz":{"type":"faq","settings":{"question":"Does cashback apply to the whole purchase?","answer":"<p>Yes, if your purchase is eligible for 3% cashback, it will apply to your Pay in 3 purchase in full. Once you make a Pay in 3 purchase in your cashback category, your cashback will be deposited as quickly as possible after the merchant processes your transaction. Timing will vary, but usually 0-30 days after your purchase. Your cashback will be applied to your PayPal balance and not your Pay in 3 balance.<\/p>"}}},"block_order":["faq_fdGVzU","faq_wXPMC4","faq_xW4pTz","faq_aejjPH","faq_wdE4Kx","faq_e4a3pW","faq_U4CGRm","faq_8w3Vbn","faq_E4RjDz"],"name":"FAQ Section","settings":{"background_color":"#1e305a","question_color":"#fdfffc","answer_color":"#fdfffc","font_size":16,"faq_width":800,"faq_heading":"PayPal Pay in 3 FAQS"}},"featured_image_AKe9FG":{"type":"featured-image","disabled":true,"custom_css":["{background-color: #1e2f5a;}"," {padding-top: 20px;}"," {padding-bottom: 0px;}"],"name":"Featured Image","settings":{"url":"","image":"shopify:\/\/shop_images\/paypal-pay-in-3-example-image.jpg","disable_aspect_ratio":true,"enable_full_width":false,"margin_bottom":"none"}}},"order":["custom_banner_EqnhXg","custom_header_text_e4VFWg","custom_header_text_YQ7MTW","featured_image_YdYUy8","custom_header_text_wNVX8N","three_image_row_EQbnrN","faq_section_bkA9wJ","featured_image_AKe9FG"]}
+{
+  "sections": {
+    "custom_banner_EqnhXg": {
+      "type": "custom-banner",
+      "name": "Custom Banner",
+      "settings": {
+        "use_video": true,
+        "desktop_video_file": "",
+        "mobile_video_file": "",
+        "button_text": "Buy Tickets",
+        "button_link": "https://www.crafterscompanion.com/collections/craftaganza",
+        "button_bg_color": "#fdfffc",
+        "button_text_color": "#ba1841"
+      }
+    },
+    "custom_header_text_e4VFWg": {
+      "type": "custom-header-text",
+      "name": "Custom Header & Text Box with Bullets, Alignment & Spacing",
+      "settings": {
+        "header_text": "",
+        "header_font_size": 20,
+        "header_font_weight": "600",
+        "header_color": "#fdfffc",
+        "header_text_align": "center",
+        "header_width": "100%",
+        "body_text": "We have PayPal Pay in 3 available if you want to split the payment of your Craftaganza Ticket, the use of PayPal Pay in 3 is subject PayPal terms and conditions. Please make your own financial decision if you wish to pay in instalments.",
+        "body_use_bullets": false,
+        "body_bullet_spacing": 5,
+        "body_font_size": 20,
+        "body_font_weight": "600",
+        "body_color": "#fdfffc",
+        "body_text_align": "center",
+        "body_width": "100%",
+        "background_color": "#1e2f5a",
+        "padding": 40,
+        "border_radius": 0,
+        "add_border": false,
+        "border_color": "#1e2f5a",
+        "border_size": 2
+      }
+    },
+    "custom_header_text_YQ7MTW": {
+      "type": "custom-header-text",
+      "disabled": true,
+      "name": "Custom Header & Text Box with Bullets, Alignment & Spacing",
+      "settings": {
+        "header_text": "Clearpay",
+        "header_font_size": 20,
+        "header_font_weight": "600",
+        "header_color": "#fdfffc",
+        "header_text_align": "center",
+        "header_width": "100%",
+        "body_text": "You can shop now and pay later with Clearpay on crafterscompanion.co.uk if you are are 18+ and a resident of the UK. \n\nClearpay makes budgeting easier, allowing you to break down your payments into four instalments, due every two weeks, interest-free.* Remember, spend responsibly – sometimes splitting up payments might not always be the best option. Take a look at our FAQs below for everything you need to know.",
+        "body_use_bullets": false,
+        "body_bullet_spacing": 5,
+        "body_font_size": 16,
+        "body_font_weight": "400",
+        "body_color": "#fdfffc",
+        "body_text_align": "center",
+        "body_width": "100%",
+        "background_color": "#1e2f5a",
+        "padding": 20,
+        "border_radius": 0,
+        "add_border": false,
+        "border_color": "#1e2f5a",
+        "border_size": 2
+      }
+    },
+    "featured_image_YdYUy8": {
+      "type": "featured-image",
+      "disabled": true,
+      "custom_css": [
+        "{background-color: #1e2f5a;}",
+        " {padding-top: 20px;}",
+        " {padding-bottom: 0px;}"
+      ],
+      "name": "Featured Image",
+      "settings": {
+        "url": "",
+        "image": "shopify://shop_images/Clearpay_UK_HowitWorks_Desktop_Mint_1x_1_2048x2048_91ae2ebc-8c89-483a-85ed-b028a2b36060.webp",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "none"
+      }
+    },
+    "custom_header_text_wNVX8N": {
+      "type": "custom-header-text",
+      "name": "Custom Header & Text Box with Bullets, Alignment & Spacing",
+      "settings": {
+        "header_text": "PayPal Pay in 3",
+        "header_font_size": 20,
+        "header_font_weight": "600",
+        "header_color": "#fdfffc",
+        "header_text_align": "center",
+        "header_width": "100%",
+        "body_text": "Time and flexibility are on your side.\n\nMake the first payment at the time of purchase then make two more monthly payments on the same date each month. Split your purchases of between £20.00 and £3,000.00 into 3 interest-free payments without late fees.1",
+        "body_use_bullets": false,
+        "body_bullet_spacing": 5,
+        "body_font_size": 16,
+        "body_font_weight": "400",
+        "body_color": "#fdfffc",
+        "body_text_align": "center",
+        "body_width": "100%",
+        "background_color": "#1e2f5a",
+        "padding": 20,
+        "border_radius": 0,
+        "add_border": false,
+        "border_color": "#1e2f5a",
+        "border_size": 2
+      }
+    },
+    "three_image_row_EQbnrN": {
+      "type": "three-image-row",
+      "custom_css": [
+        "{background-color: #1e2f5a;}"
+      ],
+      "name": "Three Image Row",
+      "settings": {
+        "image1": "shopify://shop_images/Untitled_design_-_2025-09-10T132126.393_b9fddf81-c03b-4b16-a221-8b379ac10371.png",
+        "heading1": "",
+        "text1": "",
+        "link1": "",
+        "image2": "shopify://shop_images/paypal-pay-in-3-example-image.jpg",
+        "heading2": "",
+        "text2": "",
+        "link2": "",
+        "image3": "shopify://shop_images/Untitled_design_-_2025-09-08T141110.061_4fb453d5-363d-4804-885d-d15f65a9997e.png",
+        "heading3": "",
+        "text3": "",
+        "link3": ""
+      }
+    },
+    "faq_section_bkA9wJ": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_fdGVzU": {
+          "type": "faq",
+          "settings": {
+            "question": "What is PayPal Pay in 3?",
+            "answer": "<p>PayPal Pay in 3 is an interest-free loan that lets you split your basket into 3 payments, with the first due at time of purchase and subsequent payments due every month on the same date. It’s a great way to spread the cost of larger items or to cover emergencies, and is a helpful tool to manage your budget more effectively. Pay in 3 is an unregulated credit agreement, so you will have fewer protections under this agreement than you would under a regulated credit agreement. Carefully consider whether the purchase is affordable and how you will make the repayments. Be aware of the possible impact of using Pay in 3 and of missing payments, including making other borrowing more difficult or more expensive.</p>"
+          }
+        },
+        "faq_wXPMC4": {
+          "type": "faq",
+          "settings": {
+            "question": "Will I be able to use PayPal Pay in 3?",
+            "answer": "<p>We’re offering PayPal Pay in 3 to a growing number of our UK customers.<br/><br/>PayPal Pay in 3 is not available for certain merchants and goods. We may also decide not to offer PayPal Pay in 3 as a payment option in certain circumstances, such as where our checks suggest an increased risk of fraud or where data we hold suggests you may not be eligible. The checks we run are with an external credit reference agency. This search will only be visible to you and will not affect your credit score.<br/><br/>If you choose PayPal Pay in 3 as your payment method when you check out with PayPal, you’ll be taken through the application process. You’ll get a decision instantly, but not everyone is approved based on the checks we carry out.</p>"
+          }
+        },
+        "faq_xW4pTz": {
+          "type": "faq",
+          "settings": {
+            "question": "Can PayPal Pay in 3 ever impact my credit score?",
+            "answer": "<p>When applying for a PayPal Pay in 3, we may conduct a “soft” credit check if we need more information to make a decision. “Soft” credit checks are not visible to others, so have no impact on your credit file. However, we do share some data on your repayment history with Transunion. Although it does not impact your credit score, this data will be visible to other companies and may impact your ability to obtain credit from other lenders and the cost of accessing it. More information is available in our Pay in 3 Terms & Conditions.</p>"
+          }
+        },
+        "faq_aejjPH": {
+          "type": "faq",
+          "settings": {
+            "question": "How long will my PayPal Pay in 3 plan last?",
+            "answer": "<p>Your plan will last 2 months in total. The first payment will be due at the time of purchase, followed by 2 further payments due each month after that.</p>"
+          }
+        },
+        "faq_wdE4Kx": {
+          "type": "faq",
+          "settings": {
+            "question": "What information do I need to apply for PayPal Pay in 3?",
+            "answer": "<p>To apply for PayPal Pay in 3, you’ll need to provide your:<br/><br/></p><p>Title<br/>Phone number<br/>Address<br/>Date of birth<br/>Payment details</p>"
+          }
+        },
+        "faq_e4a3pW": {
+          "type": "faq",
+          "settings": {
+            "question": "How is my application for PayPal Pay in 3 assessed?",
+            "answer": "<p>Our decision making process is automated. We assess your financial position using a combination of the information you provided within your application, and information about your usage and history with PayPal to decide whether PayPal Pay in 3 is suitable for you at this time. We may also run a “soft” credit check with an external credit reference agency when you apply if we need more information to make our decision. This search will only be visible to you and will not affect your credit score.</p>"
+          }
+        },
+        "faq_U4CGRm": {
+          "type": "faq",
+          "settings": {
+            "question": "Are there any fees associated with PayPal Pay in 3?",
+            "answer": "<p>There are no fees for choosing to pay with PayPal Pay in 3.</p>"
+          }
+        },
+        "faq_8w3Vbn": {
+          "type": "faq",
+          "settings": {
+            "question": "Are PayPal Pay in 3 purchases eligible for cashback?",
+            "answer": "<p>From July to September, you can earn 3% cashback on PayPal eligible purchases, including Pay in 3 and PayPal Credit, in the category of your choice during the promotion period (up to £15 each month). Be sure to choose a category (Fashion and Retail, Food and Dining, Home and Electronics, and Ground Transport) each month to earn cashback. Cashback applies to eligible purchases via PayPal online checkout only.3</p>"
+          }
+        },
+        "faq_E4RjDz": {
+          "type": "faq",
+          "settings": {
+            "question": "Does cashback apply to the whole purchase?",
+            "answer": "<p>Yes, if your purchase is eligible for 3% cashback, it will apply to your Pay in 3 purchase in full. Once you make a Pay in 3 purchase in your cashback category, your cashback will be deposited as quickly as possible after the merchant processes your transaction. Timing will vary, but usually 0-30 days after your purchase. Your cashback will be applied to your PayPal balance and not your Pay in 3 balance.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_fdGVzU",
+        "faq_wXPMC4",
+        "faq_xW4pTz",
+        "faq_aejjPH",
+        "faq_wdE4Kx",
+        "faq_e4a3pW",
+        "faq_U4CGRm",
+        "faq_8w3Vbn",
+        "faq_E4RjDz"
+      ],
+      "name": "FAQ Section",
+      "settings": {
+        "background_color": "#1e305a",
+        "question_color": "#fdfffc",
+        "answer_color": "#fdfffc",
+        "font_size": 16,
+        "faq_width": 800,
+        "faq_heading": "PayPal Pay in 3 FAQS"
+      }
+    },
+    "featured_image_AKe9FG": {
+      "type": "featured-image",
+      "disabled": true,
+      "custom_css": [
+        "{background-color: #1e2f5a;}",
+        " {padding-top: 20px;}",
+        " {padding-bottom: 0px;}"
+      ],
+      "name": "Featured Image",
+      "settings": {
+        "url": "",
+        "image": "shopify://shop_images/paypal-pay-in-3-example-image.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": false,
+        "margin_bottom": "none"
+      }
+    }
+  },
+  "order": [
+    "custom_banner_EqnhXg",
+    "custom_header_text_e4VFWg",
+    "custom_header_text_YQ7MTW",
+    "featured_image_YdYUy8",
+    "custom_header_text_wNVX8N",
+    "three_image_row_EQbnrN",
+    "faq_section_bkA9wJ",
+    "featured_image_AKe9FG"
+  ]
+}

@@ -1,3 +1,13 @@
+{% doc %}
+  Individual product card with image and pricing.
+
+  @param {product} product - The product object to display
+  @param {image} _sticker_logo - Optional sticker logo image for the product card
+  @param {string} _sticker_logo_alt - Alt text for the sticker logo image
+
+  @example
+  {% render 'product-item', product: product, _sticker_logo: section.settings.sticker_logo, _sticker_logo_alt: 'Brand Logo' %}
+{% enddoc %}
 {% liquid
   assign current_variant = product.selected_or_first_available_variant
 

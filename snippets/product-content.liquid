@@ -1,3 +1,12 @@
+{% doc %}
+  Displays product key features from metafields.
+
+  @param {product} product - The product object to extract features from
+  @param {string} description - The product description text
+
+  @example
+  {% render 'product-content', product: product, description: product.description %}
+{% enddoc %}
 {% assign features = product.metafields.custom.features.value %}
 
 {%- if features != blank or description != blank -%}

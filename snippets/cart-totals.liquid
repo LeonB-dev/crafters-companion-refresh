@@ -1,3 +1,9 @@
+{% doc %}
+  Shows cart totals including delivery and savings.
+
+  @example
+  {% render 'cart-totals' %}
+{% enddoc %}
 {% liquid
   assign cart_total = cart.total_price
   assign loyalty_total = 0

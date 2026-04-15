@@ -1,3 +1,14 @@
+{% doc %}
+  Displays content block with image and optional CTA.
+
+  @param {object} _block_settings - The block settings object containing image, heading, text, link, and collection
+  @param {string} [_link_style] - CSS class for the link button style
+  @param {string} [_link_colour] - CSS class for the link button colour
+  @param {boolean} [_use_image_only] - Whether to display only the image without text content
+
+  @example
+  {% render 'content-block-item', _block_settings: block.settings, _link_style: 'main', _link_colour: 'primary', _use_image_only: false %}
+{% enddoc %}
 {% liquid
   assign default_link_text = "Shop " | append: _block_settings.collection.title
   assign image = _block_settings.image | default: _block_settings.collection.image

@@ -6,9 +6,7 @@
 %}
 
 {% if content_points != blank %}
-	{{- 'section-product-content-points.css' | asset_url | stylesheet_tag -}}
-	<script src="{{ 'section-product-content-points.js' | asset_url }}" async></script>
-	<div class="{{- template_name }} u-space-below-lg" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
+<div class="{{- template_name }} u-space-below-lg" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
 		<div class="container">
 			{% if heading != blank %}
 				<h2 class="u-heading-sm centre">{{ heading }}</h2>
@@ -32,6 +30,34 @@
 		</div>
 	</div>
 {% endif %}
+
+{% stylesheet %}
+.section-product-content-points .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+.section-product-content-points .swiper-slide img {
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 100%;
+  border: 1px solid var(--colour-emperor);
+  object-fit: cover;
+  display: block;
+}
+.section-product-content-points .swiper-slide h3 {
+  margin-bottom: 0;
+}
+.section-product-content-points .swiper-pagination {
+  margin-top: 2.5rem;
+}
+{% endstylesheet %}
+
+{% javascript %}
+(()=>{"use strict";var e;e={name:"section-product-content-points",events:{async onLoad(){this.loadSlider()},loadSlider(){window.theme.Swiper?this.initSlider():document.addEventListener("theme:inititialised",(()=>{this.initSlider()}),{once:!0})},initSlider(){const e=document.querySelector("[data-pcp-slider]"),i=e.querySelector("[data-pcp-pagination]");e&&new window.theme.Swiper(e,{slidesPerView:1,loop:!1,speed:800,spaceBetween:16,simulateTouch:!0,autoplay:{delay:6e3},pagination:{el:i,clickable:!0},breakpoints:{[theme.breakpoints.md]:{slidesPerView:2},[theme.breakpoints.lg]:{slidesPerView:3,spaceBetween:32},[theme.breakpoints.xl]:{slidesPerView:4,spaceBetween:40}}})}}},theme.sections.push(e)})();
+{% endjavascript %}
 
 {% schema %}
 {

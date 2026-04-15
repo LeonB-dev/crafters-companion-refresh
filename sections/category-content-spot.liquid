@@ -8,7 +8,6 @@
   assign margin_bottom = section.settings.margin_bottom
 %}
 
-{{- 'section-category-content-spot.css' | asset_url | stylesheet_tag -}}
 
 <div class="{{- template_name }} u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
   <div class="image">
@@ -63,6 +62,115 @@
     </div>
   </div>
 </div>
+
+{% stylesheet %}
+.section-category-content-spot {
+  position: relative;
+}
+.section-category-content-spot .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 24rem;
+}
+@media (min-width: 768px) {
+  .section-category-content-spot .image {
+    height: 32rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section-category-content-spot .image {
+    height: 80%;
+  }
+}
+.section-category-content-spot .image picture, .section-category-content-spot .image img {
+  height: 100%;
+}
+.section-category-content-spot .image img {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+.section-category-content-spot .container {
+  position: relative;
+  z-index: 40;
+  padding-top: 12rem;
+}
+@media (min-width: 768px) and (max-width: 1279.98px) {
+  .section-category-content-spot .container {
+    max-width: var(--content-tablet-width);
+  }
+}
+@media (min-width: 1280px) {
+  .section-category-content-spot .container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.section-category-content-spot .content {
+  background-color: var(--colour-white);
+  border: 1px solid var(--colour-emperor);
+  border-radius: var(--border-radius-xl);
+  padding: 1.5rem;
+}
+@media (max-width: 767.98px) {
+  .section-category-content-spot .content {
+    text-align: center;
+  }
+}
+@media (min-width: 1280px) {
+  .section-category-content-spot .content {
+    max-width: 38rem;
+    margin-right: 6rem;
+  }
+}
+.section-category-content-spot .blocks {
+  display: grid;
+  gap: 2.5rem;
+}
+.section-category-content-spot .block {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 1rem;
+}
+@media (max-width: 767.98px) {
+  .section-category-content-spot .block {
+    justify-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .section-category-content-spot .block {
+    grid-template-columns: 6rem 1fr;
+    gap: 1rem 1.5rem;
+  }
+}
+.section-category-content-spot .block * {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .section-category-content-spot .block *:not(img) {
+    grid-column: 2;
+  }
+}
+.section-category-content-spot .block img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: var(--border-radius-lg);
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  .section-category-content-spot .block img {
+    grid-row: 1/span 3;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-category-content-spot .block .block-heading {
+    padding-top: 1rem;
+  }
+}
+{% endstylesheet %}
 
 {% schema %}
 {

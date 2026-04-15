@@ -45,8 +45,6 @@
     }
 {% endstyle %}
 
-{{- 'section-header-usps.css' | asset_url | stylesheet_tag -}}
-<script src="{{- 'section-header-usps.js' | asset_url -}}" defer></script>
 
 <div class="{{ template_name }} swiper-grid" data-section-type="{{ template_name }}" data-section-id="{{ section.id }}">
   <div
@@ -87,6 +85,73 @@
     <div class="swiper-button-next"></div>
   </div>
 </div>
+
+{% stylesheet %}
+@media (min-width: 768px) {
+  .section-header-usps.swiper-grid .swiper-wrapper {
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .section-header-usps.swiper-grid .swiper-wrapper {
+    gap: 4rem;
+  }
+}
+@media (min-width: 1760px) {
+  .section-header-usps.swiper-grid .swiper-wrapper {
+    gap: 5rem;
+  }
+}
+.section-header-usps .swiper-slide {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.section-header-usps .swiper-slide img {
+  height: 1.5rem;
+  max-width: 5rem;
+}
+.section-header-usps .swiper-slide.no-icon p {
+  padding-top: 4px;
+}
+.section-header-usps .swiper-slide p {
+  margin: 0;
+  font-size: var(--font-size-s);
+}
+@media (min-width: 1760px) {
+  .section-header-usps .swiper-slide p {
+    font-size: var(--font-size-m);
+  }
+}
+@media (min-width: 1280px) {
+  .section-header-usps .swiper-button-prev,
+.section-header-usps .swiper-button-next {
+    display: none;
+  }
+}
+.section-header-usps .swiper-pagination {
+  margin-top: 8px;
+  gap: 0.2rem;
+}
+.section-header-usps .swiper-pagination .swiper-pagination-bullet {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+@media (min-width: 1280px) {
+  .section-header-usps .swiper-pagination {
+    display: none;
+  }
+}
+{% endstylesheet %}
+
+{% javascript %}
+(()=>{"use strict";var e;e={name:"section-header-usps",events:{swiper:null,async onLoad(){const e=this.container.querySelectorAll("[data-usp-slide]"),i=window.matchMedia(`(min-width: ${window.theme.breakpoints.lg}px)`),t=this.container;e.length<3&&i.matches?this.swiper&&(this.swiper.destroy(),this.swiper=null):(this.loadSlider(),t.classList.remove("swiper-grid")),window.addEventListener("resize",(()=>{window.innerWidth>theme.breakpoints.xl&&this.swiper?(this.swiper.destroy(),this.swiper=null):window.innerWidth<=theme.breakpoints.xl&&!this.swiper&&this.loadSlider()}))},loadSlider(){window.theme.Swiper?this.initSlider():document.addEventListener("theme:inititialised",(()=>{this.initSlider()}),{once:!0})},initSlider(){const e=document.querySelector("[data-usp-slider]"),i=e.querySelector("[data-usp-slider-pagination]"),t={sm:parseInt(e.dataset.slidesPerViewSm,10),md:parseInt(e.dataset.slidesPerViewMd,10),xl:parseInt(e.dataset.slidesPerViewXl,10)};e&&(this.swiper=new window.theme.Swiper(e,{slidesPerView:t.sm,loop:!0,speed:800,spaceBetween:8,simulateTouch:!1,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:i,type:"bullets"},autoplay:{delay:6e3},breakpoints:{[theme.breakpoints.md]:{slidesPerView:t.md,spaceBetween:16},[theme.breakpoints.xl]:{slidesPerView:t.xl,spaceBetween:32}}}))}}},theme.sections.push(e)})();
+{% endjavascript %}
 
 {% schema %}
 {

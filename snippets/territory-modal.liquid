@@ -1,3 +1,11 @@
+{% doc %}
+  Territory/region selector modal.
+
+  @param {array} _blocks - Array of section blocks for territory options
+
+  @example
+  {% render 'territory-modal', _blocks: section.blocks %}
+{% enddoc %}
 {%- unless request.design_mode -%}
 <style>
   .territory-switcher .modal-wrapper::before{

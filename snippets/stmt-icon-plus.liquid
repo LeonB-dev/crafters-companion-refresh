@@ -1,3 +1,11 @@
+{% doc %}
+  Renders the plus SVG icon.
+
+  @param {string} class - CSS class for the SVG element
+
+  @example
+  {% render 'stmt-icon-plus', class: 'icon' %}
+{% enddoc %}
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="{{ class }}">
   <path d="M4 8H8M8 8H12M8 8V4M8 8V12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

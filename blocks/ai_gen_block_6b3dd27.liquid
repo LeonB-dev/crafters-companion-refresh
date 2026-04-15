@@ -1,3 +1,11 @@
+{% doc %}
+  Renders a two-image row with overlaid text content and call-to-action buttons.
+  Each image supports independent desktop and mobile styling for titles, subtitles, and buttons.
+
+  @example
+  {% content_for 'block', type: 'ai_gen_block_6b3dd27', id: 'two-image-row' %}
+{% enddoc %}
+
 {% style %}
   .ai-image-row-{{ ai_gen_id }} {
     display: block;

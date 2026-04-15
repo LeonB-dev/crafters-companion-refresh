@@ -1,3 +1,12 @@
+{% doc %}
+  Simple slider UI controls with dots and arrows.
+
+  @param {string} class - CSS class for the slider UI
+  @param {boolean} use_autoplay - Whether to enable autoplay
+
+  @example
+  {% render 'simple-slider-ui', class: 'my-slider', use_autoplay: true %}
+{% enddoc %}
 <div>
   <simple-slider-ui class="slider-ui {{ class }}">
     <ul class="slider-ui__dots {% if use_autoplay %}auto-play{% endif %}"></ul>

@@ -1,3 +1,9 @@
+{% doc %}
+  Bing ads tracking pixel.
+
+  @example
+  {% render 'tracking-bing-ads' %}
+{% enddoc %}
 {% assign errors = '' %}
 
 {% if settings.tracking_bing_ads_show_errors == true and settings.tracking_bing_ads_id.size < 1 %}

@@ -1,3 +1,11 @@
+{% doc %}
+  Collapsible accordion for product info.
+
+  @param {product} product - The product object containing accordion content
+
+  @example
+  {% render 'product-accordion-new', product: product %}
+{% enddoc %}
 {% if section.blocks.size > 0 %}
   <ul class="product-accordion-new">
     {% for block in blocks %}

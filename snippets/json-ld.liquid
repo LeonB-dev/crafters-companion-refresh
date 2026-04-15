@@ -1,3 +1,14 @@
+{% doc %}
+  Generates JSON-LD structured data.
+
+  @param {string} markup - The template type to determine which schema to generate
+  @param {product} product - The product object for product schema
+  @param {collection} collection - The collection object for collection schema
+  @param {article} article - The article object for article schema
+
+  @example
+  {% render 'json-ld', markup: 'product', product: product %}
+{% enddoc %}
 {%- liquid
   assign debug = true
   assign tax_products_include_vat = settings.taxes_products_include_tax

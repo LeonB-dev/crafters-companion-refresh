@@ -1,3 +1,22 @@
+{% doc %}
+  Section header with optional image and heading.
+
+  @param {string} _heading - The heading text
+  @param {string} _text - The subtext content
+  @param {image} _image - The header image
+  @param {string} _heading_alignment - The alignment of the heading
+  @param {boolean} _offset - Whether to offset the header
+  @param {string} _link_url - The URL for the header link
+  @param {string} _link_text - The text for the header link
+  @param {string} _link_class - CSS class for the header link
+  @param {string} _heading_class - CSS class for the heading
+  @param {string} _loading - The loading strategy for the image
+  @param {boolean} _is_h1 - Whether the heading should be an h1 element
+  @param {boolean} _offers_filter - Whether to show the offers filter
+
+  @example
+  {% render 'section-header', _heading: section.settings.heading, _text: section.settings.text, _image: section.settings.image %}
+{% enddoc %}
 {% liquid
   if _heading_class != blank
     assign heading_class = _heading_class

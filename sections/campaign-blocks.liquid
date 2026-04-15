@@ -17,8 +17,6 @@
   assign margin_bottom = section.settings.margin_bottom
 %}
 
-{{- 'section-campaign-blocks.css' | asset_url | stylesheet_tag -}}
-<script src="{{- 'section-campaign-blocks.js' | asset_url -}}"></script>
 
 <div class="{{- template_name }}  u-space-below-{{- margin_bottom }} overflow-hidden" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
   <div class="container">
@@ -96,6 +94,77 @@
     </div>
   </div>
 </div>
+
+{% stylesheet %}
+.section-campaign-blocks {
+  margin: 1.5rem 0;
+}
+.section-campaign-blocks .container {
+  display: flex;
+  gap: 2.5rem;
+  position: relative;
+  padding-bottom: 4rem;
+}
+@media (max-width: 767.98px) {
+  .section-campaign-blocks .container {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) {
+  .section-campaign-blocks .container {
+    display: grid;
+    grid-template-columns: 1fr 52%;
+    align-items: center;
+  }
+}
+@media (min-width: 1280px) {
+  .section-campaign-blocks .container {
+    grid-template-columns: 1fr 60%;
+    gap: 4.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .section-campaign-blocks .container.is-active .content {
+    opacity: 0;
+    transition-delay: 0s;
+  }
+}
+@media (min-width: 768px) {
+  .section-campaign-blocks .content {
+    opacity: 1;
+    transition: opacity var(--transition-duration) var(--transition-timing) 0s;
+    transition-delay: var(--transition-duration);
+  }
+}
+.section-campaign-blocks .content .kicker {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--colour-royal-purple);
+}
+.section-campaign-blocks .swiper-slide {
+  width: auto;
+  height: auto;
+  margin-right: 1rem;
+}
+.section-campaign-blocks .swiper-nav {
+  position: absolute;
+  right: 1rem;
+  bottom: 0;
+}
+.section-campaign-blocks .snippet-category-item {
+  width: 16.25rem;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .section-campaign-blocks .snippet-category-item {
+    width: 21.25rem;
+  }
+}
+{% endstylesheet %}
+
+{% javascript %}
+(()=>{"use strict";const e="is-active";var t,i;t="section-campaign-blocks",i={async onLoad(){this.loadSlider()},loadSlider(){window.theme.Swiper?this.initSlider():document.addEventListener("theme:inititialised",(()=>{this.initSlider()}),{once:!0})},initSlider(){this.container.querySelectorAll("[data-scb-slider]").forEach((t=>{const i=t.querySelector("[data-scb-prev]"),s=t.querySelector("[data-scb-next]");new window.theme.Swiper(t,{slidesPerView:"auto",loop:!1,speed:1e3,spaceBetween:16,simulateTouch:!1,navigation:{prevEl:i,nextEl:s},breakpoints:{[theme.breakpoints.xl]:{}},on:{slideChange:function(i){i.activeIndex>=1?t.parentNode.classList.add(e):t.parentNode.classList.remove(e)}}})}))}},Shopify.theme.sections&&Shopify.theme.sections.register?(0===Shopify.theme.sections.getInstances(t).length&&Shopify.theme.sections.register(t,i),Shopify.theme.sections.load(t)):function(e,t){var i={name:e,events:t};theme.sections.push(i)}(t,i)})();
+{% endjavascript %}
 
 {% schema %}
 {

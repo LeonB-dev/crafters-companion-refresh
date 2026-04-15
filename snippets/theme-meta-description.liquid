@@ -1,3 +1,11 @@
+{% doc %}
+  Outputs page meta description with SEO overrides.
+
+  @param {collection} collection - The collection object for SEO override lookups
+
+  @example
+  {% render 'theme-meta-description', collection: collection %}
+{% enddoc %}
 {%- liquid
   if collection and current_tags.size == 1
     assign current_tag = current_tags[0] | handleize

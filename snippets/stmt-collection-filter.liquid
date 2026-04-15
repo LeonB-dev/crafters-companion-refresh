@@ -1,3 +1,12 @@
+{% doc %}
+  Individual collection filter UI.
+
+  @param {filter} filter - The filter object to render
+  @param {array} disallowed_filter_categories_array - Array of filter categories to exclude
+
+  @example
+  {% render 'stmt-collection-filter', filter: filter, disallowed_filter_categories_array: disallowed_filters %}
+{% enddoc %}
 {% liquid
   assign show_filter = true
   assign expand_dropdown = false

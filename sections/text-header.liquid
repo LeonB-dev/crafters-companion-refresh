@@ -31,8 +31,6 @@
   }
 </style>
 
-{{- 'section-text-header.css' | asset_url | stylesheet_tag -}}
-
 <div class="{{- template_name }} u-space-above-{{- margin_top }}  u-space-below-{{- margin_bottom }}" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
   <div class="container">
     <div class="wrapper">
@@ -52,6 +50,31 @@
     </div>
   </div>
 </div>
+
+{% stylesheet %}
+.section-text-header {
+  position: relative;
+}
+.section-text-header .container {
+  display: flex;
+  justify-content: center;
+}
+.section-text-header .container .wrapper {
+  width: 100%;
+  max-width: 50rem;
+  text-align: var(--text-alignment);
+}
+.section-text-header .container .wrapper p:last-of-type {
+  margin-bottom: 0;
+}
+.section-text-header .container .wrapper a {
+  margin-top: 1.5rem;
+}
+.section-text-header .container .wrapper .heading, .section-text-header .container .wrapper p {
+  margin-left: var(--text-margin);
+  margin-right: var(--text-margin);
+}
+{% endstylesheet %}
 
 {% schema %}
 {

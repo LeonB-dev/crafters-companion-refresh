@@ -10,7 +10,6 @@
 %}
 
 {% if image != blank %}
-  {{- 'section-featured-image.css' | asset_url | stylesheet_tag -}}
   {% if disable_aspect_ratio == false or enable_full_width == false %}
     <style>
       div[data-section-id="{{ section.id }}"] img{
@@ -51,6 +50,17 @@
     {% endif %}
   </div>
 {% endif %}
+
+{% stylesheet %}
+.section-featured-image {
+  position: relative;
+}
+.section-featured-image img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+{% endstylesheet %}
 
 {% schema %}
 {

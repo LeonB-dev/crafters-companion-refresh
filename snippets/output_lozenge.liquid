@@ -1,3 +1,12 @@
+{% doc %}
+  Renders product status badges.
+
+  @param {product} product - The product object to determine badge status
+  @param {string} class_name - CSS class name to apply to the badge element
+
+  @example
+  {% render 'output_lozenge', product: product, class_name: 'c-lozenge' %}
+{% enddoc %}
 {% liquid
   assign tag_text = ''
   assign tag_text_color = ''

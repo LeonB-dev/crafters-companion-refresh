@@ -418,7 +418,14 @@
     "header": {
       "nav_aria_label": "Site links",
       "cart_link_title_html": "Basket ({{ count }})",
-      "cart_link_text": "Basket"
+      "cart_link_text": "Basket",
+      "crafters_tv": "Crafters TV",
+      "club_inspire": "Club Inspire",
+      "wishlist": "Wishlist",
+      "main_menu": "Main Menu",
+      "back": "Back",
+      "shop_link": "Shop {{ title }}",
+      "your_crafters": "Your Crafters"
     },
     "top-bar": {
       "order-line": "Order line",
@@ -436,6 +443,13 @@
     },
     "instagram": {
       "button": "Follow us on Insta"
+    },
+    "store_hero": {
+      "opening_hours": "Opening Hours",
+      "bank_holiday_hours": "Bank Holiday Hours"
+    },
+    "club_inspire_feature": {
+      "subheading": "Club Inspire"
     }
   },
   "cart": {
@@ -469,6 +483,9 @@
     "password_confirm_label": "Password Confirmation",
     "password_confirm_placeholder": "Re-enter your password",
     "marketing_signup_label": "I am happy for you to contact me via email about latest offers, product launches, news and other relevant information.",
+    "default_address_heading": "Default Address",
+    "delete_address": "Delete Address",
+    "new_address": "New Address",
     "edit_address": "Edit Address",
     "company": "Company",
     "address_one": "Address 1",

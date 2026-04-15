@@ -1,3 +1,12 @@
+{% doc %}
+  Displays article as a card with optional image.
+
+  @param {article} _article - The article object to display
+  @param {boolean} _show_image - Whether to show the article image
+
+  @example
+  {% render 'article-card', _article: article, _show_image: true %}
+{% enddoc %}
 {% liquid
   assign image = article.image
   assign image_alt = image.alt | default: title

@@ -1,3 +1,12 @@
+{% doc %}
+  Displays modal with video player.
+
+  @param {object} _media - The media block object containing video and heading settings
+  @param {number} _index - The index used for modal targeting
+
+  @example
+  {% render 'carousel-modal-item', _media: block, _index: forloop.index %}
+{% enddoc %}
 <div class="modal" data-modal-container="{{ _index }}">
   <div class="modal-wrapper">
     <div class="modal-header">

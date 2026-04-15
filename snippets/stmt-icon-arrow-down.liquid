@@ -1,3 +1,11 @@
+{% doc %}
+  Renders the arrow down SVG icon.
+
+  @param {string} class - CSS class for the SVG element
+
+  @example
+  {% render 'stmt-icon-arrow-down', class: 'icon' %}
+{% enddoc %}
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="{{ class }}">
   <path d="M8 0.666748L8 15.3334M8 15.3334L13.6667 9.66675M8 15.3334L2.33334 9.66675" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

@@ -1,8 +1,0 @@
-.section-featured-image {
-  position: relative;
-}
-.section-featured-image img {
-  height: auto;
-  width: 100%;
-  object-fit: cover;
-}

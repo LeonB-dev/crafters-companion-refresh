@@ -1,3 +1,11 @@
+{% doc %}
+  Main collection container with pagination.
+
+  @param {collection} collection - The collection object
+
+  @example
+  {% render 'stmt-collection', collection: collection %}
+{% enddoc %}
 {% liquid
   capture content_for_query_string
     echo content_for_header

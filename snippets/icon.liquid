@@ -1,3 +1,12 @@
+{% doc %}
+  Renders an SVG icon from sprite sheet by ID.
+
+  @param {string} _name - The icon name matching the sprite sheet ID
+  @param {string} _class - Optional CSS class to apply to the SVG element
+
+  @example
+  {% render 'icon', _name: 'cart', _class: 'icon-lg' %}
+{% enddoc %}
 <svg role="presentation" {% if _class != blank -%}class="{{- _class -}}"{%- endif -%}>
   <use xlink:href="#sprite-{{- _name -}}"></use>
 </svg>

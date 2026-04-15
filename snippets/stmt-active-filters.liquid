@@ -1,3 +1,12 @@
+{% doc %}
+  Displays and removes active collection filters.
+
+  @param {collection} collection - The collection object
+  @param {string} class - CSS class for the filters container
+
+  @example
+  {% render 'stmt-active-filters', collection: collection, class: 'my-filters' %}
+{% enddoc %}
 <div class="collection__active-filters {{ class }}">
   <button type="button" class="collection__active-filters-clear js-collection-clear-filters">
     {% render 'stmt-icon-close', class: 'collection__filters-icon' %}

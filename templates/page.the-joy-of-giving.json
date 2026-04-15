@@ -1,1 +1,294 @@
-{"sections":{"featured_image_Hgjfab":{"type":"featured-image","custom_css":[],"name":"Featured Image","settings":{"url":"","image":"shopify:\/\/shop_images\/Desktop_Banner_0f73ff7a-5d6c-4d89-ade1-9f95fa976940.jpg","image_mobile":"shopify:\/\/shop_images\/Mobile_Banner_cf07d38f-a3f7-499d-b0b0-de80f903cff3.jpg","disable_aspect_ratio":true,"enable_full_width":true,"margin_bottom":"none"}},"custom_text_box_RzepWK":{"type":"custom-text-box","custom_css":["{padding-top: 0px;}"," {padding-bottom: 0px;}"],"name":"Responsive Montserrat Text Box","settings":{"custom_text":"CHRISTMAS CARD EXCHANGE: SEND A LITTLE JOY","font_size":28,"font_weight":"500","font_color":"#6f1311","background_color":"#d9bd9b","text_align":"center","padding":20,"border_radius":0,"add_border":false,"border_color":"#dddddd","border_size":2,"custom_width":"100%","custom_height":"auto"}},"custom_text_box_LtQX8z":{"type":"custom-text-box","custom_css":["{padding-top: 20px;}"," {padding-bottom: 0px;}"],"name":"Responsive Montserrat Text Box","settings":{"custom_text":"HOW IT WORKS - IT'S AS EASY AS 1, 2, 3!","font_size":28,"font_weight":"500","font_color":"#1f1300","background_color":"#ffffff","text_align":"center","padding":20,"border_radius":40,"add_border":false,"border_color":"#dddddd","border_size":2,"custom_width":"100%","custom_height":"auto"}},"faq_section_X8RPxL":{"type":"faq-section","blocks":{"faq_agjUQM":{"type":"faq","settings":{"question":"1. Create a handmade Christmas card","answer":"<ul><li>Use your favourite Crafter’s Companion supplies to create a little handmade joy! There’s no theme beyond Christmas cheer, so make it sparkly, snowy, traditional, or retro… the choice is yours! Don’t just sign your name, feel free to include a personal greeting inside too!<\/li><\/ul>"}},"faq_9hFaYc":{"type":"faq","settings":{"question":"2. Send your card to us","answer":"<ul><li>Put your finished card inside an unsealed envelope (you can decorate it if you’d like!), then package that up in an outer envelope and send it to us at <strong>Crafter's Companion US, LLC, Attn Christmas Card Exchange, 905 Calle Negocio #73156, San Clemente, CA 92673<\/strong><\/li><li>Please make sure you’ve checked our top tips before sending your card to us to ensure we can pass it on! Cards need to be received by us no later than December 5, 2025. <br\/><br\/><\/li><\/ul>"}},"faq_qk44bW":{"type":"faq","settings":{"question":"3. We’ll send it on!","answer":"<ul><li>We’ll shuffle the cards and send yours to another crafter when they order through our website  between December 1st and 14th. Cards will be sent to you directly (not packed in an order) starting from 15th December It’s like a handmade Secret Santa, but with glitter and heart!<br\/><br\/><\/li><\/ul>"}}},"block_order":["faq_agjUQM","faq_9hFaYc","faq_qk44bW"],"name":"FAQ Section","settings":{"background_color":"#ffffff","question_color":"#000000","answer_color":"#333333","font_size":20,"faq_width":1200,"faq_heading":""}},"176337586746cdc858":{"type":"_blocks","blocks":{"ai_gen_block_fa8b28a_mLRBYL":{"type":"ai_gen_block_fa8b28a","settings":{"left_image":"shopify:\/\/shop_images\/Postbox.jpg","right_video":"shopify:\/\/files\/videos\/Card Opening.mp4","autoplay":true,"loop":true,"muted":true,"show_controls":false,"aspect_ratio":65},"blocks":{}}},"block_order":["ai_gen_block_fa8b28a_mLRBYL"],"settings":{}},"custom_text_box_kqWVQa":{"type":"custom-text-box","custom_css":["{padding-top: 50px;}"," {padding-bottom: 0px;}"],"name":"Responsive Montserrat Text Box","settings":{"custom_text":"TOP TIPS FOR SENDING IN CARDS","font_size":28,"font_weight":"500","font_color":"#1f1300","background_color":"#ffffff","text_align":"center","padding":20,"border_radius":40,"add_border":false,"border_color":"#dddddd","border_size":2,"custom_width":"100%","custom_height":"auto"}},"1763376071feaca325":{"type":"_blocks","blocks":{"ai_gen_block_c492516_kFCxV6":{"type":"ai_gen_block_c492516","settings":{"main_heading":"","main_heading_alignment":"center","main_heading_size":36,"main_heading_color":"#1f1300","box_1_heading":"DO:","box_1_text":"<ul><li>Write a friendly message for the recipient<\/li><li>Keep your greeting generic, warm, and welcoming to any recipient<\/li><li>Place your card inside a blank envelope, to keep it safe inside an order when we send it<\/li><li>Ensure that blank envelope is placed inside another envelope addressed to us<\/li><li>Share pictures of what you’re creating in our community<\/li><li>Share pictures of any cards you receive in our community<\/li><\/ul>","box_2_heading":"DON’T:","box_2_text":"<ul><li>Share personal information in your card<\/li><li>Request any information from the recipient<\/li><li>Include anything other than a card<\/li><li>Send a card that may be damaged in transit - 3D cards may not hold up well!<\/li><\/ul>","gap":30,"box_padding":30,"box_border_radius":8,"heading_size":24,"text_size":20,"background_color":"#fdfffc","box_background_color":"rgba(0,0,0,0)","heading_color":"#1f1300","text_color":"#1f1300"},"blocks":{}}},"block_order":["ai_gen_block_c492516_kFCxV6"],"settings":{}},"featured_image_Rjmgy6":{"type":"featured-image","name":"Featured Image","settings":{"url":"","image":"shopify:\/\/shop_images\/Desktop_Footer.jpg","image_mobile":"shopify:\/\/shop_images\/Mobile_Footer.jpg","disable_aspect_ratio":true,"enable_full_width":true,"margin_bottom":"none"}},"custom_header_text_3KVN9k":{"type":"custom-header-text","name":"Custom Header & Text Box with Bullets, Alignment & Spacing","settings":{"header_text":"FREQUENTLY ASKED QUESTIONS","header_font_size":28,"header_font_weight":"500","header_color":"#222222","header_text_align":"center","header_width":"100%","body_text":"","body_use_bullets":false,"body_bullet_spacing":5,"body_font_size":18,"body_font_weight":"400","body_color":"#333333","body_text_align":"left","body_width":"100%","background_color":"rgba(0,0,0,0)","padding":40,"border_radius":0,"add_border":false,"border_color":"#dddddd","border_size":2}},"faq_section_YDmm8w":{"type":"faq-section","blocks":{"faq_p3Wimh":{"type":"faq","settings":{"question":"Can I send multiple cards?","answer":"<ul><li>Yes, of course! Just make sure they all arrive by our deadline for your region.<\/li><\/ul>"}},"faq_jEqHHg":{"type":"faq","settings":{"question":"What will happen to any cards that aren’t sent out?","answer":"<ul><li>Cards that we cannot send out will be donated to a local charity, and we will be sure to share that information via our online community and email. <\/li><\/ul>"}},"faq_G8JcUz":{"type":"faq","settings":{"question":"If I send in a card am I guaranteed to receive a card?","answer":"<ul><li>We will do our best to put a card in every order placed on our website in December (or for the US, orders placed 1st - 14th December), but it’s entirely dependent on how many cards we receive.<\/li><\/ul>"}},"faq_A6MTEg":{"type":"faq","settings":{"question":"How do I know if you have received my card?","answer":"<ul><li>We are expecting to receive a high volume of mail for this campaign, and will be unable to provide an acknowledgement for everyone who sends one in. If you email <a href=\"mailto:community@crafterscompanion.co.uk\"><span style=\"text-decoration:underline\">community@crafterscompanion.co.uk<\/span><\/a> we will do our best to confirm for you. Please be patient as our community team is small, and due to annual leave you may not get your confirmation immediately.<\/li><\/ul>"}},"faq_GDrTXX":{"type":"faq","settings":{"question":"How do I join your Facebook community?","answer":"<ul><li>Click <a href=\"https:\/\/www.facebook.com\/groups\/ImACraftersCompanion\"><span style=\"text-decoration:underline\">here<\/span><\/a> to join I’m a Crafter’s Companion<\/li><\/ul>"}},"faq_N3HcJN":{"type":"faq","settings":{"question":"I am not on Facebook, is there anywhere else I can send a picture of the card I make, or the card I receive? ","answer":"<ul><li>Send your pictures to <a href=\"mailto:community@crafterscompanion.co.uk\"><span style=\"text-decoration:underline\">community@crafterscompanion.co.uk<\/span><\/a>, we’d love to see them!<\/li><\/ul>"}}},"block_order":["faq_p3Wimh","faq_jEqHHg","faq_G8JcUz","faq_A6MTEg","faq_GDrTXX","faq_N3HcJN"],"name":"FAQ Section","settings":{"background_color":"rgba(0,0,0,0)","question_color":"#000000","answer_color":"#333333","font_size":20,"faq_width":1200,"faq_heading":""}}},"order":["featured_image_Hgjfab","custom_text_box_RzepWK","custom_text_box_LtQX8z","faq_section_X8RPxL","176337586746cdc858","custom_text_box_kqWVQa","1763376071feaca325","featured_image_Rjmgy6","custom_header_text_3KVN9k","faq_section_YDmm8w"]}
+{
+  "sections": {
+    "featured_image_Hgjfab": {
+      "type": "featured-image",
+      "custom_css": [],
+      "name": "Featured Image",
+      "settings": {
+        "url": "",
+        "image": "shopify://shop_images/Desktop_Banner_0f73ff7a-5d6c-4d89-ade1-9f95fa976940.jpg",
+        "image_mobile": "shopify://shop_images/Mobile_Banner_cf07d38f-a3f7-499d-b0b0-de80f903cff3.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": true,
+        "margin_bottom": "none"
+      }
+    },
+    "custom_text_box_RzepWK": {
+      "type": "custom-text-box",
+      "custom_css": [
+        "{padding-top: 0px;}",
+        " {padding-bottom: 0px;}"
+      ],
+      "name": "Responsive Montserrat Text Box",
+      "settings": {
+        "custom_text": "CHRISTMAS CARD EXCHANGE: SEND A LITTLE JOY",
+        "font_size": 28,
+        "font_weight": "500",
+        "font_color": "#6f1311",
+        "background_color": "#d9bd9b",
+        "text_align": "center",
+        "padding": 20,
+        "border_radius": 0,
+        "add_border": false,
+        "border_color": "#dddddd",
+        "border_size": 2,
+        "custom_width": "100%",
+        "custom_height": "auto"
+      }
+    },
+    "custom_text_box_LtQX8z": {
+      "type": "custom-text-box",
+      "custom_css": [
+        "{padding-top: 20px;}",
+        " {padding-bottom: 0px;}"
+      ],
+      "name": "Responsive Montserrat Text Box",
+      "settings": {
+        "custom_text": "HOW IT WORKS - IT'S AS EASY AS 1, 2, 3!",
+        "font_size": 28,
+        "font_weight": "500",
+        "font_color": "#1f1300",
+        "background_color": "#ffffff",
+        "text_align": "center",
+        "padding": 20,
+        "border_radius": 40,
+        "add_border": false,
+        "border_color": "#dddddd",
+        "border_size": 2,
+        "custom_width": "100%",
+        "custom_height": "auto"
+      }
+    },
+    "faq_section_X8RPxL": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_agjUQM": {
+          "type": "faq",
+          "settings": {
+            "question": "1. Create a handmade Christmas card",
+            "answer": "<ul><li>Use your favourite Crafter’s Companion supplies to create a little handmade joy! There’s no theme beyond Christmas cheer, so make it sparkly, snowy, traditional, or retro… the choice is yours! Don’t just sign your name, feel free to include a personal greeting inside too!</li></ul>"
+          }
+        },
+        "faq_9hFaYc": {
+          "type": "faq",
+          "settings": {
+            "question": "2. Send your card to us",
+            "answer": "<ul><li>Put your finished card inside an unsealed envelope (you can decorate it if you’d like!), then package that up in an outer envelope and send it to us at <strong>Crafter's Companion US, LLC, Attn Christmas Card Exchange, 905 Calle Negocio #73156, San Clemente, CA 92673</strong></li><li>Please make sure you’ve checked our top tips before sending your card to us to ensure we can pass it on! Cards need to be received by us no later than December 5, 2025. <br/><br/></li></ul>"
+          }
+        },
+        "faq_qk44bW": {
+          "type": "faq",
+          "settings": {
+            "question": "3. We’ll send it on!",
+            "answer": "<ul><li>We’ll shuffle the cards and send yours to another crafter when they order through our website  between December 1st and 14th. Cards will be sent to you directly (not packed in an order) starting from 15th December It’s like a handmade Secret Santa, but with glitter and heart!<br/><br/></li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_agjUQM",
+        "faq_9hFaYc",
+        "faq_qk44bW"
+      ],
+      "name": "FAQ Section",
+      "settings": {
+        "background_color": "#ffffff",
+        "question_color": "#000000",
+        "answer_color": "#333333",
+        "font_size": 20,
+        "faq_width": 1200,
+        "faq_heading": ""
+      }
+    },
+    "176337586746cdc858": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_fa8b28a_mLRBYL": {
+          "type": "ai_gen_block_fa8b28a",
+          "settings": {
+            "left_image": "shopify://shop_images/Postbox.jpg",
+            "right_video": "",
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "show_controls": false,
+            "aspect_ratio": 65
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_fa8b28a_mLRBYL"
+      ],
+      "settings": {}
+    },
+    "custom_text_box_kqWVQa": {
+      "type": "custom-text-box",
+      "custom_css": [
+        "{padding-top: 50px;}",
+        " {padding-bottom: 0px;}"
+      ],
+      "name": "Responsive Montserrat Text Box",
+      "settings": {
+        "custom_text": "TOP TIPS FOR SENDING IN CARDS",
+        "font_size": 28,
+        "font_weight": "500",
+        "font_color": "#1f1300",
+        "background_color": "#ffffff",
+        "text_align": "center",
+        "padding": 20,
+        "border_radius": 40,
+        "add_border": false,
+        "border_color": "#dddddd",
+        "border_size": 2,
+        "custom_width": "100%",
+        "custom_height": "auto"
+      }
+    },
+    "1763376071feaca325": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c492516_kFCxV6": {
+          "type": "ai_gen_block_c492516",
+          "settings": {
+            "main_heading": "",
+            "main_heading_alignment": "center",
+            "main_heading_size": 36,
+            "main_heading_color": "#1f1300",
+            "box_1_heading": "DO:",
+            "box_1_text": "<ul><li>Write a friendly message for the recipient</li><li>Keep your greeting generic, warm, and welcoming to any recipient</li><li>Place your card inside a blank envelope, to keep it safe inside an order when we send it</li><li>Ensure that blank envelope is placed inside another envelope addressed to us</li><li>Share pictures of what you’re creating in our community</li><li>Share pictures of any cards you receive in our community</li></ul>",
+            "box_2_heading": "DON’T:",
+            "box_2_text": "<ul><li>Share personal information in your card</li><li>Request any information from the recipient</li><li>Include anything other than a card</li><li>Send a card that may be damaged in transit - 3D cards may not hold up well!</li></ul>",
+            "gap": 30,
+            "box_padding": 30,
+            "box_border_radius": 8,
+            "heading_size": 24,
+            "text_size": 20,
+            "background_color": "#fdfffc",
+            "box_background_color": "rgba(0,0,0,0)",
+            "heading_color": "#1f1300",
+            "text_color": "#1f1300"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c492516_kFCxV6"
+      ],
+      "settings": {}
+    },
+    "featured_image_Rjmgy6": {
+      "type": "featured-image",
+      "name": "Featured Image",
+      "settings": {
+        "url": "",
+        "image": "shopify://shop_images/Desktop_Footer.jpg",
+        "image_mobile": "shopify://shop_images/Mobile_Footer.jpg",
+        "disable_aspect_ratio": true,
+        "enable_full_width": true,
+        "margin_bottom": "none"
+      }
+    },
+    "custom_header_text_3KVN9k": {
+      "type": "custom-header-text",
+      "name": "Custom Header & Text Box with Bullets, Alignment & Spacing",
+      "settings": {
+        "header_text": "FREQUENTLY ASKED QUESTIONS",
+        "header_font_size": 28,
+        "header_font_weight": "500",
+        "header_color": "#222222",
+        "header_text_align": "center",
+        "header_width": "100%",
+        "body_text": "",
+        "body_use_bullets": false,
+        "body_bullet_spacing": 5,
+        "body_font_size": 18,
+        "body_font_weight": "400",
+        "body_color": "#333333",
+        "body_text_align": "left",
+        "body_width": "100%",
+        "background_color": "rgba(0,0,0,0)",
+        "padding": 40,
+        "border_radius": 0,
+        "add_border": false,
+        "border_color": "#dddddd",
+        "border_size": 2
+      }
+    },
+    "faq_section_YDmm8w": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_p3Wimh": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I send multiple cards?",
+            "answer": "<ul><li>Yes, of course! Just make sure they all arrive by our deadline for your region.</li></ul>"
+          }
+        },
+        "faq_jEqHHg": {
+          "type": "faq",
+          "settings": {
+            "question": "What will happen to any cards that aren’t sent out?",
+            "answer": "<ul><li>Cards that we cannot send out will be donated to a local charity, and we will be sure to share that information via our online community and email. </li></ul>"
+          }
+        },
+        "faq_G8JcUz": {
+          "type": "faq",
+          "settings": {
+            "question": "If I send in a card am I guaranteed to receive a card?",
+            "answer": "<ul><li>We will do our best to put a card in every order placed on our website in December (or for the US, orders placed 1st - 14th December), but it’s entirely dependent on how many cards we receive.</li></ul>"
+          }
+        },
+        "faq_A6MTEg": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I know if you have received my card?",
+            "answer": "<ul><li>We are expecting to receive a high volume of mail for this campaign, and will be unable to provide an acknowledgement for everyone who sends one in. If you email <a href=\"mailto:community@crafterscompanion.co.uk\"><span style=\"text-decoration:underline\">community@crafterscompanion.co.uk</span></a> we will do our best to confirm for you. Please be patient as our community team is small, and due to annual leave you may not get your confirmation immediately.</li></ul>"
+          }
+        },
+        "faq_GDrTXX": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I join your Facebook community?",
+            "answer": "<ul><li>Click <a href=\"https://www.facebook.com/groups/ImACraftersCompanion\"><span style=\"text-decoration:underline\">here</span></a> to join I’m a Crafter’s Companion</li></ul>"
+          }
+        },
+        "faq_N3HcJN": {
+          "type": "faq",
+          "settings": {
+            "question": "I am not on Facebook, is there anywhere else I can send a picture of the card I make, or the card I receive? ",
+            "answer": "<ul><li>Send your pictures to <a href=\"mailto:community@crafterscompanion.co.uk\"><span style=\"text-decoration:underline\">community@crafterscompanion.co.uk</span></a>, we’d love to see them!</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_p3Wimh",
+        "faq_jEqHHg",
+        "faq_G8JcUz",
+        "faq_A6MTEg",
+        "faq_GDrTXX",
+        "faq_N3HcJN"
+      ],
+      "name": "FAQ Section",
+      "settings": {
+        "background_color": "rgba(0,0,0,0)",
+        "question_color": "#000000",
+        "answer_color": "#333333",
+        "font_size": 20,
+        "faq_width": 1200,
+        "faq_heading": ""
+      }
+    }
+  },
+  "order": [
+    "featured_image_Hgjfab",
+    "custom_text_box_RzepWK",
+    "custom_text_box_LtQX8z",
+    "faq_section_X8RPxL",
+    "176337586746cdc858",
+    "custom_text_box_kqWVQa",
+    "1763376071feaca325",
+    "featured_image_Rjmgy6",
+    "custom_header_text_3KVN9k",
+    "faq_section_YDmm8w"
+  ]
+}

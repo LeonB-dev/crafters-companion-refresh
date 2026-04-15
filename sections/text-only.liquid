@@ -9,8 +9,6 @@
   assign margin_bottom = section.settings.margin_bottom
 %}
 
-{{- 'section-text-only.css' | asset_url | stylesheet_tag -}}
-
 <style>
   div[data-section-id="{{ section.id }}"]{
     --text-align: center;
@@ -43,6 +41,32 @@
     </div>
   </div>
 </div>
+
+{% stylesheet %}
+.section-text-only {
+  position: relative;
+}
+.section-text-only .container {
+  margin: var(--container-alignment);
+  text-align: var(--text-align);
+  display: flex;
+  flex-direction: column;
+  align-items: var(--align-items);
+}
+@media (min-width: 768px) {
+  .section-text-only .container {
+    max-width: var(--content-tablet-width);
+  }
+}
+@media (min-width: 1280px) {
+  .section-text-only .container {
+    max-width: var(--rte-max-width);
+  }
+}
+.section-text-only .container p:last-of-type {
+  margin: 0;
+}
+{% endstylesheet %}
 
 {% schema %}
 {

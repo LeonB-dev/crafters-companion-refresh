@@ -1,3 +1,11 @@
+{% doc %}
+  Territory switcher based on geolocation.
+
+  @param {array} _blocks - Array of section blocks for territory options
+
+  @example
+  {% render 'territory-switcher', _blocks: section.blocks %}
+{% enddoc %}
 <script>
   const countrySelectors = {
     modal: '[data-territory-modal]',

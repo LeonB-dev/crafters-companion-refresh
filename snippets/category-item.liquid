@@ -1,11 +1,16 @@
-<!--
-  _lozenge
-  _image
-  _heading
-  _loading
-  _url
-  _name
--->
+{% doc %}
+  Displays category item with optional lozenge label and image.
+
+  @param {string} [_lozenge] - Optional lozenge label text
+  @param {image} _image - The category image
+  @param {string} _heading - The category heading text
+  @param {string} _loading - Image loading strategy (e.g. 'lazy', 'eager')
+  @param {string} _url - The category link URL
+  @param {string} _name - The category name
+
+  @example
+  {% render 'category-item', _image: collection.image, _heading: collection.title, _url: collection.url, _loading: 'lazy' %}
+{% enddoc %}
 <div class="snippet-category-item">
   {%- if _lozenge != blank -%}
     <span class="c-lozenge carnation">{{- _lozenge -}}</span>

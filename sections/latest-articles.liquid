@@ -4,7 +4,6 @@
   assign margin_bottom = section.settings.margin_bottom
 %}
 
-{{- 'section-latest-articles.css' | asset_url | stylesheet_tag -}}
 {{- 'snippet-article-item.css' | asset_url | stylesheet_tag -}}
 
 <div class="{{- template_name }} u-space-below-{{- margin_bottom }} overflow-hidden" data-section-type="{{- template_name -}}" data-section-id="{{ section.id }}">
@@ -34,6 +33,27 @@
     </div>
   </div>
 </div>
+
+{% stylesheet %}
+.section-latest-articles .snippet-section-header {
+  margin-bottom: 2.5rem;
+}
+.section-latest-articles .articles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 576px) {
+  .section-latest-articles .articles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .section-latest-articles .articles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+{% endstylesheet %}
 
 {% schema %}
 {

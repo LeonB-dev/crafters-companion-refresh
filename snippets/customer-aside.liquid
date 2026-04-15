@@ -1,3 +1,11 @@
+{% doc %}
+  Renders account sidebar with links and info.
+
+  @param {boolean} _account_link - Whether to display the account link in the sidebar
+
+  @example
+  {% render 'customer-aside', _account_link: true %}
+{% enddoc %}
 {%- capture my_account_text -%}
 <span class="u-text-lg">{{- 'template.customers.account.my_account' | t -}}</span>
 {%- endcapture -%}
