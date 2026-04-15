@@ -246,3 +246,127 @@ This theme is connected to GitHub via Shopify's "Link theme to GitHub repo" feat
 - It breaks the single source of truth (the `main` branch)
 
 If you need to test something before merging, use `npm run dev` — it creates a safe, temporary preview theme.
+
+---
+
+## Development Guidelines
+
+Follow these rules when building new sections, blocks, or snippets for this theme.
+
+### CSS and JavaScript
+
+Use `{% stylesheet %}` and `{% javascript %}` tags inside your section, block, or snippet files. Do not create new CSS or JS files in the `assets/` folder.
+
+```liquid
+{% stylesheet %}
+  .my-section {
+    display: grid;
+    gap: 2rem;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  document.querySelectorAll('.my-section').forEach(el => {
+    // your JS here
+  });
+{% endjavascript %}
+```
+
+**Important:**
+- You cannot use Liquid variables inside `{% stylesheet %}` or `{% javascript %}` tags
+- For dynamic styles that need Liquid variables (e.g. colours from settings), use an inline `<style>` block instead:
+
+```liquid
+<style>
+  #shopify-section-{{ section.id }} .banner {
+    background-color: {{ section.settings.bg_color }};
+  }
+</style>
+```
+
+- Each file can only have **one** `{% stylesheet %}` and **one** `{% javascript %}` tag
+- Use CSS variables for single-property settings (e.g. `--gap: {{ section.settings.gap }}px`)
+
+### Images
+
+Always use the modern `image_url` and `image_tag` filters. Never use the deprecated `img_url`.
+
+```liquid
+<!-- Good -->
+{{ product.featured_image | image_url: width: 800 | image_tag }}
+
+<!-- Bad -->
+<img src="{{ product.featured_image | img_url: '800x' }}">
+```
+
+### Translations
+
+All user-facing text must use the `| t` translation filter. Add new keys to `locales/en.default.json`.
+
+```liquid
+<!-- Good -->
+<h2>{{ 'sections.my_section.heading' | t }}</h2>
+<button>{{ 'products.product.add_to_cart' | t }}</button>
+
+<!-- Bad -->
+<h2>Featured Products</h2>
+<button>Add to Basket</button>
+```
+
+### Snippets
+
+Every snippet must have a `{% doc %}` tag at the top documenting what it does and what parameters it accepts.
+
+```liquid
+{% doc %}
+  Renders a product card with image, title, and price.
+
+  @param {product} product - The product to display
+  @param {boolean} [show_price] - Whether to show the price
+
+  @example
+  {% render 'product-card', product: product, show_price: true %}
+{% enddoc %}
+```
+
+### Sections
+
+When creating new sections:
+
+- Use `{% content_for 'blocks' %}` with `"blocks": [{ "type": "@theme" }]` in the schema to allow any theme block to be added
+- Add `{{ block.shopify_attributes }}` to every block's container element (enables the theme editor to select blocks)
+- Include `"presets"` in the schema so the section appears in the theme editor's "Add section" menu
+- Use `enabled_on` or `disabled_on` in the schema to control which page types the section can be used on
+
+```liquid
+<div class="my-section">
+  {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "My section",
+  "blocks": [{ "type": "@theme" }],
+  "presets": [{ "name": "My section" }]
+}
+{% endschema %}
+```
+
+### Scripts
+
+Never use the `script_tag` filter — it is parser-blocking. Use a `<script>` tag with `defer` instead:
+
+```liquid
+<!-- Good -->
+<script src="{{ 'my-script.js' | asset_url }}" defer></script>
+
+<!-- Bad -->
+{{ 'my-script.js' | asset_url | script_tag }}
+```
+
+### Accessibility
+
+- All `<img>` tags must have an `alt` attribute
+- Interactive elements (buttons, links) must have accessible labels
+- Use semantic HTML (`<nav>`, `<main>`, `<article>`, `<section>`, `<details>`, `<summary>`)
+- The theme includes a skip-to-content link — do not remove it
