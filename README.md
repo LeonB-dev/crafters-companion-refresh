@@ -225,7 +225,13 @@ This theme is connected to GitHub via Shopify's "Link theme to GitHub repo" feat
    npm run dev
    ```
 
-4. When you're happy, commit and push:
+4. If you made changes in the theme editor (added sections to pages, configured settings), you **must** pull those changes back into your local code before committing:
+   ```bash
+   shopify theme pull --only templates/ --only config/settings_data.json --store crafters-uk-dev.myshopify.com
+   ```
+   This downloads the updated template JSON files and theme settings so your section configurations are captured in Git. Without this step, your theme editor changes will be lost when someone else previews the theme.
+
+5. When you're happy, commit and push:
    ```bash
    git add .
    git commit -m "Description of your changes"
@@ -235,6 +241,33 @@ This theme is connected to GitHub via Shopify's "Link theme to GitHub repo" feat
 5. Open a **Pull Request** on GitHub to merge into `main`
 
 6. Once the PR is reviewed and merged, Shopify will automatically deploy the changes to the live theme
+
+### How theme editor settings work
+
+When you add sections to pages or configure settings in the Shopify theme editor, those changes are stored in JSON files:
+
+- **`templates/*.json`** — Which sections are on each page and their settings
+- **`config/settings_data.json`** — Global theme settings (colours, fonts, etc.)
+
+These settings live on the Shopify server, not in your local code. Each developer gets their own temporary **development theme** when they run `npm run dev`, with its own copy of these settings.
+
+**This means:** If you add a hero section to the homepage in the theme editor and configure its image, heading, and button — that configuration only exists in your development theme. Your teammate won't see it unless you pull those settings into your code and commit them.
+
+### Pulling theme editor changes into code
+
+After making changes in the theme editor, always run:
+
+```bash
+shopify theme pull --only templates/ --only config/settings_data.json --store crafters-uk-dev.myshopify.com
+```
+
+This downloads the template and config files from your development theme. Review the changes with `git diff`, then commit them alongside your code changes.
+
+### Which store to develop against
+
+Always develop against the dev store (`crafters-uk-dev.myshopify.com`). Do not preview themes on the live production store.
+
+The dev store needs its own data set up (navigation menus, products, collections, images). This is a one-time setup. If pages look empty or the nav has no links, it's because the dev store hasn't been configured yet — not a code issue.
 
 ### Why not `shopify theme push`?
 
