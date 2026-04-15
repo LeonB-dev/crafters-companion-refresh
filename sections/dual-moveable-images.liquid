@@ -78,8 +78,8 @@
 
   <!-- IMAGE 1 -->
   <div class="dual-image-item">
-    {% if section.settings.image_1_desktop %}<img src="{{ section.settings.image_1_desktop | img_url: 'master' }}" class="dual-image-1-desktop">{% endif %}
-    {% if section.settings.image_1_mobile %}<img src="{{ section.settings.image_1_mobile | img_url: 'master' }}" class="dual-image-1-mobile">{% endif %}
+    {% if section.settings.image_1_desktop %}<img src="{{ section.settings.image_1_desktop | image_url: width: 2048 }}" class="dual-image-1-desktop">{% endif %}
+    {% if section.settings.image_1_mobile %}<img src="{{ section.settings.image_1_mobile | image_url: width: 2048 }}" class="dual-image-1-mobile">{% endif %}
     <div class="dual-image-content dual-image-1">
       <h2 style="font-size:{{ section.settings.title_size_1_desktop }}px;font-weight:{{ section.settings.title_weight_1 }};color:{{ section.settings.title_color_1 }};">{{ section.settings.title_1 }}</h2>
       <p style="font-size:{{ section.settings.subtitle_size_1_desktop }}px;font-weight:{{ section.settings.subtitle_weight_1 }};color:{{ section.settings.subtitle_color_1 }};margin-top:{{ section.settings.title_subtitle_spacing_1 }}px;">{{ section.settings.subtitle_1 }}</p>
@@ -93,8 +93,8 @@
 
   <!-- IMAGE 2 -->
   <div class="dual-image-item">
-    {% if section.settings.image_2_desktop %}<img src="{{ section.settings.image_2_desktop | img_url: 'master' }}" class="dual-image-2-desktop">{% endif %}
-    {% if section.settings.image_2_mobile %}<img src="{{ section.settings.image_2_mobile | img_url: 'master' }}" class="dual-image-2-mobile">{% endif %}
+    {% if section.settings.image_2_desktop %}<img src="{{ section.settings.image_2_desktop | image_url: width: 2048 }}" class="dual-image-2-desktop">{% endif %}
+    {% if section.settings.image_2_mobile %}<img src="{{ section.settings.image_2_mobile | image_url: width: 2048 }}" class="dual-image-2-mobile">{% endif %}
     <div class="dual-image-content dual-image-2">
       <h2 style="font-size:{{ section.settings.title_size_2_desktop }}px;font-weight:{{ section.settings.title_weight_2 }};color:{{ section.settings.title_color_2 }};">{{ section.settings.title_2 }}</h2>
       <p style="font-size:{{ section.settings.subtitle_size_2_desktop }}px;font-weight:{{ section.settings.subtitle_weight_2 }};color:{{ section.settings.subtitle_color_2 }};margin-top:{{ section.settings.title_subtitle_spacing_2 }}px;">{{ section.settings.subtitle_2 }}</p>

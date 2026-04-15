@@ -14,7 +14,7 @@
               {{ block.settings.faq-content }}
               {% if block.settings.faq-image != blank %}
                 <div class="wishit-faq-content-image">
-                    <img src="{{ block.settings.faq-image | img_url: 'master' }}" />
+                    <img src="{{ block.settings.faq-image | image_url: width: 2048 }}" />
                 </div>
               {% endif %}  
             </div> 

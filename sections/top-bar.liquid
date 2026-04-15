@@ -11,7 +11,7 @@
       assign current_domain = territory.settings.name
       assign current_currency = territory.settings.currency
       assign file_name = current_domain | handleize
-      assign icon_flag = 'icon-flag-' | append: file_name | append: '.jpg' | downcase | asset_img_url: '64x'
+      assign icon_flag = 'icon-flag-' | append: file_name | append: '.jpg' | downcase | asset_url
 
       assign territory_text = current_domain
       if current_currency != blank

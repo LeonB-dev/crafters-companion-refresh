@@ -362,7 +362,7 @@
   <div id="bloggle_article" >
       <div id="article" class="flex-column-reverse">
       {% if article.image %}
-      <img class="bloggle--blog-item-img" src="{{ article.image | img_url:'1200x' }}" alt="{{ article.image.alt }}">
+      <img class="bloggle--blog-item-img" src="{{ article.image | image_url: width: 1200 }}" alt="{{ article.image.alt }}">
       {% endif %}
     <div id="article-header" class="text__center">
       
@@ -416,7 +416,7 @@
         {% endif %}
         <a id="bggle--product-related-link" href="{{product.url}}" bggle-product-title="{{ product.title }}" bggle-product-handle="{{ product.handle }}" >
           <div class="bggle--info-siderBar-product">
-            <img class="bggle--product-item-img lazybloggle" data-src="{{product.images[0] | img_url: '420x420' }}" alt="{{ product.images[0].alt }}">
+            <img class="bggle--product-item-img lazybloggle" data-src="{{product.images[0] | image_url: width: 420, height: 420 }}" alt="{{ product.images[0].alt }}">
             <div class="bggle--product-info">
                 
                 <p id="bggle--product-title" class="bggle--product-title ">{{product.title}}</p>
@@ -449,7 +449,7 @@
             {% unless recoArticle.title == article.title or count >= 3 %}
               {% assign count = count | plus: 1 %}
               <a class="bggle-latest-article" href="{{recoArticle.url}}">
-                {% if recoArticle.image %}<img class="bggle-latest-article-img lazybloggle" data-src="{{ recoArticle.image | img_url:'350x350' }}" alt="{{ recoArticle.image.alt }}">{% endif %}
+                {% if recoArticle.image %}<img class="bggle-latest-article-img lazybloggle" data-src="{{ recoArticle.image | image_url: width: 350, height: 350 }}" alt="{{ recoArticle.image.alt }}">{% endif %}
                 <p>{{recoArticle.title}}</p>
               </a>
             {% endunless %}

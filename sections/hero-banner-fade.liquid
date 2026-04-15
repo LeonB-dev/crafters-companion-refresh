@@ -51,12 +51,12 @@
           assign video = block.settings.video
           assign poster = null
           if block.settings.poster
-            assign poster = block.settings.poster | img_url:'master'
+            assign poster = block.settings.poster | image_url: width: 2048
           endif
           assign video_mobile = block.settings.video_mobile
           assign poster_mobile = null
           if block.settings.poster_mobile
-            assign poster_mobile = block.settings.poster_mobile | img_url:'master'
+            assign poster_mobile = block.settings.poster_mobile | image_url: width: 2048
           endif
           assign image_desktop = block.settings.image_desktop
           assign image_mobile = block.settings.image_mobile | default: image_desktop

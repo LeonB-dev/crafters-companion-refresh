@@ -7,7 +7,7 @@
   {% if section.settings.desktop_video != blank %}
     <video autoplay muted loop playsinline class="banner-video desktop-video">
       <source src="{{ section.settings.desktop_video }}" type="video/mp4">
-      <img src="{{ section.settings.desktop_image | img_url: '2000x' }}"
+      <img src="{{ section.settings.desktop_image | image_url: width: 2000 }}"
            alt="{{ section.settings.image_alt_text }}"
            class="banner-image">
     </video>
@@ -17,7 +17,7 @@
   {% if section.settings.mobile_video != blank %}
     <video autoplay muted loop playsinline class="banner-video mobile-video">
       <source src="{{ section.settings.mobile_video }}" type="video/mp4">
-      <img src="{{ section.settings.mobile_image | img_url: '900x' }}"
+      <img src="{{ section.settings.mobile_image | image_url: width: 900 }}"
            alt="{{ section.settings.image_alt_text }}"
            class="banner-image">
     </video>
@@ -26,8 +26,8 @@
   <!-- Fallback Images if no video -->
   {% if section.settings.desktop_video == blank and section.settings.mobile_video == blank %}
     <picture>
-      <source media="(max-width: 768px)" srcset="{{ section.settings.mobile_image | img_url: '900x' }}">
-      <img src="{{ section.settings.desktop_image | img_url: '2000x' }}"
+      <source media="(max-width: 768px)" srcset="{{ section.settings.mobile_image | image_url: width: 900 }}">
+      <img src="{{ section.settings.desktop_image | image_url: width: 2000 }}"
            alt="{{ section.settings.image_alt_text }}"
            class="banner-image">
     </picture>

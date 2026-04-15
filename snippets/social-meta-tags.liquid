@@ -25,7 +25,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ page_title }}">
   <meta property="og:description" content="{{ page_description | strip_html }}">
-  {%- if settings.share_image != blan -%}
+  {%- if settings.share_image != blank -%}
     <meta property="og:image" content="http:{{ settings.share_image.src | image_url }}">
     <meta property="og:image:secure_url" content="https:{{ settings.share_image.src | image_url }}">
     <meta property="og:image:width" content="{{ settings.social_image_width }}">
