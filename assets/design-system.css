@@ -25,6 +25,17 @@
   --body-size-large: 18px;
   --body-size-medium: 16px;
   --body-size-small: 14px;
+
+  --button-font-color: #fff;
+  --button-font-color-hover: #fff;
+  --button-bg-color: #73308a;
+  --button-bg-color-hover: #c7a0ce;
+
+
+  --button-font-color-light: #73308a;
+  --button-font-color-light-hover: #fff;
+  --button-bg-color-light: #fff;
+  --button-bg-color-hover: #c7a0ce;
 }
 
 .crafters-heading {
@@ -85,11 +96,25 @@
 .btn {
     font-size: var(--body-size-medium);
     font-weight: var(--font-weight-600);
+    display: inline-flex;
+    padding: 15px 25px;
+    justify-content: center;
+    align-items: center;
+    color: var(--button-font-color);
+    background: var(--button-bg-color);
+    border: 0;
+    border-radius: 30px;
 }
 
 .btn--small {
     font-size: var(--body-size-medium);
     font-weight: var(--body-size-small);
+    padding: 10px 20px;
+}
+
+.btn--light {
+    color: var(--button-font-color);
+    background: var(--button-bg-color);
 }
 
 @media only screen and (max-width:767px) {
